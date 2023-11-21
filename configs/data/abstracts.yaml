@@ -1,0 +1,4 @@
+name: "abstracts"
+_id: "${extract_path:${.path},2}"
+path: data/debug_abstracts.jsonl
+type: debug_jsonl
