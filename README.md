@@ -44,8 +44,9 @@ python paper_comparison/train.py train_data=<data_config> val_data=<data_config>
 ```
 
 ## Code Structure
-- `loaders`: Code for loading in tables (in json format) and papers (using papermage)
-- `endtoend`: Transform collections of papers directly into tables.
-- `schematizers`: Transform collections of papers into schema
-- `populators`: Tansforms papers + schema into table
-- `eval`: Evaluates tables
+- `loaders`: Code for loading in tables (in json format) and papers (using papermage) [Not implemented yet]
+- `endtoend.py`: Transform collections of papers directly into tables. Used for baselines.
+- `schematizer.py`: Transform collections of papers into schema
+- `populator.py`: Tansforms papers + schema into table
+- `eval.py`: Evaluates tables
+- `utils.py`: Various experiment utilities.
