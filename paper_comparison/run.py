@@ -54,7 +54,7 @@ def main(args: DictConfig) -> None:
     args.mode = "endtoend" if args.endtoend is not None else "schematizer-populator"
 
     initialze_experiment(args)
-    eval = load_eval(args)
+    evaluator = load_eval(args)
     data = load_data(args)
 
     if args.mode == "endtoend":
@@ -70,7 +70,7 @@ def main(args: DictConfig) -> None:
         schema = schematizer(args, data)
         tables = populator(args, data, schema)
 
-    metrics = eval(args, tables, data)
+    metrics = evaluator(args, tables, data)
 
     save_outputs(args, tables, metrics)
     print(f"Results saved to:\n{args.results_path}")
