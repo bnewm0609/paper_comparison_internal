@@ -90,3 +90,28 @@ def test_SchemaPrecisionRecallMetric():
     )
     scores = prf_metric.process_scores()
     assert scores["precision"] == 1.0 and scores["recall"] == 1.0
+
+
+def test_SchemaDiversityMetric():
+    diversity_metric = metrics.SchemaDiversityMetric(None)
+
+    pred_schema = {
+        "Studies decontextualization?",
+        "What field are they in?",
+        "What is their data source?",
+        "What task do they study?",
+    }
+    pred_table = Table(tabid="0", schema=pred_schema, values={})
+    diversity_metric.add(prediction=pred_table, target=None)
+    scores = diversity_metric.process_scores()
+    assert scores["diversity"]["self-bleu"] == pytest.approx(10.284844530787057)
+
+    pred_schema = {
+        "What field are they in?",
+        "What field do they study?",
+        "What scientific field do they study?",
+    }
+    pred_table = Table(tabid="0", schema=pred_schema, values={})
+    diversity_metric.add(prediction=pred_table, target=None)
+    scores = diversity_metric.process_scores()
+    assert scores["diversity"]["self-bleu"] == pytest.approx(33.09915554810221)

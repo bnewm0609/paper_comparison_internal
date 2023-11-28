@@ -200,20 +200,23 @@ class SchemaDiversityMetric(BaseMetric):
         super().__init__(args)
         self.reset()
 
+        # Enbale effective_order for sentence-level BLEU
+        self.bleu = BLEU(effective_order=True)
+
     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
         # 1. Calculate Self-BLEU
         pred_schemata = list(prediction.schema)
-        refs = []
-        preds = []
-        for i in range(len(pred_schemata)):
-            refs.append(pred_schemata[:i] + pred_schemata[i + 1 :])
-            preds.append(pred_schemata[i])
 
-        self.scores["self-bleu"].append(BLEU.corpus_bleu(refs, preds))
-        # return super().add(prediction, target, metadata)
+        scores = []
+        for i in range(len(pred_schemata)):
+            scores.append(
+                self.bleu.sentence_score(pred_schemata[i], pred_schemata[:i] + pred_schemata[i + 1 :]).score
+            )
+
+        self.scores["self-bleu"].append(np.mean(scores))
 
     def process_scores(self) -> dict[str, Any]:
-        return {"self-bleu": np.mean(self.scores["self-bleu"])}
+        return {"diversity": {"self-bleu": np.mean(self.scores["self-bleu"])}}
 
     def reset(self) -> None:
         self.scores = {
@@ -253,7 +256,10 @@ class Evaluator:
         return all_scores
 
 
-METRIC_MAP = {"PRF": SchemaPrecisionRecallMetric}
+METRIC_MAP = {
+    "PRF": SchemaPrecisionRecallMetric,
+    "diversity": SchemaDiversityMetric,
+}
 
 
 def load_metrics(args: DictConfig):
