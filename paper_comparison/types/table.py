@@ -8,6 +8,7 @@ import pandas as pd
 class Table:
     """Class for keeping track of table"""
 
+    tabid: str
     schema: set[str]
     values: dict
     dataframe: Optional[pd.DataFrame] = None
