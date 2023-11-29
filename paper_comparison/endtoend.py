@@ -8,32 +8,33 @@ class BaseEndToEnd:
     def __init__(self, args: DictConfig):
         pass
 
-    def __call__(self, args, data) -> dict[str, Table]:
-        return {"": Table(set(), dict())}
+    def __call__(self, args, data) -> list[Table]:
+        return []
 
 
 class DebugAbstractsEndToEnd(BaseEndToEnd):
-    def __call__(self, args, data) -> dict[str, Table]:
+    def __call__(self, args, data) -> list[Table]:
         table_values = {
-            "Studies decontextualization?": {"Choi21": ["yes"], "Newman23": ["yes"], "Potluri23": ["no"]},
+            "Studies decontextualization?": {"choi21": ["yes"], "newman23": ["yes"], "potluri23": ["no"]},
             "What is their data source?": {
-                "Choi21": ["Wikipedia"],
-                "Newman23": ["Scientific Papers"],
-                "Potluri23": ["ELI5"],
+                "choi21": ["Wikipedia"],
+                "newman23": ["Scientific Papers"],
+                "potluri23": ["ELI5"],
             },
-            "What field are they in?": {"Choi21": ["NLP"], "Newman23": ["NLP"], "Potluri23": ["NLP"]},
+            "What field are they in?": {"choi21": ["NLP"], "newman23": ["NLP"], "potluri23": ["NLP"]},
             "What task do they study?": {
-                "Choi21": ["decontextualization"],
-                "Newman23": ["decontextualization"],
-                "Potluri23": ["long-answer summarization"],
+                "choi21": ["decontextualization"],
+                "newman23": ["decontextualization"],
+                "potluri23": ["long-answer summarization"],
             },
         }
-        return {
-            "debug": Table(
+        return [
+            Table(
+                tabid="0",
                 schema=set(table_values.keys()),
                 values=table_values,
             )
-        }
+        ]
 
 
 def load_endtoend(args: DictConfig):

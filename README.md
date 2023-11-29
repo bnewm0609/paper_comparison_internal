@@ -11,18 +11,45 @@ When running, you need to pass some input example, and either a baseline or a sc
 
 To run an end-to-end model on a single example:
 ```
-python paper_comparison/run.py data.path=data/debug_abstracts.jsonl endtoend=debug
+python paper_comparison/run.py data.path=data/debug_abstracts endtoend=debug
 ```
 
 To run a schematizer-populator combination on a single example:
 ```
-python paper_comparison/run.py data.path=data/debug_abstracts.jsonl schematizer=followup_questions populator=qa
+python paper_comparison/run.py data.path=data/debug_abstracts schematizer=followup_questions populator=qa
 ```
 
 After running, the results path will be output to the terminal. This path contains three files:
  - `tables.jsonl`: a file with one table per line
  - `metrics.jsonl`: a file with table metrics
  - `commands.txt`: a list of commands that were run to obtain the results in the directory. Most recent at the bottom.
+
+## Data
+Currently all data is in sub-directories of the `data` path. These directories are passed to the `data.path` field at the command line. In these directories, there are one or two files: one (usually called `papers.jsonl`) has one paper json object per line. For example, one line will have the following fields:
+```json
+{
+    "tabids": ["<Table IDs. All papers that will be compared should have the same Table ID>. This is a list because papers can"],
+    "paperid": "<Paper ID. A string used as the name of the row in the table. It's used to link tables to papers."
+    <other information eg abstracts, title, authors, etc.>
+}
+```
+
+If this data is being used for training or supervised evaluation, there will also be gold tables in this directory (in a file usually called `tables.jsonl`). Each line in the table has the following structure:
+```json
+{
+    "tabid" : "<Table ID",
+    "table": {
+        "row1": {"paperid_1": "value", "paperid_2": "value"},
+        "row2": {"paperid_1": "value", "paperid_2": "value"},
+        ...
+    }
+}
+```
+
+Each of these files can be overridden individually by setting the `data.papers_path` or `data.tables_path` at the command line. E.g.:
+```
+python paper_comparison/run.py data.papers_path=data/debug_abstracts/papers.jsonl data.tables_path=data/debug_abstracts/tables.jsonl endtoend=debug
+```
 
 ## Training
 (Not implemented yet)

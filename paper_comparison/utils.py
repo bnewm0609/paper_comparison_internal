@@ -31,14 +31,14 @@ def get_results_path(args: DictConfig) -> str:
     return results_path
 
 
-def save_outputs(args: DictConfig, tables: dict, metrics: dict):
+def save_outputs(args: DictConfig, tables: list, metrics: dict):
     # save the tables - think about the format here - it might actually be good to save these as a
     # single, large pandas dataframe with an additional key representing the table/group of papers being
     # compared. For now, this is a jsonl file with one line per table/group of papers.
     results_path = Path(args.results_path)
     with open(results_path / "tables.jsonl", "w") as f:
-        for key, table in tables.items():
-            f.write(json.dumps({key: table.values}) + "\n")
+        for table in tables:
+            f.write(json.dumps({"tab_id": table.tabid, "table": table.values}) + "\n")
 
     with open(results_path / "metrics.json", "w") as f:
         json.dump(metrics, f)

@@ -7,7 +7,7 @@ import sys
 import hydra
 from omegaconf import DictConfig, OmegaConf
 
-from paper_comparison.eval import load_eval
+from paper_comparison.metrics import load_metrics
 from paper_comparison.data import load_data
 from paper_comparison.endtoend import load_endtoend
 from paper_comparison.schematizer import load_schematizer
@@ -54,8 +54,8 @@ def main(args: DictConfig) -> None:
     args.mode = "endtoend" if args.endtoend is not None else "schematizer-populator"
 
     initialze_experiment(args)
-    evaluator = load_eval(args)
     data = load_data(args)
+    evaluator = load_metrics(args)
 
     if args.mode == "endtoend":
         print("Running endtoend baseline")
