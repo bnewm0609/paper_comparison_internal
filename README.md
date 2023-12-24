@@ -5,6 +5,30 @@
 pip install -e ".[dev]"
 ```
 
+## High quality initial dataset
+
+For the data in `data/arxiv_tables_2308_high_quality`, there are three relevant files:
+- `tables.jsonl`: a list of 30 papers. Each line is a `json` object with the following fields:
+    - `tabid`: a unique hash for the table that comes from the latex-processing pipeline
+    - `table`: a python dictionary dump of the table created from`pd.DataFrame.to_dict()`. Can be loaded back into pandas with `pd.DataFrame(table['table'])`. The first column of all of the tables is "References", and it contains the citations.
+    - `row_bib_map`: a list of `json` objects, where each represents a citation from the table. Each object contains:
+        - the `corpus_id` of the full text of the paper (which can be accessed at `data/full_texts/{corpus_id}.jsonl`)
+        - the `row` in the table that `corpus_id` corresponds to
+        - the `type` of the citation - `"ref"` means it's an external reference and `"ours"` means that the paper containing the table is represented in the given row.
+        - the `bib_hash_or_arxiv_id` associated with that corpus_id. `arxiv_id` is used when the `type` is `"ours"` and the `bib_hash` is used when it's `"ref"`. The `bib_hash` comes from the latex-processing pipeline and it's a function of the citation text and the citing paper's arxiv_id.
+- `papers.jsonl`: a list of all the papers needed for generating the tables. Each paper entry contains:
+    - `tabids`: a list of ids for the tables the paper is cited in.
+    - `bib_hash_or_arxiv_id`: For now, this is the `bib_hash` associated with the paper by the latex-parser or the `arxiv_id` if it is a citing paper. *The same paper can have multiple bib_hashes if it is cited in multiple papers. In the small set we consider, this does not happen, but in the future this field will probably be removed or turned into a list.* 
+    - `corpus_id`, the corpus id of a paper. If the full text is available, it can be accessed at `data/full_texts/{corpus_id}.jsonl`. (For the small subset, all of these texts should be available.)
+    - `title`: the title of the paper from s2.
+    - `paper_id`: the s2 id of the paper.
+- `dataset.jsonl`: contains a superset of the information in `tables.jsonl` (it additionally includes an html version of the table from which the json format was derived, some artefacts from the html->json conversion, and some additional metadata about the papers and tables)
+
+**TODO:** Incorporate this into the code.
+
+## ArXiv data processing
+See `scripts/data_processing`
+
 ## Running
 
 When running, you need to pass some input example, and either a baseline or a schematizer and populator.
