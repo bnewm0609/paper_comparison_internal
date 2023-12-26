@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Optional, Any, Iterator, Sequence
 
 from omegaconf import DictConfig
+import pandas as pd
 from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizer, BatchEncoding
 
@@ -387,6 +388,59 @@ class DebugAbstractsDataset(Dataset):
         return data
 
 
+class FullTextsDataset(Dataset):
+    def __init__(self, args: DictConfig, split: str, tokenizer=None) -> None:
+        self.args = args
+        self.split = split
+
+        # default keys for in the data list dicts
+        self.x_label = "x"
+        self.y_label = "y"
+
+        # self.tokenizer = tokenizer
+        # self.data = self.read_data(args.data.get(split).path)
+        self.data = self.read_data(args.data.papers_path, args.data.tables_path)
+
+    def read_data(self, papers_path: str, tables_path: Optional[str]) -> Sequence[Any]:
+        # load papers
+        papers = load_jsonl(papers_path)
+
+        for paper in papers:
+            if (corpus_id := paper.get("corpus_id")) is not None:
+                with open(Path(self.args.data.full_texts_path) / f"{corpus_id}.json") as f:
+                    paper["s2orc"] = json.load(f)
+
+        # load tables (if they exist)
+        tabid_to_table = {}
+        if tables_path is not None and Path(tables_path).exists():
+            tables_json = load_jsonl(tables_path)
+            for table_json in tables_json:
+                table_df = pd.DataFrame(table_json["table"])
+                schema = set(table_df.columns)
+
+                table = Table(
+                    tabid=table_json["tabid"], schema=schema, values=table_df.to_dict(), dataframe=table_df
+                )
+                tabid_to_table[table_json["tabid"]] = table
+
+        # match table ids to papers:
+        tabid_to_paper = defaultdict(list)
+        for paper in papers:
+            tabids = paper.pop("tabids")
+            for tabid in tabids:
+                tabid_to_paper[tabid].append(paper)
+
+        data = []
+        for tabid in tabid_to_paper:
+            data.append(
+                {"idx": tabid, self.x_label: tabid_to_paper[tabid], self.y_label: tabid_to_table.get(tabid)}
+            )
+
+        return data
+
+
 def load_data(args: DictConfig):
     if args.data.type == "debug_abstracts":
         return DebugAbstractsDataset(args, "val")
+    elif args.data.type == "full_texts":
+        return FullTextsDataset(args, "val")

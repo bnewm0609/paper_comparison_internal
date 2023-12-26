@@ -24,7 +24,12 @@ For the data in `data/arxiv_tables_2308_high_quality`, there are three relevant 
     - `paper_id`: the s2 id of the paper.
 - `dataset.jsonl`: contains a superset of the information in `tables.jsonl` (it additionally includes an html version of the table from which the json format was derived, some artefacts from the html->json conversion, and some additional metadata about the papers and tables)
 
-**TODO:** Incorporate this into the code.
+These are loaded in using the `configs/full_texts` config, with the `data.FullTexts` class performing the loading part.
+
+```
+python paper_comparison/run.py data=full_texts data.path=data/arxiv_tables_2308_high_quality endtoend=debug endtoend.name=oracle
+```
+(Setting `endtoend.name=oracle` just has the system output the gold tables.)
 
 ## ArXiv data processing
 See `scripts/data_processing`

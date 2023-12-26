@@ -43,5 +43,5 @@ def save_outputs(args: DictConfig, tables: list, metrics: dict):
     with open(results_path / "metrics.json", "w") as f:
         json.dump(metrics, f)
     print("Saving outputs:")
-    print("Tables:", tables)
+    # print("Tables:", tables)
     print("Metrics:", metrics)
