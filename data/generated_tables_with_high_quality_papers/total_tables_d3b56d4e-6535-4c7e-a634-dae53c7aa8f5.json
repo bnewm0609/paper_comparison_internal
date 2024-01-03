@@ -1,0 +1,1529 @@
+{
+    "input_paper": [
+        {
+            "paperid": "paper0",
+            "title": "A biochemically-interpretable machine learning classifier for microbial GWAS",
+            "abstract": "Current machine learning classifiers have successfully been applied to whole-genome sequencing data to identify genetic determinants of antimicrobial resistance (AMR), but they lack causal interpretation. Here we present a metabolic model-based machine learning classifier, named Metabolic Allele Classifier (MAC), that uses flux balance analysis to estimate the biochemical effects of alleles. We apply the MAC to a dataset of 1595 drug-tested Mycobacterium tuberculosis strains and show that MACs predict AMR phenotypes with accuracy on par with mechanism-agnostic machine learning models (isoniazid AUC\u2009=\u20090.93) while enabling a biochemical interpretation of the genotype-phenotype map. Interpretation of MACs for three antibiotics (pyrazinamide, para-aminosalicylic acid, and isoniazid) recapitulates known AMR mechanisms and suggest a biochemical basis for how the identified alleles cause AMR. Extending flux balance analysis to identify accurate sequence classifiers thus contributes mechanistic insights to GWAS, a field thus far dominated by mechanism-agnostic results.",
+            "introduction": "M ycobacterium tuberculosis (TB) claims 1.6 million lives annually and resists eradication through evolution of antimicrobial resistance (AMR) 1 . To elucidate AMR mechanisms, researchers have applied machine learning approaches to large-scale genome sequencing and drug-testing datasets for identifying genetic determinants of AMR [2][3][4][5][6][7] . While current machine learning approaches have provided a predictive tool for microbial genome-wide association studies (GWAS), such black-box models are incapable of mechanistically interpreting genetic associations. Such a limitation has become increasingly apparent in TB, where numerous experimental studies have shown that AMR-associated genetic variants often reflect network-level metabolic adaptations to antibiotic-induced selection pressures ( Supplementary Fig. 1 [8][9][10][11][12] . These studies show that identified genetic associations have corresponding network-level associations that are highly informative of AMR mechanisms. However, current GWAS results only provide predictions for which alleles are most important, not their functional effects. Therefore, machine learning models that incorporate biochemical network structure may naturally extend GWAS results by estimating functional effects of identified alleles, leading to an enhanced understanding of AMR [13][14][15] .\n\nOver the past couple of decades, the computational analysis of biochemical networks in microorganisms has been advanced through the use of genome-scale models (GEMs) 16,17 . By computing metabolic flux states (see Glossary for definition of terms) consistent with imposed biological constraints, GEMs have been shown to predict a range of cellular functions, making them a valuable tool for analyzing multi-omics datasets 18 . Although GEMs are transparent genotype-phenotype models, they are largely outperformed by machine learning models in direct comparisons of prediction accuracy. Approaches have thus been developed that integrate meaningful GEM computations with predictive black-box machine learning to enable white-box interpretations of data 19 . These approaches have worked well for endogenous metabolomics data by using the GEM to directly transform the measurements to meaningful inputs for black box machine learning.\n\nThis approach, however, may not be amenable to analyzing microbial GWAS data, in which the genetic parameters of the GEM are not directly observed (see Supplementary Notes). GEMs have previously modeled genetic variation at the resolution of gene presence-absence 20-23 , but have not yet been used to link nucleotide-level genetic variation (i.e., alleles) to observed phenotypes (i.e., AMR) in a predictive manner 24 . Since alleles are the primary forms of causal variation identified in GWAS, an approach for mechanistically integrating information about alleles is of major interest 25 .\n\nHere we develop a GEM-based machine learning framework for modeling datasets used in GWAS and apply it to a sequencing dataset of drug-tested TB strains. We show that our framework achieves high performance in accurately classifying AMR phenotypes of TB strains. We then characterize the identified classifiers for pyrazinamide, isoniazid, and para-aminosalicylic acid AMR and show that they identify key genetic determinants and pathway activity discriminating between resistant and susceptible TB strains. This work demonstrates how GEMs can be used directly as an input-output machine learning model to extract both genetic and biochemical network-level insights from microbial GWAS datasets."
+        },
+        {
+            "paperid": "paper1",
+            "title": "Genome\u2010wide association study\u2010based deep learning for survival prediction",
+            "abstract": "Informative and accurate survival prediction with individualized dynamic risk profiles over time is critical for personalized disease prevention and clinical management. The massive genetic data, such as SNPs from genome\u2010wide association studies (GWAS), together with well\u2010characterized time\u2010to\u2010event phenotypes provide unprecedented opportunities for developing effective survival prediction models. Recent advances in deep learning have made extraordinary achievements in establishing powerful prediction models in the biomedical field. However, the applications of deep learning approaches in survival prediction are limited, especially with utilizing the wealthy GWAS data. Motivated by developing powerful prediction models for the progression of an eye disease, age\u2010related macular degeneration (AMD), we develop and implement a multilayer deep neural network (DNN) survival model to effectively extract features and make accurate and interpretable predictions. Various simulation studies are performed to compare the prediction performance of the DNN survival model with several other machine learning\u2010based survival models. Finally, using the GWAS data from two large\u2010scale randomized clinical trials in AMD with over 7800 observations, we show that the DNN survival model not only outperforms several existing survival prediction models in terms of prediction accuracy (eg, c\u2010index =0.76), but also successfully detects clinically meaningful risk subgroups by effectively learning the complex structures among genetic variants. Moreover, we obtain a subject\u2010specific importance measure for each predictor from the DNN survival model, which provides valuable insights into the personalized early prevention and clinical management for this disease.",
+            "introduction": "regarding the disease progression pattern in the future and shapes the physician's decision making for the treatment or clinical management strategy. Note that the survival prediction is fundamentally different from typical prediction models that predict a future event (whether occurs or not) by fixing the time of interest through a binary classification. 3,4 Despite its essential role in precision medicine, the survival prediction remains a challenging task, [5][6][7] largely due to the complex nature of diseases and the heterogeneity between patients. Therefore, there is an urgent need for developing accurate and personalized survival prediction models with improved capacity in learning the complex structures and interplays among predictors. Recent advances in high-throughput technologies have generated large volumes of molecular profiling data for each patient, which provides unprecedented opportunities in identifying potential biomarkers and further establishing accurate survival prediction models. [8][9][10] In particular, several national-wide large-scale longitudinal studies, such as the trans-omics for precision medicine and All of Us, are underway using whole-genome sequencing and other omics technologies, with the ultimate goal of accelerating precision medicine. However, how to effectively utilize the wealthy amount of data is challenging. The first challenge comes from how to connect high-dimensional predictors with the outcome of interest. This problem is particularly difficult in survival prediction because the events of interest are sometimes censored due to either a short study period or loss of follow-up during the study. The second challenge is how to model the complex structure among numerous biomarkers, where the specific structure is largely unknown. The third challenge is that given the heterogeneity of patients, how to interpret the importance of each predictor for each patient and further how to identify patient subgroups to provide personalized prevention or treatment strategy.\n\nThe recent advances in multilayer deep neural network (DNN) models have made extraordinary achievements in providing new effective risk prediction models from complex and high-dimensional biomedical data, such as omics and biomedical imaging. [11][12][13][14] However, the application of deep learning in survival prediction is still limited. Faraggi and Simon 15 proposed a single-layer neural network based on the Cox proportional hazards (PH) model. However, its performance did not exceed the regular Cox model in a prostate cancer survival dataset with 475 patents and only four clinical predictors. More recently, multiple efforts have been devoted to evaluating Cox-based neural network survival models using larger datasets with omic biomarkers. For example, Katzman et al 16 demonstrated that a single hidden layer neural network survival model performed marginally better than the Cox model and random survival forest (RSF) model in a breast cancer survival dataset with 1980 patients and nine predictors. In another study, Ching et al 17 applied a single hidden layer neural network survival model to 10 TCGA cancer survival datasets (sample sizes range from 302 to 1077) with high-throughput gene expression biomarkers, from which the neural network survival models resulted in comparable or better performance than the Cox model, the penalized Cox models such as Cox-LASSO and the RSF model. In another study 18 that also used TCGA cancer survival datasets (sample sizes range from 194 to 1092 with up to 17 000 gene expression biomarkers), the neural network survival models yielded comparable performance to the penalized Cox model and better performance than the RSF model. Hao et al 19 developed a pathway-based neural network survival model and applied it to a TCGA cancer dataset (sample size 522 with 860 pathways and 5567 genes). However, all these studies have limited sample sizes, particular in the presence of tens of thousands of predictors, and thus may lead to severe model overfitting problem. Moreover, the patient-specific predictor importance was not considered in those studies. The scenario of tied events, which is commonly seen in practice, especially when the sample size is large, was not carefully considered in these studies.\n\nIn this article, we propose and evaluate a multi-hidden-layer Cox-based DNN survival model to predict the progression of a progressive eye disease, namely, age-related macular degeneration (AMD). The genome-wide association study (GWAS) of AMD is the first and most successful GWAS research, where the massive GWAS data provide unprecedented opportunities to study disease risk and progression. Although some attempts have been tried to predict AMD progression risks using genetic information such as SNPs, most statistical models focus on the structured regression framework, which typically only accounts for (generalized) linear effects of the SNPs and thus have considerable limitations. To the best of our knowledge, there has no existing work on survival prediction using deep learning to effectively extract features from the GWAS data. Therefore, we develop and apply the DNN survival model to build an accurate and interpretable prediction model for the AMD progression.\n\nThe rest of the article is organized as follows. Section 2 describes the deep learning survival methods and prediction evaluation procedures. We assess the performance of three machine/deep learning survival prediction models (DNN, LASSO, RSF) through extensive simulation studies in Section 3 and apply them to the GWAS data from two large-scale clinical studies of AMD in Section 4. Discussion and conclusion are presented in Section 5."
+        },
+        {
+            "paperid": "paper2",
+            "title": "Impact of Clinical and Genomic Factors on SARS-CoV2 Disease Severity",
+            "abstract": "The SARS-CoV2 virus behind the COVID-19 pandemic is manifesting itself in different ways among infected people. While many are experiencing mild flue-like symptoms or are even remaining asymptomatic after infection, the virus has also led to serious complications, overloading ICUs while claiming more than 2.6 million lives world-wide. In this work, we apply AI methods to better understand factors that drive the severity of the disease. From the UK BioBank dataset we analyzed both clinical and genomic data of patients infected by this virus. Leveraging positiveunlabeled machine learning algorithms coupled with RubricOE, a state-of-the-art genomic analysis framework forgenomic feature extraction, we propose severity prediction algorithms with high F1 score. Furthermore, we extracted insights on clinical and genomic factors driving the severity prediction. We also report on how these factors have evolved during the pandemic w.r.t. significant events such as the emergence of the B.1.1.7 SARS-CoV2 virus strain.",
+            "introduction": "\n\nCOVID-19, caused by the deadly \"severe acute respiratory syndrome coronavirus 2\" (SARS-CoV2) virus, is one of the worst pandemic in human history inflicting severe casualties across the globe. So far, it has caused 117,332,262 confirmed cases while claiming 2,605,356 deaths worldwide 1 . This virus has stressed many health systems beyond their limits, screaming for an urgent reaction from research to help mitigate this unprecedented societal threat.\n\nThe outbreak of the virus first occurred in Wuhan province of China and then rapidly spread world-wide using humanto-human transmission 2 . One of the primary reason for the rapid spread is due to the wide spectrum of symptoms inhibited by the virus ranging from asymptomatic to mild to rapid progression to critical stage with pneumonia and likely death of respiratory failure 3 . In general, patients with mild symptoms cure easily whereas severe COVID-19 patients require further treatments such as ventilation in ICU. Such heterogeneity in terms of COVID-19 disease pose great challenges for designing treatment protocols. Typically, severe effects of infectious diseases like COVID-19 are hypothesized to be associated with the variations of host genome 4 . Several studies 5 were conducted recently to find the biological mechanisms of the severity of COVID-19 diseases such as genome wide association studies (GWAS) of severe COVID-19 6 . In addition, clinical factors such as demographic, socio-economic factors, lifestyles, prior conditions may also have impact on the spread, exposure, and severity. So does the viral load of the SARS-CoV2 virus. The availability of rich electronic health records (EHR) provides an opportunity for finding such important clinical factors associated with COVID-19 along with important clinical factors observed in EHRs 3,7,8 .\n\nFinding the bio-markers for severe COVID-19 patients requires rigorous study on clinical and genomic datasets. Most of the existing studies that aimed at finding the common risk factors for severe COVID-19 patients focused on either the clinical or the genomics factors, but not both. In this study, we aim to find the common risk factors associated COVID-19 severity using diverse factors from both clinical and genomics data available from a large-scale EHR dataset. Such kind of combined clinico-genomic factors can provide a holistic view of COVID-19 disease mechanisms. Specifically, it can provide the additional effects of genomic factors on the host genome as they relate to common clinical factors.\n\nHowever, there are few challenges in finding the clinical and genomic factors associated with COVID-19 that can be used as bio-markers. First, defining the COVID-19 severity from EHR datasets is often challenging, since it is not collected directly in these datasets. Hence, the severity has to be defined using some clinical knowledge as a surrogate phenotype which in turn may introduce label noise and data collection bias. Second, assessing the impact of genomic factors on COVID-19 severity may be confounded by several other clinical factors such as the prior comorbidities of patients and treatment protocols. The effect of such confounding factors has to be addressed carefully when conducting the combined clinico-genomic studies. Third, the impact of clinico-genomic factors may also vary depending on the variations of diverse COVID-19 strains that have been observed due to genetic mutations.  Origin=0 11,989  9,083 21,072  Origin=1 31,800  4,345 36,145  All  43,789  13,428 57,217 In this study, we propose a combined framework for finding the clinical and genomic factors associated with COVID-19 severity using a large COVID-19 dataset from the UK Biobank (UKBB). To address the above mentioned challenges, we first use the COVID-19 related hospitalization as a surrogate outcome for defining severe COVID-19 cases. Second, we use a machine learning technique called positive-unlabeled (PU) learning to address the noise and reporting bias present in COVID-19 severity labels. Moreover, we use a recently proposed genomic analysis framework entitled RubricOE 9 to select the set of genomic factors after adjusting for the common prior comorbid conditions which may act as potential confounders. Finally, we aim to assess how the importance of the extracted bio-markers evolve over the pandemic marked by event such as the emergence of the reportedly more contagious B.1.1.7 COVID-19 strain.\n\n\n"
+        },
+        {
+            "paperid": "paper3",
+            "title": "GenNet framework: interpretable deep learning for predicting phenotypes from genetic data",
+            "abstract": "Applying deep learning in population genomics is challenging because of computational issues and lack of interpretable models. Here, we propose GenNet, a novel open-source deep learning framework for predicting phenotypes from genetic variants. In this framework, interpretable and memory-efficient neural network architectures are constructed by embedding biologically knowledge from public databases, resulting in neural networks that contain only biologically plausible connections. We applied the framework to seventeen phenotypes and found well-replicated genes such as HERC2 and OCA2 for hair and eye color, and novel genes such as ZNF773 and PCNT for schizophrenia. Additionally, the framework identified ubiquitin mediated proteolysis, endocrine system and viral infectious diseases as most predictive biological pathways for schizophrenia. GenNet is a freely available, end-to-end deep learning framework that allows researchers to develop and use interpretable neural networks to obtain novel insights into the genetic architecture of complex traits and diseases.",
+            "introduction": "W hile genome-wide association studies (GWAS) have identified numerous genomic loci associated with complex traits and diseases, the biological interpretation of the underlying mechanisms often remains unclear. Recent GWAS studies with increasingly large sample sizes are resulting greater numbers of significant associations, at an increasing number of independent loci. To illustrate, the latest GWAS for body height based on 700,000 individuals identified more than 3000 near-independent significantly associated single nucleotide polymorphisms (SNPs) 1 . Uncovering a clear biological interpretation from all this information is a challenging task, in which causal variants, genes, and pathways need to be identified. In response, many methods such as MAGMA 2 , ALIGATOR 3 , and INRICH 4 , have been developed to obtain a biological interpretation from GWAS summary statistics, providing insights into relevant genes and pathways for defined phenotypes of interest. These methods explore GWAS summary statics and utilize knowledge from annotated biological databases such as NCBI RefSeq 5 , KEGG 6 , Reactome 7 , and GTEx 8 , which have proven to contain crucial information for understanding the underlying biological mechanisms of the human genome 9 . Additionally, it has been shown that embedding biological knowledge from these databases in polygenic risk scores can improve interpretation, trans-ancestry portability, and genetic risk prediction [10][11][12] .\n\nGiven the increasing amount of data available via biobanks and new developments to integrate data, it is now feasible to analyze raw data with more advanced methods. Deep learning is the state of the art in many domains such as medical image analysis 13 and natural language processing 14 because of its flexibility and modeling capabilities. In many cases, deep learning yields better performance than traditional approaches, since it scales very well with data size and can model highly non-linear relationships. However, a limitation to deep learning is that these algorithms are often uninterpretable because of their complexity 15,16 . Additionally, genetic data does not lend itself well to the convolution operation, the main driver of the success of deep learning in the imaging domain. Traditional fully connected neural networks have been successfully applied to predict genetic risk. Recently, Badre et al. 17 employed a fully connected neural network for improving polygenic risk scores for breast cancer, training a neural network with up to 528,620 input variants. However, these networks are very memory-intensive and therefore often require pre-selecting SNPs using GWAS summary statistics. Applying these fully connected neural networks for millions of input variants would require infeasible amounts of computational time and memory.\n\nTo overcome these limitations, we propose GenNet, a novel framework for predicting phenotype from genotype. Within the GenNet framework, biological information from annotated biological sources such as NCBI RefSeq, KEGG, and single RNA gene expression datasets, is used to define biologically plausible connections. As a result, neural networks based on this framework are memory efficient, interpretable, and yield biological interpretations for their predictions. GenNet is an end-to-end deep learning framework available as a command-line tool (https://github.com/ArnovanHilten/GenNet/)."
+        },
+        {
+            "paperid": "paper4",
+            "title": "Genome-Wide Association Studies-Based Machine Learning for Prediction of Age-Related Macular Degeneration Risk",
+            "abstract": "Purpose Because age-related macular degeneration (AMD) is a progressive disorder and advanced AMD is currently hard to cure, an accurate and informative prediction of a person's AMD risk using genetic information is desirable for early diagnosis and potential individualized clinical management. The objective of this study was to develop and validate novel prediction models for AMD risk using large genome-wide association studies datasets with different machine learning approaches. Methods Genotype data from 32,215 Caucasian individuals with age of \u226550 years from the International AMD Genomics Consortium in dbGaP were used to establish and test prediction models for AMD risk. Four different machine learning approaches\u2014neural network, lasso regression, support vector machine, and random forest\u2014were implemented. A standard logistic regression model using a genetic risk score was also considered. Results All machine learning\u2013based methods achieved satisfactory performance for predicting advanced AMD cases (vs. normal controls) (area under the curve = 0.81\u20130.82, Brier score = 0.17\u20130.18 in a separate test dataset) and any stage AMD (vs. normal controls) (area under the curve = 0.78\u20130.79, Brier score = 0.18\u20130.20 in a separate test dataset). The prediction performance was further validated in an independent dataset of 783 subjects from UK Biobank (area under the curve = 0.67). Conclusions By applying multiple state-of-art machine learning approaches on large AMD genome-wide association studies datasets, the predictive models we established can provide an accurate estimation of an individual's AMD risk profile based on genetic information along with age. The online prediction interface is available at: https://yanq.shinyapps.io/no_vs_amd_NN/. Translational Relevance The accurate and individualized risk prediction model interface will greatly improve early diagnosis and enhance tailored clinical management of AMD.",
+            "introduction": "\n\nAge-related macular degeneration (AMD) is a multifactorial neurodegenerative disease and a leading cause of vision loss among the elderly in the developed countries. 1,2 The disease affects the central vision and is progressive, starting with the appearance of drusen (i.e., the yellow or white deposits in the eye) and eventually leading to advanced AMD forms: wet AMD (choroidal neovascularization) and dry AMD (geographic atrophy). 3 Patients can progress to one or both forms of advanced AMD. Some patients with early AMD maintain good vision for a long time without progressing to advanced AMD, whereas others quickly developed advanced AMD.\n\nIn 2005, Fisher et al. 4 reported that the CFH gene on chromosome 1 and ARMS2/HTRA1 genes on chromosome 10 were the most replicated gene regions associated with AMD. Later, with the advances of technology, multiple genome-wide association studies (GWAS) were conducted to examine the association between AMD and a genome-wide set of single nucleotide polymorphisms (SNPs). In 2016, the International AMD Genomics Consortium identified or confirmed a total of 34 loci with 52 independent genetic variants to be associated with advanced AMD risk. 5 From this study, the phenotype and genotypes of 35,358 subjects were uploaded to dbGaP (phs001039.v1.p1) and the majority of them are Caucasians. Multiple studies demonstrated that the same AMD susceptibility loci were more strongly associated with AMD in Caucasians than in other ethnic groups. [6][7][8] Because advanced AMD is currently hard to cure, an accurate and informative prediction of a person's risk for advanced AMD at a young age using genetic information is desirable for early diagnosis, enhanced diet/behavior, and potential individualized clinical management. For example, for individuals with high predicted AMD risks, behaviors that could decrease AMD risk such as stopping smoking, keeping a healthy diet with more antioxidants, and taking appropriate vitamin supplements can be recommended. Earlier or more frequent clinical visits to monitor the development or progression of the disease can be also suggested to individuals with high AMD risks. In this study, our objective was to establish and validate prediction models for AMD risk based on genetic variants given any future age of a subject using the largest publicly available data for Caucasians.\n\n\n"
+        },
+        {
+            "paperid": "paper5",
+            "title": "DeepOmix: A scalable and interpretable multi-omics deep learning framework and application in cancer survival analysis",
+            "abstract": "Graphical abstract",
+            "introduction": "\n\nThe advent of high-throughput omics technologies, such as the next-generation sequencing [1], DNA microarrays [2], and DNA methylation arrays [3] enable the measurement of thousands of molecules at the same time from a biological sample comprehensively. Each type of omics data provides unbiased characterization on one aspect of genome, transcriptome, and epigenome, which raises opportunities for biological and medical research explorations [4,5]. However, analysis of single omics data is limited to exploring the underlying biological mechanisms and capturing intricacy for various complex diseases, which only can explain its molecular field respectively [6]. Therefore, integrating multiomics data at different levels yields a better understanding of overall disease alterations, has an enormous impact in cancer profiling, diagnosis, and treatment, and elucidates the relationships among different types of omics data for one specific disease [7].\n\nDeveloping accurate survival prediction models of cancer benefits the identification of effective prognostic biomarkers, improvement of risk stratification, and personalized treatment. With the accumulation of a tremendous number of multiple omics data in the past decades, it brings opportunities to build the prediction model and infer the systematic underlying biological mechanisms through making an integrative analysis. However, it raises new computational challenges in the data integration due to the heterogeneous characteristics and distribution of different types of data, the high dimensionality of each level of a molecular dataset, and a limited number of observations [8][9][10]. To address these issues, a variety of regression methods have been proposed to build the prognostic model through integrating multi-omics data [11].\n\nThere are mainly four kinds of approaches to predict the survival time, namely penalized regression, boosting, random forest, and deep learning-based methods [12]. Integrative LASSO with Penalty Factors (IPF-LASSO) [13], an extension of LASSO method, is designed to make the L1-penalized regression analysis by using different penalty weights for each type of omics data to train the  [14]. Both glmboost and IPF-LASSO can be applied to multi-omics data with high dimension, which perform the feature selection and reduce the complexity of the model. However, they could only detect the linear relationships between features and outcome variables through fitting linear models. Block forest, a variant from random forest, incorporates the block structure of multi-omics data and makes the non-linear prediction of the clinical outcomes [15]. The limitation of block forest is that they can't extrapolate the data.\n\nSome deep learning-based methods were also applied to train the survival model. DeepSurv was a method of the deep feedforward neural network to perform a prediction of time-to-event to make personalized treatment recommendations. It estimated each sample's effect on their hazard rates concerning parametrized weights of the network, which was configurable with multiple numbers of hidden layers [16]. DeepHIT was a deep neural network architecture to learn the joint distribution of survival time and event directly without making assumptions about the underlying stochastic process [17]. The parameters of the model and the form of the stochastic process depended on the features of the input dataset used for survival analysis. However, these two methods were not designed for integrating multi-omics data and lacked interpretability. It was urgent to propose an interpretable nonlinear model for multi-omics data integration and survival prediction.\n\nTo fill the gaps of the algorithm in this field, we presented Dee-pOmix, a scalable and interpretable deep learning framework for multi-omics data integration and survival prediction. DeepOmix learned meaningful information by incorporating prior biological knowledge of gene functional module networks as the function module layer since genes perform functions in cells in the form of a synergistic and regulatory system [18]. Getting the lowdimensional representations in the functional module layer facilitates extracting significant modules corresponding to the prognostic prediction result. The functional modules can be defined by users, including tissue networks [19], gene co-expression networks [20], or prior biological signaling pathways [21]. We performed experiments of benchmark comparison and elucidated that the performance of DeepOmix outperformed other existing state of art prediction models. Then, Low-Grade Glioma (LGG) was taken as the case study. Patients were grouped into two subtypes with significant differences in survival time based on the output layer of the prediction result. The difference of functional nodes on the module layers in these subtypes was tested and top-ranked functional modules were detected. DeepOmix can integrate multiomics data by incorporating prior biological knowledge to conduct prognosis prediction and learn the low representations on the module layers to understand the underlying mechanisms for further study.\n\n\n"
+        }
+    ],
+    "pap_to_tab": {
+        "What are the subjects of the study for each paper?": {
+            "paper_1": [
+                "microbial GWAS, antimicrobial resistance, Mycobacterium tuberculosis strains"
+            ],
+            "paper_2": [
+                "survival prediction, age-related macular degeneration (AMD), genome\u2010wide association studies (GWAS) data"
+            ],
+            "paper_3": [
+                "SARS-CoV-2 disease severity, UK BioBank dataset, clinical and genomic data analysis"
+            ],
+            "paper_4": [
+                "predicting phenotypes from genetic data, GenNet framework, population genomics"
+            ],
+            "paper_5": [
+                "age-related macular degeneration (AMD) risk prediction, genetic information, International AMD Genomics Consortium data"
+            ],
+            "paper_6": [
+                "multi-omics deep learning framework, cancer survival analysis"
+            ]
+        },
+        "What machine learning approaches are used in the papers?": {
+            "paper_1": [
+                "metabolic model-based machine learning classifier (MAC)"
+            ],
+            "paper_2": [
+                "deep neural network (DNN) survival model"
+            ],
+            "paper_3": [
+                "AI methods, positive-unlabeled machine learning algorithms, RubricOE genomic analysis framework"
+            ],
+            "paper_4": [
+                "interpretable and memory-efficient neural network architectures, deep learning with embedded biological knowledge"
+            ],
+            "paper_5": [
+                "neural network, lasso regression, support vector machine, random forest, logistic regression"
+            ],
+            "paper_6": [
+                "scalable and interpretable multi-omics deep learning framework"
+            ]
+        },
+        "What are the key findings or contributions of each paper?": {
+            "paper_1": [
+                "Developed a metabolic model-based ML classifier for AMR phenotypes with high accuracy and biochemical interpretability"
+            ],
+            "paper_2": [
+                "Implemented a deep learning model for survival prediction and risk subgroup detection in AMD, with high prediction accuracy"
+            ],
+            "paper_3": [
+                "Proposed AI-based severity prediction algorithms with insights on clinical and genomic factors driving SARS-CoV-2 disease severity"
+            ],
+            "paper_4": [
+                "Developed an interpretable deep learning framework (GenNet) for phenotype prediction from genetic data, identified biological pathways related to schizophrenia"
+            ],
+            "paper_5": [
+                "Applied machine learning approaches for AMD risk prediction and validated models, provided online prediction interface"
+            ],
+            "paper_6": [
+                "Created a deep learning framework for multi-omics data to enhance interpretability and scalability in cancer survival analysis"
+            ]
+        },
+        "Is there a focus on interpretability of the model outputs?": {
+            "paper_1": [
+                "Yes, enables biochemical interpretation of genotype-phenotype map"
+            ],
+            "paper_2": [
+                "Yes, besides prediction accuracy, the model can detect clinically meaningful risk subgroups and provides personalized insights"
+            ],
+            "paper_3": [
+                "Yes, extracts insights on factors driving disease severity prediction"
+            ],
+            "paper_4": [
+                "Yes, aims for interpretable models with biologically plausible connections"
+            ],
+            "paper_5": [
+                "Partial, provides a genetic risk score and compares different ML methods but less emphasis on interpretability"
+            ],
+            "paper_6": [
+                "Yes, emphasis on interpretability in multi-omics data for cancer analysis"
+            ]
+        },
+        "What datasets are used in the research?": {
+            "paper_1": [
+                "Dataset of 1595 drug-tested Mycobacterium tuberculosis strains"
+            ],
+            "paper_2": [
+                "GWAS data from two large-scale randomized clinical trials in AMD with over 7800 observations"
+            ],
+            "paper_3": [
+                "UK BioBank dataset for patients infected by SARS-CoV-2"
+            ],
+            "paper_4": [
+                "Genetic data for seventeen phenotypes including hair color, eye color, and schizophrenia"
+            ],
+            "paper_5": [
+                "Genotype data from 32,215 Caucasian individuals from the International AMD Genomics Consortium"
+            ],
+            "paper_6": [
+                "Unspecified, presumably multi-omics datasets related to cancer for survival analysis"
+            ]
+        },
+        "Is the proposed model or framework compared to existing models?": {
+            "paper_1": [
+                "Yes, compared with mechanism-agnostic machine learning models"
+            ],
+            "paper_2": [
+                "Yes, compared with several other machine learning-based survival models"
+            ],
+            "paper_3": [
+                "Not clearly stated, but implies comparison with other genomic feature extraction tools"
+            ],
+            "paper_4": [
+                "Yes, compared with existing genomic prediction methods"
+            ],
+            "paper_5": [
+                "Yes, compared with different machine learning approaches"
+            ],
+            "paper_6": [
+                "Not clearly stated, but the framework's scalability and interpretability are highlighted as advantages"
+            ]
+        },
+        "Are there any clinical or real-world applications discussed?": {
+            "paper_1": [
+                "Yes, application in microbial GWAS and the understanding of AMR"
+            ],
+            "paper_2": [
+                "Yes, personalized disease prevention and clinical management for AMD"
+            ],
+            "paper_3": [
+                "Yes, understanding and predicting factors contributing to SARS-CoV-2 disease severity"
+            ],
+            "paper_4": [
+                "Yes, implications for the genetic architecture of complex traits and diseases"
+            ],
+            "paper_5": [
+                "Yes, early diagnosis and tailored clinical management of AMD"
+            ],
+            "paper_6": [
+                "Yes, application in cancer survival analysis"
+            ]
+        }
+    },
+    "cc_to_tab": {
+        "Focus of Machine Learning Application": {
+            "paper_1": [
+                "Identification of genetic determinants of antimicrobial resistance in microbes"
+            ],
+            "paper_2": [
+                "Survival prediction in age-related macular degeneration"
+            ],
+            "paper_3": [
+                "Prediction of SARS-CoV-2 disease severity"
+            ],
+            "paper_4": [
+                "Predicting phenotypes from genetic data"
+            ],
+            "paper_5": [
+                "Prediction of age-related macular degeneration risk"
+            ],
+            "paper_6": [
+                "Cancer survival analysis with a multi-omics approach"
+            ]
+        },
+        "Interpretability of Model": {
+            "paper_1": [
+                "Metabolic interpretations using flux balance analysis"
+            ],
+            "paper_2": [
+                "Interpretable deep neural network survival model"
+            ],
+            "paper_3": [
+                "Insights into clinical and genomic factors driving severity prediction"
+            ],
+            "paper_4": [
+                "Biologically interpretable deep learning framework (GenNet)"
+            ],
+            "paper_5": [
+                "Comparison of machine learning approaches for interpretable predictions"
+            ],
+            "paper_6": [
+                "Interpretable multi-omics deep learning framework (DeepOmix)"
+            ]
+        },
+        "Methodological Approach": {
+            "paper_1": [
+                "Metabolic model-based machine learning classifier"
+            ],
+            "paper_2": [
+                "Deep neural network survival model utilizing GWAS data"
+            ],
+            "paper_3": [
+                "AI methods with positive-unlabeled algorithms and genomic analysis framework"
+            ],
+            "paper_4": [
+                "Interpretable deep learning with biologically embedded neural network"
+            ],
+            "paper_5": [
+                "Comparative machine learning approaches like neural network, lasso regression, support vector machine, and random forest"
+            ],
+            "paper_6": [
+                "Multi-omics deep learning framework"
+            ]
+        },
+        "Context of Study": {
+            "paper_1": [
+                "Microbial GWAS"
+            ],
+            "paper_2": [
+                "GWAS data from clinical trials"
+            ],
+            "paper_3": [
+                "Clinical and genomic data analysis during the pandemic"
+            ],
+            "paper_4": [
+                "Population genomics and phenotype prediction"
+            ],
+            "paper_5": [
+                "Large genome-wide association studies datasets for AMD"
+            ],
+            "paper_6": [
+                "Multi-omics data for cancer survival"
+            ]
+        },
+        "Disease or Trait of Interest": {
+            "paper_1": [
+                "Antimicrobial resistance"
+            ],
+            "paper_2": [
+                "Age-related macular degeneration"
+            ],
+            "paper_3": [
+                "SARS-CoV-2 disease severity"
+            ],
+            "paper_4": [
+                "Various phenotypes including schizophrenia, hair and eye color"
+            ],
+            "paper_5": [
+                "Age-related macular degeneration risk"
+            ],
+            "paper_6": [
+                "Cancer survival"
+            ]
+        },
+        "Temporal Analysis": {
+            "paper_1": [
+                "Not applicable"
+            ],
+            "paper_2": [
+                "Not applicable"
+            ],
+            "paper_3": [
+                "Evolving factors during the pandemic w.r.t. significant events"
+            ],
+            "paper_4": [
+                "Not applicable"
+            ],
+            "paper_5": [
+                "Not applicable"
+            ],
+            "paper_6": [
+                "Not applicable"
+            ]
+        }
+    },
+    "multi_scheme": {
+        "How many lives were claimed globally by the COVID-19 pandemic at the time of this research?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "2,605,356 deaths worldwide",
+            "paper_3": "So far, it has caused 117,332,262 confirmed cases while claiming 2,605,356 deaths worldwide",
+            "paper_4": "2,605,356",
+            "paper_5": "So far, it has caused 117,332,262 confirmed cases while claiming 2,605,356 deaths worldwide."
+        },
+        "Does DeepOmix offer scalability and interpretability for multi-omics data?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "DeepOmix learned meaningful information by incorporating prior biological knowledge of gene functional module networks as the function module layer, making it scalable and interpretable for multi-omics data integration and survival prediction."
+        },
+        "Can the DNN survival model identify clinically meaningful risk subgroups in the study?": {
+            "paper_0": "",
+            "paper_1": "Yes, the DNN survival model can identify clinically meaningful risk subgroups in the study.",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The paper introduction does not provide information about whether the DNN survival model can identify clinically meaningful risk subgroups. "
+        },
+        "What machine learning approach was used in the standard comparison model for AMD risk prediction in the study?": {
+            "paper_0": "",
+            "paper_1": "LASSO and RSF (Random Survival Forest) were the machine learning approaches used in the standard comparison model for AMD risk prediction in the study.",
+            "paper_2": "",
+            "paper_3": "The machine learning approaches used as standard comparison models for AMD risk prediction in the study were LASSO and random survival forest (RSF) models.",
+            "paper_4": "",
+            "paper_5": "The standard comparison model for AMD risk prediction used in the study mentioned are the LASSO and RSF models."
+        },
+        "Which three antibiotics' resistance mechanisms were studied using the MAC in the paper?": {
+            "paper_0": "pyrazinamide, isoniazid, and para-aminosalicylic acid",
+            "paper_1": "Pyrazinamide, isoniazid, and para-aminosalicylic acid are the three antibiotics' resistance mechanisms studied using the MAC in the paper.",
+            "paper_2": "pyrazinamide, isoniazid, and para-aminosalicylic acid",
+            "paper_3": "The three antibiotics' resistance mechanisms studied using the MAC were for pyrazinamide, isoniazid, and para-aminosalicylic acid.",
+            "paper_4": "pyrazinamide, isoniazid, and para-aminosalicylic acid",
+            "paper_5": "The antibiotics' resistance mechanisms studied using the MAC in the paper are for pyrazinamide, isoniazid, and para-aminosalicylic acid."
+        },
+        "Does the paper suggest that DeepOmix is applicable to other areas besides cancer survival analysis?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The DeepOmix paper does not explicitly suggest that it is applicable to other areas besides cancer survival analysis."
+        },
+        "How was the performance of the MAC evaluated in the research?": {
+            "paper_0": "The performance of the MAC was evaluated by its ability to accurately classify AMR phenotypes of TB strains.",
+            "paper_1": "The performance of the MAC was evaluated by its ability to accurately classify AMR phenotypes of TB strains.",
+            "paper_2": "The framework achieves high performance in accurately classifying AMR phenotypes of TB strains.",
+            "paper_3": "The framework's performance was evaluated in its ability to accurately classify AMR phenotypes of TB strains.",
+            "paper_4": "",
+            "paper_5": "The paper does not provide information on how the performance of the MAC was evaluated."
+        },
+        "Which datasets were used for establishing and testing the AMD risk prediction models in the study?": {
+            "paper_0": "",
+            "paper_1": "The GWAS data from two large-scale clinical studies of AMD were used for establishing and testing the AMD risk prediction models in the study.",
+            "paper_2": "",
+            "paper_3": "The datasets used for establishing and testing the AMD risk prediction models were GWAS data from two large-scale clinical studies of AMD.",
+            "paper_4": "",
+            "paper_5": "The datasets used for establishing and testing the AMD risk prediction models in the study include GWAS data from two large-scale clinical studies of AMD."
+        },
+        "What type of neural network is utilized for survival prediction in the study?": {
+            "paper_0": "",
+            "paper_1": "A multi-hidden-layer Cox-based Deep Neural Network (DNN) is utilized for survival prediction in the study.",
+            "paper_2": "",
+            "paper_3": "A multi-hidden-layer Cox-based DNN (deep neural network) survival model was utilized for survival prediction in the study.",
+            "paper_4": "",
+            "paper_5": "A multi-hidden-layer Cox-based DNN survival model is utilized for survival prediction in the study."
+        },
+        "How might the predictive models improve the clinical management of individuals with AMD?": {
+            "paper_0": "",
+            "paper_1": "The predictive models may improve the clinical management of individuals with AMD by providing accurate and personalized survival predictions, identifying potential biomarkers for specific subgroups, and informing treatment or clinical management strategy.",
+            "paper_2": "",
+            "paper_3": "The predictive models might improve the clinical management of individuals with AMD by providing more accurate and personalized survival predictions, helping physicians in decision-making for treatment or clinical management strategies.",
+            "paper_4": "",
+            "paper_5": "The paper introduction does not provide information on how the predictive models improve the clinical management of individuals with AMD."
+        },
+        "Does the MAC offer a comparable accuracy to other mechanism-agnostic machine learning models?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The paper does not provide information on whether the MAC offers a comparable accuracy to other mechanism-agnostic machine learning models."
+        },
+        "Does the paper indicate that DeepOmix could improve the understanding of cancer prognosis?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The DeepOmix paper does not specifically indicate that it could improve the understanding of cancer prognosis, but it does improve risk stratification and personalized treatment through feature extraction."
+        },
+        "In terms of biochemical interpretation of the genotype-phenotype map, how does MAC contribute to GWAS?": {
+            "paper_0": "The MAC contributes to GWAS by using GEM-based machine learning framework to extract genetic and biochemical network-level insights.",
+            "paper_1": "MAC contributes to GWAS in terms of biochemical interpretation of the genotype-phenotype map by providing a GEM-based machine learning framework that can identify key genetic determinants and pathway activity.",
+            "paper_2": "The MAC uses Genome-scale models which can calculate metabolic flux states, offering biochemical interpretation to genetic associations found in GWAS.",
+            "paper_3": "A GEM-based machine learning framework, like the one described as MAC in the paper, contributes to GWAS by providing a mechanistic interpretation of genetic associations and network-level metabolic adaptations which enhance the understanding of antimicrobial resistance mechanisms.",
+            "paper_4": "",
+            "paper_5": "The paper does not provide information on how MAC contributes to the biochemical interpretation of the genotype-phenotype map in GWAS."
+        },
+        "What measurement of prediction accuracy is used to compare the DNN model with other models?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The measurement of prediction accuracy used to compare the DNN model with other models is not specified in the paper introduction."
+        },
+        "What dataset was utilized to apply the MAC for predicting AMR phenotypes?": {
+            "paper_0": "The MAC was applied to a sequencing dataset of drug-tested TB strains to predict AMR phenotypes.",
+            "paper_1": "A sequencing dataset of drug-tested TB strains was utilized to apply the MAC for predicting AMR phenotypes.",
+            "paper_2": "a sequencing dataset of drug-tested TB strains",
+            "paper_3": "The framework was applied to a sequencing dataset of drug-tested TB strains for predicting AMR phenotypes.",
+            "paper_4": "a sequencing dataset of drug-tested TB strains",
+            "paper_5": "The dataset utilized to apply the MAC for predicting AMR phenotypes is a sequencing dataset of drug-tested TB strains."
+        },
+        "What kind of machine learning algorithms were used in the study?": {
+            "paper_0": "GEM-based machine learning framework",
+            "paper_1": "",
+            "paper_2": "A Genome-scale model based machine learning framework.",
+            "paper_3": "The study utilized genome-scale models (GEMs) and machine learning models, including a framework that integrates meaningful GEM computations with predictive black-box machine learning for interpretation.",
+            "paper_4": "",
+            "paper_5": "The paper introductions do not specify the exact machine learning algorithms used in the studies."
+        },
+        "How was the prediction performance of the AMD risk models validated externally?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The paper introduction does not contain information about how the prediction performance of the AMD risk models was validated externally."
+        },
+        "In what way can the DNN survival model impact personalized early prevention and clinical management for the disease in question?": {
+            "paper_0": "",
+            "paper_1": "The DNN survival model can impact personalized early prevention and clinical management for disease by predicting the progression of a disease, such as AMD, and identifying clinically meaningful risk subgroups.",
+            "paper_2": "",
+            "paper_3": "The DNN survival model can impact personalized early prevention and clinical management for AMD by allowing clinicians to predict disease progression, thus tailoring prevention and treatment strategies to individual patient risk profiles.",
+            "paper_4": "",
+            "paper_5": "The paper introduction does not provide information on how the DNN survival model can impact personalized early prevention and clinical management for the disease in question."
+        },
+        "What methods were applied to understand factors influencing SARS-CoV2 disease severity?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "a machine learning technique called positive-unlabeled (PU) learning and a genomic analysis framework entitled RubricOE",
+            "paper_3": "The methods applied included using a machine learning technique called positive-unlabeled (PU) learning and a genomic analysis framework entitled RubricOE to select genomic factors after adjusting for potential confounding factors.",
+            "paper_4": "",
+            "paper_5": "The paper introduction does not provide details on specific methods applied to understand factors influencing SARS-CoV2 disease severity."
+        },
+        "Can researchers develop and use their own neural networks with the GenNet framework?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "Yes, researchers can develop and use their own neural networks with the GenNet framework, as it is an end-to-end deep learning framework available as a command-line tool.",
+            "paper_4": "Yes",
+            "paper_5": "The GenNet framework allows researchers to develop and use their own neural networks for predicting phenotypes from genetic data."
+        }
+    },
+    "ours_table_question": {
+        "question_0": {
+            "paper_0": "The paper tackles the lack of causal interpretation in machine learning classifiers for microbial GWAS.",
+            "paper_1": "The paper addresses the challenge of accurate and personalized survival prediction using GWAS data and deep learning.",
+            "paper_2": "",
+            "paper_3": "The paper addresses computational challenges and lack of interpretable models in deep learning for genomics.",
+            "paper_4": "The paper tackles prediction of age-related macular degeneration risk using machine learning on genetic data.",
+            "paper_5": "",
+            "question": "what problem does this paper tackle?",
+            "type": "initial",
+            "presup": "Presupposition: This paper tackles a problem."
+        },
+        "question_1": {
+            "paper_0": "The approach proposed is a metabolic model-based machine learning classifier (MAC) for antimicrobial resistance GWAS with biochemical interpretability.",
+            "paper_1": "The paper proposes a deep neural network survival model for personalized disease prediction using GWAS data.",
+            "paper_2": "The paper proposes AI methods using machine learning algorithms and genomic analysis for SARS-CoV2 severity prediction.",
+            "paper_3": "The approach proposed is the GenNet framework for interpretable deep learning using biologically informed neural networks to predict phenotypes from genetic data.",
+            "paper_4": "The paper proposes machine learning-based models for predicting age-related macular degeneration risk using GWAS datasets.",
+            "paper_5": "",
+            "question": "what is the approach this paper proposed?",
+            "type": "initial",
+            "presup": "Presupposition: This paper proposed an approach."
+        },
+        "question_2": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What methods does the paper introduce to incorporate causal interpretation into microbial GWAS classifiers?",
+            "type": "followup",
+            "presup": "1. The paper introduces methods.\n2. The paper is about incorporating causal interpretation.\n3. The paper concerns microbial Genome-Wide Association Studies (GWAS) classifiers.\n4. There are existing microbial GWAS classifiers that potentially lack causal interpretation, which the paper aims to address."
+        },
+        "question_3": {
+            "paper_0": "The implications include enabling biochemical interpretation of genotype-phenotype maps in microbial GWAS.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What are the implications of having machine learning classifiers with causal interpretation for microbial GWAS?",
+            "type": "followup",
+            "presup": "Presuppositions of the given question:\n\n1. There exist machine learning classifiers with causal interpretation.\n2. The paper discusses or investigates the implications of these classifiers.\n3. Microbial Genome-Wide Association Studies (GWAS) is a relevant context or topic within the paper.\n4. The causal interpretation of machine learning classifiers is significant or distinct enough to have implications specifically for microbial GWAS.\n5. The reader and the context expect that findings in relation to causal interpretation might influence the understanding, methodology, or results of microbial GWAS."
+        },
+        "question_4": {
+            "paper_0": "It impacts the ability to interpret the biochemical mechanisms behind antimicrobial resistance findings.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "How does the lack of causal interpretation in current classifiers impact the findings of microbial GWAS studies?",
+            "type": "followup",
+            "presup": "1. There is a lack of causal interpretation in current classifiers.\n2. This lack of causal interpretation impacts the findings of microbial GWAS (Genome-Wide Association Studies).\n3. The paper in question discusses or addresses the impact of the lack of causal interpretation in current classifiers on microbial GWAS studies."
+        },
+        "question_5": {
+            "paper_0": "The paper addresses the lack of causal interpretation in machine learning classifiers for microbial GWAS.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What deficiency in machine learning classifiers is this paper concerned with?",
+            "type": "lowlevel",
+            "presup": "Presupposition: This paper is concerned with a deficiency in machine learning classifiers."
+        },
+        "question_6": {
+            "paper_0": "The paper tackles metabolic model-based machine learning classifiers for microbial genome-wide association studies.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "The paper tackles neural network, lasso regression, support vector machine, and random forest classifiers.",
+            "paper_5": "",
+            "question": "What type of classifiers does the paper tackle?",
+            "type": "lowlevel",
+            "presup": "For the question \"What type of classifiers does the paper tackle?\" the presuppositions include:\n\n1. The paper is concerned with classifiers.\n2. Classifiers are an important topic or aspect within the paper.\n3. There is more than one type of classifier being discussed or considered in the paper.\n4. The paper aims to address, compare, evaluate, or enhance certain classifiers.\n5. Classifiers are relevant to the research question or problem the paper is investigating."
+        },
+        "question_7": {
+            "paper_0": "The paper focuses on creating a machine learning classifier for microbial GWAS that allows causal interpretation.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The paper addresses interpretable deep learning challenges for phenotype prediction from genetic data in microbial GWAS.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What is the focus of the problem the paper addresses in microbial GWAS?",
+            "type": "lowlevel",
+            "presup": "The paper addresses a problem within microbial Genome-Wide Association Studies (GWAS)."
+        },
+        "question_8": {
+            "paper_0": "",
+            "paper_1": "The paper employs a multilayer deep neural network (DNN) for survival prediction with GWAS data.",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What deep learning methods does the paper employ for survival prediction using GWAS data?",
+            "type": "followup",
+            "presup": "The question \"What deep learning methods does the paper employ for survival prediction using GWAS data?\" presupposes the following:\n\n1. That the paper employs deep learning methods.\n2. That the paper is about survival prediction.\n3. That the context of the survival prediction pertains to GWAS (Genome-Wide Association Studies) data.\n4. That it is relevant to the paper to discuss the specific methods or techniques used within deep learning for the purpose of survival prediction.\n5. That the reader or asker expects the existence of multiple methods within the scope of the paper, using the plural \"methods\" rather than the singular \"method.\"\n6. That the paper's research findings or methodologies are sufficiently documented or clear enough to identify which deep learning methods are used."
+        },
+        "question_9": {
+            "paper_0": "",
+            "paper_1": "The paper uses a deep neural network (DNN) to extract features and make personalized survival predictions based on GWAS data.",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "How does the paper ensure personalized predictions in survival analysis with GWAS data?",
+            "type": "followup",
+            "presup": "1. The paper ensures personalized predictions.\n2. The paper is concerned with survival analysis.\n3. The paper utilizes GWAS (Genome-Wide Association Studies) data.\n4. Personalized predictions are possible in survival analysis with GWAS data.\n5. The paper describes or proposes a method for ensuring personalized predictions.\n6. The concept of \"personalized predictions\" is relevant and meaningful in the context of the research presented in the paper."
+        },
+        "question_10": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "How does the proposed solution compare with traditional survival prediction models?",
+            "type": "followup",
+            "presup": "1. There is a proposed solution in the paper.\n2. The proposed solution is meant to address survival prediction.\n3. Traditional survival prediction models exist and are known.\n4. The paper compares the proposed solution to traditional models.\n5. The concept of \"traditional\" in survival prediction models is understood and agreed upon.\n6. The reader is expected to be interested in or concerned with the effectiveness or advancements in survival prediction models."
+        },
+        "question_11": {
+            "paper_0": "The paper addresses the lack of causal interpretation in machine learning classifiers for GWAS and AMR phenotypes.",
+            "paper_1": "The paper addresses survival prediction utilizing genetic data from GWAS with deep learning models.",
+            "paper_2": "The paper addresses the challenge of understanding factors driving SARS-CoV2 disease severity using AI methods.",
+            "paper_3": "The challenge addressed is creating interpretable, memory-efficient deep learning frameworks for phenotype prediction from genetic data.",
+            "paper_4": "The challenge addressed is improving early diagnosis and management of age-related macular degeneration using machine learning.",
+            "paper_5": "",
+            "question": "What challenge does this paper address?",
+            "type": "lowlevel",
+            "presup": "Presupposition: This paper addresses a specific challenge."
+        },
+        "question_12": {
+            "paper_0": "",
+            "paper_1": "The paper employs deep learning, specifically a multilayer deep neural network, for survival prediction.",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What methods does the paper use for survival prediction?",
+            "type": "lowlevel",
+            "presup": "Presuppositions of the given question \"What methods does the paper use for survival prediction?\":\n\n1. The paper discusses or focuses on survival prediction.\n2. There are methods used within the paper for survival prediction.\n3. The reader is expecting a discussion of specific methods or techniques.\n4. The paper's content includes empirical or theoretical work related to survival prediction that can be described.\n5. The paper is of a scientific or research nature where \"methods\" would be an appropriate term to describe the approaches used.\n6. Survival prediction is a relevant and identifiable topic within the context of the paper."
+        },
+        "question_13": {
+            "paper_0": "",
+            "paper_1": "The data used includes SNPs from genome-wide association studies (GWAS) for survival prediction.",
+            "paper_2": "",
+            "paper_3": "Genetic data from variants and public biological databases for phenotype prediction.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What kind of data is used for personalized survival prediction?",
+            "type": "lowlevel",
+            "presup": "Presupposition: Personalized survival prediction involves the use of some kind of data."
+        },
+        "question_14": {
+            "paper_0": "The paper addresses the lack of causal interpretation in AMR genetic determinants identification using machine learning classifiers.",
+            "paper_1": "The paper addresses the challenge of personalized survival prediction using GWAS data and deep learning.",
+            "paper_2": "The paper addresses the understanding of clinical and genomic factors driving SARS-CoV2 disease severity.",
+            "paper_3": "The issue addressed is creating interpretable, memory-efficient deep learning models for phenotype prediction from genetic data.",
+            "paper_4": "The paper addresses genetic risk prediction for age-related macular degeneration using machine learning.",
+            "paper_5": "",
+            "question": "What issue does this paper address?",
+            "type": "generic",
+            "presup": "Presuppositions inherent in the question \"What issue does this paper address?\" include:\n\n1. The paper addresses some issue or problem.\n2. The content of the paper is focused on identifying, discussing, or solving a particular issue.\n3. The paper is written with the intent to contribute to understanding or knowledge regarding an issue.\n4. The issue is presumed to be clearly definable or identifiable within the context of the paper.\n5. There is an expectation that the reader or inquirer will find the issue significant or relevant in the domain of the paper."
+        },
+        "question_15": {
+            "paper_0": "The primary challenge is the lack of causal interpretation in machine learning classifiers for microbial GWAS.",
+            "paper_1": "",
+            "paper_2": "The primary challenge is understanding factors that drive the severity of SARS-CoV2 disease.",
+            "paper_3": "The primary challenge is the lack of interpretable and computationally efficient deep learning models in population genomics.",
+            "paper_4": "The challenge is accurately predicting individual risk for age-related macular degeneration using genetic data.",
+            "paper_5": "",
+            "question": "What is the primary challenge discussed in this paper?",
+            "type": "generic",
+            "presup": "Presupposition: This paper discusses a primary challenge."
+        },
+        "question_16": {
+            "paper_0": "The paper attempts to answer how to provide causal interpretation in microbial GWAS for AMR phenotypes.",
+            "paper_1": "The paper attempts to answer how to improve survival prediction using deep learning and GWAS data.",
+            "paper_2": "The paper attempts to understand factors that drive the severity of SARS-CoV2 disease.",
+            "paper_3": "The paper is attempting to answer how deep learning can predict phenotypes from genetic data interpretably and efficiently.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What research question is this paper attempting to answer?",
+            "type": "generic",
+            "presup": "Presupposition:\n1. This paper is attempting to answer a research question.\n2. The paper is sufficiently focused on a specific issue or inquiry that it can be distilled into a research question.\n3. There is a research question identifiable and explicit within the paper's contents or goals."
+        },
+        "question_17": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The paper discusses challenges of computational inefficiency and lack of interpretable models in deep learning for genomics.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What computational challenges in deep learning for genomics are discussed in the paper?",
+            "type": "followup",
+            "presup": "Presuppositions of the question \"What computational challenges in deep learning for genomics are discussed in the paper?\" include:\n\n1. There are computational challenges specific to the application of deep learning in the field of genomics that are being discussed.\n2. The paper in question specifically addresses or discusses these computational challenges.\n3. Deep learning is a relevant and applied technique within the field of genomics as per the context of the paper.\n4. The paper offers content that is analytical or evaluative regarding the use of deep learning in genomics, rather than being purely descriptive or unrelated to challenges.\n5. The reader is expecting to find information related to computational challenges, rather than other types of challenges like ethical, legal, or data collection challenges."
+        },
+        "question_18": {
+            "paper_0": "",
+            "paper_1": "The paper suggests deep neural network survival models for interpretable and accurate predictions in genomics.",
+            "paper_2": "",
+            "paper_3": "The paper suggests biologically-knowledge-embedded, interpretable neural network architectures for genomics.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What kind of interpretable models does the paper suggest for improving deep learning applications in genomics?",
+            "type": "followup",
+            "presup": "The paper suggests interpretable models for improving deep learning applications in genomics."
+        },
+        "question_19": {
+            "paper_0": "",
+            "paper_1": "The paper addresses survival prediction using deep learning with GWAS data for disease management.",
+            "paper_2": "",
+            "paper_3": "The paper addresses the interpretability and memory-efficiency challenges in deep learning for genomics predictions.",
+            "paper_4": "",
+            "paper_5": "",
+            "question": "What does this paper address in deep learning for genomics?",
+            "type": "lowlevel",
+            "presup": "This paper addresses something in the field of deep learning for genomics."
+        }
+    },
+    "ours_table_presupposition": {
+        "presup_0": {
+            "question": "what problem does this paper tackle?",
+            "presup": "Presupposition: This paper tackles a problem.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_1": {
+            "question": "what is the approach this paper proposed?",
+            "presup": "Presupposition: This paper proposed an approach.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_2": {
+            "question": "What methods does the paper introduce to incorporate causal interpretation into microbial GWAS classifiers?",
+            "presup": "1. The paper introduces methods.\n2. The paper is about incorporating causal interpretation.\n3. The paper concerns microbial Genome-Wide Association Studies (GWAS) classifiers.\n4. There are existing microbial GWAS classifiers that potentially lack causal interpretation, which the paper aims to address.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_3": {
+            "question": "What are the implications of having machine learning classifiers with causal interpretation for microbial GWAS?",
+            "presup": "Presuppositions of the given question:\n\n1. There exist machine learning classifiers with causal interpretation.\n2. The paper discusses or investigates the implications of these classifiers.\n3. Microbial Genome-Wide Association Studies (GWAS) is a relevant context or topic within the paper.\n4. The causal interpretation of machine learning classifiers is significant or distinct enough to have implications specifically for microbial GWAS.\n5. The reader and the context expect that findings in relation to causal interpretation might influence the understanding, methodology, or results of microbial GWAS.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_4": {
+            "question": "How does the lack of causal interpretation in current classifiers impact the findings of microbial GWAS studies?",
+            "presup": "1. There is a lack of causal interpretation in current classifiers.\n2. This lack of causal interpretation impacts the findings of microbial GWAS (Genome-Wide Association Studies).\n3. The paper in question discusses or addresses the impact of the lack of causal interpretation in current classifiers on microbial GWAS studies.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_5": {
+            "question": "What deficiency in machine learning classifiers is this paper concerned with?",
+            "presup": "Presupposition: This paper is concerned with a deficiency in machine learning classifiers.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_6": {
+            "question": "What type of classifiers does the paper tackle?",
+            "presup": "For the question \"What type of classifiers does the paper tackle?\" the presuppositions include:\n\n1. The paper is concerned with classifiers.\n2. Classifiers are an important topic or aspect within the paper.\n3. There is more than one type of classifier being discussed or considered in the paper.\n4. The paper aims to address, compare, evaluate, or enhance certain classifiers.\n5. Classifiers are relevant to the research question or problem the paper is investigating.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_7": {
+            "question": "What is the focus of the problem the paper addresses in microbial GWAS?",
+            "presup": "The paper addresses a problem within microbial Genome-Wide Association Studies (GWAS).",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_8": {
+            "question": "What deep learning methods does the paper employ for survival prediction using GWAS data?",
+            "presup": "The question \"What deep learning methods does the paper employ for survival prediction using GWAS data?\" presupposes the following:\n\n1. That the paper employs deep learning methods.\n2. That the paper is about survival prediction.\n3. That the context of the survival prediction pertains to GWAS (Genome-Wide Association Studies) data.\n4. That it is relevant to the paper to discuss the specific methods or techniques used within deep learning for the purpose of survival prediction.\n5. That the reader or asker expects the existence of multiple methods within the scope of the paper, using the plural \"methods\" rather than the singular \"method.\"\n6. That the paper's research findings or methodologies are sufficiently documented or clear enough to identify which deep learning methods are used.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_9": {
+            "question": "How does the paper ensure personalized predictions in survival analysis with GWAS data?",
+            "presup": "1. The paper ensures personalized predictions.\n2. The paper is concerned with survival analysis.\n3. The paper utilizes GWAS (Genome-Wide Association Studies) data.\n4. Personalized predictions are possible in survival analysis with GWAS data.\n5. The paper describes or proposes a method for ensuring personalized predictions.\n6. The concept of \"personalized predictions\" is relevant and meaningful in the context of the research presented in the paper.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_10": {
+            "question": "How does the proposed solution compare with traditional survival prediction models?",
+            "presup": "1. There is a proposed solution in the paper.\n2. The proposed solution is meant to address survival prediction.\n3. Traditional survival prediction models exist and are known.\n4. The paper compares the proposed solution to traditional models.\n5. The concept of \"traditional\" in survival prediction models is understood and agreed upon.\n6. The reader is expected to be interested in or concerned with the effectiveness or advancements in survival prediction models.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_11": {
+            "question": "What challenge does this paper address?",
+            "presup": "Presupposition: This paper addresses a specific challenge.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_12": {
+            "question": "What methods does the paper use for survival prediction?",
+            "presup": "Presuppositions of the given question \"What methods does the paper use for survival prediction?\":\n\n1. The paper discusses or focuses on survival prediction.\n2. There are methods used within the paper for survival prediction.\n3. The reader is expecting a discussion of specific methods or techniques.\n4. The paper's content includes empirical or theoretical work related to survival prediction that can be described.\n5. The paper is of a scientific or research nature where \"methods\" would be an appropriate term to describe the approaches used.\n6. Survival prediction is a relevant and identifiable topic within the context of the paper.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_13": {
+            "question": "What kind of data is used for personalized survival prediction?",
+            "presup": "Presupposition: Personalized survival prediction involves the use of some kind of data.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_14": {
+            "question": "What issue does this paper address?",
+            "presup": "Presuppositions inherent in the question \"What issue does this paper address?\" include:\n\n1. The paper addresses some issue or problem.\n2. The content of the paper is focused on identifying, discussing, or solving a particular issue.\n3. The paper is written with the intent to contribute to understanding or knowledge regarding an issue.\n4. The issue is presumed to be clearly definable or identifiable within the context of the paper.\n5. There is an expectation that the reader or inquirer will find the issue significant or relevant in the domain of the paper.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_15": {
+            "question": "What is the primary challenge discussed in this paper?",
+            "presup": "Presupposition: This paper discusses a primary challenge.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false
+        },
+        "presup_16": {
+            "question": "What research question is this paper attempting to answer?",
+            "presup": "Presupposition:\n1. This paper is attempting to answer a research question.\n2. The paper is sufficiently focused on a specific issue or inquiry that it can be distilled into a research question.\n3. There is a research question identifiable and explicit within the paper's contents or goals.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_17": {
+            "question": "What computational challenges in deep learning for genomics are discussed in the paper?",
+            "presup": "Presuppositions of the question \"What computational challenges in deep learning for genomics are discussed in the paper?\" include:\n\n1. There are computational challenges specific to the application of deep learning in the field of genomics that are being discussed.\n2. The paper in question specifically addresses or discusses these computational challenges.\n3. Deep learning is a relevant and applied technique within the field of genomics as per the context of the paper.\n4. The paper offers content that is analytical or evaluative regarding the use of deep learning in genomics, rather than being purely descriptive or unrelated to challenges.\n5. The reader is expecting to find information related to computational challenges, rather than other types of challenges like ethical, legal, or data collection challenges.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_18": {
+            "question": "What kind of interpretable models does the paper suggest for improving deep learning applications in genomics?",
+            "presup": "The paper suggests interpretable models for improving deep learning applications in genomics.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        },
+        "presup_19": {
+            "question": "What does this paper address in deep learning for genomics?",
+            "presup": "This paper addresses something in the field of deep learning for genomics.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false
+        }
+    },
+    "ours_question_list": [
+        {
+            "round": 2,
+            "question": "What kind of challenges does the paper tackle?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "Which aspect of deep learning does the paper focus on?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What machine learning models were used for the prediction of age-related macular degeneration risk in the paper?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "How does the paper ensure the accuracy and validity of its machine learning predictions for age-related macular degeneration?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "Can you detail the dataset and genetic markers used for training the machine learning models in this study?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What does this paper predict using machine learning?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What condition's risk is predicted in the paper?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What type of data is used for the prediction in this paper?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What is the focus of this study?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "How does the metabolic model-based machine learning classifier (MAC) enhance antimicrobial resistance GWAS compared to traditional methods?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "Can you explain the biochemical interpretability aspect of this approach?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What are the key features or algorithms that enable the MAC to perform its function effectively?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What type of model does the paper propose?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What is the MAC in this paper referring to?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "For what purpose has the metabolic model-based classifier been proposed?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What kind of interpretability is provided by the MAC?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "How does the deep neural network survival model improve personalized disease prediction from GWAS data?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What are the key features of the proposed survival model, and how do they differ from traditional models?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "Can you describe the dataset and methodology used to train and validate the deep neural network survival model?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What were the results or findings of the study in comparison to existing disease prediction methods?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What model does the paper propose?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What type of data is used for disease prediction in this paper?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What is the purpose of the deep neural network survival model proposed?",
+            "type": "lowlevel"
+        }
+    ],
+    "ours_final_table": {
+        "what problem does this paper tackle?": {
+            "paper_0": [
+                "The paper tackles the lack of causal interpretation in machine learning classifiers for microbial GWAS."
+            ],
+            "paper_1": [
+                "The paper addresses the challenge of accurate and personalized survival prediction using GWAS data and deep learning."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper addresses computational challenges and lack of interpretable models in deep learning for genomics."
+            ],
+            "paper_4": [
+                "The paper tackles prediction of age-related macular degeneration risk using machine learning on genetic data."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "initial"
+            ],
+            "presup": [
+                "Presupposition: This paper tackles a problem."
+            ]
+        },
+        "what is the approach this paper proposed?": {
+            "paper_0": [
+                "The approach proposed is a metabolic model-based machine learning classifier (MAC) for antimicrobial resistance GWAS with biochemical interpretability."
+            ],
+            "paper_1": [
+                "The paper proposes a deep neural network survival model for personalized disease prediction using GWAS data."
+            ],
+            "paper_2": [
+                "The paper proposes AI methods using machine learning algorithms and genomic analysis for SARS-CoV2 severity prediction."
+            ],
+            "paper_3": [
+                "The approach proposed is the GenNet framework for interpretable deep learning using biologically informed neural networks to predict phenotypes from genetic data."
+            ],
+            "paper_4": [
+                "The paper proposes machine learning-based models for predicting age-related macular degeneration risk using GWAS datasets."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "initial"
+            ],
+            "presup": [
+                "Presupposition: This paper proposed an approach."
+            ]
+        },
+        "What methods does the paper introduce to incorporate causal interpretation into microbial GWAS classifiers?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. The paper introduces methods.\n2. The paper is about incorporating causal interpretation.\n3. The paper concerns microbial Genome-Wide Association Studies (GWAS) classifiers.\n4. There are existing microbial GWAS classifiers that potentially lack causal interpretation, which the paper aims to address."
+            ]
+        },
+        "What are the implications of having machine learning classifiers with causal interpretation for microbial GWAS?": {
+            "paper_0": [
+                "The implications include enabling biochemical interpretation of genotype-phenotype maps in microbial GWAS."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Presuppositions of the given question:\n\n1. There exist machine learning classifiers with causal interpretation.\n2. The paper discusses or investigates the implications of these classifiers.\n3. Microbial Genome-Wide Association Studies (GWAS) is a relevant context or topic within the paper.\n4. The causal interpretation of machine learning classifiers is significant or distinct enough to have implications specifically for microbial GWAS.\n5. The reader and the context expect that findings in relation to causal interpretation might influence the understanding, methodology, or results of microbial GWAS."
+            ]
+        },
+        "How does the lack of causal interpretation in current classifiers impact the findings of microbial GWAS studies?": {
+            "paper_0": [
+                "It impacts the ability to interpret the biochemical mechanisms behind antimicrobial resistance findings."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. There is a lack of causal interpretation in current classifiers.\n2. This lack of causal interpretation impacts the findings of microbial GWAS (Genome-Wide Association Studies).\n3. The paper in question discusses or addresses the impact of the lack of causal interpretation in current classifiers on microbial GWAS studies."
+            ]
+        },
+        "What deficiency in machine learning classifiers is this paper concerned with?": {
+            "paper_0": [
+                "The paper addresses the lack of causal interpretation in machine learning classifiers for microbial GWAS."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: This paper is concerned with a deficiency in machine learning classifiers."
+            ]
+        },
+        "What type of classifiers does the paper tackle?": {
+            "paper_0": [
+                "The paper tackles metabolic model-based machine learning classifiers for microbial genome-wide association studies."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The paper tackles neural network, lasso regression, support vector machine, and random forest classifiers."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "For the question \"What type of classifiers does the paper tackle?\" the presuppositions include:\n\n1. The paper is concerned with classifiers.\n2. Classifiers are an important topic or aspect within the paper.\n3. There is more than one type of classifier being discussed or considered in the paper.\n4. The paper aims to address, compare, evaluate, or enhance certain classifiers.\n5. Classifiers are relevant to the research question or problem the paper is investigating."
+            ]
+        },
+        "What is the focus of the problem the paper addresses in microbial GWAS?": {
+            "paper_0": [
+                "The paper focuses on creating a machine learning classifier for microbial GWAS that allows causal interpretation."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper addresses interpretable deep learning challenges for phenotype prediction from genetic data in microbial GWAS."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "The paper addresses a problem within microbial Genome-Wide Association Studies (GWAS)."
+            ]
+        },
+        "What deep learning methods does the paper employ for survival prediction using GWAS data?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper employs a multilayer deep neural network (DNN) for survival prediction with GWAS data."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "The question \"What deep learning methods does the paper employ for survival prediction using GWAS data?\" presupposes the following:\n\n1. That the paper employs deep learning methods.\n2. That the paper is about survival prediction.\n3. That the context of the survival prediction pertains to GWAS (Genome-Wide Association Studies) data.\n4. That it is relevant to the paper to discuss the specific methods or techniques used within deep learning for the purpose of survival prediction.\n5. That the reader or asker expects the existence of multiple methods within the scope of the paper, using the plural \"methods\" rather than the singular \"method.\"\n6. That the paper's research findings or methodologies are sufficiently documented or clear enough to identify which deep learning methods are used."
+            ]
+        },
+        "How does the paper ensure personalized predictions in survival analysis with GWAS data?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper uses a deep neural network (DNN) to extract features and make personalized survival predictions based on GWAS data."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. The paper ensures personalized predictions.\n2. The paper is concerned with survival analysis.\n3. The paper utilizes GWAS (Genome-Wide Association Studies) data.\n4. Personalized predictions are possible in survival analysis with GWAS data.\n5. The paper describes or proposes a method for ensuring personalized predictions.\n6. The concept of \"personalized predictions\" is relevant and meaningful in the context of the research presented in the paper."
+            ]
+        },
+        "How does the proposed solution compare with traditional survival prediction models?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. There is a proposed solution in the paper.\n2. The proposed solution is meant to address survival prediction.\n3. Traditional survival prediction models exist and are known.\n4. The paper compares the proposed solution to traditional models.\n5. The concept of \"traditional\" in survival prediction models is understood and agreed upon.\n6. The reader is expected to be interested in or concerned with the effectiveness or advancements in survival prediction models."
+            ]
+        },
+        "What challenge does this paper address?": {
+            "paper_0": [
+                "The paper addresses the lack of causal interpretation in machine learning classifiers for GWAS and AMR phenotypes."
+            ],
+            "paper_1": [
+                "The paper addresses survival prediction utilizing genetic data from GWAS with deep learning models."
+            ],
+            "paper_2": [
+                "The paper addresses the challenge of understanding factors driving SARS-CoV2 disease severity using AI methods."
+            ],
+            "paper_3": [
+                "The challenge addressed is creating interpretable, memory-efficient deep learning frameworks for phenotype prediction from genetic data."
+            ],
+            "paper_4": [
+                "The challenge addressed is improving early diagnosis and management of age-related macular degeneration using machine learning."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: This paper addresses a specific challenge."
+            ]
+        },
+        "What methods does the paper use for survival prediction?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper employs deep learning, specifically a multilayer deep neural network, for survival prediction."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presuppositions of the given question \"What methods does the paper use for survival prediction?\":\n\n1. The paper discusses or focuses on survival prediction.\n2. There are methods used within the paper for survival prediction.\n3. The reader is expecting a discussion of specific methods or techniques.\n4. The paper's content includes empirical or theoretical work related to survival prediction that can be described.\n5. The paper is of a scientific or research nature where \"methods\" would be an appropriate term to describe the approaches used.\n6. Survival prediction is a relevant and identifiable topic within the context of the paper."
+            ]
+        },
+        "What kind of data is used for personalized survival prediction?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The data used includes SNPs from genome-wide association studies (GWAS) for survival prediction."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "Genetic data from variants and public biological databases for phenotype prediction."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: Personalized survival prediction involves the use of some kind of data."
+            ]
+        },
+        "What issue does this paper address?": {
+            "paper_0": [
+                "The paper addresses the lack of causal interpretation in AMR genetic determinants identification using machine learning classifiers."
+            ],
+            "paper_1": [
+                "The paper addresses the challenge of personalized survival prediction using GWAS data and deep learning."
+            ],
+            "paper_2": [
+                "The paper addresses the understanding of clinical and genomic factors driving SARS-CoV2 disease severity."
+            ],
+            "paper_3": [
+                "The issue addressed is creating interpretable, memory-efficient deep learning models for phenotype prediction from genetic data."
+            ],
+            "paper_4": [
+                "The paper addresses genetic risk prediction for age-related macular degeneration using machine learning."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "generic"
+            ],
+            "presup": [
+                "Presuppositions inherent in the question \"What issue does this paper address?\" include:\n\n1. The paper addresses some issue or problem.\n2. The content of the paper is focused on identifying, discussing, or solving a particular issue.\n3. The paper is written with the intent to contribute to understanding or knowledge regarding an issue.\n4. The issue is presumed to be clearly definable or identifiable within the context of the paper.\n5. There is an expectation that the reader or inquirer will find the issue significant or relevant in the domain of the paper."
+            ]
+        },
+        "What is the primary challenge discussed in this paper?": {
+            "paper_0": [
+                "The primary challenge is the lack of causal interpretation in machine learning classifiers for microbial GWAS."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                "The primary challenge is understanding factors that drive the severity of SARS-CoV2 disease."
+            ],
+            "paper_3": [
+                "The primary challenge is the lack of interpretable and computationally efficient deep learning models in population genomics."
+            ],
+            "paper_4": [
+                "The challenge is accurately predicting individual risk for age-related macular degeneration using genetic data."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "generic"
+            ],
+            "presup": [
+                "Presupposition: This paper discusses a primary challenge."
+            ]
+        },
+        "What research question is this paper attempting to answer?": {
+            "paper_0": [
+                "The paper attempts to answer how to provide causal interpretation in microbial GWAS for AMR phenotypes."
+            ],
+            "paper_1": [
+                "The paper attempts to answer how to improve survival prediction using deep learning and GWAS data."
+            ],
+            "paper_2": [
+                "The paper attempts to understand factors that drive the severity of SARS-CoV2 disease."
+            ],
+            "paper_3": [
+                "The paper is attempting to answer how deep learning can predict phenotypes from genetic data interpretably and efficiently."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "generic"
+            ],
+            "presup": [
+                "Presupposition:\n1. This paper is attempting to answer a research question.\n2. The paper is sufficiently focused on a specific issue or inquiry that it can be distilled into a research question.\n3. There is a research question identifiable and explicit within the paper's contents or goals."
+            ]
+        },
+        "What computational challenges in deep learning for genomics are discussed in the paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper discusses challenges of computational inefficiency and lack of interpretable models in deep learning for genomics."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Presuppositions of the question \"What computational challenges in deep learning for genomics are discussed in the paper?\" include:\n\n1. There are computational challenges specific to the application of deep learning in the field of genomics that are being discussed.\n2. The paper in question specifically addresses or discusses these computational challenges.\n3. Deep learning is a relevant and applied technique within the field of genomics as per the context of the paper.\n4. The paper offers content that is analytical or evaluative regarding the use of deep learning in genomics, rather than being purely descriptive or unrelated to challenges.\n5. The reader is expecting to find information related to computational challenges, rather than other types of challenges like ethical, legal, or data collection challenges."
+            ]
+        },
+        "What kind of interpretable models does the paper suggest for improving deep learning applications in genomics?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper suggests deep neural network survival models for interpretable and accurate predictions in genomics."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper suggests biologically-knowledge-embedded, interpretable neural network architectures for genomics."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "The paper suggests interpretable models for improving deep learning applications in genomics."
+            ]
+        },
+        "What does this paper address in deep learning for genomics?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper addresses survival prediction using deep learning with GWAS data for disease management."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper addresses the interpretability and memory-efficiency challenges in deep learning for genomics predictions."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "This paper addresses something in the field of deep learning for genomics."
+            ]
+        }
+    }
+}
