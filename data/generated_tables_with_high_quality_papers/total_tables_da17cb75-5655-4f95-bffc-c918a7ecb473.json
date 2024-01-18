@@ -1,0 +1,796 @@
+{
+    "input_paper": [
+        {
+            "paperid": "paper0",
+            "title": "IPatch: a remote adversarial patch",
+            "abstract": "Applications such as autonomous vehicles and medical screening use deep learning models to localize and identify hundreds of objects in a single frame. In the past, it has been shown how an attacker can fool these models by placing an adversarial patch within a scene. However, these patches must be placed in the target location and do not explicitly alter the semantics elsewhere in the image. In this paper, we introduce a new type of adversarial patch which alters a model's perception of an image's semantics. These patches can be placed anywhere within an image to change the classification or semantics of locations far from the patch. We call this new class of adversarial examples `remote adversarial patches' (RAP). We implement our own RAP called IPatch and perform an in-depth analysis on image segmentation RAP attacks using five state-of-the-art architectures with eight different encoders on the CamVid street view dataset. Moreover, we demonstrate that the attack can be extended to object recognition models with preliminary results on the popular YOLOv3 model. We found that the patch can change the classification of a remote target region with a success rate of up to 93% on average.",
+            "introduction": "None"
+        },
+        {
+            "paperid": "paper1",
+            "title": "Evaluating the Robustness of Semantic Segmentation for Autonomous Driving against Real-World Adversarial Patch Attacks",
+            "abstract": "Deep learning and convolutional neural networks allow achieving impressive performance in computer vision tasks, such as object detection and semantic segmentation (SS). However, recent studies have shown evident weaknesses of such models against adversarial perturbations. In a real-world scenario instead, like autonomous driving, more attention should be devoted to real-world adversarial examples (RWAEs), which are physical objects (e.g., billboards and printable patches) optimized to be adversarial to the entire perception pipeline. This paper presents an in-depth evaluation of the robustness of popular SS models by testing the effects of both digital and real-world adversarial patches. These patches are crafted with powerful attacks enriched with a novel loss function. Firstly, an investigation on the Cityscapes dataset is conducted by extending the Expectation Over Transformation (EOT) paradigm to cope with SS. Then, a novel attack optimization, called scene-specific attack, is proposed. Such an attack leverages the CARLA driving simulator to improve the transferability of the proposed EOT-based attack to a real 3D environment. Finally, a printed physical billboard containing an adversarial patch was tested in an outdoor driving scenario to assess the feasibility of the studied attacks in the real world. Exhaustive experiments revealed that the proposed attack formulations outperform previous work to craft both digital and real-world adversarial patches for SS. At the same time, the experimental results showed how these attacks are notably less effective in the real world, hence questioning the practical relevance of adversarial attacks to SS models for autonomous/assisted driving.",
+            "introduction": "The rise of deep learning unlocked unprecedented performance in several scientific areas [24]. Convolutional (a) (b) (c) (d) (e) (f) Figure 1: Proposed adversarial patches on Cityscapes [5] (b) and CARLA Simulator [6] (e); (c/f) show the corresponding SS predicted by BiSeNet [40]; (a/d) show the corresponding predictions obtained using random patches instead of adversarial ones.\n\nneural networks [16] (CNNs) yielded super-human performance for many different computer vision tasks, such as image recognition [9], object detection [27] [26], and image segmentation [20]. Image segmentation, and semantic segmentation (SS) in particular, is used in autonomous driving perception pipelines [30], mainly for object detection [20]. Despite their high performance, CNNs are prone to adversarial attacks [31]. Most of the literature on adversarial attacks focuses on directly manipulating the pixels of the whole image, hence making the assumption that the attacker has control over the digital representation of the environment obtained by the on-board cameras. This kind of unsafe inputs are called digital adversarial examples.\n\nAlthough such digital attacks do not transfer well into the real world, they continue to be used to evaluate the robustness of models in safety-critical systems [12,3,19]. Realworld adversarial examples (RWAEs), on the other hand, are physical objects that can be placed in the field of view of a camera, such that the resulting image acts as an adversarial example for the neural network under attack [17]. Thus, RWAEs can induce errors in neural networks without requiring the attacker to access the digital representation of the image, thereby making them a more realistic and dangerous threat to safety-critical systems. This paper. This work focuses on RWAEs, as they repre-sent a potential threat to tasks in autonomous driving today. Although the effects of RWAEs have been studied extensively in the literature for classification and object detection, those on SS remain relatively unexplored. However, SS is an integral part of autonomous driving pipelines [30]. Thus, this paper examines various state-of-the-art models for real-time SS aiming at benchmarking their robustness to RWAEs in autonomous driving scenarios.\n\nOf the several types of RWAEs proposed in the literature [32], the form of attack used in this paper is adversarial patches [4]. This is because attacks that perturb the whole image are not practically feasible in the real world. Conversely, such patches can be easily printed and attached to any visible 2D surface in the driving environment, such as billboards and road signs, thus making them a simple, yet effective attack strategy.\n\nThe paper starts by recognizing the shortcomings of the standard cross-entropy loss for optimizing adversarial patches for SS. Thus, an extension to the cross-entropy loss is proposed and integrated in all the performed attacks. This extension forces the optimization to focus on pixels that are not yet misclassified, thus obtaining patches that are more powerful compared to those generated with the standard cross-entropy-based setting [21].\n\nFollowing this rationale, the robustness of real-time SS models to RWAEs attacks is benchmarked. The paper starts by first examining the case of driving images, crafting adversarial patches on the Cityscapes dataset [5], a popular benchmark of high-resolution images of urban driving. Robust real-world patches are crafted by following the Expectation Over Transformation (EOT) [2] paradigm, which has been extended in this work to attack SS models. Furthermore, a comparison against non-robust patches (without EOT) is presented to question their effectiveness on driving scenes.\n\nAnother set of experiments targeted a virtual 3D scenario, for which a stronger adversarial attack is presented and tested. The proposed scene-specific attack, defined in Section 3.4, is a more practical tool for crafting adversarial patches in a realistic autonomous driving scenario. It assumes that the attacker is interested in targeting an autonomous driving scene at a particular corner of a specific town, where information about the position of the attackable 2D surface (in our case, a billboard) is available. To satisfy such requirements we developed and tested this attack using the CARLA simulator, which provides all the needed geometric information. These experiments include a comparison with the EOT-based and non-robust patches, performed by importing them into the CARLA world and placing them on billboards to simulate a realistic study. Figure 1 provides some examples of the effect of our patches on Cityscapes and CARLA.\n\nThe last set of experiments were conducted on a real-world driving scenario, which required collecting a dataset within the city, optimizing a patch on it, physically printing said patch on a billboard, and finally evaluating SS models on images containing the printed patch.\n\nTo the best of our knowledge, this work represents the first exhaustive evaluation of the robustness of SS models against RWAEs for autonomous driving systems. The results of the experiments state important observations that should be taken into consideration while evaluating the trustworthiness of SS models in autonomous driving. First, they demonstrate that non-robust patches are not good candidates for assessing the practical robustness of an SS model to adversarial examples. Indeed, while they proved to be effective in attacking images related to driving scenes (from Cityscapes), they do not induce any real-world adversarial effect when crafted and tested in a virtual 3D world (based on CARLA). Conversely, robust patches, crafted with EOT or the proposed scene-specific approach, resulted to be less effective than non-robust ones on Cityscapes images, but were capable to accomplish the attack in both virtual 3D world and the real world. Nevertheless, their effectiveness in the latter two cases still resulted to be quite limited, hence questioning the practical relevance of RWAEs.\n\nIn summary, the paper makes the following contributions:\n\n\u2022 It proposes an extension to the pixel-wise crossentropy loss to enable crafting strong patches for the semantic segmentation setting. \u2022 It proposes a novel technique for crafting adversarial patches for autonomous driving scenarios that utilize geometric information of the 3D world. \u2022 It finally reports an extensive evaluation of RWAEbased attacks on a set of real-time semantic segmentation models using data from the Cityscapes dataset, CARLA, and the real world. The remainder of this paper is organized as follows: Section 2 provides a brief overview of related work existing in the literature, Section 3 formalizes the proposed loss function, pipeline, and attack strategy, Section 4 reports the experimental results, and Section 5 states the conclusions and proposes ideas for future work."
+        }
+    ],
+    "pap_to_tab": {
+        "What type of new adversarial example is introduced in the papers?": {
+            "paper_1": [
+                "remote adversarial patches (RAP)"
+            ],
+            "paper_2": [
+                "real-world adversarial examples (RWAEs), which are physical objects like billboards and printable patches optimized to be adversarial to the entire perception pipeline"
+            ]
+        },
+        "What is the main field of application discussed in each paper?": {
+            "paper_1": [
+                "autonomous vehicles and medical screening"
+            ],
+            "paper_2": [
+                "autonomous driving"
+            ]
+        },
+        "How do the adversarial attacks affect deep learning models?": {
+            "paper_1": [
+                "Alters a model's perception of an image's semantics and can change the classification or semantics of locations far from the patch"
+            ],
+            "paper_2": [
+                "Adversarial patches crafted to fool semantic segmentation models, with effects studied in both digital and real-world scenarios"
+            ]
+        },
+        "Which datasets are used for analysis in each paper?": {
+            "paper_1": [
+                "CamVid street view dataset for image segmentation attacks and popular YOLOv3 model for object recognition"
+            ],
+            "paper_2": [
+                "Cityscapes dataset and the CARLA driving simulator"
+            ]
+        },
+        "What are the results or findings on the success rate of the attacks?": {
+            "paper_1": [
+                "The patch can change the classification of a remote target region with a success rate of up to 93% on average"
+            ],
+            "paper_2": [
+                "Proposed attack formulations outperform previous work, but attacks are notably less effective in the real world"
+            ]
+        },
+        "What novel approach or method does each paper propose or investigate?": {
+            "paper_1": [
+                "Implementation of a remote adversarial patch called IPatch and an in-depth analysis on image segmentation RAP attacks"
+            ],
+            "paper_2": [
+                "In-depth evaluation of SS model robustness and a novel loss function for crafting adversarial patches, as well as a scene-specific attack leveraging the CARLA simulator"
+            ]
+        },
+        "What is the conclusion regarding the practical relevance of adversarial attacks in each paper?": {
+            "paper_1": [
+                "Not explicitly stated, but high success rates suggest potential practical impact if not mitigated"
+            ],
+            "paper_2": [
+                "Adversarial attacks are less effective in real-world scenarios, hence questioning their practical relevance"
+            ]
+        },
+        "What machine learning models are targeted for the adversarial attacks?": {
+            "paper_1": [
+                "Image segmentation architectures with different encoders and YOLOv3 model for object recognition"
+            ],
+            "paper_2": [
+                "Popular semantic segmentation (SS) models used in autonomous driving"
+            ]
+        }
+    },
+    "cc_to_tab": {
+        "Adversarial patch type": {
+            "paper_1": [
+                "remote adversarial patches (RAP) that can alter image semantics from any location"
+            ],
+            "paper_2": [
+                "robustness against digital and real-world adversarial patch attacks"
+            ]
+        },
+        "Datasets used for evaluation": {
+            "paper_1": [
+                "CamVid street view dataset",
+                "YOLOv3 model"
+            ],
+            "paper_2": [
+                "Cityscapes dataset",
+                "CARLA driving simulator",
+                "outdoor driving tests"
+            ]
+        },
+        "Success rate and effectiveness": {
+            "paper_1": [
+                "Change classification of remote target regions with up to 93% success rate"
+            ],
+            "paper_2": [
+                "Less effective in real-world settings"
+            ]
+        },
+        "Primary focus": {
+            "paper_1": [
+                "Creation and validation of a novel adversarial patch type"
+            ],
+            "paper_2": [
+                "Comprehensive robustness study, novel loss function, practical relevance"
+            ]
+        },
+        "Attack mechanism and practical relevance": {
+            "paper_1": [
+                "High success rate on average of RAP"
+            ],
+            "paper_2": [
+                "Investigation into practical relevance and transferability of attacks"
+            ]
+        },
+        "Novel attack formulations": {
+            "paper_1": [
+                "Implementation of IPatch for RAP"
+            ],
+            "paper_2": [
+                "Extension of EOT paradigm, scene-specific attack optimization"
+            ]
+        },
+        "Security focus": {
+            "paper_1": [
+                "Advancements in adversarial example development"
+            ],
+            "paper_2": [
+                "Real-world implications and defense against adversarial attacks"
+            ]
+        },
+        "Real-world applicability": {
+            "paper_1": [
+                "Theoretical and dataset-focused analysis"
+            ],
+            "paper_2": [
+                "Printed billboard tested in outdoor driving scenario"
+            ]
+        }
+    },
+    "multi_scheme": {
+        "What is an IPatch as described in the paper?": {
+            "paper_0": "IPatch is a new type of adversarial patch introduced in the paper which alters a model's perception of an image's semantics. These patches can be placed anywhere within an image to change the classification or semantics of locations far from the patch.",
+            "paper_1": "IPatch is a new type of adversarial patch introduced in the paper that alters a model's perception of an image's semantics. These patches can be placed anywhere within an image to change the classification or semantics of locations far from the patch."
+        },
+        "What is the scene-specific attack proposed in the paper, and how does it relate to the CARLA driving simulator?": {
+            "paper_0": "",
+            "paper_1": "The scene-specific attack proposed in the paper is a practical tool for crafting adversarial patches in a realistic autonomous driving scenario. It assumes that the attacker is interested in targeting a specific autonomous driving scene and uses geometric information about the position of the attackable 2D surface, such as a billboard. This attack was developed and tested using the CARLA simulator, which provides the needed geometric information."
+        },
+        "How was the Expectation Over Transformation (EOT) paradigm extended in the paper?": {
+            "paper_0": "",
+            "paper_1": "The paper extended the Expectation Over Transformation (EOT) paradigm to attack SS models. The paper compares the robustness of real-time SS models to RWAEs using EOT-based patches and demonstrates their capacity to accomplish an attack in both virtual 3D world and the real world."
+        },
+        "How does the IPatch alter the classification or semantics of locations far from the patch?": {
+            "paper_0": "The IPatch alters the classification or semantics of locations far from the patch by being placed anywhere within an image, leading to changes in how the model perceives different parts of the image not just where the patch is located.",
+            "paper_1": "The paper abstract mentions that the IPatch can be placed anywhere within an image to change the classification or semantics of locations far from the patch. It implies that the IPatch is designed to remotely manipulate the model's perception of different regions of the image, not just the area where the patch is located."
+        },
+        "What are the main computer vision tasks mentioned in the paper where deep learning and convolutional neural networks have achieved impressive performance?": {
+            "paper_0": "",
+            "paper_1": "The main computer vision tasks mentioned in the paper where deep learning and CNNs have achieved impressive performance include image recognition, object detection, and image segmentation."
+        },
+        "What were the results of the environmental tests on SS models when subjected to digital and real-world adversarial patches?": {
+            "paper_0": "",
+            "paper_1": ""
+        },
+        "Can the findings on image segmentation RAP attacks be generalized to other models beyond those tested in the study?": {
+            "paper_0": "",
+            "paper_1": ""
+        },
+        "Did the experimental results confirm the practical relevance of adversarial attacks to SS models for autonomous/assisted driving?": {
+            "paper_0": "",
+            "paper_1": "The experimental results question the practical relevance of RWAEs, as robust patches crafted using EOT or the proposed scene-specific approach were less effective than non-robust ones on Cityscapes images and showed quite limited effectiveness in both virtual 3D world and the real world."
+        },
+        "What is the main focus of the evaluation conducted in the paper on the robustness of semantic segmentation (SS) models?": {
+            "paper_0": "",
+            "paper_1": "The main focus of the evaluation on the robustness of SS models is benchmarking these models' robustness to real-world adversarial patch attacks in autonomous driving scenarios."
+        },
+        "What does the paper reveal about the current state of robustness in SS models for autonomous driving against adversarial attacks?": {
+            "paper_0": "",
+            "paper_1": "The paper reveals that the current state of robustness in SS models for autonomous driving against adversarial attacks needs to be improved, as demonstrated by the effectiveness of robust patches in virtual 3D and real-world driving scenarios."
+        },
+        "What are adversarial perturbations and how do they affect deep learning models?": {
+            "paper_0": "",
+            "paper_1": "Adversarial perturbations are considered unsafe inputs that take the form of subtle modifications made to the input of a deep learning model with the intent to confuse and mislead the model into making incorrect decisions or classifications."
+        },
+        "How many state-of-the-art architectures were tested for image segmentation RAP attacks in the study?": {
+            "paper_0": "Five state-of-the-art architectures with eight different encoders were tested for image segmentation RAP attacks in the study.",
+            "paper_1": ""
+        },
+        "What encoders were used in the study's analysis on image segmentation RAP attacks?": {
+            "paper_0": "The paper does not specify which encoders were used in the study's analysis on image segmentation RAP attacks in the abstract.",
+            "paper_1": ""
+        },
+        "Was the IPatch tested on object recognition models in the study, and if so, which model?": {
+            "paper_0": "Yes, the IPatch was tested on object recognition models, with preliminary results on the popular YOLOv3 model.",
+            "paper_1": ""
+        },
+        "How do the proposed attack formulations compare to previous work in crafting adversarial patches for SS?": {
+            "paper_0": "",
+            "paper_1": "The paper recognizes the shortcomings of the standard cross-entropy loss for optimizing adversarial patches for SS and proposes an extension to the loss that focuses the optimization on pixels not yet misclassified. This creates more powerful patches compared to those generated with the standard cross-entropy-based setting. The paper proposes a novel technique utilizing geometric information of the 3D world for crafting adversarial patches specific to autonomous driving scenarios."
+        },
+        "What novel loss function is introduced in the paper for crafting adversarial patches?": {
+            "paper_0": "",
+            "paper_1": "An extension to the pixel-wise cross-entropy loss is introduced in the paper to enable crafting strong patches for the semantic segmentation setting. This extension focuses the optimization on pixels that are not yet misclassified."
+        },
+        "What is the main purpose of a remote adversarial patch (RAP)?": {
+            "paper_0": "The main purpose of a remote adversarial patch (RAP) appears to be to alter the perception of a deep learning model in image classification or semantics across different regions of an image, not just where the patch is located, thus impacting the model's overall interpretation of an image's content.",
+            "paper_1": ""
+        },
+        "What implications might the use of RAPs like IPatch have for models used in autonomous vehicles and medical screening?": {
+            "paper_0": "The use of RAPs like IPatch could be detrimental to the performance of models used in autonomous vehicles and medical screening, by fooling them into misclassifying or misinterpreting images, which could lead to serious safety and health consequences.",
+            "paper_1": ""
+        },
+        "What are the applications that might be affected by adversarial patches according to the paper?": {
+            "paper_0": "Applications such as autonomous vehicles and medical screening are mentioned as potentially affected by adversarial patches.",
+            "paper_1": "The applications that might be affected by adversarial patches according to the paper could include autonomous vehicles and medical screening systems, as they both use deep learning models to localize and identify objects or relevant features."
+        },
+        "How does the IPatch affect the model's perception of an image's semantics?": {
+            "paper_0": "The IPatch affects the model's perception of an image's semantics by being able to change the classification or semantics of locations within the image that are remote from the actual location of the patch, thus interfering with the model's overall semantic interpretation.",
+            "paper_1": "The IPatch affects the model's perception of an image's semantics by placing the patch anywhere within an image to change the classification or semantics of locations far from the patch, essentially fooling the model by altering how it interprets various parts of the scene."
+        },
+        "ours_table_question": {
+            "question_0": {
+                "paper_0": "The paper tackles the creation of adversarial patches that remotely alter deep learning model perception in images.",
+                "paper_1": "The paper tackles the robustness of semantic segmentation models for autonomous driving against real-world adversarial patch attacks.",
+                "question": "what problem does this paper tackle?",
+                "type": "initial",
+                "presup": "Presupposition: The paper is addressing a specific problem or set of problems."
+            },
+            "question_1": {
+                "paper_0": "The paper proposes a new adversarial patch, called IPatch, that remotely alters an image's semantics for fooling deep learning models.",
+                "paper_1": "",
+                "question": "what is the approach this paper proposed?",
+                "type": "initial",
+                "presup": "Presupposition: This paper proposes an approach."
+            },
+            "question_2": {
+                "paper_0": "Adversarial patches manipulate deep learning models by altering image semantics remotely, affecting classifications.",
+                "paper_1": "Adversarial patches manipulate deep learning perception by being optimized as physical objects to disrupt the entire perception pipeline.",
+                "question": "How do adversarial patches manipulate deep learning model perception according to the paper?",
+                "type": "followup",
+                "presup": "The given question presupposes several things:\n\n1. Adversarial patches are discussed in the paper.\n2. These adversarial patches have an effect on deep learning model perception.\n3. The paper provides an explanation or analysis of how these manipulations occur.\n4. Deep learning models are susceptible to manipulation by adversarial patches.\n5. The concept of adversarial patches is relevant and important enough to the context of the paper to be specifically addressed."
+            },
+            "question_3": {
+                "paper_0": "",
+                "paper_1": "The paper proposes attack optimization using an EOT paradigm extension and scene-specific attacks for semantic segmentation.",
+                "question": "What methods does the paper propose to generate these adversarial patches?",
+                "type": "followup",
+                "presup": "The paper proposes methods to generate adversarial patches."
+            },
+            "question_4": {
+                "paper_0": "Adversarial patches like IPatch can fool AI models into misclassifying remote image regions, threatening their security.",
+                "paper_1": "Adversarial patches question the robustness and security of semantic segmentation in autonomous driving systems.",
+                "question": "What implications do these adversarial patches have for the security of image recognition systems?",
+                "type": "followup",
+                "presup": "The presuppositions of the given question \"What implications do these adversarial patches have for the security of image recognition systems?\" are as follows:\n\n1. The paper in question discusses or addresses adversarial patches.\n2. Adversarial patches are relevant for image recognition systems.\n3. There are implications for the security of image recognition systems as a result of these adversarial patches.\n4. The notion of security is relevant and of concern with respect to image recognition systems within the context of the paper.\n5. The reader is expected to be familiar with the concepts of \"adversarial patches\" and \"image recognition systems\" or that these will be explained in the paper.\n6. The existence and study of adversarial patches, and their impact on security, imply that there are vulnerabilities within image recognition systems that can be exploited."
+            },
+            "question_5": {
+                "paper_0": "",
+                "paper_1": "",
+                "question": "Does the paper suggest any defense mechanisms against such adversarial attacks?",
+                "type": "followup",
+                "presup": "The presuppositions of the given question \"Does the paper suggest any defense mechanisms against such adversarial attacks?\" are:\n\n1. The paper discusses or mentions adversarial attacks.\n2. The paper might contain suggestions for defense mechanisms.\n3. The context is such that defense mechanisms against adversarial attacks are applicable or relevant."
+            },
+            "question_6": {
+                "paper_0": "",
+                "paper_1": "",
+                "question": "What issue does the paper address regarding deep learning models?",
+                "type": "lowlevel",
+                "presup": "Presuppositions:\n\n1. There is an issue regarding deep learning models.\n2. The paper addresses this issue.\n3. Deep learning models are relevant to the content of the paper.\n4. The issue is something that can be articulated or defined in the context of the paper."
+            },
+            "question_7": {
+                "paper_0": "The paper develops 'IPatch,' a remote adversarial patch that alters a model's semantic image perception.",
+                "paper_1": "",
+                "question": "What does the paper develop for altering model perception?",
+                "type": "lowlevel",
+                "presup": "Presupposition: The paper develops something for altering model perception. \n\nAdditional presuppositions could include:\n1. There is a concept of \"model perception\" that can be altered.\n2. The paper includes a practical or theoretical development aimed at this alteration.\n3. It is within the scope of the paper to address issues related to model perception."
+            },
+            "question_8": {
+                "paper_0": "A remote adversarial patch (IPatch) that alters image semantics and fools deep learning models.",
+                "paper_1": "The creation of real-world and digital adversarial patches to test semantic segmentation models' robustness.",
+                "question": "What is being created that affects deep learning models in images?",
+                "type": "lowlevel",
+                "presup": "- Something is being created that affects deep learning models.\n- This creation pertains to images.\n- Deep learning models are relevant to the topic or context at hand.\n- There is an implication that deep learning models can be affected or influenced by certain creations or interventions."
+            },
+            "question_9": {
+                "paper_0": "The paper introduces \"remote adversarial patches\" (RAP) to change an image's semantic perception by models.",
+                "paper_1": "",
+                "question": "What methods does the paper introduce to enhance the robustness of semantic segmentation models?",
+                "type": "followup",
+                "presup": "Presuppositions of the given question:\n\n1. The paper introduces methods.\n2. The methods are designed to enhance the robustness.\n3. There are existing semantic segmentation models.\n4. The robustness of these models can be enhanced.\n5. The topic of the paper relates to semantic segmentation in the context of machine learning or computer vision.\n6. The paper is concerned with improving or assessing the performance aspect of these models, specifically their robustness."
+            },
+            "question_10": {
+                "paper_0": "",
+                "paper_1": "The solutions involve extending EOT and proposing scene-specific attacks to mitigate adversarial patch impacts on driving models.",
+                "question": "How do the proposed solutions mitigate the impact of real-world adversarial patch attacks on autonomous driving models?",
+                "type": "followup",
+                "presup": "1. The paper proposes solutions to mitigate the impact of real-world adversarial patch attacks on autonomous driving models.\n2. There is an impact of real-world adversarial patch attacks on autonomous driving models that needs to be mitigated.\n3. The paper focuses on autonomous driving models, suggesting they are susceptible to attacks.\n4. Adversarial patch attacks are a relevant threat in the context of autonomous driving.\n5. Autonomous driving models can suffer from real-world adversarial patch attacks, implying that the models are already deployed or at least in a testable state.\n6. The solutions discussed in the paper are aimed at improving the security or robustness of autonomous driving models against specific types of attacks."
+            },
+            "question_11": {
+                "paper_0": "",
+                "paper_1": "The paper tests digital and real-world adversarial patch attacks, including scene-specific and EOT-based attacks, on semantic segmentation models.",
+                "question": "Can you detail the types of adversarial patch attacks that the semantic segmentation models are being tested against in this research?",
+                "type": "followup",
+                "presup": "1. This research involves testing semantic segmentation models.\n2. The testing is against a form of attack known as adversarial patch attacks.\n3. There are multiple types of adversarial patch attacks being considered in this research.\n4. The focus of the research includes the resilience or vulnerability of semantic segmentation models to these attacks."
+            },
+            "question_12": {
+                "paper_0": "The paper addresses adversarial patches misleading semantic segmentation models' perception remotely within images.",
+                "paper_1": "The paper addresses the vulnerability of semantic segmentation models in autonomous driving to real-world adversarial patch attacks.",
+                "question": "What problem is addressed concerning semantic segmentation models?",
+                "type": "lowlevel",
+                "presup": "The presuppositions of the given question \"What problem is addressed concerning semantic segmentation models?\" are as follows:\n\n1. There is a problem addressed within the domain of semantic segmentation models.\n2. The paper or source in question specifically discusses semantic segmentation models.\n3. Semantic segmentation models are relevant and important to the context of the discussion or research.\n4. The inquiry pertains to finding an issue or limitation within the way semantic segmentation models currently function or are implemented."
+            },
+            "question_13": {
+                "paper_0": "",
+                "paper_1": "The paper focuses on robustness in semantic segmentation within autonomous driving against adversarial attacks.",
+                "question": "In which application area does the paper focus on robustness?",
+                "type": "lowlevel",
+                "presup": "Presuppositions of the given question \"In which application area does the paper focus on robustness?\" may include:\n\n1. The paper includes a focus on robustness.\n2. There is an application area that is relevant to the focus on robustness in the paper.\n3. Robustness is a topic of concern or is being addressed within the context of the paper.\n4. The paper differentiates between multiple application areas with respect to robustness.\n5. The study or the discussion of robustness within the paper is categorized or can be categorized into application areas.\n6. The question assumes that there is a specific application area that the paper has primarily or specifically focused on in relation to robustness."
+            },
+            "question_14": {
+                "paper_0": "IPatch alters image semantics remotely, unlike prior patches requiring placement near the target.",
+                "paper_1": "",
+                "question": "How does the IPatch differentiate from previous adversarial patch methods in terms of design and effectiveness?",
+                "type": "followup",
+                "presup": "1. The IPatch exists and is a form of adversarial patch method.\n2. The IPatch has a design that is in some way differentiable from previous methods.\n3. The IPatch can be compared in terms of effectiveness with other adversarial patch methods.\n4. Previous adversarial patch methods exist for comparison.\n5. The paper discusses or evaluates the design and effectiveness of the IPatch."
+            },
+            "question_15": {
+                "paper_0": "IPatch implies that deep learning models may be vulnerable to remote adversarial attacks altering image semantics.",
+                "paper_1": "",
+                "question": "What are the implications of using IPatch for the robustness of deep learning models?",
+                "type": "followup",
+                "presup": "The question \"What are the implications of using IPatch for the robustness of deep learning models?\" contains several presuppositions:\n\n1. IPatch is a concept, method, or tool that exists.\n2. IPatch is somehow applicable or relevant to deep learning models.\n3. IPatch has potential implications or effects on the robustness of these models.\n4. The paper in question discusses or examines these implications.\n5. Robustness of deep learning models is a relevant and meaningful attribute that can be influenced."
+            },
+            "question_16": {
+                "paper_0": "To counteract IPatch, one could enhance model robustness, apply adversarial training, or employ patch detection mechanisms.",
+                "paper_1": "",
+                "question": "What measures can be implemented to counteract the effects of IPatch on image recognition systems?",
+                "type": "followup",
+                "presup": "Presupposition: \n1. There are effects of IPatch on image recognition systems.\n2. Measures can be implemented to counteract these effects.\n3. The entity asking about \"measures\" assumes the existence or potential development of methods to mitigate the negative impact of IPatch.\n4. IPatch is related to or has an influence on image recognition systems discussed within the paper.\n5. The question assumes the reader is familiar with what IPatch is, suggesting it might be a concept or tool explained in the paper.\n6. The audience of the question is expected to have at least some knowledge of image recognition systems and the possible countermeasures or standards in place to address security or performance issues."
+            },
+            "question_17": {
+                "paper_0": "",
+                "paper_1": "The paper proposes an in-depth evaluation of semantic segmentation models' robustness against digital and real-world adversarial attacks.",
+                "question": "What does the paper propose?",
+                "type": "lowlevel",
+                "presup": "Presupposition: The paper proposes something (it might be a solution, a theory, a method, or a hypothesis)."
+            },
+            "question_18": {
+                "paper_0": "IPatch is a new type of adversarial patch that alters a model's perception of image semantics remotely.",
+                "paper_1": "",
+                "question": "What is IPatch?",
+                "type": "lowlevel",
+                "presup": "Presupposition:\n\n1. IPatch is a specific concept, tool, method, or technology that is identifiable and distinct.\n2. The existence of IPatch is either discussed or analyzed within the context of the research paper or field of study referenced.\n3. The inquiry is seeking a definition or explanation of what IPatch is, implying that it has features or attributes that can be described.\n4. The person asking the question lacks information about IPatch and assumes that the entity being asked (such as an intelligent assistant or the research paper itself) has knowledge about it.\n5. The question implies relevance; IPatch is assumed to be significant within the context of the discussion or the research paper."
+            },
+            "question_19": {
+                "paper_0": "The purpose is to alter a model's perception of an image's semantics remotely within the scene.",
+                "paper_1": "",
+                "question": "What is the purpose of the adversarial patch proposed in the paper?",
+                "type": "lowlevel",
+                "presup": "Presupposition: The paper proposes an adversarial patch."
+            }
+        },
+        "ours_table_presupposition": {
+            "presup_0": {
+                "question": "what problem does this paper tackle?",
+                "presup": "Presupposition: The paper is addressing a specific problem or set of problems.",
+                "paper_0": true,
+                "paper_1": true
+            },
+            "presup_1": {
+                "question": "what is the approach this paper proposed?",
+                "presup": "Presupposition: This paper proposes an approach.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_2": {
+                "question": "How do adversarial patches manipulate deep learning model perception according to the paper?",
+                "presup": "The given question presupposes several things:\n\n1. Adversarial patches are discussed in the paper.\n2. These adversarial patches have an effect on deep learning model perception.\n3. The paper provides an explanation or analysis of how these manipulations occur.\n4. Deep learning models are susceptible to manipulation by adversarial patches.\n5. The concept of adversarial patches is relevant and important enough to the context of the paper to be specifically addressed.",
+                "paper_0": true,
+                "paper_1": true
+            },
+            "presup_3": {
+                "question": "What methods does the paper propose to generate these adversarial patches?",
+                "presup": "The paper proposes methods to generate adversarial patches.",
+                "paper_0": false,
+                "paper_1": true
+            },
+            "presup_4": {
+                "question": "What implications do these adversarial patches have for the security of image recognition systems?",
+                "presup": "The presuppositions of the given question \"What implications do these adversarial patches have for the security of image recognition systems?\" are as follows:\n\n1. The paper in question discusses or addresses adversarial patches.\n2. Adversarial patches are relevant for image recognition systems.\n3. There are implications for the security of image recognition systems as a result of these adversarial patches.\n4. The notion of security is relevant and of concern with respect to image recognition systems within the context of the paper.\n5. The reader is expected to be familiar with the concepts of \"adversarial patches\" and \"image recognition systems\" or that these will be explained in the paper.\n6. The existence and study of adversarial patches, and their impact on security, imply that there are vulnerabilities within image recognition systems that can be exploited.",
+                "paper_0": true,
+                "paper_1": true
+            },
+            "presup_5": {
+                "question": "Does the paper suggest any defense mechanisms against such adversarial attacks?",
+                "presup": "The presuppositions of the given question \"Does the paper suggest any defense mechanisms against such adversarial attacks?\" are:\n\n1. The paper discusses or mentions adversarial attacks.\n2. The paper might contain suggestions for defense mechanisms.\n3. The context is such that defense mechanisms against adversarial attacks are applicable or relevant.",
+                "paper_0": false,
+                "paper_1": false
+            },
+            "presup_6": {
+                "question": "What issue does the paper address regarding deep learning models?",
+                "presup": "Presuppositions:\n\n1. There is an issue regarding deep learning models.\n2. The paper addresses this issue.\n3. Deep learning models are relevant to the content of the paper.\n4. The issue is something that can be articulated or defined in the context of the paper.",
+                "paper_0": false,
+                "paper_1": false
+            },
+            "presup_7": {
+                "question": "What does the paper develop for altering model perception?",
+                "presup": "Presupposition: The paper develops something for altering model perception. \n\nAdditional presuppositions could include:\n1. There is a concept of \"model perception\" that can be altered.\n2. The paper includes a practical or theoretical development aimed at this alteration.\n3. It is within the scope of the paper to address issues related to model perception.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_8": {
+                "question": "What is being created that affects deep learning models in images?",
+                "presup": "- Something is being created that affects deep learning models.\n- This creation pertains to images.\n- Deep learning models are relevant to the topic or context at hand.\n- There is an implication that deep learning models can be affected or influenced by certain creations or interventions.",
+                "paper_0": true,
+                "paper_1": true
+            },
+            "presup_9": {
+                "question": "What methods does the paper introduce to enhance the robustness of semantic segmentation models?",
+                "presup": "Presuppositions of the given question:\n\n1. The paper introduces methods.\n2. The methods are designed to enhance the robustness.\n3. There are existing semantic segmentation models.\n4. The robustness of these models can be enhanced.\n5. The topic of the paper relates to semantic segmentation in the context of machine learning or computer vision.\n6. The paper is concerned with improving or assessing the performance aspect of these models, specifically their robustness.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_10": {
+                "question": "How do the proposed solutions mitigate the impact of real-world adversarial patch attacks on autonomous driving models?",
+                "presup": "1. The paper proposes solutions to mitigate the impact of real-world adversarial patch attacks on autonomous driving models.\n2. There is an impact of real-world adversarial patch attacks on autonomous driving models that needs to be mitigated.\n3. The paper focuses on autonomous driving models, suggesting they are susceptible to attacks.\n4. Adversarial patch attacks are a relevant threat in the context of autonomous driving.\n5. Autonomous driving models can suffer from real-world adversarial patch attacks, implying that the models are already deployed or at least in a testable state.\n6. The solutions discussed in the paper are aimed at improving the security or robustness of autonomous driving models against specific types of attacks.",
+                "paper_0": false,
+                "paper_1": true
+            },
+            "presup_11": {
+                "question": "Can you detail the types of adversarial patch attacks that the semantic segmentation models are being tested against in this research?",
+                "presup": "1. This research involves testing semantic segmentation models.\n2. The testing is against a form of attack known as adversarial patch attacks.\n3. There are multiple types of adversarial patch attacks being considered in this research.\n4. The focus of the research includes the resilience or vulnerability of semantic segmentation models to these attacks.",
+                "paper_0": false,
+                "paper_1": true
+            },
+            "presup_12": {
+                "question": "What problem is addressed concerning semantic segmentation models?",
+                "presup": "The presuppositions of the given question \"What problem is addressed concerning semantic segmentation models?\" are as follows:\n\n1. There is a problem addressed within the domain of semantic segmentation models.\n2. The paper or source in question specifically discusses semantic segmentation models.\n3. Semantic segmentation models are relevant and important to the context of the discussion or research.\n4. The inquiry pertains to finding an issue or limitation within the way semantic segmentation models currently function or are implemented.",
+                "paper_0": true,
+                "paper_1": true
+            },
+            "presup_13": {
+                "question": "In which application area does the paper focus on robustness?",
+                "presup": "Presuppositions of the given question \"In which application area does the paper focus on robustness?\" may include:\n\n1. The paper includes a focus on robustness.\n2. There is an application area that is relevant to the focus on robustness in the paper.\n3. Robustness is a topic of concern or is being addressed within the context of the paper.\n4. The paper differentiates between multiple application areas with respect to robustness.\n5. The study or the discussion of robustness within the paper is categorized or can be categorized into application areas.\n6. The question assumes that there is a specific application area that the paper has primarily or specifically focused on in relation to robustness.",
+                "paper_0": false,
+                "paper_1": true
+            },
+            "presup_14": {
+                "question": "How does the IPatch differentiate from previous adversarial patch methods in terms of design and effectiveness?",
+                "presup": "1. The IPatch exists and is a form of adversarial patch method.\n2. The IPatch has a design that is in some way differentiable from previous methods.\n3. The IPatch can be compared in terms of effectiveness with other adversarial patch methods.\n4. Previous adversarial patch methods exist for comparison.\n5. The paper discusses or evaluates the design and effectiveness of the IPatch.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_15": {
+                "question": "What are the implications of using IPatch for the robustness of deep learning models?",
+                "presup": "The question \"What are the implications of using IPatch for the robustness of deep learning models?\" contains several presuppositions:\n\n1. IPatch is a concept, method, or tool that exists.\n2. IPatch is somehow applicable or relevant to deep learning models.\n3. IPatch has potential implications or effects on the robustness of these models.\n4. The paper in question discusses or examines these implications.\n5. Robustness of deep learning models is a relevant and meaningful attribute that can be influenced.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_16": {
+                "question": "What measures can be implemented to counteract the effects of IPatch on image recognition systems?",
+                "presup": "Presupposition: \n1. There are effects of IPatch on image recognition systems.\n2. Measures can be implemented to counteract these effects.\n3. The entity asking about \"measures\" assumes the existence or potential development of methods to mitigate the negative impact of IPatch.\n4. IPatch is related to or has an influence on image recognition systems discussed within the paper.\n5. The question assumes the reader is familiar with what IPatch is, suggesting it might be a concept or tool explained in the paper.\n6. The audience of the question is expected to have at least some knowledge of image recognition systems and the possible countermeasures or standards in place to address security or performance issues.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_17": {
+                "question": "What does the paper propose?",
+                "presup": "Presupposition: The paper proposes something (it might be a solution, a theory, a method, or a hypothesis).",
+                "paper_0": false,
+                "paper_1": true
+            },
+            "presup_18": {
+                "question": "What is IPatch?",
+                "presup": "Presupposition:\n\n1. IPatch is a specific concept, tool, method, or technology that is identifiable and distinct.\n2. The existence of IPatch is either discussed or analyzed within the context of the research paper or field of study referenced.\n3. The inquiry is seeking a definition or explanation of what IPatch is, implying that it has features or attributes that can be described.\n4. The person asking the question lacks information about IPatch and assumes that the entity being asked (such as an intelligent assistant or the research paper itself) has knowledge about it.\n5. The question implies relevance; IPatch is assumed to be significant within the context of the discussion or the research paper.",
+                "paper_0": true,
+                "paper_1": false
+            },
+            "presup_19": {
+                "question": "What is the purpose of the adversarial patch proposed in the paper?",
+                "presup": "Presupposition: The paper proposes an adversarial patch.",
+                "paper_0": true,
+                "paper_1": false
+            }
+        },
+        "ours_question_list": [
+            {
+                "round": 2,
+                "question": "What is the approach proposed in this research?",
+                "type": "generic"
+            },
+            {
+                "round": 2,
+                "question": "What methodology does this paper introduce?",
+                "type": "generic"
+            },
+            {
+                "round": 2,
+                "question": "What is the central thesis or innovation of this study?",
+                "type": "generic"
+            }
+        ],
+        "ours_final_table": {
+            "what problem does this paper tackle?": {
+                "paper_0": [
+                    "The paper tackles the creation of adversarial patches that remotely alter deep learning model perception in images."
+                ],
+                "paper_1": [
+                    "The paper tackles the robustness of semantic segmentation models for autonomous driving against real-world adversarial patch attacks."
+                ],
+                "type": [
+                    "initial"
+                ],
+                "presup": [
+                    "Presupposition: The paper is addressing a specific problem or set of problems."
+                ]
+            },
+            "what is the approach this paper proposed?": {
+                "paper_0": [
+                    "The paper proposes a new adversarial patch, called IPatch, that remotely alters an image's semantics for fooling deep learning models."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "initial"
+                ],
+                "presup": [
+                    "Presupposition: This paper proposes an approach."
+                ]
+            },
+            "How do adversarial patches manipulate deep learning model perception according to the paper?": {
+                "paper_0": [
+                    "Adversarial patches manipulate deep learning models by altering image semantics remotely, affecting classifications."
+                ],
+                "paper_1": [
+                    "Adversarial patches manipulate deep learning perception by being optimized as physical objects to disrupt the entire perception pipeline."
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "The given question presupposes several things:\n\n1. Adversarial patches are discussed in the paper.\n2. These adversarial patches have an effect on deep learning model perception.\n3. The paper provides an explanation or analysis of how these manipulations occur.\n4. Deep learning models are susceptible to manipulation by adversarial patches.\n5. The concept of adversarial patches is relevant and important enough to the context of the paper to be specifically addressed."
+                ]
+            },
+            "What methods does the paper propose to generate these adversarial patches?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    "The paper proposes attack optimization using an EOT paradigm extension and scene-specific attacks for semantic segmentation."
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "The paper proposes methods to generate adversarial patches."
+                ]
+            },
+            "What implications do these adversarial patches have for the security of image recognition systems?": {
+                "paper_0": [
+                    "Adversarial patches like IPatch can fool AI models into misclassifying remote image regions, threatening their security."
+                ],
+                "paper_1": [
+                    "Adversarial patches question the robustness and security of semantic segmentation in autonomous driving systems."
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "The presuppositions of the given question \"What implications do these adversarial patches have for the security of image recognition systems?\" are as follows:\n\n1. The paper in question discusses or addresses adversarial patches.\n2. Adversarial patches are relevant for image recognition systems.\n3. There are implications for the security of image recognition systems as a result of these adversarial patches.\n4. The notion of security is relevant and of concern with respect to image recognition systems within the context of the paper.\n5. The reader is expected to be familiar with the concepts of \"adversarial patches\" and \"image recognition systems\" or that these will be explained in the paper.\n6. The existence and study of adversarial patches, and their impact on security, imply that there are vulnerabilities within image recognition systems that can be exploited."
+                ]
+            },
+            "Does the paper suggest any defense mechanisms against such adversarial attacks?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "The presuppositions of the given question \"Does the paper suggest any defense mechanisms against such adversarial attacks?\" are:\n\n1. The paper discusses or mentions adversarial attacks.\n2. The paper might contain suggestions for defense mechanisms.\n3. The context is such that defense mechanisms against adversarial attacks are applicable or relevant."
+                ]
+            },
+            "What issue does the paper address regarding deep learning models?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presuppositions:\n\n1. There is an issue regarding deep learning models.\n2. The paper addresses this issue.\n3. Deep learning models are relevant to the content of the paper.\n4. The issue is something that can be articulated or defined in the context of the paper."
+                ]
+            },
+            "What does the paper develop for altering model perception?": {
+                "paper_0": [
+                    "The paper develops 'IPatch,' a remote adversarial patch that alters a model's semantic image perception."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presupposition: The paper develops something for altering model perception. \n\nAdditional presuppositions could include:\n1. There is a concept of \"model perception\" that can be altered.\n2. The paper includes a practical or theoretical development aimed at this alteration.\n3. It is within the scope of the paper to address issues related to model perception."
+                ]
+            },
+            "What is being created that affects deep learning models in images?": {
+                "paper_0": [
+                    "A remote adversarial patch (IPatch) that alters image semantics and fools deep learning models."
+                ],
+                "paper_1": [
+                    "The creation of real-world and digital adversarial patches to test semantic segmentation models' robustness."
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "- Something is being created that affects deep learning models.\n- This creation pertains to images.\n- Deep learning models are relevant to the topic or context at hand.\n- There is an implication that deep learning models can be affected or influenced by certain creations or interventions."
+                ]
+            },
+            "What methods does the paper introduce to enhance the robustness of semantic segmentation models?": {
+                "paper_0": [
+                    "The paper introduces \"remote adversarial patches\" (RAP) to change an image's semantic perception by models."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "Presuppositions of the given question:\n\n1. The paper introduces methods.\n2. The methods are designed to enhance the robustness.\n3. There are existing semantic segmentation models.\n4. The robustness of these models can be enhanced.\n5. The topic of the paper relates to semantic segmentation in the context of machine learning or computer vision.\n6. The paper is concerned with improving or assessing the performance aspect of these models, specifically their robustness."
+                ]
+            },
+            "How do the proposed solutions mitigate the impact of real-world adversarial patch attacks on autonomous driving models?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    "The solutions involve extending EOT and proposing scene-specific attacks to mitigate adversarial patch impacts on driving models."
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "1. The paper proposes solutions to mitigate the impact of real-world adversarial patch attacks on autonomous driving models.\n2. There is an impact of real-world adversarial patch attacks on autonomous driving models that needs to be mitigated.\n3. The paper focuses on autonomous driving models, suggesting they are susceptible to attacks.\n4. Adversarial patch attacks are a relevant threat in the context of autonomous driving.\n5. Autonomous driving models can suffer from real-world adversarial patch attacks, implying that the models are already deployed or at least in a testable state.\n6. The solutions discussed in the paper are aimed at improving the security or robustness of autonomous driving models against specific types of attacks."
+                ]
+            },
+            "Can you detail the types of adversarial patch attacks that the semantic segmentation models are being tested against in this research?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    "The paper tests digital and real-world adversarial patch attacks, including scene-specific and EOT-based attacks, on semantic segmentation models."
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "1. This research involves testing semantic segmentation models.\n2. The testing is against a form of attack known as adversarial patch attacks.\n3. There are multiple types of adversarial patch attacks being considered in this research.\n4. The focus of the research includes the resilience or vulnerability of semantic segmentation models to these attacks."
+                ]
+            },
+            "What problem is addressed concerning semantic segmentation models?": {
+                "paper_0": [
+                    "The paper addresses adversarial patches misleading semantic segmentation models' perception remotely within images."
+                ],
+                "paper_1": [
+                    "The paper addresses the vulnerability of semantic segmentation models in autonomous driving to real-world adversarial patch attacks."
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "The presuppositions of the given question \"What problem is addressed concerning semantic segmentation models?\" are as follows:\n\n1. There is a problem addressed within the domain of semantic segmentation models.\n2. The paper or source in question specifically discusses semantic segmentation models.\n3. Semantic segmentation models are relevant and important to the context of the discussion or research.\n4. The inquiry pertains to finding an issue or limitation within the way semantic segmentation models currently function or are implemented."
+                ]
+            },
+            "In which application area does the paper focus on robustness?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    "The paper focuses on robustness in semantic segmentation within autonomous driving against adversarial attacks."
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presuppositions of the given question \"In which application area does the paper focus on robustness?\" may include:\n\n1. The paper includes a focus on robustness.\n2. There is an application area that is relevant to the focus on robustness in the paper.\n3. Robustness is a topic of concern or is being addressed within the context of the paper.\n4. The paper differentiates between multiple application areas with respect to robustness.\n5. The study or the discussion of robustness within the paper is categorized or can be categorized into application areas.\n6. The question assumes that there is a specific application area that the paper has primarily or specifically focused on in relation to robustness."
+                ]
+            },
+            "How does the IPatch differentiate from previous adversarial patch methods in terms of design and effectiveness?": {
+                "paper_0": [
+                    "IPatch alters image semantics remotely, unlike prior patches requiring placement near the target."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "1. The IPatch exists and is a form of adversarial patch method.\n2. The IPatch has a design that is in some way differentiable from previous methods.\n3. The IPatch can be compared in terms of effectiveness with other adversarial patch methods.\n4. Previous adversarial patch methods exist for comparison.\n5. The paper discusses or evaluates the design and effectiveness of the IPatch."
+                ]
+            },
+            "What are the implications of using IPatch for the robustness of deep learning models?": {
+                "paper_0": [
+                    "IPatch implies that deep learning models may be vulnerable to remote adversarial attacks altering image semantics."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "The question \"What are the implications of using IPatch for the robustness of deep learning models?\" contains several presuppositions:\n\n1. IPatch is a concept, method, or tool that exists.\n2. IPatch is somehow applicable or relevant to deep learning models.\n3. IPatch has potential implications or effects on the robustness of these models.\n4. The paper in question discusses or examines these implications.\n5. Robustness of deep learning models is a relevant and meaningful attribute that can be influenced."
+                ]
+            },
+            "What measures can be implemented to counteract the effects of IPatch on image recognition systems?": {
+                "paper_0": [
+                    "To counteract IPatch, one could enhance model robustness, apply adversarial training, or employ patch detection mechanisms."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "followup"
+                ],
+                "presup": [
+                    "Presupposition: \n1. There are effects of IPatch on image recognition systems.\n2. Measures can be implemented to counteract these effects.\n3. The entity asking about \"measures\" assumes the existence or potential development of methods to mitigate the negative impact of IPatch.\n4. IPatch is related to or has an influence on image recognition systems discussed within the paper.\n5. The question assumes the reader is familiar with what IPatch is, suggesting it might be a concept or tool explained in the paper.\n6. The audience of the question is expected to have at least some knowledge of image recognition systems and the possible countermeasures or standards in place to address security or performance issues."
+                ]
+            },
+            "What does the paper propose?": {
+                "paper_0": [
+                    ""
+                ],
+                "paper_1": [
+                    "The paper proposes an in-depth evaluation of semantic segmentation models' robustness against digital and real-world adversarial attacks."
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presupposition: The paper proposes something (it might be a solution, a theory, a method, or a hypothesis)."
+                ]
+            },
+            "What is IPatch?": {
+                "paper_0": [
+                    "IPatch is a new type of adversarial patch that alters a model's perception of image semantics remotely."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presupposition:\n\n1. IPatch is a specific concept, tool, method, or technology that is identifiable and distinct.\n2. The existence of IPatch is either discussed or analyzed within the context of the research paper or field of study referenced.\n3. The inquiry is seeking a definition or explanation of what IPatch is, implying that it has features or attributes that can be described.\n4. The person asking the question lacks information about IPatch and assumes that the entity being asked (such as an intelligent assistant or the research paper itself) has knowledge about it.\n5. The question implies relevance; IPatch is assumed to be significant within the context of the discussion or the research paper."
+                ]
+            },
+            "What is the purpose of the adversarial patch proposed in the paper?": {
+                "paper_0": [
+                    "The purpose is to alter a model's perception of an image's semantics remotely within the scene."
+                ],
+                "paper_1": [
+                    ""
+                ],
+                "type": [
+                    "lowlevel"
+                ],
+                "presup": [
+                    "Presupposition: The paper proposes an adversarial patch."
+                ]
+            }
+        }
+    }
+}

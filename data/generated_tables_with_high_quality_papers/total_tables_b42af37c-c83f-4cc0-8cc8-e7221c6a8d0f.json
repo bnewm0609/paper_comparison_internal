@@ -1,0 +1,1630 @@
+{
+    "input_paper": [
+        {
+            "paperid": "paper0",
+            "title": "The Konstanz natural video database (KoNViD-1k)",
+            "abstract": "Subjective video quality assessment (VQA) strongly depends on semantics, context, and the types of visual distortions. Currently, all existing VQA databases include only a small number of video sequences with artificial distortions. The development and evaluation of objective quality assessment methods would benefit from having larger datasets of real-world video sequences with corresponding subjective mean opinion scores (MOS), in particular for deep learning purposes. In addition, the training and validation of any VQA method intended to be \u2018general purpose\u2019 requires a large dataset of video sequences that are representative of the whole spectrum of available video content and all types of distortions. We report our work on KoNViD-1k, a subjectively annotated VQA database consisting of 1,200 public-domain video sequences, fairly sampled from a large public video dataset, YFCC100m. We present the challenges and choices we have made in creating such a database aimed at \u2018in the wild\u2019 authentic distortions, depicting a wide variety of content.",
+            "introduction": "None"
+        },
+        {
+            "paperid": "paper1",
+            "title": "Large-Scale Study of Perceptual Video Quality",
+            "abstract": "The great variations of videographic skills, camera designs, compression and processing protocols, and displays lead to an enormous variety of video impairments. Current no-reference (NR) video quality models are unable to handle this diversity of distortions. This is true in part because available video quality assessment databases contain very limited content, fixed resolutions, were captured using a small number of camera devices by a few videographers and have been subjected to a modest number of distortions. As such, these databases fail to adequately represent real world videos, which contain very different kinds of content obtained under highly diverse imaging conditions and are subject to authentic, often commingled distortions that are impossible to simulate. As a result, NR video quality predictors tested on real-world video data often perform poorly. Towards advancing NR video quality prediction, we constructed a large-scale video quality assessment database containing 585 videos of unique content, captured by a large number of users, with wide ranges of levels of complex, authentic distortions. We collected a large number of subjective video quality scores via crowdsourcing. A total of 4776 unique participants took part in the study, yielding more than 205000 opinion scores, resulting in an average of 240 recorded human opinions per video. We demonstrate the value of the new resource, which we call the LIVE Video Quality Challenge Database (LIVE-VQC), by conducting a comparison of leading NR video quality predictors on it. This study is the largest video quality assessment study ever conducted along several key dimensions: number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores. The database is available for download on this link: http://live.ece.utexas.edu/research/LIVEVQC/index.html .",
+            "introduction": "None"
+        },
+        {
+            "paperid": "paper2",
+            "title": "YouTube UGC Dataset for Video Compression Research",
+            "abstract": "Non-professional video, commonly known as User Generated Content (UGC) has become very popular in today's video sharing applications. However, traditional metrics used in compression and quality assessment, like BD-Rate and PSNR, are designed for pristine originals. Thus, their accuracy drops significantly when being applied on non-pristine originals (the majority of UGC). Understanding difficulties for compression and quality assessment in the scenario of UGC is important, but there are few public UGC datasets available for research. This paper introduces a large scale UGC dataset (1500 20 sec video clips) sampled from millions of YouTube videos. The dataset covers popular categories like Gaming, Sports, and new features like High Dynamic Range (HDR). Besides a novel sampling method based on features extracted from encoding, challenges for UGC compression and quality evaluation are also discussed. Shortcomings of traditional reference-based metrics on UGC are addressed. We demonstrate a promising way to evaluate UGC quality by no-reference objective quality metrics, and evaluate the current dataset with three no-reference metrics (Noise, Banding, and SLEEQ).",
+            "introduction": "None"
+        },
+        {
+            "paperid": "paper3",
+            "title": "Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem",
+            "abstract": "No-reference (NR) perceptual video quality assessment (VQA) is a complex, unsolved, and important problem to social and streaming media applications. Efficient and accurate video quality predictors are needed to monitor and guide the processing of billions of shared, often imperfect, user-generated content (UGC). Unfortunately, current NR models are limited in their prediction capabilities on real-world,\"in-the-wild\"UGC video data. To advance progress on this problem, we created the largest (by far) subjective video quality dataset, containing 39, 000 realworld distorted videos and 117, 000 space-time localized video patches ('v-patches'), and 5.5M human perceptual quality annotations. Using this, we created two unique NR-VQA models: (a) a local-to-global region-based NR VQA architecture (called PVQ) that learns to predict global video quality and achieves state-of-the-art performance on 3 UGC datasets, and (b) a first-of-a-kind space-time video quality mapping engine (called PVQ Mapper) that helps localize and visualize perceptual distortions in space and time. We will make the new database and prediction models available immediately following the review process.",
+            "introduction": "User-generated content (UGC) and video streaming has exploded on social media platforms such as Facebook, Instagram, YouTube, and TikTok, each supporting millions and billions of users [1]. It has been estimated that each day, about 4 billion video views occur on Facebook [2] and 1 billion hours are viewed on YouTube [3]. Given the tremendous prevalence of Internet video, it would be of great value to measure and control the quality of UGC videos, both in capture devices and at social media sites where they are uploaded, encoded, processed, and analyzed.\n\nFull-reference (FR) video quality assessment (VQA) models perceptually compare quality against pristine videos, while no-reference (NR) models involve no such comparison. Thus, NR video quality monitoring could transform the processing and interpretation of videos on * \u2020 Equal contribution \u2021 The entity that conducted all of the data collection/experimentation. smartphones, social media, telemedicine, surveillance, and vision-guided robotics, in ways that FR models are unable to. Unfortunately, measuring video quality without a pristine reference is very hard. Hence, though FR models are successfully deployed at the largest scales [4], NR video quality prediction on UGC content remains largely unsolved, for several reasons. First, UGC video distortions arise from highly diverse capture conditions, unsteady hands of content creators, imperfect camera devices, processing and editing artifacts, frame rates, compression and transmission artifacts, and the way they are perceived by viewers. Inter-mixing of distortions is common, creating complex, composite distortions that are harder to model in videos. Moreover, it is wellknown that the technical degree of distortion (e.g. amount of blur, blocking, or noise) does not correlate well with perceptual quality [5], because of neurophysiological processes that induce masking [6]. Indeed, equal amounts of distortions may very differently affect the quality of two different videos [7].\n\nSecond, most existing video quality resources are too small and unrepresentative of the complex real-world distortions [8,9,10,11,12,13,14]. While three publicly avail-able databases of authentically distorted UGC videos are available [15,16,17], they are far too small to train modern, data-hungry deep neural networks. What is needed are very large databases of videos corrupted by real-world distortions, subjectively rated by large numbers of human viewers. However, conducting large-scale psychometric studies is much harder and time-consuming (per video) than standard object or action classification tasks.\n\nFinally, although a few NR algorithms achieve reasonable performance on small databases [18,19,20,21,22,23,24], most of them fail to account for the complex spacetime distortions common to UGC videos. UGC distortions are often transient (e.g., frame drops, focus changes, and transmission glitches) and yet may significantly impact the overall perceived quality of a video [25]. Most existing models are frame-based, or use sample frame differences, and cannot capture diverse temporal impairments.\n\nWe have made recent progress towards addressing these challenges, by learning to model the relationships that exist between local and global spatio-temporal distortions and perceptual quality. We built a large-scale public UGC video dataset of unprecedented size, comprising full videos and three kinds of spatio-temporal video patches (Fig. 1), and we conducted an online visual psychometric study to gather large numbers of human subjective quality scores on them. This unique data collection allowed us to successfully learn to exploit interactions between local and global video quality perception and to create algorithms that accurately predict video quality and space-time quality maps. We summarize our contributions below:\n\n\u2022 We built the largest video quality database in existence. We sampled hundreds of thousands of open source Internet UGC digital videos to match the feature distributions of social media UGC videos. Our final collection includes 39, 000 real-world videos of diverse sizes, contents, and distortions, 26 times larger than the most recent UGC dataset [17]. We also extracted three types of v-patches from each video, yielding 117, 000 space-time video patches (\"v-patches\") in total (Sec. 3.1). \u2022 We conducted the largest subjective video quality study to date. Our final dataset consists of a total of 5.5M perceptual quality judgments on videos and v-patches from almost 6, 300 subjects, more than 9 times larger than any prior UGC video quality study (Sec. 3.2). \u2022 We created a state-of-the-art deep blind video quality predictor, using a deep neural architecture that computes 2D video features using PaQ2PiQ [29], in parallel with 3D features using ResNet3D [30]. The 2D and 3D features feed a time series regressor [31] that learns to accurately predict both global video, as well as local spacetime v-patch quality, by exploiting the relations between them. This new model, which we call Patch VQ (PVQ) achieves top performance on the new database as well as on smaller \"in-the-wild\" databases [16,15], without finetuning (Secs. 4.1 and 5.3). \u2022 We also create another unique prediction model that predicts first-of-a-kind space-time maps of video quality by learning global-to-local quality relationships. This second model, called the PVQ Mapper, helps localize, visualize, and act on video distortions (Sec. 5.2)."
+        },
+        {
+            "paperid": "paper4",
+            "title": "KonVid-150k: A Dataset for No-Reference Video Quality Assessment of Videos in-the-Wild",
+            "abstract": "Video quality assessment (VQA) methods focus on particular degradation types, usually artificially induced on a small set of reference videos. Hence, most traditional VQA methods under-perform in-the-wild. Deep learning approaches have had limited success due to the small size and diversity of existing VQA datasets, either artificial or authentically distorted. We introduce a new in-the-wild VQA dataset that is substantially larger and diverse: KonVid-150k. It consists of a coarsely annotated set of 153,841 videos having five quality ratings each, and 1,596 videos with a minimum of 89 ratings each. Additionally, we propose new efficient VQA approaches (MLSP-VQA) relying on multi-level spatially pooled deep-features (MLSP). They are exceptionally well suited for training at scale, compared to deep transfer learning approaches. Our best method, MLSP-VQA-FF, improves the Spearman rank-order correlation coefficient (SRCC) performance metric on the commonly used KoNViD-1k in-the-wild benchmark dataset to 0.82. It surpasses the best existing deep-learning model (0.80 SRCC) and hand-crafted feature-based method (0.78 SRCC). We further investigate how alternative approaches perform under different levels of label noise, and dataset size, showing that MLSP-VQA-FF is the overall best method for videos in-the-wild. Finally, we show that the MLSP-VQA models trained on KonVid-150k sets the new state-of-the-art for cross-test performance on KoNViD-1k and LIVE-Qualcomm with a 0.83 and 0.64 SRCC, respectively. For KoNViD-1k this inter-dataset testing outperforms intra-dataset experiments, showing excellent generalization.",
+            "introduction": "None"
+        },
+        {
+            "paperid": "paper5",
+            "title": "Large-Scale Video Classification with Convolutional Neural Networks",
+            "abstract": "Convolutional Neural Networks (CNNs) have been established as a powerful class of models for image recognition problems. Encouraged by these results, we provide an extensive empirical evaluation of CNNs on large-scale video classification using a new dataset of 1 million YouTube videos belonging to 487 classes. We study multiple approaches for extending the connectivity of a CNN in time domain to take advantage of local spatio-temporal information and suggest a multiresolution, foveated architecture as a promising way of speeding up the training. Our best spatio-temporal networks display significant performance improvements compared to strong feature-based baselines (55.3% to 63.9%), but only a surprisingly modest improvement compared to single-frame models (59.3% to 60.9%). We further study the generalization performance of our best model by retraining the top layers on the UCF-101 Action Recognition dataset and observe significant performance improvements compared to the UCF-101 baseline model (63.3% up from 43.9%).",
+            "introduction": "Images and videos have become ubiquitous on the internet, which has encouraged the development of algorithms that can analyze their semantic content for various applications, including search and summarization. Recently, Convolutional Neural Networks (CNNs) [15] have been demonstrated as an effective class of models for understanding image content, giving state-of-the-art results on image recognition, segmentation, detection and retrieval [11,3,2,20,9,18]. The key enabling factors behind these results were techniques for scaling up the networks to tens of millions of parameters and massive labeled datasets that can support the learning process. Under these conditions, CNNs have been shown to learn powerful and interpretable image features [28]. Encouraged by positive results in domain of images, we study the performance of CNNs in large-scale video classification, where the networks have access to not only the appearance information present in single, static images, but also their complex temporal evolution. There are several challenges to extending and applying CNNs in this setting.\n\nFrom a practical standpoint, there are currently no video classification benchmarks that match the scale and variety of existing image datasets because videos are significantly more difficult to collect, annotate and store. To obtain sufficient amount of data needed to train our CNN architectures, we collected a new Sports-1M dataset, which consists of 1 million YouTube videos belonging to a taxonomy of 487 classes of sports. We make Sports-1M available to the research community to support future work in this area.\n\nFrom a modeling perspective, we are interested in answering the following questions: what temporal connectivity pattern in a CNN architecture is best at taking advantage of local motion information present in the video? How does the additional motion information influence the predictions of a CNN and how much does it improve performance overall? We examine these questions empirically by evaluating multiple CNN architectures that each take a different approach to combining information across the time domain.\n\nFrom a computational perspective, CNNs require extensively long periods of training time to effectively optimize the millions of parameters that parametrize the model. This difficulty is further compounded when extending the connectivity of the architecture in time because the network must process not just one image but several frames of video at a time. To mitigate this issue, we show that an effective approach to speeding up the runtime performance of CNNs is to modify the architecture to contain two separate streams of processing: a context stream that learns features on low-resolution frames and a high-resolution fovea stream that only operates on the middle portion of the frame. We observe a 2-4x increase in runtime performance of the network due to the reduced dimensionality of the input, while retaining the classification accuracy.\n\nFinally, a natural question that arises is whether features learned on the Sports-1M dataset are generic enough to generalize to a different, smaller dataset. We investigate the transfer learning problem empirically, achieving significantly better performance (65.4%, up from 41.3%) on UCF-101 by re-purposing low-level features learned on the Sports-1M dataset than by training the entire network on UCF-101 alone. Furthermore, since only some classes in UCF-101 are related to sports, we can quantify the relative improvements of the transfer learning in both settings.\n\nOur contributions can be summarized as follows:\n\n\u2022 We provide extensive experimental evaluation of multiple approaches for extending CNNs into video classification on a large-scale dataset of 1 million videos with 487 categories (which we release as Sports-1M dataset) and report significant gains in performance over strong feature-based baselines.\n\n\u2022 We highlight an architecture that processes input at two spatial resolutions -a low-resolution context stream and a high-resolution fovea stream -as a promising way of improving the runtime performance of CNNs at no cost in accuracy.\n\n\u2022 We apply our networks to the UCF-101 dataset and report significant improvement over feature-based stateof-the-art results and baselines established by training networks on UCF-101 alone."
+        },
+        {
+            "paperid": "paper6",
+            "title": "The Kinetics Human Action Video Dataset",
+            "abstract": "We describe the DeepMind Kinetics human action video dataset. The dataset contains 400 human action classes, with at least 400 video clips for each action. Each clip lasts around 10s and is taken from a different YouTube video. The actions are human focussed and cover a broad range of classes including human-object interactions such as playing instruments, as well as human-human interactions such as shaking hands. We describe the statistics of the dataset, how it was collected, and give some baseline performance figures for neural network architectures trained and tested for human action classification on this dataset. We also carry out a preliminary analysis of whether imbalance in the dataset leads to bias in the classifiers.",
+            "introduction": "In this paper we introduce a new, large, video dataset for human action classification. We developed this dataset principally because there is a lack of such datasets for human action classification, and we believe that having one will facilitate research in this area -both because the dataset is large enough to train deep networks from scratch, and also because the dataset is challenging enough to act as a performance benchmark where the advantages of different architectures can be teased apart.\n\nOur aim is to provide a large scale high quality dataset, covering a diverse range of human actions, that can be used for human action classification, rather than temporal localization. Since the use case is classification, only short clips of around 10s containing the action are included, and there are no untrimmed videos. However, the clips also contain sound so the dataset can potentially be used for many purposes, including multi-modal analysis. Our inspiration in providing a dataset for classification is ImageNet [18], where the significant benefits of first training deep networks on this dataset for classification, and then using the trained network for other purposes (detection, image segmentation, non-visual modalities (e.g. sound, depth), etc) are well known.\n\nThe Kinetics dataset can be seen as the successor to the two human action video datasets that have emerged as the standard benchmarks for this area: HMDB-51 [15] and UCF-101 [20]. These datasets have served the community very well, but their usefulness is now expiring. This is because they are simply not large enough or have sufficient variation to train and test the current generation of human action classification models based on deep learning. Coincidentally, one of the motivations for introducing the HMDB dataset was that the then current generation of action datasets was too small. The increase then was from 10 to 51 classes, and we in turn increase this to 400 classes. Table 1 compares the size of Kinetics to a number of recent human action datasets. In terms of variation, although the UCF-101 dataset contains 101 actions with 100+ clips for each action, all the clips are taken from only 2.5k distinct videos. For example there are 7 clips from one video of the same person brushing their hair. This means that there is far less variation than if the action in each clip was performed by a different person (and different viewpoint, lighting, etc). This problem is avoided in Kinetics as each clip is taken from a different video.\n\nThe clips are sourced from YouTube videos. Consequently, for the most part, they are not professionally videoed and edited material (as in TV and film videos). There can be considerable camera motion/shake, illumination variations, shadows, background clutter, etc. More im-"
+        }
+    ],
+    "pap_to_tab": {
+        "What is the main focus of the study?": {
+            "paper_1": [
+                "Creation of a subjectively annotated video quality assessment (VQA) database with real-world video sequences for the development and evaluation of objective VQA methods."
+            ],
+            "paper_2": [
+                "Construction of a large-scale video quality assessment database and conducting a comprehensive study with crowdsourced subjective video quality scores to advance no-reference video quality prediction."
+            ],
+            "paper_3": [
+                "Introduction of a large scale User Generated Content (UGC) dataset for video compression research, along with discussion of challenges for UGC compression and evaluation of no-reference objective quality metrics."
+            ],
+            "paper_4": [
+                "Development of a large subjective video quality dataset and corresponding no-reference perceptual video quality assessment models that target 'in-the-wild' user-generated content (UGC)."
+            ],
+            "paper_5": [
+                "Introduction of a new in-the-wild video quality assessment dataset called KonVid-150k, alongside new efficient video quality assessment approaches based on multi-level spatially pooled features."
+            ],
+            "paper_6": [
+                "Empirical evaluation of Convolutional Neural Networks (CNNs) on large-scale video classification using a dataset of 1 million YouTube videos, and exploration of methods to extend CNNs in the time domain."
+            ],
+            "paper_7": [
+                "Description of the Kinetics human action video dataset for human action classification, containing 400 classes with an analysis of dataset imbalance and classifier bias."
+            ]
+        },
+        "What types of data are presented in the study?": {
+            "paper_1": [
+                "Subjectively annotated VQA database with 1,200 video sequences representing a wide variety of content and distortions."
+            ],
+            "paper_2": [
+                "Video quality assessment database containing 585 videos with a large number of subjective quality scores collected via crowdsourcing."
+            ],
+            "paper_3": [
+                "Large scale UGC dataset with 1500 20-second video clips covering various categories and features like HDR, plus evaluation with three no-reference metrics."
+            ],
+            "paper_4": [
+                "Extensive video quality dataset with 39,000 distorted videos, 117,000 video patches, and 5.5 million human perceptual quality annotations."
+            ],
+            "paper_5": [
+                "VQA dataset called KonVid-150k with over 153,841 videos and multiple quality ratings, and 1,596 videos with extensive subjective assessment."
+            ],
+            "paper_6": [
+                "New dataset of 1 million YouTube videos across 487 classes for the evaluation of CNNs on large-scale video classification."
+            ],
+            "paper_7": [
+                "Kinetics human action video dataset comprising over 400 human action classes, with at least 400 video clips for each action."
+            ]
+        },
+        "What is the methodology used for quality assessment?": {
+            "paper_1": [
+                "Subjective mean opinion scores (MOS) are used for video quality rating."
+            ],
+            "paper_2": [
+                "Crowdsourced subjective ratings were used for the quality assessment of video."
+            ],
+            "paper_3": [
+                "Evaluation is based on no-reference objective quality metrics such as Noise, Banding, and SLEEQ."
+            ],
+            "paper_4": [
+                "Creation of a region-based no-reference VQA architecture and a space-time video quality mapping engine for quality prediction and localization."
+            ],
+            "paper_5": [
+                "Proposed new efficient VQA approaches relying on multi-level spatially pooled deep-features (MLSP) for no-reference quality assessment."
+            ],
+            "paper_6": [
+                "Empirical evaluation of CNNs, comparison with feature-based baselines, and studying model's performance improvements on UCF-101 dataset."
+            ],
+            "paper_7": [
+                "Baseline performance figures for neural network architectures, and analysis of dataset imbalance impact on classifier performance."
+            ]
+        },
+        "What are the proposed contributions?": {
+            "paper_1": [
+                "A new large dataset of video sequences aimed at helping development and evaluation of general-purpose VQA methods."
+            ],
+            "paper_2": [
+                "A large-scale video quality assessment database and comprehensive study to aid in the improvement of NR video quality predictors."
+            ],
+            "paper_3": [
+                "Introduction of a UGC dataset for research, novel sampling method, and discussion of challenges and shortcomings for UGC compression and quality evaluation."
+            ],
+            "paper_4": [
+                "Largest subjective video quality dataset for \u2018in-the-wild\u2019 distorted UGC videos and innovative models for local-to-global video quality assessment."
+            ],
+            "paper_5": [
+                "Introduction of a new VQA dataset that is larger and more diverse compared to existing datasets, as well as efficient VQA models suitable for in-the-wild videos."
+            ],
+            "paper_6": [
+                "Extensive evaluation of CNNs on large-scale video classification and suggestions on approaches to extend the spatio-temporal connectivity of CNNs."
+            ],
+            "paper_7": [
+                "New human action video dataset intended for more accurate human action classification and analysis of dataset bias."
+            ]
+        }
+    },
+    "cc_to_tab": {
+        "dataset_size": {
+            "paper_1": [
+                "1,200 video sequences"
+            ],
+            "paper_2": [
+                "585 videos"
+            ],
+            "paper_3": [
+                "1,500 20-sec video clips"
+            ],
+            "paper_4": [
+                "39,000 videos and 117,000 v-patches"
+            ],
+            "paper_5": [
+                "153,841 videos, 1,596 densely annotated"
+            ],
+            "paper_6": [
+                "1 million YouTube videos"
+            ],
+            "paper_7": [
+                "At least 400 clips for each of the 400 actions"
+            ]
+        },
+        "dataset_focus": {
+            "paper_1": [
+                "No-reference video quality assessment"
+            ],
+            "paper_2": [
+                "No-reference video quality assessment"
+            ],
+            "paper_3": [
+                "Compression and quality assessment of UGC"
+            ],
+            "paper_4": [
+                "No-reference perceptual video quality assessment"
+            ],
+            "paper_5": [
+                "No-reference video quality assessment of in-the-wild videos"
+            ],
+            "paper_6": [
+                "Video classification with CNNs"
+            ],
+            "paper_7": [
+                "Human action video dataset"
+            ]
+        },
+        "content_diversity": {
+            "paper_1": [
+                "Variety of content and authentic distortions"
+            ],
+            "paper_2": [
+                "Unique contents, capture devices, distortion types"
+            ],
+            "paper_3": [
+                "Popular categories like Gaming, Sports, HDR features"
+            ],
+            "paper_4": [
+                "Real-world distorted videos and local video patches"
+            ],
+            "paper_5": [
+                "Substantially larger and diverse, in-the-wild videos"
+            ],
+            "paper_6": [
+                "Large-scale video classification across 487 classes"
+            ],
+            "paper_7": [
+                "400 human action classes, broad range"
+            ]
+        },
+        "data_collection_methodology": {
+            "paper_1": [
+                "Subjectively annotated"
+            ],
+            "paper_2": [
+                "Crowdsourcing with 4776 participants, 205000 opinion scores"
+            ],
+            "paper_3": [
+                "Sampling based on features from encoding"
+            ],
+            "paper_4": [
+                "5.5M human perceptual quality annotations"
+            ],
+            "paper_5": [
+                "Coarsely annotated with five quality ratings each, some with at least 89 ratings"
+            ],
+            "paper_6": [
+                "Empirical evaluation on a new dataset"
+            ],
+            "paper_7": [
+                "Detailed collection description and baseline figures"
+            ]
+        },
+        "UGC_focus": {
+            "paper_1": [
+                "No specific focus on UGC"
+            ],
+            "paper_2": [
+                "No specific focus on UGC"
+            ],
+            "paper_3": [
+                "UGC compression and quality evaluation"
+            ],
+            "paper_4": [
+                "Emphasis on UGC video data"
+            ],
+            "paper_5": [
+                "Focus on in-the-wild UGC"
+            ],
+            "paper_6": [
+                "Videos from YouTube, UGC mentioned but not the focus"
+            ],
+            "paper_7": [
+                "YouTube videos are source, but focus is on human actions rather than UGC as a category"
+            ]
+        },
+        "reference_to_real_world_conditions": {
+            "paper_1": [
+                "'In the wild' authentic distortions"
+            ],
+            "paper_2": [
+                "Real-world video data with authentic distortions"
+            ],
+            "paper_3": [
+                "Non-pristine originals from YouTube"
+            ],
+            "paper_4": [
+                "Real-world UGC video data"
+            ],
+            "paper_5": [
+                "In-the-wild videos"
+            ],
+            "paper_6": [
+                "Use of YouTube videos implies real-world relevance"
+            ],
+            "paper_7": [
+                "YouTube videos, but real-world conditions not explicitly stated"
+            ]
+        }
+    },
+    "multi_scheme": {
+        "What is the number of human perceptual quality annotations provided in the dataset mentioned in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper?": {
+            "paper_0": "",
+            "paper_1": "The 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper does not provide details about the number of human perceptual quality annotations within the dataset it discusses.",
+            "paper_2": "",
+            "paper_3": "The dataset in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper consists of a total of 5.5M perceptual quality judgments on videos and v-patches from almost 6,300 subjects.",
+            "paper_4": "5.5M",
+            "paper_5": "The 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper states that the final dataset consists of a total of 5.5M perceptual quality judgments on videos and v-patches.",
+            "paper_6": "A total of 5.5 million perceptual quality judgments on videos and v-patches from almost 6,300 subjects"
+        },
+        "What traditional metrics are mentioned as less accurate for non-pristine originals like UGC?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "BD-Rate and PSNR are mentioned as less accurate for non-pristine originals like UGC in the 'YouTube UGC Dataset for Video Compression Research' paper.",
+            "paper_4": "",
+            "paper_5": "The 'YouTube UGC Dataset for Video Compression Research' paper mentions BD-Rate and PSNR as traditional metrics that are less accurate for non-pristine originals like UGC.",
+            "paper_6": "BD-Rate and PSNR are mentioned as less accurate for non-pristine originals like UGC."
+        },
+        "What does the Spearman rank-order correlation coefficient (SRCC) indicate about the MLSP-VQA models' performance?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The Spearman rank-order correlation coefficient (SRCC) is a statistical measure used to evaluate how well the relationship between two variables can be described using a monotonic function. In the context of the 'KonVid-150k: A Dataset for No-Reference Video Quality Assessment of Videos in-the-Wild' paper, it is used to indicate the MLSP-VQA models' performance by measuring how well the model predictions correlate with human subjective scores.",
+            "paper_6": "The Spearman rank-order correlation coefficient (SRCC) is used to measure the predictability and performance of the MLSP-VQA models, with a higher SRCC value indicating better prediction of human perception of video quality. However, specific SRCC values and their implications for the MLSP-VQA models' performance are not provided in the given papers."
+        },
+        "What SRCC values were achieved by the MLSP-VQA models on the KoNViD-1k and LIVE-Qualcomm datasets?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The 'KonVid-150k: A Dataset for No-Reference Video Quality Assessment of Videos in-the-Wild' paper claims that the MLSP-VQA models trained on KonVid-150k set a new state-of-the-art for cross-test performance on KoNViD-1k and LIVE-Qualcomm with a 0.83 and 0.64 SRCC, respectively.",
+            "paper_6": "SRCC values achieved by the MLSP-VQA models on the KoNViD-1k and LIVE-Qualcomm datasets are 0.82 and 0.64, respectively."
+        },
+        "What experiments were conducted to investigate the performance under different levels of label noise and dataset size?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The 'KonVid-150k: A Dataset for No-Reference Video Quality Assessment of Videos in-the-Wild' paper discusses investigating performance under different levels of label noise, and dataset size by examining how alternative approaches perform under these varying conditions to show that MLSP-VQA-FF is the best method for videos in-the-wild.",
+            "paper_6": "Experiments were conducted to investigate the MLSP-VQA models' performance under different levels of label noise and dataset size, proving that MLSP-VQA-FF is the overall best method for videos in-the-wild."
+        },
+        "When will the new database and prediction models from the 'Patch-VQ' paper be released according to the authors?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "The release date for the new database and prediction models from the 'Patch-VQ' paper is not specified in the provided text."
+        },
+        "How are the videos in the UGC dataset sampled?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "For the 'YouTube UGC Dataset for Video Compression Research', videos in the UGC dataset are sampled using a novel sampling method based on features extracted from encoding.",
+            "paper_4": "",
+            "paper_5": "In the 'YouTube UGC Dataset for Video Compression Research' paper, the videos in the dataset are sampled using a novel method based on features extracted from encoding.",
+            "paper_6": "The method of video sampling in the UGC dataset is not detailed in the provided paper introductions or abstracts."
+        },
+        "What is the purpose of the PVQ Mapper mentioned in the paper?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The purpose of the PVQ Mapper mentioned in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper is to predict first-of-a-kind space-time maps of video quality by learning global-to-local quality relationships, which helps localize, visualize, and act on video distortions.",
+            "paper_4": "The PVQ Mapper is a prediction model that predicts first-of-a-kind space-time maps of video quality by learning global-to-local quality relationships.",
+            "paper_5": "The purpose of the PVQ Mapper, as mentioned in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper, is to predict first-of-a-kind space-time maps of video quality by learning global-to-local quality relationships, helping to localize, visualize, and act on video distortions.",
+            "paper_6": "The purpose of the PVQ Mapper is to predict space-time maps of video quality by learning global-to-local quality relationships, helping to localize, visualize, and act on video distortions."
+        },
+        "What are the shortcomings of traditional reference-based metrics on UGC according to the paper?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The shortcomings of traditional reference-based metrics on UGC according to the 'YouTube UGC Dataset for Video Compression Research' paper include their significant drop in accuracy when applied to non-pristine originals which make up the majority of UGC.",
+            "paper_4": "",
+            "paper_5": "The 'YouTube UGC Dataset for Video Compression Research' paper and 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper both address the shortcomings of traditional reference-based metrics on UGC, which include their decreased accuracy when applied to non-pristine originals that are typical of UGC, as they were designed for pristine originals.",
+            "paper_6": "Traditional reference-based metrics on UGC, such as BD-Rate and PSNR, are said to be less accurate for non-pristine originals and their shortcomings include not accounting for the diverse and authentic distortions found in UGC."
+        },
+        "What is the performance difference between spatio-temporal networks and single-frame models reported in the paper?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper suggests that their new model achieves top performance on the new database as well as on smaller 'in-the-wild' databases without fine-tuning. However, specific performance difference values between spatio-temporal networks and single-frame models are not provided in the given introduction.",
+            "paper_4": "",
+            "paper_5": "The 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper seems to imply that spatio-temporal networks have better performance due to their ability to capture both spatial and temporal impairments, unlike single-frame models which may not capture diverse temporal impairments effectively.",
+            "paper_6": "The performance difference between spatio-temporal networks and single-frame models is not provided in the given paper content."
+        },
+        "On what measures is this study the largest video quality assessment study ever conducted?": {
+            "paper_0": "",
+            "paper_1": "This study is the largest video quality assessment study ever conducted in terms of the number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores.",
+            "paper_2": "",
+            "paper_3": "The 'Large-Scale Study of Perceptual Video Quality\u2019 study is the largest video quality assessment study ever conducted along several key dimensions: number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores.",
+            "paper_4": "Number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores.",
+            "paper_5": "According to the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper, this study is the largest ever conducted based on the number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores.",
+            "paper_6": "This study is the largest video quality assessment study ever conducted in terms of number of unique contents, capture devices, distortion types and combinations of distortions, study participants, and recorded subjective scores."
+        },
+        "To what extent does the LIVE-VQC database represent real world videos?": {
+            "paper_0": "",
+            "paper_1": "The LIVE-VQC database is designed to represent real world videos that contain very different kinds of content obtained under highly diverse imaging conditions and are subject to authentic, often commingled distortions that are impossible to simulate.",
+            "paper_2": "",
+            "paper_3": "The LIVE-VQC database represents real-world videos to a considerable extent as it contains 585 videos of unique content, captured by a large number of users, with a wide range of levels of complex, authentic distortions.",
+            "paper_4": "",
+            "paper_5": "The 'Large-Scale Study of Perceptual Video Quality' paper claims that the LIVE-VQC database contains a large variety of videos captured by numerous users under a wide range of levels of complex, authentic distortions, thereby adequately representing real world videos.",
+            "paper_6": "The extent to which the LIVE-VQC database represents real world videos is characterized by its large and diverse collection of videos with complex, authentic distortions, but specific representational details are not provided in the given text."
+        },
+        "From which public video dataset were the KoNViD-1k video sequences sampled?": {
+            "paper_0": "YFCC100m",
+            "paper_1": "The KoNViD-1k video sequences were sampled from the large public video dataset YFCC100m.",
+            "paper_2": "YFCC100m",
+            "paper_3": "The KoNViD-1k video sequences were sampled from the YFCC100m (Yahoo Flickr Creative Commons 100 Million) dataset.",
+            "paper_4": "",
+            "paper_5": "The 'The Konstanz natural video database (KoNViD-1k)' paper indicates that the video sequences in KoNViD-1k were sampled from the YFCC100m dataset.",
+            "paper_6": "The KoNViD-1k video sequences were sampled from a large public video dataset, YFCC100m."
+        },
+        "Was there a performance analysis based on the potential bias due to dataset imbalance?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "There is no mention of a performance analysis based on the potential bias due to dataset imbalance in the provided texts."
+        },
+        "What kind of extracted features were used in the novel sampling method?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "In the 'YouTube UGC Dataset for Video Compression Research' paper, the novel sampling method used features extracted from encoding.",
+            "paper_4": "",
+            "paper_5": "The 'YouTube UGC Dataset for Video Compression Research' paper states that the novel sampling method used features extracted from encoding to sample videos.",
+            "paper_6": "In the 'YouTube UGC Dataset for Video Compression Research' paper, extracted features from encoding are mentioned as part of the novel sampling method, but no specific details are provided on the types of features in the given texts."
+        },
+        "What conclusions can be drawn about the performance of current NR video quality models on real-world video data?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "The 'Large-Scale Study of Perceptual Video Quality' paper infers that current NR video quality models often perform poorly when tested on real-world video data because traditional databases do not adequately represent the variations in content, imaging conditions, and authentic distortions seen in such videos.",
+            "paper_6": "The conclusions about the performance of current NR video quality models on real-world video data are not specified in the given paper content."
+        },
+        "What is the local-to-global region-based NR VQA architecture proposed in the paper?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The local-to-global region-based NR VQA architecture proposed in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper refers to a deep neural architecture that computes 2D video features in parallel with 3D features, which then feed a time series regressor that learns to predict both global video and local space-time v-patch quality.",
+            "paper_4": "",
+            "paper_5": "The 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper proposes a NR VQA architecture that computes 2D and 3D video features in parallel, feeding into a time series regressor that predicts global video quality and local space-time v-patch quality by learning relationships between local and global distortions.",
+            "paper_6": "The local-to-global region-based NR VQA architecture is proposed to accurately predict video quality and space-time quality maps by exploiting the relations between local and global spatio-temporal distortions and perceptual quality."
+        },
+        "What is the minimum number of video clips per action class in the Kinetics dataset?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "The minimum number of video clips per action class in the Kinetics dataset is not specified in the provided introduction."
+        },
+        "What is the focus of the VQA methods discussed in the paper?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The focus of the VQA methods discussed in the 'Patch-VQ: \u2018Patching Up\u2019 the Video Quality Problem' paper is on no-reference (NR) video quality prediction, particularly for user-generated content (UGC) which is highly diverse and lacks pristine reference videos for comparison.",
+            "paper_4": "",
+            "paper_5": "The VQA methods discussed in the papers primarily focus on assessing the quality of videos that contain a variety of real-world, authentically distorted content, specifically with no-reference methodologies in several cases.",
+            "paper_6": "The focus of the VQA methods discussed in the paper is not explicitly stated in the provided content."
+        },
+        "What is the duration of the video clips in the UGC dataset?": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "In the 'YouTube UGC Dataset for Video Compression Research' paper, the duration of the video clips in the UGC dataset is mentioned as 20 seconds.",
+            "paper_4": "",
+            "paper_5": "The 'YouTube UGC Dataset for Video Compression Research' paper mentions that the UGC dataset consists of 1500 20-second video clips sampled from YouTube videos.",
+            "paper_6": "The duration of the video clips in the UGC dataset is mentioned as 20 seconds in the 'YouTube UGC Dataset for Video Compression Research' abstract."
+        }
+    },
+    "ours_table_question": {
+        "question_0": {
+            "paper_0": "The paper addresses the lack of large VQA databases with real-world video sequences and subjective MOS.",
+            "paper_1": "The paper addresses the problem of no-reference video quality models' poor performance on diverse real-world video data.",
+            "paper_2": "The paper tackles the shortcomings of traditional metrics for UGC video compression and quality assessment.",
+            "paper_3": "",
+            "paper_4": "The paper addresses the lack of large, diverse datasets for no-reference video quality assessment in-the-wild.",
+            "paper_5": "The paper tackles large-scale video classification using CNNs and performance improvements over baselines.",
+            "paper_6": "",
+            "question": "what problem does this paper tackle?",
+            "type": "initial",
+            "presup": "Presupposition: This paper tackles a problem."
+        },
+        "question_1": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "The approach is the introduction of a large scale UGC dataset to improve video compression research.",
+            "paper_3": "The approach is a \u2018local-to-global\u2019 region-based NR VQA architecture and spatio-temporal quality mapping engine.",
+            "paper_4": "The approach proposed is a new dataset, KonVid-150k, and efficient VQA methods using multi-level spatially pooled deep-features (MLSP).",
+            "paper_5": "The paper proposes using CNNs with extended time domain connectivity for large-scale video classification.",
+            "paper_6": "",
+            "question": "what is the approach this paper proposed?",
+            "type": "initial",
+            "presup": "The presupposition for the question \"What is the approach this paper proposed?\" is that the paper proposes an approach. Specifically, the presupposition can be broken down into several sub-assumptions:\n\n1. There exists a paper related to the question being asked.\n2. The paper makes a proposition or provides a solution or methodology.\n3. The paper's content is relevant to a specific issue, problem, or area of study for which an approach is meaningful and expected.\n4. The paper's proposed approach is a central aspect or key contribution of the paper, making it a suitable subject for the question."
+        },
+        "question_2": {
+            "paper_0": "VQA is video quality assessment, and a large, diverse database aids in developing and evaluating objective VQA methods.",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "VQA is Video Quality Assessment; large real-world database with MOS needed for accurate \"in-the-wild\" content quality prediction.",
+            "paper_4": "VQA is Video Quality Assessment, and a large, diverse dataset with subjective Mean Opinion Scores (MOS) aids in developing robust models for real-world applications.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What is VQA, and why is a large database with real-world video sequences and subjective MOS necessary for its progress?",
+            "type": "followup",
+            "presup": "Presuppositions:\n\n1. VQA stands for a concept or a technique that requires explanation.\n2. There exists a thing called VQA that is relevant to the context of the discussion.\n3. There is a significant relationship between VQA, a large database with real-world video sequences, and subjective MOS (Mean Opinion Scores).\n4. The large database with real-world video sequences and subjective MOS is something that does not currently exist in a satisfactory state or needs improvement for the progress of VQA.\n5. The progress of VQA is contingent upon or can be advanced by the presence of such a database.\n6. The paper in question discusses or addresses VQA and the relevance or necessity of a database and MOS to its advancement."
+        },
+        "question_3": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "How does the paper propose to overcome the lack of large VQA databases?",
+            "type": "followup",
+            "presup": "The paper proposes a way to overcome the lack of large visual question answering (VQA) databases."
+        },
+        "question_4": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The paper used subjective annotations to create a large video quality dataset and developed NR-VQA models.",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What methods were used in the paper to construct and validate a new VQA database?",
+            "type": "followup",
+            "presup": "Presupposition: The paper constructed and validated a new Visual Question Answering (VQA) database using certain methods."
+        },
+        "question_5": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What are the potential applications of improving VQA databases as discussed in the paper?",
+            "type": "followup",
+            "presup": "The paper discusses potential applications of improving Visual Question Answering (VQA) databases."
+        },
+        "question_6": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "The paper focuses on the issue of assessing and improving compression and quality metrics for UGC videos.",
+            "paper_3": "",
+            "paper_4": "The focus is on the issue of limited VQA performance on diverse, in-the-wild video content.",
+            "paper_5": "The focus of the paper is improving large-scale video classification using Convolutional Neural Networks.",
+            "paper_6": "",
+            "question": "What issue is the focus of this paper?",
+            "type": "lowlevel",
+            "presup": "Presupposition: This paper focuses on a specific issue."
+        },
+        "question_7": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "The paper highlights a lack of large and diverse in-the-wild VQA datasets.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What is missing in VQA databases according to this paper?",
+            "type": "lowlevel",
+            "presup": "Presupposition: This paper identifies something as missing in Visual Question Answering (VQA) databases."
+        },
+        "question_8": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "The paper introduces a large and diverse dataset and efficient Multi-Level Spatially Pooled feature-based methods.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What methodologies does the paper introduce to improve the performance of no-reference video quality models?",
+            "type": "followup",
+            "presup": "Presupposition:\n\n1. The paper introduces methodologies.\n2. These methodologies are aimed at improving performance.\n3. The context is no-reference video quality models.\n4. The performance that is subject to improvement pertains to no-reference video quality models."
+        },
+        "question_9": {
+            "paper_0": "",
+            "paper_1": "Performance measured by comparing no-reference video quality predictors on a new large-scale video quality database with crowdsourced scores.",
+            "paper_2": "",
+            "paper_3": "Performance is measured by a subjective video quality dataset with human perceptual quality annotations.",
+            "paper_4": "Performance is measured by Spearman rank-order correlation coefficient on KoNViD-1k, with improved scores using MLSP-VQA-FF.",
+            "paper_5": "Performance improvement measured by comparing CNNs to baselines on a dataset of 1 million YouTube videos.",
+            "paper_6": "",
+            "question": "How does the paper measure the performance improvement on real-world video data?",
+            "type": "followup",
+            "presup": "The presuppositions underlying the third question are as follows:\n\n1. The paper includes a performance measurement or evaluation component.\n2. The paper's focus, at least in part, involves real-world video data.\n3. There is an implied performance improvement that the paper investigates or reports.\n4. There is a specific methodology or metric used in the paper to measure said performance improvement."
+        },
+        "question_10": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What datasets or benchmarks are used in the paper to evaluate the solution proposed for no-reference video quality assessment?",
+            "type": "followup",
+            "presup": "Here are the presuppositions of the given question:\n\n1. A solution for no-reference video quality assessment is proposed in the paper.\n2. The paper uses datasets or benchmarks to evaluate the proposed solution.\n3. No-reference video quality assessment is a topic addressed within the paper."
+        },
+        "question_11": {
+            "paper_0": "The issue is the lack of large, diverse datasets with real-world distortions for video quality assessment.",
+            "paper_1": "The issue is current no-reference video quality models' inability to handle diverse video impairments.",
+            "paper_2": "",
+            "paper_3": "The paper discusses the limited prediction capabilities of current no-reference models on real-world user-generated content video quality.",
+            "paper_4": "The paper addresses under-performance of traditional VQA methods on diverse, in-the-wild video content.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What is the performance issue discussed in the paper concerning video quality models?",
+            "type": "lowlevel",
+            "presup": "Presupposition: The paper discusses a performance issue concerning video quality models."
+        },
+        "question_12": {
+            "paper_0": "",
+            "paper_1": "No-reference video quality models struggle with diverse, authentic, commingled distortions in real-world videos.",
+            "paper_2": "No-reference video quality models struggle with User Generated Content (UGC) that is non-pristine.",
+            "paper_3": "No-reference video quality models struggle with real-world user-generated content (UGC) video data.",
+            "paper_4": "They struggle with authentically distorted videos \"in-the-wild\".",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What type of video data do the no-reference video quality models struggle with?",
+            "type": "lowlevel",
+            "presup": "Presupposition: No-reference video quality models struggle with certain types of video data."
+        },
+        "question_13": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "The paper considers BD-Rate and PSNR inadequate for UGC video compression and quality assessment.",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What traditional metrics for UGC (User-Generated Content) video compression and quality assessment are considered inadequate in this paper?",
+            "type": "followup",
+            "presup": "- Traditional metrics for UGC video compression and quality assessment are considered by this paper.\n- The paper finds the existing metrics for UGC video compression and quality assessment to be inadequate.\n- The paper discusses UGC video compression and quality assessment.\n- The paper is oriented towards improving or critiquing aspects of UGC video compression and quality assessment."
+        },
+        "question_14": {
+            "paper_0": "",
+            "paper_1": "The paper proposes a large-scale video quality database to enhance no-reference video quality models.",
+            "paper_2": "The paper proposes using no-reference objective quality metrics to assess UGC video quality for compression.",
+            "paper_3": "",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "How does the paper propose overcoming these shortcomings for UGC video quality assessment and compression?",
+            "type": "followup",
+            "presup": "1. The paper proposes a method or solution for overcoming certain shortcomings.\n2. The paper is focused on User-Generated Content (UGC) video quality assessment and compression.\n3. There are known shortcomings in UGC video quality assessment and compression that the paper addresses.\n4. The subject matter of the paper is relevant to the field of video quality assessment and/or compression."
+        },
+        "question_15": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "The paper introduces no-reference objective quality metrics for evaluating UGC video compression and quality.",
+            "paper_3": "The paper introduces a local-to-global region-based NR VQA architecture and a space-time video quality mapping engine.",
+            "paper_4": "The paper introduces MLSP-VQA approaches for efficient no-reference video quality assessment in-the-wild.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What new metrics or methodologies does the paper introduce for evaluating UGC video compression and quality?",
+            "type": "followup",
+            "presup": "1. The paper introduces new metrics or methodologies.\n2. The paper's focus is on evaluating UGC (User-Generated Content) video compression and quality."
+        },
+        "question_16": {
+            "paper_0": "",
+            "paper_1": "The paper addresses the inadequacy of existing databases to represent real-world video diversity and authentic distortions.",
+            "paper_2": "The paper addresses shortcomings of traditional metrics like BD-Rate and PSNR on non-pristine originals in UGC.",
+            "paper_3": "",
+            "paper_4": "The paper addresses issues with traditional VQA metrics' underperformance on diverse, in-the-wild video content.",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What issues with traditional metrics does this paper address?",
+            "type": "lowlevel",
+            "presup": "This paper addresses issues with traditional metrics."
+        },
+        "question_17": {
+            "paper_0": "",
+            "paper_1": "The focus is on improving no-reference video quality prediction models for diverse real-world conditions.",
+            "paper_2": "",
+            "paper_3": "The paper focuses on improving no-reference perceptual video quality assessment for user-generated content.",
+            "paper_4": "",
+            "paper_5": "The paper focuses on enhancing large-scale video classification using Convolutional Neural Networks.",
+            "paper_6": "",
+            "question": "What is the focus of this paper's problem-solving?",
+            "type": "lowlevel",
+            "presup": "Presupposition: This paper's focus is on problem-solving."
+        },
+        "question_18": {
+            "paper_0": "",
+            "paper_1": "The paper addresses shortcomings in current no-reference video quality models due to limited databases.",
+            "paper_2": "",
+            "paper_3": "The paper addresses the shortcomings in no-reference perceptual video quality assessment for user-generated content.",
+            "paper_4": "",
+            "paper_5": "The paper addresses shortcomings in large-scale video classification using CNNs on new extensive datasets.",
+            "paper_6": "",
+            "question": "In what context is the paper addressing shortcomings?",
+            "type": "lowlevel",
+            "presup": "The paper is addressing some shortcomings."
+        },
+        "question_19": {
+            "paper_0": "",
+            "paper_1": "",
+            "paper_2": "",
+            "paper_3": "The main problem addressed is the inefficient no-reference perceptual video quality assessment for user-generated content.",
+            "paper_4": "",
+            "paper_5": "",
+            "paper_6": "",
+            "question": "What is the main problem addressed by this paper?",
+            "type": "generic",
+            "presup": "The presuppositions associated with the question \"What is the main problem addressed by this paper?\" could include:\n\n1. The paper addresses a specific problem.\n2. There is a \"main\" problem, indicating that the paper may address multiple issues, but there is a primary focus.\n3. The paper is written with the intention to discuss and potentially offer solutions or insights into a problem.\n4. The term \"this\" indicates that there is a specific paper being referenced, and that paper is accessible to or known by both the person asking and the person answering the question."
+        }
+    },
+    "ours_table_presupposition": {
+        "presup_0": {
+            "question": "what problem does this paper tackle?",
+            "presup": "Presupposition: This paper tackles a problem.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_1": {
+            "question": "what is the approach this paper proposed?",
+            "presup": "The presupposition for the question \"What is the approach this paper proposed?\" is that the paper proposes an approach. Specifically, the presupposition can be broken down into several sub-assumptions:\n\n1. There exists a paper related to the question being asked.\n2. The paper makes a proposition or provides a solution or methodology.\n3. The paper's content is relevant to a specific issue, problem, or area of study for which an approach is meaningful and expected.\n4. The paper's proposed approach is a central aspect or key contribution of the paper, making it a suitable subject for the question.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_2": {
+            "question": "What is VQA, and why is a large database with real-world video sequences and subjective MOS necessary for its progress?",
+            "presup": "Presuppositions:\n\n1. VQA stands for a concept or a technique that requires explanation.\n2. There exists a thing called VQA that is relevant to the context of the discussion.\n3. There is a significant relationship between VQA, a large database with real-world video sequences, and subjective MOS (Mean Opinion Scores).\n4. The large database with real-world video sequences and subjective MOS is something that does not currently exist in a satisfactory state or needs improvement for the progress of VQA.\n5. The progress of VQA is contingent upon or can be advanced by the presence of such a database.\n6. The paper in question discusses or addresses VQA and the relevance or necessity of a database and MOS to its advancement.",
+            "paper_0": true,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_3": {
+            "question": "How does the paper propose to overcome the lack of large VQA databases?",
+            "presup": "The paper proposes a way to overcome the lack of large visual question answering (VQA) databases.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_4": {
+            "question": "What methods were used in the paper to construct and validate a new VQA database?",
+            "presup": "Presupposition: The paper constructed and validated a new Visual Question Answering (VQA) database using certain methods.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_5": {
+            "question": "What are the potential applications of improving VQA databases as discussed in the paper?",
+            "presup": "The paper discusses potential applications of improving Visual Question Answering (VQA) databases.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_6": {
+            "question": "What issue is the focus of this paper?",
+            "presup": "Presupposition: This paper focuses on a specific issue.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": true,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_7": {
+            "question": "What is missing in VQA databases according to this paper?",
+            "presup": "Presupposition: This paper identifies something as missing in Visual Question Answering (VQA) databases.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_8": {
+            "question": "What methodologies does the paper introduce to improve the performance of no-reference video quality models?",
+            "presup": "Presupposition:\n\n1. The paper introduces methodologies.\n2. These methodologies are aimed at improving performance.\n3. The context is no-reference video quality models.\n4. The performance that is subject to improvement pertains to no-reference video quality models.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_9": {
+            "question": "How does the paper measure the performance improvement on real-world video data?",
+            "presup": "The presuppositions underlying the third question are as follows:\n\n1. The paper includes a performance measurement or evaluation component.\n2. The paper's focus, at least in part, involves real-world video data.\n3. There is an implied performance improvement that the paper investigates or reports.\n4. There is a specific methodology or metric used in the paper to measure said performance improvement.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_10": {
+            "question": "What datasets or benchmarks are used in the paper to evaluate the solution proposed for no-reference video quality assessment?",
+            "presup": "Here are the presuppositions of the given question:\n\n1. A solution for no-reference video quality assessment is proposed in the paper.\n2. The paper uses datasets or benchmarks to evaluate the proposed solution.\n3. No-reference video quality assessment is a topic addressed within the paper.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_11": {
+            "question": "What is the performance issue discussed in the paper concerning video quality models?",
+            "presup": "Presupposition: The paper discusses a performance issue concerning video quality models.",
+            "paper_0": true,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_12": {
+            "question": "What type of video data do the no-reference video quality models struggle with?",
+            "presup": "Presupposition: No-reference video quality models struggle with certain types of video data.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_13": {
+            "question": "What traditional metrics for UGC (User-Generated Content) video compression and quality assessment are considered inadequate in this paper?",
+            "presup": "- Traditional metrics for UGC video compression and quality assessment are considered by this paper.\n- The paper finds the existing metrics for UGC video compression and quality assessment to be inadequate.\n- The paper discusses UGC video compression and quality assessment.\n- The paper is oriented towards improving or critiquing aspects of UGC video compression and quality assessment.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": true,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_14": {
+            "question": "How does the paper propose overcoming these shortcomings for UGC video quality assessment and compression?",
+            "presup": "1. The paper proposes a method or solution for overcoming certain shortcomings.\n2. The paper is focused on User-Generated Content (UGC) video quality assessment and compression.\n3. There are known shortcomings in UGC video quality assessment and compression that the paper addresses.\n4. The subject matter of the paper is relevant to the field of video quality assessment and/or compression.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": false,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_15": {
+            "question": "What new metrics or methodologies does the paper introduce for evaluating UGC video compression and quality?",
+            "presup": "1. The paper introduces new metrics or methodologies.\n2. The paper's focus is on evaluating UGC (User-Generated Content) video compression and quality.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": true,
+            "paper_3": true,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_16": {
+            "question": "What issues with traditional metrics does this paper address?",
+            "presup": "This paper addresses issues with traditional metrics.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": true,
+            "paper_3": false,
+            "paper_4": true,
+            "paper_5": false,
+            "paper_6": false
+        },
+        "presup_17": {
+            "question": "What is the focus of this paper's problem-solving?",
+            "presup": "Presupposition: This paper's focus is on problem-solving.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_18": {
+            "question": "In what context is the paper addressing shortcomings?",
+            "presup": "The paper is addressing some shortcomings.",
+            "paper_0": false,
+            "paper_1": true,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": true,
+            "paper_6": false
+        },
+        "presup_19": {
+            "question": "What is the main problem addressed by this paper?",
+            "presup": "The presuppositions associated with the question \"What is the main problem addressed by this paper?\" could include:\n\n1. The paper addresses a specific problem.\n2. There is a \"main\" problem, indicating that the paper may address multiple issues, but there is a primary focus.\n3. The paper is written with the intention to discuss and potentially offer solutions or insights into a problem.\n4. The term \"this\" indicates that there is a specific paper being referenced, and that paper is accessible to or known by both the person asking and the person answering the question.",
+            "paper_0": false,
+            "paper_1": false,
+            "paper_2": false,
+            "paper_3": true,
+            "paper_4": false,
+            "paper_5": false,
+            "paper_6": false
+        }
+    },
+    "ours_question_list": [
+        {
+            "round": 2,
+            "question": "What challenge is the focus of this research?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "How does the paper propose to create or gather these large, diverse datasets for no-reference video quality assessment?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What methods does the paper introduce to perform video quality assessment without reference in real-world conditions?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What impact does the absence of large, diverse datasets have on the performance of no-reference video quality assessment algorithms?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What does the paper address regarding no-reference video quality assessment?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What kind of datasets does the paper claim are lacking?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "Where is the lack of datasets for video quality assessment observed according to the paper?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What specific architectures or techniques of CNNs does the paper propose or test for video classification?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "How does the paper's approach improve performance over the baseline models?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "In what ways does scale impact the efficiency or accuracy of video classification in the study presented?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What does this paper address in large-scale video classification?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What technique is used for video classification in this paper?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What does the paper aim to improve in video classification?",
+            "type": "lowlevel"
+        },
+        {
+            "round": 2,
+            "question": "What issue does this study address?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What is the main focus of the research presented?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What challenge is the paper attempting to solve?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What is the approach proposed in the study?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What is the methodology described in this paper?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What novel technique does this research introduce?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What is the approach proposed in this study?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "What solution does this research introduce?",
+            "type": "generic"
+        },
+        {
+            "round": 2,
+            "question": "Could you describe the characteristics and contents of the UGC dataset introduced by the paper?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "What are the specific challenges in video compression that the proposed UGC dataset aims to address?",
+            "type": "followup"
+        },
+        {
+            "round": 2,
+            "question": "For what research area is the UGC dataset intended to improve?",
+            "type": "lowlevel"
+        }
+    ],
+    "ours_final_table": {
+        "what problem does this paper tackle?": {
+            "paper_0": [
+                "The paper addresses the lack of large VQA databases with real-world video sequences and subjective MOS."
+            ],
+            "paper_1": [
+                "The paper addresses the problem of no-reference video quality models' poor performance on diverse real-world video data."
+            ],
+            "paper_2": [
+                "The paper tackles the shortcomings of traditional metrics for UGC video compression and quality assessment."
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The paper addresses the lack of large, diverse datasets for no-reference video quality assessment in-the-wild."
+            ],
+            "paper_5": [
+                "The paper tackles large-scale video classification using CNNs and performance improvements over baselines."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "initial"
+            ],
+            "presup": [
+                "Presupposition: This paper tackles a problem."
+            ]
+        },
+        "what is the approach this paper proposed?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                "The approach is the introduction of a large scale UGC dataset to improve video compression research."
+            ],
+            "paper_3": [
+                "The approach is a \u2018local-to-global\u2019 region-based NR VQA architecture and spatio-temporal quality mapping engine."
+            ],
+            "paper_4": [
+                "The approach proposed is a new dataset, KonVid-150k, and efficient VQA methods using multi-level spatially pooled deep-features (MLSP)."
+            ],
+            "paper_5": [
+                "The paper proposes using CNNs with extended time domain connectivity for large-scale video classification."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "initial"
+            ],
+            "presup": [
+                "The presupposition for the question \"What is the approach this paper proposed?\" is that the paper proposes an approach. Specifically, the presupposition can be broken down into several sub-assumptions:\n\n1. There exists a paper related to the question being asked.\n2. The paper makes a proposition or provides a solution or methodology.\n3. The paper's content is relevant to a specific issue, problem, or area of study for which an approach is meaningful and expected.\n4. The paper's proposed approach is a central aspect or key contribution of the paper, making it a suitable subject for the question."
+            ]
+        },
+        "What is VQA, and why is a large database with real-world video sequences and subjective MOS necessary for its progress?": {
+            "paper_0": [
+                "VQA is video quality assessment, and a large, diverse database aids in developing and evaluating objective VQA methods."
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "VQA is Video Quality Assessment; large real-world database with MOS needed for accurate \"in-the-wild\" content quality prediction."
+            ],
+            "paper_4": [
+                "VQA is Video Quality Assessment, and a large, diverse dataset with subjective Mean Opinion Scores (MOS) aids in developing robust models for real-world applications."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Presuppositions:\n\n1. VQA stands for a concept or a technique that requires explanation.\n2. There exists a thing called VQA that is relevant to the context of the discussion.\n3. There is a significant relationship between VQA, a large database with real-world video sequences, and subjective MOS (Mean Opinion Scores).\n4. The large database with real-world video sequences and subjective MOS is something that does not currently exist in a satisfactory state or needs improvement for the progress of VQA.\n5. The progress of VQA is contingent upon or can be advanced by the presence of such a database.\n6. The paper in question discusses or addresses VQA and the relevance or necessity of a database and MOS to its advancement."
+            ]
+        },
+        "How does the paper propose to overcome the lack of large VQA databases?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "The paper proposes a way to overcome the lack of large visual question answering (VQA) databases."
+            ]
+        },
+        "What methods were used in the paper to construct and validate a new VQA database?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper used subjective annotations to create a large video quality dataset and developed NR-VQA models."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Presupposition: The paper constructed and validated a new Visual Question Answering (VQA) database using certain methods."
+            ]
+        },
+        "What are the potential applications of improving VQA databases as discussed in the paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "The paper discusses potential applications of improving Visual Question Answering (VQA) databases."
+            ]
+        },
+        "What issue is the focus of this paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                "The paper focuses on the issue of assessing and improving compression and quality metrics for UGC videos."
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The focus is on the issue of limited VQA performance on diverse, in-the-wild video content."
+            ],
+            "paper_5": [
+                "The focus of the paper is improving large-scale video classification using Convolutional Neural Networks."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: This paper focuses on a specific issue."
+            ]
+        },
+        "What is missing in VQA databases according to this paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The paper highlights a lack of large and diverse in-the-wild VQA datasets."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: This paper identifies something as missing in Visual Question Answering (VQA) databases."
+            ]
+        },
+        "What methodologies does the paper introduce to improve the performance of no-reference video quality models?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The paper introduces a large and diverse dataset and efficient Multi-Level Spatially Pooled feature-based methods."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Presupposition:\n\n1. The paper introduces methodologies.\n2. These methodologies are aimed at improving performance.\n3. The context is no-reference video quality models.\n4. The performance that is subject to improvement pertains to no-reference video quality models."
+            ]
+        },
+        "How does the paper measure the performance improvement on real-world video data?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "Performance measured by comparing no-reference video quality predictors on a new large-scale video quality database with crowdsourced scores."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "Performance is measured by a subjective video quality dataset with human perceptual quality annotations."
+            ],
+            "paper_4": [
+                "Performance is measured by Spearman rank-order correlation coefficient on KoNViD-1k, with improved scores using MLSP-VQA-FF."
+            ],
+            "paper_5": [
+                "Performance improvement measured by comparing CNNs to baselines on a dataset of 1 million YouTube videos."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "The presuppositions underlying the third question are as follows:\n\n1. The paper includes a performance measurement or evaluation component.\n2. The paper's focus, at least in part, involves real-world video data.\n3. There is an implied performance improvement that the paper investigates or reports.\n4. There is a specific methodology or metric used in the paper to measure said performance improvement."
+            ]
+        },
+        "What datasets or benchmarks are used in the paper to evaluate the solution proposed for no-reference video quality assessment?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "Here are the presuppositions of the given question:\n\n1. A solution for no-reference video quality assessment is proposed in the paper.\n2. The paper uses datasets or benchmarks to evaluate the proposed solution.\n3. No-reference video quality assessment is a topic addressed within the paper."
+            ]
+        },
+        "What is the performance issue discussed in the paper concerning video quality models?": {
+            "paper_0": [
+                "The issue is the lack of large, diverse datasets with real-world distortions for video quality assessment."
+            ],
+            "paper_1": [
+                "The issue is current no-reference video quality models' inability to handle diverse video impairments."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper discusses the limited prediction capabilities of current no-reference models on real-world user-generated content video quality."
+            ],
+            "paper_4": [
+                "The paper addresses under-performance of traditional VQA methods on diverse, in-the-wild video content."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: The paper discusses a performance issue concerning video quality models."
+            ]
+        },
+        "What type of video data do the no-reference video quality models struggle with?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "No-reference video quality models struggle with diverse, authentic, commingled distortions in real-world videos."
+            ],
+            "paper_2": [
+                "No-reference video quality models struggle with User Generated Content (UGC) that is non-pristine."
+            ],
+            "paper_3": [
+                "No-reference video quality models struggle with real-world user-generated content (UGC) video data."
+            ],
+            "paper_4": [
+                "They struggle with authentically distorted videos \"in-the-wild\"."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: No-reference video quality models struggle with certain types of video data."
+            ]
+        },
+        "What traditional metrics for UGC (User-Generated Content) video compression and quality assessment are considered inadequate in this paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                "The paper considers BD-Rate and PSNR inadequate for UGC video compression and quality assessment."
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "- Traditional metrics for UGC video compression and quality assessment are considered by this paper.\n- The paper finds the existing metrics for UGC video compression and quality assessment to be inadequate.\n- The paper discusses UGC video compression and quality assessment.\n- The paper is oriented towards improving or critiquing aspects of UGC video compression and quality assessment."
+            ]
+        },
+        "How does the paper propose overcoming these shortcomings for UGC video quality assessment and compression?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper proposes a large-scale video quality database to enhance no-reference video quality models."
+            ],
+            "paper_2": [
+                "The paper proposes using no-reference objective quality metrics to assess UGC video quality for compression."
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. The paper proposes a method or solution for overcoming certain shortcomings.\n2. The paper is focused on User-Generated Content (UGC) video quality assessment and compression.\n3. There are known shortcomings in UGC video quality assessment and compression that the paper addresses.\n4. The subject matter of the paper is relevant to the field of video quality assessment and/or compression."
+            ]
+        },
+        "What new metrics or methodologies does the paper introduce for evaluating UGC video compression and quality?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                "The paper introduces no-reference objective quality metrics for evaluating UGC video compression and quality."
+            ],
+            "paper_3": [
+                "The paper introduces a local-to-global region-based NR VQA architecture and a space-time video quality mapping engine."
+            ],
+            "paper_4": [
+                "The paper introduces MLSP-VQA approaches for efficient no-reference video quality assessment in-the-wild."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "followup"
+            ],
+            "presup": [
+                "1. The paper introduces new metrics or methodologies.\n2. The paper's focus is on evaluating UGC (User-Generated Content) video compression and quality."
+            ]
+        },
+        "What issues with traditional metrics does this paper address?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper addresses the inadequacy of existing databases to represent real-world video diversity and authentic distortions."
+            ],
+            "paper_2": [
+                "The paper addresses shortcomings of traditional metrics like BD-Rate and PSNR on non-pristine originals in UGC."
+            ],
+            "paper_3": [
+                ""
+            ],
+            "paper_4": [
+                "The paper addresses issues with traditional VQA metrics' underperformance on diverse, in-the-wild video content."
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "This paper addresses issues with traditional metrics."
+            ]
+        },
+        "What is the focus of this paper's problem-solving?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The focus is on improving no-reference video quality prediction models for diverse real-world conditions."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper focuses on improving no-reference perceptual video quality assessment for user-generated content."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                "The paper focuses on enhancing large-scale video classification using Convolutional Neural Networks."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "Presupposition: This paper's focus is on problem-solving."
+            ]
+        },
+        "In what context is the paper addressing shortcomings?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                "The paper addresses shortcomings in current no-reference video quality models due to limited databases."
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The paper addresses the shortcomings in no-reference perceptual video quality assessment for user-generated content."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                "The paper addresses shortcomings in large-scale video classification using CNNs on new extensive datasets."
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "lowlevel"
+            ],
+            "presup": [
+                "The paper is addressing some shortcomings."
+            ]
+        },
+        "What is the main problem addressed by this paper?": {
+            "paper_0": [
+                ""
+            ],
+            "paper_1": [
+                ""
+            ],
+            "paper_2": [
+                ""
+            ],
+            "paper_3": [
+                "The main problem addressed is the inefficient no-reference perceptual video quality assessment for user-generated content."
+            ],
+            "paper_4": [
+                ""
+            ],
+            "paper_5": [
+                ""
+            ],
+            "paper_6": [
+                ""
+            ],
+            "type": [
+                "generic"
+            ],
+            "presup": [
+                "The presuppositions associated with the question \"What is the main problem addressed by this paper?\" could include:\n\n1. The paper addresses a specific problem.\n2. There is a \"main\" problem, indicating that the paper may address multiple issues, but there is a primary focus.\n3. The paper is written with the intention to discuss and potentially offer solutions or insights into a problem.\n4. The term \"this\" indicates that there is a specific paper being referenced, and that paper is accessible to or known by both the person asking and the person answering the question."
+            ]
+        }
+    }
+}

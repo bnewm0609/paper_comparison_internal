@@ -5,6 +5,34 @@
 pip install -e ".[dev]"
 ```
 
+## High quality initial dataset
+
+For the data in `data/arxiv_tables_2308_high_quality`, there are three relevant files:
+- `tables.jsonl`: a list of 30 papers. Each line is a `json` object with the following fields:
+    - `tabid`: a unique hash for the table that comes from the latex-processing pipeline
+    - `table`: a python dictionary dump of the table created from`pd.DataFrame.to_dict()`. Can be loaded back into pandas with `pd.DataFrame(table['table'])`. The index of the data frame is the the `corpus_id` of the full text of the paper (which can be accessed at `data/full_texts/{corpus_id}.jsonl`).
+    - `row_bib_map`: a list of `json` objects, where each represents a citation from the table. (This shouldn't be needed anymore, but I'm leaving it in in case it's useful for now. Will probably be deleted soon.) Each object contains:
+        - the `corpus_id` of the full text of the paper
+        - the `row` in the table that `corpus_id` corresponds to
+        - the `type` of the citation - `"ref"` means it's an external reference and `"ours"` means that the paper containing the table is represented in the given row.
+        - the `bib_hash_or_arxiv_id` associated with that corpus_id. `arxiv_id` is used when the `type` is `"ours"` and the `bib_hash` is used when it's `"ref"`. The `bib_hash` comes from the latex-processing pipeline and it's a function of the citation text and the citing paper's arxiv_id.
+- `papers.jsonl`: a list of all the papers needed for generating the tables. Each paper entry contains:
+    - `tabids`: a list of ids for the tables the paper is cited in.
+    - `corpus_id`, the corpus id of a paper. If the full text is available, it can be accessed at `data/full_texts/{corpus_id}.jsonl`. (For the small subset, all of these texts should be available.)
+    - `title`: the title of the paper from s2.
+    - `paper_id`: the s2 id of the paper.
+- `dataset.jsonl`: contains a superset of the information in `tables.jsonl` (it additionally includes an html version of the table from which the json format was derived, some artefacts from the html->json conversion, and some additional metadata about the papers and tables)
+
+These are loaded in using the `configs/full_texts` config, with the `data.FullTexts` class performing the loading part.
+
+```
+python paper_comparison/run.py data=full_texts data.path=data/arxiv_tables_2308_high_quality endtoend=debug endtoend.name=oracle
+```
+(Setting `endtoend.name=oracle` just has the system output the gold tables.)
+
+## ArXiv data processing
+See `scripts/data_processing`
+
 ## Running
 
 When running, you need to pass some input example, and either a baseline or a schematizer and populator.
