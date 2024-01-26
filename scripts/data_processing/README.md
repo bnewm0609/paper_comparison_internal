@@ -16,7 +16,7 @@ aws s3 cp --recursive "s3://ai2-s2-scholarphi-pipeline-prod/daq/arxiv-source-dat
 ```
 tar cvf in_tar/2310.00000-07773.tar in_latex_s3/2310/
 ```
-By convention, I'm using the range of papers posted on arxiv that month as the tar file name. This is because sometimes the month gets split up, or for debugging purposes I'm considering a subset of the papers, and in those situations its useful to mark that in the tar file name.
+By convention, I've been using the range of papers posted on arxiv that month as the tar file name. This is in case the month gets split up, or for debugging purposes I'm considering a subset of the papers, and in those situations its useful to mark that in the tar file name.
 
 3. Extract the table and bibliography xml from the latex files. This takes a bit of set-up before running the first time, as outlined here: [](https://github.com/bnewm0609/unarXive/tree/master/src). First install the required software:
 ```
@@ -25,32 +25,35 @@ yes | sudo apt install texlive-extra-utils
 yes | sudo apt install tralics
 ```
 
-Then clone my fork of the repo and run steps 1 and 3. I only followed steps 1 and 3 because I'm using S2 apis to do the citation matching.
+Then clone my fork of the [`unarxiv`](https://github.com/bnewm0609/unarXive/tree/master/src) repo and run steps 1 and 3. I only followed steps 1 and 3 because I'm using S2 apis to do the citation matching.
 ```
 python unarXive/src/prepare.py in_tar/ out_xml/ arxiv-metadata-oai-snapshot.sqlite
 ```
 
-4. Now, I move the generated data into a directory called `arxiv_dump/out_xml` on my local machine (you don't have to do this, but I did because I was worried about losing access to the cluster).
+4. Now, move the generated data into a directory called `arxiv_dump/out_xml` on my local machine (you don't have to do this, but I did because I was worried about losing access to the cluster).
 ```
-scp benjaminn@s2-cirrascale-10.reviz.ai2.in:~/nfs/arxiv_tables/out_xml/2310.00000-07773.jsonl arxiv_dump/out_xml_filtered/
+scp benjaminn@s2-cirrascale-10.reviz.ai2.in:~/nfs/arxiv_tables/out_xml/2310.00000-07773.jsonl arxiv_dump/out_xml_filtered/2310.00000-07773_filtered.jsonl
 ```
 
-5. Then, I filter the tables [script not tested yet - the ]:
+5. Then, filter the tables and convert them to pandas format:
 ```
 python scripts/data_processing/extract_tables.py arxiv_dump/out_xml/2310.00000-07773.jsonl arxiv_dump/out_xml_filtered/2310.00000-07773_dataset.jsonl
 ```
+You can add the `--check_yield` option to print out the number of tables after the filtering step without actually trying to convert it to pandas format or saving the data.
 
-6. Then, I match the citations to the s2 database, which requires being on VPN because it calls s2 internal apis:
+
+6. Then, to match the citations to the s2 database, which requires being on VPN because it calls s2 internal apis:
 ```
 python scripts/data_processing/populate_bib_entries.py ../arxiv_dump/out_xml/2308.00000-16912v1.jsonl ../arxiv_dump/out_xml_filtered/2308.00000-16912v1_dataset_NO_FLOATS_has_cites_has_max_2_subtables_has_2_cols_2_rows_not_long.jsonl ../arxiv_dump/out_bib_entries.jsonl
 ```
 
-7. I download the full texts from athena
+7. Then download the full texts from s2orc using athena
 ```
 python scripts/data_processing/download_full_texts.py data/arxiv_tables/2308_papers.jsonl
 ```
 
-8. Then, I run this short script to create the stripped-down datasets for the code
+
+8. Then, run this short script to create the stripped-down datasets for the code
 ```
 python scripts/data_processing/create_tables_and_papers_datasets.py in_tables_path out_tables_path.jsonl out_papers_path.jsonl
 ```

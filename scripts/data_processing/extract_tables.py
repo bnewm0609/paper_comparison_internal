@@ -26,7 +26,13 @@ def has_x(table_soup):
 
 
 def not_too_long(table_soup):
-    return len(str(table_soup)) < 5e3
+    # return len(str(table_soup)) < 5e3
+    return len(str(table_soup)) < 15e3
+
+
+def not_too_long_or_short(table_soup):
+    # return len(str(table_soup)) < 5e3
+    return 398 < len(str(table_soup)) < 15e3
 
 
 def has_rows(table_soup):
