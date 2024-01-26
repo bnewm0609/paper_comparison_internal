@@ -2,7 +2,7 @@ titles_ids_cache.sqlite
 outputs/
 results/
 
-notebooks/
+notebooks/.ipynb_checkpoints
 lightning_logs/
 
 # Mac Finder Configurations
