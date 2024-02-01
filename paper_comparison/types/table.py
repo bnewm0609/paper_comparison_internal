@@ -12,3 +12,4 @@ class Table:
     schema: set[str]
     values: dict
     dataframe: Optional[pd.DataFrame] = None
+    caption: Optional[str] = None
