@@ -232,6 +232,34 @@ class SchemaDiversityMetric(BaseMetric):
         }
 
 
+class ValueRecallMetric(BaseMetric):
+    def __init__(self, args):
+        super().__init__(args)
+
+    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+        return super().add(prediction, target, metadata)
+
+    def process_scores(self) -> dict[str, Any]:
+        return super().process_scores()
+
+    def reset(self) -> None:
+        return super().reset()
+
+
+class GPT4Preference(BaseMetric):
+    def __init__(self, args):
+        super().__init__(args)
+
+    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+        return super().add(prediction, target, metadata)
+
+    def process_scores(self) -> dict[str, Any]:
+        return super().process_scores()
+
+    def reset(self) -> None:
+        return super().reset()
+
+
 class Evaluator:
     def __init__(self, metrics: list[BaseMetric]):
         self.metrics = metrics
