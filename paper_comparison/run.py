@@ -15,6 +15,7 @@ from paper_comparison.populator import load_populator
 from paper_comparison.utils import save_outputs, get_results_path, convert_paths_to_absolute
 
 
+
 def initialze_experiment(args: DictConfig):
     args.results_path = get_results_path(args)
     args.timestamp = str(datetime.now())
@@ -70,7 +71,8 @@ def main(args: DictConfig) -> None:
         schema = schematizer(args, data)
         tables = populator(args, data, schema)
 
-    metrics = evaluator(args, tables, data)
+    # metrics = evaluator(args, tables, data)
+    metrics = {}
 
     save_outputs(args, tables, metrics)
     print(f"Results saved to:\n{args.results_path}")

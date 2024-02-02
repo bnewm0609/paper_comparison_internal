@@ -38,7 +38,7 @@ def save_outputs(args: DictConfig, tables: list, metrics: dict):
     results_path = Path(args.results_path)
     with open(results_path / "tables.jsonl", "w") as f:
         for table in tables:
-            f.write(json.dumps({"tab_id": table.tabid, "table": table.values}) + "\n")
+            f.write(json.dumps({"tab_id": table.tabid, "table": table.values, **({"type": table.type} if hasattr(table, 'type') else {})}) + "\n")
 
     with open(results_path / "metrics.json", "w") as f:
         json.dump(metrics, f)

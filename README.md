@@ -73,11 +73,8 @@ If this data is being used for training or supervised evaluation, there will als
     }
 }
 ```
-
-Each of these files can be overridden individually by setting the `data.papers_path` or `data.tables_path` at the command line. E.g.:
-```
-python paper_comparison/run.py data.papers_path=data/debug_abstracts/papers.jsonl data.tables_path=data/debug_abstracts/tables.jsonl endtoend=debug
-```
+## Pipeline
+See `paper_comparison`
 
 ## Training
 (Not implemented yet)

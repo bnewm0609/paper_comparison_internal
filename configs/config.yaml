@@ -2,7 +2,7 @@ defaults:
  - _self_
  - data: abstracts
  - eval: eval
- - endtoend: null
+ - endtoend: baseline_outputs
  - schematizer: null
  - populator: null
 debug: False

@@ -1,0 +1,4 @@
+_id: "name-${.name}"
+name: "baseline_outputs"
+prompt_path: "data/prompt.json"
+baseline_type: ["pap_to_tab", "cc_to_tab", "multi_scheme"]

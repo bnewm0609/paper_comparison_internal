@@ -11,5 +11,6 @@ class Table:
     tabid: str
     schema: set[str]
     values: dict
+    type: Optional[str] = None
     dataframe: Optional[pd.DataFrame] = None
     caption: Optional[str] = None
