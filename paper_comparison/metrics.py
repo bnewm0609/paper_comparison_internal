@@ -6,7 +6,7 @@ from sacrebleu.metrics import BLEU
 from omegaconf import DictConfig
 
 from paper_comparison.types import Table
-from paper_comparison.metrics_utils import get_p_r_f1, get_similar_sentence
+from paper_comparison.metrics_utils import get_p_r_f1, get_similar_sentence, align_schema, decontextualize_table
 
 
 class BaseMetric:
@@ -89,34 +89,6 @@ class BaseMetric:
         self.scores = []
 
 
-class BasePairwiseComparisonMetric(BaseMetric):
-    def __init__(self, args):
-        super().__init__(args)
-
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        return super().add(prediction, target, metadata)
-
-    def process_scores(self) -> dict[str, Any]:
-        return super().process_scores()
-
-    def reset(self) -> None:
-        return super().reset()
-
-
-class AnswerCoherenceMetric(BaseMetric):
-    def __init__(self, args):
-        super().__init__(args)
-
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        return super().add(prediction, target, metadata)
-
-    def process_scores(self) -> dict[str, Any]:
-        return super().process_scores()
-
-    def reset(self) -> None:
-        return super().reset()
-
-
 class AnswerCorrectnessMetric(BaseMetric):
     def __init__(self, args):
         super().__init__(args)
@@ -131,61 +103,97 @@ class AnswerCorrectnessMetric(BaseMetric):
         return super().reset()
 
 
-class SchemaPrecisionRecallMetric(BaseMetric):
+class SchemaRecallMetric(BaseMetric):
     """
-    Calculates the precision and recall of the produced schema
-    Precision:
-    Recall: Of all the possible things we could compare from a paper, how many do we capture.
+    Calculates the recall of the produced schema.
 
-    This assumes we have (at least) some examples of really detailed human authored tables.
+    Namely, the tables we produce might have many more columns than the gold
+    tables. This metric computes how many of the columns in the predicted
+    tables are also in the gold table as a proportion of the number of columns
+    in the gold table.
+
+    This calculation requires aligning the columns in some way, and there are
+    a few ways this can be done:
+        1. Using just the schema (ie column headers)
+        2. Using the values in the table
+
+    I think the best would be to first decontextualize the table and align, but
+    we should try implementing a few different methods.
     """
 
-    def __init__(self, args, sim_threshold=0.4, sim_method="jaccard_keywords"):
+    def __init__(
+        self,
+        args,
+        should_decontext: bool = True,
+        sim_threshold=0.4,
+        align_method_name: str = "sentence-transformers",
+        **align_method_config,
+    ):
+        """
+        sim_method [str]: indicates what method to sue to align the columns
+        """
         super().__init__(args)
+        self.should_decontext = should_decontext
         self.sim_threshold = sim_threshold
-        self.sim_method = sim_method
+        self.align_method_name = align_method_name
+        if not align_method_config:
+            self.align_method_config = {}
+        else:
+            self.align_method_config = align_method_config
 
     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        # Check if the
-        target_covered = {attribute: False for attribute in target.schema}
-        pred_correct = {attribute: 0.0 for attribute in prediction.schema}
+        # optionally decontextualize the target
+        if self.should_decontext:
+            target = decontextualize_table(target, metadata)
 
-        for pred_attr in prediction.schema:
-            closest_match, match_score = get_similar_sentence(
-                pred_attr, list(target.schema), method=self.sim_method
-            )
-            if match_score > self.sim_threshold:
-                target_covered[closest_match] = True
-            pred_correct[pred_attr] = match_score
+        # align the columns of the prediction and the target tables
+        schema_alignments, alignment_scores = align_schema(
+            target.values,
+            prediction.values,
+            self.align_method_name,
+            self.sim_threshold,
+            **self.align_method_config,
+        )
 
-        tp = sum([int(x > self.sim_threshold) for x in pred_correct.values()])
-        fp = len(pred_correct) - tp
-        fn = len(target_covered) - sum(target_covered.values())
+        false_negs = [gold_col for (gold_col, _), pred_cols in schema_alignments.items() if not pred_cols]
+        true_pos = [gold_col for gold_col, _ in schema_alignments if gold_col not in false_negs]
 
-        p, r, f1 = get_p_r_f1(tp, fp, fn)
-        self.scores["precision"].append(p)
-        self.scores["recall"].append(r)
-        self.scores["f1"].append(f1)
-        self.scores["preds"].append(pred_correct)
-        self.scores["targets"].append(target_covered)
+        # next calculate the recall between the aligned columns
+        if len(schema_alignments) == 0:
+            recall = 0
+        else:
+            recall = len(true_pos) / (len(schema_alignments))
 
-    def process_scores(self) -> dict[str, Any]:
-        return {
-            "precision": np.mean(self.scores["precision"]),
-            "recall": np.mean(self.scores["recall"]),
-            "f1": np.mean(self.scores["f1"]),
-            "preds": self.scores["preds"],
-            "targets": self.scores["targets"],
-        }
+        self.scores["recalls"].append(recall)
+        self.scores["alignment_scores"].append(alignment_scores.tolist())
+        self.scores["alignments"].append({k1: vals for (k1, _), vals in schema_alignments.items()})
 
     def reset(self) -> None:
         self.scores = {
-            "precision": [],
-            "recall": [],
-            "f1": [],
-            "preds": [],
-            "targets": [],
+            "recalls": [],
+            "alignment_scores": [],
+            "alignments": [],
         }
+
+    def process_scores(self) -> dict[str, Any]:
+        return {
+            repr(self): {
+                "recall": np.mean(self.scores["recalls"]),
+                "recalls": self.scores["recalls"],
+                "alignments": self.scores["alignments"],
+                "alignment_scores": self.scores["alignment_scores"],
+            }
+        }
+
+    def __repr__(self) -> str:
+        args = [
+            f"should_decontext={self.should_decontext}",
+            f"sim_threshold={self.sim_threshold}",
+            f"align_method_name={self.align_method_name}",
+        ]
+        for k, v in self.align_method_config.items():
+            args.append(f"{k}={v}")
+        return f"SchemaRecallMetric({', '.join(args)})"
 
 
 class SchemaDiversityMetric(BaseMetric):
@@ -224,9 +232,21 @@ class SchemaDiversityMetric(BaseMetric):
         }
 
 
-class SchemaComparisonMetric(BasePairwiseComparisonMetric):
-    """Interleave top-k schema"""
+class ValueRecallMetric(BaseMetric):
+    def __init__(self, args):
+        super().__init__(args)
 
+    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+        return super().add(prediction, target, metadata)
+
+    def process_scores(self) -> dict[str, Any]:
+        return super().process_scores()
+
+    def reset(self) -> None:
+        return super().reset()
+
+
+class GPT4Preference(BaseMetric):
     def __init__(self, args):
         super().__init__(args)
 
@@ -257,8 +277,8 @@ class Evaluator:
 
 
 METRIC_MAP = {
-    "PRF": SchemaPrecisionRecallMetric,
     "diversity": SchemaDiversityMetric,
+    "schema_recall": SchemaRecallMetric,
 }
 
 

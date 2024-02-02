@@ -1,6 +1,7 @@
 from argparse import ArgumentParser
 import json
 import re
+import sys
 from typing import List
 
 from bs4 import BeautifulSoup
@@ -25,7 +26,13 @@ def has_x(table_soup):
 
 
 def not_too_long(table_soup):
-    return len(str(table_soup)) < 5e3
+    # return len(str(table_soup)) < 5e3
+    return len(str(table_soup)) < 15e3
+
+
+def not_too_long_or_short(table_soup):
+    # return len(str(table_soup)) < 5e3
+    return 398 < len(str(table_soup)) < 15e3
 
 
 def has_rows(table_soup):
@@ -51,11 +58,14 @@ def has_cites(table_soup):
 
 
 def has_at_least_2_cites(table_soup):
-    soup_text = " ".join(table_soup.strings)
-    return len(table_soup.find_all("cit")) > 2
+    return len(table_soup.find_all("cit")) >= 2
 
 
-def has_cites_in_rows_or_cols(table_soup):
+def has_cites_in_first_row_or_col(table_soup):
+    """
+    Checks for citations in the first row or column
+    (this is quite restrictive)
+    """
     min_num_cites = 2
     trs = table_soup.find_all("tr")
 
@@ -81,6 +91,42 @@ def has_cites_in_rows_or_cols(table_soup):
     return len([cell for cell in first_col_citations if cell is not None]) >= min_num_cites
 
 
+def has_cites_in_rows_or_cols(table_soup):
+    """
+    Checks *any* row or col to see if it has >2 cites
+    """
+    min_num_cites = 2
+    trs = table_soup.find_all("tr")
+
+    valid_table = False
+    max_num_cells = 0
+    for row in trs:
+        cells = row.find_all("td")
+        # skip any all-empty rows
+        if all([not cell.text.strip() for cell in cells]):
+            continue
+
+        # track max number of cells per row to help with processing column
+        max_num_cells = max(max_num_cells, len(cells))
+
+        if len(row.find_all("cit")) >= min_num_cites:
+            valid_table = True
+            break
+
+    # check columns. Assumes that we don't have weird multicolumn stuff going on,
+    # so it's a bit coarse. E.g. row[0][3] is the same column as row[3][3]
+    if not valid_table and max_num_cells > 0:
+        for col_i in range(max_num_cells):
+            try:
+                col_citations = [row.find_all("td")[col_i].find("cit") for row in trs]
+            except IndexError:
+                continue
+            if len([cell for cell in col_citations if cell is not None]) >= min_num_cites:
+                valid_table = True
+                break
+    return valid_table
+
+
 FLOAT_REGEX = re.compile("\d\.\d")
 
 
@@ -100,6 +146,7 @@ DEFAULT_TABLE_FILTERS = [
     has_at_least_2_rows,
     has_no_floats,
     has_cites_in_rows_or_cols,
+    # has_cites_in_first_row_or_col,
 ]
 
 COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green)"
@@ -186,8 +233,8 @@ def extract_valid_tables(path, table_filters):
                 valid_tables.append(new_paper)
 
             # For debugging
-            if len(valid_tables) > 10:
-                break
+            # if len(valid_tables) > 10:
+            #     break
 
     return valid_tables
 
@@ -217,7 +264,14 @@ def split_references_column(table_df):
             new_column_without_cites.append(new_cell_val)
 
     if any([val != "-" for val in new_column_without_cites]):
-        table_df[new_column_without_cites_name] = new_column_without_cites
+        if new_column_without_cites_name == "References":
+            # This only gets triggered in weird cases where one of the columns is "References" but
+            # we don't successfully parse out all of the citations (eg if there is more than one cite)
+            # in the column
+            table_df = table_df.rename(columns={new_column_without_cites_name: "References_OLD"})
+            table_df["References_OLD"] = new_column_without_cites
+        else:
+            table_df[new_column_without_cites_name] = new_column_without_cites
         try:
             table_df.insert(0, "References", references_col)
         except ValueError:
@@ -241,22 +295,29 @@ def postprocess_table_df(table_df):
         original_col_0 = table_df.columns[0]
         table_df = table_df.set_index(original_col_0)
         table_df = table_df.transpose()
-        table_df = table_df.reset_index(names=original_col_0)
+        try:
+            table_df = table_df.reset_index(names=original_col_0)
+        except ValueError:
+            # something went wrong so... transpose back
+            table_df = table_df.transpose().reset_index()
+            # breakpoint()
 
     def process_cell(cell):
         # replace non-breaking space with normal space
-        cell = cell.strip()
         cell = cell.replace("\u00a0", " ")
+        cell = cell.strip()
 
         # binary no
+        if cell == "X":
+            cell = "\u2717"
         # cell = re.sub(f"{COLORS}\u2717", "\u2717", cell)
-        # # binary yes
-        # cell = re.sub(f"{COLORS}\u2713", "\u2713", cell)
+        # binary yes - standardize
+        cell = re.sub("\u2714", "\u2713", cell)
 
         # remove color annotations
         cell = re.sub(f"{COLORS_RE}", "", cell)
         # empty cells should be "-" instead
-        cell = re.sub(f"N/A", "-", cell)
+        cell = re.sub(r"(N/A|none)", "-", cell)
         if cell == "":
             cell = "-"
         return cell
@@ -265,6 +326,7 @@ def postprocess_table_df(table_df):
 
     # if the cells have citations and other information, put the citations into a new cell
     table_df = split_references_column(table_df)
+    # TODO: if rows have the same reference, then combine their values into a list
     return table_df
 
 
@@ -355,7 +417,7 @@ def get_table_row_bib_map(table_json, bib_hashes, paper_id) -> List:
     """
 
     table_row_bib_map = []
-    cite_id_map = {bib_ref[:7]: bib_ref for bib_ref in bib_hashes}
+    cite_id_map = {bib_ref[:7]: bib_ref for bib_ref in bib_hashes if bib_ref is not None}
     table_df = pd.DataFrame(table_json)
     ours_row = None
     for i, cell_val in enumerate(table_df[table_df.columns[0]]):
@@ -434,9 +496,14 @@ def main():
     argp = ArgumentParser()
     argp.add_argument("in_path", type=str)
     argp.add_argument("out_path", type=str)
+    argp.add_argument("--check_yield", action="store_true")
     args = argp.parse_args()
 
     valid_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_FILTERS)
+    if args.check_yield:
+        print("Num papers with valid tables:", len(valid_tables))
+        print("Num valid tables:", sum([len(new_paper["tables"]) for new_paper in valid_tables]))
+        sys.exit(0)
     valid_tables_dataset = create_dataset(valid_tables)
     with open(args.out_path, "w") as f:
         for sample in valid_tables_dataset:

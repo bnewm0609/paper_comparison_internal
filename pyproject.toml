@@ -25,6 +25,8 @@ dependencies = [
     "transformers>=4.28.0",
     "unidecode",
     "typing_extensions>=4.5.0",
+    "requests-cache==1.1.1",
+    "beautifulsoup4==4.12.2",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

@@ -21,6 +21,13 @@ def download_s2orc(corpus_ids, aws_folder="s3://ai2-s2-benjaminn/tmp_arxiv_table
     os.system(f"aws s3 rm --recursive {aws_folder}")
     shutil.rmtree("tmp", ignore_errors=True)
 
+    # The way this *should* work is:
+    #  1. Create an external table that contains the corpus ids
+    #  2. Join against that table
+    # I don't know AWS Athena or SQL that well, so I couldn't easily figure
+    # this out. So instead, my query uses an "IN" statement, which is fine for
+    # small numbers of tables, but might not be fine for thousands.
+
     # # # Not sure how to create external tables, but this is how it should be done...
     # # # create a new temp table with the corpus ids
     # # s3 = boto3.resource("s3")
@@ -111,7 +118,8 @@ def download_s2orc(corpus_ids, aws_folder="s3://ai2-s2-benjaminn/tmp_arxiv_table
 
 def main():
     argp = ArgumentParser()
-    argp.add_argument("in_path", type=str, help="Bib entries to get the full texts for")
+    argp.add_argument("in_path", type=str, help="bib_entries file to get the full texts for")
+    argp.add_argument("--out_dir", type=str, help="", default=PERM_OUT_DIR_NAME)
     args = argp.parse_args()
 
     with open(args.in_path) as f:
@@ -119,8 +127,8 @@ def main():
         corpus_ids = [entry.get("corpus_id") for entry in bib_entries if entry.get("corpus_id") is not None]
 
     os.makedirs(OUT_DIR_NAME, exist_ok=True)
-    os.makedirs(PERM_OUT_DIR_NAME, exist_ok=True)
-    downloaded_texts = [os.path.splitext(fn)[0] for fn in os.listdir(PERM_OUT_DIR_NAME)]
+    os.makedirs(argp.out_dir, exist_ok=True)
+    downloaded_texts = [os.path.splitext(fn)[0] for fn in os.listdir(argp.out_dir)]
     corpus_ids = [str(corpus_id) for corpus_id in corpus_ids if str(corpus_id) not in downloaded_texts]
 
     # print(len(downloaded_texts))
@@ -129,7 +137,7 @@ def main():
     s2orc = download_s2orc(corpus_ids)
 
     for paper in s2orc:
-        with open(Path(PERM_OUT_DIR_NAME) / f"{paper['id']}.json", "w") as f:
+        with open(Path(argp.out_dir) / f"{paper['id']}.json", "w") as f:
             json.dump(paper, f)
 
 
