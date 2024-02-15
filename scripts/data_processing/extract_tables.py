@@ -190,7 +190,7 @@ def has_no_figures(table_soup):
     return True
 
 
-DEFAULT_TABLE_FILTERS = [
+DEFAULT_TABLE_LABELS = [
     not_too_long_15e3,
     not_too_long_or_short,
     has_table_cells,
@@ -203,6 +203,18 @@ DEFAULT_TABLE_FILTERS = [
     has_cites_in_rows_or_cols,
     has_cites_in_first_row_or_col,
     has_max_one_cite_per_cell,
+]
+
+DEFAULT_TABLE_FILTERS = [
+    has_cites_in_rows_or_cols,
+    has_at_least_2_cites,
+    has_no_floats,
+    not_too_long_or_short,
+    has_at_least_2_cols,
+    has_max_2_sub_tables,
+    has_at_least_2_rows,
+    has_no_figures,
+    has_table_cells,
 ]
 
 COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green)"
@@ -525,78 +537,166 @@ def get_table_row_bib_map(table_json, bib_hashes, paper_id) -> List:
     return table_row_bib_map
 
 
-def create_dataset(tables_by_paper):
+def create_dataset(labeled_tables, filters):
     """
     Flattens the tables_by_paper into a list of tables with associated information to create a dataset."""
     dataset = []
-    for paper_i, paper in enumerate(tables_by_paper):
-        for table_key in paper["tables"]:
-            if "soup" in paper["tables"][table_key]:
-                table_soup = paper["tables"][table_key]["soup"]
-            else:
-                table_soup = BeautifulSoup(paper["tables"][table_key]["table_html"])
+    for table_i, table in enumerate(labeled_tables):
+        should_skip_table = False
+        for filter_fn in filters:
+            if not table["labels"][filter_fn.__name__]:
+                should_skip_table = True
+                break
+        if should_skip_table:
+            continue
 
-            cites = table_soup.find_all("cit")
-            cite_shas = [cite.get("sha") for cite in cites]
+        table_soup = soupify(table["table_html"])
+        cites = table_soup.find_all("cit")
+        cite_shas = [cite.get("sha") for cite in cites]
 
-            table_json = soup_to_json(table_soup)
-            if not table_json["table_dict"]:
-                print(f"Skipping {table_key} because `soup_to_json` failed")
-                continue
-            # trp = table_requires_paper(table_json)
-            row_bib_map = get_table_row_bib_map(table_json["table_dict"], cite_shas, paper["paper_id"])
-            print(len(dataset), paper_i, table_key)
-            dataset.append(
-                {
-                    "paper_id": paper["paper_id"],
-                    "_pdf_hash": paper["_pdf_hash"],
-                    "_source_hash": paper["_source_hash"],
-                    "_source_name": paper["_source_name"],
-                    "_table_hash": table_key,
-                    "table_html": str(table_soup),
-                    "table_json": table_json,  # this is kinda hard
-                    # "table_requires_paper": trp,  # whether the the paper containing the table is one of the rows
-                    "row_bib_map": row_bib_map,
-                    "bib_hash": cite_shas,
-                }
-            )
+        table_json = soup_to_json(table_soup)
+        if not table_json["table_dict"]:
+            print(f"Skipping {table['_table_hash']} because `soup_to_json` failed")
+            continue
+        # trp = table_requires_paper(table_json)
+        row_bib_map = get_table_row_bib_map(table_json["table_dict"], cite_shas, table["paper_id"])
+        print(len(dataset), table_i, table["_table_hash"])
+        dataset.append(
+            {
+                "paper_id": table["paper_id"],
+                "_pdf_hash": table.get("_pdf_hash"),
+                "_source_hash": table.get("_source_hash"),
+                "_source_name": table.get("_source_name"),
+                "_table_hash": table["_table_hash"],
+                "table_html": str(table_soup),
+                "table_json": table_json,  # this is kinda hard
+                # "table_requires_paper": trp,  # whether the the paper containing the table is one of the rows
+                "row_bib_map": row_bib_map,
+                "bib_hash": cite_shas,
+            }
+        )
     return dataset
+    # for paper_i, paper in enumerate(tables_by_paper):
+    #     for table_key in paper["tables"]:
+    #         if "soup" in paper["tables"][table_key]:
+    #             table_soup = paper["tables"][table_key]["soup"]
+    #         else:
+    #             table_soup = BeautifulSoup(paper["tables"][table_key]["table_html"])
 
+    #         cites = table_soup.find_all("cit")
+    #         cite_shas = [cite.get("sha") for cite in cites]
+
+    #         table_json = soup_to_json(table_soup)
+    #         if not table_json["table_dict"]:
+    #             print(f"Skipping {table_key} because `soup_to_json` failed")
+    #             continue
+    #         # trp = table_requires_paper(table_json)
+    #         row_bib_map = get_table_row_bib_map(table_json["table_dict"], cite_shas, paper["paper_id"])
+    #         print(len(dataset), paper_i, table_key)
+    #         dataset.append(
+    #             {
+    #                 "paper_id": paper["paper_id"],
+    #                 "_pdf_hash": paper["_pdf_hash"],
+    #                 "_source_hash": paper["_source_hash"],
+    #                 "_source_name": paper["_source_name"],
+    #                 "_table_hash": table_key,
+    #                 "table_html": str(table_soup),
+    #                 "table_json": table_json,  # this is kinda hard
+    #                 # "table_requires_paper": trp,  # whether the the paper containing the table is one of the rows
+    #                 "row_bib_map": row_bib_map,
+    #                 "bib_hash": cite_shas,
+    #             }
+    #         )
+    # return dataset
 
 def main():
     argp = ArgumentParser()
     argp.add_argument("in_path", type=str)
-    argp.add_argument("out_path", type=str)
-    argp.add_argument("--check_yield", action="store_true")
-    argp.add_argument("--label_tables", action="store_true")
+    argp.add_argument("--out_labeled_path", type=str)
+    argp.add_argument("--out_filtered_path", type=str)
+    argp.add_argument("--label_only", action="store_true")
+    argp.add_argument("--filter_only", action="store_true")
     args = argp.parse_args()
-
-    assert not args.check_yield or not args.label_tables
-
-    valid_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_FILTERS, label_tables=args.label_tables)
-    if args.check_yield:
-        print("Num papers with valid tables:", len(valid_tables))
-        print("Num valid tables:", sum([len(new_paper["tables"]) for new_paper in valid_tables]))
-        sys.exit(0)
-
-    if args.label_tables:
-        # save the tables as is wo doing json conversion
-        valid_tables_dataset = []
-        for paper_i, paper in enumerate(valid_tables):
+    
+    # labeling
+    if not args.filter_only:
+        assert args.out_labeled_path is not None
+        labeled_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_LABELS, label_tables=True)
+        labeled_tables_dataset = []
+        for paper_i, paper in enumerate(labeled_tables):
             for table_key in paper["tables"]:
-                valid_tables_dataset.append(
+                labeled_tables_dataset.append(
                     {
                         "paper_id": paper["paper_id"],
+                        "_pdf_hash": paper["_pdf_hash"],
+                        "_source_hash": paper["_source_hash"],
+                        "_source_name": paper["_source_name"],
                         "_table_hash": table_key,
                         "table_html": str(paper["tables"][table_key]["soup"]),
                         "labels": paper["tables"][table_key]["labels"],
                     }
                 )
-    else:
-        valid_tables_dataset = create_dataset(valid_tables)
-    with open(args.out_path, "w") as f:
-        for sample in valid_tables_dataset:
-            f.write(json.dumps(sample) + "\n")
+        with open(args.out_labeled_path, "w") as f:
+            for sample in labeled_tables_dataset:
+                f.write(json.dumps(sample) + "\n")
+            
+    elif not args.label_only:
+        # assumes that `in_path` has labels
+        with open(args.in_path) as f:
+            labeled_tables_dataset = [json.loads(line) for line in f]
+    
+    
+    # filtering
+    if not args.label_only:
+        assert args.out_filtered_path is not None
+        filtered_tables_dataset = create_dataset(labeled_tables_dataset, DEFAULT_TABLE_FILTERS)
+        
+        with open(args.out_filtered_path, "w") as f:
+            for sample in filtered_tables_dataset:
+                f.write(json.dumps(sample) + "\n")
+        
+    
+    
+    
+    
+    
+            
+        
+    
+# def main():
+#     argp = ArgumentParser()
+#     argp.add_argument("in_path", type=str)
+#     argp.add_argument("out_path", type=str)
+#     argp.add_argument("--check_yield", action="store_true")
+#     argp.add_argument("--label_tables", action="store_true")
+#     args = argp.parse_args()
+
+#     assert not args.check_yield or not args.label_tables
+
+#     valid_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_FILTERS, label_tables=args.label_tables)
+#     if args.check_yield:
+#         print("Num papers with valid tables:", len(valid_tables))
+#         print("Num valid tables:", sum([len(new_paper["tables"]) for new_paper in valid_tables]))
+#         sys.exit(0)
+
+#     if args.label_tables:
+#         # save the tables as is wo doing json conversion
+#         valid_tables_dataset = []
+#         for paper_i, paper in enumerate(valid_tables):
+#             for table_key in paper["tables"]:
+#                 valid_tables_dataset.append(
+#                     {
+#                         "paper_id": paper["paper_id"],
+#                         "_table_hash": table_key,
+#                         "table_html": str(paper["tables"][table_key]["soup"]),
+#                         "labels": paper["tables"][table_key]["labels"],
+#                     }
+#                 )
+#     else:
+#         valid_tables_dataset = create_dataset(valid_tables)
+#     with open(args.out_path, "w") as f:
+#         for sample in valid_tables_dataset:
+#             f.write(json.dumps(sample) + "\n")
 
 
 if __name__ == "__main__":
