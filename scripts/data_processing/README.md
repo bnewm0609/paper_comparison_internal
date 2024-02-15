@@ -52,8 +52,9 @@ python scripts/data_processing/populate_bib_entries.py ../arxiv_dump/out_xml/230
 python scripts/data_processing/download_full_texts.py data/arxiv_tables/2308_papers.jsonl
 ```
 
+8. Then, download and unarxiv just the full texts associated with the papers.
 
-8. Then, run this short script to create the stripped-down datasets for the code
+9. Then, run this short script to create the stripped-down datasets for the code
 ```
 python scripts/data_processing/create_tables_and_papers_datasets.py in_tables_path out_tables_path.jsonl out_papers_path.jsonl
 ```

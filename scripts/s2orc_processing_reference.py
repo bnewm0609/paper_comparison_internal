@@ -67,7 +67,7 @@ def fuzzy_substring(needle, haystack):
         row1 = row2
     return min(row1)
 
-def get_intro_2(s2orc_parse):
+def get_intro_2(s2orc_parse, verbose=False):
     """
     This one is a bit better than the one below in that if it can't find a section called intro
     it looks for the text following the abstract, which sometimes helps. The cost is that it's
@@ -90,7 +90,8 @@ def get_intro_2(s2orc_parse):
         except TypeError:
             print(annotation)
             raise TypeError("slice indices have to be ints or whatever")
-        if "intro" in header:
+
+        if "intro" in header or ("background" in header and "summary" in header):
             text_start = int(annotation['end'])
             try:
                 text_end = int(sorted_annotations[i + 1]['start'])
@@ -119,7 +120,7 @@ def get_intro_2(s2orc_parse):
             paragraphs = full_text.split("\n\n")
             closest_distance = float("inf")
             closest_distance_idx = -1
-            print(">Running fuzzy substring search... this might take a ~1min!")
+            print("> Running fuzzy substring search... this might take a ~1min!")
             for para_i, para in enumerate(paragraphs):
                 # ed = edit_distance(para, abstract)#, max_ed=closest_distance)  # not using max_ed right now because if it's over max, returns 0 which is confusing
                 ed = fuzzy_substring(abstract, para)  # this is quite slow
@@ -132,16 +133,18 @@ def get_intro_2(s2orc_parse):
                 if ed < 10:
                     # exit early if we're "close enough"
                     break
-            print(">Done with fuzzy substring search!\n")
+            print("> Done with fuzzy substring search!\n")
 
-            # print(abstract)
-            # print("closest_distance idx:", closest_distance_idx, "\tdistance:", closest_distance, )
-            # print("Closest paragraph:", paragraphs[closest_distance_idx])
-            # print()
+            if verbose:
+                print(abstract)
+                print("closest_distance idx:", closest_distance_idx, "\tdistance:", closest_distance)
+                print("Closest paragraph:", paragraphs[closest_distance_idx])
+                print()
             # reassign abstract to be the abstract *in the full text* if the edit distance is close enough
             if closest_distance < 305:  # arbitrary constant
                 abstract = paragraphs[closest_distance_idx]
-                # print("Reassigned")
+                if verbose:
+                    print("Reassigned")
                 # print("\n", "Reassigned to:\n", abstract)
                 abstract_idx = full_text.index(abstract)
 
@@ -161,6 +164,7 @@ def get_intro_2(s2orc_parse):
             return full_text[intro_start: intro_end].strip()
 
     return ""
+
 
 
 def get_intro(grobid_parse):

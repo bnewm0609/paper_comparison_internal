@@ -25,9 +25,13 @@ def has_x(table_soup):
     return "✗" in " ".join(table_soup.strings)
 
 
-def not_too_long(table_soup):
+def not_too_long_15e3(table_soup):
     # return len(str(table_soup)) < 5e3
     return len(str(table_soup)) < 15e3
+
+
+def not_too_long_5e3(table_soup):
+    return len(str(table_soup)) < 5e3
 
 
 def not_too_long_or_short(table_soup):
@@ -117,36 +121,88 @@ def has_cites_in_rows_or_cols(table_soup):
     # so it's a bit coarse. E.g. row[0][3] is the same column as row[3][3]
     if not valid_table and max_num_cells > 0:
         for col_i in range(max_num_cells):
-            try:
-                col_citations = [row.find_all("td")[col_i].find("cit") for row in trs]
-            except IndexError:
-                continue
+            col_citations = []
+            for row in trs:
+                try:
+                    col_citations.append(row.find_all("td")[col_i].find("cit"))
+                except IndexError:
+                    continue
+            # print(col_citations)
             if len([cell for cell in col_citations if cell is not None]) >= min_num_cites:
                 valid_table = True
                 break
     return valid_table
 
 
-FLOAT_REGEX = re.compile("\d\.\d")
+def has_max_one_cite_per_cell(table_soup):
+    """
+    We don't want any tables with more than one citation per cell.
+    Returns True if any cell has a maximum of one citation
+    """
+    max_cites_per_cell = 1
+    trs = table_soup.find_all("tr")
+
+    valid_table = False
+    for row in trs:
+        for cell in row.find_all("td"):
+            if len(cell.find_all("cit")) > max_cites_per_cell:
+                return False
+    return True
+
+
+# FLOAT_REGEX = re.compile("\d\.\d")
+FLOAT_REGEX = re.compile("\.\d")
 
 
 def has_no_floats(table_soup):
-    for s in table_soup.strings:
-        s = s.strip()
-        if s and FLOAT_REGEX.search(s) is not None:
+    for cell in table_soup.find_all("td"):
+        cell_text = cell.get_text()
+        if cell_text and FLOAT_REGEX.search(cell_text) is not None:
+            return False
+
+    # some tables have floats in paragraphs, which is confusing but
+    # not always recovered for some reason
+    for cell in table_soup.find_all("p"):
+        cell_text = cell.get_text()
+        if cell_text and FLOAT_REGEX.search(cell_text) is not None:
+            return False
+    # for s in table_soup.strings:
+    #     s = s.strip()
+    #     if s and FLOAT_REGEX.search(s) is not None:
+    #         return False
+    return True
+
+
+def has_table_cells(table_soup):
+    return table_soup.find("td") is not None
+
+
+def has_no_figures(table_soup):
+    for cell in table_soup.find_all("td"):
+        cell_text = cell.get_text()
+        if cell_text and r"{{figure" in cell_text:
+            return False
+
+    for cell in table_soup.find_all("p"):
+        cell_text = cell.get_text()
+        if cell_text and r"{{figure" in cell_text:
             return False
     return True
 
 
 DEFAULT_TABLE_FILTERS = [
-    not_too_long,
-    # has_at_least_2_cites,
+    not_too_long_15e3,
+    not_too_long_or_short,
+    has_table_cells,
+    has_at_least_2_cites,
     has_max_2_sub_tables,
     has_at_least_2_cols,
     has_at_least_2_rows,
     has_no_floats,
+    has_no_figures,
     has_cites_in_rows_or_cols,
-    # has_cites_in_first_row_or_col,
+    has_cites_in_first_row_or_col,
+    has_max_one_cite_per_cell,
 ]
 
 COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green)"
@@ -157,8 +213,12 @@ def is_na(text):
     return text.lower() == "n/a" or not text.strip() or text == "\u2216"
 
 
-def extract_valid_tables(path, table_filters):
+def extract_valid_tables(path, table_filters, label_tables=False):
     """
+    If `label_tables` is True, return all of the tables, but list
+    what labels are true/false for each of them.
+
+
     path by default is "arxiv_dump/out_xml/2310.00000-07773.jsonl"
 
     This is the output of running the following on the s2 cluster:
@@ -204,16 +264,23 @@ def extract_valid_tables(path, table_filters):
                     # print("Preparing soupification")
                     table_soup = soupify(table["table"])
 
-                    # Filter tables
-                    exit_early = False
-                    for flter in table_filters:
-                        if not flter(table_soup):
-                            # exit early as soon as a filter is wrong
-                            exit_early = True
-                            break
+                    if label_tables:
+                        # label the tables with the filters they pass
+                        labels = {}
+                        for flter in table_filters:
+                            labels[flter.__name__] = flter(table_soup)
+                        labels["len"] = len(str(table_soup))
+                    else:
+                        # Filter tables
+                        exit_early = False
+                        for flter in table_filters:
+                            if not flter(table_soup):
+                                # exit early as soon as a filter is wrong
+                                exit_early = True
+                                break
 
-                    if exit_early:
-                        continue
+                        if exit_early:
+                            continue
 
                     # Keep the outermost table always. But prevent adding smaller tables
                     # Remove duplicates (as long as the larger table comes first, the smaller ones
@@ -226,6 +293,8 @@ def extract_valid_tables(path, table_filters):
 
                     filtered_tables[key] = table
                     filtered_tables[key]["soup"] = table_soup
+                    if label_tables:
+                        filtered_tables[key]["labels"] = labels
 
             if filtered_tables:
                 new_paper = {k: v for k, v in paper.items() if k != "tables"}
@@ -414,6 +483,8 @@ def get_table_row_bib_map(table_json, bib_hashes, paper_id) -> List:
     Returns a List where each element represents a row of the table. Each element contains
     a row number, the corpus id, bib_hash or arxiv id, and whether the row is the paper
     with the table ("ours") or an external reference ("ref").
+
+    TODO: could also be "above". there could also be more than one "ours" row.
     """
 
     table_row_bib_map = []
@@ -464,8 +535,8 @@ def create_dataset(tables_by_paper):
                 table_soup = paper["tables"][table_key]["soup"]
             else:
                 table_soup = BeautifulSoup(paper["tables"][table_key]["table_html"])
-            cites = table_soup.find_all("cit")
 
+            cites = table_soup.find_all("cit")
             cite_shas = [cite.get("sha") for cite in cites]
 
             table_json = soup_to_json(table_soup)
@@ -497,14 +568,32 @@ def main():
     argp.add_argument("in_path", type=str)
     argp.add_argument("out_path", type=str)
     argp.add_argument("--check_yield", action="store_true")
+    argp.add_argument("--label_tables", action="store_true")
     args = argp.parse_args()
 
-    valid_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_FILTERS)
+    assert not args.check_yield or not args.label_tables
+
+    valid_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_FILTERS, label_tables=args.label_tables)
     if args.check_yield:
         print("Num papers with valid tables:", len(valid_tables))
         print("Num valid tables:", sum([len(new_paper["tables"]) for new_paper in valid_tables]))
         sys.exit(0)
-    valid_tables_dataset = create_dataset(valid_tables)
+
+    if args.label_tables:
+        # save the tables as is wo doing json conversion
+        valid_tables_dataset = []
+        for paper_i, paper in enumerate(valid_tables):
+            for table_key in paper["tables"]:
+                valid_tables_dataset.append(
+                    {
+                        "paper_id": paper["paper_id"],
+                        "_table_hash": table_key,
+                        "table_html": str(paper["tables"][table_key]["soup"]),
+                        "labels": paper["tables"][table_key]["labels"],
+                    }
+                )
+    else:
+        valid_tables_dataset = create_dataset(valid_tables)
     with open(args.out_path, "w") as f:
         for sample in valid_tables_dataset:
             f.write(json.dumps(sample) + "\n")
