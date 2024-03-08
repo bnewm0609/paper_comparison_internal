@@ -1,5 +1,9 @@
 from argparse import ArgumentParser
+import functools
+import gzip
 import json
+import multiprocessing
+import os
 import re
 import sys
 from typing import List
@@ -264,7 +268,11 @@ def extract_valid_tables(path, table_filters, label_tables=False):
     python scripts/data_processing/download_full_texts.py data/arxiv_tables/2308_papers.jsonl
     """
     valid_tables = []
-    with open(path) as f:
+    if os.path.splitext(path)[1] == ".gz":
+        f = gzip.open(path, "r")
+    else:
+        f = open(path)
+    with f:
         added_tables = set()
         for line in tqdm(f):
             paper = json.loads(line)
@@ -755,19 +763,11 @@ def create_dataset(labeled_tables, filters):
     # return dataset
 
 
-def main():
-    argp = ArgumentParser()
-    argp.add_argument("in_path", type=str)
-    argp.add_argument("--out_labeled_path", type=str)
-    argp.add_argument("--out_filtered_path", type=str)
-    argp.add_argument("--label_only", action="store_true")
-    argp.add_argument("--filter_only", action="store_true")
-    args = argp.parse_args()
-
+def run(in_path, out_labeled_path, out_filtered_path, label_only, filter_only):
     # labeling
-    if not args.filter_only:
-        assert args.out_labeled_path is not None
-        labeled_tables = extract_valid_tables(args.in_path, DEFAULT_TABLE_LABELS, label_tables=True)
+    if not filter_only:
+        assert out_labeled_path is not None
+        labeled_tables = extract_valid_tables(in_path, DEFAULT_TABLE_LABELS, label_tables=True)
         labeled_tables_dataset = []
         for paper_i, paper in enumerate(labeled_tables):
             for table_key in paper["tables"]:
@@ -782,27 +782,82 @@ def main():
                         "labels": paper["tables"][table_key]["labels"],
                     }
                 )
-        with open(args.out_labeled_path, "w") as f:
+        with open(out_labeled_path, "w") as f:
             for sample in labeled_tables_dataset:
                 f.write(json.dumps(sample) + "\n")
 
-    elif not args.label_only:
+    elif not label_only:
         # assumes that `in_path` has labels
-        with open(args.in_path) as f:
+        with open(in_path) as f:
             labeled_tables_dataset = [json.loads(line) for line in f]
 
     # filtering
-    if not args.label_only:
-        assert args.out_filtered_path is not None
+    if not label_only:
+        assert out_filtered_path is not None
         filtered_tables_dataset = create_dataset(labeled_tables_dataset, DEFAULT_TABLE_FILTERS)
-        # breakpoint()
 
-        with open(args.out_filtered_path, "w") as f:
+        with open(out_filtered_path, "w") as f:
             for sample in filtered_tables_dataset:
-                try:
-                    f.write(json.dumps(sample) + "\n")
-                except:
-                    breakpoint()
+                f.write(json.dumps(sample) + "\n")
+
+
+BLACK_LIST = [
+    "done.log",
+    "log.txt",
+    "2211.jsonl.gz",
+    "2212.jsonl.gz",
+    "2306.00000-17847v1.jsonl.gz",
+    "2308.00000-16912v1.jsonl.gz",
+    "2307.jsonl.gz",
+]
+
+
+def main():
+    argp = ArgumentParser()
+    argp.add_argument("in_path", type=str)
+    argp.add_argument("--out_labeled_path", type=str)
+    argp.add_argument("--out_filtered_path", type=str)
+    argp.add_argument("--label_only", action="store_true")
+    argp.add_argument("--filter_only", action="store_true")
+    argp.add_argument("--num_processes", type=int, default=1)
+    args = argp.parse_args()
+
+    if args.num_processes == 1:
+        run(args.in_path, args.out_labeled_path, args.out_filtered_path, args.label_only, args.filter_only)
+    else:
+        # assume in_path contains the in_paths we care about
+        with multiprocessing.Pool(processes=args.num_processes) as pool:
+            results = []
+            for in_path in os.listdir(args.in_path):
+                if in_path in BLACK_LIST:
+                    print(f"Skipping {in_path}")
+                    continue
+                out_labeled_path = (
+                    os.path.join(args.out_labeled_path, in_path.split(".")[0]) + ".jsonl"
+                    if args.out_labeled_path is not None
+                    else None
+                )
+                out_filtered_path = (
+                    os.path.join(args.out_filtered_path, in_path.split(".")[0]) + ".jsonl"
+                    if args.out_filtered_path is not None
+                    else None
+                )
+                print("In:", os.path.join(args.in_path, in_path))
+                print("out:", out_labeled_path)
+                runner = functools.partial(
+                    run,
+                    os.path.join(args.in_path, in_path),
+                    out_labeled_path,
+                    out_filtered_path,
+                    args.label_only,
+                    args.filter_only,
+                )
+                result = pool.apply_async(runner)
+                results.append(result)
+            for result in results:
+                result.get()
+            pool.close()
+            pool.join()
 
 
 # def main():
