@@ -3,6 +3,7 @@ import json
 import re
 import sys
 from typing import List
+import warnings
 
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -218,7 +219,7 @@ DEFAULT_TABLE_FILTERS = [
 ]
 
 COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green)"
-COLORS_RE = r"{COLORS}(\!\d\d?)?"
+COLORS_RE = rf"{COLORS}(\!\d\d?|(?=[✗✓]))"
 
 
 def is_na(text):
@@ -324,11 +325,31 @@ def split_references_column(table_df):
     # next, break the citation into their own column with the heading "References"
     # this new References column will be the *index* of the dataframe, so all it's elements
     # must be unique
-    column_with_cites = table_df[table_df.columns[0]]
+
+    # if "Type of deformations" in table_df.columns:
+    #     breakpoint()
+    # determine which column has the most references
+
+    # use iloc in case the name of the column is repeated
+    column_with_cites = table_df.iloc[:, 0]  # by default it's the first one
+    max_num_cites = -1
+    for col_i, _ in enumerate(table_df.columns):
+        num_cites = 0
+        for cell_val in table_df.iloc[:, col_i]:
+            matches = re.search("{{cite:[a-f\d]{7}}}", cell_val)
+            if matches is not None:
+                num_cites += 1
+        if num_cites > max_num_cites:
+            max_num_cites = num_cites
+            column_with_cites = table_df.iloc[:, col_i]
+
     if isinstance(column_with_cites, pd.DataFrame):
         column_with_cites = column_with_cites.agg("".join, axis=1)
     references_col = []
-    new_column_without_cites_name = table_df.columns[0]
+    # try:
+    new_column_without_cites_name = column_with_cites.name
+    # except AttributeError:
+    #    breakpoint()
     new_column_without_cites = []
     no_cite_count = 0
     for cell_val in column_with_cites:
@@ -342,7 +363,7 @@ def split_references_column(table_df):
             new_cell_val = cell_val.replace(matches[0], "")
             if not new_cell_val:
                 new_cell_val = "-"
-            new_column_without_cites.append(new_cell_val)
+            new_column_without_cites.append(new_cell_val.strip())
 
     if any([val != "-" for val in new_column_without_cites]):
         if new_column_without_cites_name == "References":
@@ -356,11 +377,17 @@ def split_references_column(table_df):
         try:
             table_df.insert(0, "References", references_col)
         except ValueError:
-            breakpoint()
+            print("Error inserting into table_df")
+            raise ValueError
     else:
         # if the column just has citations, rename the column
         table_df = table_df.rename(columns={new_column_without_cites_name: "References"})
+        # and reorder them so that "References" is first
+        reordered_cols = ["References"] + [col for col in table_df.columns if col != "References"]
+        table_df = table_df[reordered_cols]
     assert table_df.columns[0] == "References"
+    # if table_df.columns[0] != "References":
+    #     breakpoint()
     return table_df
 
 
@@ -385,9 +412,13 @@ def postprocess_table_df(table_df):
 
     def process_cell(cell):
         # replace non-breaking space with normal space
+        if isinstance(cell, tuple):
+            cell = str(cell)
         cell = cell.replace("\u00a0", " ")
         cell = cell.strip()
 
+        # normalize apostrophes
+        cell = re.sub("[’]", "'", cell)
         # binary no
         if cell == "X":
             cell = "\u2717"
@@ -395,20 +426,39 @@ def postprocess_table_df(table_df):
         # binary yes - standardize
         cell = re.sub("\u2714", "\u2713", cell)
 
-        # remove color annotations
+        # remove color annotations from end
         cell = re.sub(f"{COLORS_RE}", "", cell)
+        # and from beginning - this is potentially dangerous...
+        cell = re.sub(rf"^{COLORS}", "", cell)
         # empty cells should be "-" instead
         cell = re.sub(r"(N/A|none)", "-", cell)
+        cell = cell.strip()
         if cell == "":
             cell = "-"
         return cell
 
     table_df = table_df.map(process_cell)
+    table_df.columns = table_df.columns.map(process_cell)
+    # print(table_df.columns)
 
     # if the cells have citations and other information, put the citations into a new cell
     table_df = split_references_column(table_df)
     # TODO: if rows have the same reference, then combine their values into a list
     return table_df
+
+
+def merge_rows(table, row_i, row_j):
+    new_row = []
+    for val_i, val_j in zip(table[row_i], table[row_j]):
+        if val_i == val_j or not val_j.strip():
+            new_row.append(val_i)
+        elif not val_i.strip():
+            new_row.append(val_j)
+        else:
+            new_row.append("-".join([val_i, val_j]))
+    table[row_i] = new_row
+    del table[row_j]
+    return table
 
 
 def soup_to_json(table_soup, verbose=False):
@@ -420,59 +470,115 @@ def soup_to_json(table_soup, verbose=False):
             for row in table_soup.find_all("tr")
         ]
     )
+    # next, determine the number of rows:
+    num_rows = len(table_soup.find_all("tr"))
+
     if verbose:
-        print(num_cols)
+        print(num_rows, num_cols)
 
     # next, extract the values. Some rows are "header" rows and contain explanatory info.
-    # for now, we track these separately in a "incomplete_rows" field
-    table = {"incomplete_rows": [], "table": []}
+    # The rows we are unable to parse are tracked separately in a "incomplete_rows" field
+
+    table = {"incomplete_rows": [], "table": [["" for ci in range(num_cols)] for ri in range(num_rows)]}
     columns = [[] for _ in range(num_cols)]
+    transposed_table = False
+
+    # Next, fill in table[row_i][col_i]
+    header_rows = []
+    seen_cites = False
     for row_i, row in enumerate(table_soup.find_all("tr")):
-        # First, we want to collapse the header rows that contain the column names
         cells = row.find_all("td")
 
-        # skip any all-empty rows
-        if all([not cell.text.strip() for cell in cells]):
+        col_i = 0
+        # if a row does not contain any citations and we only have one row in the table, then say it's part of the header row
+        num_cites = len([cell for cell in cells if cell.find("cit") is not None])
+        if num_cites > 0:
+            seen_cites = True
+        if num_cites == 0 and row_i <= 1 and not seen_cites:
+            if verbose:
+                print(f"no cites in row: {row_i}, adding as header")
+            header_rows.append(row_i)
+
+        # determine if the current row is a header row
+        if len(cells) < num_cols and not seen_cites:
+            if verbose:
+                print(f"not enough cols in row: {row_i}, adding as header")
+            header_rows.append(row_i)
+        elif len(cells) < num_cols or any(["{{figure:" in cell.text for cell in cells]):
+            # for cell in cells:
+            table["incomplete_rows"].append(
+                {
+                    "row_idx": row_i,
+                    "cells": [cell.text for cell in cells],
+                }
+            )
             continue
 
-        if len(cells) < num_cols:
-            # incomplete rows have fewer than the max number of cells. They'll be stored
-            # in a separate place or sometimes merged into the column headers
-            if not (table["table"]):
-                # we haven't started adding to the table, so this is most likely still a header row
-                if verbose:
-                    print(cells)
-                last_col = 0
-                for cell in cells:
-                    num_spanning_cols = int(cell.attrs.get("cols", "1"))
-                    for i in range(last_col, last_col + num_spanning_cols):
-                        columns[i].append(cell.text)
-                    last_col += num_spanning_cols
+        for cell in cells:
+            # acount for multi-column cells
+            num_spanning_cols = int(cell.attrs.get("cols", "1"))
+            for col_offset in range(num_spanning_cols):
+                cell_text = cell.text
+                # account for multi-row cells
+                multirow_cell = re.search(r"(\d)\*(.+)", cell_text)
+                if multirow_cell:
+                    count = int(multirow_cell[1])
+                    cell_text = multirow_cell[2]
+                    if verbose:
+                        print(count, cell_text)
+                    for row_offset in range(1, count):
+                        # add this to subsequent rows
+                        try:
+                            table["table"][row_i + row_offset][col_i + col_offset] += cell_text.strip()
+                        except IndexError:
+                            print(
+                                "Index error assigning value. This probably means we were unable to parse the table correctly. Skipping..."
+                            )
+                            return {
+                                "table": table["table"],
+                                "incomplete_rows": table["incomplete_rows"],
+                                "table_dict": {},
+                            }
 
-            for cell in cells:
-                table["incomplete_rows"].append(
-                    {
-                        "row_idx": row_i,
-                        "text": cell.text,
-                        "cols": int(cell.attrs.get("cols", "1")),
-                    }
-                )
-        else:
-            if not table["table"]:
-                # column headers
-                for i, cell in enumerate(cells):
-                    if cell.text.strip():
-                        columns[i].append(cell.text)
-                columns = ["-".join(col) for col in columns]
-                table["table"].append(columns)
-            else:
-                next_row = [cell.text for cell in cells]
-                # replace "N/A" and " " with "-"
-                next_row = ["-" if is_na(cell_text) else cell_text for cell_text in next_row]
-                table["table"].append(next_row)
+                # if a cell contains a horizontal line, don't add it but mark it as a header row
+                if re.search("\(r\)\d-\d", cell_text):  #  and not seen_cites:
+                    # print("horizontal line added as header_row")
+                    # header_rows.append(row_i + 1)
+                    cell_text = re.sub("\(r\)\d-\d", "", cell_text)
+                    # continue
 
+                if (
+                    is_na(cell_text.strip())
+                    and not table["table"][row_i][col_i + col_offset]
+                    and not row_i in header_rows
+                ):
+                    cell_text = "-"
+
+                if not table["table"][row_i][col_i + col_offset]:
+                    table["table"][row_i][col_i + col_offset] += cell_text.strip()
+            col_i += num_spanning_cols
+
+    # after we're done filling in the table, collapse the header row
+    # merge the first two rows until we reach the header row
+    if verbose:
+        print(header_rows)
+    if header_rows:
+        for _ in range(max(header_rows)):
+            table["table"] = merge_rows(table["table"], 0, 1)
+
+    # remove any empty rows
+    table_filtered = []
+    for row in table["table"]:
+        if any(row):
+            table_filtered.append(row)
+    table["table"] = table_filtered
+
+    if verbose:
+        for row in table["table"]:
+            print(row)
+        # print(table["table"])
     # next, assume the first row has the column headers and the first col has the row headers
-    if not table["table"]:
+    if not any(["".join(row) for row in table["table"]]):
         table_dict = {}
     else:
         table_df = pd.DataFrame(table["table"][1:], columns=table["table"][0])
@@ -481,7 +587,7 @@ def soup_to_json(table_soup, verbose=False):
 
         # if len(table_dict) != len(table["table"][0]):
         #     table_dict = {}
-    del table["table"]  # we don't actually need the list of rows, I don't think
+    # del table["table"]  # we don't actually need the list of rows, I don't think
     table["table_dict"] = table_dict
     return table
 
@@ -541,40 +647,79 @@ def create_dataset(labeled_tables, filters):
     """
     Flattens the tables_by_paper into a list of tables with associated information to create a dataset."""
     dataset = []
-    for table_i, table in enumerate(labeled_tables):
+    if labeled_tables[0].get("labels") is None:
+        print("Unable to find labels on the tables. All are being converted to json.")
+    missing_bib_hashes = []
+    skipped_table_hashes = []
+    for table_i, table in tqdm(enumerate(labeled_tables), total=len(labeled_tables)):
         should_skip_table = False
-        for filter_fn in filters:
-            if not table["labels"][filter_fn.__name__]:
-                should_skip_table = True
-                break
+
+        # there should usually be labels, but there might not be, in which case don't filter anything...
+        if table.get("labels") is not None:
+            for filter_fn in filters:
+                if not table["labels"][filter_fn.__name__]:
+                    should_skip_table = True
+                    break
         if should_skip_table:
             continue
 
-        table_soup = soupify(table["table_html"])
+        if "table_html" not in table:
+            table_soup = soupify(table["xml"])
+        else:
+            table_soup = soupify(table["table_html"])
         cites = table_soup.find_all("cit")
         cite_shas = [cite.get("sha") for cite in cites]
 
-        table_json = soup_to_json(table_soup)
+        try:
+            with warnings.catch_warnings(action="ignore"):
+                table_json = soup_to_json(table_soup)
+        except Exception as e:
+            table_json = {"table_dict": {}}
+            print(f"Error {e}")
+
         if not table_json["table_dict"]:
             print(f"Skipping {table['_table_hash']} because `soup_to_json` failed")
+            skipped_table_hashes.append(table["_table_hash"])
             continue
         # trp = table_requires_paper(table_json)
         row_bib_map = get_table_row_bib_map(table_json["table_dict"], cite_shas, table["paper_id"])
-        print(len(dataset), table_i, table["_table_hash"])
-        dataset.append(
-            {
-                "paper_id": table["paper_id"],
-                "_pdf_hash": table.get("_pdf_hash"),
-                "_source_hash": table.get("_source_hash"),
-                "_source_name": table.get("_source_name"),
-                "_table_hash": table["_table_hash"],
-                "table_html": str(table_soup),
-                "table_json": table_json,  # this is kinda hard
-                # "table_requires_paper": trp,  # whether the the paper containing the table is one of the rows
-                "row_bib_map": row_bib_map,
-                "bib_hash": cite_shas,
-            }
-        )
+        # print(len(dataset), table_i, table["_table_hash"])
+
+        new_sample = {
+            "paper_id": table["paper_id"],
+            "_pdf_hash": table.get("_pdf_hash"),
+            "_source_hash": table.get("_source_hash"),
+            "_source_name": table.get("_source_name"),
+            "_table_hash": table["_table_hash"],
+        }
+
+        if "caption" in table:
+            new_sample["caption"] = table["caption"]
+
+        new_sample |= {
+            "table_html": str(table_soup),
+            "table_json": table_json,  # this is kinda hard
+            "row_bib_map": row_bib_map,
+            "bib_hash": cite_shas,
+        }
+
+        if "input_papers" in table:
+            for row in row_bib_map:
+                if not row["bib_hash_or_arxiv_id"] in table["input_papers"]:
+                    missing_bib_hashes.append(row["bib_hash_or_arxiv_id"])
+                    continue
+
+                paper_info = table["input_papers"][row["bib_hash_or_arxiv_id"]]
+                row["corpus_id"] = paper_info["corpus_id"]
+                row["title"] = paper_info["title"]
+                row["abstract"] = paper_info["abstract"]
+        dataset.append(new_sample)
+
+    print(f"Skipped {len(skipped_table_hashes)} tables")
+    print(f"E.g. {skipped_table_hashes[:10]} ...")
+    print()
+    print(f"Missing {len(missing_bib_hashes)} bib_hashes or arxiv_ids")
+    print(f"E.g. {missing_bib_hashes[:10]} ...")
     return dataset
     # for paper_i, paper in enumerate(tables_by_paper):
     #     for table_key in paper["tables"]:
@@ -609,6 +754,7 @@ def create_dataset(labeled_tables, filters):
     #         )
     # return dataset
 
+
 def main():
     argp = ArgumentParser()
     argp.add_argument("in_path", type=str)
@@ -617,7 +763,7 @@ def main():
     argp.add_argument("--label_only", action="store_true")
     argp.add_argument("--filter_only", action="store_true")
     args = argp.parse_args()
-    
+
     # labeling
     if not args.filter_only:
         assert args.out_labeled_path is not None
@@ -639,30 +785,26 @@ def main():
         with open(args.out_labeled_path, "w") as f:
             for sample in labeled_tables_dataset:
                 f.write(json.dumps(sample) + "\n")
-            
+
     elif not args.label_only:
         # assumes that `in_path` has labels
         with open(args.in_path) as f:
             labeled_tables_dataset = [json.loads(line) for line in f]
-    
-    
+
     # filtering
     if not args.label_only:
         assert args.out_filtered_path is not None
         filtered_tables_dataset = create_dataset(labeled_tables_dataset, DEFAULT_TABLE_FILTERS)
-        
+        # breakpoint()
+
         with open(args.out_filtered_path, "w") as f:
             for sample in filtered_tables_dataset:
-                f.write(json.dumps(sample) + "\n")
-        
-    
-    
-    
-    
-    
-            
-        
-    
+                try:
+                    f.write(json.dumps(sample) + "\n")
+                except:
+                    breakpoint()
+
+
 # def main():
 #     argp = ArgumentParser()
 #     argp.add_argument("in_path", type=str)
@@ -701,3 +843,191 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # for row_i, row in enumerate(table_soup.find_all("tr")):
+    #     # First, we want to collapse the header rows that contain the column names
+    #     cells = row.find_all("td")
+
+    #     # skip any all-empty rows or rows that just have horizontal lines
+    #     if all([not cell.text.strip() for cell in cells]):
+    #         continue
+    #     if all([re.search("\(r\)\d-\d", cell.text.strip()) for cell in cells]):
+    #         continue
+
+    #     col_i = 0
+    #     for cell in cells:
+    #         # acount for multi-column cells
+    #         num_spanning_cols = int(cell.attrs.get("cols", "1"))
+    #         for col_offset in range(num_spanning_cols):
+    #             cell_text = cell.text
+    #             # account for multi-row cells
+    #             multirow_cell = re.search(r"(\d)\*(.+)", cell_text)
+    #             if multirow_cell:
+    #                 count = int(multirow_cell[1])
+    #                 cell_text = multirow_cell[2]
+    #                 print(count, cell_text)
+    #                 for row_offset in range(1, count):
+    #                     # add this to subsequent rows
+    #                     table["table"][row_i + row_offset][col_i + col_offset] += cell_text.strip()
+
+    #             # print(col_i, i)
+    #             # if a cell contains a horizontal line, don't add it but mark it as a header row
+    #             if re.search("\(r\)\d-\d", cell_text):
+    #                 header_rows.append(row_i)
+    #                 continue
+
+    #             table["table"][row_i][col_i + col_offset] += cell_text.strip()
+    #         col_i += num_spanning_cols
+
+    #     # print(len(cells))
+    #     # print(cells)
+    #     if len(cells) < num_cols:
+    #         # incomplete rows have fewer than the max number of cells. They'll be stored
+    #         # in a separate place or sometimes merged into the column headers
+    #         if not any(table["table"][0]):
+    #             # we haven't started adding to the table, so this is most likely still a header row
+    #             if verbose:
+    #                 print(cells)
+    #             last_col = 0
+    #             for cell in cells:
+    #                 num_spanning_cols = int(cell.attrs.get("cols", "1"))
+    #                 for i in range(last_col, last_col + num_spanning_cols):
+    #                     columns[i].append(cell.text)
+    #                 last_col += num_spanning_cols
+    #             continue
+
+    #         for cell in cells:
+    #             table["incomplete_rows"].append(
+    #                 {
+    #                     "row_idx": row_i,
+    #                     "text": cell.text,
+    #                     "cols": int(cell.attrs.get("cols", "1")),
+    #                 }
+    #             )
+    #     else:
+    #         if not table["table"]:
+    #             # column headers
+    #             num_cites = len([cell for cell in cells if cell.find("cit") is not None])
+    #             print(num_cites, num_cols)
+    #             if num_cites >= num_cols - 2:
+    #                 if verbose:
+    #                     print("table is transposed")
+    #                 transposed_table = True
+    #             for i, cell in enumerate(cells):
+    #                 if cell.text.strip():
+    #                     columns[i].append(cell.text)
+    #             columns = ["-".join(col).strip() for col in columns]
+    #             table["table"].append(columns)
+    #         else:
+    #             # this is either a row of the table or part of the header
+    #             next_row = [cell.text for cell in cells]
+    #             num_cites = len([cell for cell in cells if cell.find("cit") is not None])
+    #             # if it doesn't contain a citation and we only have one row in the table, then lets say it's part of the header
+    #             if num_cites == 0 and len(table["table"]) == 1 and not transposed_table:
+    #                 for i, colname_pt2 in enumerate(next_row):
+    #                     table["table"][0][i] += f" {colname_pt2}"
+    #                     table["table"][0][i] = table["table"][0][i].strip()
+    #             else:
+    #                 # replace "N/A" and " " with "-"
+    #                 next_row = ["-" if is_na(cell_text) else cell_text.strip() for cell_text in next_row]
+
+    #                 next_table_row = []
+    #                 for col_i, cell_text in enumerate(next_row):
+    #                     if is_na(cell_text):
+    #                         next_table_row.append("-")
+
+    #                     matched_multirow_groups = re.search(r"(\d)\*(.+)", cell_text)
+    #                     if matched_multirow_groups is not None:
+    #                         count = int(matched_multirow_groups[0])
+    #                         next_table_row.append(matched_multirow_groups[1])
+    #                         for i in range(count - 1):
+    #                             # add this to the next row
+    #                             [col_i].append(matched_multirow_groups[1])
+    #                     elif "":
+    #                         next_table_row
+    #                     else:
+    #                         next_table_row.append(cell_text.strip())
+
+    #                 table["table"].append(next_table_row)
+
+    # OLD implementation
+    # table = {"incomplete_rows": [], "table": []}
+    # columns = [[] for _ in range(num_cols)]
+    # transposed_table = False
+    # for row_i, row in enumerate(table_soup.find_all("tr")):
+    #     # First, we want to collapse the header rows that contain the column names
+    #     cells = row.find_all("td")
+
+    #     # skip any all-empty rows
+    #     if all([not cell.text.strip() for cell in cells]):
+    #         continue
+    #     # print(len(cells))
+    #     # print(cells)
+    #     if len(cells) < num_cols:
+    #         # incomplete rows have fewer than the max number of cells. They'll be stored
+    #         # in a separate place or sometimes merged into the column headers
+    #         if not (table["table"]):
+    #             # we haven't started adding to the table, so this is most likely still a header row
+    #             if verbose:
+    #                 print(cells)
+    #             last_col = 0
+    #             for cell in cells:
+    #                 num_spanning_cols = int(cell.attrs.get("cols", "1"))
+    #                 for i in range(last_col, last_col + num_spanning_cols):
+    #                     columns[i].append(cell.text)
+    #                 last_col += num_spanning_cols
+    #             continue
+
+    #         for cell in cells:
+    #             table["incomplete_rows"].append(
+    #                 {
+    #                     "row_idx": row_i,
+    #                     "text": cell.text,
+    #                     "cols": int(cell.attrs.get("cols", "1")),
+    #                 }
+    #             )
+    #     else:
+    #         if not table["table"]:
+    #             # column headers
+    #             num_cites = len([cell for cell in cells if cell.find("cit") is not None])
+    #             print(num_cites, num_cols)
+    #             if num_cites >= num_cols - 2:
+    #                 if verbose:
+    #                     print("table is transposed")
+    #                 transposed_table = True
+    #             for i, cell in enumerate(cells):
+    #                 if cell.text.strip():
+    #                     columns[i].append(cell.text)
+    #             columns = ["-".join(col).strip() for col in columns]
+    #             table["table"].append(columns)
+    #         else:
+    #             # this is either a row of the table or part of the header
+    #             next_row = [cell.text for cell in cells]
+    #             num_cites = len([cell for cell in cells if cell.find("cit") is not None])
+    #             # if it doesn't contain a citation and we only have one row in the table, then lets say it's part of the header
+    #             if num_cites == 0 and len(table["table"]) == 1 and not transposed_table:
+    #                 for i, colname_pt2 in enumerate(next_row):
+    #                     table["table"][0][i] += f" {colname_pt2}"
+    #                     table["table"][0][i] = table["table"][0][i].strip()
+    #             else:
+    #                 # replace "N/A" and " " with "-"
+    #                 next_row = ["-" if is_na(cell_text) else cell_text.strip() for cell_text in next_row]
+
+    #                 next_table_row = []
+    #                 for col_i, cell_text in enumerate(next_row):
+    #                     if is_na(cell_text):
+    #                         next_table_row.append("-")
+
+    #                     matched_multirow_groups = re.search(r"(\d)\*(.+)", cell_text)
+    #                     if matched_multirow_groups is not None:
+    #                         count = int(matched_multirow_groups[0])
+    #                         next_table_row.append(matched_multirow_groups[1])
+    #                         for i in range(count - 1):
+    #                             # add this to the next row
+    #                             [col_i].append(matched_multirow_groups[1])
+    #                     elif "":
+    #                         next_table_row
+    #                     else:
+    #                         next_table_row.append(cell_text.strip())
+
+    #                 table["table"].append(next_table_row)
