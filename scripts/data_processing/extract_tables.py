@@ -215,12 +215,12 @@ DEFAULT_TABLE_LABELS = [
 DEFAULT_TABLE_FILTERS = [
     has_cites_in_rows_or_cols,
     has_at_least_2_cites,
-    has_no_floats,
+    # has_no_floats,
     not_too_long_or_short,
     has_at_least_2_cols,
     has_max_2_sub_tables,
     has_at_least_2_rows,
-    has_no_figures,
+    # has_no_figures,
     has_table_cells,
 ]
 
@@ -668,7 +668,7 @@ def create_dataset(labeled_tables, filters):
     """
     Flattens the tables_by_paper into a list of tables with associated information to create a dataset."""
     dataset = []
-    if labeled_tables[0].get("labels") is None:
+    if labeled_tables and labeled_tables[0].get("labels") is None:
         print("Unable to find labels on the tables. All are being converted to json.")
     missing_bib_hashes = []
     skipped_table_hashes = []
@@ -726,6 +726,9 @@ def create_dataset(labeled_tables, filters):
             "row_bib_map": row_bib_map,
             "bib_hash": cite_shas,
         }
+
+        if "labels" in table:
+            new_sample["labels"] = table["labels"]
 
         if "input_papers" in table:
             for row in row_bib_map:
@@ -870,6 +873,12 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
             if "cols_no_old_citation_col" in filters:
                 remove_cols.append(table["table_json"]["old_citation_column"])
 
+            if "cols_no_float" in filters and any([FLOAT_REGEX.search(cell) for cell in table_dict[col] + [col]]):
+                remove_cols.append(col)
+
+            if "cols_no_figure" in filters and any([r"{{figure" in cell for cell in table_dict[col] + [col]]):
+                remove_cols.append(col)
+
         new_table_dict = {}
         for col in table_dict.keys():
             if col in remove_cols and col != "References":
@@ -914,6 +923,7 @@ def run(
     out_labeled_path,
     out_filtered_path,
     out_high_quality_path,
+    out_high_quality_schemes_path,
     out_mid_quality_path,
     should_label,
     should_filter,
@@ -959,8 +969,13 @@ def run(
     # elif not label_only:
     elif should_filter:
         # assumes that `in_path` has labels
-        with open(in_path) as f:
-            labeled_tables_dataset = [json.loads(line) for line in f]
+        if os.path.splitext(in_path)[1] == ".gz":
+            f = gzip.open(in_path, "r")
+        else:
+            f = open(in_path)
+        # with open(in_path) as f:
+        labeled_tables_dataset = [json.loads(line) for line in f]
+        f.close()
 
     # filtering
     # if not label_only and not create_quality_datasets_only:
@@ -991,6 +1006,9 @@ def run(
                 "cols_no_names",
                 "cols_no_old_citation_col",
                 "no_merged_headers",
+                # asdf
+                "cols_no_float",
+                "cols_no_figure",
             ],
         )
         print("Size of High Quality dataset:", len(dataset_hq))
@@ -1010,10 +1028,13 @@ def run(
                 # "cols_no_formula_colname",
                 "cols_no_old_citation_col",
                 "no_merged_headers",
+                # asdf
+                "cols_no_float",
+                "cols_no_figure",
             ],
         )
         print("Size of dataset_high_quality_schemes:", len(dataset_high_quality_schemes))
-        with open(out_mid_quality_path, "w") as f:
+        with open(out_high_quality_schemes_path, "w") as f:
             for sample in dataset_high_quality_schemes:
                 f.write(json.dumps(sample) + "\n")
 
@@ -1026,24 +1047,28 @@ def run(
                 "has_caption",
                 "cols_no_names",
                 "cols_no_formula",
+                "cols_no_float",
+                "cols_no_figure",
                 # "cols_no_old_citation_col",
             ],
         )
         print("Size of dataset_mid_quality_tables:", len(dataset_mid_quality_tables))
-        print("Saved to data/arxiv_tables_medium_quality/dataset_v2.jsonl")
-        with open("data/arxiv_tables_medium_quality/dataset_v2.jsonl", "w") as f:
-            for sample in dataset_high_quality_schemes:
+        # print("Saved to data/arxiv_tables_medium_quality/dataset_v2.jsonl")
+        print(f"Saved to {out_mid_quality_path}")
+        # with open("data/arxiv_tables_medium_quality/dataset_v2.jsonl", "w") as f:
+        with open(out_mid_quality_path, "w") as f:
+            for sample in dataset_mid_quality_tables:
                 f.write(json.dumps(sample) + "\n")
 
 
 BLACK_LIST = [
     "done.log",
     "log.txt",
-    "2211.jsonl.gz",
-    "2212.jsonl.gz",
-    "2306.00000-17847v1.jsonl.gz",
-    "2308.00000-16912v1.jsonl.gz",
-    "2307.jsonl.gz",
+    # "2211.jsonl.gz",
+    # "2212.jsonl.gz",
+    # "2306.00000-17847v1.jsonl.gz",
+    # "2308.00000-16912v1.jsonl.gz",
+    # "2307.jsonl.gz",
 ]
 
 
@@ -1053,6 +1078,7 @@ def main():
     argp.add_argument("--out_labeled_path", type=str)
     argp.add_argument("--out_filtered_path", type=str)
     argp.add_argument("--out_high_quality_path", type=str)
+    argp.add_argument("--out_high_quality_schemes_path", type=str)
     argp.add_argument("--out_mid_quality_path", type=str)
     # argp.add_argument("--label_only", action="store_true")
     # argp.add_argument("--filter_only", action="store_true")
@@ -1074,6 +1100,7 @@ def main():
             args.out_labeled_path,
             args.out_filtered_path,
             args.out_high_quality_path,
+            args.out_high_quality_schemes_path,
             args.out_mid_quality_path,
             args.label,
             args.filter,
@@ -1102,6 +1129,11 @@ def main():
                     if args.out_high_quality_path is not None
                     else None
                 )
+                out_high_quality_schemes_path = (
+                    os.path.join(args.out_high_quality_schemes_path, in_path.split(".")[0]) + ".jsonl"
+                    if args.out_high_quality_schemes_path is not None
+                    else None
+                )
                 out_mid_quality_path = (
                     os.path.join(args.out_mid_quality_path, in_path.split(".")[0]) + ".jsonl"
                     if args.out_mid_quality_path is not None
@@ -1115,6 +1147,7 @@ def main():
                     out_labeled_path,
                     out_filtered_path,
                     out_high_quality_path,
+                    out_high_quality_schemes_path,
                     out_mid_quality_path,
                     args.label,
                     args.filter,
