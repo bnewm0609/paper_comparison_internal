@@ -18,6 +18,8 @@ tar cvf in_tar/2310.00000-07773.tar in_latex_s3/2310/
 ```
 By convention, I've been using the range of papers posted on arxiv that month as the tar file name. This is in case the month gets split up, or for debugging purposes I'm considering a subset of the papers, and in those situations its useful to mark that in the tar file name.
 
+
+
 3. Extract the table and bibliography xml from the latex files. This takes a bit of set-up before running the first time, as outlined here: [](https://github.com/bnewm0609/unarXive/tree/master/src). First install the required software:
 ```
 sudo apt-get update
@@ -41,6 +43,8 @@ python scripts/data_processing/extract_tables.py arxiv_dump/out_xml/2310.00000-0
 ```
 You can add the `--check_yield` option to print out the number of tables after the filtering step without actually trying to convert it to pandas format or saving the data.
 
+For providing labels:
+`python scripts/data_processing/extract_tables.py ../out_xml_fulltext/ --out_labeled_path ../out_xml_fulltext_labeled/ --label_only --num_processes 8`
 
 6. Then, to match the citations to the s2 database, which requires being on VPN because it calls s2 internal apis:
 ```
@@ -63,3 +67,14 @@ For example,
 ```
 python scripts/data_processing/create_tables_and_papers_datasets.py ../arxiv_dump/out_xml_filtered/2308.00000-16912v1_dataset_NO_FLOATS_has_cites_has_max_2_subtables_has_2_cols_2_rows_not_long.jsonl paper_comparison/data/arxiv_tables/2308_tables.jsonl paper_comparison/data/arxiv_tables/2308_papers.jsonl
 ```
+
+# Saving Fulltext XML to S3
+
+1. Run unarxiv with the full text:
+```
+python unarXive/src/prepare.py in_tar/ out_xml_fulltext/ arxiv-metadata-oai-snapshot.sqlite --parse_fulltext --tralics_dir out_tralics_fulltext/2308/
+```
+
+2. Compress the individual xml files
+
+3. Upload to s3

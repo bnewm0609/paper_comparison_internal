@@ -67,10 +67,12 @@ def main():
                 paper["corpus_id"] = corpus_id  # bib_entries[corpus_id]["corpus_id"]
                 if "metadata" in bib_entries[corpus_id]:
                     paper["title"] = bib_entries[corpus_id]["metadata"].get("title", bib_entries.get("title"))
+                    paper["abstract"] = bib_entries[corpus_id]["metadata"].get("abstract")
                     paper["paper_id"] = bib_entries[corpus_id]["metadata"].get("paperId")
                 else:
                     paper["title"] = None
                     paper["paper_id"] = -1
+                    paper["abstract"] = None
             except KeyError:
                 print(bib_entries[corpus_id].keys())
             except AttributeError:
