@@ -14,5 +14,5 @@ python paper_comparison/run.py
 ```
 After running, the results of each try and the path will be output to the terminal. This path contains three files:
  - `results/{args.data._id}/{args.endtoend.difficulty}/{args.endtoend.model_type}/{args.mode}/{args.endtoend.retry_type}`: ten files `try_{idx}.json` with `num_commonality` number of tables.
- - ``results/{args.data._id}`: a file with experiment setting that used for generating the table.
+ - `results/{args.data._id}`: a file with experiment setting that used for generating the table.
  - `commands.txt`: a list of commands that were run to obtain the results in the directory. Most recent at the bottom.
