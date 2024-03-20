@@ -18,29 +18,55 @@ def format_table(table_question):
                 table[value["question"]][k] = [v]
     return table
 
+def validate_table(table, paper_list):
+    if isinstance(table, str): 
+        # if there is [JSON] once in the table
+        if table.count("[JSON]") == 1:  # length issue - generate once more
+            # print(table)
+            return False, "length_error"
+        else:
+            # print(table)
+            return False, "json_error"
+    elif isinstance(table, dict) and len(paper_list) == len(list(table.values())[0]):
+        return True, ""
+    else:
+        # print(table)
+        return False, "paper_num_error"
+
 def str_to_json(text, parse_str):
     try:
-        json_str = text.split(parse_str)[1].strip()
+        if parse_str == "```json":
+            if parse_str in text:
+                json_str = text.split(parse_str)[1].strip()
+                json_str = json_str.split("```")[0].strip()
+            else:
+                json_str = text.split("```")[1].strip()
+        else:
+            json_str = text.split(parse_str)[1].strip()
         return json.loads(json_str)
     except:
         # potential parse_str: ["[\JSON]"]
-        potential_parse_str = ["[/JSON]", "{/JSON}"]
+        potential_parse_str = ["[/JSON]", "{/JSON}", "[/json]"]
         for p_str in potential_parse_str:
             try:
                 json_str = text.split(parse_str)[1].split(p_str)[0].strip()
                 # json_str = text.split(p_str)[1].strip()
                 return json.loads(json_str)
             except:
-                try:
-                    json_str = fix_json_str(json_str)
-                    return json.loads(json_str)
-                except:
-                    continue
+                continue
+                # try:
+                #     print("try fixing json_str")
+                #     print(json_str)
+                #     print()
+                #     json_str = fix_json_str(json_str)
+                #     return json.loads(json_str)
+                # except:
+                #     continue
         print('Failed to parse with the given parse_str')
         return text
 
 def fix_json_str(json_str):
-    template = load_json_file("./data/prompt_ver2.json")["json_formatting"]
+    template = load_json_file("./data/prompt_ver3.json")["json_formatting"]
     tmp_prompt = template['prompt'].format(input_info=json_str)
     api_key = os.environ['OPENAI_KEY']
     url = 'https://api.openai.com/v1/chat/completions'
@@ -92,35 +118,41 @@ def format_to_json(text):
         raise e
 
 def make_paper_list_input(paper_text:str, index:int, paper:Dict, source:str, paper_loop:str) -> str:
+    abstract = paper["abstract"].strip() if "abstract" in paper and paper["abstract"] else None
+    introduction = paper["introduction"].strip() if "introduction" in paper and paper["introduction"] else None
+    title = paper["title"]
     if paper_loop == "single":
-        paper_text += f'Paper title: {paper["title"]}\n'
+        paper_text += f'Paper title: {title}\n'
         if source == "intro":
-            if paper["introduction"] == "None":
-                paper_text += f'Paper abstract: {paper["abstract"]}\n\n'
+            if introduction == "None":
+                paper_text += f'Paper abstract: {abstract}\n\n'
             else:
-                paper_text += f'Paper introduction: {paper["introduction"]}\n\n'
+                paper_text += f'Paper introduction: {introduction}\n\n'
         elif source == "full":
-            paper_text += f'Paper abstract: {paper["abstract"]}\n\n'
+            paper_text += f'Paper abstract: {abstract}\n\n'
         else:
-            paper_text += f'Paper abstract: {paper["abstract"]}\n\n'
-
+            paper_text += f'Paper abstract: {abstract}\n\n'
     else:
         if source == "intro":
-            paper_text += f'Paper {index+1} title: {paper["title"]}\n'
+            paper_text += f'Paper {index+1} title: {title}\n'
             if paper["introduction"] == "None":
-                paper_text += f'Paper {index+1} abstract: {paper["abstract"]}\n\n'
+                paper_text += f'Paper {index+1} abstract: {abstract}\n\n'
             else:
-                paper_text += f'Paper {index+1} introduction: {paper["introduction"]}\n\n'
+                paper_text += f'Paper {index+1} introduction: {introduction}\n\n'
         elif source == "full":
-            paper_text += f'Paper {index+1} abstract: {paper["abstract"]}\n\n'
+            paper_text += f'Paper {index+1} abstract: {abstract}\n\n'
         else:
-            paper_text += f'Paper {index+1} title: {paper["title"]}\naper {index+1} abstract: {paper["abstract"]}\n\n'
+            paper_text += f'Paper {index+1} title: {title}\nPaper {index+1} abstract: {abstract}\n\n'
     return paper_text
 
-def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
-    
-    # {"id": int(index), "tabid": str(tab_id), "text": table, "error_type": error_type, "error_num": error_num}
-    
+def divide_column_num(column_num, paper_num, max_length):
+    division = (column_num * paper_num) // max_length + 1
+    base = column_num // division
+    remainder = column_num % division
+    column_list = [base + 1 if i < remainder else base for i in range(division)]
+    return column_list
+
+def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:    
     merged_table = {"id": tables[0]["id"], "tabid": tables[0]["tabid"], "caption": tables[0]["caption"], 
                     "schema": [], "table": {}, "gold_col":0, "predicted_col_num":0, "error_num": 0, }
     for table in tables:
@@ -181,7 +213,7 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
             max_tokens = 1000
         else:
             temperature = 1
-            max_tokens = 3000
+            max_tokens = 4000
         
         if model_type == "gpt4":   
             data = {

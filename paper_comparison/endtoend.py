@@ -8,7 +8,7 @@ import random
 from omegaconf import DictConfig
 
 from paper_comparison.types.table import Table
-from paper_comparison.generation import load_json_file, generate, str_to_json, make_paper_list_input, format_to_json, merge_tables
+from paper_comparison.generation import load_json_file, generate, divide_column_num, make_paper_list_input, format_to_json, merge_tables, validate_table
 openai.api_key = 'OPENAI_API_KEY'
 
 class BaseEndToEnd:
@@ -55,21 +55,6 @@ class BaselineEndToEnd:
             table_list.append(baseline_table)
         return table_list
     
-    def validate_table(self, table, paper_list):
-        if isinstance(table, str): 
-            # if there is [JSON] once in the table
-            if table.count("[JSON]") == 1:  # length issue - generate once more
-                print(table)
-                return False, "length_error"
-            else:
-                print(table)
-                return False, "json_error"
-        elif isinstance(table, dict) and len(paper_list) == len(list(table.values())[0]):
-            return True, ""
-        else:
-            print(table)
-            return False, "paper_num_error"
-        
     def baseline_tab_gen(
         self, paper_list: List[Dict[str, Any]], model: str, 
         index: int, tab_id: str, column_num: int, 
@@ -81,16 +66,39 @@ class BaselineEndToEnd:
         error_num = 0
         for p_idx, paper in enumerate(paper_list):
             paper_text = make_paper_list_input(paper_text, p_idx, paper, source, "multiple")
+        paper_text = f"[Start of the Paper Content]\n{paper_text}[End of the Paper Content]"
+
+        paper_num = len(paper_list)
+
+        # Create JSON foramt template
+        json_format = {}
+        for i in range(column_num):
+            json_format[f"<dimension {i+1} that can compare papers>"] = {}
+            for p_idx in range(len(paper_list)):
+                json_format[f"<dimension {i+1} that can compare papers>"][f"paper_{p_idx+1}"] = [f"<relevant value to the dimension {i+1} grounded on Paper {p_idx+1}>"]
+        json_format = json.dumps(json_format, indent=2)
+
         if type(gold_caption) == str:
-            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_medium"].format(col_num=column_num, paper_num= len(paper_list), input_info=paper_text, caption=gold_caption)
+            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_medium"].format(
+                col_num=column_num, 
+                paper_num=paper_num,
+                input_info=paper_text, 
+                caption=gold_caption,
+                json_format=json_format
+            )
         else:
-            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_simple"].format(col_num=column_num, paper_num= len(paper_list), input_info=paper_text)
+            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_simple"].format(
+                col_num=column_num,
+                paper_num=paper_num,
+                input_info=paper_text,
+                json_format=json_format
+            )
         # print(tmp_prompt)
             
-        max_try = 10
+        max_try = 5
         for i in range(max_try):
             table = generate(tmp_prompt, model, "generation", "json", self.template["baseline_paper_to_table"])     
-            is_valid, error_type = self.validate_table(table, paper_list)
+            is_valid, error_type = validate_table(table, paper_list)
             if is_valid:
                 baseline_table = {
                     "id": int(index), 
@@ -237,11 +245,11 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         if column_num * len(sample["x"]) < args.endtoend.max_length:
             tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, gold_caption)
         else:
-            division = (column_num * len(sample["x"])) // args.endtoend.max_length + 1
-            base = column_num // division
-            remainder = column_num % division
-            column_list = [base + 1 if i < remainder else base for i in range(division)]
-            tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, column_list, gold_caption)  
+            # division = (column_num * len(sample["x"])) // args.endtoend.max_length + 1
+            # base = column_num // division
+            # remainder = column_num % division
+            # column_list = [base + 1 if i < remainder else base for i in range(division)]
+            tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, args.endtoend.max_length, gold_caption)  
         return tables
     
     def find_similarity(self, paper_list: List[Dict[str, Any]], model:str, source: str = "abstract", max: bool = True) -> str:
@@ -275,11 +283,12 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         paper_text = ""
         for p_idx, paper in enumerate(paper_list):
             paper_text = make_paper_list_input(paper_text, p_idx, paper, source, "multiple")
-        
-        tmp_prompt = self.template["scheme_attribute_generation"][f'prompt_abstract'].format(num_attributes = num_column, input_info=paper_text)
+        paper_text = f"[Start of the Paper Content]\n{paper_text}[End of the Paper Content]"
+
+        tmp_prompt = self.template["scheme_attribute_generation"][f'prompt_abstract'].format(num_attributes=num_column, input_info=paper_text)
         max_try = 5
         for i in range(max_try):
-            res= generate(tmp_prompt, model, "generation", "json", self.template["scheme_attribute_generation"])
+            res = generate(tmp_prompt, model, "generation", "json", self.template["scheme_attribute_generation"])
             is_valid, error_type = self.validate_scheme(res)
             if is_valid:
                 scheme = res
@@ -290,7 +299,6 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                 scheme = {"text": res, "error_type": error_type, "error_num": error_num}
         return scheme, error_num
 
-    
     def find_attributes(self, paper_list: List[Dict[str, Any]], model:str, research_topic: str) -> str:
         paper_text = ""
         for index, paper in enumerate(paper_list):
@@ -299,20 +307,6 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         tmp_prompt = self.template["find_attributes"]['prompt2'].format(paper=paper_text, research_topic=research_topic)
         res = generate(tmp_prompt, model, "generation", "list", self.template["find_attributes"])
         return res
-    
-    def validate_table(self, table, paper_list):
-        if isinstance(table, str): 
-            # if there is [JSON] once in the table
-            if table.count("[JSON]") == 1:  # length issue - generate once more
-                return False, "length_error"
-            else:
-                print(table)
-                return False, "json_error"
-        elif (isinstance(table, dict) and len(paper_list) == len(list(table.values())[0])):
-            return True, ""
-        else:
-            print(table)
-            return False, "paper_num_error"
         
     def value_generation(
         self, paper_list: List[Dict[str, Any]], model: str, 
@@ -321,8 +315,8 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         scheme_error: int, source: str = "abstract", paper_loop: str = "multiple"
     ) -> Dict[str, Any]:
         prompt_type = "value_generation_qa"    # value_generation_qa or value_generation
-        temp_template = "[Start of the Paper Content]\n{paper}[End of Paper Content]\n\n[Start of Table Caption]\n{similarity}\n[End of Table Caption]\n\n[Start of Table Columns]\n{columns}\n[End of Table Columns]\n\n"
-        col_names = '\n'.join([f'Column name {index+1}: {att}' for index, att in enumerate(attributes[:10])])
+        temp_template = "[Start of the Paper Content]\n{paper}[End of the Paper Content]\n\n[Start of Table Caption]\n{similarity}\n[End of Table Caption]\n\n[Start of Table Columns]\n{columns}\n[End of Table Columns]\n\n"
+        col_names = '\n'.join([f'Column name {index+1}: {att}' for index, att in enumerate(attributes)])
         paper_text = ""
         error_num = 0
         if paper_loop == "single":
@@ -339,11 +333,20 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
             for index, paper in enumerate(paper_list):
                 paper_text = make_paper_list_input(paper_text, index, paper, source, paper_loop)
             input_info = temp_template.format(paper=paper_text, similarity=similarity, columns=col_names)
-            combined_prompt = self.template[prompt_type][f'prompt_{paper_loop}_{source}'].format(input_info=input_info)
+            
+            # Create JSON format template to add to the prompt
+            json_format = {}
+            for att in attributes:
+                json_format[att] = {}
+                for i in range(len(paper_list)):
+                    json_format[att][f'paper_{i+1}'] = [f"<value for this column grounded on Paper {i+1}>"]
+            json_format = json.dumps(json_format, indent=2)
+
+            combined_prompt = self.template[prompt_type][f'prompt_{paper_loop}_{source}'].format(input_info=input_info, json_format=json_format)
             max_try = 5
             for i in range(max_try):
                 table = generate(combined_prompt, model, "generation", "json", self.template[prompt_type])
-                is_valid, error_type = self.validate_table(table, paper_list)
+                is_valid, error_type = validate_table(table, paper_list)
                 if is_valid:
                     our_table = {
                         "id": int(id), 
@@ -370,17 +373,18 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
     def filter_out(self, elements: List[Any], method: str, threshold: int = 10) -> List[Any]:
         if len(elements) < threshold:
             return elements
-        if method == "random":
-            return elements[:threshold]
-        elif method == "similarity":   # need revision: identify elements that are different from each other
-            return elements[:threshold]
-        else:  # need revision: identify elements that encompass the most information (verification num)
-            return []
+        else:
+            if method == "random":
+                return elements[:threshold]
+            elif method == "similarity":   # need revision: identify elements that are different from each other
+                return elements[:threshold]
+            # else:  # need revision: identify elements that encompass the most information (verification num)
+            #     return []
         
     def table_prediction(
         self, args, tab_id, 
         id, paper_data: List[Dict[str, Any]], col_num: int, 
-        column_list: List[int] = None, gold_caption: Optional[str] = None
+        max_length: int = None, gold_caption: Optional[str] = None
     ) -> List[Dict[str, Any]]:
         table_set = []
         scheme_set = {} 
@@ -390,34 +394,32 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                 commonality_attribute_sets, scheme_error = self.generate_commonality_attribute(paper_data, args.endtoend.model_type, col_num, source=args.endtoend.scheme_source)
                 scheme_valid = False if "text" in list(commonality_attribute_sets.keys()) else True
                 commonalities = list(commonality_attribute_sets.keys())
-                filtered_commonalities = self.filter_out(commonalities, "random", args.endtoend.num_commonality)
             else:
                 commonalities = format_to_json(self.find_similarity(paper_data, args.endtoend.model_type, source=args.endtoend.scheme_source, max=True))
-                filtered_commonalities = self.filter_out(commonalities, "random", args.endtoend.num_commonality)
         else:
-            filtered_commonalities = [gold_caption]
+            commonalities = [gold_caption]
 
         if scheme_valid:
             # make a table for each commonality
             scheme_set = {} 
-            for commonality in filtered_commonalities:
+            for commonality in commonalities:
                 if args.endtoend.attribute_gen_method == "single_call":
                     attributes = commonality_attribute_sets[commonality]
                 else:
                     attributes = format_to_json(self.find_attributes(paper_data, args.endtoend.model_type, commonality))
-                filtered_attributes = self.filter_out(attributes, "random", col_num)
-                scheme_set[commonality] = filtered_attributes
-                if column_list != None:     # when the value generation needs to be divided into multiple calls
+                scheme_set[commonality] = attributes
+                if max_length != None:     # when the value generation needs to be divided into multiple calls
                     start = 0
                     merged_table_set = []
+                    column_list = divide_column_num(len(attributes), len(paper_data), max_length)
                     for partial_column_num in column_list:
-                        partial_attributes = filtered_attributes[start:start+partial_column_num]
+                        partial_attributes = attributes[start:start+partial_column_num]
                         start += partial_column_num
                         tab = self.value_generation(paper_data, args.endtoend.model_type, commonality, partial_attributes, partial_column_num, id, tab_id, save_type, scheme_error, args.endtoend.value_source, args.endtoend.paper_loop)
                         merged_table_set.append(tab)
                     table = merge_tables(merged_table_set)
                 else:
-                    table = self.value_generation(paper_data, args.endtoend.model_type,commonality, filtered_attributes, col_num, id, tab_id, save_type, scheme_error, args.endtoend.value_source, args.endtoend.paper_loop)
+                    table = self.value_generation(paper_data, args.endtoend.model_type,commonality, attributes, len(attributes), id, tab_id, save_type, scheme_error, args.endtoend.value_source, args.endtoend.paper_loop)
                 table_set.append(table)
         else:
             print("Scheme generation failed")

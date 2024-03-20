@@ -1,7 +1,7 @@
 _id: "name-${.name}"
 name: "ours_outputs"
-prompt_path: "data/prompt_ver2.json"
-model_type: "mixtral"
+prompt_path: "data/prompt_ver3.json"
+model_type: "gpt4"
 max_length: 100
 num_commonality: 3
 attribute_gen_method: "single_call"

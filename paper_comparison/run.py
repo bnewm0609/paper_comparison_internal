@@ -64,50 +64,48 @@ def main(args: DictConfig) -> None:
     retry_num = 10
     # tables = load_outputs(args)
 
-    
+    if not os.path.exists(f"{args.results_path}/errors"):
+        os.makedirs(f"{args.results_path}/errors", exist_ok=True)
+    error_save_path = f"{args.results_path}/errors/{args.difficulty}_{args.endtoend.model_type}_{args.endtoend.name}_{args.retry_type}.json"
+    error_data = []
+    if args.handle_error and os.path.exists(error_save_path):
+        with open(error_save_path, "r") as f:
+            error_data = json.load(f)
+
     for index, paper in enumerate(data):
         tab_id = paper['y'].tabid
 
-        # Load the experiment settings if they exist
-        experiment_settings_path = f"{args.results_path}/{tab_id}/experiment_settings_{args.retry_type}.json"
-        experiment_settings = None
-        if not os.path.exists(experiment_settings_path):
-            os.makedirs(f"{args.results_path}/{tab_id}", exist_ok=True)  
-            
-        if os.path.exists(experiment_settings_path):
-            with open(experiment_settings_path, "r") as f:
-                experiment_settings = json.load(f)
-                
-        else:
-            # Create the experiment settings if they don't exist
-            experiment_settings = []
-            len_papers = len(paper['x'])
-            for retry_id in range(retry_num):
-                # shuffle paper index and save the shuffled index
-                indexed_list = list(range(len_papers))
-                random.shuffle(indexed_list)
-                experiment_settings.append({
-                    "id": retry_id,
-                    "indices": indexed_list if args.retry_type == "shuffle" else list(range(len_papers)),
-                    "temperature": 1.0 if args.retry_type == "shuffle" else 0.7
-                    # TODO: Change default temperature and shuffle temperature depending on experiment
-                })
-            with open(experiment_settings_path, "w") as f:
-                json.dump(experiment_settings, f)
-                
+        if args.handle_error and not any([d["tab_id"] == tab_id for d in error_data]):
+            continue
+
         # Use gold_caption if the difficulty is medium
         gold_caption = None
         if args.difficulty == "medium":
             gold_caption = paper['y'].caption
         
         # Save path for all experiments in this setting
-        save_path = f"{args.results_path}/{tab_id}/{args.difficulty}/{args.endtoend.name}/{args.retry_type}"
+        save_path = f"{args.results_path}/{tab_id}/{args.difficulty}/{args.endtoend.model_type}/{args.endtoend.name}/{args.retry_type}"
 
         # For each try/experiment, run the endtoend pipeline
-        for retry_id, setting in enumerate(experiment_settings):
-            paper['x'] = [paper['x'][i] for i in setting['indices']]
-            column_num = len(paper['y'].schema)
+        for r_id in range(retry_num):
+            if args.handle_error:
+                # find the index of the error in error_data
+                error_index = [i for i, d in enumerate(error_data) if d["tab_id"] == tab_id and d["r_id"] == r_id]
+                if len(error_index) == 0:
+                    continue
+                error_index = error_index[0]
+
+            indices = list(range(len(paper['x'])))
+            if args.retry_type == "shuffle":
+                random.Random(r_id).shuffle(indices)
+            paper['x'] = [paper['x'][i] for i in indices]
+            
             # TODO: Set temperature for each retry
+            if args.retry_type == "temperature":
+                pass
+
+            column_num = len(paper['y'].schema)
+
             table_set = endtoend(args=args, sample=paper, tab_id=tab_id, index=index, column_num=column_num, gold_caption=gold_caption)
             print("\nfinal_output", table_set)
 
@@ -120,14 +118,26 @@ def main(args: DictConfig) -> None:
             if not is_error:
                 if not os.path.exists(save_path):
                     os.makedirs(save_path, exist_ok=True)            
-                with open(f"{save_path}/try_{retry_id}.json", "w") as f:
+                with open(f"{save_path}/try_{r_id}.json", "w") as f:
                     json.dump(table_set, f)
-                print(f"Results saved to: {save_path}/try_{retry_id}.json\n")
+                print(f"Results saved to: {save_path}/try_{r_id}.json\n")
+
+                # Remove the error from the error file
+                if args.handle_error:
+                    error_data.pop(error_index)
+                    with open(error_save_path, "w") as f:
+                        json.dump(error_data, f)
             else:
-                pass
-                # TODO: handle error case
-                # handle_error_cases(args, table_set, tab_id, index, retry_id, save_path) 
-                
-    
+                print(f"Error in paper_idx_{index} try_{r_id}\n")
+                if args.handle_error:
+                    continue
+                error_data.append({
+                    "tab_id": tab_id,
+                    "r_id": r_id
+                })
+                with open(error_save_path, "w") as f:
+                    json.dump(error_data, f)
+
+
 if __name__ == "__main__":
     main()

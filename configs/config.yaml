@@ -2,11 +2,12 @@ defaults:
  - _self_
  - data: abstracts
  - eval: eval
- - endtoend: baseline_outputs
+ - endtoend: ours_outputs
 #  - attribute_gen_method: "single_call"
 #  - paper_loop: "multiple"
 retry_type: "shuffle"
 difficulty: "hard"
+handle_error: False
 debug: False
 wandb: False
 endtoend: null
