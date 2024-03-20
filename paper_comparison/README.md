@@ -2,9 +2,9 @@
 
 ## Baseline
 
-To run the baseline, first change the `endtoend` parameter in `configs/config.yaml` to `baseline_outputs`.
+Navigate to the `configs/config.yaml`. Here, you can choose between `endtoend` options by selecting either `ours_outputs` or `baseline_outputs`.
 
-Then, edit the `baseline_type` parameter in `configs/endtoend/baseline_outputs.yaml` to choose the types of baseline prompts that you want to run.
+If you wish to change the model type or the number of tables you wna to generate per try, you can do so by modifying the `model_type` and `num_commonality` parameter in either the `configs/endtoend/baseline_outputs.yaml` or `configs/endtoend/ours_outputs.yaml`. (Other hyperparameters are fixed in current experiment setup.)
 
 To run a baseline model on a single example:
 ```
