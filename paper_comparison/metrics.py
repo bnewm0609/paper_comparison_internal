@@ -6,8 +6,6 @@ from sacrebleu.metrics import BLEU
 from omegaconf import DictConfig
 
 from paper_comparison.types import Table
-from paper_comparison.metrics_utils import get_p_r_f1, get_similar_sentence, align_schema, decontextualize_table
-
 
 class BaseMetric:
     """Calculates and stores information for evaluation metrics.
@@ -21,13 +19,13 @@ class BaseMetric:
     name: str
     requires_metadata: bool
 
-    def __init__(self, args):
+    def __init__(self):
         """Initialize the metric.
 
         By default, per-example scores are stored in `self.scores` and `self.requires_metadata` is False
         """
 
-        self.scores = []
+        self.scores = {}
         self.requires_metadata = False
         self.reset()
 
@@ -66,8 +64,8 @@ class BaseMetric:
         scores (that likely have already been computed).
 
         Args:
-            predictions (Optional[list[str]]): list of model-generated strings.
-            targets (Optional[list[str]]): list of gold target strings. `predictions[i]` is the prediction for
+            predictions (Optional[list[Table]]): list of model-generated tables.
+            targets (Optional[list[Table]]): list of gold target tables. `predictions[i]` is the prediction for
                 `targets[i]`.
             metadata (Optional[list[Any]]): list of additional information if needed.
 
@@ -86,21 +84,7 @@ class BaseMetric:
 
     def reset(self) -> None:
         """Reset the accumulated scores."""
-        self.scores = []
-
-
-class AnswerCorrectnessMetric(BaseMetric):
-    def __init__(self, args):
-        super().__init__(args)
-
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        return super().add(prediction, target, metadata)
-
-    def process_scores(self) -> dict[str, Any]:
-        return super().process_scores()
-
-    def reset(self) -> None:
-        return super().reset()
+        self.scores = {}
 
 
 class SchemaRecallMetric(BaseMetric):
@@ -110,189 +94,200 @@ class SchemaRecallMetric(BaseMetric):
     Namely, the tables we produce might have many more columns than the gold
     tables. This metric computes how many of the columns in the predicted
     tables are also in the gold table as a proportion of the number of columns
-    in the gold table.
+    in the gold table. It allows multiple columns from the predicted table to
+    match a single column in the gold table.
 
-    This calculation requires aligning the columns in some way, and there are
-    a few ways this can be done:
-        1. Using just the schema (ie column headers)
-        2. Using the values in the table
-
-    I think the best would be to first decontextualize the table and align, but
-    we should try implementing a few different methods.
+    This calculation requires featurizing and aligning the columns in some way.
+    metrics_utils contains three featurizers (column names, names+values, decontextualization)
+    and four alignment methods (exact match, jaccard similarity, edit distance, embedding similarity).
+    Pass appropriate featurizers and alignment methods when initializing the metric.
     """
 
     def __init__(
         self,
-        args,
-        should_decontext: bool = True,
+        featurizer,
+        alignment_scorer,
         sim_threshold=0.4,
-        align_method_name: str = "sentence-transformers",
-        **align_method_config,
     ):
-        """
-        sim_method [str]: indicates what method to sue to align the columns
-        """
-        super().__init__(args)
-        self.should_decontext = should_decontext
+        super().__init__()
+        self.requires_metadata = True
+        self.featurizer = featurizer
+        self.alignment_scorer = alignment_scorer
         self.sim_threshold = sim_threshold
-        self.align_method_name = align_method_name
-        if not align_method_config:
-            self.align_method_config = {}
-        else:
-            self.align_method_config = align_method_config
+        # Initialize some variables to maintain track of metrics computed so far
+        self.scores["recall"] = {}
+        self.scores["alignment_scores"] = {}
+        self.scores["alignments"] = {}
 
     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        # optionally decontextualize the target
-        if self.should_decontext:
-            target = decontextualize_table(target, metadata)
-
-        # align the columns of the prediction and the target tables
-        schema_alignments, alignment_scores = align_schema(
-            target.values,
-            prediction.values,
-            self.align_method_name,
-            self.sim_threshold,
-            **self.align_method_config,
+        # compute alignment matrix between the prediction and target tables
+        alignment_matrix = self.alignment_scorer.score_schema_alignments(
+            prediction, 
+            target, 
+            featurizer=self.featurizer
         )
 
-        false_negs = [gold_col for (gold_col, _), pred_cols in schema_alignments.items() if not pred_cols]
-        true_pos = [gold_col for gold_col, _ in schema_alignments if gold_col not in false_negs]
+        # choose an aligment from the alignment matrix using similarity threshold
+        alignment = {k:v for k,v in alignment_matrix.items() if v >= self.sim_threshold}
+
+        # compute how many gold columns have been matched
+        matched_gold_col_num = len(set([col_pair[0] for col_pair in alignment]))
+        total_gold_col_num = len(target.schema)
 
         # next calculate the recall between the aligned columns
-        if len(schema_alignments) == 0:
-            recall = 0
+        if matched_gold_col_num == 0:
+            recall = 0.0
         else:
-            recall = len(true_pos) / (len(schema_alignments))
+            recall = float(matched_gold_col_num) / total_gold_col_num
 
-        self.scores["recalls"].append(recall)
-        self.scores["alignment_scores"].append(alignment_scores.tolist())
-        self.scores["alignments"].append({k1: vals for (k1, _), vals in schema_alignments.items()})
+        # store recall score, alignment matrix and final alignments
+        # TODO: Maybe some of these variables can be dropped?
+        if not target.tabid in self.scores["recall"]:
+            self.scores["recall"][target.tabid] = []
+            self.scores["alignment_scores"][target.tabid] = []
+            self.scores["alignments"][target.tabid] = []
+
+        self.scores["recall"][target.tabid].append(recall)
+        self.scores["alignment_scores"][target.tabid].append(alignment_matrix)
+        self.scores["alignments"][target.tabid].append(alignment)
 
     def reset(self) -> None:
         self.scores = {
-            "recalls": [],
-            "alignment_scores": [],
-            "alignments": [],
+            "recall": {},
+            "alignment_scores": {},
+            "alignments": {},
         }
 
     def process_scores(self) -> dict[str, Any]:
         return {
             repr(self): {
-                "recall": np.mean(self.scores["recalls"]),
-                "recalls": self.scores["recalls"],
-                "alignments": self.scores["alignments"],
-                "alignment_scores": self.scores["alignment_scores"],
+                "recall": np.mean([max(recall_list) for tab_id, recall_list in self.scores["recall"].items()]),
+                # "recalls": self.scores["recalls"],
+                # "alignments": self.scores["alignments"],
+                # "alignment_scores": self.scores["alignment_scores"],
             }
         }
 
     def __repr__(self) -> str:
         args = [
-            f"should_decontext={self.should_decontext}",
+            f"featurizer={self.featurizer.name}",
+            f"alignment_scorer={self.alignment_scorer.name}",
             f"sim_threshold={self.sim_threshold}",
-            f"align_method_name={self.align_method_name}",
         ]
-        for k, v in self.align_method_config.items():
-            args.append(f"{k}={v}")
         return f"SchemaRecallMetric({', '.join(args)})"
+    
+
+# TODO: Add this back if we want to report more than one metric later
+# class Evaluator:
+#     def __init__(self, metrics: list[BaseMetric]):
+#         self.metrics = metrics
+
+#     def __call__(self, args, tables: list[Table], data) -> dict:
+#         for i in range(len(tables)):
+#             for metric in self.metrics:
+#                 target = data[i][data.y_label]
+#                 metric.add(tables[i], target)
+
+#         all_scores: dict = {}
+#         for metric in self.metrics:
+#             all_scores |= metric.process_scores()
+#         return all_scores
 
 
-class SchemaDiversityMetric(BaseMetric):
-    """Fix a number of schema and see how much repetition there is. This does not need a target.
-
-    Some ways to do this:
-    - Self-bleu
-    - Cluster the schema by similarity using some kind of unsupervised clustering thing?
-    """
-
-    def __init__(self, args):
-        super().__init__(args)
-        self.reset()
-
-        # Enbale effective_order for sentence-level BLEU
-        self.bleu = BLEU(effective_order=True)
-
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        # 1. Calculate Self-BLEU
-        pred_schemata = list(prediction.schema)
-
-        scores = []
-        for i in range(len(pred_schemata)):
-            scores.append(
-                self.bleu.sentence_score(pred_schemata[i], pred_schemata[:i] + pred_schemata[i + 1 :]).score
-            )
-
-        self.scores["self-bleu"].append(np.mean(scores))
-
-    def process_scores(self) -> dict[str, Any]:
-        return {"diversity": {"self-bleu": np.mean(self.scores["self-bleu"])}}
-
-    def reset(self) -> None:
-        self.scores = {
-            "self-bleu": [],
-        }
+# METRIC_MAP = {
+#     "diversity": SchemaDiversityMetric,
+#     "schema_recall": SchemaRecallMetric,
+# }
 
 
-class ValueRecallMetric(BaseMetric):
-    def __init__(self, args):
-        super().__init__(args)
+# def load_metrics(args: DictConfig):
+#     metrics: list[BaseMetric] = []
 
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        return super().add(prediction, target, metadata)
+#     for metric_param in args.eval.metrics:
+#         if isinstance(metric_param, DictConfig):
+#             metric_name = metric_param["name"]
+#             metric_param_dict = {k: v for k, v in metric_param.items() if k != "name"}
+#         else:
+#             metric_name = metric_param
+#             metric_param_dict = {}
 
-    def process_scores(self) -> dict[str, Any]:
-        return super().process_scores()
+#         metrics.append(METRIC_MAP[metric_name](args=args, **metric_param_dict))
 
-    def reset(self) -> None:
-        return super().reset()
+#     return Evaluator(metrics)
+    
+# TODO: Do we want to keep some format of the diversity metric around?
+# class SchemaDiversityMetric(BaseMetric):
+#     """Fix a number of schema and see how much repetition there is. This does not need a target.
 
+#     Some ways to do this:
+#     - Self-bleu
+#     - Cluster the schema by similarity using some kind of unsupervised clustering thing?
+#     """
 
-class GPT4Preference(BaseMetric):
-    def __init__(self, args):
-        super().__init__(args)
+#     def __init__(self, args):
+#         super().__init__(args)
+#         self.reset()
 
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
-        return super().add(prediction, target, metadata)
+#         # Enbale effective_order for sentence-level BLEU
+#         self.bleu = BLEU(effective_order=True)
 
-    def process_scores(self) -> dict[str, Any]:
-        return super().process_scores()
+#     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+#         # 1. Calculate Self-BLEU
+#         pred_schemata = list(prediction.schema)
 
-    def reset(self) -> None:
-        return super().reset()
+#         scores = []
+#         for i in range(len(pred_schemata)):
+#             scores.append(
+#                 self.bleu.sentence_score(pred_schemata[i], pred_schemata[:i] + pred_schemata[i + 1 :]).score
+#             )
 
+#         self.scores["self-bleu"].append(np.mean(scores))
 
-class Evaluator:
-    def __init__(self, metrics: list[BaseMetric]):
-        self.metrics = metrics
+#     def process_scores(self) -> dict[str, Any]:
+#         return {"diversity": {"self-bleu": np.mean(self.scores["self-bleu"])}}
 
-    def __call__(self, args, tables: list[Table], data) -> dict:
-        for i in range(len(tables)):
-            for metric in self.metrics:
-                target = data[i][data.y_label]
-                metric.add(tables[i], target)
-
-        all_scores: dict = {}
-        for metric in self.metrics:
-            all_scores |= metric.process_scores()
-        return all_scores
-
-
-METRIC_MAP = {
-    "diversity": SchemaDiversityMetric,
-    "schema_recall": SchemaRecallMetric,
-}
+#     def reset(self) -> None:
+#         self.scores = {
+#             "self-bleu": [],
+#         }
 
 
-def load_metrics(args: DictConfig):
-    metrics: list[BaseMetric] = []
+# ---------- TO BE POTENTIALLY DELETED AFTER FINALIZING CODE REFACTOR -----------
+# class AnswerCorrectnessMetric(BaseMetric):
+#     def __init__(self, args):
+#         super().__init__(args)
 
-    for metric_param in args.eval.metrics:
-        if isinstance(metric_param, DictConfig):
-            metric_name = metric_param["name"]
-            metric_param_dict = {k: v for k, v in metric_param.items() if k != "name"}
-        else:
-            metric_name = metric_param
-            metric_param_dict = {}
+#     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+#         return super().add(prediction, target, metadata)
 
-        metrics.append(METRIC_MAP[metric_name](args=args, **metric_param_dict))
+#     def process_scores(self) -> dict[str, Any]:
+#         return super().process_scores()
 
-    return Evaluator(metrics)
+#     def reset(self) -> None:
+#         return super().reset()
+
+# class ValueRecallMetric(BaseMetric):
+#     def __init__(self, args):
+#         super().__init__(args)
+
+#     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+#         return super().add(prediction, target, metadata)
+
+#     def process_scores(self) -> dict[str, Any]:
+#         return super().process_scores()
+
+#     def reset(self) -> None:
+#         return super().reset()
+
+# class GPT4Preference(BaseMetric):
+#     def __init__(self, args):
+#         super().__init__(args)
+
+#     def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+#         return super().add(prediction, target, metadata)
+
+#     def process_scores(self) -> dict[str, Any]:
+#         return super().process_scores()
+
+#     def reset(self) -> None:
+#         return super().reset()
