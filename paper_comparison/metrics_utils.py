@@ -20,6 +20,7 @@ ps = PorterStemmer()
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 pd.set_option('display.max_colwidth', None)
+pd.set_option('display.max_columns', None)
 
 class BaseFeaturizer:
     """Given a list of columns, create featurized strings for every column, for better matching/alignment.
@@ -137,11 +138,11 @@ class DecontextFeaturizer(BaseFeaturizer):
         """
         decontext_prompts = []
         for column in column_names:
-            cur_table = table[[column]]
+            # cur_table = table[[column]]
             instruction = f"""\
                 In the context of the following table from a scientific paper, what does {column} refer to? Answer in a single sentence. If the answer is not clear just write 'unanswerable'.
                 Table:
-                {str(cur_table)}\
+                {table.to_markdown()}\
             """
             decontext_prompts.append(instruction)
         return decontext_prompts
