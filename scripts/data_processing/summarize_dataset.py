@@ -5,17 +5,49 @@ import json
 import numpy as np
 
 
-def print_summary(datas, names, sep="\t"):
+def print_summary(datas, names, sep=" "):
+    # form the table
+    headers = ["", "Min", "Max", "Median", "Mean", "Total"]
+    out_table = np.empty((len(names) + 1, len(headers)), dtype=object)
+    for i in range(len(headers)):
+        out_table[0][i] = headers[i]
+    for data_i, data in enumerate(datas):
+        out_table[1 + data_i][0] = names[data_i]
+        out_table[1 + data_i][1] = str(np.min(data))
+        out_table[1 + data_i][2] = str(np.max(data))
+        out_table[1 + data_i][3] = str(np.median(data))
+        out_table[1 + data_i][4] = f"{np.mean(data):.3f}"
+        out_table[1 + data_i][5] = str(sum(data))
+
+    # next, format out_table by column
+    for i in range(len(headers)):
+        max_col_width = max([len(cell) for cell in out_table[:, i]])
+        padding_str = "{" + f": >{max_col_width}" + "}"
+        for j in range(len(names) + 1):
+            out_table[j, i] = padding_str.format(out_table[j, i])
+
+    for row in out_table:
+        print(*row, sep=sep)
+    return
+    # print(out_table)
+    # return
+    for data, name in zip(datas, names):
+        pass
+
     max_name_len = max([len(name) for name in names])
     padding_str = "{" + f": >{max_name_len}" + "}"
-    print(padding_str.format(""), "Min", "Max", "Median", "Mean", sep=sep)
+    headers = [padding_str.format(""), "Min", "Max", "Median", "Mean", "Total"]
+    # max_header_size = max([len(header) for header in headers])
+    header_padding_strs = ["{" + f": >{len(header)}" + "}" for header in headers[1:]]
+    print(*headers, sep=sep)
     for data, name in zip(datas, names):
         print(
             padding_str.format(name),
-            np.min(data),
-            np.max(data),
-            np.median(data),
-            f"{np.mean(data):.3f}",
+            header_padding_strs[0].format(np.min(data)),
+            header_padding_strs[1].format(np.max(data)),
+            header_padding_strs[2].format(np.median(data)),
+            header_padding_strs[3].format(f"{np.mean(data):.3f}"),
+            header_padding_strs[4].format(sum(data)),
             sep=sep,
         )
 
@@ -90,8 +122,10 @@ def main():
     with open(args.dataset_path) as f:
         dataset = [json.loads(line) for line in f]
 
-    # 1. compute number of rows, columns, and unique rows for the dataset
-    separator = " & " if args.latex else "\t"
+    # 0. Print size of dataset
+    print(f"Number of instances: {len(dataset)}\n")
+    # 1. Compute number of rows, columns, and unique rows for the dataset
+    separator = " & " if args.latex else "  "
     print_summary(
         [
             [len(tab["table_json"]["table_dict"]["References"]) for tab in dataset],
@@ -103,7 +137,20 @@ def main():
     )
     print()
 
-    # 2. Compute the distribution of aspect types
+    # 2. Compute how many unique papers are considered by the tables using corpus ids
+    unique_corpus_ids = set()
+    missing_corpus_ids = 0
+    for table in dataset:
+        for row in table["row_bib_map"]:
+            if row["corpus_id"] == -1:
+                missing_corpus_ids += 1
+                continue
+            unique_corpus_ids.add(row["corpus_id"])
+    print(f"Number of unique corpus ids among all tables: {len(unique_corpus_ids)}")
+    print(f"Number of papers missing corpus ids: {missing_corpus_ids}")
+    print()
+
+    # 3. Compute the distribution of aspect types
     table_aspect_labels = {}
     all_aspect_labels = []
     for table_i, table in enumerate(dataset):
