@@ -18,17 +18,18 @@ def format_table(table_question):
                 table[value["question"]][k] = [v]
     return table
 
-def validate_table(table, paper_list):
+def validate_table(table, paper_list, column_num):
     if isinstance(table, str): 
-        # if there is [JSON] once in the table
-        if table.count("[JSON]") == 1:  # length issue - generate once more
+        if table.strip()[-1] != "}":
             # print(table)
             return False, "length_error"
         else:
             # print(table)
             return False, "json_error"
-    elif isinstance(table, dict) and len(paper_list) == len(list(table.values())[0]):
+    elif isinstance(table, dict) and len(paper_list) == len(list(table.values())[0]) and len(list(table.keys())) >= column_num:
         return True, ""
+    elif isinstance(table, dict) and len(paper_list) != len(list(table.values())[0]) and len(list(table.keys())) < column_num:
+        return False, "column_num_error"
     else:
         # print(table)
         return False, "paper_num_error"
@@ -62,7 +63,7 @@ def str_to_json(text, parse_str):
                 #     return json.loads(json_str)
                 # except:
                 #     continue
-        print('Failed to parse with the given parse_str')
+        print('\t\tFailed to parse with the given parse_str')
         return text
 
 def fix_json_str(json_str):
@@ -80,7 +81,8 @@ def fix_json_str(json_str):
                 {'role': 'assistant', 'content': template["system_instruction"]},
                 {'role': 'user', 'content': tmp_prompt}
             ],
-            'model': 'gpt-4-1106-preview',
+            # 'model': 'gpt-4-1106-preview',
+            'model': 'gpt-3.5-turbo-1106',
             'max_tokens': 4000,
             'temperature': 0.3
         }
@@ -97,7 +99,7 @@ def fix_json_str(json_str):
     except requests.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
     except Exception as err:
-        print(f"Other error occurred: {err}")        
+        print(f"Other error occurred: {err}")   
 
 def format_to_json(text):
     if text.find('[') != -1 and (text.find('{') == -1 or text.find('{') > text.find('[')):
@@ -152,32 +154,81 @@ def divide_column_num(column_num, paper_num, max_length):
     column_list = [base + 1 if i < remainder else base for i in range(division)]
     return column_list
 
-def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:    
-    merged_table = {"id": tables[0]["id"], "tabid": tables[0]["tabid"], "caption": tables[0]["caption"], 
-                    "schema": [], "table": {}, "gold_col":0, "predicted_col_num":0, "error_num": 0, }
+def baseline_create_json_format_template(template, column_num, paper_list, paper_text, gold_caption=None):
+    json_format = {}
+    paper_num = len(paper_list)
+    for i in range(column_num):
+        json_format[f"<dimension {i+1} that can compare papers>"] = {}
+        for p_idx in range(len(paper_list)):
+            json_format[f"<dimension {i+1} that can compare papers>"][f"paper_{p_idx+1}"] = [f"<relevant value to the dimension {i+1} grounded on Paper {p_idx+1}>"]
+    json_format = json.dumps(json_format, indent=2)
+
+    if type(gold_caption) == str:
+        tmp_prompt = template.format(
+            col_num=column_num, 
+            paper_num=paper_num,
+            input_info=paper_text, 
+            caption=gold_caption,
+            json_format=json_format
+        )
+    else:
+        tmp_prompt = template.format(
+            col_num=column_num,
+            paper_num=paper_num,
+            input_info=paper_text,
+            json_format=json_format
+        )
+    return tmp_prompt
+
+def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
+    # {"id": int(index), "tabid": str(tab_id), "text": table, "error_type": error_type, "error_num": error_num}
+    is_error = any(["text" in table for table in tables])
+    if not is_error:
+        merged_table = {
+            "id": tables[0]["id"], 
+            "tabid": tables[0]["tabid"], 
+            "caption": tables[0]["caption"], 
+            "schema": [], 
+            "table": {}, 
+            "gold_col": 0, 
+            "predicted_col_num": 0, 
+            "error_counts": {}
+        }
+    # check if there is a text key in any of the tables
+    else:
+        merged_table = {
+            "id": tables[0]["id"], 
+            "tabid": tables[0]["tabid"], 
+            "text": tables[0]["text"], 
+            "error_counts": {}
+        }
+
     for table in tables:
-        if "text" in list(table.keys()):
-            merged_table = {"id": table["id"], "tabid": table["tabid"], "text": table["text"], 
-                            "error_type": table["error_type"], "error_num": merged_table["error_num"] + table["error_num"]} 
-        else:
+        if not is_error:
             merged_table["schema"].extend(table["schema"])
             merged_table["table"].update(table["table"])
             merged_table["gold_col"] += table["gold_col"]
             merged_table["predicted_col_num"] += table["predicted_col_num"]
-            merged_table["error_num"] += table["error_num"]
             merged_table["type"] = table["type"]
+
+        for key, value in table["error_counts"].items():
+            if key in merged_table["error_counts"]:
+                merged_table["error_counts"][key] += value
+            else:
+                merged_table["error_counts"][key] = value
+
     return merged_table
             
 def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
     explanation = ""
-    if model_type == "gpt4":
+    if model_type == "gpt4" or model_type == "gpt3.5":
         api_key = os.environ['OPENAI_KEY']
         url = 'https://api.openai.com/v1/chat/completions'
         headers = {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer {}'.format(api_key)
         }
-        model = 'gpt-4-1106-preview'    
+        model = 'gpt-4-1106-preview' if model_type == "gpt4" else 'gpt-3.5-turbo-1106'
     elif model_type == "mixtral":
         api_key = os.environ['TOGETHER_API_KEY']
         url = 'https://api.together.xyz'
@@ -215,7 +266,7 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
             temperature = 1
             max_tokens = 4000
         
-        if model_type == "gpt4":   
+        if model_type == "gpt4" or model_type == "gpt3.5":
             data = {
                 'messages': prompt,
                 'model': model,
