@@ -8,8 +8,7 @@ import random
 from omegaconf import DictConfig
 
 from paper_comparison.types.table import Table
-from paper_comparison.generation import load_json_file, generate, divide_column_num, make_paper_list_input, format_to_json, merge_tables, validate_table
-openai.api_key = 'OPENAI_API_KEY'
+from paper_comparison.generation import load_json_file, generate, divide_column_num, make_paper_list_input, format_to_json, merge_tables, validate_table, baseline_create_json_format_template
 
 class BaseEndToEnd:
     def __init__(self, args: DictConfig):        
@@ -31,11 +30,7 @@ class BaselineEndToEnd:
                     baseline_table = self.baseline_tab_gen(sample["x"], args.endtoend.model_type, index, tab_id, column_num, gold_caption, source="abstract")
                 else:
                     print("The number of columns and papers is large")
-                    division = (column_num * len(sample["x"])) // args.endtoend.max_length + 1
-                    base = column_num // division
-                    remainder = column_num % division
-                    column_list = [base + 1 if i < remainder else base for i in range(division)]
-                    print(column_list)
+                    column_list = divide_column_num(column_num, len(sample["x"]), args.endtoend.max_length)
                     baseline_table_set = []
                     for partial_column_num in column_list:
                         partial_table = self.baseline_tab_gen(sample["x"], args.endtoend.model_type, index, tab_id, partial_column_num, gold_caption, source="abstract")
@@ -63,64 +58,90 @@ class BaselineEndToEnd:
         # when column_num * paper_num is less than 120, generate one table
         # when column_num * paper_num is more than 120, give half column number and generate two tables
         paper_text = ""
-        error_num = 0
+        
+        # set up error counts
+        error_counts = {
+            "length_error": 0,
+            "json_error": 0,
+            "paper_num_error": 0,
+            "column_num_error": 0
+        }
+        
+        # make a paper text that will be inputted to the prompt
         for p_idx, paper in enumerate(paper_list):
             paper_text = make_paper_list_input(paper_text, p_idx, paper, source, "multiple")
         paper_text = f"[Start of the Paper Content]\n{paper_text}[End of the Paper Content]"
 
-        paper_num = len(paper_list)
-
         # Create JSON foramt template
-        json_format = {}
-        for i in range(column_num):
-            json_format[f"<dimension {i+1} that can compare papers>"] = {}
-            for p_idx in range(len(paper_list)):
-                json_format[f"<dimension {i+1} that can compare papers>"][f"paper_{p_idx+1}"] = [f"<relevant value to the dimension {i+1} grounded on Paper {p_idx+1}>"]
-        json_format = json.dumps(json_format, indent=2)
-
         if type(gold_caption) == str:
-            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_medium"].format(
-                col_num=column_num, 
-                paper_num=paper_num,
-                input_info=paper_text, 
-                caption=gold_caption,
-                json_format=json_format
-            )
+            tmp_prompt = baseline_create_json_format_template(self.template["baseline_paper_to_table"]["prompt_medium"],
+                                                 column_num, paper_list, paper_text, gold_caption)
         else:
-            tmp_prompt = self.template["baseline_paper_to_table"]["prompt_simple"].format(
-                col_num=column_num,
-                paper_num=paper_num,
-                input_info=paper_text,
-                json_format=json_format
-            )
+            tmp_prompt = baseline_create_json_format_template(self.template["baseline_paper_to_table"]["prompt_simple"],
+                                                 column_num, paper_list, paper_text)
+        # json_format = {}
+        # for i in range(column_num):
+        #     json_format[f"<dimension {i+1} that can compare papers>"] = {}
+        #     for p_idx in range(len(paper_list)):
+        #         json_format[f"<dimension {i+1} that can compare papers>"][f"paper_{p_idx+1}"] = [f"<relevant value to the dimension {i+1} grounded on Paper {p_idx+1}>"]
+        # json_format = json.dumps(json_format, indent=2)
+
+        # if type(gold_caption) == str:
+        #     tmp_prompt = self.template["baseline_paper_to_table"]["prompt_medium"].format(
+        #         col_num=column_num, 
+        #         paper_num=paper_num,
+        #         input_info=paper_text, 
+        #         caption=gold_caption,
+        #         json_format=json_format
+        #     )
+        # else:
+        #     tmp_prompt = self.template["baseline_paper_to_table"]["prompt_simple"].format(
+        #         col_num=column_num,
+        #         paper_num=paper_num,
+        #         input_info=paper_text,
+        #         json_format=json_format
+        #     )
         # print(tmp_prompt)
             
         max_try = 5
+        merged_table_list = []
         for i in range(max_try):
-            table = generate(tmp_prompt, model, "generation", "json", self.template["baseline_paper_to_table"])     
-            is_valid, error_type = validate_table(table, paper_list)
+            print(i, merged_table_list)
+            tmp_prompt = baseline_create_json_format_template(self.template["baseline_paper_to_table"]["prompt_simple"],
+                                                 column_num, paper_list, paper_text)
+            table = generate(tmp_prompt, model, "generation", "json", self.template["baseline_paper_to_table"])  
+               
+            is_valid, error_type = validate_table(table, paper_list, column_num)
             if is_valid:
-                baseline_table = {
-                    "id": int(index), 
-                    "tabid": str(tab_id), 
-                    "schema": list(table.keys()), 
-                    "table": table,
-                    "gold_col": column_num, 
-                    "predicted_col_num":len(list(table.keys())), 
-                    "type": "single_call", 
-                    "caption": "N/A", 
-                    "error_num": error_num
-                }
+                merged_table_list.append(table)
+                if len(merged_table_list) > 1:
+                    baseline_table = merge_tables(merged_table_list)    
+                else: 
+                    baseline_table = {
+                        "id": int(index), 
+                        "tabid": str(tab_id), 
+                        "schema": list(table.keys()), 
+                        "table": table,
+                        "gold_col": column_num, 
+                        "predicted_col_num":len(list(table.keys())), 
+                        "type": "single_call", 
+                        "caption": "N/A", 
+                        "error_counts": error_counts
+                    }
                 break
+            elif error_type == "column_num_error":  # generate another table with the remaining number of columns (new_column_num = column_num - len(table.keys()))
+                merged_table_list.append(table)
+                column_num = column_num - len(table.keys())
+                error_counts[error_type] += 1
+            
             else:
-                error_num += 1
-                print(f"Error: {error_type}. Num: {error_num}")
+                error_counts[error_type] += 1
+                print(f"\t\t{tab_id} - Table Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
                 baseline_table = {
                     "id": int(index), 
                     "tabid": str(tab_id), 
                     "text": table, 
-                    "error_type": error_type,
-                    "error_num": error_num
+                    "error_counts": error_counts
                 }
         return baseline_table
         
@@ -245,10 +266,6 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         if column_num * len(sample["x"]) < args.endtoend.max_length:
             tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, gold_caption)
         else:
-            # division = (column_num * len(sample["x"])) // args.endtoend.max_length + 1
-            # base = column_num // division
-            # remainder = column_num % division
-            # column_list = [base + 1 if i < remainder else base for i in range(division)]
             tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, args.endtoend.max_length, gold_caption)  
         return tables
     
@@ -269,7 +286,7 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
             return True, ""
         elif isinstance(scheme, str): 
             # if there is [JSON] once in the table
-            if scheme.count("[JSON]") == 1:  # length issue - generate once more
+            if scheme.strip()[-1] != "}": # length issue - generate once more
                 return False, "scheme_length_error"
             else:
                 print(scheme)
@@ -279,7 +296,11 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
             return False, "scheme_unknown_error"
         
     def generate_commonality_attribute(self, paper_list: List[Dict[str, Any]], model:str, num_column: int, source: str = "abstract") -> Dict[str, Any]:
-        error_num = 0
+        error_counts = {
+            "scheme_length_error": 0,
+            "scheme_json_error": 0,
+            "scheme_unknown_error": 0,
+        }
         paper_text = ""
         for p_idx, paper in enumerate(paper_list):
             paper_text = make_paper_list_input(paper_text, p_idx, paper, source, "multiple")
@@ -294,10 +315,10 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                 scheme = res
                 break
             else:
-                error_num += 1
-                print(f"Error: {error_type}. Num: {error_num}")
-                scheme = {"text": res, "error_type": error_type, "error_num": error_num}
-        return scheme, error_num
+                error_counts[error_type] += 1
+                print(f"\t\tScheme Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
+                scheme = {"text": res, "error_type": error_type, "error_counts": error_counts}
+        return scheme, error_counts
 
     def find_attributes(self, paper_list: List[Dict[str, Any]], model:str, research_topic: str) -> str:
         paper_text = ""
@@ -312,13 +333,20 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         self, paper_list: List[Dict[str, Any]], model: str, 
         similarity: str, attributes: List[str], attribute_num: int, 
         id: int, tab_id: str, save_type: str, 
-        scheme_error: int, source: str = "abstract", paper_loop: str = "multiple"
+        scheme_error_counts: Dict[str, Any]={}, source: str = "abstract", paper_loop: str = "multiple"
     ) -> Dict[str, Any]:
         prompt_type = "value_generation_qa"    # value_generation_qa or value_generation
         temp_template = "[Start of the Paper Content]\n{paper}[End of the Paper Content]\n\n[Start of Table Caption]\n{similarity}\n[End of Table Caption]\n\n[Start of Table Columns]\n{columns}\n[End of Table Columns]\n\n"
         col_names = '\n'.join([f'Column name {index+1}: {att}' for index, att in enumerate(attributes)])
         paper_text = ""
-        error_num = 0
+        error_counts = {
+            "length_error": 0,
+            "json_error": 0,
+            "paper_num_error": 0,
+            "column_num_error": 0
+        }
+        for key, value in scheme_error_counts.items():
+            error_counts[key] = value
         if paper_loop == "single":
             table = {att: {} for att in attributes[:attribute_num]}
             for index, paper in enumerate(paper_list):
@@ -346,7 +374,7 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
             max_try = 5
             for i in range(max_try):
                 table = generate(combined_prompt, model, "generation", "json", self.template[prompt_type])
-                is_valid, error_type = validate_table(table, paper_list)
+                is_valid, error_type = validate_table(table, paper_list, attribute_num)
                 if is_valid:
                     our_table = {
                         "id": int(id), 
@@ -354,32 +382,37 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                         "schema": list(table.keys()), 
                         "table": table, 
                         "caption": similarity, 
+                        "gold_col": attribute_num,
+                        "predicted_col_num": len(list(table.keys())),
                         "type": save_type, 
-                        "error_num": scheme_error+error_num
+                        "error_counts": error_counts
                     }
                     break
                 else:
-                    error_num += 1
-                    print(f"Value Error: {error_type}. Num: {error_num}")
+                    error_counts[error_type] += 1
+                    print(f"\t\t{tab_id} - Table Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
                     our_table = {
                         "id": int(id), 
                         "tabid": str(tab_id),
                         "text": table, 
-                        "error_type": error_type, 
-                        "error_num": scheme_error+error_num
+                        "error_counts": error_counts
                     }
             return our_table
         
-    def filter_out(self, elements: List[Any], method: str, threshold: int = 10) -> List[Any]:
-        if len(elements) < threshold:
-            return elements
+    def filter_out(self, commonality_attribute_sets: Dict, method: str, num_commonalities: Optional[int] = 1) -> List[Any]:
+        commonalities = list(commonality_attribute_sets.keys())
+        if len(commonalities) < num_commonalities:
+            return commonalities
         else:
             if method == "random":
-                return elements[:threshold]
-            elif method == "similarity":   # need revision: identify elements that are different from each other
-                return elements[:threshold]
-            # else:  # need revision: identify elements that encompass the most information (verification num)
-            #     return []
+                # random sampling one of the commonalities
+                return random.sample(commonalities, num_commonalities)
+                
+            elif method == "best":   # need revision: identify elements that are different from each other
+                # based on the information of the papers, commonalities, and attributes, return the best commonality index
+                # idx = generate_best_commonality(commonality_attribute_sets)
+                # commonalities = commonalities[idx]
+                return []
         
     def table_prediction(
         self, args, tab_id, 
@@ -391,9 +424,10 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         save_type = "{}_{}_{}_{}".format(args.endtoend.model_type, args.endtoend.num_commonality, args.endtoend.attribute_gen_method, args.endtoend.paper_loop)
         if type(gold_caption) != str:   # difficulty: hard
             if args.endtoend.attribute_gen_method == "single_call":  # our current method
-                commonality_attribute_sets, scheme_error = self.generate_commonality_attribute(paper_data, args.endtoend.model_type, col_num, source=args.endtoend.scheme_source)
+                commonality_attribute_sets, scheme_error_counts = self.generate_commonality_attribute(paper_data, args.endtoend.model_type, col_num, source=args.endtoend.scheme_source)
                 scheme_valid = False if "text" in list(commonality_attribute_sets.keys()) else True
                 commonalities = list(commonality_attribute_sets.keys())
+                commonalities = self.filter_out(commonality_attribute_sets, "random", num_commonalities=1)
             else:
                 commonalities = format_to_json(self.find_similarity(paper_data, args.endtoend.model_type, source=args.endtoend.scheme_source, max=True))
         else:
@@ -415,11 +449,23 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                     for partial_column_num in column_list:
                         partial_attributes = attributes[start:start+partial_column_num]
                         start += partial_column_num
-                        tab = self.value_generation(paper_data, args.endtoend.model_type, commonality, partial_attributes, partial_column_num, id, tab_id, save_type, scheme_error, args.endtoend.value_source, args.endtoend.paper_loop)
+                        tab = self.value_generation(
+                            paper_data, args.endtoend.model_type, 
+                            commonality, partial_attributes, partial_column_num, 
+                            id, tab_id, save_type, scheme_error_counts,
+                            args.endtoend.value_source, args.endtoend.paper_loop
+                        )
                         merged_table_set.append(tab)
+                        if "text" in tab:
+                            break
                     table = merge_tables(merged_table_set)
                 else:
-                    table = self.value_generation(paper_data, args.endtoend.model_type,commonality, attributes, len(attributes), id, tab_id, save_type, scheme_error, args.endtoend.value_source, args.endtoend.paper_loop)
+                    table = self.value_generation(
+                        paper_data, args.endtoend.model_type, 
+                        commonality, attributes, len(attributes), 
+                        id, tab_id, save_type, scheme_error_counts,
+                        args.endtoend.value_source, args.endtoend.paper_loop
+                    )
                 table_set.append(table)
         else:
             print("Scheme generation failed")
