@@ -13,9 +13,19 @@ from sentence_transformers import SentenceTransformer, util
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
+import os
+import time
+from openai import OpenAI
+
 stopwords = stopwords.words("english")
 punctuation = "()[]{},.?!/''\"``"
 ps = PorterStemmer()
+
+# Moving to Together AI API to query mistral for decontextualization
+TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY")
+
+
+
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -71,7 +81,13 @@ class ValueFeaturizer(BaseFeaturizer):
         """
         featurized_columns = []
         for column in column_names:
-            column_values = ', '.join([x[0] for x in list(table.values[column].values())])
+            value_list = []
+            for value in list(table.values[column].values()):
+                if isinstance(value, list):
+                    value_list += [str(x) for x in value]
+                else:
+                    value_list.append(str(value))
+            column_values = ', '.join(value_list)
             featurized_columns.append(f"Column named {column} has values: {column_values}")
         return featurized_columns
 
@@ -91,20 +107,24 @@ class DecontextFeaturizer(BaseFeaturizer):
         self.load_model_and_tokenizer(model)
     
     def load_model_and_tokenizer(self, model_name: str):
-        """Given a model name, load corresponding tokenizer and model.
+        """Given a model name, start a together client to query that model.
 
          Args:
-            model_name (str): Name of model/tokenizer to load
+            model_name (str): Name of model to query
         """
-        mistral_tokenizer = AutoTokenizer.from_pretrained(model_name)
-        mistral_tokenizer.pad_token = mistral_tokenizer.eos_token
-        mistral_model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            load_in_8bit=True,
+        self.metadata["model"] = OpenAI(
+            api_key=TOGETHER_API_KEY,
+            base_url='https://api.together.xyz/v1',
         )
-        mistral_model.config.pad_token_id = mistral_model.config.eos_token_id
-        self.metadata["model"] = mistral_model
-        self.metadata["tokenizer"] = mistral_tokenizer
+        # mistral_tokenizer = AutoTokenizer.from_pretrained(model_name)
+        # mistral_tokenizer.pad_token = mistral_tokenizer.eos_token
+        # mistral_model = AutoModelForCausalLM.from_pretrained(
+        #     model_name,
+        #     load_in_8bit=True,
+        # )
+        # mistral_model.config.pad_token_id = mistral_model.config.eos_token_id
+        # self.metadata["model"] = mistral_model
+        # self.metadata["tokenizer"] = mistral_tokenizer
     
     def query_model(self, prompt):
         """ Run model inference on provided prompt.
@@ -112,20 +132,32 @@ class DecontextFeaturizer(BaseFeaturizer):
         Args:
             prompt (str): Prompt to query model with.
         """
-        generated_ids = []
-        inputs = self.metadata['tokenizer'].apply_chat_template(prompt, return_tensors="pt").to(DEVICE)
+        # generated_ids = []
+        # inputs = self.metadata['tokenizer'].apply_chat_template(prompt, return_tensors="pt").to(DEVICE)
         try:
-            generated_ids = self.metadata['model'].generate(inputs, max_new_tokens=100, do_sample=True, num_return_sequences=1)
-            response = self.metadata['tokenizer'].batch_decode(generated_ids[:, inputs.shape[1] :], skip_special_tokens=True)
-        except torch.cuda.OutOfMemoryError:
-            # for debugging
-            print("oom:", inputs.shape, flush=True)
-            raise torch.cuda.OutOfMemoryError
-        finally:
-            # to avoid taking up gpu memory
-            del inputs
-            del generated_ids
-            torch.cuda.empty_cache()
+            chat_completion = self.metadata["model"].chat.completions.create(
+                messages=prompt,
+                model=self.metadata["model_name"],
+                max_tokens=256,
+                temperature=0.7,
+                top_p = 0.7,
+            )
+            response = chat_completion.choices[0].message.content
+            # generated_ids = self.metadata['model'].generate(inputs, max_new_tokens=100, do_sample=True, num_return_sequences=1)
+        except Exception as e:
+            print(e)
+            time.sleep(10)
+            return self.query_model(prompt)
+        #     response = self.metadata['tokenizer'].batch_decode(generated_ids[:, inputs.shape[1] :], skip_special_tokens=True)
+        # except torch.cuda.OutOfMemoryError:
+        #     # for debugging
+        #     print("oom:", inputs.shape, flush=True)
+        #     raise torch.cuda.OutOfMemoryError
+        # finally:
+        #     # to avoid taking up gpu memory
+        #     del inputs
+        #     del generated_ids
+        #     torch.cuda.empty_cache()
 
         return response
     
@@ -155,6 +187,10 @@ class DecontextFeaturizer(BaseFeaturizer):
         """ Return featurized strings containing column values
 
         """
+        # If decontextualization has already been computed and stored,
+        # return the cached descriptions instead of regenerating
+        if table.decontext_schema is not None:
+            return [table.decontext_schema[x] for x in column_names]
         featurized_columns = []
         table_df = pd.DataFrame(table.values)
         column_decontext_prompts = self.create_column_decontext_prompts(column_names, table_df)
@@ -166,7 +202,8 @@ class DecontextFeaturizer(BaseFeaturizer):
                 # If prompt doesn't fit in memory, just return column name
                 print("OOM num chars:", len(prompt))
                 response = [column_names[i]]
-            featurized_columns.append(response[0])
+            featurized_columns.append(response.strip())
+            # featurized_columns.append(response[0])
         return featurized_columns
 
 
@@ -283,7 +320,7 @@ class JaccardAlignmentScorer(BaseAlignmentScorer):
         super().__init__("jaccard")
         self.metadata["remove_stopwords"] = remove_stopwords
 
-    def get_keywords(sentence: str) -> set[str]:
+    def get_keywords(self, sentence: str) -> set[str]:
         """Extract non-stopword keywords from a sentence.
 
             Extract keywords from a sentence by lowercasing, tokenizing and stemming words. Punctuation and

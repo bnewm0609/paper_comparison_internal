@@ -119,7 +119,7 @@ class SchemaRecallMetric(BaseMetric):
         self.scores["alignment_scores"] = {}
         self.scores["alignments"] = {}
 
-    def add(self, prediction: Table, target: Table, metadata: Any | None = None):
+    def add(self, prediction: Table, target: Table, metadata: Optional[Any] = None):
         # compute alignment matrix between the prediction and target tables
         alignment_matrix = self.alignment_scorer.score_schema_alignments(
             prediction, 
