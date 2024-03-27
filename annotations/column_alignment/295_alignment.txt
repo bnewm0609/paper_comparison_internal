@@ -1,0 +1,42 @@
+ID: 14f6d93a-4d71-438b-9705-93514627bc75
+
+GOLD TABLE:
+|           | Name        | Method                                              |
+|----------:|:------------|:----------------------------------------------------|
+| 124273988 | ['binseg']  | ['Binary Segmentation']                             |
+|  15721047 | ['bocpd']   | ['Bayesian Online Change Point Detection']          |
+|  21681143 | ['bocpdms'] | ['bocpd with Model Selection']                      |
+|    858268 | ['cpnp']    | ['Nonparametric Change Point Detection']            |
+|  54586890 | ['ecp']     | ['Energy Change Point']                             |
+|    211152 | ['kcpa']    | ['Kernel Change-Point Analysis']                    |
+|   5627005 | ['pelt']    | ['Pruned Exact Linear Time']                        |
+|  12515984 | ['prophet'] | ['Prophet']                                         |
+|  88520997 | ['rfpop']   | ['Robust Functional Pruning Optimal\nPartitioning'] |
+|  30533655 | ['wbs']     | ['Wild Binary Segmentation']                        |
+| 212717962 | ['zero']    | ['No Change Points']                                |
+
+GOLD SCHEMA:
+0: Name
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/14f6d93a-4d71-438b-9705-93514627bc75/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Performance metrics                                                    | Validation method                                                                    | Type of data used                                                              |
+|:---------|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| paper_1  | ['Likelihood ratio test']                                              | ['Illustrated for several sets of data']                                             | ['Multiple comparison procedures']                                             |
+| paper_2  | ['Online filtering and prediction techniques']                         | ['On three different real-world data sets']                                          | ['Time series in application areas such as finance, biometrics, and robotics'] |
+| paper_3  | ['Prediction, model selection, and changepoint detection']             | ['Outperforms the state of the art for multivariate data']                           | ['Spatio-temporal processes']                                                  |
+| paper_4  | ['None specified']                                                     | ['Comparing with competing methods in a simulation study']                           | ['Heart rate during physical activity']                                        |
+| paper_5  | ['Hierarchical clustering based estimation']                           | ['Methods from cluster analysis are applied to assess performance']                  | ['Multivariate observations of arbitrary dimension']                           |
+| paper_6  | ['Kernel-based method']                                                | ['Promising experimental results']                                                   | ['Temporal observations']                                                      |
+| paper_7  | ['Minimizing a cost function']                                         | ['Simulation studies comparing with Binary Segmentation algorithm']                  | ['Large data sets in genetics, finance, and spatio-temporal analysis']         |
+| paper_8  | ['Modular regression model with interpretable parameters']             | ['Performance analyses to compare and evaluate forecasting procedures']              | ['Business time series']                                                       |
+| paper_9  | ['Robust changepoint detection algorithm']                             | ['Demonstrated on applications such as analyzing well-log data']                     | ['Well-log data, copy number variation data, and wireless device data']        |
+| paper_10 | ['Wild binary segmentation']                                           | ['Provides very good practical performance in comparison with the state of the art'] | ['Real-world time series']                                                     |
+| paper_11 | ['Evaluation of change point detection algorithms on real-world data'] | ['Benchmark study where 14 algorithms are evaluated on real-world data']             | ['Time series from various application domains']                               |
+
+MATCHES:
+Performance metrics: 
+Validation method: 
+Type of data used: 

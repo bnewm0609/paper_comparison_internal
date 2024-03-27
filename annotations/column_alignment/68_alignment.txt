@@ -1,0 +1,30 @@
+ID: 900fc22d-501e-4fd8-8a12-4fd2c96483ea
+
+GOLD TABLE:
+|           | Domain           | Key characteristics                                            |
+|----------:|:-----------------|:---------------------------------------------------------------|
+| 216404355 | ['Smart City']   | ['Complexity capture']                                         |
+| 233674190 | ['Smart City']   | ['Situational awareness, Monitoring, Analysis, Understanding'] |
+| 219507572 | ['Supply Chain'] | ['Resilience, Replication, Simulation']                        |
+| 235543230 | ['Supply Chain'] | ['Decision making, Holistic improvements']                     |
+| 256194278 | ['Ports']        | ['Simulation, Modelling, Fault detection, Monitoring']         |
+
+GOLD SCHEMA:
+0: Domain
+1: Key characteristics
+
+PREDICTION PATH:../../metric_validation_0/900fc22d-501e-4fd8-8a12-4fd2c96483ea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Use cases and scenarios                                                                                                                                                      | Benefits and outcomes                                                                                                                                                                                        |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Collaborative urban planning, decision support, 3D model, street network model, urban mobility and wind flow simulations, empirical data using VGI, virtual reality']      | ['Enabling collaboration and communication, supporting decision making for urban planning and design']                                                                                                       |
+| Paper 2 | ['Enhancing data processing efficiency, promoting socio-economic components, developing mutual integration']                                                                 | ['Enhancing data processing efficiency, promoting socio-economic components, developing mutual integration']                                                                                                 |
+| Paper 3 | ['Managing disruption risks and resilience in supply chains, mapping supply networks, ensuring visibility, analyzing historical disruption data, real-time disruption data'] | ['Enhancing predictive and reactive decisions, utilizing supply network visualization, historical disruption data analysis, real-time disruption data, ensuring end-to-end visibility, business continuity'] |
+| Paper 4 | ['Enabling optimization and risk management, simulating and evaluating different scenarios, improving efficiency of multimodal and intermodal supply chains']                | ['Enabling optimization and risk management, simulating and evaluating different scenarios, improving efficiency of multimodal and intermodal supply chains']                                                |
+| Paper 5 | ['Energy savings, improving port resource utilization, promoting multi-stakeholder governance and collaboration']                                                            | ['Enabling energy savings, improving port resource utilization, promoting multi-stakeholder governance and collaboration']                                                                                   |
+| Paper 6 | ['Energy savings, improving port resource utilization, promoting multi-stakeholder governance and collaboration']                                                            | ['Enabling energy savings, improving port resource utilization, promoting multi-stakeholder governance and collaboration']                                                                                   |
+
+MATCHES:
+Use cases and scenarios: 
+Benefits and outcomes: 

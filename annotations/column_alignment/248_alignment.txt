@@ -1,0 +1,25 @@
+ID: 9bab2bd8-e02b-4398-9c2a-fe8f5354cced
+
+GOLD TABLE:
+|          | #     | Dataset         |
+|---------:|:------|:----------------|
+| 18993998 | ['2'] | ['Our dataset'] |
+| 16224335 | ['4'] | ['Our Dataset'] |
+
+GOLD SCHEMA:
+0: #
+1: Dataset
+
+PREDICTION PATH:../../metric_validation_0/9bab2bd8-e02b-4398-9c2a-fe8f5354cced/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Task Domain                                                                | Model Performance                                                                  |
+|:--------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| Paper 1 | ['Aspect-level sentiment classification using Attention-based LSTM']       | ['Achieves state-of-the-art performance on aspect-level sentiment classification'] |
+| Paper 2 | ['Aspect-level sentiment classification using Attention-based LSTM']       | ['Achieves state-of-the-art performance on aspect-level sentiment classification'] |
+| Paper 3 | ['Emotion detection and sentiment analysis of images using deep learning'] | ['Indicates promising results in predicting emotion depicted by images']           |
+| Paper 4 | ['Emotion detection and sentiment analysis of images using deep learning'] | ['Indicates promising results in predicting emotion depicted by images']           |
+
+MATCHES:
+Task Domain: 
+Model Performance: 

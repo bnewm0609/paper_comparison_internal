@@ -1,0 +1,34 @@
+ID: a45087b0-4383-4722-aa75-7ec8ff299cbf
+
+GOLD TABLE:
+|         | ID     | Attr #1                      | A#1 Cat   | Attr #2            | A#2 Cat   |
+|--------:|:-------|:-----------------------------|:----------|:-------------------|:----------|
+| 8314975 | ['1']  | ['Occupation']               | ['14']    | ['Native Country'] | ['41']    |
+|  700906 | ['11'] | ['Lower right Y coordinate'] | ['186']   | ['Traffic Sign']   | ['43']    |
+
+GOLD SCHEMA:
+0: ID
+1: Attr #1
+2: A#1 Cat
+3: Attr #2
+4: A#2 Cat
+
+PREDICTION PATH:../../metric_validation_0/a45087b0-4383-4722-aa75-7ec8ff299cbf/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of detection algorithm used                                                                                                                                                                  | Features used in the detection                          | Industrial relevance of the research   | Success rate of detection                             | Computational complexity of the algorithm                          |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------|:------------------------------------------------------|:-------------------------------------------------------------------|
+| Paper 1 | ['Hybrid of decision-tree classifiers and Naive-Bayes classifiers']                                                                                                                               | ['univariate splits', 'Naive-Bayesian classifiers']     | ['N/A']                                | ['N/A']                                               | ['retains the interpretability of Naive-Bayes and decision trees'] |
+| Paper 2 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+| Paper 3 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+| Paper 4 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+| Paper 5 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+| Paper 6 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+| Paper 7 | ['Viola-Jones detector based on Haar features', 'linear classifier relying on HOG descriptors', 'problem-specific algorithm exploiting shape and color in a model-based Houghlike voting scheme'] | ['Haar features', 'HOG descriptors', 'shape and color'] | ['high']                               | ['baseline algorithms', 'best-performing algorithms'] | ['N/A']                                                            |
+
+MATCHES:
+Type of detection algorithm used: 
+Features used in the detection: 
+Industrial relevance of the research: 
+Success rate of detection: 
+Computational complexity of the algorithm: 

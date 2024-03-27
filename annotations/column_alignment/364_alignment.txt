@@ -1,0 +1,35 @@
+ID: d0b0ef97-c857-4122-905f-e0eda5f7bd39
+
+GOLD TABLE:
+|           | ID     | Misinformation Target                                                            |
+|----------:|:-------|:---------------------------------------------------------------------------------|
+| 229064299 | ['6']  | ['The COVID-19 vaccine contains tissue from aborted fetuses.']                   |
+| 210886197 | ['16'] | ['The COVID-19 vaccine should not be taken by people who are allergic to eggs.'] |
+| 220251733 | ['13'] | ['The COVID-19 vaccine can increase risk for other illnesses.']                  |
+
+GOLD SCHEMA:
+0: ID
+1: Misinformation Target
+
+PREDICTION PATH:../../metric_validation_0/d0b0ef97-c857-4122-905f-e0eda5f7bd39/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | statistics on misinformation exposure                                                                                                                               | distribution_of_misinformation_by_type   |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------|
+| paper_1  | ['46% of respondents have encountered false or misleading coronavirus information since the lockdown, and most cases of misinformation are found on social media.'] | ['N/A']                                  |
+| paper_2  | ['46% of respondents have encountered false or misleading coronavirus information since the lockdown, and most cases of misinformation are found on social media.'] | ['N/A']                                  |
+| paper_3  | ['46% of respondents have encountered false or misleading coronavirus information since the lockdown, and most cases of misinformation are found on social media.'] | ['N/A']                                  |
+| paper_4  | ['46% of respondents have encountered false or misleading coronavirus information since the lockdown, and most cases of misinformation are found on social media.'] | ['N/A']                                  |
+| paper_5  | ['46% of respondents have encountered false or misleading coronavirus information since the lockdown, and most cases of misinformation are found on social media.'] | ['N/A']                                  |
+| paper_6  | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_7  | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_8  | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_9  | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_10 | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_11 | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_12 | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+| paper_13 | ['N/A']                                                                                                                                                             | ['N/A']                                  |
+
+MATCHES:
+statistics on misinformation exposure: 
+distribution_of_misinformation_by_type: 

@@ -1,0 +1,37 @@
+ID: e1512e4e-5a65-42a7-8e88-41dbfebbeba8
+
+GOLD TABLE:
+|          | Algorithms                   | Applications                                                                                        |
+|---------:|:-----------------------------|:----------------------------------------------------------------------------------------------------|
+| 10588433 | ['RBF-NN']                   | ['Predict the path loss']                                                                           |
+| 19607115 | ['RVM']                      | ['Estimate DoA of MPCs']                                                                            |
+| 37130060 | ['RVM']                      | ['Filter the noise embedded MPCs to determine the PDP']                                             |
+| 44232249 | ['FNN and RBF-NN']           | ['Predict the intermediate points in ray launching simulation to obtain the indoor received power'] |
+|  9013158 | ['ANN']                      | ['Produce the CIR with a limited number of cluster-nuclei']                                         |
+| 41841631 | ['MLP']                      | ['Predict the outdoor received signal strength']                                                    |
+|  3427187 | ['LASSO']                    | ['Estimate the CIR based on channel measurement data']                                              |
+| 88514780 | ['SVM']                      | ['Predict the path loss']                                                                           |
+| 44025148 | ['K-means, FCM, and DBSCAN'] | ['Clustering and tracking MPCs']                                                                    |
+
+GOLD SCHEMA:
+0: Algorithms
+1: Applications
+
+PREDICTION PATH:../../metric_validation_0/e1512e4e-5a65-42a7-8e88-41dbfebbeba8/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method                                                                              | Application                                                        |
+|:--------|:------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
+| paper_1 | ['Radial Basis Function Neural Network']                                            | ['Environment-adaptation mobile radio propagation prediction']     |
+| paper_2 | ['Maximum Likelihood Direction-of-Arrival Estimation via Sparse Bayesian Learning'] | ['Direction-of-Arrival Estimation']                                |
+| paper_3 | ['Relevance Vector Machine']                                                        | ['Modeling of Wireless Channels']                                  |
+| paper_4 | ['Ray Launching-Neural Network Approach']                                           | ['Radio Wave Propagation Analysis in Complex Indoor Environments'] |
+| paper_5 | ['Cluster-nuclei based model']                                                      | ['Channel model for mobile communication']                         |
+| paper_6 | ['Artificial Neural Network']                                                       | ['Outdoor Signal Strength Prediction in UHF Band']                 |
+| paper_7 | ['c-LASSO']                                                                         | ['Tapped delay line estimation for vehicular channels']            |
+| paper_8 | ['Support Vector Machines']                                                         | ['Propagation Losses at 169 MHz for Smart Metering Applications']  |
+| paper_9 | ['Clustering-enabled wireless channel modeling using big data algorithms']          | ['Wireless channel modeling using big data algorithms']            |
+
+MATCHES:
+Method: 
+Application: 

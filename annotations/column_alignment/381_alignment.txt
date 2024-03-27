@@ -1,0 +1,86 @@
+ID: 0723c308-b9f4-4f7c-9917-615727afc628
+
+GOLD TABLE:
+|          | ID     | Type          | Nodes       | Edges       | Number of layers   | CC         |
+|---------:|:-------|:--------------|:------------|:------------|:-------------------|:-----------|
+|  2838900 | ['32'] | ['Genetic']   | ['582']     | ['620']     | ['5']              | ['109']    |
+|   231286 | ['33'] | ['Genetic']   | ['17770']   | ['8473997'] | ['4']              | ['4']      |
+|  8255435 | ['7']  | ['Neuronal']  | ['791']     | ['5863']    | ['3']              | ['6']      |
+| 14784546 | ['23'] | ['Social']    | ['3457453'] | ['4061960'] | ['3']              | ['651141'] |
+| 79410684 | ['3']  | ['Social']    | ['674']     | ['1551']    | ['3']              | ['12']     |
+|  9281429 | ['4']  | ['Social']    | ['224']     | ['620']     | ['5']              | ['13']     |
+| 56166159 | ['25'] | ['Social']    | ['26']      | ['35']      | ['2']              | ['2']      |
+| 15565456 | ['20'] | ['Transport'] | ['399']     | ['441']     | ['3']              | ['3']      |
+
+GOLD SCHEMA:
+0: ID
+1: Type
+2: Nodes
+3: Edges
+4: Number of layers
+5: CC
+
+PREDICTION PATH:../../metric_validation_0/0723c308-b9f4-4f7c-9917-615727afc628/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | search functionality   | result presentation   | user experience                                                                  |
+|:---------|:-----------------------|:----------------------|:---------------------------------------------------------------------------------|
+| paper_1  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_2  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_3  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_4  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_5  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_6  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_7  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_8  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_9  | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_10 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_11 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_12 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_13 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_14 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_15 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_16 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_17 | ['Yes']                | ['Yes']               | nan                                                                              |
+| paper_18 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_19 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_20 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_21 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_22 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_23 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_24 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_25 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_26 | ['N/A']                | ['N/A']               | nan                                                                              |
+| paper_27 | ['N/A']                | ['N/A']               | nan                                                                              |
+| Paper 1  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 2  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 3  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 4  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 5  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 6  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 7  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 8  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 9  | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 10 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 11 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 12 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 13 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 14 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 15 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 16 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 17 | nan                    | nan                   | ['The web interface allows for rapid search and retrieval of interaction data.'] |
+| Paper 18 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 19 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 20 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 21 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 22 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 23 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 24 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 25 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 26 | nan                    | nan                   | ['N/A']                                                                          |
+| Paper 27 | nan                    | nan                   | ['N/A']                                                                          |
+
+MATCHES:
+search functionality: 
+result presentation: 
+user experience: 

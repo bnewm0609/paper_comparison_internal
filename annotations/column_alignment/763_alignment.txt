@@ -1,0 +1,29 @@
+ID: f9504841-2129-417c-a504-7b2d57ca509b
+
+GOLD TABLE:
+|           | Team       | Task    |
+|----------:|:-----------|:--------|
+| 264441549 | ['BIT.UA'] | ['NER'] |
+| 264441337 | ['-']      | ['EL']  |
+| 264441481 | ['-']      | ['DI']  |
+| 264441503 | ['Fusion'] | ['NER'] |
+| 260514387 | ['-']      | ['EL']  |
+
+GOLD SCHEMA:
+0: Team
+1: Task
+
+PREDICTION PATH:../../metric_validation_0/f9504841-2129-417c-a504-7b2d57ca509b/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach/Strategy                                                                                                                                                                                                                                                                                                        | Performance metrics/scores                                                             |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['transformer models with Masked Conditional Random Fields for procedure recognition, utilizing a contextualized sliding window strategy to handle large documents, and data augmentation']                                                                                                                              | ['79.85% on NER (subtask-1), 31.68% on normalization, and 35.85% on indexing']         |
+| paper_2 | ['separate named entity recognition and entity linking modules, Spanish RoBERTa model with additional Spanish clinical data for pre-training, and fine-tuning for token classification, cross-lingual SapBERT XLMR-large for entity and mention representations, and cosine similarity for candidate entity generation'] | ['0.71 F1 score on NER subtask and 0.53 F1 score on linking subtask']                  |
+| paper_3 | ['fine-tuned transformers with domain-specific corpora for Spanish clinical texts, and a dictionary-based solution']                                                                                                                                                                                                     | ['0.5505 f1-score on the test set of the challenge']                                   |
+| paper_4 | ['sentence level token classification based on fine-tuning of a RoBERTa model pre-trained on biomedical and clinical data, and employing different types of recurrent architectures that rely on non-trainable contextual word embeddings extracted from the same pre-trained language model']                           | ['0.7568 micro-averaged F1 score on the NER sub-task and 0.5267 on the NORM sub-task'] |
+| paper_5 | ['N/A']                                                                                                                                                                                                                                                                                                                  | ['N/A']                                                                                |
+
+MATCHES:
+Approach/Strategy: 
+Performance metrics/scores: 

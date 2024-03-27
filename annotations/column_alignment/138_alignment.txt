@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Resources required for implementation                         | Algorithms' complexity                                                             | Comparison with classical algorithms                                                                                                                                                                                                                                                         | Applications of quantum algorithms                                |
+|:--------|:--------------------------------------------------------------|:-----------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------|
+| paper_1 | ['Quantum Turing machine']                                    | ['Not explicitly stated']                                                          | ['Violates the modern (complexity theoretic) formulation of the Church--Turing thesis']                                                                                                                                                                                                      | ['Quantum complexity theory']                                     |
+| paper_2 | ['Quantum Turing machine']                                    | ['Not explicitly stated']                                                          | ['Violates the modern (complexity theoretic) formulation of the Church--Turing thesis']                                                                                                                                                                                                      | ['Quantum complexity theory']                                     |
+| paper_3 | ['Quantum circuit with unitary gates']                        | ['The depth of the circuit grows linearly with p times the number of constraints'] | ['Can find a cut that is at least 0.6924 times the size of the optimal cut on 3-regular graphs']                                                                                                                                                                                             | ['Approximate solutions for combinatorial optimization problems'] |
+| paper_4 | ['N/A']                                                       | ['N/A']                                                                            | ['N/A']                                                                                                                                                                                                                                                                                      | ['N/A']                                                           |
+| paper_5 | ['N/A']                                                       | ['N/A']                                                                            | ['N/A']                                                                                                                                                                                                                                                                                      | ['N/A']                                                           |
+| paper_6 | ['Quantum circuit based on OpenQASM assembly representation'] | ['Varies depending on the benchmark']                                              | ['Can be used to evaluate and verify the properties of selective prototype hardware, the efficiency of different assemblers, optimizers and schedulers, the robustness of distinct error correction technologies, and the performance of various quantum simulators on classical computers'] | ['NISQ evaluation and simulation']                                |
+| paper_7 | ['Quantum circuit based on OpenQASM assembly representation'] | ['Varies depending on the benchmark']                                              | ['Can be used to evaluate and verify the properties of selective prototype hardware, the efficiency of different assemblers, optimizers and schedulers, the robustness of distinct error correction technologies, and the performance of various quantum simulators on classical computers'] | ['NISQ evaluation and simulation']                                |
+| paper_8 | ['Quantum mechanical system']                                 | ['O(sqrt(N))']                                                                     | ['Can find the desired phone number with a 50% probability in O(sqrt(N)) steps']                                                                                                                                                                                                             | ['Database search']                                               |
+| paper_9 | ['Quantum circuit with a single ancillary qubit']             | ['Linear depth']                                                                   | ['Has lower depth and fewer gates than previous ripple-carry adders']                                                                                                                                                                                                                        | ['Quantum addition']                                              |
+
+MATCHES:
+Resources required for implementation: 
+Algorithms' complexity: 
+Comparison with classical algorithms: 
+Applications of quantum algorithms: 

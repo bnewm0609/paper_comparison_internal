@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model (e.g., QTM, quantum circuit)   | Implementation complexity                                          | Precision of the transition amplitudes                          | Comparison to classical encryption                                                       |
+|:--------|:-------------------------------------|:-------------------------------------------------------------------|:----------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
+| paper_1 | ['Quantum Turing Machine (QTM)']     | ['More complicated than classical Turing machines']                | ['O(log T) bits of precision suffice for a T step computation'] | ['Violation of the modern complexity theoretic formulation of the Church-Turing thesis'] |
+| paper_2 | ['Quantum Turing Machine (QTM)']     | ['More complicated than classical Turing machines']                | ['O(log T) bits of precision suffice for a T step computation'] | ['Violation of the modern complexity theoretic formulation of the Church-Turing thesis'] |
+| paper_3 | ['Quantum circuit']                  | ['Grows linearly with p times the number of constraints']          | ['The depth of the quantum circuit grows linearly with p']      | [' N/A ']                                                                                |
+| paper_4 | [' N/A ']                            | [' N/A ']                                                          | [' N/A ']                                                       | [' N/A ']                                                                                |
+| paper_5 | [' N/A ']                            | [' N/A ']                                                          | [' N/A ']                                                       | [' N/A ']                                                                                |
+| paper_6 | ['Quantum circuit']                  | ['Efficiency of different assemblers, optimizers, and schedulers'] | [' N/A ']                                                       | [' N/A ']                                                                                |
+| paper_7 | ['Quantum circuit']                  | ['Efficiency of different assemblers, optimizers, and schedulers'] | [' N/A ']                                                       | [' N/A ']                                                                                |
+| paper_8 | [' N/A ']                            | [' N/A ']                                                          | [' N/A ']                                                       | [' N/A ']                                                                                |
+| paper_9 | ['Quantum circuit']                  | ['Lower depth and fewer gates than previous adders']               | [' N/A ']                                                       | [' N/A ']                                                                                |
+
+MATCHES:
+Model (e.g., QTM, quantum circuit): 
+Implementation complexity: 
+Precision of the transition amplitudes: 
+Comparison to classical encryption: 

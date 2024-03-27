@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of renewable energy sources considered   | Economic and environmental objectives                                  | Validation of proposed methods                                                             |
+|:---------|:----------------------------------------------|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                       | ['Economic Dispatch of Power System']                                  | ['Survey and classification of research works']                                            |
+| paper_2  | ['Solar, Wind']                               | ['Energy cost minimization, Pollutant emissions reduction']            | ['Superior performance shown in comparison with other methods']                            |
+| paper_3  | ['CHP-based Micro-Grid']                      | ['Economic self-sufficiency, Optimal deployment of DERs']              | ['Loss sensitivity index (LSI), Loss minimization using PSO']                              |
+| paper_4  | ['Small Scale Energy Resources']              | ['Power scheduling with minimum operating cost']                       | ['Comparative study using ICA and PSO algorithms']                                         |
+| paper_5  | ['Small-scale energy resources (SSERs)']      | ['Optimal economic operation of microgrids with minimum cost']         | ['Statistical analysis and probabilistic modeling']                                        |
+| paper_6  | ['Wind Power']                                | ['Economic dispatch model with wind power uncertainty and carbon tax'] | ['Tested on modified IEEE benchmark system']                                               |
+| paper_7  | ['Distributed Generation (DG) Resources']     | ['Minimization of operation costs of a virtual power player']          | ['Real 937 bus distribution network case study']                                           |
+| paper_8  | ['N/A']                                       | ['Electricity cost reduction, Power loss minimization']                | ['Simulation results']                                                                     |
+| paper_9  | ['Wind Power']                                | ['Risk management in economic dispatch problem']                       | ['Multiple objective particle swarm optimization used to obtain Pareto-optimal solutions'] |
+| paper_10 | ['Microgrid']                                 | ['Minimize total economic cost and network loss of microgrid']         | ['Chaos optimization algorithm, Simulation results']                                       |
+
+MATCHES:
+Type of renewable energy sources considered: 
+Economic and environmental objectives: 
+Validation of proposed methods: 

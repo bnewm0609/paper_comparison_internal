@@ -1,0 +1,31 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types of mobile devices used   | Specific challenges of mobile devices                                                 | Benefits of mobile device authentication                                        |
+|:--------|:-------------------------------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| paper_1 | ['mobile touchscreen devices'] | ['limitations of touch-specific features for authentication']                         | ['improved authentication methods using implicit, individual behavioural cues'] |
+| paper_2 | ['smartphones and tablets']    | ['hardware and environment limitations for traditional authentication methods']       | ['increased security and protection of personal data on mobile devices']        |
+| paper_3 | ['mobile devices']             | ['conflicting requirements of security and usability for mobile user authentication'] | ['enhanced security with simple password and continuous authentication']        |
+| paper_4 | ['N/A']                        | ['N/A']                                                                               | ['ascertaining personal identity even after authentication phase has passed']   |
+
+MATCHES:
+Types of mobile devices used: 
+Specific challenges of mobile devices: 
+Benefits of mobile device authentication: 

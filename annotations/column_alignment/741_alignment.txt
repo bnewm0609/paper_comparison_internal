@@ -1,0 +1,38 @@
+ID: 58ef0c0f-e4b8-4d06-b4ba-0bdad86544c5
+
+GOLD TABLE:
+|          | Classes   | Size (train/test)   | Accuracy measure   |
+|---------:|:----------|:--------------------|:-------------------|
+| 18268744 | ['10']    | ['50,000/10,000']   | ['top-1']          |
+| 10860374 | ['500']   | ['47,386/2,443']    | ['top-1']          |
+|  1309931 | ['397']   | ['19,850/19,850']   | ['top-1']          |
+| 16632981 | ['196']   | ['8,144/8,041']     | ['top-1']          |
+|  2118703 | ['100']   | ['6,667/3,333']     | ['mean per-class'] |
+|  4309276 | ['47']    | ['3,760/1,880']     | ['top-1']          |
+|   383200 | ['37']    | ['3,680/3,369']     | ['mean per-class'] |
+| 15193013 | ['102']   | ['2,040/6,149']     | ['mean per-class'] |
+
+GOLD SCHEMA:
+0: Classes
+1: Size (train/test)
+2: Accuracy measure
+
+PREDICTION PATH:../../metric_validation_0/58ef0c0f-e4b8-4d06-b4ba-0bdad86544c5/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Scale of Dataset                                                                      | Technique for Classification                                                                | Type of Objects being Classified   |
+|:--------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:-----------------------------------|
+| Paper_1 | ['Millions of tiny color images, 2 sets of reliable labels (CIFAR-10 and CIFAR-100)'] | ['Multilayer generative model that learns to extract meaningful features']                  | ['Tiny color images']              |
+| Paper_2 | ['Millions of tiny color images, 2 sets of reliable labels (CIFAR-10 and CIFAR-100)'] | ['Multilayer generative model that learns to extract meaningful features']                  | ['Tiny color images']              |
+| Paper_3 | ['37 different breeds of cats and dogs']                                              | ['Model that combines shape and appearance, with automatic segmentation']                   | ['Breeds of cats and dogs']        |
+| Paper_4 | ['103 class flower dataset']                                                          | ['Multiple kernel framework with SVM classifier and method of Varma and Ray']               | ['Flowers']                        |
+| Paper_5 | ["Large dataset of patterns collected 'in the wild'"]                                 | ['Improved Fisher Vector (IFV) and Deep Convolutional-network Activation Features (DeCAF)'] | ['Patterns and textures']          |
+| Paper_6 | ['10,000 images of aircraft spanning 100 aircraft models']                            | ['Fine-grained visual classification']                                                      | ['Aircraft models']                |
+| Paper_7 | ['899 categories and 130,519 images']                                                 | ['Evaluation of scene recognition algorithms and new bounds of performance']                | ['Scene categories']               |
+| Paper_8 | ['500 North American bird species']                                                   | ['One-vs-most classifiers and estimation of spatio-temporal class priors']                  | ['Bird species']                   |
+| Paper_9 | ['197 classes and 16,185 images']                                                     | ['Baseline performance for two state-of-the-art methods']                                   | ['Cars']                           |
+
+MATCHES:
+Scale of Dataset: 
+Technique for Classification: 
+Type of Objects being Classified: 

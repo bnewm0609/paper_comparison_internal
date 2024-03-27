@@ -1,0 +1,30 @@
+ID: 900fc22d-501e-4fd8-8a12-4fd2c96483ea
+
+GOLD TABLE:
+|           | Domain           | Key characteristics                                            |
+|----------:|:-----------------|:---------------------------------------------------------------|
+| 216404355 | ['Smart City']   | ['Complexity capture']                                         |
+| 233674190 | ['Smart City']   | ['Situational awareness, Monitoring, Analysis, Understanding'] |
+| 219507572 | ['Supply Chain'] | ['Resilience, Replication, Simulation']                        |
+| 235543230 | ['Supply Chain'] | ['Decision making, Holistic improvements']                     |
+| 256194278 | ['Ports']        | ['Simulation, Modelling, Fault detection, Monitoring']         |
+
+GOLD SCHEMA:
+0: Domain
+1: Key characteristics
+
+PREDICTION PATH:../../metric_validation_0/900fc22d-501e-4fd8-8a12-4fd2c96483ea/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Scope of Digital Twin Application   | Research Focus                                 |
+|:--------|:------------------------------------|:-----------------------------------------------|
+| paper_1 | ['Smart Cities']                    | ['Prototyping and Validation']                 |
+| paper_2 | ['Smart Cities']                    | ['Review and Research Agenda']                 |
+| paper_3 | ['Supply Chain']                    | ['Risk Management']                            |
+| paper_4 | ['Supply Chain']                    | ['Framework and Architecture Design']          |
+| paper_5 | ['Ports']                           | ['Literature Review and Requirement Analysis'] |
+| paper_6 | ['Ports']                           | ['Literature Review and Requirement Analysis'] |
+
+MATCHES:
+Scope of Digital Twin Application: 
+Research Focus: 

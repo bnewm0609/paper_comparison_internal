@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Measurement techniques                                                                                         | Comparison of eye movement parameters                                                                                       | Detection of saccadic eye movements                                                          |
+|:--------|:---------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
+| paper_1 | ['Scleral search coil technique']                                                                              | ['Direction, speed, gain, time course of eye movements in response to radial optic flow stimuli']                           | ['Saccadic eye movements elicited by radial optic flow stimuli']                             |
+| paper_2 | ['Nonlinear dynamics, power spectral density analysis, fractal dimension determination']                       | ['Nonlinear dynamics and power spectral density analysis for reading ability']                                              | ['N/A']                                                                                      |
+| paper_3 | ['Video head impulse test (vHIT)']                                                                             | ['VOR gain difference, patterns of catch-up saccades']                                                                      | ['Covert and overt catch-up saccades']                                                       |
+| paper_4 | ['Six degrees of freedom (6DF) motion platform, Scleral search coil technique']                                | ['Gain and misalignment of 3D VOR in response to whole-body small amplitude sinusoidal and constant acceleration impulses'] | ['N/A']                                                                                      |
+| paper_5 | ['Averaged EOG']                                                                                               | ['Duration, latency, disconjugate reflex eye movements in response to brief air conducted tones']                           | ['Disconjugate reflex eye movements in response to brief air conducted tones']               |
+| paper_6 | ['Vibrational impulse stimuli applied to the skull, Head taps']                                                | ['Responses to skull vibration, asymmetrical responses in the vertical EOG, gaze and positional influences']                | ['Investigation if vibrational impulse stimuli can evoke the vestibulo-ocular reflex (VOR)'] |
+| paper_7 | ['Electrooculography (EOG)']                                                                                   | ['Anticipatory eye movements and segmentation sequences during walking turns']                                              | ['Visual cues impact on anticipatory eye movement and cranio-caudal rotation sequences']     |
+| paper_8 | ['Electrooculogram (EOG), signal classification using Elman and distributed time delay neural network models'] | ['Classification accuracy using neural network models for developing human-computer interface']                             | ['N/A']                                                                                      |
+
+MATCHES:
+Measurement techniques: 
+Comparison of eye movement parameters: 
+Detection of saccadic eye movements: 

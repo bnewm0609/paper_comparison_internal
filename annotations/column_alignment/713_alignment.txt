@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Dataset Characteristics                                                                                                                                                                                                | Research Focus                                                                                 |
+|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| paper_1  | ['Large-scale dataset with over 32,000 annotated bboxes and a distractor set of over 500K images']                                                                                                                     | ['Scalable Person Re-identification Benchmark']                                                |
+| paper_2  | ['3.6 Million accurate 3D Human poses, diverse set of motions and poses']                                                                                                                                              | ['3D Human Sensing in Natural Environments']                                                   |
+| paper_3  | ['Large-scale clothes dataset with over 800,000 images, richly annotated with massive attributes, clothing landmarks, and correspondence of images taken under different scenarios']                                   | ['Robust Clothes Recognition and Retrieval with Rich Annotations']                             |
+| paper_4  | ['Multi-View Clothing dataset with four different views for each clothing item and 264 attributes for describing clothing appearance']                                                                                 | ['View-Invariant Clothing Retrieval and Attribute Prediction']                                 |
+| paper_5  | ['Proposed Co-CNN architecture for human parsing task with integrated cross-layer context, global image-level context, semantic edge context, within-super-pixel context, and cross-super-pixel neighborhood context'] | ['Human Parsing with Contextualized Convolutional Neural Network']                             |
+| paper_6  | ['Image-based Virtual Try-On Network (VITON) without using 3D information and seamlessly transfers a desired clothing item onto the corresponding region of a person using a coarse-to-fine strategy']                 | ['Image-based Virtual Try-On Network (VITON)']                                                 |
+| paper_7  | ['Multi-pose Guided Virtual Try-On Network (MG-VTON) that enables clothes to transfer onto a person with diverse poses']                                                                                               | ['Towards Multi-Pose Guided Virtual Try-On Network']                                           |
+| paper_8  | ['FashionOn network for semantic-guided image-based virtual try-on with detailed human and clothing information']                                                                                                      | ['Semantic-guided Image-based Virtual Try-on with Detailed Human and Clothing Information']    |
+| paper_9  | ['Pose-guided virtual try-on scheme based on the generative adversarial networks (GANs) with a bi-stage strategy']                                                                                                     | ['Virtually Trying on New Clothing with Arbitrary Poses']                                      |
+| paper_10 | ['Utilizes volumetric, x-y-t, patch classifiers (actemes) for analyzing human actions in non-scripted, unconstrained video settings']                                                                                  | ['Strongly-Supervised Representation for Detailed Action Understanding']                       |
+| paper_11 | ['MoCoGAN framework for video generation that decomposes motion and content']                                                                                                                                          | ['Decomposing Motion and Content for Video Generation']                                        |
+| paper_12 | ['DwNet leveraging dense intermediate pose-guided representation and refinement process to warp the required subject appearance']                                                                                      | ['Dense Warp-Based Network for Pose-Guided Human Video Generation']                            |
+| paper_13 | ['Liquid Warping GAN for human motion imitation, appearance transfer and novel view synthesis within a unified framework']                                                                                             | ['Unified Framework for Human Motion Imitation, Appearance Transfer and Novel View Synthesis'] |
+| paper_14 | ['Flow-Navigated Warping GAN (FW-GAN) for video virtual try-on system that precisely transfers clothes onto the person and generates visually realistic videos']                                                       | ['Flow-Navigated Warping GAN for Video Virtual Try-On']                                        |
+
+MATCHES:
+Dataset Characteristics: 
+Research Focus: 

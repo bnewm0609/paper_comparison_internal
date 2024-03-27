@@ -1,0 +1,29 @@
+ID: b5b73d12-e797-447a-ac52-ac6e8c7c7a77
+
+GOLD TABLE:
+|           | Method         | dataset   | comments                  |
+|----------:|:---------------|:----------|:--------------------------|
+|   3138661 | ['MLP']        | ['3559']  | ['edge + 3-layer MLP']    |
+|  19358648 | ['fasterRCNN'] | ['-']     | ['Very complex and slow'] |
+| 212649623 | ['M2Det']      | ['5000']  | ['Very complex and slow'] |
+|  54033357 | ['VGG16 etc.'] | ['3500']  | ['Very complex and slow'] |
+
+GOLD SCHEMA:
+0: Method
+1: dataset
+2: comments
+
+PREDICTION PATH:../../metric_validation_0/b5b73d12-e797-447a-ac52-ac6e8c7c7a77/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach/Methodology (e.g., CNN, Deep Learning, Algorithms)                                                              | Performance Evaluation Metrics (e.g., specificity, sensitivity, classification accuracy)                             | Dataset and Training Method (e.g., large-scale dataset, transfer learning)                                        |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Algorithms for automated detection and recognition of firearms and knives in CCTV images.']                            | ['Specificity and sensitivity of knife detection, near-zero rate of false alarms for firearm detection.']            | ['N/A']                                                                                                           |
+| paper_2 | ['Convolutional Neural Networks (CNN), Deep Learning, Faster Regional-based CNN model']                                  | ['Evaluation of gun detection over the Internet Movie Firearms Database (IMFDB), magnified classification accuracy'] | ['Transfer learning, evaluation over IMFDB']                                                                      |
+| paper_3 | ['Deep Neural Networks, Single-stage object detector using a multi-level feature pyramid network (M2Det)']               | ['Increase in average precision of gun detection at different scales by 18% compared to existing approaches.']       | ['Large scale dataset of hand guns captured using a CCTV camera, training of network using the proposed dataset'] |
+| paper_4 | ['Object detection using Convolutional Neural Networks (CNNs), Tensorflow-based implementation of the Overfeat network'] | ['93% training accuracy, 89% test accuracy using the Overfeat network with adjusted hyperparameters.']               | ['N/A']                                                                                                           |
+
+MATCHES:
+Approach/Methodology (e.g., CNN, Deep Learning, Algorithms): 
+Performance Evaluation Metrics (e.g., specificity, sensitivity, classification accuracy): 
+Dataset and Training Method (e.g., large-scale dataset, transfer learning): 

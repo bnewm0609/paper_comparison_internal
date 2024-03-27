@@ -1,0 +1,46 @@
+ID: 8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde
+
+GOLD TABLE:
+|           | Development                                | Image Source        | Focus                      | ID    | OOD   | Metrics                 |
+|----------:|:-------------------------------------------|:--------------------|:---------------------------|:------|:------|:------------------------|
+| 152282269 | ['generate questions from a single graph'] | ['Visual Genome']   | ['composition']            | ['✓'] | ['✗'] | ['composite metrics']   |
+| 239998781 | ['generate questions from double graphs']  | ['Visual Genome']   | ['commonsense']            | ['✓'] | ['✗'] | ['composite metrics']   |
+|  19298149 | ['reorganization on VQA v2']               | ['COCO']            | ['language bias']          | ['✗'] | ['✓'] | ['open-ended accuracy'] |
+| 219558583 | ['reorganization on GQA']                  | ['Visual Genome']   | ['language bias']          | ['✓'] | ['✓'] | ['composite metrics']   |
+|  62902119 | ['rephrasing on VQA v2']                   | ['COCO']            | ['language bias']          | ['✗'] | ['✓'] | ['consensus score']     |
+| 233168594 | ['reorganization on VQA v2']               | ['COCO']            | ['natural shortcuts']      | ['✗'] | ['✓'] | ['open-ended accuracy'] |
+| 252780087 | ['reorganization on VQA v2']               | ['COCO']            | ['natural shortcuts']      | ['✓'] | ['✓'] | ['open-ended accuracy'] |
+| 235266220 | ['human-and-model-in-the-loop']            | ['CC/Fakeddit/VCR'] | ['adversarial robustness'] | ['✗'] | ['✓'] | ['open-ended accuracy'] |
+| 235352921 | ['human-and-model-in-the-loop']            | ['COCO']            | ['adversarial robustness'] | ['✗'] | ['✓'] | ['open-ended accuracy'] |
+
+GOLD SCHEMA:
+0: Development
+1: Image Source
+2: Focus
+3: ID
+4: OOD
+5: Metrics
+
+PREDICTION PATH:../../metric_validation_0/8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Dataset Used                                         | Approach to Improve VQA Models                                                                                                                                     | Evaluation Methodology                                                                   | Proposed Solution                                                                          | Experimental Results                                                                                                                                          |
+|:---------|:-----------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['VQA v1 and VQA v2 datasets under Changing Priors'] | ['Proposed a new setting for VQA to encourage development of models geared towards image grounding', 'Proposed a Grounded Visual Question Answering model (GVQA)'] | ['Performance degradation on proposed VQA-CP datasets']                                  | ['Grounded Visual Question Answering model (GVQA)']                                        | ['GVQA outperforms SAN, MCB on VQA-CP v1 and VQA-CP v2']                                                                                                      |
+| paper_2  | ['VQA v1 and VQA v2 datasets under Changing Priors'] | ['Proposed a new setting for VQA to encourage development of models geared towards image grounding', 'Proposed a Grounded Visual Question Answering model (GVQA)'] | ['Performance degradation on proposed VQA-CP datasets']                                  | ['Grounded Visual Question Answering model (GVQA)']                                        | ['GVQA outperforms SAN, MCB on VQA-CP v1 and VQA-CP v2']                                                                                                      |
+| paper_3  | ['Adversarial VQA']                                  | ['Introduced Adversarial VQA, a new large-scale VQA benchmark']                                                                                                    | ['Performance on Adversarial VQA benchmark']                                             | ['Adversarial VQA benchmark collection procedure']                                         | ['Adversarial VQA dataset highlights the fragility of SOTA models and boosts model performance']                                                              |
+| paper_4  | ['GQA']                                              | ['Introduced GQA, Ang dataset for real-world visual reasoning and compositional question answering']                                                               | ['Metrics for consistency, grounding, and plausibility']                                 | ['GQA dataset and question engine']                                                        | ['Human performance at 89.3%, ample opportunity for new research']                                                                                            |
+| paper_5  | ['CRIC']                                             | ['Proposed a VQA benchmark, CRIC, and an evaluation metric integrating the correctness of answering and commonsense grounding']                                    | ['Evaluation metric integrating the correctness of answering and commonsense grounding'] | ['Compositional Reasoning on vIsion and Commonsense (CRIC) dataset and evaluation metric'] | ['Grounding the commonsense to the image region and joint reasoning on vision and commonsense are challenging for current approaches']                        |
+| paper_6  | ['GQA']                                              | ['Proposed the GQAOOD benchmark for comprehensive evaluation of reasoning abilities']                                                                              | ['Measuring and comparing accuracy over both rare and frequent question-answer pairs']   | ['GQAOOD benchmark for rare and frequent question-answer pairs']                           | ['Measures and compares accuracy over both rare and frequent question-answer pairs, validates the evaluation of reasoning abilities in the GQAOOD benchmark'] |
+| paper_7  | ['VQA-Rephrasings and VQA v2.0']                     | ['Proposed a model-agnostic framework that exploits cycle consistency']                                                                                            | ['Robustness to linguistic variations on the VQA-Rephrasings dataset']                   | ['Cycle-consistency for VQA']                                                              | ['Cycle-consistency approach is significantly more robust to linguistic variations']                                                                          |
+| paper_8  | ['VQA v2']                                           | ['Introduced an evaluation methodology for VQA to better diagnose cases of shortcut learning']                                                                     | ['Evaluating the use of shortcut learning using VQA-CounterExamples (VQACE)']            | ['Identification and assessment of multimodal shortcuts in VQA']                           | ['Models perform poorly and existing techniques to reduce biases are largely ineffective for multimodal shortcuts']                                           |
+| paper_9  | ['VQA-CP v2 and multiple OOD test sets']             | ['Proposed a benchmark for shortcut learning in VQA']                                                                                                              | ['Evaluating recent methods on various OOD test sets in the new benchmark']              | ['Language Prior Is Not the Only Shortcut benchmark for VQA']                              | ['Methods specifically designed for particular shortcuts fail to simultaneously generalize to varying OOD test sets']                                         |
+| paper_10 | ['VQA v2']                                           | ['Benchmark state-of-the-art VQA models against human-adversarial examples']                                                                                       | ['Performance on Adversarial VQA (AdVQA) benchmark']                                     | ['Human-Adversarial Visual Question Answering benchmark']                                  | ['AdVQA benchmark shows a wide range of state-of-the-art models perform poorly when evaluated on human-adversarial examples']                                 |
+
+MATCHES:
+Dataset Used: 
+Approach to Improve VQA Models: 
+Evaluation Methodology: 
+Proposed Solution: 
+Dataset Used: 
+Experimental Results: 

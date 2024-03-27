@@ -1,0 +1,27 @@
+ID: ec6033dc-4e55-4127-8cc2-6a23b64c181c
+
+GOLD TABLE:
+|           | Epochs   | Batch   |
+|----------:|:---------|:--------|
+| 222066580 | ['1500'] | ['4']   |
+| 250627826 | ['500']  | ['4']   |
+| 243832686 | ['500']  | ['16']  |
+| 235265851 | ['1500'] | ['16']  |
+
+GOLD SCHEMA:
+0: Epochs
+1: Batch
+
+PREDICTION PATH:../../metric_validation_0/ec6033dc-4e55-4127-8cc2-6a23b64c181c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Evaluation metrics: Probability of detection (Pd), False-alarm rate (Fa), and Intersection of union (IoU)   | Evaluation on public datasets and proposed self-developed datasets   |
+|:--------|:------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                     | ['N/A']                                                              |
+| paper_2 | ['N/A']                                                                                                     | ['N/A']                                                              |
+| paper_3 | ['N/A']                                                                                                     | ['N/A']                                                              |
+| paper_4 | [0.9182, 0.0121, 0.708]                                                                                     | ['CCD', 'RSD', 'NUDT-SIRST']                                         |
+
+MATCHES:
+Evaluation metrics: Probability of detection (Pd), False-alarm rate (Fa), and Intersection of union (IoU): 
+Evaluation on public datasets and proposed self-developed datasets: 

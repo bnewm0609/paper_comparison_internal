@@ -1,0 +1,33 @@
+ID: e017f23d-a90f-4443-a5ec-946869cb0a49
+
+GOLD TABLE:
+|           | Year     | Image Type             | Intra/Inter Mode Collapse   | Application Type    | Proposed Solution                            |
+|----------:|:---------|:-----------------------|:----------------------------|:--------------------|:---------------------------------------------|
+| 252846395 | ['2023'] | ['X-ray Images']       | ['Intra']                   | ['Image Synthesis'] | ['Self-attention and multi-scale gradients'] |
+| 204904838 | ['2021'] | ['Dermoscopic Images'] | ['Intra']                   | ['Image Synthesis'] | ['Self Attention']                           |
+| 244714924 | ['2021'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['SSIM loss']                                |
+| 232061669 | ['2020'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['VAEGAN']                                   |
+
+GOLD SCHEMA:
+0: Year
+1: Image Type
+2: Intra/Inter Mode Collapse
+3: Application Type
+4: Proposed Solution
+
+PREDICTION PATH:../../metric_validation_0/e017f23d-a90f-4443-a5ec-946869cb0a49/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Imbalanced datasets                                                   | Data Augmentation                                                           | Performance Evaluation Metrics                                                | Architecture Enhancement                                                                                  | Medical Imaging Applications                                                |
+|:--------|:----------------------------------------------------------------------|:----------------------------------------------------------------------------|:------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| paper_1 | ['Available in the domain of biomedical image analysis']              | ['Uses GANs to address the data limitation problem']                        | ['MS-SSIM and FID scores are used to evaluate diversity of synthetic images'] | ['MSG-SAGAN architecture proposed for attention-guided multi-scale gradient GAN']                         | ['Diversified X-ray image synthesis in biomedical image analysis']          |
+| paper_2 | ['Existing datasets for skin cancer classification are imbalanced']   | ['Utilizes GANs to generate a broader set of augmentations']                | ['Achieves an accuracy of 70.1% for skin lesion classification']              | ['Enhancement for the progressive generative adversarial networks (PGAN) using self-attention mechanism'] | ['Skin lesion classification and generating realistic skin lesion samples'] |
+| paper_3 | ['Scarcity of brain tumor Magnetic Resonance (MR) image datasets']    | ['Improves progressive growing of GANs to solve image blurriness problems'] | ['Exceeds other GAN-based methods in FID and MS-SSIM']                        | ['Improves Progressive Growing of GANs with a structural similarity loss function (PGGAN-SSIM)']          | ['Generating brain tumor Magnetic Resonance images']                        |
+| paper_4 | ['Dependence on the number of medical images available for training'] | ['Utilizes GANs to synthesize realistic brain MRI data']                    | ["Qualitative and quantitative analysis used to evaluate model's quality"]    | ['Innovative type of GAN, Deep Convolutional Refined Auto-Encoding Alpha GAN, proposed']                  | ['Synthesizing 3D brain Magnetic Resonance Imaging (MRI) data']             |
+
+MATCHES:
+Imbalanced datasets: 
+Data Augmentation: 
+Performance Evaluation Metrics: 
+Architecture Enhancement: 
+Medical Imaging Applications: 

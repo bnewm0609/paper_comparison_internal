@@ -1,0 +1,29 @@
+ID: f9504841-2129-417c-a504-7b2d57ca509b
+
+GOLD TABLE:
+|           | Team       | Task    |
+|----------:|:-----------|:--------|
+| 264441549 | ['BIT.UA'] | ['NER'] |
+| 264441337 | ['-']      | ['EL']  |
+| 264441481 | ['-']      | ['DI']  |
+| 264441503 | ['Fusion'] | ['NER'] |
+| 260514387 | ['-']      | ['EL']  |
+
+GOLD SCHEMA:
+0: Team
+1: Task
+
+PREDICTION PATH:../../metric_validation_0/f9504841-2129-417c-a504-7b2d57ca509b/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach to Procedure Recognition                                                          | Performance Metrics                                                                    |
+|:--------|:-------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|
+| Paper 1 | ['Transformer models with MCRF and augmentation']                                          | ['NER (subtask-1) with a score of 79.85%, subtask-2: 31.68%, subtask-3: 35.85%']       |
+| Paper 2 | ['Separate named entity recognition and entity linking modules using BERT-based models']   | ['0.71 F1 score on the NER subtask and 0.53 F1 score on the linking subtask']          |
+| Paper 3 | ['Fine-tuned transformers with domain-specific corpora and dictionary-based solution']     | ['0.5505 f1-score on the test set of the challenge']                                   |
+| Paper 4 | ['RoBERTa model pre-trained on biomedical and clinical data for named entity recognition'] | ['0.7568 micro-averaged F1 score on the NER sub-task and 0.5267 on the NORM sub-task'] |
+| Paper 5 | ['Description of the BioASQ challenge and the MedProcNER task']                            | ['Description of the challenge, no specific performance metrics provided']             |
+
+MATCHES:
+Approach to Procedure Recognition: 
+Performance Metrics: 

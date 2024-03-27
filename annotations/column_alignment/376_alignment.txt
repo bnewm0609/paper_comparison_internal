@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Attack techniques and countermeasures compared                                                                                                                 | Performance evaluation of countermeasures                                                                                                              |
+|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['RF-based detection of drones', 'N/A']                                                                                                                        | ['N/A', 'Sensitivity of detection at distances of hundreds of meters and accuracy of the overall detection system']                                    |
+| paper_2  | ['Impersonation and message spoofing of aeronautical datalink communications', 'AMS standard as authentication solution']                                      | ['Evaluation of the potential impact on aircraft safety and air traffic management', 'Analysis of real-world impact in terms of frequency congestion'] |
+| paper_3  | ['Attack on TPMS wireless communications interface', 'LFSR-based message encryption']                                                                          | ['Evaluation of the viability of incorporating a more secure TPMS protocol', 'Simulation on an inexpensive Arduino platform']                          |
+| paper_4  | ['Spoofing attack against FM-based indoor localization', 'Proposed defense method using signal analysis']                                                      | ['False negative rate of 3.9% and false alarm rate of 6.4%', 'N/A']                                                                                    |
+| paper_5  | ['GNSS signal spoofing', 'Software-Defined Radio GNSS Instrumentation for Spoofing Mitigation']                                                                | ['Case study budget analysis', 'N/A']                                                                                                                  |
+| paper_6  | ['Man-in-the-middle attack on Bluetooth pairing', 'N/A']                                                                                                       | ['N/A', 'N/A']                                                                                                                                         |
+| paper_7  | ['Impersonation of a mobile subscriber to send malicious SMS', 'N/A']                                                                                          | ['N/A', 'N/A']                                                                                                                                         |
+| paper_8  | ['Location leakage and service denial attacks on LTE', 'Countermeasures to resist specific attacks']                                                           | ['N/A', 'N/A']                                                                                                                                         |
+| paper_9  | ['Potential security threats to aeronautical surveillance system for drone delivery', 'Heterogeneous software defined radio framework for system integration'] | ['N/A', 'Real-time decoding of aircraft location']                                                                                                     |
+| paper_10 | ['Passive eavesdropping of Digital Enhanced Cordless Telecommunication voice communications', 'N/A']                                                           | ['N/A', 'N/A']                                                                                                                                         |
+| paper_11 | ['Eavesdropping attack on Near Field Communication', 'Proposed key agreement scheme using random bits transmission']                                           | ['High key generation rate of about 26 kbps', 'Immunity to eavesdropping attack']                                                                      |
+| paper_12 | ['Vulnerabilities in short-range wireless protocols for IoT', 'Reconfigurable IoT gateway based on a SDR platform']                                            | ['N/A', 'N/A']                                                                                                                                         |
+| paper_13 | ['Eavesdropping attacks on computer displays', 'Low-cost and mobile receiver system for long-distance eavesdropping']                                          | ['Reconstruction of display images from long distance', 'N/A']                                                                                         |
+| paper_14 | ['PHY based Jamming attacks against OFDM systems', 'Measurement study using SDR and comparison with known techniques']                                         | ['Deteriorating performance of jointly targeting CP and pilot symbols', 'Comparison with known jamming techniques']                                    |
+| paper_15 | ['PHY based Jamming attacks against OFDM systems', 'Measurement study using SDR and comparison with known techniques']                                         | ['Deteriorating performance of jointly targeting CP and pilot symbols', 'Comparison with known jamming techniques']                                    |
+| paper_16 | ['Cyber attacks on tactical radio networks', 'Test setup for cyber vulnerabilities and suggested solutions']                                                   | ['Versatility and adaptability of test setup for cyber vulnerabilities', 'Suggested solutions for identified problems']                                |
+| paper_17 | ['Physical-layer identification for UHF RFID tags', 'GenePrint prototype system for UHF passive tags']                                                         | ['High identification accuracy of 99.68%+', 'Resilience to feature replay attack']                                                                     |
+| paper_18 | ['PHY layer vulnerability analysis of 4G LTE downlink', 'Methodology and tools for PHY layer vulnerability testing using SDR']                                 | ['Resilience of synchronization signals (PSS/SSS) to interference', 'Severity analysis of control channel attacks for different LTE configurations']   |
+
+MATCHES:
+Attack techniques and countermeasures compared: 
+Performance evaluation of countermeasures: 

@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Deep Learning Techniques                                                                                                                                                        | Application Domain                                              |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------|
+| Paper 1  | ['Deep learning methods for perception, planning, localization, and control']                                                                                                   | ['Unmanned Aerial Vehicles (UAVs)']                             |
+| Paper 2  | ['Deep learning for autonomous planetary rover navigation']                                                                                                                     | ['Autonomous planetary rovers']                                 |
+| Paper 3  | ['Deep Neural Network, Convolutional Neural Network, Recurrent Neural Network, Auto-Encoder, Deep Belief Network, Generative Adversarial Network, Deep Reinforcement Learning'] | ['General']                                                     |
+| Paper 4  | ['Reinforcement Learning with deep learning techniques']                                                                                                                        | ['Reinforcement learning applications']                         |
+| Paper 5  | ['Deep Feedforward Neural Networks, Convolutional Neural Networks, Deep Belief Networks, Autoencoders, Long Short-Term Memory networks']                                        | ['General']                                                     |
+| Paper 6  | ['Convolutional and Recurrent Neural Networks, Deep Reinforcement Learning']                                                                                                    | ['Autonomous driving']                                          |
+| Paper 7  | ['Artificial Intelligence techniques for inertial sensing']                                                                                                                     | ['Inertial sensing']                                            |
+| Paper 8  | ['Deep learning methods for self-driving cars']                                                                                                                                 | ['Self-driving cars']                                           |
+| Paper 9  | ['Deep learning for localization and mapping']                                                                                                                                  | ['Localization and mapping']                                    |
+| Paper 10 | ['Convolutional Neural Network (CNN)']                                                                                                                                          | ['General']                                                     |
+| Paper 11 | ['Computer vision and machine learning (including deep learning) for assistive devices']                                                                                        | ['Assistive navigation for blind and visually impaired people'] |
+| Paper 12 | ['Artificial Neural Networks for spacecraft dynamics, navigation and control']                                                                                                  | ['Spacecraft dynamics control, guidance and navigation']        |
+| Paper 13 | ['Geometry-based methods and deep learning-based methods for autonomous UUV navigation']                                                                                        | ['Autonomous underwater vehicles (UUVs)']                       |
+| Paper 14 | ['Reinforcement Learning for autonomous UAV navigation']                                                                                                                        | ['Unmanned Aerial Vehicle (UAV) navigation']                    |
+| Paper 15 | ['Monocular and stereo-based image-based obstacle detection']                                                                                                                   | ['Obstacle detection for unmanned vehicles']                    |
+
+MATCHES:
+Deep Learning Techniques: 
+Application Domain: 

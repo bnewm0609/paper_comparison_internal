@@ -1,0 +1,27 @@
+ID: d6fc8459-4175-4fc1-90eb-25cf6c798a2a
+
+GOLD TABLE:
+|           | Dataset   | #C    |
+|----------:|:----------|:------|
+|   6143824 | ['FN']    | ['2'] |
+| 215754328 | ['HATE']  | ['2'] |
+|   1428702 | ['IMDB']  | ['2'] |
+|   5034059 | ['SST']   | ['2'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: #C
+
+PREDICTION PATH:../../metric_validation_0/d6fc8459-4175-4fc1-90eb-25cf6c798a2a/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Specific problems or challenges addressed (e.g. backdoors in pre-trained models, satire recognition)   | Evaluation methods and datasets used                                     |
+|:--------|:-------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|
+| paper_1 | ['General Natural Language Understanding']                                                             | ['Multi-task and transfer learning, Hand-crafted diagnostic test suite'] |
+| paper_2 | ['Sentiment Information in Unsupervised Vector-based Approaches']                                      | ['Small sentiment and subjectivity corpora']                             |
+| paper_3 | ['Satirical News Detection and Analysis']                                                              | ['Large satirical news dataset']                                         |
+| paper_4 | ['Security Threat of Downloading Untrusted Pre-trained Weights']                                       | ['Sentiment Classification, Toxicity Detection, Spam Detection']         |
+
+MATCHES:
+Specific problems or challenges addressed (e.g. backdoors in pre-trained models, satire recognition): 
+Evaluation methods and datasets used: 

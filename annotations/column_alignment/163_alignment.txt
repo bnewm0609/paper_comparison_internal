@@ -1,0 +1,33 @@
+ID: 771d725d-b9fa-4eb8-8659-97cd34d9ea52
+
+GOLD TABLE:
+|           | Network architecture                                               | Design objective                   | Proposed solution                                                                                                                            |
+|----------:|:-------------------------------------------------------------------|:-----------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| 216532330 | ['A satellite and a ground base station']                          | ['Task offloading rate']           | ["Design users' task offloading decision and resource allocation, and provide a solution by decomposing the problem into two sub-problems."] |
+| 249596274 | ['A satellite and multiple UAVs']                                  | ['Energy']                         | ["Jointly optimize the users' task offloading decision and resource allocation and propose a scheme based on double deep Q-learning."]       |
+| 232152950 | ['A satellite, multiple UAVs and multiple ground base stations']   | ['Profit of MEC service provider'] | ["Jointly optimize the users' task offloading decision and UAV placement and propose a two-stage algorithm."]                                |
+|  52022386 | ['MEC-enabled radio access network (RAN) with satellite backhaul'] | ['/']                              | ['Investigate two use cases for popular and personalized content delivery.']                                                                 |
+| 201069626 | ['MEC-enabled RAN with satellite and terrestrial backhaul']        | ['/']                              | ['Propose a content delivery strategy to achieve optimal traffic distribution among satellite and terrestrial backhaul links.']              |
+| 235814041 | ['MEC-enabled RAN with satellite backhaul']                        | ['/']                              | ['Propose a SR-based adaptive video streaming scheme.']                                                                                      |
+
+GOLD SCHEMA:
+0: Network architecture
+1: Design objective
+2: Proposed solution
+
+PREDICTION PATH:../../metric_validation_0/771d725d-b9fa-4eb8-8659-97cd34d9ea52/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Application Domain                                                                      | Key Technologies                                                                                | Optimization Technique                                                                                        |
+|:--------|:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Satellite IoT System with SWIPT and MEC']                                             | ['SWIPT, MEC, Full Duplex (FD), MIMO']                                                          | ['CPU Frequency optimization, Computation Task optimization, Power optimization, MEC task optimization']      |
+| paper_2 | ['MEC-Enabled Integrated Aerial-Terrestrial Vehicular Networks']                        | ['MEC, HAPs, LEO satellites, Reinforcement Learning']                                           | ['Reinforcement Learning for offloading and resource allocation, Deep Q-Learning, Double Deep Q-Learning']    |
+| paper_3 | ['Satellite-UAV-MEC Collaborative Architecture for Task Offloading']                    | ['MEC, UAVs, Vehicular Networks, SUM algorithm']                                                | ['SUM algorithm for UAV deployment and task offloading decision']                                             |
+| paper_4 | ['Satellite Support for Enhanced Mobile Broadband Content Delivery in 5G']              | ['5G, Satellite Communication, eMBB, DASH, MEC']                                                | ['Satellite links for offline multicasting, Real-time prefetching, QoE optimization']                         |
+| paper_5 | ['Satellite and Terrestrial Integrated 5G Networks for Layered Video Content Delivery'] | ['5G, Satellite and Terrestrial Integration, MEC, SVC']                                         | ['Dynamic selection of backhaul link for content delivery, Traffic offloading optimization, QoE improvement'] |
+| paper_6 | ['MEC-based QoE Optimization for Adaptive Video Streaming via Satellite Backhaul']      | ['Satellite Backhaul, MEC, Super-Resolution, Adaptive Video Streaming, Reinforcement Learning'] | ['SR-based adaptive video streaming, Pipelined processing, RL-based adaption algorithm']                      |
+
+MATCHES:
+Application Domain: 
+Key Technologies: 
+Optimization Technique: 

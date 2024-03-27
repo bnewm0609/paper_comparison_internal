@@ -1,0 +1,27 @@
+ID: 11798252-0e7b-4eb5-9ab0-881ae06ffa40
+
+GOLD TABLE:
+|           | Name            | Size        | Dim      |
+|----------:|:----------------|:------------|:---------|
+|  15023467 | ['ForestCover'] | ['286,048'] | ['10']   |
+|   6505449 | ['Creditfraud'] | ['284,807'] | ['29']   |
+| 220891274 | ['stream51']    | ['150,736'] | ['2048'] |
+
+GOLD SCHEMA:
+0: Name
+1: Size
+2: Dim
+
+PREDICTION PATH:../../metric_validation_0/11798252-0e7b-4eb5-9ab0-881ae06ffa40/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method for addressing class imbalance              | Time complexity                                | Application domain                                             |
+|:--------|:---------------------------------------------------|:-----------------------------------------------|:---------------------------------------------------------------|
+| Paper 1 | ['Probability calibration with undersampling']     | ['Not specified']                              | ['Unbalanced classification']                                  |
+| Paper 2 | ['Isolation of anomalies']                         | ['Linear time complexity with a low constant'] | ['Anomaly detection']                                          |
+| Paper 3 | ['Streaming classification and novelty detection'] | ['Not specified']                              | ['Streaming classification and novelty detection from videos'] |
+
+MATCHES:
+Method for addressing class imbalance: 
+Time complexity: 
+Application domain: 

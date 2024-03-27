@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of Scene Database   | Semantic Categories                                | State-of-the-Art Algorithms for Scene Classification   |
+|:--------|:-------------------------|:---------------------------------------------------|:-------------------------------------------------------|
+| paper_1 | ['N/A']                  | ['N/A']                                            | ['N/A']                                                |
+| paper_2 | ['N/A']                  | ['N/A']                                            | ['Varma and Ray method with SVM classifier']           |
+| paper_3 | ['N/A']                  | ['Challenging dataset of 200 bird species']        | ['N/A']                                                |
+| paper_4 | ['10 million images']    | ['High-diversity categories of scene photographs'] | ['Convolutional Neural Networks (CNNs)']               |
+| paper_5 | ['N/A']                  | ['N/A']                                            | ['N/A']                                                |
+| paper_6 | ['N/A']                  | ['Non-expert sketches of everyday objects']        | ['Multi-class support vector machines']                |
+
+MATCHES:
+Size of Scene Database: 
+Semantic Categories: 
+State-of-the-Art Algorithms for Scene Classification: 

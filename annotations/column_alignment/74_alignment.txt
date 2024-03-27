@@ -1,0 +1,60 @@
+ID: e741559d-c35c-471b-b496-d3caa0771669
+
+GOLD TABLE:
+|           | Year     | Framework             | Problem                | Link                                                                    |
+|----------:|:---------|:----------------------|:-----------------------|:------------------------------------------------------------------------|
+| 224280674 | ['2020'] | ['Keras']             | ['Road Traffic Speed'] | ['https://github.com/jillbetty001/ST-CGA']                              |
+| 219966767 | ['2020'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/lehaifeng/T-GCN/tree/master/A3T']                  |
+| 210164865 | ['2020'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/fanyang01/relational-ssm']                         |
+| 218869770 | ['2020'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/nnzhan/MTGNN']                                     |
+| 215814229 | ['2020'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/tanwimallick/TL-DCRNN']                            |
+| 227061521 | ['2020'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/Fanglanc/DKFN']                                    |
+| 224280664 | ['2020'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/RobinLu1209/STAG-GCN']                             |
+| 229704303 | ['2020'] | ['TensorFlow, Keras'] | ['Road Traffic Speed'] | ['https://github.com/RomainLITUD/DGCN_traffic_forecasting']             |
+| 229214777 | ['2020'] | ['PyTorch']           | ['Road Travel Time']   | ['https://github.com/YibinShen/TTPNet']                                 |
+| 221191112 | ['2020'] | ['TensorFlow']        | ['Time of Arrival']    | ['https://github.com/didi/heteta']                                      |
+| 173990443 | ['2019'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/nnzhan/Graph-WaveNet']                             |
+| 209376429 | ['2019'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/sshleifer/Graph-WaveNet']                          |
+|  57189442 | ['2019'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/lehaifeng/T-GCN']                                  |
+|  54434652 | ['2019'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/zhiyongc/Graph_Convolutional_LSTM']                |
+| 201698385 | ['2019'] | ['MXNet']             | ['Road Traffic Speed'] | ['https://github.com/TobiasSkovgaardJepsen/relational-fusion-networks'] |
+|   3508727 | ['2018'] | ['PyTorch']           | ['Road Traffic Speed'] | ['https://github.com/chnsh/DCRNN_PyTorch']                              |
+|   3973810 | ['2018'] | ['MXNet']             | ['Road Traffic Speed'] | ['https://github.com/jennyzhang0215/GaAN']                              |
+|  49312909 | ['2018'] | ['TensorFlow']        | ['Road Traffic Speed'] | ['https://github.com/JingqingZ/BaiduTraffic']                           |
+
+GOLD SCHEMA:
+0: Year
+1: Framework
+2: Problem
+3: Link
+
+PREDICTION PATH:../../metric_validation_0/e741559d-c35c-471b-b496-d3caa0771669/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | prediction horizon      | forecasting accuracy                                       | evaluation metrics   | real-world applications                     |
+|:---------|:------------------------|:-----------------------------------------------------------|:---------------------|:--------------------------------------------|
+| paper_1  | ['1 hour']              | ['improvement over state-of-the-art']                      | ['MAE', 'RMSE']      | ['traffic prediction']                      |
+| paper_2  | ['15 minutes']          | ['consistent improvement of 12% - 15%']                    | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_3  | ['15 minutes']          | ['consistent improvement of 12% - 15%']                    | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_4  | ['5 minutes to 1 hour'] | ['substantial gains over many state-of-the-art baselines'] | ['MAE', 'RMSE']      | ['traffic flow forecasting']                |
+| paper_5  | ['1 hour']              | ['effective and robust performance']                       | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_6  | ['N/A']                 | ['N/A']                                                    | ['N/A']              | ['system dynamics modeling']                |
+| paper_7  | ['N/A']                 | ['on-par performance with other approaches']               | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_8  | ['30 minutes']          | ['significant improvement over baseline methods']          | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_9  | ['5 minutes']           | ['superiority over baseline models']                       | ['MAE', 'RMSE']      | ['traffic prediction']                      |
+| paper_10 | ['15 minutes']          | ['outperforms state-of-the-art baselines']                 | ['MAE', 'RMSE']      | ['traffic flow forecasting']                |
+| paper_11 | ['15 minutes']          | ['precise prediction']                                     | ['MAE', 'RMSE']      | ['traffic forecasting']                     |
+| paper_12 | ['1 hour']              | ['better accuracy']                                        | ['MAE', 'RMSE']      | ['travel time prediction']                  |
+| paper_13 | ['N/A']                 | ['state-of-the-art results']                               | ['MAE', 'RMSE']      | ['estimated time of arrival']               |
+| paper_14 | ['1 hour']              | ['superior performance']                                   | ['MAE', 'RMSE']      | ['spatial-temporal graph modeling']         |
+| paper_15 | ['1 hour']              | ['reduction in mean absolute error']                       | ['MAE', 'RMSE']      | ['traffic prediction']                      |
+| paper_16 | ['1 hour']              | ['outperforms baseline methods']                           | ['MAE', 'RMSE']      | ['traffic learning and forecasting']        |
+| paper_17 | ['N/A']                 | ['state-of-the-art results']                               | ['MAE', 'RMSE']      | ['machine learning tasks in road networks'] |
+| paper_18 | ['1 hour']              | ['state-of-the-art results']                               | ['MAE', 'RMSE']      | ['traffic speed forecasting']               |
+| paper_19 | ['N/A']                 | ['effective framework']                                    | ['MAE', 'RMSE']      | ['traffic prediction']                      |
+
+MATCHES:
+prediction horizon: 
+forecasting accuracy: 
+evaluation metrics: 
+real-world applications: 

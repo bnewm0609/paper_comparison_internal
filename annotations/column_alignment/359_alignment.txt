@@ -1,0 +1,35 @@
+ID: d0b0ef97-c857-4122-905f-e0eda5f7bd39
+
+GOLD TABLE:
+|           | ID     | Misinformation Target                                                            |
+|----------:|:-------|:---------------------------------------------------------------------------------|
+| 229064299 | ['6']  | ['The COVID-19 vaccine contains tissue from aborted fetuses.']                   |
+| 210886197 | ['16'] | ['The COVID-19 vaccine should not be taken by people who are allergic to eggs.'] |
+| 220251733 | ['13'] | ['The COVID-19 vaccine can increase risk for other illnesses.']                  |
+
+GOLD SCHEMA:
+0: ID
+1: Misinformation Target
+
+PREDICTION PATH:../../metric_validation_0/d0b0ef97-c857-4122-905f-e0eda5f7bd39/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Misinformation vs Treatment   | Community Impact vs Clinical Efficacy   |
+|:---------|:------------------------------|:----------------------------------------|
+| paper_1  | ['Misinformation']            | ['Community Impact']                    |
+| paper_2  | ['Misinformation']            | ['Community Impact']                    |
+| paper_3  | ['Misinformation']            | ['Community Impact']                    |
+| paper_4  | ['Misinformation']            | ['Community Impact']                    |
+| paper_5  | ['Misinformation']            | ['Community Impact']                    |
+| paper_6  | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_7  | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_8  | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_9  | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_10 | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_11 | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_12 | ['Treatment']                 | ['Clinical Efficacy']                   |
+| paper_13 | ['Treatment']                 | ['Clinical Efficacy']                   |
+
+MATCHES:
+Misinformation vs Treatment: 
+Community Impact vs Clinical Efficacy: 

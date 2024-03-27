@@ -1,0 +1,41 @@
+ID: 4c143552-790b-46bb-9463-587a756d69e0
+
+GOLD TABLE:
+|           | # Cit.   | Application                                | Input Data         | AI model(s)                             | XAI method(s)                        | Dataset(s)                        |
+|----------:|:---------|:-------------------------------------------|:-------------------|:----------------------------------------|:-------------------------------------|:----------------------------------|
+| 244662871 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['RF, GBDT']                            | ['SHAP, LIME']                       | ['Sylhet Diabetes datasetsylhet'] |
+| 239039896 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['TabNet, XGBoost, LightGBM, CatBoost'] | ['SHAP (all), attention (TabNet)']   | ['Retrospective study']           |
+| 233434246 | ['1']    | ['Voice pathology assessment']             | ['Audio features'] | ['ExtraTrees']                          | ['SHAP,Morris sensitivity analysis'] | ['Pilot study']                   |
+| 245387254 | ['0']    | ['Lung cancer life expectancy prediction'] | ['EHR']            | ['RF']                                  | ['LIME, SHAP']                       | ['Simulacrum datasetsimulacrum']  |
+| 236980957 | ['9']    | ['Lung cancer mortality prediction']       | ['EHR']            | ['XGBoost']                             | ['LIME, SHAP, Anchors']              | ['Simulacrum dataset']            |
+| 231639221 | ['0']    | ['ICU mortality risk prediction']          | ['EHR']            | ['RF, MLP']                             | ['SHAP']                             | ['MIMIC-III']                     |
+| 230997466 | ['3']    | ['Eye state detection']                    | ['EEG']            | ['XGBoost, DNN']                        | ['SHAP']                             | ['Pilot study']                   |
+
+GOLD SCHEMA:
+0: # Cit.
+1: Application
+2: Input Data
+3: AI model(s)
+4: XAI method(s)
+5: Dataset(s)
+
+PREDICTION PATH:../../metric_validation_0/4c143552-790b-46bb-9463-587a756d69e0/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods used for interpretability                                                       | Purpose of interpretability                                                                                       | Importance of interpretability                                                                                                    | Challenges in interpretability                    | Assessment of interpretability                                                             | Implications of interpretability                                                                                                       |
+|:--------|:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|:-------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Deep Neural Network (DNN) model']                                                     | ['To investigate how a DNN model makes a prediction, and how that prediction can be interpreted in healthcare']   | ['Understanding the underlying mechanism of the disease and prescribing treatments']                                              | ['The struggle to interpret black box models']    | ['Investigating how a DNN model makes a prediction and interpreting it']                   | ['Employing more advanced models in healthcare solutions without any concern of sacrificing the interpretation']                       |
+| paper_2 | ['SHAP and LIME IML models for RF and GB algorithms']                                   | ['To show the benefits of IML over a healthcare case study, particularly for diagnosing diabetes']                | ['Transparency of how the inner workings of ML lead to certain decisions']                                                        | ['ML suffers from opacity']                       | ['Employing SHAP and LIME IML models for RF and GB algorithms and evaluating the results'] | ['Detailed interpretability while maintaining accuracy']                                                                               |
+| paper_3 | ['TabNet, SHapley Additive exPlanations (SHAP), and model-specific feature importance'] | ['To determine attributes that contribute to making predictions of the aggravation of type 2 diabetes']           | ['Crucial for medical researchers and physicians to understand the underlying mechanism of the disease and prescribe treatments'] | ['The challenge in understanding complex models'] | ['Using both model-agnostic (SHAP) and model-specific (TabNet) interpretation methods']    | ['Providing useful information regarding which items in a biochemical analysis affect the aggravation of type 2 diabetes']             |
+| paper_4 | ['Machine learning methods, XAI, and feature interpretability analysis']                | ['To accurately discriminate between different types of vocal cord pathologies']                                  | ['Allow clinicians to use the features marked as important to clinical care and planning']                                        | ['N/A']                                           | ['Applying XAI and feature interpretability analysis']                                     | ['Improving early detection in a patient centered care']                                                                               |
+| paper_5 | ['LIME and SHAP algorithms']                                                            | ['To enable XAI data analytics for domain experts without requiring explicit programming skills']                 | ['Reveal deep insights from data']                                                                                                | ['N/A']                                           | ['Supporting data analytics with multiple feature attribution algorithms']                 | ['Providing researchers and domain experts with a tool that both concatenates flexibility and transferability of medical sub-domains'] |
+| paper_6 | ['SHAP, LIME, and Scoped Rules']                                                        | ['To inform clinical decision making in healthcare']                                                              | ['Informing clinical decision making in healthcare']                                                                              | ['Aberrations in shared feature importance']      | ['Comparing features of EHRs in terms of their prediction importance']                     | ['Comparing features of EHRs in terms of their prediction importance']                                                                 |
+| paper_7 | ['Logistic regression, decision trees, random forests, and multilayer perceptrons']     | ['To predict mortality risk for patients discharged from the ICU and enable clinicians to gain further insights'] | ['Less amenable to interpretation and clinicians unable to gain further insights']                                                | ['Less amenable to interpretation']               | ['Performing an extensive benchmarking study']                                             | ['Potential for clinicians to interpret risk predictions']                                                                             |
+
+MATCHES:
+Methods used for interpretability: 
+Purpose of interpretability: 
+Importance of interpretability: 
+Challenges in interpretability: 
+Assessment of interpretability: 
+Implications of interpretability: 

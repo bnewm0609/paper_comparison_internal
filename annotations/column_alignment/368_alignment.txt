@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Dimension 1:                                                 | Dimension 2:                                                 |
+|:---------|:-------------------------------------------------------------|:-------------------------------------------------------------|
+| Paper 1  | ['<relevant value to the dimension 1 grounded on Paper 1>']  | ['<relevant value to the dimension 2 grounded on Paper 1>']  |
+| Paper 2  | ['<relevant value to the dimension 1 grounded on Paper 2>']  | ['<relevant value to the dimension 2 grounded on Paper 2>']  |
+| Paper 3  | ['<relevant value to the dimension 1 grounded on Paper 3>']  | ['<relevant value to the dimension 2 grounded on Paper 3>']  |
+| Paper 4  | ['<relevant value to the dimension 1 grounded on Paper 4>']  | ['<relevant value to the dimension 2 grounded on Paper 4>']  |
+| Paper 5  | ['<relevant value to the dimension 1 grounded on Paper 5>']  | ['<relevant value to the dimension 2 grounded on Paper 5>']  |
+| Paper 6  | ['<relevant value to the dimension 1 grounded on Paper 6>']  | ['<relevant value to the dimension 2 grounded on Paper 6>']  |
+| Paper 7  | ['<relevant value to the dimension 1 grounded on Paper 7>']  | ['<relevant value to the dimension 2 grounded on Paper 7>']  |
+| Paper 8  | ['<relevant value to the dimension 1 grounded on Paper 8>']  | ['<relevant value to the dimension 2 grounded on Paper 8>']  |
+| Paper 9  | ['<relevant value to the dimension 1 grounded on Paper 9>']  | ['<relevant value to the dimension 2 grounded on Paper 9>']  |
+| Paper 10 | ['<relevant value to the dimension 1 grounded on Paper 10>'] | ['<relevant value to the dimension 2 grounded on Paper 10>'] |
+| Paper 11 | ['<relevant value to the dimension 1 grounded on Paper 11>'] | ['<relevant value to the dimension 2 grounded on Paper 11>'] |
+| Paper 12 | ['<relevant value to the dimension 1 grounded on Paper 12>'] | ['<relevant value to the dimension 2 grounded on Paper 12>'] |
+| Paper 13 | ['<relevant value to the dimension 1 grounded on Paper 13>'] | ['<relevant value to the dimension 2 grounded on Paper 13>'] |
+| Paper 14 | ['<relevant value to the dimension 1 grounded on Paper 14>'] | ['<relevant value to the dimension 2 grounded on Paper 14>'] |
+| Paper 15 | ['<relevant value to the dimension 1 grounded on Paper 15>'] | ['<relevant value to the dimension 2 grounded on Paper 15>'] |
+| Paper 16 | ['<relevant value to the dimension 1 grounded on Paper 16>'] | ['<relevant value to the dimension 2 grounded on Paper 16>'] |
+| Paper 17 | ['<relevant value to the dimension 1 grounded on Paper 17>'] | ['<relevant value to the dimension 2 grounded on Paper 17>'] |
+| Paper 18 | ['<relevant value to the dimension 1 grounded on Paper 18>'] | ['<relevant value to the dimension 2 grounded on Paper 18>'] |
+
+MATCHES:
+Dimension 1:: 
+Dimension 2:: 

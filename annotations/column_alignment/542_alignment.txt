@@ -1,0 +1,33 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Variation Handling                                                      | Dataset Limitations                                                         | Complexity of Problem                                                                                    | Evaluation Metrics                                                                                       | Performance Baselines                                                  |
+|:--------|:------------------------------------------------------------------------|:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------|
+| paper_1 | large intra-class variations, diverse variations in viewpoint and scale | limited to a small amount of image pairs with similar viewpoints and scales | remains a challenging problem in computer vision                                                         | results of recent methods on our new dataset as baselines                                                | Provides the results of recent methods on our new dataset as baselines |
+| paper_2 | large variation in shape between dog breeds, significant occlusion      | low quality of internet images                                              | a challenging problem due to significant occlusion and large shape variation between dog breeds          | demonstrate results on the Stanford Dog dataset                                                          | N/A                                                                    |
+| paper_3 | large variety in face appearance, pose, expression, ethnicity, gender   | limited annotated facial landmarks, databases limited to frontal views      | a crucial step in face recognition tasks, datasets are limited to frontal views or controlled conditions | face alignment is a crucial step, using landmark localization for geometric face normalization           | Well suited to train and test algorithms for multi-view face detection |
+| paper_4 | much more diverse animals than the existing datasets                    | lack of large scale animal keypoint dataset with ground truth annotations   | studied the problem of localizing a generic set of keypoints across multiple quadruped animal species    | benchmark the dataset with a state-of-the-art deep learning model for different keypoint detection tasks | Experimental results showed the effectiveness of the dataset           |
+
+MATCHES:
+Variation Handling: 
+Dataset Limitations: 
+Complexity of Problem: 
+Evaluation Metrics: 
+Performance Baselines: 

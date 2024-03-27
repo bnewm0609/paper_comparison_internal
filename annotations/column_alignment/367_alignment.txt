@@ -1,0 +1,36 @@
+ID: d0b0ef97-c857-4122-905f-e0eda5f7bd39
+
+GOLD TABLE:
+|           | ID     | Misinformation Target                                                            |
+|----------:|:-------|:---------------------------------------------------------------------------------|
+| 229064299 | ['6']  | ['The COVID-19 vaccine contains tissue from aborted fetuses.']                   |
+| 210886197 | ['16'] | ['The COVID-19 vaccine should not be taken by people who are allergic to eggs.'] |
+| 220251733 | ['13'] | ['The COVID-19 vaccine can increase risk for other illnesses.']                  |
+
+GOLD SCHEMA:
+0: ID
+1: Misinformation Target
+
+PREDICTION PATH:../../metric_validation_0/d0b0ef97-c857-4122-905f-e0eda5f7bd39/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | content moderation                                                                       | myth-busting                                                                        | education                                                                         |
+|:---------|:-----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| paper_1  | ['The study does not provide information about specific content moderation strategies.'] | ['The study does not provide information about specific myth-busting initiatives.'] | ['The study mentions a focus on education as a method to combat misinformation.'] |
+| paper_2  | ['The study does not provide information about specific content moderation strategies.'] | ['The study does not provide information about specific myth-busting initiatives.'] | ['The study mentions a focus on education as a method to combat misinformation.'] |
+| paper_3  | ['The study does not provide information about specific content moderation strategies.'] | ['The study does not provide information about specific myth-busting initiatives.'] | ['The study mentions a focus on education as a method to combat misinformation.'] |
+| paper_4  | ['The study does not provide information about specific content moderation strategies.'] | ['The study does not provide information about specific myth-busting initiatives.'] | ['The study mentions a focus on education as a method to combat misinformation.'] |
+| paper_5  | ['The study does not provide information about specific content moderation strategies.'] | ['The study does not provide information about specific myth-busting initiatives.'] | ['The study mentions a focus on education as a method to combat misinformation.'] |
+| paper_6  | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_7  | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_8  | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_9  | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_10 | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_11 | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_12 | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+| paper_13 | ['N/A - The paper is not about misinformation']                                          | ['N/A - The paper is not about misinformation']                                     | ['N/A - The paper is not about misinformation']                                   |
+
+MATCHES:
+content moderation: 
+myth-busting: 
+education: 

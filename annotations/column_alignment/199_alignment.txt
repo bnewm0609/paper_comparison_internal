@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Technique for binary code authorship identification                                                                                                                                                                                                                                           | Accuracy of binary code authorship identification               |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------|
+| paper_1 | ['A finer-grained technique that determines the author of each basic block using a new evaluation method.']                                                                                                                                                                                   | ['52% among 282 authors']                                       |
+| paper_2 | ['A machine learning approach that uses a novel set of features including ones obtained by decompiling executable binaries to source code, adapting a powerful set of techniques from the domain of source code authorship attribution, and stylistic representations embedded in assembly.'] | ['Up to 96% with 100 programmers and 83% with 600 programmers'] |
+
+MATCHES:
+Technique for binary code authorship identification: 
+Accuracy of binary code authorship identification: 

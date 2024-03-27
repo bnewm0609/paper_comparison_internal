@@ -1,0 +1,29 @@
+ID: b1eaa703-c651-4cf6-a9c5-00648d6b5fb8
+
+GOLD TABLE:
+|           | Title                                                                             | Year     | Key Contributions                                                                                                                                                                                                                                                                                    |
+|----------:|:----------------------------------------------------------------------------------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 204838141 | ['Mobile Edge Computing in Unmanned Aerial Vehicle Networks']                     | ['2019'] | ['The paper presents three UEC architectures based on the role of UAVs in UEC. It provides a brief survey on computational offloading and resource allocation in UEC.']                                                                                                                              |
+| 237598052 | ['Energy Efficient UAV-Enabled Mobile Edge Computing for IoT Devices: A Review']  | ['2021'] | ['The paper presents a brief survey on UEC networks with a focus on energy efficiency. It introduces basic terminologies and architectures used in UEC. It also presents various techniques and challenges related to computational offloading and a brief overview of resource management in UEC.'] |
+| 245165746 | ['UAV-Enabled Mobile Edge-Computing for IoT Based on AI: A Comprehensive Review'] | ['2021'] | ['This paper presents a review on deep learning and machine learning techniques used in various application of UEC.']                                                                                                                                                                                |
+| 248132152 | ['UAV-Enhanced Edge Intelligence: A Survey']                                      | ['2022'] | ['The paper introduces and presents various applications of UAV-enhanced edge intelligence systems. It also discusses some challenges and future research directions for UAV-enhanced Edge Intelligent systems.']                                                                                    |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Key Contributions
+
+PREDICTION PATH:../../metric_validation_0/b1eaa703-c651-4cf6-a9c5-00648d6b5fb8/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Technology Focus                                                 | Application Focus                                                                                            | Future Research Directions                                                                |
+|:--------|:-----------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
+| paper_1 | ['UAV-enabled mobile edge computing architectures']              | ['Improving computation performance and decreasing execution latency']                                       | ['Clarification of implementation issues, discussion of key challenges, and open issues'] |
+| paper_2 | ['UAV-enabled MEC and energy-efficient computation offloading']  | ['Offloading heavy computation tasks for IoT devices']                                                       | ['Optimization of resources and energy-aware communication and computation']              |
+| paper_3 | ['UAV technology applications in AI-assisted MEC architectures'] | ['Meeting limitations related to latency, task offloading, energy demand, and security in IoT applications'] | ['Advantages and critical challenges of UAV-enabled MEC and AI applications']             |
+| paper_4 | ['UAV-enhanced edge intelligence systems']                       | ['Bringing intelligent cloud services closer to end customers and better coverage using UAVs']               | ['Challenges and future research directions for UAV-enhanced edge intelligence systems']  |
+
+MATCHES:
+Technology Focus: 
+Application Focus: 
+Future Research Directions: 

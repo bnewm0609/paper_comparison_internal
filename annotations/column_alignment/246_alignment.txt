@@ -1,0 +1,29 @@
+ID: b1eaa703-c651-4cf6-a9c5-00648d6b5fb8
+
+GOLD TABLE:
+|           | Title                                                                             | Year     | Key Contributions                                                                                                                                                                                                                                                                                    |
+|----------:|:----------------------------------------------------------------------------------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 204838141 | ['Mobile Edge Computing in Unmanned Aerial Vehicle Networks']                     | ['2019'] | ['The paper presents three UEC architectures based on the role of UAVs in UEC. It provides a brief survey on computational offloading and resource allocation in UEC.']                                                                                                                              |
+| 237598052 | ['Energy Efficient UAV-Enabled Mobile Edge Computing for IoT Devices: A Review']  | ['2021'] | ['The paper presents a brief survey on UEC networks with a focus on energy efficiency. It introduces basic terminologies and architectures used in UEC. It also presents various techniques and challenges related to computational offloading and a brief overview of resource management in UEC.'] |
+| 245165746 | ['UAV-Enabled Mobile Edge-Computing for IoT Based on AI: A Comprehensive Review'] | ['2021'] | ['This paper presents a review on deep learning and machine learning techniques used in various application of UEC.']                                                                                                                                                                                |
+| 248132152 | ['UAV-Enhanced Edge Intelligence: A Survey']                                      | ['2022'] | ['The paper introduces and presents various applications of UAV-enhanced edge intelligence systems. It also discusses some challenges and future research directions for UAV-enhanced Edge Intelligent systems.']                                                                                    |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Key Contributions
+
+PREDICTION PATH:../../metric_validation_0/b1eaa703-c651-4cf6-a9c5-00648d6b5fb8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | MEC Architectures                                                             | MEC Benefits                                                                       | MEC Offloading Techniques                                                                    |
+|:--------|:------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
+| paper_1 | ['Three UAV-enabled MEC architectures for unmanned aerial vehicle networks.'] | ['Improving computation performance and decreasing execution latency.']            | ['N/A']                                                                                      |
+| paper_2 | ['UAV-enabled MEC architectures for IoT devices.']                            | ['Reducing energy consumption and execution delay in ground mobile users.']        | ['Mobile edge computation offloading working and different access schemes.']                 |
+| paper_3 | ['UAV-enabled MEC architectures for IoT applications and AI systems.']        | ['Addressing computation-intensive offloading and latency issues in IoT devices.'] | ['Deep learning (DL) and machine learning (ML) techniques for meeting various limitations.'] |
+| paper_4 | ['UAV-enhanced edge intelligence systems.']                                   | ['Providing line-of-sight communication links and better coverage.']               | ['N/A']                                                                                      |
+
+MATCHES:
+MEC Architectures: 
+MEC Benefits: 
+MEC Offloading Techniques: 

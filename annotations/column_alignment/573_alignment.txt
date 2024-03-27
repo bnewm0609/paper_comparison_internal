@@ -1,0 +1,27 @@
+ID: d6fc8459-4175-4fc1-90eb-25cf6c798a2a
+
+GOLD TABLE:
+|           | Dataset   | #C    |
+|----------:|:----------|:------|
+|   6143824 | ['FN']    | ['2'] |
+| 215754328 | ['HATE']  | ['2'] |
+|   1428702 | ['IMDB']  | ['2'] |
+|   5034059 | ['SST']   | ['2'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: #C
+
+PREDICTION PATH:../../metric_validation_0/d6fc8459-4175-4fc1-90eb-25cf6c798a2a/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Unsupervised learning   | Sentiment analysis                                                                                                                                                      |
+|:--------|:------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                 | ['N/A']                                                                                                                                                                 |
+| paper_2 | ['N/A']                 | ['Model uses supervised techniques to learn word vectors capturing sentiment content. Outperforms several previously introduced methods for sentiment classification.'] |
+| paper_3 | ['N/A']                 | ['N/A']                                                                                                                                                                 |
+| paper_4 | ['N/A']                 | ['Model proposes attacks on sentiment classification and shows that they pose a serious threat. Also outlines practical defenses against such attacks.']                |
+
+MATCHES:
+Unsupervised learning: 
+Sentiment analysis: 

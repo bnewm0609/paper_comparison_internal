@@ -1,0 +1,23 @@
+ID: ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f
+
+GOLD TABLE:
+|           | Category            | N      |
+|----------:|:--------------------|:-------|
+|  19355285 | ['Placebo-Control'] | ['4']  |
+| 222081054 | ['Placebo Study']   | ['12'] |
+
+GOLD SCHEMA:
+0: Category
+1: N
+
+PREDICTION PATH:../../metric_validation_0/ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Primary Focus                                                 | Methodology                                                                                                              |
+|:--------|:--------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Breathing interventions for stress reduction']              | ['Randomized placebo-controlled trial with 32 users']                                                                    |
+| Paper 2 | ['Exploration of reactions to unexpected autonomous driving'] | ['Thematic analysis of real-world experience reports and think-aloud study with 26 participants in a driving simulator'] |
+
+MATCHES:
+Primary Focus: 
+Methodology: 

@@ -1,0 +1,40 @@
+ID: 15cb9496-d480-4d44-9d0a-de9f6c7a8123
+
+GOLD TABLE:
+|           | Tasks                    | Dataset           | Graphs    | Features   |
+|----------:|:-------------------------|:------------------|:----------|:-----------|
+| 202572927 | ['Node Classification']  | ['Tree-Grid']     | ['1']     | ['10']     |
+| 237347079 | ['Node Classification']  | ['Syn-Cora']      | ['1']     | ['1,433']  |
+| 226281363 | ['Graph Classification'] | ['BA-2motifs']    | ['1,000'] | ['10']     |
+| 236980318 | ['Graph Classification'] | ['Infection']     | ['10']    | ['2']      |
+| 229923402 | ['Graph Classification'] | ['Graph-Twitter'] | ['6,940'] | ['768']    |
+|  19990980 | ['Graph Classification'] | ['MUTAG']         | ['188']   | ['14']     |
+
+GOLD SCHEMA:
+0: Tasks
+1: Dataset
+2: Graphs
+3: Features
+
+PREDICTION PATH:../../metric_validation_0/15cb9496-d480-4d44-9d0a-de9f6c7a8123/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Benchmark types                                                                                | Evaluation metrics                                                                                  | Comparison with baselines                                          | Pitfalls in evaluation                                                                                                 |
+|:---------|:-----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                        | ['N/A']                                                                                             | ['N/A']                                                            | ['N/A']                                                                                                                |
+| paper_2  | ['Taxonomic Survey']                                                                           | ['Unified and taxonomic view of current GNN explainability methods']                                | ['GNN explainability methods']                                     | ['N/A']                                                                                                                |
+| paper_3  | ['Taxonomic Survey']                                                                           | ['Unified and taxonomic view of current GNN explainability methods']                                | ['GNN explainability methods']                                     | ['N/A']                                                                                                                |
+| paper_4  | ['Taxonomic Survey']                                                                           | ['Unified and taxonomic view of current GNN explainability methods']                                | ['GNN explainability methods']                                     | ['N/A']                                                                                                                |
+| paper_5  | ['Synthetic and real-world graphs']                                                            | ['Explanation accuracy']                                                                            | ['Alternative baseline approaches']                                | ['N/A']                                                                                                                |
+| paper_6  | ['Synthetic and real-world graphs']                                                            | ['Explanation accuracy']                                                                            | ['Alternative baseline approaches']                                | ['N/A']                                                                                                                |
+| paper_7  | ['Synthetic and real-world graphs']                                                            | ['Explanation accuracy']                                                                            | ['Alternative baseline approaches']                                | ['N/A']                                                                                                                |
+| paper_8  | ['Synthetic and real-world graphs']                                                            | ['Explanation accuracy']                                                                            | ['Alternative baseline approaches']                                | ['N/A']                                                                                                                |
+| paper_9  | ['Real-world and synthetic datasets']                                                          | ['Interpretable similarity module in terms of both node similarity and local structure similarity'] | ['Nearest labeled nodes found by interpretable similarity module'] | ['N/A']                                                                                                                |
+| paper_10 | ['Real-world and synthetic datasets']                                                          | ['Generalizability, AUC']                                                                           | ['PGExplainer has better generalization ability']                  | ['N/A']                                                                                                                |
+| paper_11 | ['Pattern detection, community detection, handling negative evidence and gradient saturation'] | ['N/A']                                                                                             | ['N/A']                                                            | ['First training a GNN, then generating explanations, and finally comparing those explanations with the ground truth'] |
+
+MATCHES:
+Benchmark types: 
+Evaluation metrics: 
+Comparison with baselines: 
+Pitfalls in evaluation: 

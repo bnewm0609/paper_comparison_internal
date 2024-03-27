@@ -1,0 +1,45 @@
+ID: 92039bd0-9ed0-44b5-b2bc-a298c985d3e1
+
+GOLD TABLE:
+|           | Arch     | Domain        | Embedding Network           | Extractor Network        | Remarks                                          |
+|----------:|:---------|:--------------|:----------------------------|:-------------------------|:-------------------------------------------------|
+| 210473431 | ['CNN']  | ['Spatial']   | ['Channel Coding & CNN']    | ['Channel coding & CNN'] | ['Channel Coding & CNN for attacks']             |
+|  52988697 | ['CNN']  | ['Frequency'] | ['CC layer & DCT layer']    | ['DCT layer']            | ['Diffusion mechanism']                          |
+| 224981296 | ['CNN']  | ['Spatial']   | ['CNN & AP']                | ['CNN']                  | ['Robustness against geometric attacks']         |
+| 236966013 | ['GAN']  | ['Frequency'] | ['IG attention mask & CNN'] | ['CNN']                  | ['IG mask improves capacity and robustness']     |
+| 203641981 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Min-max formulation for robust optimisation']  |
+| 204836916 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Two stage training']                           |
+| 210845641 | ['GAN']  | ['Spatial']   | ['CNN']                     | ['CNN + FC layers']      | ['Robust against rotation and JPEG compression'] |
+|  59413797 | ['WGAN'] | ['Spatial']   | ['CB & ASP']                | ['CNN']                  | ['High payload capacity']                        |
+| 218869832 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Spatial spread embedding technique']           |
+| 219531492 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Double discriminator-detector']                |
+
+GOLD SCHEMA:
+0: Arch
+1: Domain
+2: Embedding Network
+3: Extractor Network
+4: Remarks
+
+PREDICTION PATH:../../metric_validation_0/92039bd0-9ed0-44b5-b2bc-a298c985d3e1/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Broadening the spectrum of considered attacks for watermarking                                                                    | Achieving high robustness against JPEG compression, Gaussian blur, and resizing   | Grouping attacks to achieve high general robustness                         | Application of attacks to increase robustness against non-seen distortions                   | Balancing between image quality and robustness on attacks                                       |
+|:---------|:----------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
+| paper_1  | ['Our method achieves better performance on unknown distortions than on distortions available during training']                   | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+| paper_2  | ['The proposed framework simulates various attacks to improve watermarking robustness']                                           | ['Robustness to JPEG attack is drastically improved']                             | ['Capable of simulating various attacks to facilitate end-to-end training'] | ['N/A']                                                                                      | ['Customizable for the trade-off between capacity and robustness']                              |
+| paper_3  | ['High robustness against various pixel-value change attacks and geometric attacks']                                              | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['Controllability of the trade-off relationship between watermark invisibility and robustness'] |
+| paper_4  | ['The proposed model can spotlight pixels with more robustness for data hiding']                                                  | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+| paper_5  | ['Robust optimization is utilized to improve the robustness of the watermarking framework']                                       | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+| paper_6  | ['Improved practicality and robustness of algorithms compared to the one-stage end-to-end training method']                       | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+| paper_7  | ['Neural networks are employed to learn embedding and extraction processes robust against rotation and JPEG compression attacks'] | ['Robust against rotation and JPEG compression']                                  | ['N/A']                                                                     | ['Robustness and quality can be adjusted by changing the noise strength in the noise layer'] | ['Can be adjusted to improve robustness and image quality']                                     |
+| paper_8  | ['The proposed technique achieves high capacity image steganography and evades detection by steganalysis tools']                  | ['N/A']                                                                           | ['N/A']                                                                     | ['N/A']                                                                                      | ['Optimizes perceptual quality of the images produced']                                         |
+| paper_9  | ['Achieved high overall robustness, especially against JPEG compression, Gaussian blur, and resizing']                            | ['High robustness against JPEG compression, Gaussian blur, and resizing']         | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+| paper_10 | ['Outperforms recent methods in robustness against a spectrum of attacks and compression, especially JPEG']                       | ['High capacity steganography with high robustness against JPEG']                 | ['N/A']                                                                     | ['N/A']                                                                                      | ['N/A']                                                                                         |
+
+MATCHES:
+Broadening the spectrum of considered attacks for watermarking: 
+Achieving high robustness against JPEG compression, Gaussian blur, and resizing: 
+Grouping attacks to achieve high general robustness: 
+Application of attacks to increase robustness against non-seen distortions: 
+Balancing between image quality and robustness on attacks: 

@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Objective function formulation                                                                                                                                                      | Application domain (e.g., power systems, microgrids)   | Performance comparison with other optimization techniques                                                                  |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Comprehensive survey of research works in solving various aspects of economic load dispatch (ELD) problems using different types of PSO algorithms.']                             | ['Power systems']                                      | ['PSO compared to different types of PSO algorithms in solving ELD problems.']                                             |
+| paper_2  | ['Uniﬁed problem to derive an optimal operational planning with regard to energy costs minimization, pollutant emissions reduction and better utilization of renewable resources.'] | ['Microgrids']                                         | ['Superior performance of FSAPSO algorithm compared to conventional PSO and genetic algorithm (GA).']                      |
+| paper_3  | ['Optimal deployment of DERs in combined heat and power (CHP)-based micro-grid for economic self-sufficiency.']                                                                     | ['Microgrids']                                         | ['Comparison of optimization results using differential evolution (DE) technique and PSO.']                                |
+| paper_4  | ['Optimal scheduling of microgrids with minimum operating cost using heuristic algorithms.']                                                                                        | ['Microgrids']                                         | ['Studied results from Imperialist Competitive Algorithm (ICA) and PSO as optimization algorithms.']                       |
+| paper_5  | ['Optimal economic operation of multimicrogrids (MMGs) at future smart distribution grids.']                                                                                        | ['Smart distribution grids']                           | ['Application of particle swarm optimization to minimize the cost function in operation of multimicrogrids.']              |
+| paper_6  | ['Revised dispatch strategy to integrate wind power uncertainty and carbon tax in economic dispatch (ED) model.']                                                                   | ['Power systems']                                      | ['Application of quantum-inspired particle swarm optimization (QPSO) for solving the revised dispatch strategy.']          |
+| paper_7  | ['Minimization of operational costs of a virtual power player managing resources in a distribution network.']                                                                       | ['Distribution network']                               | ['Comparison between proposed PSO methodology and deterministic approach, and PSO without mutation and Evolutionary PSO.'] |
+| paper_8  | ['Power loss minimisation in distribution systems through optimal load response to electricity prices.']                                                                            | ['Distribution systems']                               | ['Usage of fuzzy adaptive PSO for power loss minimisation in distribution systems.']                                       |
+| paper_9  | ['Minimizing operation cost and risk in optimal economic dispatch problem for wind-integrated power system.']                                                                       | ['Power system']                                       | ['Comparison of multiple objective particle swarm optimization results with Pareto-optimal solutions.']                    |
+| paper_10 | ['Fuzzy multi-objective optimization model for total economic cost and network loss minimization of microgrid.']                                                                    | ['Microgrid']                                          | ['Introduction of chaotic binary particle swarm optimization (CBPSO) to improve the search capability of BPSO.']           |
+
+MATCHES:
+Objective function formulation: 
+Application domain (e.g., power systems, microgrids): 
+Performance comparison with other optimization techniques: 

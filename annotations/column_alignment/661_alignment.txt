@@ -1,0 +1,37 @@
+ID: 01c458ee-e887-4bff-ad32-a696c64c9590
+
+GOLD TABLE:
+|           | Task           | Metric       | Description                        | # Train Inst.   | # Test Inst.   |
+|----------:|:---------------|:-------------|:-----------------------------------|:----------------|:---------------|
+|  52054914 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['12,627']      | ['1,422']      |
+|  17677052 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['8,588']       | ['302']        |
+| 203661778 | ['NER']        | ['Micro-F1'] | ['Drug and Adverse Drug Event']    | ['36,384']      | ['23,462']     |
+|  15493987 | ['NER']        | ['Micro-F1'] | ['Events']                         | ['16,468']      | ['13,594']     |
+|  30029552 | ['NER']        | ['Micro-F1'] | ['Problems, Treatments and Tests'] | ['27,837']      | ['45,009']     |
+|  96437052 | ['NER']        | ['Micro-F1'] | ['UMLS Semantic Groups (French)']  | ['2,695']       | ['2,260']      |
+
+GOLD SCHEMA:
+0: Task
+1: Metric
+2: Description
+3: # Train Inst.
+4: # Test Inst.
+
+PREDICTION PATH:../../metric_validation_0/01c458ee-e887-4bff-ad32-a696c64c9590/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Detection of similar questions                                                                                      | Question entailment recognition                                                                                                    | Utilization of frequently asked questions (FAQs)                                                    | Evaluation using healthcare consumer questions                                                                                                 | Complementing classic QA approaches                                                                                                                                                                               |
+|:--------|:--------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                             | ['N/A']                                                                                                                            | ['N/A']                                                                                             | ['N/A']                                                                                                                                        | ['N/A']                                                                                                                                                                                                           |
+| paper_2 | ['We propose a new approach for the detection of similar questions based on Recognizing Question Entailment (RQE)'] | ['In this paper, we propose a new approach for the detection of similar questions based on Recognizing Question Entailment (RQE)'] | ['We consider Frequently Asked Question (FAQs) as a valuable and widespread source of information'] | ['We evaluate our approach using consumer health questions received by the National Library of Medicine and FAQs collected from NIH websites'] | ['Our final goal is to automatically provide an existing answer if FAQ similar to a consumer health question exists. We evaluate our approach as a valuable complement to classic question answering approaches'] |
+| paper_3 | ['N/A']                                                                                                             | ['N/A']                                                                                                                            | ['N/A']                                                                                             | ['N/A']                                                                                                                                        | ['N/A']                                                                                                                                                                                                           |
+| paper_4 | ['N/A']                                                                                                             | ['N/A']                                                                                                                            | ['N/A']                                                                                             | ['N/A']                                                                                                                                        | ['N/A']                                                                                                                                                                                                           |
+| paper_5 | ['N/A']                                                                                                             | ['N/A']                                                                                                                            | ['N/A']                                                                                             | ['N/A']                                                                                                                                        | ['N/A']                                                                                                                                                                                                           |
+| paper_6 | ['N/A']                                                                                                             | ['N/A']                                                                                                                            | ['N/A']                                                                                             | ['N/A']                                                                                                                                        | ['N/A']                                                                                                                                                                                                           |
+
+MATCHES:
+Detection of similar questions: 
+Question entailment recognition: 
+Utilization of frequently asked questions (FAQs): 
+Evaluation using healthcare consumer questions: 
+Complementing classic QA approaches: 

@@ -1,0 +1,46 @@
+ID: 35de49f8-d513-458d-9cd7-86fb8e9f910b
+
+GOLD TABLE:
+|           | Year     | LiDARs                                                     | Cameras                                                         | Annotated LiDAR Frames   | Traffic Scenario             | Diversity              |
+|----------:|:---------|:-----------------------------------------------------------|:----------------------------------------------------------------|:-------------------------|:-----------------------------|:-----------------------|
+|   6724907 | ['2012'] | ['1 Velodyne HDL-64E']                                     | ['2 color, 2 grayscale cameras']                                | ['15k']                  | ['Urban, Suburban, Highway'] | ['-']                  |
+| 209140225 | ['2019'] | ['5 LiDARs']                                               | ['5 high-resolution pinhole cameras']                           | ['230k']                 | ['Urban, Suburban']          | ['Locations']          |
+|  85517967 | ['2019'] | ['1 Spinning 32-beams LiDAR']                              | ['6 RGB cameras']                                               | ['40k']                  | ['Urban, Suburban']          | ['Locations, Weather'] |
+|   3943983 | ['2018'] | ['2 VUX-1HA laser scanners']                               | ['2 front cameras']                                             | ['144k']                 | ['Urban, Suburban, Highway'] | ['Weather, Locations'] |
+| 239929154 | ['2021'] | ['1 Mechanical spinning LiDAR and 1 Forward-facing LiDAR'] | ['5 wide-angle cameras and 1 forward-facing long-focus camera'] | ['6k']                   | ['Urban']                    | ['Locations']          |
+| 202540994 | ['2020'] | ['2 Velodyne HDL-32E LiDARs and 1 ibeo LUX 4L LiDARs']     | ['2 stereo cameras and 2 Pixelink PL-B742F industrial cameras'] | ['-']                    | ['Urban, Suburban']          | ['Season']             |
+| 202577706 | ['2020'] | ['2 Velodyne HDL-32e LiDARs']                              | ['4 RGB cameras']                                               | ['-']                    | ['Urban, Highway']           | ['Weather']            |
+| 202583249 | ['2020'] | ['1 Velodyne HDL-64ES3 3D-LiDAR']                          | ['2 color cameras']                                             | ['39k']                  | ['Urban']                    | ['Weather']            |
+| 227162402 | ['2021'] | ['1 Ouster OS1 LiDAR and 1 Velodyne Ultra Puck']           | ['1 3D stereo camera and 1 RGB camera']                         | ['13k']                  | ['Suburban']                 | ['-']                  |
+| 227344672 | ['2021'] | ['2 Luminar Model H2 LiDARs']                              | ['1 RGB camera']                                                | ['6k']                   | ['Urban']                    | ['-']                  |
+| 235490450 | ['2021'] | ['1 40-beam LiDAR']                                        | ['8 high-resolution cameras']                                   | ['16k']                  | ['Urban, Suburban']          | ['Weather, Locations'] |
+
+GOLD SCHEMA:
+0: Year
+1: LiDARs
+2: Cameras
+3: Annotated LiDAR Frames
+4: Traffic Scenario
+5: Diversity
+
+PREDICTION PATH:../../metric_validation_0/35de49f8-d513-458d-9cd7-86fb8e9f910b/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of sensors used                                                                                        | Range and field of view of the sensors            | Resolution and quality of the sensors                                |
+|:---------|:-------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1  | ['6 cameras, 5 radars, 1 lidar']                                                                             | ['full 360 degree field of view for all sensors'] | ['not specified']                                                    |
+| paper_2  | ['LiDAR, camera']                                                                                            | ['not specified']                                 | ['high quality LiDAR and camera data']                               |
+| paper_3  | ['LiDAR, camera']                                                                                            | ['not specified']                                 | ['not specified']                                                    |
+| paper_4  | ['4 high resolution video cameras, a Velodyne laser scanner']                                                | ['not specified']                                 | ['high resolution video cameras']                                    |
+| paper_5  | ['RGB cameras, 3D point clouds']                                                                             | ['not specified']                                 | ['RGB videos, dense 3D point clouds with cm accuracy']               |
+| paper_6  | ['360° mechanical spinning LiDAR, forward-facing, long-range LiDAR, 6 cameras']                              | ['not specified']                                 | ['360° mechanical spinning LiDAR, forward-facing, long-range LiDAR'] |
+| paper_7  | ['various cameras and lidars, a radar, an IMU, a GPS-RTK']                                                   | ['not specified']                                 | ['not specified']                                                    |
+| paper_8  | ['4 WUXGA cameras, 2 3D LiDARs, inertial measurement unit, infrared camera, differential RTK GNSS receiver'] | ['not specified']                                 | ['4 WUXGA cameras, 2 3D LiDARs']                                     |
+| paper_9  | ['RGB images and LiDAR data']                                                                                | ['not specified']                                 | ['high-density images']                                              |
+| paper_10 | ['LiDAR scans, images']                                                                                      | ['not specified']                                 | ['13,556 LiDAR scans, 6,235 images']                                 |
+| paper_11 | ['high-resolution video camera, LiDAR sensors']                                                              | ['250-meter effective range']                     | ['high-resolution video camera, bi-pattern LiDAR sensors']           |
+
+MATCHES:
+Types of sensors used: 
+Range and field of view of the sensors: 
+Resolution and quality of the sensors: 

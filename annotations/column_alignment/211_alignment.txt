@@ -1,0 +1,43 @@
+ID: 92039bd0-9ed0-44b5-b2bc-a298c985d3e1
+
+GOLD TABLE:
+|           | Arch     | Domain        | Embedding Network           | Extractor Network        | Remarks                                          |
+|----------:|:---------|:--------------|:----------------------------|:-------------------------|:-------------------------------------------------|
+| 210473431 | ['CNN']  | ['Spatial']   | ['Channel Coding & CNN']    | ['Channel coding & CNN'] | ['Channel Coding & CNN for attacks']             |
+|  52988697 | ['CNN']  | ['Frequency'] | ['CC layer & DCT layer']    | ['DCT layer']            | ['Diffusion mechanism']                          |
+| 224981296 | ['CNN']  | ['Spatial']   | ['CNN & AP']                | ['CNN']                  | ['Robustness against geometric attacks']         |
+| 236966013 | ['GAN']  | ['Frequency'] | ['IG attention mask & CNN'] | ['CNN']                  | ['IG mask improves capacity and robustness']     |
+| 203641981 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Min-max formulation for robust optimisation']  |
+| 204836916 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Two stage training']                           |
+| 210845641 | ['GAN']  | ['Spatial']   | ['CNN']                     | ['CNN + FC layers']      | ['Robust against rotation and JPEG compression'] |
+|  59413797 | ['WGAN'] | ['Spatial']   | ['CB & ASP']                | ['CNN']                  | ['High payload capacity']                        |
+| 218869832 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Spatial spread embedding technique']           |
+| 219531492 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Double discriminator-detector']                |
+
+GOLD SCHEMA:
+0: Arch
+1: Domain
+2: Embedding Network
+3: Extractor Network
+4: Remarks
+
+PREDICTION PATH:../../metric_validation_0/92039bd0-9ed0-44b5-b2bc-a298c985d3e1/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Number of CNN layers                                                          | Use of pre-processing networks                                                | Control of the trade-off relationship between watermark invisibility and robustness                     |
+|:---------|:------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| paper_1  | [13]                                                                          | ['pre-processing networks for both host image and watermark']                 | ['strength scaling factor for watermark information']                                                   |
+| paper_2  | ['2 Fully Convolutional Neural Networks']                                     | ['not explicitly mentioned']                                                  | ['customizable for the level of robustness vs. imperceptibility']                                       |
+| paper_3  | [13]                                                                          | ['pre-processing networks for both host image and watermark']                 | ['strength scaling factor for watermark information']                                                   |
+| paper_4  | ['not explicitly mentioned']                                                  | ['not explicitly mentioned']                                                  | ['combining the idea of attention mechanism to endow different attention weights for different pixels'] |
+| paper_5  | ['not explicitly mentioned']                                                  | ['not explicitly mentioned']                                                  | ['utilizing robust optimization in training']                                                           |
+| paper_6  | ['redundant multi-layer feature encoding network']                            | ['redundant multi-layer feature encoding network']                            | ['redundant multi-layer feature encoding network and noise-aware decoder-only training (ADOT)']         |
+| paper_7  | ['stego-image generator, watermark extractor, and stego-image discriminator'] | ['stego-image generator, watermark extractor, and stego-image discriminator'] | ['attack simulator consisting of a rotation layer and an additive noise layer']                         |
+| paper_8  | ['Generative Adversarial Networks (GANs)']                                    | ['Generative Adversarial Networks (GANs)']                                    | ['optimizing the perceptual quality of the images produced by our model']                               |
+| paper_9  | ['convolutional neural networks for embedding and recovery']                  | ['convolutional neural networks for embedding and recovery']                  | ['spreading method of the message over the spatial domain of the image']                                |
+| paper_10 | ['not explicitly mentioned']                                                  | ['not explicitly mentioned']                                                  | ['double detector-discriminator approach']                                                              |
+
+MATCHES:
+Number of CNN layers: 
+Use of pre-processing networks: 
+Control of the trade-off relationship between watermark invisibility and robustness: 

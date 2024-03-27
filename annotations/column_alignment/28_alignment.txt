@@ -1,0 +1,31 @@
+ID: 8360b24e-3194-416b-b6c0-885fca2c9d71
+
+GOLD TABLE:
+|           | Benchmark                                         | Gender   | Harms                          |
+|----------:|:--------------------------------------------------|:---------|:-------------------------------|
+| 167217680 | ['Synthetic equity evaluation corpus (EEC)']      | ['b']    | ['R: under-rep, stereotyping'] |
+| 216641970 | ['BERT-based perturbations on natural sentences'] | ['b']    | ['R: under-rep, stereotyping'] |
+| 173991101 | ['WinoMT']                                        | ['b']    | ['R: under-rep, stereotyping'] |
+|  76654723 | ['Europarl (generic)']                            | ['b']    | ['A: quality']                 |
+| 220047833 | ['Trustpilot (reviews with gender and age)']      | ['b']    | ['R: under-rep']               |
+
+GOLD SCHEMA:
+0: Benchmark
+1: Gender
+2: Harms
+
+PREDICTION PATH:../../metric_validation_0/8360b24e-3194-416b-b6c0-885fca2c9d71/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | The role of grammatical gender in machine translation                                                                                                                                 | The impact of demographic factors on machine translation                                                                                                          | The importance of encoding gender information in machine translation                                                                               |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Korean, a language with gender-neutral pronouns, is used to evaluate gender bias in machine translation.']                                                                          | ['N/A']                                                                                                                                                           | ['N/A']                                                                                                                                            |
+| Paper 2 | ['The paper does not directly discuss the role of grammatical gender but focuses on mining gender issues in real-world machine translation data.']                                    | ['The paper mines examples from real-world data to expose gendered representations and their unintended consequences in downstream applications.']                | ['N/A']                                                                                                                                            |
+| Paper 3 | ['The paper uses morphological analysis to evaluate gender bias in machine translation for eight target languages with grammatical gender.']                                          | ['N/A']                                                                                                                                                           | ['The paper presents an automatic gender bias evaluation method for machine translation based on morphological analysis.']                         |
+| Paper 4 | ['The paper discusses the importance of retaining/recovering inherent gender information for correct machine translation, especially for languages with grammatical gender systems.'] | ['The paper discusses how demographic factors, including gender, influence language use, and how this impacts machine translation.']                              | ['The paper contributes to NMT by integrating gender information into the systems, showing improved translation quality for some language pairs.'] |
+| Paper 5 | ["The paper does not directly discuss grammatical gender but focuses on stylistic biases that make translated text 'sound' older and more male."]                                     | ["The paper shows how commercial machine translation systems reflect demographic bias in the training data, making translated text 'sound' older and more male."] | ['N/A']                                                                                                                                            |
+
+MATCHES:
+The role of grammatical gender in machine translation: 
+The impact of demographic factors on machine translation: 
+The importance of encoding gender information in machine translation: 

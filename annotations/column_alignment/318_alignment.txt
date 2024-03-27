@@ -1,0 +1,37 @@
+ID: 8e40ad31-28ab-4723-ae18-bb9ea3ae422f
+
+GOLD TABLE:
+|          | Train      | Valid     | Test       | Total      | Source        |
+|---------:|:-----------|:----------|:-----------|:-----------|:--------------|
+| 44145664 | ['3,067']  | ['306']   | ['784']    | ['3,834']  | ['Twitter']   |
+|  3218493 | ['48,007'] | ['6,858'] | ['13,717'] | ['68,582'] | ['Twitter']   |
+| 10168779 | ['1,327']  | ['189']   | ['381']    | ['1,897']  | ['Twitter']   |
+|  4311707 | ['10,934'] | ['2,734'] | ['3,406']  | ['17,074'] | ['Reddit']    |
+| 15828278 | ['3,284']  | ['469']   | ['939']    | ['4,692']  | ['Dialogues'] |
+
+GOLD SCHEMA:
+0: Train
+1: Valid
+2: Test
+3: Total
+4: Source
+
+PREDICTION PATH:../../metric_validation_0/8e40ad31-28ab-4723-ae18-bb9ea3ae422f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods for operationalizing classes of sarcasm                                                   | Use of lexico-syntactic cues                                  | Magnitude of diversity in the corpus                                    | Quality of the corpus                                                         | Supervised or weakly-supervised learning                                                               |
+|:--------|:--------------------------------------------------------------------------------------------------|:--------------------------------------------------------------|:------------------------------------------------------------------------|:------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| paper_1 | ['automatic natural language processing systems, irony detection']                                | ['N/A']                                                       | ['diverse tweets collected using irony-related hashtags']               | ['manually annotated to minimize the amount of noise in the corpus']          | ['training corpus and a test set']                                                                     |
+| paper_2 | ['machine learning approach, sarcasm detection']                                                  | ['examining different preprocessing techniques,']             | ['English and Czech Twitter corpus']                                    | ['evaluating two classifiers with various combinations of features']          | ['N/A']                                                                                                |
+| paper_3 | ['sarcasm recognizer, positive sentiment contrasted with a negative situation']                   | ['N/A']                                                       | ['N/A']                                                                 | ['N/A']                                                                       | ['N/A']                                                                                                |
+| paper_4 | ['bootstrapping algorithm, contrasting contexts using the phrases learned through bootstrapping'] | ['N/A']                                                       | ['large corpus for sarcasm research']                                   | ['large corpus for sarcasm research and for training and evaluating systems'] | ['learning in both balanced and unbalanced label regimes, baseline methods']                           |
+| paper_5 | ['N/A']                                                                                           | ['N/A']                                                       | ['large corpus for sarcasm research']                                   | ['large corpus for sarcasm research and for training and evaluating systems'] | ['learning in both balanced and unbalanced label regimes, baseline methods']                           |
+| paper_6 | ['operationalizing classes of sarcasm in the form of rhetorical questions and hyperbole']         | ['reliably retrieve sarcastic utterances with high accuracy'] | ['large-scale, highly-diverse corpus of online debate forums dialogue'] | ['highly-diverse corpus of sarcasm in dialogue']                              | ['supervised learning experiments with simple features, weakly-supervised linguistic pattern learner'] |
+| paper_7 | ['operationalizing classes of sarcasm in the form of rhetorical questions and hyperbole']         | ['reliably retrieve sarcastic utterances with high accuracy'] | ['large-scale, highly-diverse corpus of online debate forums dialogue'] | ['highly-diverse corpus of sarcasm in dialogue']                              | ['supervised learning experiments with simple features, weakly-supervised linguistic pattern learner'] |
+
+MATCHES:
+Methods for operationalizing classes of sarcasm: 
+Use of lexico-syntactic cues: 
+Magnitude of diversity in the corpus: 
+Quality of the corpus: 
+Supervised or weakly-supervised learning: 

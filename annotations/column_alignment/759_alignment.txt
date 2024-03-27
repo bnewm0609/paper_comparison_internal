@@ -1,0 +1,29 @@
+ID: f9504841-2129-417c-a504-7b2d57ca509b
+
+GOLD TABLE:
+|           | Team       | Task    |
+|----------:|:-----------|:--------|
+| 264441549 | ['BIT.UA'] | ['NER'] |
+| 264441337 | ['-']      | ['EL']  |
+| 264441481 | ['-']      | ['DI']  |
+| 264441503 | ['Fusion'] | ['NER'] |
+| 260514387 | ['-']      | ['EL']  |
+
+GOLD SCHEMA:
+0: Team
+1: Task
+
+PREDICTION PATH:../../metric_validation_0/f9504841-2129-417c-a504-7b2d57ca509b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model/Approach Used                                                                                                       | Performance Metrics                                                                 |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| paper_1 | ['Transformer models with Masked Conditional Random Fields for procedure recognition']                                    | ['79.85% NER (subtask-1), 31.68% (subtask-2), 35.85% (subtask-3)']                  |
+| paper_2 | ['Separate named entity recognition and entity linking modules using BERT-based models']                                  | ['0.71 F1 score on the NER subtask, 0.53 F1 score on the linking subtask']          |
+| paper_3 | ['Fine-tuned transformers with domain-specific corpora and a dictionary-based solution']                                  | ['0.5505 f1-score on the test set of the challenge']                                |
+| paper_4 | ['Comparing different ways of processing long sequences using RoBERTa model pre-trained on biomedical and clinical data'] | ['0.7568 micro-averaged F1 score on the NER sub-task, 0.5267 on the NORM sub-task'] |
+| paper_5 | ['N/A']                                                                                                                   | ['N/A']                                                                             |
+
+MATCHES:
+Model/Approach Used: 
+Performance Metrics: 

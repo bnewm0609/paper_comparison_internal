@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods to handle uncertainty                                                                                                                                      | Modeling of uncertainty                                                    | Impact of uncertainty on Pareto optimality                                                  | Metrics to measure the influence of uncertainty                              |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------|
+| paper_1 | ['Demand forecasts for 2030, 2020, Transit-Oriented Development scenario, e-NSGAII algorithm']                                                                     | ['Demand forecasts for 2030, 2020, Transit-Oriented Development scenario'] | ['Yes, analyzed the differences between Pareto sets and compared decision variable values'] | ['Comparison of Pareto sets and decision variable values']                   |
+| paper_2 | ['Anticipatory Scheduling, Markov Decision Process, Approximate Dynamic Programming (ADP) with Bayesian exploration using the Value of Perfect Information (VPI)'] | ['Markov Decision Process, Modeling of stochastic freight arrivals']       | ['N/A']                                                                                     | ['Comparison of the performance of ADP-VPI with common practice heuristics'] |
+
+MATCHES:
+Methods to handle uncertainty: 
+Modeling of uncertainty: 
+Impact of uncertainty on Pareto optimality: 
+Metrics to measure the influence of uncertainty: 

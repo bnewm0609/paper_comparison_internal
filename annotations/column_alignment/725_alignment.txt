@@ -1,0 +1,29 @@
+ID: 922d9133-f613-42d2-b191-b75c784e550f
+
+GOLD TABLE:
+|           | Dataset             | Dim.          |
+|----------:|:--------------------|:--------------|
+|  10659969 | ['Moons']           | ['2']         |
+|  60282629 | ['MNIST']           | ['28x28']     |
+|    702279 | ['Fashion MNIST']   | ['28x28']     |
+|  18268744 | ['CIFAR10']         | ['32x32x3']   |
+| 198967908 | ['CelebA-HQ (128)'] | ['128x128x3'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Dim.
+
+PREDICTION PATH:../../metric_validation_0/922d9133-f613-42d2-b191-b75c784e550f/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Purpose of the Paper                                     | Data Used                                                   |
+|:--------|:---------------------------------------------------------|:------------------------------------------------------------|
+| Paper 1 | ['Unsupervised feature learning and object recognition'] | ['Millions of tiny color images from the web']              |
+| Paper 2 | ['Machine learning library for Python']                  | ['']                                                        |
+| Paper 3 | ['Disclosing an improved shredder cylinder design']      | ['The mnist database of handwritten digits']                |
+| Paper 4 | ['Introducing a novel image dataset for benchmarking']   | ['Grayscale images of fashion products from 10 categories'] |
+| Paper 5 | ['Facial image manipulation with a novel framework']     | ['CelebAMask-HQ: large-scale high-resolution face dataset'] |
+
+MATCHES:
+Purpose of the Paper: 
+Data Used: 

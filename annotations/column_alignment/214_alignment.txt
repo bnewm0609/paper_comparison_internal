@@ -1,0 +1,25 @@
+ID: 7e1ee0ef-aa94-4c34-b22c-5bbae338db30
+
+GOLD TABLE:
+|           | Total Number of Samples   | Number of Used Samples   | Feature Dimension   |
+|----------:|:--------------------------|:-------------------------|:--------------------|
+| 220317169 | ['52416']                 | ['20000']                | ['11']              |
+| 154318866 | ['19735']                 | ['20000']                | ['33']              |
+
+GOLD SCHEMA:
+0: Total Number of Samples
+1: Number of Used Samples
+2: Feature Dimension
+
+PREDICTION PATH:../../metric_validation_0/7e1ee0ef-aa94-4c34-b22c-5bbae338db30/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Comparison 1: Feudalism and Society                                                                                                              | Comparison 2: Historical Context                                                                                                             | Comparison 3: Revenue Impact                                                                           |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| paper_1 | ["England's feudalism nature led to centralized power and de-centralized local authority, offering a degree of flexibility and proto-democracy"] | ['The paper focuses on the transition from European feudalism to modern English society, notable between the tenth and fifteenth centuries'] | ["The peculiar nature of England's feudal arrangement and its impact on society"]                      |
+| paper_2 | ['The airline industry is experiencing changes in seating arrangement and spacing to generate increased revenue']                                | ['The paper highlights the current changes in the airline industry, such as the addition of extra seats and reduction in space']             | ['The economic impact of seating changes in the airline industry with estimates of increased revenue'] |
+
+MATCHES:
+Comparison 1: Feudalism and Society: 
+Comparison 2: Historical Context: 
+Comparison 3: Revenue Impact: 

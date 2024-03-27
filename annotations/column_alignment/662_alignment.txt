@@ -1,0 +1,37 @@
+ID: 01c458ee-e887-4bff-ad32-a696c64c9590
+
+GOLD TABLE:
+|           | Task           | Metric       | Description                        | # Train Inst.   | # Test Inst.   |
+|----------:|:---------------|:-------------|:-----------------------------------|:----------------|:---------------|
+|  52054914 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['12,627']      | ['1,422']      |
+|  17677052 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['8,588']       | ['302']        |
+| 203661778 | ['NER']        | ['Micro-F1'] | ['Drug and Adverse Drug Event']    | ['36,384']      | ['23,462']     |
+|  15493987 | ['NER']        | ['Micro-F1'] | ['Events']                         | ['16,468']      | ['13,594']     |
+|  30029552 | ['NER']        | ['Micro-F1'] | ['Problems, Treatments and Tests'] | ['27,837']      | ['45,009']     |
+|  96437052 | ['NER']        | ['Micro-F1'] | ['UMLS Semantic Groups (French)']  | ['2,695']       | ['2,260']      |
+
+GOLD SCHEMA:
+0: Task
+1: Metric
+2: Description
+3: # Train Inst.
+4: # Test Inst.
+
+PREDICTION PATH:../../metric_validation_0/01c458ee-e887-4bff-ad32-a696c64c9590/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Task                                                               | Approach                                                     | Evaluation                                                                    | Results                                                                                                         | Challenges                                                     |
+|:--------|:-------------------------------------------------------------------|:-------------------------------------------------------------|:------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------|
+| paper_1 | ['Natural Language Inference (NLI) in Medical Domain']             | ['Transfer Learning and Domain Knowledge']                   | ['Using MedNLI Dataset']                                                      | ['Performance Gains Using Transfer Learning and Domain Knowledge']                                              | ['Lack of Generalization Capabilities in Specialized Domains'] |
+| paper_2 | ['Recognizing Question Entailment for Medical Question Answering'] | ['Recognizing Question Entailment (RQE)']                    | ['Using Consumer Health Questions and FAQs']                                  | ['Promising Results for Detecting Similar Questions']                                                           | ['Heterogeneity and Specialization of Medical Texts']          |
+| paper_3 | ['Adverse Drug Events (ADEs) and Medication Extraction']           | ['Deep Learning-based Methods with Hand-designed Features']  | ['Concept Extraction, Relation Classification, and End-to-end Systems']       | ['High Performance for Most Concept Types, but Room for Improvement for ADEs and Reasons']                      | ['Extraction of ADEs from Clinical Records']                   |
+| paper_4 | ['Temporal Relations in Clinical Text']                            | ['Statistical Machine Learning (ML) and Rule-based Methods'] | ['Temporal Relations in Clinical Text']                                       | ['Superior Performance for Event Detection and Temporal Relation Classification']                               | ['Temporal Relations in Clinical Narratives']                  |
+| paper_5 | ['Concepts, Assertions, and Relations in Clinical Text']           | ['Machine Learning and Rule-based Systems']                  | ['Concept Extraction, Assertion Classification, and Relation Classification'] | ['Machine Learning Approaches Augmented with Rule-based Systems']                                               | ['Inadequate Training Data']                                   |
+| paper_6 | ['Medical Entity Recognition and Normalization']                   | ['Pre-annotations validated by Human Annotators']            | ['Entity and Concept Level Annotation']                                       | ['Above 0.83 Precision for All Text Genres and 26,409 Entity Annotations Mapped to 5,797 Unique UMLS Concepts'] | ['BioMedical Information in Languages Other Than English']     |
+
+MATCHES:
+Task: 
+Approach: 
+Evaluation: 
+Results: 
+Challenges: 

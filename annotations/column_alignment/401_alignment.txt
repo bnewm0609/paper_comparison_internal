@@ -1,0 +1,86 @@
+ID: 468251ef-ecdc-4841-9e23-b7099cedf8d1
+
+GOLD TABLE:
+|           | Issue                   | EA      | Metric                                 | Paradigm   |
+|----------:|:------------------------|:--------|:---------------------------------------|:-----------|
+|  16433158 | ['Job Scheduling']      | ['GA']  | ['execution time']                     | ['CC']     |
+|  17360386 | ['Job Scheduling']      | ['GA']  | ['response time']                      | ['CC']     |
+| 251566434 | ['Job Scheduling']      | ['GA']  | ['makespan']                           | ['CC']     |
+|    864772 | ['Job Scheduling']      | ['GA']  | ['makespan, resource utilization']     | ['CC']     |
+|  44189939 | ['Job Scheduling']      | ['GA']  | ['makespan, computing cost']           | ['CC']     |
+|  56360428 | ['Job Scheduling']      | ['GA']  | ['execution time, cost']               | ['FC']     |
+|  52909343 | ['-']                   | ['AIS'] | ['response time']                      | ['FC']     |
+|  44583059 | ['Resource Allocation'] | ['GA']  | ['energy consumption, latency']        | ['MEC']    |
+|  46341709 | ['Task Offloading']     | ['AIS'] | ['security and privacy']               | ['CC']     |
+|    429207 | ['-']                   | ['GA']  | ['execution time, energy consumption'] | ['MCC']    |
+|   4505178 | ['-']                   | ['GA']  | ['energy consumption']                 | ['MCC']    |
+| 204183689 | ['-']                   | ['GA']  | ['latency']                            | ['FC']     |
+|  70096009 | ['-']                   | ['AIS'] | ['security and privacy']               | ['EC']     |
+|  46218274 | ['-']                   | ['AIS'] | ['security and privacy']               | ['FC']     |
+|  10869780 | ['-']                   | ['GA']  | ['latency']                            | ['EC']     |
+| 201906355 | ['-']                   | ['GA']  | ['energy consumption']                 | ['MEC']    |
+|   5485443 | ['-']                   | ['GA']  | ['execution time, energy consumption'] | ['MCC']    |
+| 219413789 | ['-']                   | ['GA']  | ['energy consumption, latency']        | ['MEC']    |
+| 202568496 | ['Joint issues']        | ['DE']  | ['energy consumption']                 | ['MEC']    |
+|  49568720 | ['Joint issues']        | ['GA']  | ['energy consumption']                 | ['MEC']    |
+| 212945191 | ['Joint issues']        | ['GA']  | ['makespan']                           | ['MEC']    |
+
+GOLD SCHEMA:
+0: Issue
+1: EA
+2: Metric
+3: Paradigm
+
+PREDICTION PATH:../../metric_validation_0/468251ef-ecdc-4841-9e23-b7099cedf8d1/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Algorithm                               | Primary Focus                                                                                  | Algorithm Type                          | Consideration of Multiple Clouds/Servers   |
+|:---------|:----------------------------------------|:-----------------------------------------------------------------------------------------------|:----------------------------------------|:-------------------------------------------|
+| Paper_1  | ['Improved Adaptive Genetic Algorithm'] | ['Cloud computing task scheduling and load balancing']                                         | nan                                     | nan                                        |
+| Paper_2  | ['Genetic Algorithm']                   | ['Cloud computing task scheduling and resource management']                                    | nan                                     | nan                                        |
+| Paper_3  | ['Genetic Algorithm']                   | ['Cloud computing job scheduling and load balancing']                                          | nan                                     | nan                                        |
+| Paper_4  | ['Improved Genetic Algorithm']          | ['Cloud computing task scheduling']                                                            | nan                                     | nan                                        |
+| Paper_5  | ['Improved Genetic Algorithm']          | ['Cloud computing task scheduling and cost reduction']                                         | nan                                     | nan                                        |
+| Paper_6  | ['TCaS - Evolutionary Algorithm']       | ['Cloud-fog computing resource management and task scheduling']                                | nan                                     | nan                                        |
+| Paper_7  | ['Immune Scheduling Network']           | ['Decentralized fog computing task scheduling']                                                | nan                                     | nan                                        |
+| Paper_8  | ['Genetic Algorithm']                   | ['Mobile edge computing resource management and energy consumption']                           | nan                                     | nan                                        |
+| Paper_9  | ['Artificial Immune Algorithm']         | ['Cloud computing data security']                                                              | nan                                     | nan                                        |
+| Paper_10 | ['Genetic Algorithm']                   | ['Mobile cloud computing service workflow computation offloading']                             | nan                                     | nan                                        |
+| Paper_11 | ['Genetic Algorithm']                   | ['Mobile cloud computing computation offloading']                                              | nan                                     | nan                                        |
+| Paper_12 | ['Genetic Algorithm']                   | ['Fog computing data stream mapping']                                                          | nan                                     | nan                                        |
+| Paper_13 | ['Artificial Immune Algorithm']         | ['Internet of Things (IoT) and edge computing security']                                       | nan                                     | nan                                        |
+| Paper_14 | ['Artificial Immune System']            | ['Fog computing and IoT intrusion detection']                                                  | nan                                     | nan                                        |
+| Paper_15 | ['Genetic Algorithm']                   | ['Wearable computing code offloading']                                                         | nan                                     | nan                                        |
+| Paper_16 | ['Genetic Algorithm']                   | ['Multi-access edge computing task caching and migration']                                     | nan                                     | nan                                        |
+| Paper_17 | ['Genetic Algorithm']                   | ['Multisite computation offloading in mobile cloud computing']                                 | nan                                     | nan                                        |
+| Paper_18 | ['Evolutionary Algorithm']              | ['Mobile edge computing task offloading']                                                      | nan                                     | nan                                        |
+| Paper_19 | ['Differential Evolution Algorithm']    | ['Multi-unmanned aerial vehicle-enabled mobile edge computing task scheduling and deployment'] | nan                                     | nan                                        |
+| Paper_20 | ['Genetic Algorithm']                   | ['Computation offloading in multi-access MEC enabled small cell networks']                     | nan                                     | nan                                        |
+| Paper_21 | ['Genetic Algorithm']                   | ['Mobile-edge computing offloading and resource allocation']                                   | nan                                     | nan                                        |
+| Paper 1  | nan                                     | nan                                                                                            | ['Improved Adaptive Genetic Algorithm'] | ['No']                                     |
+| Paper 2  | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 3  | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 4  | nan                                     | nan                                                                                            | ['Improved Genetic Algorithm']          | ['No']                                     |
+| Paper 5  | nan                                     | nan                                                                                            | ['Improved Genetic Algorithm']          | ['Yes']                                    |
+| Paper 6  | nan                                     | nan                                                                                            | ['Evolutionary Algorithm']              | ['Yes']                                    |
+| Paper 7  | nan                                     | nan                                                                                            | ['Immune Scheduling Network']           | ['Yes']                                    |
+| Paper 8  | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 9  | nan                                     | nan                                                                                            | ['Artificial Immune Algorithm']         | ['No']                                     |
+| Paper 10 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['Yes']                                    |
+| Paper 11 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 12 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['Yes']                                    |
+| Paper 13 | nan                                     | nan                                                                                            | ['Artificial Immune Algorithm']         | ['Yes']                                    |
+| Paper 14 | nan                                     | nan                                                                                            | ['Artificial Immune System']            | ['Yes']                                    |
+| Paper 15 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 16 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['No']                                     |
+| Paper 17 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['Yes']                                    |
+| Paper 18 | nan                                     | nan                                                                                            | ['Evolutionary Algorithm']              | ['Yes']                                    |
+| Paper 19 | nan                                     | nan                                                                                            | ['Differential Evolution Algorithm']    | ['No']                                     |
+| Paper 20 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['Yes']                                    |
+| Paper 21 | nan                                     | nan                                                                                            | ['Genetic Algorithm']                   | ['Yes']                                    |
+
+MATCHES:
+Algorithm: 
+Primary Focus: 
+Algorithm Type: 
+Consideration of Multiple Clouds/Servers: 

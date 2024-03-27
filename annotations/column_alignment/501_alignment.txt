@@ -1,0 +1,27 @@
+ID: 367543a0-5c99-4f23-8c8e-cced4c330670
+
+GOLD TABLE:
+|           | Swarm Algorithms                      | Acronym   |
+|----------:|:--------------------------------------|:----------|
+|  13719410 | ['Circular Structure of Puffer Fish'] | ['CSPF']  |
+|  14083654 | ['Fish School Search']                | ['FSS']   |
+|  11251844 | ['Great Salmon Run']                  | ['GSR']   |
+| 205711669 | ['Shark Smell Optimization']          | ['ShSO']  |
+
+GOLD SCHEMA:
+0: Swarm Algorithms
+1: Acronym
+
+PREDICTION PATH:../../metric_validation_0/367543a0-5c99-4f23-8c8e-cced4c330670/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Nature-Inspired Algorithm      | Use of High-Dimensional Search Spaces                       |
+|:--------|:---------------------------------------|:------------------------------------------------------------|
+| Paper 1 | ['Circular structures of puffer fish'] | ['No specific focus on high-dimensional search spaces']     |
+| Paper 2 | ['Fish school behavior']               | ['Designed for high-dimensional search spaces']             |
+| Paper 3 | ['The great salmon run']               | ['Designed for multi-dimensional and multi-modal problems'] |
+| Paper 4 | ['Shark smell optimization']           | ['No specific mention of high-dimensional search spaces']   |
+
+MATCHES:
+Type of Nature-Inspired Algorithm: 
+Use of High-Dimensional Search Spaces: 

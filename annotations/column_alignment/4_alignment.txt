@@ -1,0 +1,25 @@
+ID: 31c80ad2-a4ce-4d17-a8fe-80a14c6c8fcc
+
+GOLD TABLE:
+|         | Highlights/Objectives                                                                                                                                                                                                                               | Performances and Achievements                                                                                                                                                               |
+|--------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5634462 | ['A distributed multi-tenancy approach access control.\n\nAccess control only suits in infrastructure levels - as physical hosts and hypervisors.']                                                                                                 | ['Simpler, scalable and robust techniques.\n\nRequires extra processing power.']                                                                                                            |
+| 3543367 | ['CP-ABE based multi-authority data access control scheme in Fog-cloud computing systems.\n\nOutsourced encryption and decryption computations.']                                                                                                   | ['User and attribute revocation can be performed efficiently.\n\nSecure and highly efficient scheme.']                                                                                      |
+| 1681367 | ['A hybrid and fine-grained access control solution.\n\nMost of the decryption process can be outsourced.\n\nSecure and suitable in the Fog computing environment.\n\nPerfectly applicable for resource-constrained IoT devices and applications.'] | ['Efficiency of data access is improved.\n\nKey management cost is greatly reduced.\n\nThe limitation and drawbacks of this method is it can be applied only in centralized architecture.'] |
+
+GOLD SCHEMA:
+0: Highlights/Objectives
+1: Performances and Achievements
+
+PREDICTION PATH:../../metric_validation_0/31c80ad2-a4ce-4d17-a8fe-80a14c6c8fcc/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|                           | Access Control Mechanism                                                  | Environment Applicability                              |
+|:--------------------------|:--------------------------------------------------------------------------|:-------------------------------------------------------|
+| Paper 1 - CloudPolice     | ['Hypervisor-based access control mechanism']                             | ['Cloud computing']                                    |
+| Paper 2 - VO-MAACS        | ['Ciphertext-policy attribute-based encryption (CP-ABE) with revocation'] | ['Fog-cloud computing']                                |
+| Paper 3 - A Hybrid Scheme | ['CP-ABE for fine-grained search and access authorization']               | ['Fog computing for resource-constrained end devices'] |
+
+MATCHES:
+Access Control Mechanism: 
+Environment Applicability: 

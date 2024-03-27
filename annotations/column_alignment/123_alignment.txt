@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Novel techniques for improving model performance                                                                                                                                                                                | Experiments and results showcasing performance improvement                                                                                                                           |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Proposing a strategy to adapt local neighborhood properties and tasks by using jumping knowledge (JK) networks, enabling better structure-aware representation.']                                                             | ["Demonstrating the model's state-of-the-art performance in experiments on social, bioinformatics, and citation networks."]                                                          |
+| paper_2 | ['Introducing new ways to train very deep GCNs by borrowing concepts from CNNs, specifically residual/dense connections and dilated convolutions, and adapting them to GCN architectures.']                                     | ['Showing the positive effect of deep GCN frameworks in extensive experiments, particularly boosting performance in the task of point cloud semantic segmentation.']                 |
+| paper_3 | ['Introducing two simple yet effective techniques, Initial residual and Identity mapping, in the GCNII model to relieve the problem of over-smoothing.']                                                                        | ['Outperforming the state-of-the-art methods on various semi- and full-supervised tasks in experiments.']                                                                            |
+| paper_4 | ['Developing a novel convolutional kernel named GCN+ which has lower parameter amount while relieving the over-smoothing inherently.']                                                                                          | ['Demonstrating the superior performance of GCN+ over state-of-the-art baseline methods on node classification tasks.']                                                              |
+| paper_5 | ['Proposing Deep Adaptive Graph Neural Network (DAGNN) to adaptively incorporate information from large receptive fields.']                                                                                                     | ['Validating the effectiveness of the proposed methods in experimental results on citation, co-authorship, and co-purchase datasets.']                                               |
+| paper_6 | ['Introducing Node Normalization (NodeNorm) as a variance-controlling technique to address the performance degradation of GCNs.']                                                                                               | ['Enabling deep GCNs to outperform shallow ones in cases where deep models are needed, and achieve comparable results with shallow ones on benchmark datasets.']                     |
+| paper_7 | ['Proposing Unified Message Passaging Model (UniMP) that unifies feature and label propagation at both training and inference time, obtaining state-of-the-art semi-supervised classification results.']                        | ['Obtaining state-of-the-art semi-supervised classification results in Open Graph Benchmark (OGB).']                                                                                 |
+| paper_8 | ['Introducing FLAG (Free Large-scale Adversarial Augmentation on Graphs) to iteratively augment node features with gradient-based adversarial perturbations during training and boost performance at test time.']               | ['Yielding consistent and salient performance boost across both node and graph classification tasks, reaching state-of-the-art performance on large-scale datasets.']                |
+| paper_9 | ['Proposing Attentive Context Normalization (ACN) as a technique to build permutation-equivariant networks robust to outliers, providing a significant leap in performance compared to the state-of-the-art on various tasks.'] | ['Providing a significant leap in performance compared to the state-of-the-art on camera pose estimation, robust fitting, and point cloud classification under noise and outliers.'] |
+
+MATCHES:
+Novel techniques for improving model performance: 
+Experiments and results showcasing performance improvement: 

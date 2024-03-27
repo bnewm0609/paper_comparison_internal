@@ -1,0 +1,33 @@
+ID: e017f23d-a90f-4443-a5ec-946869cb0a49
+
+GOLD TABLE:
+|           | Year     | Image Type             | Intra/Inter Mode Collapse   | Application Type    | Proposed Solution                            |
+|----------:|:---------|:-----------------------|:----------------------------|:--------------------|:---------------------------------------------|
+| 252846395 | ['2023'] | ['X-ray Images']       | ['Intra']                   | ['Image Synthesis'] | ['Self-attention and multi-scale gradients'] |
+| 204904838 | ['2021'] | ['Dermoscopic Images'] | ['Intra']                   | ['Image Synthesis'] | ['Self Attention']                           |
+| 244714924 | ['2021'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['SSIM loss']                                |
+| 232061669 | ['2020'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['VAEGAN']                                   |
+
+GOLD SCHEMA:
+0: Year
+1: Image Type
+2: Intra/Inter Mode Collapse
+3: Application Type
+4: Proposed Solution
+
+PREDICTION PATH:../../metric_validation_0/e017f23d-a90f-4443-a5ec-946869cb0a49/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Generative Method          | Application Domain                             | Use of a Specific GAN Architecture                                       | Evaluation Metrics                                                                                 | Improvement Claims                                                                                                           |
+|:--------|:-----------------------------------|:-----------------------------------------------|:-------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Generative Adversarial Network'] | ['Biomedical Image Analysis for X-ray Images'] | ['Multi-scale gradient GAN with Attention Mechanism']                    | ['Multi-scale Structural Similarity Index Measure (MS-SSIM) and Frechet Inception Distance (FID)'] | ['Improved training performance, reduced impact of mode collapse, stabilized training, and synthesis of diversified images'] |
+| Paper_2 | ['Generative Adversarial Network'] | ['Skin Cancer Classification']                 | ['Progressive Generative Adversarial Network with Self-Attention']       | ['Accuracy']                                                                                       | ['Improved generalization and generation of fine-grained samples with clinical information']                                 |
+| Paper_3 | ['Generative Adversarial Network'] | ['Brain Tumor MR Image Analysis']              | ['Progressive Growing of GANs with Structural Similarity Loss Function'] | ['Frechet Inception Distance (FID) and Multi-scale Structural Similarity (MS-SSIM)']               | ['Solving image blurriness problems, model collapse, and performance improvement']                                           |
+| Paper_4 | ['Generative Adversarial Network'] | ['3D Brain MR Image Analysis']                 | ['Deep Convolutional Refined Auto-Encoding Alpha GAN']                   | ['Multi-Scale Structural Similarity Metric, Maximum Mean Discrepancy and Intersection over Union'] | ['Generating realistic 3D brain MR images, solving mode collapse, and reducing image blurriness']                            |
+
+MATCHES:
+Type of Generative Method: 
+Application Domain: 
+Use of a Specific GAN Architecture: 
+Evaluation Metrics: 
+Improvement Claims: 

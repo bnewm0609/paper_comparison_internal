@@ -1,0 +1,26 @@
+ID: f135ea39-e12f-4616-99f1-73204e997fb3
+
+GOLD TABLE:
+|           | Dataset            | # of images   | Categories                                             |
+|----------:|:-------------------|:--------------|:-------------------------------------------------------|
+| 215736956 | ['Dataset 3 (D3)'] | ['2,138']     | ['Covid, Normal, No_findings, PneumoniaB, PneumoniaV'] |
+| 214668039 | ['Dataset 4 (D4)'] | ['320']       | ['Covid, Normal, PneumoniaB, PneumoniaV']              |
+
+GOLD SCHEMA:
+0: Dataset
+1: # of images
+2: Categories
+
+PREDICTION PATH:../../metric_validation_0/f135ea39-e12f-4616-99f1-73204e997fb3/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of paper       | Subject Matter                            | Methodology                                                                    |
+|:--------|:--------------------|:------------------------------------------|:-------------------------------------------------------------------------------|
+| paper_1 | ['Research Paper']  | ['COVID-19 detection using chest X-rays'] | ['Deep Convolutional Neural Network (CoroNet) based on Xception architecture'] |
+| paper_2 | ['Research Paper']  | ['COVID-19 detection using chest X-rays'] | ['Deep Convolutional Neural Network (CoroNet) based on Xception architecture'] |
+| paper_3 | ['Data Collection'] | ['COVID-19 image data collection']        | ['Description of the initial COVID-19 open image data collection']             |
+
+MATCHES:
+Type of paper: 
+Subject Matter: 
+Methodology: 

@@ -1,0 +1,36 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of energy shared       | Optimization methods used                                        | Consideration of intermittent energy generation   | Consideration of energy storage systems   | Participation of prosumers or aggregators   | Market-based mechanisms used                    | Main contributions and results                                                                                                                                                                                 |
+|:--------|:----------------------------|:-----------------------------------------------------------------|:--------------------------------------------------|:------------------------------------------|:--------------------------------------------|:------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Electricity']             | ['Stackelberg game']                                             | ['Yes']                                           | ['No']                                    | ['Yes']                                     | ['Hour-ahead optimal pricing model']            | ['Proposed a Stackelberg game approach for ESM', ' verified the effectiveness of the model']                                                                                                                   |
+| paper_2 | ['Electricity']             | ['Generalized game-theoretic model']                             | ['Yes']                                           | ['N/A']                                   | ['Yes']                                     | ['Nash equilibrium price']                      | ['Proposed a novel energy sharing mechanism', 'Proved desirable properties', 'Showed Nash equilibrium approaches social optimal']                                                                              |
+| paper_3 | ['Electricity']             | ['Online algorithm', 'Lyapunov optimization theory']             | ['Yes']                                           | ['Yes']                                   | ['Yes']                                     | ['Shared electrical and thermal energy prices'] | ['Designed an online algorithm for cost-aware energy sharing', 'Explored method based on Lyapunov optimization theory', 'Conducted trace-driven simulations']                                                  |
+| paper_4 | ['Electricity', 'Hydrogen'] | ['Distributed optimization method']                              | ['Yes']                                           | ['Yes']                                   | ['Yes']                                     | ['Unified market clearing prices']              | ['Proposed an energy sharing model in the forms of hydrogen and electricity', 'Simulated the model on 35-bus electricity network']                                                                             |
+| paper_5 | ['Electricity']             | ['Alternating direction method of multipliers (ADMM) algorithm'] | ['Yes']                                           | ['Yes']                                   | ['Yes']                                     | ['Shared electrical and thermal energy prices'] | ['Developed a transactive energy mechanism-supported energy sharing strategy', 'Demonstrated effectiveness of the multi-energy sharing scheme']                                                                |
+| paper_6 | ['Electricity']             | ['Non-convex non-cooperative game']                              | ['N/A']                                           | ['Yes']                                   | ['Yes']                                     | ['Equilibrium prices for shared storage']       | ['Explored sharing economy opportunities in the electricity sector', 'Formulated storage investment decisions of the firms as a non-convex non-cooperative game', 'Discussed technology and market platforms'] |
+
+MATCHES:
+Type of energy shared: 
+Optimization methods used: 
+Consideration of intermittent energy generation: 
+Consideration of energy storage systems: 
+Participation of prosumers or aggregators: 
+Market-based mechanisms used: 
+Main contributions and results: 

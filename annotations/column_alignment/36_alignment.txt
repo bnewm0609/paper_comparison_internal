@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Model Types                                                               | Training Data                                                  |
+|:---------|:--------------------------------------------------------------------------|:---------------------------------------------------------------|
+| Paper 1  | ['N/A']                                                                   | ['N/A']                                                        |
+| Paper 2  | ['Bayesian graph convolutional network']                                  | ['Molecular properties']                                       |
+| Paper 3  | ['Bayesian semi-supervised learning method']                              | ['Molecular properties']                                       |
+| Paper 4  | ['Graph convolutional neural networks (GCNNs)']                           | ['Molecular datasets']                                         |
+| Paper 5  | ['Neural networks', 'Multiple regression datasets']                       | ['Regression datasets']                                        |
+| Paper 6  | ['Neural networks', 'Multiple regression datasets']                       | ['Regression datasets']                                        |
+| Paper 7  | ['Convolutional neural network', 'Gaussian process regressor']            | ['Adsorption energies']                                        |
+| Paper 8  | ['Evidential deep learning', 'Molecular structure–property prediction']   | ['Molecular structures']                                       |
+| Paper 9  | ['Deep learning uncertainty quantification (UQ) methods']                 | ['Protein datasets']                                           |
+| Paper 10 | ['Gaussian processes (GPs)']                                              | ['Small data, astronomical and chemical datasets']             |
+| Paper 11 | ['Graph Neural Networks (GNNs)', 'Gaussian Process (GP)-based extension'] | ['Molecular force fields']                                     |
+| Paper 12 | ['Non-Bayesian approach']                                                 | ['Data-derived electron densities']                            |
+| Paper 13 | ['Machine-learning (ML) framework']                                       | ['Quasiparticle energy levels from density functional theory'] |
+
+MATCHES:
+Model Types: 
+Training Data: 

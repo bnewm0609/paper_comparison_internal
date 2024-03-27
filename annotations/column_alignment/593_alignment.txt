@@ -1,0 +1,43 @@
+ID: 64eb36c7-58cb-4e4f-ab6d-c325b5d556c6
+
+GOLD TABLE:
+|          | Model                                  | Main results in asymptotic SNR regime                     |
+|---------:|:---------------------------------------|:----------------------------------------------------------|
+| 13097571 | ['A general class of channels']        | ['Analyze the wideband slope']                            |
+|  8632659 | ['A general class of channels']        | ['Obtain the second order']                               |
+|  6862477 | ['high SNR']                           | ['Provide lower and upper bounds of the']                 |
+|  5724981 | ['high SNR']                           | ['the\nMMSE and the mutual information']                  |
+|  1748759 | ['block Rayleigh fading, high SNR']    | ['increasing function of the minimum Euclidean distance'] |
+| 26883678 | ['high SNR']                           | ['of the mutual information']                             |
+| 16092719 | ['Nakagami fading, low SNR, high SNR'] | ['ergodic mutual information and the average MMSE']       |
+| 14718027 | ['Kronecker fading with LOS']          | ['ergodic mutual information and the average MMSE']       |
+
+GOLD SCHEMA:
+0: Model
+1: Main results in asymptotic SNR regime
+
+PREDICTION PATH:../../metric_validation_0/64eb36c7-58cb-4e4f-ab6d-c325b5d556c6/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Spectral Efficiency Analysis                                                                   | Optimization Techniques                                                                           |
+|:---------|:-----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Tradeoff of spectral efficiency versus energy-per-information bit']                          | ['New criterion for optimality of signaling in the wideband regime']                              |
+| Paper 2  | ['Tradeoff of spectral efficiency versus energy-per-information bit']                          | ['New criterion for optimality of signaling in the wideband regime']                              |
+| Paper 3  | ['Second-order asymptotics of mutual information for wideband regime']                         | ['Analysis of the bandwidth-power tradeoff']                                                      |
+| Paper 4  | ['Second-order asymptotics of mutual information for wideband regime']                         | ['Analysis of the bandwidth-power tradeoff']                                                      |
+| Paper 5  | ['Optimum power allocation for parallel Gaussian channels with arbitrary input distributions'] | ['Relationship between mutual information of Gaussian channels and nonlinear MMSE']               |
+| Paper 6  | ['Optimum power allocation for parallel Gaussian channels with arbitrary input distributions'] | ['Relationship between mutual information of Gaussian channels and nonlinear MMSE']               |
+| Paper 7  | ['MIMO Gaussian Channels With Arbitrary Inputs: Optimal Precoding and Power Allocation']       | ['Optimal linear precoding and power allocation policies for MIMO Gaussian channels']             |
+| Paper 8  | ['MIMO Gaussian Channels With Arbitrary Inputs: Optimal Precoding and Power Allocation']       | ['Optimal linear precoding and power allocation policies for MIMO Gaussian channels']             |
+| Paper 9  | ['Precoding for Outage Probability Minimization on Block Fading Channels']                     | ['Geometric approach for outage probability minimization on block fading channels']               |
+| Paper 10 | ['Precoding for Outage Probability Minimization on Block Fading Channels']                     | ['Geometric approach for outage probability minimization on block fading channels']               |
+| Paper 11 | ['High-SNR Asymptotics of Mutual Information for Discrete Constellations']                     | ['Asymptotic expressions of the mutual information for discrete constellations']                  |
+| Paper 12 | ['High-SNR Asymptotics of Mutual Information for Discrete Constellations']                     | ['Asymptotic expressions of the mutual information for discrete constellations']                  |
+| Paper 13 | ['Fading Channels With Arbitrary Inputs: Asymptotics of the Constrained Capacity']             | ['Characterization of the asymptotic behavior of the average MMSE in fading channels']            |
+| Paper 14 | ['Fading Channels With Arbitrary Inputs: Asymptotics of the Constrained Capacity']             | ['Characterization of the asymptotic behavior of the average MMSE in fading channels']            |
+| Paper 15 | ['Multiple-Antenna Fading Channels With Arbitrary Inputs: Characterization and Optimization']  | ['Characterization and Optimization of the Information Rate in multiple-antenna fading channels'] |
+| Paper 16 | ['Multiple-Antenna Fading Channels With Arbitrary Inputs: Characterization and Optimization']  | ['Characterization and Optimization of the Information Rate in multiple-antenna fading channels'] |
+
+MATCHES:
+Spectral Efficiency Analysis: 
+Optimization Techniques: 

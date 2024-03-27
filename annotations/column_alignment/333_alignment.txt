@@ -1,0 +1,36 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size and type of the dataset                                                                                        | Realism and diversity of the dataset                                                                                                                                                                                                        | Evaluation metrics used                                                                                                                             | Classification accuracy                                                                                                       |
+|:--------|:--------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ["A large e-Commerce site's consumer reviews"]                                                                      | ['N/A']                                                                                                                                                                                                                                     | ['Accuracy (89.6% using only n-gram features on AMT crafted fake reviews)']                                                                         | ['Around a 2% spam rate for consumer reviews on a large e-Commerce site']                                                     |
+| Paper 2 | ['Yelp.com filtered (fake) and unfiltered (non-fake) reviews', 'Amazon Mechanical Turk (AMT) crafted fake reviews'] | ['Yelp.com filtered (fake) and unfiltered (non-fake) reviews are real-life data, AMT crafted fake reviews are not real fake reviews on a commercial website', 'AMT crafted fake reviews are not real fake reviews on a commercial website'] | ['Accuracy (67.8% using only n-gram features on real Yelp review data)', 'Information theoretic measure KL-divergence and its asymmetric property'] | ['67.8% using only n-gram features on real Yelp review data', '89.6% using only n-gram features on AMT crafted fake reviews'] |
+| Paper 3 | ['Popular product review websites (e.g., amazon.com) review data']                                                  | ['Popular product review websites (e.g., amazon.com) review data']                                                                                                                                                                          | ['Not mentioned']                                                                                                                                   | ['Not mentioned']                                                                                                             |
+| Paper 4 | ['Online reviews from a platform (not specified)']                                                                  | ['N/A']                                                                                                                                                                                                                                     | ['Accuracy, precision, recall, and F1-score']                                                                                                       | ['High accuracy in classification of fake vs. real reviews']                                                                  |
+| Paper 5 | ['Online reviews from a platform (not specified)']                                                                  | ['N/A']                                                                                                                                                                                                                                     | ['Not mentioned']                                                                                                                                   | ['Not mentioned']                                                                                                             |
+| Paper 6 | ['Hotel, Restaurant, and Doctor reviews (dataset not specified)']                                                   | ['N/A']                                                                                                                                                                                                                                     | ['Accuracy, precision, recall, and F1-score (neural network model)']                                                                                | ['Outperforms state-of-the-art methods in deceptive opinion spam detection']                                                  |
+| Paper 7 | ['Yelp Filter Dataset']                                                                                             | ['Yelp Filter Dataset']                                                                                                                                                                                                                     | ['Information theoretic measure KL-divergence and Latent Dirichlet Allocation']                                                                     | ['Effective method based on Latent Dirichlet Allocation']                                                                     |
+
+MATCHES:
+Size and type of the dataset: 
+Realism and diversity of the dataset: 
+Evaluation metrics used: 
+Classification accuracy: 

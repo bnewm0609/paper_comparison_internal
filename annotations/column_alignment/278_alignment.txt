@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | System features and complexity (e.g., number of buses, consumers, distributed generators, microgrids)   | Power transaction between grid and microgrids or distribution grids                                | Handling of uncertainties (e.g., wind power uncertainty, load uncertainty, stochastic net load scenarios)   |
+|:---------|:--------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                                 | ['N/A']                                                                                            | ['N/A']                                                                                                     |
+| paper_2  | ['N/A']                                                                                                 | ['total operating cost of the micro-grid']                                                         | ['considering environmental issues']                                                                        |
+| paper_3  | ['4-DER 14-bus radial micro-grid']                                                                      | ['electrical tracking demand']                                                                     | ['dependent on types of DERs used']                                                                         |
+| paper_4  | ['Some Micro grids (MGs) or Small Scale Energy Zones (SSEZs)']                                          | ['power transaction between MGs and between MGs and the main']                                     | ['stochastically analysis of generated power with SSERs and their corresponding costs']                     |
+| paper_5  | ['multimicrogrids (MMGs)']                                                                              | ['power interchange between MGs']                                                                  | ['stochastically and probabilistic modeling of both SSERs and load demand']                                 |
+| paper_6  | ['modified IEEE benchmark system involving six thermal units and two wind farms']                       | ['power dispatch strategy']                                                                        | ['probability of stochastic wind power based on nonlinear wind power curve and Weibull distribution']       |
+| paper_7  | ['20310 consumers and 548 distributed generators']                                                      | ['operation costs of a virtual power player that manages the resources in a distribution network'] | ['elastic behavior of the demand consumption']                                                              |
+| paper_8  | ['N/A']                                                                                                 | ['power loss minimisation']                                                                        | ['optimal load response to electricity prices']                                                             |
+| paper_9  | ['IEEE 30-bus power system']                                                                            | ["loss of load and `spilling' wind energy associated with unpredictable imbalances"]               | ['Conditional value at risk index']                                                                         |
+| paper_10 | ['microgrid']                                                                                           | ['total economic cost and network loss of microgrid']                                              | ['uncontrollable microsources are considered as negative load, and stochastic net load scenarios']          |
+
+MATCHES:
+System features and complexity (e.g., number of buses, consumers, distributed generators, microgrids): 
+Power transaction between grid and microgrids or distribution grids: 
+Handling of uncertainties (e.g., wind power uncertainty, load uncertainty, stochastic net load scenarios): 

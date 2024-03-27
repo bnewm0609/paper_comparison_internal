@@ -1,0 +1,27 @@
+ID: d6fc8459-4175-4fc1-90eb-25cf6c798a2a
+
+GOLD TABLE:
+|           | Dataset   | #C    |
+|----------:|:----------|:------|
+|   6143824 | ['FN']    | ['2'] |
+| 215754328 | ['HATE']  | ['2'] |
+|   1428702 | ['IMDB']  | ['2'] |
+|   5034059 | ['SST']   | ['2'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: #C
+
+PREDICTION PATH:../../metric_validation_0/d6fc8459-4175-4fc1-90eb-25cf6c798a2a/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Approach                                                     | Task/Application                                                                |
+|:--------|:---------------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| paper_1 | ['Multi-task Learning and Analysis Platform']                        | ['Natural Language Understanding (GLUE)']                                       |
+| paper_2 | ['Unsupervised and Supervised Learning for Sentiment Analysis']      | ['Sentiment Analysis, Text Classification']                                     |
+| paper_3 | ['Attention Mechanism and Linguistic Features for Satire Detection'] | ['Satire Detection']                                                            |
+| paper_4 | ['Weight Poisoning Attacks on Pre-trained Models']                   | ['Pre-trained Model Security, Text Classification (Sentiment, Toxicity, Spam)'] |
+
+MATCHES:
+Type of Approach: 
+Task/Application: 

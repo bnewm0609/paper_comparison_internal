@@ -1,0 +1,23 @@
+ID: 41ee5929-ef7d-49b0-b25d-b0caf7c167dd
+
+GOLD TABLE:
+|           | Age recording format   | Example   |
+|----------:|:-----------------------|:----------|
+| 221128548 | ['exact age']          | ['64']    |
+| 220483201 | ['not available']      | ['NA']    |
+
+GOLD SCHEMA:
+0: Age recording format
+1: Example
+
+PREDICTION PATH:../../metric_validation_0/41ee5929-ef7d-49b0-b25d-b0caf7c167dd/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Immune response profiling                                                                                                       | Drivers of severe COVID-19 progression                                           |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| Paper 1 | ['Comprehensive atlas of immune modulation associated with COVID-19']                                                           | ['Prominent and distinct immunotypes related to disease severity']               |
+| Paper 2 | ['Single-cell RNA sequencing of blood immune cells reveals type I interferon–associated hyper-inflammation in severe COVID-19'] | ['TNF/IL-1β–driven inflammation as defining characteristics of severe COVID-19'] |
+
+MATCHES:
+Immune response profiling: 
+Drivers of severe COVID-19 progression: 

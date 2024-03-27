@@ -1,0 +1,26 @@
+ID: f135ea39-e12f-4616-99f1-73204e997fb3
+
+GOLD TABLE:
+|           | Dataset            | # of images   | Categories                                             |
+|----------:|:-------------------|:--------------|:-------------------------------------------------------|
+| 215736956 | ['Dataset 3 (D3)'] | ['2,138']     | ['Covid, Normal, No_findings, PneumoniaB, PneumoniaV'] |
+| 214668039 | ['Dataset 4 (D4)'] | ['320']       | ['Covid, Normal, PneumoniaB, PneumoniaV']              |
+
+GOLD SCHEMA:
+0: Dataset
+1: # of images
+2: Categories
+
+PREDICTION PATH:../../metric_validation_0/f135ea39-e12f-4616-99f1-73204e997fb3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model architecture (e.g., Deep Convolutional Neural Network)               | Performance metrics (e.g., accuracy, precision, recall)                      | Dataset used for training (e.g., public databases, number of images)                                                                            |
+|:--------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Deep Convolutional Neural Network model based on Xception architecture'] | ['Overall accuracy: 89.6%, Precision COVID-19: 93%, Recall COVID-19: 98.2%'] | ['Trained on dataset prepared by collecting COVID-19 and other chest pneumonia X-ray images from two different publically available databases'] |
+| paper_2 | ['Deep Convolutional Neural Network model based on Xception architecture'] | ['Overall accuracy: 89.6%, Precision COVID-19: 93%, Recall COVID-19: 98.2%'] | ['Trained on dataset prepared by collecting COVID-19 and other chest pneumonia X-ray images from two different publically available databases'] |
+| paper_3 | ['N/A']                                                                    | ['N/A']                                                                      | ['COVID-19 open image data collection containing 123 frontal view X-rays']                                                                      |
+
+MATCHES:
+Model architecture (e.g., Deep Convolutional Neural Network): 
+Performance metrics (e.g., accuracy, precision, recall): 
+Dataset used for training (e.g., public databases, number of images): 

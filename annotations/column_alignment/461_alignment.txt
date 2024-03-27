@@ -1,0 +1,27 @@
+ID: 8492db98-0c47-4a9c-87c7-ef0a45ef6628
+
+GOLD TABLE:
+|           | Task             | Target    | Sensor   | Best Method     |
+|----------:|:-----------------|:----------|:---------|:----------------|
+| 201099006 | ['Detection']    | ['Trees'] | ['RGB']  | ['RetinaNet']   |
+| 210846858 | ['Segmentation'] | ['Trees'] | ['RGB']  | ['FC-DenseNet'] |
+
+GOLD SCHEMA:
+0: Task
+1: Target
+2: Sensor
+3: Best Method
+
+PREDICTION PATH:../../metric_validation_0/8492db98-0c47-4a9c-87c7-ef0a45ef6628/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of architectures evaluated                           | Post-processing techniques used (conditional random fields)                                   | Computational cost of post-processing step                                     | Performance metrics (overall accuracy, F1-score, IoU)                               |
+|:--------|:------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| paper_1 | ['3 (Faster R-CNN, YOLOv3, RetinaNet)']                     | ['N/A']                                                                                       | ['N/A']                                                                        | ['Average precision around 92%']                                                    |
+| paper_2 | ['5 (SegNet, U-Net, FC-DenseNet, two DeepLabv3+ variants)'] | ['Used conditional random fields as a post-processing step to improve the segmentation maps'] | ['CRF consistently improves the performance but at a high computational cost'] | ['Overall accuracy: 88.9% to 96.7%, F1-score: 87.0% to 96.1%, IoU: 77.1% to 92.5%'] |
+
+MATCHES:
+Number of architectures evaluated: 
+Post-processing techniques used (conditional random fields): 
+Computational cost of post-processing step: 
+Performance metrics (overall accuracy, F1-score, IoU): 

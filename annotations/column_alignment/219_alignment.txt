@@ -1,0 +1,37 @@
+ID: e1512e4e-5a65-42a7-8e88-41dbfebbeba8
+
+GOLD TABLE:
+|          | Algorithms                   | Applications                                                                                        |
+|---------:|:-----------------------------|:----------------------------------------------------------------------------------------------------|
+| 10588433 | ['RBF-NN']                   | ['Predict the path loss']                                                                           |
+| 19607115 | ['RVM']                      | ['Estimate DoA of MPCs']                                                                            |
+| 37130060 | ['RVM']                      | ['Filter the noise embedded MPCs to determine the PDP']                                             |
+| 44232249 | ['FNN and RBF-NN']           | ['Predict the intermediate points in ray launching simulation to obtain the indoor received power'] |
+|  9013158 | ['ANN']                      | ['Produce the CIR with a limited number of cluster-nuclei']                                         |
+| 41841631 | ['MLP']                      | ['Predict the outdoor received signal strength']                                                    |
+|  3427187 | ['LASSO']                    | ['Estimate the CIR based on channel measurement data']                                              |
+| 88514780 | ['SVM']                      | ['Predict the path loss']                                                                           |
+| 44025148 | ['K-means, FCM, and DBSCAN'] | ['Clustering and tracking MPCs']                                                                    |
+
+GOLD SCHEMA:
+0: Algorithms
+1: Applications
+
+PREDICTION PATH:../../metric_validation_0/e1512e4e-5a65-42a7-8e88-41dbfebbeba8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Prediction method                                                                                                     | Learning algorithms                                                                                   |
+|:--------|:----------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| paper_1 | ['RBF neural network to the prediction of field strength based on topographical and morphographical data']            | ['Hybrid competitive and recursive least squares algorithms for adaptive learning']                   |
+| paper_2 | ['Sparse Bayesian learning (SBL) for maximum likelihood (ML) direction-of-arrival (DOA) estimation']                  | ['Sparse Bayesian learning (SBL)']                                                                    |
+| paper_3 | ['Relevance vector machine (RVM) for the filtering of channel multipath components']                                  | ['Bayesian Statistics-based RVM learning algorithm']                                                  |
+| paper_4 | ['Ray launching algorithm with a neural network for radio wave propagation analysis in complex indoor environments']  | ['Neural network and 3-D ray launching algorithm for computing wireless channel performance']         |
+| paper_5 | ['Cluster-nuclei based model for wireless channel measurement and modeling research']                                 | ['Low complexity cluster-nuclei based model']                                                         |
+| paper_6 | ['Artificial neural network (ANN) for outdoor signal strength prediction in UHF band']                                | ['Artificial neural network (ANN) for reducing the average deviations in signal coverage prediction'] |
+| paper_7 | ['Complex LASSO algorithm for sparse time-variant impulse response estimation for vehicular channels']                | ['Complex LASSO algorithm']                                                                           |
+| paper_8 | ['Support vector machine techniques for prediction of propagation losses at 169 MHz for smart metering applications'] | ['Support vector machine techniques for classification and regression']                               |
+| paper_9 | ['Clustering techniques for enabling cluster-based wireless channel modeling']                                        | ['Clustering and tracking algorithms for clustered channel modeling']                                 |
+
+MATCHES:
+Prediction method: 
+Learning algorithms: 

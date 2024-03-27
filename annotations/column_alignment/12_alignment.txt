@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Predictive capabilities                                                                                          | Chemical space coverage                                                                                                            | Potential-energy surface predictions                                                                                       |
+|:--------|:-----------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Competative performance of the Dynamic Fusion Graph (DFG) technique']                                          | ['Introduces the largest dataset of sentiment analysis and emotion recognition (CMU-MOSEI)']                                       | ['N/A']                                                                                                                    |
+| paper_2 | ['Demonstrated accuracy of 0.3 kcal/mol for energies and 1 kcal/mol/Å for atomic forces']                        | ['Demonstrates accuracy for AIMD trajectories of molecules including benzene, toluene, naphthalene, ethanol, uracil, and aspirin'] | ['Represents potential energy surfaces of intermediate-sized molecules']                                                   |
+| paper_3 | ['Accurately predicting properties across chemical space for molecules and materials']                           | ['Accurately predicting a range of properties across chemical space for molecules and materials']                                  | ['Uses SchNet to predict potential-energy surfaces and energy-conserving force fields for molecular dynamics simulations'] |
+| paper_4 | ['Proposes machine learning to efficiently approximate quantum mechanical simulations']                          | ['Discusses challenges in finding suitable electrocatalysts for renewable energy storage']                                         | ['N/A']                                                                                                                    |
+| paper_5 | ['Introduces methods for three-dimensional molecular learning showing consistent performance improvement']       | ['Presents ATOM3D, a collection of benchmark datasets for molecular learning methods']                                             | ['N/A']                                                                                                                    |
+| paper_6 | ['Provides a Python library for rapid structural and temporal analysis of MD simulation trajectories']           | ['Enables rapid analysis of molecular dynamics simulation trajectories']                                                           | ['N/A']                                                                                                                    |
+| paper_7 | ['Introduces 3D ShapeNets model for learning distribution of complex 3D shapes']                                 | ['Constructs ModelNet - a large-scale 3D CAD model dataset for training']                                                          | ['N/A']                                                                                                                    |
+| paper_8 | ['Introduces a new real-world point cloud object dataset and classification model for 3D object classification'] | ['Introduces ScanObjectNN, a new real-world point cloud object dataset based on scanned indoor scene data']                        | ['Presents new point cloud classification neural networks achieving state-of-the-art performance on classifying objects']  |
+
+MATCHES:
+Predictive capabilities: 
+Chemical space coverage: 
+Potential-energy surface predictions: 

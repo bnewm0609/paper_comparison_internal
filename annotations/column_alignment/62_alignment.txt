@@ -1,0 +1,30 @@
+ID: 900fc22d-501e-4fd8-8a12-4fd2c96483ea
+
+GOLD TABLE:
+|           | Domain           | Key characteristics                                            |
+|----------:|:-----------------|:---------------------------------------------------------------|
+| 216404355 | ['Smart City']   | ['Complexity capture']                                         |
+| 233674190 | ['Smart City']   | ['Situational awareness, Monitoring, Analysis, Understanding'] |
+| 219507572 | ['Supply Chain'] | ['Resilience, Replication, Simulation']                        |
+| 235543230 | ['Supply Chain'] | ['Decision making, Holistic improvements']                     |
+| 256194278 | ['Ports']        | ['Simulation, Modelling, Fault detection, Monitoring']         |
+
+GOLD SCHEMA:
+0: Domain
+1: Key characteristics
+
+PREDICTION PATH:../../metric_validation_0/900fc22d-501e-4fd8-8a12-4fd2c96483ea/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Use of 3D models and simulation                                                                                                    | Participation and collaboration of citizens and stakeholders                                                                    |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Discuss the prototype of an urban digital twin, including a 3D model of the built environment and an urban mobility simulation'] | ['Present public participatory processes and collaborative processes with citizens and stakeholders']                           |
+| paper_2 | ['N/A']                                                                                                                            | ['N/A']                                                                                                                         |
+| paper_3 | ['N/A']                                                                                                                            | ['N/A']                                                                                                                         |
+| paper_4 | ['Discuss DSCT capable of including an entire multimodal supply chain, simulation, and evaluation of different scenarios']         | ['Discuss the potential of DSCT to enable multi-stakeholder governance and collaboration']                                      |
+| paper_5 | ['Discuss the potential of digital twins to increase the efficiency of interconnected port processes']                             | ["Propose a strategy for multi-stakeholder governance and collaboration for the port's digital twin"]                           |
+| paper_6 | ['Discuss the potential of digital twins for improving the efficiency of port processes']                                          | ["Discuss the provision of an interface to promote multi-stakeholder governance and collaboration for the port's digital twin"] |
+
+MATCHES:
+Use of 3D models and simulation: 
+Participation and collaboration of citizens and stakeholders: 

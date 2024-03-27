@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of optimization algorithm used                                                               | Purpose of the optimization                                                 | System considered                                                   |
+|:---------|:--------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|:--------------------------------------------------------------------|
+| Paper_1  | ['Particle Swarm Optimization (PSO)']                                                             | ['Economic Load Dispatch (ELD) problems of power system engineering']       | ['Power systems']                                                   |
+| Paper_2  | ['Fuzzy Self Adaptive Particle Swarm Optimization (FSAPSO)']                                      | ['Multi-operation management of a typical micro-grid']                      | ['Micro-grid']                                                      |
+| Paper_3  | ['Loss sensitivity index (LSI), Loss minimization using PSO method, Differential Evolution (DE)'] | ['Economic power sharing in a CHP-Based Micro-Grid']                        | ['4-DER 14-bus radial micro-grid']                                  |
+| Paper_4  | ['Imperialist Competitive Algorithm (ICA), Particle Swarm Optimization (PSO)']                    | ['Economic operation of SSEZs']                                             | ['Small Scale Energy Zones (SSEZs)']                                |
+| Paper_5  | ['Particle Swarm Optimization (PSO)']                                                             | ['Economic operation of MMGs']                                              | ['Multimicrogrids (MMGs)']                                          |
+| Paper_6  | ['Quantum-inspired Particle Swarm Optimization (QPSO)']                                           | ['Economic dispatch (ED) model with wind power uncertainty and carbon tax'] | ['IEEE benchmark system with six thermal units and two wind farms'] |
+| Paper_7  | ['Particle Swarm Optimization (PSO) with Gaussian mutation and self-parameterization']            | ['Minimization of the operation costs of a virtual power player']           | ['Real 937 bus distribution network']                               |
+| Paper_8  | ['Fuzzy adaptive particle swarm optimisation']                                                    | ['Power loss minimisation in distribution systems']                         | ['Distribution systems']                                            |
+| Paper_9  | ['Multiple objective particle swarm optimisation']                                                | ['Optimal economic dispatch problem for wind-integrated power system']      | ['IEEE 30-bus power system']                                        |
+| Paper_10 | ['Chaotic Binary Particle Swarm Optimization (CBPSO)']                                            | ['Total economic cost and network loss of microgrid']                       | ['Microgrid']                                                       |
+
+MATCHES:
+Type of optimization algorithm used: 
+Purpose of the optimization: 
+System considered: 

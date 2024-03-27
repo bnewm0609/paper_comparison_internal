@@ -1,0 +1,33 @@
+ID: 95c3954e-5daf-4039-8362-896ec07c6208
+
+GOLD TABLE:
+|          | Approach   | Driving environment                                     | Generalization   | Low Computational complexity   | Uncertainty: model errors/noisy measurements   | Experiments          |
+|---------:|:-----------|:--------------------------------------------------------|:-----------------|:-------------------------------|:-----------------------------------------------|:---------------------|
+| 13725991 | ['-']      | ['Autonomous driving in urban environment']             | ['+ +']          | ['+']                          | ['-']                                          | ['Real & Simulated'] |
+| 15780954 | ['-']      | ['Autonomous driving in real traffic situations']       | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+| 54457648 | ['-']      | ['Autonomous Driving in multiple urban configurations'] | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+
+GOLD SCHEMA:
+0: Approach
+1: Driving environment
+2: Generalization
+3: Low Computational complexity
+4: Uncertainty: model errors/noisy measurements
+5: Experiments
+
+PREDICTION PATH:../../metric_validation_0/95c3954e-5daf-4039-8362-896ec07c6208/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Perception System                                         | Driving Environment                                    | Training Data                         | Architecture                            | Performance                                      | Validation                                    |
+|:--------|:----------------------------------------------------------|:-------------------------------------------------------|:--------------------------------------|:----------------------------------------|:-------------------------------------------------|:----------------------------------------------|
+| paper_1 | ['Vision and radar-based perception']                     | ['Historic Bertha Benz Memorial Route']                | ['Minimal training data from humans'] | ['Close-to-production sensor hardware'] | ['Autonomous vehicle completed the route']       | ['Details on perception and motion planning'] |
+| paper_2 | ['Convolutional neural network (CNN) mapping raw pixels'] | ['Local roads, highways, parking lots, unpaved roads'] | ['30 frames per second (FPS)']        | ['End-to-end system']                   | ['Drive in traffic on local roads and highways'] | ['Better performance and smaller systems']    |
+| paper_3 | ['Imitation learning with synthesized data']              | ['Complex driving scenarios']                          | ['30 million examples']               | ['ChauffeurNet model']                  | ['Robustness of the learned model']              | ['Demonstration in the real world']           |
+
+MATCHES:
+Perception System: 
+Driving Environment: 
+Training Data: 
+Architecture: 
+Performance: 
+Validation: 

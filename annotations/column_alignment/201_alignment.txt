@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Effectiveness of de-anonymization methods                    | Real-world applications of de-anonymization                                                                                                                |
+|:--------|:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['52%']                                                      | ['N/A']                                                                                                                                                    |
+| Paper 2 | ['up to 96% with 100 candidates', '83% with 600 candidates'] | ["using obfuscated binaries, and real-world code found 'in the wild' in single-author GitHub repositories and the recently leaked Nulled.IO hacker forum"] |
+
+MATCHES:
+Effectiveness of de-anonymization methods: 
+Real-world applications of de-anonymization: 

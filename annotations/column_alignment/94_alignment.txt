@@ -1,0 +1,29 @@
+ID: 46fd6d34-5004-405c-a1b5-d83d964d714f
+
+GOLD TABLE:
+|          | Architecture     | Depth   |
+|---------:|:-----------------|:--------|
+|  2895645 | ['CPCPFF']       | ['4']   |
+|   744633 | ['PCCPCCPCFFF']  | ['8']   |
+| 10647804 | ['CPCPIIPIPFFF'] | ['11']  |
+|  2482804 | ['CPNCPNCPCFF']  | ['6']   |
+| 18374345 | ['CPCPCPFF']     | ['5']   |
+
+GOLD SCHEMA:
+0: Architecture
+1: Depth
+
+PREDICTION PATH:../../metric_validation_0/46fd6d34-5004-405c-a1b5-d83d964d714f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Network architecture                                                                                                                                                                                                      | Performance and evaluation                                                                                                                                                                                                                         |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The network architecture consists of fully-connected and convolutional neural networks with a linear support vector machine replacing the softmax layer.']                                                              | ['The proposed model outperforms the baseline with significant gains on datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop’s face expression recognition challenge.']                                                    |
+| paper_2 | ['The network architecture uses deep convolutional neural networks (CNN) with multiple layers initialized randomly and pre-trained on a larger dataset. The models are then fine-tuned on the training set of SFEW 2.0.'] | ['The proposed method generates state-of-the-art results on the FER dataset and achieves 55.96% and 61.29% respectively on the validation and test set of SFEW 2.0.']                                                                              |
+| paper_3 | ['The network architecture is a deep neural network with two convolutional layers, max pooling, and four Inception layers. The network is trained on seven publically available facial expression databases.']            | ['The proposed architecture is comparable to or better than the state-of-the-art methods and better than traditional convolutional neural networks in both accuracy and training time on seven publically available facial expression databases.'] |
+| paper_4 | ['The network architecture consists of a deep model that learns a rich face representation for relation prediction from face images in the wild.']                                                                        | ['The proposed approach shows effectiveness for fine-grained social relation learning in images and videos.']                                                                                                                                      |
+| paper_5 | ['The network architecture includes discriminative deep convolutional neural networks (DCNs) and alignment-mapping networks (AMNs) to handle non-alignable faces.']                                                       | ['The proposed automatic system achieves impressive results on a challenging database for FER in the wild.']                                                                                                                                       |
+
+MATCHES:
+Network architecture: 
+Performance and evaluation: 

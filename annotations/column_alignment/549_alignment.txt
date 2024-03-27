@@ -1,0 +1,31 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Energy Sharing Mechanism                                       | Renewable Energy Integration                                   |
+|:--------|:---------------------------------------------------------------|:---------------------------------------------------------------|
+| paper_1 | ['Stackelberg game approach']                                  | ['PV prosumers in microgrids']                                 |
+| paper_2 | ['Generalized demand bidding']                                 | ['Prosumers with renewable energy sources']                    |
+| paper_3 | ['Online algorithm for cooperative community']                 | ['Cooperative residential communities with REDs and ESSs']     |
+| paper_4 | ['Integrated sharing model with hydrogen and electricity']     | ['Electricity and hydrogen energy sharing in coupled systems'] |
+| paper_5 | ['Transactive energy (TE) mechanism-supported energy sharing'] | ['Multi-energy complementary microgrids (MECMs)']              |
+| paper_6 | ['Sharing economy for electricity storage']                    | ['Electricity storage in the sharing economy']                 |
+
+MATCHES:
+Energy Sharing Mechanism: 
+Renewable Energy Integration: 

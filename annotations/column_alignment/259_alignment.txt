@@ -1,0 +1,29 @@
+ID: 91cc26ad-2721-4515-bdfb-8f1062b4b59a
+
+GOLD TABLE:
+|           | Data Modality       | # Sample    | # Classes   | Session   |
+|----------:|:--------------------|:------------|:------------|:----------|
+|  59250729 | ['Colon Pathology'] | ['107,180'] | ['9']       | ['Base']  |
+| 263789934 | ['Dermatoscope']    | ['10,015']  | ['7']       | ['Base']  |
+|  58004589 | ['Abdominal CT']    | ['58,850']  | ['11']      | ['Base']  |
+
+GOLD SCHEMA:
+0: Data Modality
+1: # Sample
+2: # Classes
+3: Session
+
+PREDICTION PATH:../../metric_validation_0/91cc26ad-2721-4515-bdfb-8f1062b4b59a/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Data Diversity                                                                                        | Use of Deep Learning                                                                                             | Clinical Application                                                                                                  | Benchmarking and Resources                                                                   |
+|:--------|:------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------|
+| Paper 1 | ['Diverse image dataset from seven hospitals and research institutions']                              | ['Machine learning techniques, though not explicitly deep learning']                                             | ['Focused on liver and liver tumor segmentation using CT volumes']                                                    | ['LiTS remains an active benchmark and resource for research']                               |
+| Paper 2 | ['Histology slides from 500 stage I–IV CRC patients in The Cancer Genome Atlas (TCGA) cohort']        | ['Use of deep convolutional neural networks (CNNs) for prognostication from colorectal cancer histology slides'] | ['Investigated whether deep CNNs can extract prognostic biomarkers directly from colorectal cancer histology slides'] | ["Developed a 'deep stroma score' as an independent prognostic factor for overall survival"] |
+| Paper 3 | ['10015 dermatoscopic images from different populations acquired and stored by different modalities'] | ['Potential use of deep learning techniques for academic machine learning purposes']                             | ['Potential clinical applications in automated diagnosis of pigmented skin lesions']                                  | ['Released the HAM10000 dataset as a benchmark dataset for machine learning']                |
+
+MATCHES:
+Data Diversity: 
+Use of Deep Learning: 
+Clinical Application: 
+Benchmarking and Resources: 

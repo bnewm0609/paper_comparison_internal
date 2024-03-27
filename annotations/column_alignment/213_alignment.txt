@@ -1,0 +1,43 @@
+ID: 92039bd0-9ed0-44b5-b2bc-a298c985d3e1
+
+GOLD TABLE:
+|           | Arch     | Domain        | Embedding Network           | Extractor Network        | Remarks                                          |
+|----------:|:---------|:--------------|:----------------------------|:-------------------------|:-------------------------------------------------|
+| 210473431 | ['CNN']  | ['Spatial']   | ['Channel Coding & CNN']    | ['Channel coding & CNN'] | ['Channel Coding & CNN for attacks']             |
+|  52988697 | ['CNN']  | ['Frequency'] | ['CC layer & DCT layer']    | ['DCT layer']            | ['Diffusion mechanism']                          |
+| 224981296 | ['CNN']  | ['Spatial']   | ['CNN & AP']                | ['CNN']                  | ['Robustness against geometric attacks']         |
+| 236966013 | ['GAN']  | ['Frequency'] | ['IG attention mask & CNN'] | ['CNN']                  | ['IG mask improves capacity and robustness']     |
+| 203641981 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Min-max formulation for robust optimisation']  |
+| 204836916 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Two stage training']                           |
+| 210845641 | ['GAN']  | ['Spatial']   | ['CNN']                     | ['CNN + FC layers']      | ['Robust against rotation and JPEG compression'] |
+|  59413797 | ['WGAN'] | ['Spatial']   | ['CB & ASP']                | ['CNN']                  | ['High payload capacity']                        |
+| 218869832 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Spatial spread embedding technique']           |
+| 219531492 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Double discriminator-detector']                |
+
+GOLD SCHEMA:
+0: Arch
+1: Domain
+2: Embedding Network
+3: Extractor Network
+4: Remarks
+
+PREDICTION PATH:../../metric_validation_0/92039bd0-9ed0-44b5-b2bc-a298c985d3e1/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of attacks simulated                                                   | Differentiability of attack layers      | Performance on various attacks                                                                                                                                                          |
+|:---------|:-----------------------------------------------------------------------------|:----------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['distortions', 'unknown distortions']                                       | ['no', 'no']                            | ['comparable or better results on distortions available during training, better performance on unknown distortions']                                                                    |
+| paper_2  | ['JPEG', 'various attacks']                                                  | ['yes (JPEG)', 'yes (various attacks)'] | ['superiority in terms of imperceptibility and robustness']                                                                                                                             |
+| paper_3  | ['pixel-value change attacks', 'geometric attacks']                          | ['no']                                  | ['high invisibility for the watermark (WM) and high robustness against various pixel-value change attacks and geometric attacks']                                                       |
+| paper_4  | ['potential noises']                                                         | ['no']                                  | ['outperforms the mainstream deep learning based data hiding methods on two prevalent datasets under multiple evaluation metrics']                                                      |
+| paper_5  | ['multiple image-processing operations']                                     | ['no']                                  | ['improves the robustness of a CNN-based watermarking framework']                                                                                                                       |
+| paper_6  | ['high-intensity noises']                                                    | ['no']                                  | ['better stability, greater performance and faster convergence speed compared with current state-of-the-art OET methods']                                                               |
+| paper_7  | ['rotation attack', 'JPEG compression attack']                               | ['no']                                  | ['high-quality stego-images could be generated and the neural networks could be trained to embed and extract watermarks that are robust against rotation and JPEG compression attacks'] |
+| paper_8  | ['N/A']                                                                      | ['yes']                                 | ['achieves state-of-the-art payloads of 4.4 bits per pixel, evades detection by steganalysis tools']                                                                                    |
+| paper_9  | ['rotation', 'JPEG compression', 'Gaussian blur', 'subsampling or resizing'] | ['no']                                  | ['high overall robustness, most notably against JPEG compression, Gaussian blur, subsampling or resizing']                                                                              |
+| paper_10 | ['rotation', 'resizing', 'Gaussian smoothing', 'compression', 'JPEG']        | ['no']                                  | ['bit accuracy of 0.86 for all types of distortions, 0.90 bit accuracy for JPEG']                                                                                                       |
+
+MATCHES:
+Types of attacks simulated: 
+Differentiability of attack layers: 
+Performance on various attacks: 

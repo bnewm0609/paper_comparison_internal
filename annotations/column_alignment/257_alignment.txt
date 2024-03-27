@@ -1,0 +1,31 @@
+ID: 7981ed6f-fb3a-4b4a-a306-b09ae2876d3a
+
+GOLD TABLE:
+|           | Carrier frequency   | Component type   | Monolithic IC integration   | RF bandwidth   | Synchronization                   |
+|----------:|:--------------------|:-----------------|:----------------------------|:---------------|:----------------------------------|
+|  52076321 | ['142 GHz']         | ['COTS']         | ['No']                      | ['4 GHz']      | ['External: Rubidium clock']      |
+|   3349886 | ['28 GHz']          | ['COTS']         | ['No']                      | ['800 MHz']    | ['External: GPS disciplined']     |
+| 221970525 | ['142 GHz']         | ['COTS+EVB']     | ['Yes (65 nm CMOS)']        | ['2 GHz']      | ['On-board support: Sync signal'] |
+
+GOLD SCHEMA:
+0: Carrier frequency
+1: Component type
+2: Monolithic IC integration
+3: RF bandwidth
+4: Synchronization
+
+PREDICTION PATH:../../metric_validation_0/7981ed6f-fb3a-4b4a-a306-b09ae2876d3a/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Frequency bands of interest                     | Measurement and modeling techniques                                                                          | Research and activities                                                                                                                                                                     | Standardization efforts                                                                                               | Challenges and opportunities                                                                                                                                       |
+|:--------|:------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['100 GHz and above']                           | ['D-band (110–170 GHz) propagation measurements, 140 GHz wideband channel sounder system']                   | ['Summarizes wireless communication research and activities above 100 GHz, proposes indoor wideband propagation measurements and penetration measurements for common materials at 140 GHz'] | ['Little is known about the radio channel above 100 GHz where there are much wider unused bandwidth slots available'] | ['Little is known about the radio channel above 100 GHz where there are much wider unused bandwidth slots available']                                              |
+| paper_2 | ['28 GHz']                                      | ['Custom-designed broadband sliding correlator channel sounder, 400-megachip-per-second sliding correlator'] | ['Presents millimeter wave propagation measurements at 28 GHz for a typical suburban environment']                                                                                          | ['N/A']                                                                                                               | ['The traditional channel modeling approach may be insufficient to deal with the varying site-specific propagations of millimeter waves in suburban environments'] |
+| paper_3 | ['mm-Wave (up to 100 GHz) and THz frequencies'] | ['Sliding correlator based channel sounder in 65 nm CMOS technology, 2 GHz null-to-null RF bandwidth']       | ['Presents an evaluation board (EVB) design for a sliding correlator based channel sounder with 2 GHz null-to-null RF bandwidth']                                                           | ['N/A']                                                                                                               | ['Wireless communications hardware to operate with multi-Gigahertz (GHz) bandwidth, at nominal costs, minimal size, and power consumption']                        |
+
+MATCHES:
+Frequency bands of interest: 
+Measurement and modeling techniques: 
+Research and activities: 
+Standardization efforts: 
+Challenges and opportunities: 

@@ -1,0 +1,27 @@
+ID: 367543a0-5c99-4f23-8c8e-cced4c330670
+
+GOLD TABLE:
+|           | Swarm Algorithms                      | Acronym   |
+|----------:|:--------------------------------------|:----------|
+|  13719410 | ['Circular Structure of Puffer Fish'] | ['CSPF']  |
+|  14083654 | ['Fish School Search']                | ['FSS']   |
+|  11251844 | ['Great Salmon Run']                  | ['GSR']   |
+| 205711669 | ['Shark Smell Optimization']          | ['ShSO']  |
+
+GOLD SCHEMA:
+0: Swarm Algorithms
+1: Acronym
+
+PREDICTION PATH:../../metric_validation_0/367543a0-5c99-4f23-8c8e-cced4c330670/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Problem Domain                                                             | Comparison with Other Algorithms                                                                  |
+|:--------|:---------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|
+| paper_1 | ['New metaheuristic optimization algorithm based on puffer fish behavior'] | ['Compared with genetic algorithm']                                                               |
+| paper_2 | ['Novel search algorithm based on fish school behavior']                   | ['Compared with particle swarm optimization']                                                     |
+| paper_3 | ['Novel bio-inspired algorithm based on the great salmon run']             | ['Compared with various optimization techniques such as PMGA, SA, DEA, PSO, BA, ABC, FA, and CS'] |
+| paper_4 | ['New metaheuristic algorithm based on shark smell optimization']          | ['Compared with many other heuristic optimization methods based on standard benchmark functions'] |
+
+MATCHES:
+Problem Domain: 
+Comparison with Other Algorithms: 

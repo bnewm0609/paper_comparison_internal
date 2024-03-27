@@ -1,0 +1,45 @@
+ID: 92039bd0-9ed0-44b5-b2bc-a298c985d3e1
+
+GOLD TABLE:
+|           | Arch     | Domain        | Embedding Network           | Extractor Network        | Remarks                                          |
+|----------:|:---------|:--------------|:----------------------------|:-------------------------|:-------------------------------------------------|
+| 210473431 | ['CNN']  | ['Spatial']   | ['Channel Coding & CNN']    | ['Channel coding & CNN'] | ['Channel Coding & CNN for attacks']             |
+|  52988697 | ['CNN']  | ['Frequency'] | ['CC layer & DCT layer']    | ['DCT layer']            | ['Diffusion mechanism']                          |
+| 224981296 | ['CNN']  | ['Spatial']   | ['CNN & AP']                | ['CNN']                  | ['Robustness against geometric attacks']         |
+| 236966013 | ['GAN']  | ['Frequency'] | ['IG attention mask & CNN'] | ['CNN']                  | ['IG mask improves capacity and robustness']     |
+| 203641981 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Min-max formulation for robust optimisation']  |
+| 204836916 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Two stage training']                           |
+| 210845641 | ['GAN']  | ['Spatial']   | ['CNN']                     | ['CNN + FC layers']      | ['Robust against rotation and JPEG compression'] |
+|  59413797 | ['WGAN'] | ['Spatial']   | ['CB & ASP']                | ['CNN']                  | ['High payload capacity']                        |
+| 218869832 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Spatial spread embedding technique']           |
+| 219531492 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Double discriminator-detector']                |
+
+GOLD SCHEMA:
+0: Arch
+1: Domain
+2: Embedding Network
+3: Extractor Network
+4: Remarks
+
+PREDICTION PATH:../../metric_validation_0/92039bd0-9ed0-44b5-b2bc-a298c985d3e1/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Watermarking Technique                                                                                              | Embedding Strategy                                              | Adversarial Training                                                       | Attack Robustness                                                                     | Practical Applicability                                               |
+|:---------|:--------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------|:---------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
+| Paper 1  | ['Distortion Agnostic Deep Watermarking']                                                                           | ['Implicit modeling of image distortions']                      | ['Robustness through adversarial training']                                | ['Better performance on unknown distortions']                                         | ['Framework for distortion-agnostic watermarking']                    |
+| Paper 2  | ['ReDMark: Framework for Residual Diffusion Watermarking on Deep Networks']                                         | ['Fully Convolutional Neural Networks with residual structure'] | ['Customizable robustness through attacks simulation']                     | ['Increased robustness to JPEG attack']                                               | ['Adjustable trade-off between capacity and robustness']              |
+| Paper 3  | ['Convolutional Neural Network-Based Digital Image Watermarking Adaptive to the Resolution of Image and Watermark'] | ['CNN-based watermarking with resolution adaptability']         | ['Adaptability and control of watermark robustness']                       | ['High invisibility and robustness against pixel-value change and geometric attacks'] | ['Applicability to any resolution and user-defined watermark data']   |
+| Paper 4  | ['Robust Data Hiding Using Inverse Gradient Attention']                                                             | ['Inverse Gradient Attention for pixel sensitivity']            | ['Innovative deep data hiding scheme with IGA']                            | ['Outperforming mainstream deep learning based data hiding methods']                  | ['Robust and practical model with IGA']                               |
+| Paper 5  | ['ROMark: A Robust Watermarking System Using Adversarial Training']                                                 | ['Adversarial optimization for robust watermarking']            | ['Utilizing robust optimization from adversarial machine learning']        | ['Improved robustness to imperceptible perturbations']                                | ['Improving the robustness of watermarking framework']                |
+| Paper 6  | ['A Novel Two-stage Separable Deep Learning Framework for Practical Blind Watermarking']                            | ['Two-stage separable training for practicality']               | ['FEAT and ADOT framework for practical watermarking']                     | ['Greater performance and faster convergence speed']                                  | ['Improved practicability and robustness']                            |
+| Paper 7  | ['Neural Watermarking Method Including an Attack Simulator against Rotation and Compression Attacks']               | ['Neural network-based stego-image generation']                 | ['Learning robust embedding against rotation and compression']             | ['Robustness against rotation and JPEG compression']                                  | ['Robust neural networks for rotation and compression attacks']       |
+| Paper 8  | ['SteganoGAN: High Capacity Image Steganography with GANs']                                                         | ['SteganoGAN using GANs for high capacity steganography']       | ['Optimizing perceptual quality with GANs']                                | ['State-of-the-art payloads and evasion of detection by steganalysis tools']          | ['Optimizing perceptual quality of hidden information']               |
+| Paper 9  | ['Robust Spatial-spread Deep Neural Image Watermarking']                                                            | ['Spatial spread method for robust watermarking']               | ['Robustness through adversarial training and precise JPEG approximation'] | ['High overall robustness against multiple attacks']                                  | ['Applying attacks to increase robustness']                           |
+| Paper 10 | ['Robust watermarking with double detector-discriminator approach']                                                 | ['Double detector-discriminator approach']                      | ['Novel double detector-discriminator approach for robustness']            | ['High robustness against rotation, resizing, Gaussian smoothing, and compression']   | ['Double detector-discriminator approach for real-life applications'] |
+
+MATCHES:
+Watermarking Technique: 
+Embedding Strategy: 
+Adversarial Training: 
+Attack Robustness: 
+Practical Applicability: 

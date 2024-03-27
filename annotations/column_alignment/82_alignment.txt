@@ -1,0 +1,37 @@
+ID: 336815ab-ef12-4edc-b44f-f137ba4184f7
+
+GOLD TABLE:
+|           | Interpetability Categories        | Methods      | Coverage         | Explanation Type   |
+|----------:|:----------------------------------|:-------------|:-----------------|:-------------------|
+| 231623890 | ['Backpropagation-based Methods'] | ['LRP']      | ['Local/Global'] | ['Attribution']    |
+|   3849381 | ['Backpropagation-based Methods'] | ['DeepLIFT'] | ['Local/Global'] | ['Attribution']    |
+| 243833165 | ['Backpropagation-based Methods'] | ['CAM']      | ['Local']        | ['Attribution']    |
+| 252625385 | ['Perturbation-based Methods']    | ['LIME']     | ['Local']        | ['Attribution']    |
+| 230997466 | ['Perturbation-based Methods']    | ['SHAP']     | ['Local']        | ['Attribution']    |
+|  38456023 | ['Rule-based Methods']            | ['FIS']      | ['Global']       | ['Fuzzy Rules']    |
+|  24244444 | ['Rule-based Methods']            | ['BS']       | ['Global']       | ['Bayesian Rules'] |
+
+GOLD SCHEMA:
+0: Interpetability Categories
+1: Methods
+2: Coverage
+3: Explanation Type
+
+PREDICTION PATH:../../metric_validation_0/336815ab-ef12-4edc-b44f-f137ba4184f7/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | EEG Signal Processing Approach                                                     | Application Domain                                                   | Performance Evaluation                                                                      | Interpretability                                                                                                                              |
+|:--------|:-----------------------------------------------------------------------------------|:---------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Spatio-Spectral feature representation, 3-D CNN framework']                      | ['Motor imagery classification using CNNs']                          | ['Accuracies: 87.15%, 75.85%, 70.37%']                                                      | ['Decomposition model obtained relevance scores for neurophysiologically plausible electrode channels and frequency domains']                 |
+| paper_2 | ['Depthwise and separable convolutions, EEGNet model']                             | ['EEG-based Brain-Computer Interfaces (BCI)']                        | ['Generalizes across paradigms better than reference algorithms']                           | ['Visualization of trained EEGNet model, interpretable features over a range of BCI tasks']                                                   |
+| paper_3 | ['Interpretation technique, convolutional neural network']                         | ['EEG-based Driver Drowsiness Recognition']                          | ['Average accuracy: 78.35%']                                                                | ['Sample-wise analysis of important features for classification, Interpretable deep learning models']                                         |
+| paper_4 | ['Convolutional Neural Network (CNN), Gradient-weighted Class Activation Mapping'] | ['Eye blink detection in EEG-based BCI applications']                | ['Accuracy rate up to 99.4% +/- 1.3%']                                                      | ['xAI techniques for visually identifying the most relevant EEG areas']                                                                       |
+| paper_5 | ['Deep neural network (DNN) model, interpretable framework']                       | ['Health Monitoring Systems, Eye State Detection using EEG Signals'] | ['Not specified']                                                                           | ['Proposed an interpretable framework with the ability of real-time prediction']                                                              |
+| paper_6 | ['JDA, TSK FLS, Joint distribution adaptation-based TSK Fuzzy logic system']       | ['Epileptic EEG signal identification']                              | ['TSK-JDA-FLS outperforms competitive non-transfer learning and transfer learning methods'] | ['TSK-JDA-FLS significantly outperforms and has superior interpretability']                                                                   |
+| paper_7 | ['Copula method, Bayesian-copula discriminant classifier (BCDC)']                  | ['Drowsiness Detection during Daytime Short Nap']                    | ['BCDC outperformed other methods in terms of three evaluation criteria']                   | ['BCDC method is relatively robust, useful tool to improve the correctness of the estimated class-conditional probability density functions'] |
+
+MATCHES:
+EEG Signal Processing Approach: 
+Application Domain: 
+Performance Evaluation: 
+Interpretability: 

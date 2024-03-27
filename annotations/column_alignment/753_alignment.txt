@@ -1,0 +1,69 @@
+ID: 3a173da7-3e89-409e-864b-5e3aa5862219
+
+GOLD TABLE:
+|           | Year     | CAIoT   | Security   | Lay. Arch.   | Roadmap   | AI      |
+|----------:|:---------|:--------|:-----------|:-------------|:----------|:--------|
+|  30442609 | ['2021'] | ['No']  | ['No']     | ['No']       | ['No']    | ['No']  |
+| 236918573 | ['2021'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+| 232072512 | ['2021'] | ['No']  | ['No']     | ['Yes']      | ['No']    | ['No']  |
+| 220888832 | ['2020'] | ['No']  | ['No']     | ['No']       | ['No']    | ['No']  |
+| 222418577 | ['2020'] | ['Yes'] | ['No']     | ['Yes']      | ['No']    | ['No']  |
+| 219689806 | ['2020'] | ['No']  | ['No']     | ['No']       | ['Yes']   | ['No']  |
+| 222221758 | ['2020'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+|   9195154 | ['2017'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+|  24602766 | ['2017'] | ['Yes'] | ['Yes']    | ['Yes']      | ['Yes']   | ['No']  |
+|  15974303 | ['2016'] | ['Yes'] | ['No']     | ['No']       | ['No']    | ['No']  |
+| 239237247 | ['2021'] | ['No']  | ['Yes']    | ['No']       | ['No']    | ['No']  |
+| 233262771 | ['2021'] | ['No']  | ['Yes']    | ['No']       | ['No']    | ['No']  |
+|  53097568 | ['2018'] | ['No']  | ['Yes']    | ['No']       | ['No']    | ['No']  |
+|    720741 | ['2017'] | ['No']  | ['Yes']    | ['No']       | ['Yes']   | ['No']  |
+|   2332366 | ['2016'] | ['No']  | ['Yes']    | ['No']       | ['Yes']   | ['No']  |
+| 216586913 | ['2020'] | ['Yes'] | ['Yes']    | ['No']       | ['Yes']   | ['No']  |
+| 220568817 | ['2020'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+| 211242541 | ['2019'] | ['No']  | ['Yes']    | ['No']       | ['No']    | ['No']  |
+| 169037226 | ['2018'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['Yes'] |
+|   3811812 | ['2017'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+|  13579812 | ['2016'] | ['Yes'] | ['Yes']    | ['No']       | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Year
+1: CAIoT
+2: Security
+3: Lay. Arch.
+4: Roadmap
+5: AI
+
+PREDICTION PATH:../../metric_validation_0/3a173da7-3e89-409e-864b-5e3aa5862219/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Research Domain                                                            | Use of Machine Learning                  | Type of Architecture   | Main Focus                                  | Primary Focus                                                                   | Level of Detail   |
+|:---------|:---------------------------------------------------------------------------|:-----------------------------------------|:-----------------------|:--------------------------------------------|:--------------------------------------------------------------------------------|:------------------|
+| Paper 1  | ['IoT and cloud convergence']                                              | ['Not mentioned']                        | ['Cloud-based']        | ['Survey']                                  | ['Cloud and IoT Convergence']                                                   | ['Medium']        |
+| Paper 2  | ['Cloud computing based IoT challenges']                                   | ['Not mentioned']                        | ['Cloud-based']        | ['Challenges and solutions']                | ['Cloud Computing Challenges for IoT']                                          | ['High']          |
+| Paper 3  | ['Cloud based IoT architecture and trends']                                | ['Not mentioned']                        | ['Cloud-based']        | ['Architecture and trends']                 | ['Cloud-based IoT Architecture']                                                | ['High']          |
+| Paper 4  | ['SLA definition and modeling for cloud based IoT']                        | ['Not mentioned']                        | ['Cloud-based']        | ['SLA definition and modeling']             | ['Service Level Agreements in Cloud and IoT']                                   | ['High']          |
+| Paper 5  | ['Taxonomy and architectures of cloud based IoT']                          | ['Not mentioned']                        | ['Cloud-based']        | ['Survey and taxonomy']                     | ['IoT-CLOUD Architectures Review']                                              | ['High']          |
+| Paper 6  | ['Cloud based IoT platforms']                                              | ['Not mentioned']                        | ['Cloud-based']        | ['Cloud services and fog computing']        | ['IoT-enabled Cloud Platforms']                                                 | ['Medium']        |
+| Paper 7  | ['Cloud based IoT in smart grids']                                         | ['Not mentioned']                        | ['Cloud-based']        | ['Benefits, challenges, and solutions']     | ['CloudIoT for Smart Grids']                                                    | ['High']          |
+| Paper 8  | ['Cloud based IoT platform for observation streams']                       | ['Not mentioned']                        | ['Cloud-based']        | ['Observation streams']                     | ['Sensor Observation Streams in Cloud-based IoT']                               | ['High']          |
+| Paper 9  | ['Cloud and edge based IoT application architecture']                      | ['Not mentioned']                        | ['Hybrid']             | ['Opportunities and challenges']            | ['CloudIoT for IoT Application Architecture']                                   | ['High']          |
+| Paper 10 | ['Provisioning of IoT end-user applications in the cloud']                 | ['Not mentioned']                        | ['Cloud-based']        | ['PaaS aspects']                            | ['IoT End-User Applications Provisioning in Cloud']                             | ['Medium']        |
+| Paper 11 | ['Public-key encryption with search functionality for cloud based IoT']    | ['In encryption techniques']             | ['Cloud-based']        | ['PKE-SF schemes']                          | ['Public-Key Encryption with Search Functionality for Cloud-Assisted IoT']      | ['High']          |
+| Paper 12 | ['Security of cloud based IoT architecture layers']                        | ['Not mentioned']                        | ['Cloud-based']        | ['Security issues and challenges']          | ['Cloud-based IoT Architecture Layer Security']                                 | ['Medium']        |
+| Paper 13 | ['Security of cloud assisted IoT applications']                            | ['Not mentioned']                        | ['Cloud-based']        | ['Security attacks and countermeasures']    | ['Security Attacks and Countermeasures for Cloud Assisted IoT Applications']    | ['Medium']        |
+| Paper 14 | ['Security and privacy for cloud based IoT']                               | ['In access control and authentication'] | ['Cloud-based']        | ['Security and privacy requirements']       | ['Security and Privacy for Cloud-Based IoT']                                    | ['High']          |
+| Paper 15 | ['Security of cloud assisted IoT based SCADA systems']                     | ['Not mentioned']                        | ['Cloud-based']        | ['SCADA systems security']                  | ['Cloud-Assisted IoT-Based SCADA Systems Security']                             | ['High']          |
+| Paper 16 | ['Security challenges and strategies for cloud based IoT']                 | ['Not mentioned']                        | ['Cloud-based']        | ['Challenges and strategies']               | ['Security Challenges and Strategies for IoT in Cloud Computing']               | ['High']          |
+| Paper 17 | ['Comparison of lightweight cryptographic algorithms for cloud based IoT'] | ['Not mentioned']                        | ['Fog-based']          | ['Lightweight cryptographic algorithms']    | ['Comparative Study of Lightweight Cryptographic Algorithms for Data Security'] | ['Medium']        |
+| Paper 18 | ['Data encryption techniques in cloud computing and IoT environment']      | ['Not mentioned']                        | ['Edge-based']         | ['Encryption techniques']                   | ['Encryption Techniques for Cloud and IoT Data Security']                       | ['Medium']        |
+| Paper 19 | ['Cloud based IoT-Healthcare and security using machine learning']         | ['In data analysis for healthcare']      | ['Cloud-based']        | ['Cloud-based IoT-Healthcare and security'] | ['Cloud-based IoT-Healthcare and Security using Machine Learning']              | ['High']          |
+| Paper 20 | ['Privacy and security of cloud based IoT']                                | ['Not mentioned']                        | ['Cloud-based']        | ['Security and privacy']                    | ['Privacy and Security of Cloud-Based IoT']                                     | ['Medium']        |
+| Paper 21 | ['Security of IoT in the context of eHealth and clouds']                   | ['Not mentioned']                        | ['Cloud-based']        | ['Security vulnerability and challenges']   | ['Security of IoT in eHealth and Clouds']                                       | ['High']          |
+
+MATCHES:
+Research Domain: 
+Use of Machine Learning: 
+Type of Architecture: 
+Main Focus: 
+Primary Focus: 
+Level of Detail: 

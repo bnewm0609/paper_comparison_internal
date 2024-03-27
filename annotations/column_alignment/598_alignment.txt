@@ -1,0 +1,43 @@
+ID: 64eb36c7-58cb-4e4f-ab6d-c325b5d556c6
+
+GOLD TABLE:
+|          | Model                                  | Main results in asymptotic SNR regime                     |
+|---------:|:---------------------------------------|:----------------------------------------------------------|
+| 13097571 | ['A general class of channels']        | ['Analyze the wideband slope']                            |
+|  8632659 | ['A general class of channels']        | ['Obtain the second order']                               |
+|  6862477 | ['high SNR']                           | ['Provide lower and upper bounds of the']                 |
+|  5724981 | ['high SNR']                           | ['the\nMMSE and the mutual information']                  |
+|  1748759 | ['block Rayleigh fading, high SNR']    | ['increasing function of the minimum Euclidean distance'] |
+| 26883678 | ['high SNR']                           | ['of the mutual information']                             |
+| 16092719 | ['Nakagami fading, low SNR, high SNR'] | ['ergodic mutual information and the average MMSE']       |
+| 14718027 | ['Kronecker fading with LOS']          | ['ergodic mutual information and the average MMSE']       |
+
+GOLD SCHEMA:
+0: Model
+1: Main results in asymptotic SNR regime
+
+PREDICTION PATH:../../metric_validation_0/64eb36c7-58cb-4e4f-ab6d-c325b5d556c6/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of Channel             | Type of Analysis                                     |
+|:---------|:----------------------------|:-----------------------------------------------------|
+| paper_1  | ['Wideband']                | ['Fundamental Bandwidth-Power Tradeoff']             |
+| paper_2  | ['Wideband']                | ['Fundamental Bandwidth-Power Tradeoff']             |
+| paper_3  | ['Multidimensional']        | ['Second-Order Asymptotics']                         |
+| paper_4  | ['Multidimensional']        | ['Second-Order Asymptotics']                         |
+| paper_5  | ['Parallel']                | ['Power Allocation']                                 |
+| paper_6  | ['Parallel']                | ['Power Allocation']                                 |
+| paper_7  | ['MIMO']                    | ['Precoding and Power Allocation']                   |
+| paper_8  | ['MIMO']                    | ['Precoding and Power Allocation']                   |
+| paper_9  | ['Block Fading']            | ['Outage Probability Minimization']                  |
+| paper_10 | ['Block Fading']            | ['Outage Probability Minimization']                  |
+| paper_11 | ['Scalar']                  | ['High-SNR Asymptotics for Discrete Constellations'] |
+| paper_12 | ['Scalar']                  | ['High-SNR Asymptotics for Discrete Constellations'] |
+| paper_13 | ['Fading']                  | ['Asymptotics of the Constrained Capacity']          |
+| paper_14 | ['Fading']                  | ['Asymptotics of the Constrained Capacity']          |
+| paper_15 | ['Multiple-Antenna Fading'] | ['High-SNR Capacity and Space-Time Signaling']       |
+| paper_16 | ['Multiple-Antenna Fading'] | ['High-SNR Capacity and Space-Time Signaling']       |
+
+MATCHES:
+Type of Channel: 
+Type of Analysis: 

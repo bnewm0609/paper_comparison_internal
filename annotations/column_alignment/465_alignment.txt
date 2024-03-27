@@ -1,0 +1,25 @@
+ID: db5113ea-add9-4283-9971-ffc5667e1701
+
+GOLD TABLE:
+|           | Attack Vector     | Study               |
+|----------:|:------------------|:--------------------|
+| 207158066 | ['SQL Injection'] | ['[S59, S62, S70]'] |
+|   6924018 | ['Malware/RAT']   | ['[S1, S41]']       |
+|   5071459 | ['Steganography'] | ['[S3, S9, S20]']   |
+
+GOLD SCHEMA:
+0: Attack Vector
+1: Study
+
+PREDICTION PATH:../../metric_validation_0/db5113ea-add9-4283-9971-ffc5667e1701/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of attacks targeted       | Techniques used for detection and prevention                                                                                                                                                                             |
+|:--------|:-------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['SQL injection attacks']      | ['Model-based approach to detect illegal queries before execution on the database. Program analysis to automatically build a model of legitimate queries. Runtime monitoring to inspect dynamically-generated queries.'] |
+| paper_2 | ['N/A']                        | ['N/A']                                                                                                                                                                                                                  |
+| paper_3 | ['Intrusion detection alarms'] | ['Proposal of a novel alarm-clustering method to identify root causes of intrusion detection alarms. Experimentation with real-world intrusion detection alarms to demonstrate the effectiveness of alarm clustering.']  |
+
+MATCHES:
+Type of attacks targeted: 
+Techniques used for detection and prevention: 

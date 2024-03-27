@@ -1,0 +1,35 @@
+ID: 53285b40-86e5-419a-b47b-d1adca8319ce
+
+GOLD TABLE:
+|           | Main approach                            | Environment   | Obstacle avoidance   | Coordination   | Sensing ability   |
+|----------:|:-----------------------------------------|:--------------|:---------------------|:---------------|:------------------|
+| 230511448 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Perfect']       |
+| 246826797 | ['Deep\nReinforcement Learning']         | ['Air (3D)']  | ['Static']           | ['Yes']        | ['Limited']       |
+| 247818114 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['No']               | ['No']         | ['Perfect']       |
+| 199543302 | ['Meta-reinforcement learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Limited']       |
+| 251134882 | ['Bayesian fusion and machine learning'] | ['Land (2D)'] | ['No']               | ['Yes']        | ['Limited']       |
+
+GOLD SCHEMA:
+0: Main approach
+1: Environment
+2: Obstacle avoidance
+3: Coordination
+4: Sensing ability
+
+PREDICTION PATH:../../metric_validation_0/53285b40-86e5-419a-b47b-d1adca8319ce/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Reinforcement Learning Approach                                                                     | Technology Domain                                                                     | Application Domain                                                               | Algorithmic Approach                                                                                                             | Proposed Contributions                                                                                  |
+|:--------|:----------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Deep reinforcement learning approach for the pursuit-evasion game in the presence of obstacles']  | ['Mobile robotics, pursuit-evasion game']                                             | ['Practical applications, pursuit-evasion game in the presence of obstacles']    | ['Curriculum deep reinforcement learning approach, kinematic constraints, self-play mechanism, curriculum learning']             | ['Improved system performance for pursuit and evasion in the presence of obstacles']                    |
+| Paper 2 | ['Multi-UAV pursuit-evasion game with online motion planning by deep reinforcement learning']       | ['Unmanned aerial vehicles (UAVs), multiagent system, reinforcement learning']        | ['Urban environment, pursuit-evasion scenarios (PES), multi-agent coordination'] | ['CBC-TP Net, multiagent deep deterministic policy gradient (MADDPG) formulation, target prediction network (TP Net)']           | ['State-of-the-art performance of the proposed strategy in multi-agent pursuit-evasion mission']        |
+| Paper 3 | ['Pursuit and evasion strategy of a differential game based on deep reinforcement learning']        | ['Deep neural network, differential game, deep reinforcement learning']               | ['Bio-inspired differential game, dog-sheep game']                               | ['Value-based deep Q network (DQN) model, deep deterministic policy gradient (DDPG) model, time-out and attenuation mechanisms'] | ['Enhanced escape probabilities for the sheep in differential game scenarios']                          |
+| Paper 4 | ['Fast adaptation with meta-reinforcement learning for trust modelling in human-robot interaction'] | ['Socially assistive robotics, human-robot interaction, meta-reinforcement learning'] | ['Human-robot interaction, trust modelling, adaptation in social scenarios']     | ['Meta-learning based policy gradient method, human-robot interaction model in escape room scenario']                            | ['Increased perceived trustworthiness and influence on human-robot trust dynamics']                     |
+| Paper 5 | ['Learning to assess danger from movies for cooperative escape planning in hazardous environments'] | ['Robot perception, hazardous environments, multi-modal data']                        | ['Hazardous environments, disaster scenarios, collaborative human-robot escape'] | ['Multi-modal danger estimation pipeline, Bayesian framework, risk-aware planner']                                               | ['Utilization of movies for developing a hazard environment dataset, multi-modal perception framework'] |
+
+MATCHES:
+Reinforcement Learning Approach: 
+Technology Domain: 
+Application Domain: 
+Algorithmic Approach: 
+Proposed Contributions: 

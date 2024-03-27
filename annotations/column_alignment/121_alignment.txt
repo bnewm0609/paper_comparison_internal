@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | neighborhood aggregation                                                                                                             | deep learning models for graph data                                                                                                                  |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Flexibility in neighborhood ranges for better structure-aware representation.']                                                    | ['JK framework, combining the JK framework with other models improves performance.']                                                                 |
+| paper_2 | ['Success in training very deep GCN models overcoming vanishing gradient problem.']                                                  | ['Applying concepts from CNNs to GCN architectures, training very deep GCNs.']                                                                       |
+| paper_3 | ['Effective techniques to relieve the problem of over-smoothing in GCN.']                                                            | ['GCNII model outperforms the state-of-the-art methods on various semi- and full-supervised tasks.']                                                 |
+| paper_4 | ['Introducing a novel convolutional kernel GCN+ to relieve the over-smoothing inherently.']                                          | ['Developing a universal theoretical framework of GCN from an optimization perspective and deriving the novel GCN+.']                                |
+| paper_5 | ['Decoupling representation transformation and propagation in graph convolution operations to enable deeper graph neural networks.'] | ['Proposing Deep Adaptive Graph Neural Network (DAGNN) to adaptively incorporate information from large receptive fields.']                          |
+| paper_6 | ['Introducing Node Normalization (NodeNorm) to address performance degradation of GCNs.']                                            | ['Proposing NodeNorm to address performance degradation of GCNs.']                                                                                   |
+| paper_7 | ['Incorporating feature and label propagation at both training and inference time.']                                                 | ['Introducing Unified Message Passaging Model (UniMP) that unifies feature and label propagation.']                                                  |
+| paper_8 | ['Adversarial data augmentation in the input node feature space for better GNN performance.']                                        | ['Proposing FLAG (Free Large-scale Adversarial Augmentation on Graphs) for augmenting node features with gradient-based adversarial perturbations.'] |
+| paper_9 | ['Utilizing Attentive Context Normalization (ACN) to build permutation-equivariant networks robust to outliers.']                    | ['Proposing Attentive Context Networks (ACNe) to provide a significant leap in performance compared to the state-of-the-art.']                       |
+
+MATCHES:
+neighborhood aggregation: 
+deep learning models for graph data: 

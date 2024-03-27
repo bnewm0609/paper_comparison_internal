@@ -1,0 +1,27 @@
+ID: 367543a0-5c99-4f23-8c8e-cced4c330670
+
+GOLD TABLE:
+|           | Swarm Algorithms                      | Acronym   |
+|----------:|:--------------------------------------|:----------|
+|  13719410 | ['Circular Structure of Puffer Fish'] | ['CSPF']  |
+|  14083654 | ['Fish School Search']                | ['FSS']   |
+|  11251844 | ['Great Salmon Run']                  | ['GSR']   |
+| 205711669 | ['Shark Smell Optimization']          | ['ShSO']  |
+
+GOLD SCHEMA:
+0: Swarm Algorithms
+1: Acronym
+
+PREDICTION PATH:../../metric_validation_0/367543a0-5c99-4f23-8c8e-cced4c330670/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Comparison of Performance on Benchmark Functions                                                                                                                                                                                                                                                                                     | Problem Domain Applicability                                                                                          |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Compared with genetic algorithm through various performance criteria']                                                                                                                                                                                                                                                             | ['N/A']                                                                                                               |
+| paper_2 | ['Compared with, and in some cases outperforms, particle swarm optimization in high-dimensional searches.']                                                                                                                                                                                                                          | ['N/A']                                                                                                               |
+| paper_3 | ['Compared with most of the well-known proposed optimization techniques such as parallel migrating genetic algorithm (PMGA), simulate annealing (SA), differential evolutionary algorithm (DEA), particle swarm optimization (PSO), bee algorithm (BA), artificial bee colony (ABC), firefly algorithm (FA) and cuckoo search (CS)'] | ['Optimizing complex multi-dimensional and multi-modal problems']                                                     |
+| paper_4 | ['Compared with many other heuristic optimization methods based on standard benchmark functions.']                                                                                                                                                                                                                                   | ['Solving real-world engineering problems, specifically load frequency control problem in electrical power systems.'] |
+
+MATCHES:
+Comparison of Performance on Benchmark Functions: 
+Problem Domain Applicability: 

@@ -1,0 +1,27 @@
+ID: 11798252-0e7b-4eb5-9ab0-881ae06ffa40
+
+GOLD TABLE:
+|           | Name            | Size        | Dim      |
+|----------:|:----------------|:------------|:---------|
+|  15023467 | ['ForestCover'] | ['286,048'] | ['10']   |
+|   6505449 | ['Creditfraud'] | ['284,807'] | ['29']   |
+| 220891274 | ['stream51']    | ['150,736'] | ['2048'] |
+
+GOLD SCHEMA:
+0: Name
+1: Size
+2: Dim
+
+PREDICTION PATH:../../metric_validation_0/11798252-0e7b-4eb5-9ab0-881ae06ffa40/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                                    | Calibrating Probability with Undersampling for Unbalanced Classification                                                                                                                                                                                                                                  | Isolation Forest                                                                                                                                                                                                                                                                                          | Stream-51: Streaming Classification and Novelty Detection from Videos   |
+|:-----------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
+| Exploration of the relationship between conditional probability and under sampling | ['Under sampling one class modifies the priors of the training set and consequently biases the posterior probabilities of a classifier. The paper formalizes the problem of under sampling and explores the relationship between conditional probability in the presence and absence of under sampling.'] | ['N/A']                                                                                                                                                                                                                                                                                                   | ['N/A']                                                                 |
+| Empirical evaluation and comparison with existing methods                          | ['The paper conducts experiments on several real-world unbalanced datasets to validate the results of the analysis and comparison.']                                                                                                                                                                      | ['The paper conducts an empirical evaluation of the proposed method and compares it with existing methods such as ORCA, LOF, and random forests. The evaluation shows that the proposed method performs favorably in terms of AUC and processing time, especially in large data sets.']                   | ['N/A']                                                                 |
+| Analysis of time complexity and memory requirement                                 | ['The paper does not provide an explicit analysis of the time complexity and memory requirement of the proposed method.']                                                                                                                                                                                 | ['The paper analyzes the time complexity and memory requirement of the proposed method and shows that it has a linear time complexity with a low constant and a low memory requirement. This enables the proposed method to exploit sub-sampling to an extent that is not feasible in existing methods.'] | ['N/A']                                                                 |
+
+MATCHES:
+Calibrating Probability with Undersampling for Unbalanced Classification: 
+Isolation Forest: 
+Stream-51: Streaming Classification and Novelty Detection from Videos: 

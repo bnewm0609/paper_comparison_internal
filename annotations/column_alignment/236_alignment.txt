@@ -1,0 +1,34 @@
+ID: a79431cf-5fbc-45af-949c-0c3f5549e6ed
+
+GOLD TABLE:
+|           | Task                            | Samples     | Classes   |
+|----------:|:--------------------------------|:------------|:----------|
+|  15676318 | ['Speech, Music, and Noise']    | ['2,016']   | ['3']     |
+|  17567398 | ['Human Sounds']                | ['400']     | ['10']    |
+|   4719239 | ['Commands Recognition']        | ['100,503'] | ['12']    |
+|  14369452 | ['Emotion Detection']           | ['7,438']   | ['6']     |
+| 244899987 | ['Keyword Spotting']            | ['28,039']  | ['20']    |
+| 248571603 | ['Health Condition Monitoring'] | ['21,024']  | ['6']     |
+
+GOLD SCHEMA:
+0: Task
+1: Samples
+2: Classes
+
+PREDICTION PATH:../../metric_validation_0/a79431cf-5fbc-45af-949c-0c3f5549e6ed/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                                                                                                 | Level of annotation and meta-information provided                                                                     | Impact of the dataset on model performance                                                                           |
+|:--------|:--------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Multiple genres of music, speech from twelve languages, and technical/non-technical noises.']                     | ['Dataset is released under a flexible Creative Commons license.']                                                    | ['Demonstrates use of the dataset for music/speech discrimination and voice activity detection.']                    |
+| paper_2 | ['2000 short clips comprising 50 classes of common sound events, and 250000 unlabeled auditory excerpts.']          | ['Provides labeled annotations for sound events, evaluation of human accuracy, and baseline classifier comparisons.'] | ['Evaluates human accuracy in classifying environmental sounds and compares it to baseline classifier performance.'] |
+| paper_3 | ['Dataset of spoken words in limited vocabulary for training and evaluating keyword spotting systems.']             | ['Describes methodology and metadata properties, and reports baseline model results.']                                | ['Reproducible and comparable accuracy metrics for keyword spotting systems.']                                       |
+| paper_4 | ['7,442 clips of emotional expressions in sentences spoken by 91 actors, rated by multiple raters.']                | ['Detailed annotations for emotional expressions in audio-visual dataset and crowd-sourced recognition results.']     | ['Dataset can be used to study multi-modal emotion expressions and perception.']                                     |
+| paper_5 | ['Over 340,000 keywords, totaling 23.4 million 1-second spoken examples, and forced alignment crowd-sourced data.'] | ['Describes detailed analysis of the dataset contents.']                                                              | ['Reports baseline accuracy metrics on keyword spotting models trained from the dataset.']                           |
+| paper_6 | ['Over 340,000 keywords, totaling 23.4 million 1-second spoken examples, and forced alignment crowd-sourced data.'] | ['Describes detailed analysis of the dataset contents.']                                                              | ['Reports baseline accuracy metrics on keyword spotting models trained from the dataset.']                           |
+| paper_7 | ['Over 21,000 crowdsourced recordings of non-speech vocalizations from over 3,365 unique subjects.']                | ['Provides meta information such as speaker age, gender, native language, country, and health condition.']            | ['Significantly improves vocal sound recognition by 41.9% when added to an existing dataset.']                       |
+
+MATCHES:
+Size of the dataset: 
+Level of annotation and meta-information provided: 
+Impact of the dataset on model performance: 

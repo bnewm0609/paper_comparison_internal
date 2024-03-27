@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Accuracy of syllabification methods                                                                                                                                       | Approaches to syllable boundary detection                                                                                                                                                                         |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Preliminary results show promising performance when trained and tested on English words.']                                                                              | ['Hybrid genetic algorithm constructs a categorization of phones optimized for syllabification used alongside a hidden Markov model sequence classifier to find syllable boundaries.']                            |
+| paper_2 | ['Backpropagation learning results show no better performance than the best symbolic pattern matching approaches.']                                                       | ['Investigated the generalization capabilities of backpropagation learning in feed-forward and recurrent feed-forward connectionist networks.']                                                                   |
+| paper_3 | ['Transparent implementation of the sonority sequencing principle achieves word accuracy of over 98% in English and 99% in German and Dutch.']                            | ['Investigated several different approaches to the syllabification of phonemes, including linguistic theories of syllabification and a discriminative learning technique combining SVM and HMM technologies.']    |
+| paper_4 | ['Transparent implementation of the sonority sequencing principle achieves word accuracy of over 98% in English and 99% in German and Dutch.']                            | ['Investigated several different approaches to the syllabification of phonemes, including linguistic theories of syllabification and a discriminative learning technique combining SVM and HMM technologies.']    |
+| paper_5 | ['Entropy based phonotactic segmentation provides a word accuracy of 96%, CRF (sequence labeling approach) provides 97% and hybrid approach provides 98% word accuracy.'] | ['Proposed a language-independent rule-based approach formulated using entropy-based phonotactic segmentation, investigated sequence labeling approaches, and evaluated the performance of the hybrid approach.'] |
+
+MATCHES:
+Accuracy of syllabification methods: NA
+Approaches to syllable boundary detection: NA

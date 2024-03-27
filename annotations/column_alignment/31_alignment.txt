@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Approaches used for uncertainty estimation                                     | Applications of molecular property prediction                                                     |
+|:---------|:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                        | ['Public health and cancer statistics estimation']                                                |
+| paper_2  | ['Bayesian inference']                                                         | ['Chemical fields and molecular property prediction']                                             |
+| paper_3  | ['Bayesian semi-supervised learning']                                          | ['Molecular properties prediction and experiment design']                                         |
+| paper_4  | ['Monte Carlo Dropout, Deep Ensembles, Bootstrapping']                         | ['Molecular property prediction and uncertainty estimation']                                      |
+| paper_5  | ['Neural network-based uncertainty quantification methods']                    | ['Drug discovery and regression tasks in molecular property prediction']                          |
+| paper_6  | ['Neural network-based uncertainty quantification methods']                    | ['Drug discovery and regression tasks in molecular property prediction']                          |
+| paper_7  | ['Uncertainty quantification for materials property predictions']              | ['Automated materials screening, discovery, and design']                                          |
+| paper_8  | ['Evidential deep learning']                                                   | ['Molecular structure–property prediction, molecular discovery, design tasks']                    |
+| paper_9  | ['Deep learning uncertainty quantification methods']                           | ['Protein engineering and machine learning sequence-function models']                             |
+| paper_10 | ['Gaussian processes for uncertainty quantification']                          | ['High-energy astrophysics, laboratory experiments in synthetic chemistry and materials science'] |
+| paper_11 | ['Graph Neural Networks, Gaussian Process-based extension']                    | ['Molecular force fields, molecular dynamics trajectories']                                       |
+| paper_12 | ['Non-Bayesian approach for uncertainty estimation']                           | ['Data-derived electron densities for orbital-free density functional theory (DFT)']              |
+| paper_13 | ['Machine-learning framework for predicting the electronic density of states'] | ['Prediction of the density of states in electronic structure theory']                            |
+
+MATCHES:
+Approaches used for uncertainty estimation: 
+Applications of molecular property prediction: 

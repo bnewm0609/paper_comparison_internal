@@ -1,0 +1,35 @@
+ID: 53285b40-86e5-419a-b47b-d1adca8319ce
+
+GOLD TABLE:
+|           | Main approach                            | Environment   | Obstacle avoidance   | Coordination   | Sensing ability   |
+|----------:|:-----------------------------------------|:--------------|:---------------------|:---------------|:------------------|
+| 230511448 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Perfect']       |
+| 246826797 | ['Deep\nReinforcement Learning']         | ['Air (3D)']  | ['Static']           | ['Yes']        | ['Limited']       |
+| 247818114 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['No']               | ['No']         | ['Perfect']       |
+| 199543302 | ['Meta-reinforcement learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Limited']       |
+| 251134882 | ['Bayesian fusion and machine learning'] | ['Land (2D)'] | ['No']               | ['Yes']        | ['Limited']       |
+
+GOLD SCHEMA:
+0: Main approach
+1: Environment
+2: Obstacle avoidance
+3: Coordination
+4: Sensing ability
+
+PREDICTION PATH:../../metric_validation_0/53285b40-86e5-419a-b47b-d1adca8319ce/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Game                                              | Game Environment                                                           | Reinforcement Learning Algorithm                                                               | Application                                        | Experimental Setup                                                  |
+|:--------|:----------------------------------------------------------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|:---------------------------------------------------|:--------------------------------------------------------------------|
+| paper_1 | ['Pursuit-evasion game with a single pursuer and evader'] | ['Considers kinematics of mobile robot and influence of static obstacles'] | ['Curriculum deep reinforcement learning']                                                     | ['Practical applications of pursuit-evasion game'] | ['Comparative simulation results with intelligent opponents']       |
+| paper_2 | ['Multi-UAV pursuit-evasion game']                        | ['Physics engine to create environment with obstacles']                    | ['Vectorized extension of MADDPG formulation']                                                 | ['UAV pursuit-evasion mission']                    | ['Experiments conducted for normal and antidamaged situations']     |
+| paper_3 | ['Bio-inspired differential game: dog sheep game']        | ['Circle environment']                                                     | ['Value-based deep Q network (DQN) model and deep deterministic policy gradient (DDPG) model'] | ['Bio-inspired differential game problem']         | ['Implementation of DQN and DDPG models in dog sheep game']         |
+| paper_4 | ['Escape room scenario in mixed reality']                 | ['Mixed reality']                                                          | ['Meta-learning based policy gradient method']                                                 | ['Socially assistive robotics']                    | ['Evaluation of perceived trustworthiness in escape room scenario'] |
+| paper_5 | ['Collaborative human-robot escape scenario']             | ['Hazardous environments represented by movie content']                    | ['Multi-modal danger estimation pipeline']                                                     | ['Hazardous environments']                         | ['Simulations for collaborative human-robot escape scenarios']      |
+
+MATCHES:
+Type of Game: 
+Game Environment: 
+Reinforcement Learning Algorithm: 
+Application: 
+Experimental Setup: 

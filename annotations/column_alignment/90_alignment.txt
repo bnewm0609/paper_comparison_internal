@@ -1,0 +1,29 @@
+ID: 46fd6d34-5004-405c-a1b5-d83d964d714f
+
+GOLD TABLE:
+|          | Architecture     | Depth   |
+|---------:|:-----------------|:--------|
+|  2895645 | ['CPCPFF']       | ['4']   |
+|   744633 | ['PCCPCCPCFFF']  | ['8']   |
+| 10647804 | ['CPCPIIPIPFFF'] | ['11']  |
+|  2482804 | ['CPNCPNCPCFF']  | ['6']   |
+| 18374345 | ['CPCPCPFF']     | ['5']   |
+
+GOLD SCHEMA:
+0: Architecture
+1: Depth
+
+PREDICTION PATH:../../metric_validation_0/46fd6d34-5004-405c-a1b5-d83d964d714f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of models in the ensemble                                               | Training approach for ensemble weights                    |
+|:--------|:-------------------------------------------------------------------------------|:----------------------------------------------------------|
+| paper_1 | ['N/A']                                                                        | ['N/A']                                                   |
+| paper_2 | ['Multiple CNN models']                                                        | ['Minimizing the log likelihood loss and the hinge loss'] |
+| paper_3 | ['N/A']                                                                        | ['N/A']                                                   |
+| paper_4 | ['N/A']                                                                        | ['N/A']                                                   |
+| paper_5 | ['Ensembles of the discriminative DCNs and alignment-mapping networks (AMNs)'] | ['N/A']                                                   |
+
+MATCHES:
+Number of models in the ensemble: 
+Training approach for ensemble weights: 

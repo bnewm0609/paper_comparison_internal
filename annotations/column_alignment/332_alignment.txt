@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of features                                                                                                      | Dimensionality of the features   | Significance of the features   |
+|:--------|:----------------------------------------------------------------------------------------------------------------------|:---------------------------------|:-------------------------------|
+| paper_1 | ['Language modeling']                                                                                                 | ['Low']                          | ['High']                       |
+| paper_2 | ['n-grams', 'KL-divergence based']                                                                                    | ['Medium']                       | ['Medium']                     |
+| paper_3 | ['Rating behaviors', 'Linguistic patterns']                                                                           | ['Medium']                       | ['High']                       |
+| paper_4 | ['Linguistic features']                                                                                               | ['Medium']                       | ['High']                       |
+| paper_5 | ['Review density', 'Semantic', 'Emotion']                                                                             | ['High']                         | ['High']                       |
+| paper_6 | ['Sentence representations', 'Convolutional neural network', 'Gated recurrent neural network', 'Attention mechanism'] | ['High']                         | ['High']                       |
+| paper_7 | ['Linguistic features', 'Latent Dirichlet Allocation']                                                                | ['Medium']                       | ['Medium']                     |
+
+MATCHES:
+Type of features: 
+Dimensionality of the features: 
+Significance of the features: 

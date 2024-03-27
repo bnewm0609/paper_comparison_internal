@@ -1,0 +1,42 @@
+ID: 14f6d93a-4d71-438b-9705-93514627bc75
+
+GOLD TABLE:
+|           | Name        | Method                                              |
+|----------:|:------------|:----------------------------------------------------|
+| 124273988 | ['binseg']  | ['Binary Segmentation']                             |
+|  15721047 | ['bocpd']   | ['Bayesian Online Change Point Detection']          |
+|  21681143 | ['bocpdms'] | ['bocpd with Model Selection']                      |
+|    858268 | ['cpnp']    | ['Nonparametric Change Point Detection']            |
+|  54586890 | ['ecp']     | ['Energy Change Point']                             |
+|    211152 | ['kcpa']    | ['Kernel Change-Point Analysis']                    |
+|   5627005 | ['pelt']    | ['Pruned Exact Linear Time']                        |
+|  12515984 | ['prophet'] | ['Prophet']                                         |
+|  88520997 | ['rfpop']   | ['Robust Functional Pruning Optimal\nPartitioning'] |
+|  30533655 | ['wbs']     | ['Wild Binary Segmentation']                        |
+| 212717962 | ['zero']    | ['No Change Points']                                |
+
+GOLD SCHEMA:
+0: Name
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/14f6d93a-4d71-438b-9705-93514627bc75/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of data     | Domain/Field                                 | Use-case scenario                                                                                                          |
+|:---------|:-----------------|:---------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Univariate']   | ['Statistics']                               | ['Analysis of Variance']                                                                                                   |
+| paper_2  | ['Time series']  | ['Time series analysis, Bayesian inference'] | ['Online changepoint detection, real-world data sets']                                                                     |
+| paper_3  | ['Time series']  | ['Time series analysis, Bayesian inference'] | ['Online changepoint detection, non-stationary spatio-temporal processes']                                                 |
+| paper_4  | ['Time series']  | ['Statistics']                               | ['Detecting changes in heart rate during physical activity']                                                               |
+| paper_5  | ['Multivariate'] | ['Time series analysis']                     | ['Nonparametric estimation of change points in multivariate observations']                                                 |
+| paper_6  | ['Time series']  | ['Time series analysis']                     | ['Temporal segmentation of mental tasks from BCI data, pop song indexation']                                               |
+| paper_7  | ['Time series']  | ['Statistics']                               | ['Detection of changepoints in large data sets, genetics, finance']                                                        |
+| paper_8  | ['Time series']  | ['Time series analysis']                     | ['Forecasting at scale']                                                                                                   |
+| paper_9  | ['Time series']  | ['Statistics']                               | ['Detection of changepoints in the presence of outliers, well-log data, copy number variation, wireless device tampering'] |
+| paper_10 | ['Time series']  | ['Time series analysis']                     | ['Multiple change-point detection']                                                                                        |
+| paper_11 | ['N/A']          | ['Time series analysis']                     | ['Change point detection algorithms evaluation on real-world data']                                                        |
+
+MATCHES:
+Type of data: 
+Domain/Field: 
+Use-case scenario: 

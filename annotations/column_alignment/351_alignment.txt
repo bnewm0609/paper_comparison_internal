@@ -1,0 +1,42 @@
+ID: 33d1dcd3-eeb5-4e81-bba2-5a9ecc730856
+
+GOLD TABLE:
+|          | Model                                                        | Main Contribution                                        |
+|---------:|:-------------------------------------------------------------|:---------------------------------------------------------|
+| 12054943 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ['and high uncoded BER of the eavesdropper']             |
+| 37018232 | ['No CSI of the receiver and eavesdropper']                  | ['and zero diversity of\nthe eavesdropper']              |
+|  8778619 | ['No CSI of the receiver and eavesdropper']                  | ['to make the eavesdropper unable to decode the signal'] |
+|  6102369 | ['No CSI of the receiver and eavesdropper']                  | ['by using\nM-PSK modulation and OSTBC']                 |
+|  7786858 | ['No CSI of the receiver and eavesdropper']                  | ["to deliberately randomize the eavesdropper's signal"]  |
+| 16575249 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ["the eavesdropper's correctly decoding probability"]    |
+| 35469277 | ['Perfect CSIT\nof the receiver, SCSIT of the eavesdropper'] | ['Analyze the SER of confidential information']          |
+
+GOLD SCHEMA:
+0: Model
+1: Main Contribution
+
+PREDICTION PATH:../../metric_validation_0/33d1dcd3-eeb5-4e81-bba2-5a9ecc730856/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Channel model                                                                                                    | Security enhancement techniques                                                   |
+|:---------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| paper_1  | ['MIMO Gaussian wiretap channels, transmitter has CSI for the intended receiver']                                | ['Artificial noise alignment']                                                    |
+| paper_2  | ['MIMO Gaussian wiretap channels, transmitter has CSI for the intended receiver']                                | ['Artificial noise alignment']                                                    |
+| paper_3  | ['MIMO Gaussian wiretap channels, transmitter has CSI for the intended receiver']                                | ['Artificial noise alignment']                                                    |
+| paper_4  | ['MISO wiretap channel, transmitter uses receive signal strength indicator']                                     | ['Randomly rotating information symbols using receive signal strength indicator'] |
+| paper_5  | ['MISO wiretap channel, transmitter uses receive signal strength indicator']                                     | ['Randomly rotating information symbols using receive signal strength indicator'] |
+| paper_6  | ['MISO wiretap channel, transmitter uses receive signal strength indicator']                                     | ['Randomly rotating information symbols using receive signal strength indicator'] |
+| paper_7  | ['MISO wiretap channel, no specific CSI mentioned']                                                              | ['MISO wiretap channel scheme']                                                   |
+| paper_8  | ['MISO wiretap channel, no specific CSI mentioned']                                                              | ['MISO wiretap channel scheme']                                                   |
+| paper_9  | ['MIMO Rayleigh flat fading channels, transmitter employs phase precoder, uses OSTBC and M-ary PSK modulations'] | ['Phase precoder, OSTBC, M-ary PSK modulations']                                  |
+| paper_10 | ['MIMO Rayleigh flat fading channels, transmitter employs phase precoder, uses OSTBC and M-ary PSK modulations'] | ['Phase precoder, OSTBC, M-ary PSK modulations']                                  |
+| paper_11 | ['MIMO Rayleigh flat fading channels, transmitter uses randomized array transmission scheme']                    | ['Randomized array transmission scheme']                                          |
+| paper_12 | ['MIMO Rayleigh flat fading channels, transmitter uses randomized array transmission scheme']                    | ['Randomized array transmission scheme']                                          |
+| paper_13 | ['MIMO wiretap channels, transmitter uses lattice structure codebook for coset encoding']                        | ['Lattice structure codebook and coset encoding']                                 |
+| paper_14 | ['MIMO wiretap channels, transmitter uses lattice structure codebook for coset encoding']                        | ['Lattice structure codebook and coset encoding']                                 |
+| paper_15 | ['MISOME wiretap channel with Rayleigh fading, transmitter has access to full CSI of legitimate channel']        | ['Secure beamforming with artificial noise']                                      |
+| paper_16 | ['MISOME wiretap channel with Rayleigh fading, transmitter has access to full CSI of legitimate channel']        | ['Secure beamforming with artificial noise']                                      |
+
+MATCHES:
+Channel model: 
+Security enhancement techniques: 

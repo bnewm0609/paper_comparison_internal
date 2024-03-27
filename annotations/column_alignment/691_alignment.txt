@@ -1,0 +1,45 @@
+ID: eb3f8f04-6a88-4864-9b19-dcf0d3f2b2d7
+
+GOLD TABLE:
+|           | Category        | Method                           |
+|----------:|:----------------|:---------------------------------|
+|   9062671 | ['Predictive']  | ['Relative position prediction'] |
+|    187547 | ['Predictive']  | ['Jigsaw puzzle']                |
+|   4009713 | ['Predictive']  | ['Rotation prediction']          |
+| 207168299 | ['Generative']  | ['Denoising auto-encoder']       |
+|   2202933 | ['Generative']  | ['Image inpainting']             |
+|   9658690 | ['Generative']  | ['Split-brain auto-encoder']     |
+|  11758569 | ['Generative']  | ['Deep Convolutional GAN']       |
+|     84591 | ['Generative']  | ['Bi-directional GAN']           |
+|  49670925 | ['Contrastive'] | ['CPC']                          |
+| 207930212 | ['Contrastive'] | ['MoCo']                         |
+| 211096730 | ['Contrastive'] | ['SimCLR']                       |
+| 219687798 | ['Contrastive'] | ['BYOL']                         |
+| 219721240 | ['Contrastive'] | ['SwAV']                         |
+
+GOLD SCHEMA:
+0: Category
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/eb3f8f04-6a88-4864-9b19-dcf0d3f2b2d7/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Objective of Learning (semantic content, robust features)                                                                              | Task Performance (e.g., state-of-the-art results, surpassing supervised learning)                                                                                              |
+|:---------|:---------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Learn to recognize objects, parts, and perform unsupervised visual discovery of objects']                                            | ['State-of-the-art performance in the R-CNN framework and among algorithms using only Pascal-provided training set annotations']                                               |
+| paper_2  | ['Learn feature mapping of object parts and correct spatial arrangement']                                                              | ['Outperforms state of the art methods in several transfer learning benchmarks']                                                                                               |
+| paper_3  | ['Learn high-level semantic image features without requiring manual annotation']                                                       | ['Exhibits state-of-the-art performance in various unsupervised feature learning benchmarks and closes the gap with supervised feature learning']                              |
+| paper_4  | ['Train representations robust to partial corruption of the input pattern']                                                            | ['Shows a surprising advantage in pattern classification benchmark suite']                                                                                                     |
+| paper_5  | ['Learn a representation capturing appearance and semantics of visual structures']                                                     | ['Quantitatively demonstrates the effectiveness of learned features for CNN pre-training on classification, detection, and segmentation tasks']                                |
+| paper_6  | ['Induce a representation which transfers well to other unseen tasks']                                                                 | ['Achieves state-of-the-art performance on several large-scale transfer learning benchmarks']                                                                                  |
+| paper_7  | ['Learn a hierarchy of representations from object parts to scenes']                                                                   | ['Convincing evidence of learning a hierarchy of representations from object parts to scenes in both the generator and discriminator']                                         |
+| paper_8  | ['Learn generative models mapping from simple latent distributions to complex data distributions']                                     | ['Useful for auxiliary supervised discrimination tasks, competitive with contemporary approaches to unsupervised and self-supervised feature learning']                        |
+| paper_9  | ['Extract useful representations from high-dimensional data']                                                                          | ['Strong performance on four distinct domains: speech, images, text, and reinforcement learning in 3D environments']                                                           |
+| paper_10 | ['Build a large and consistent dictionary on-the-fly, facilitating contrastive unsupervised learning']                                 | ['Provides competitive results under the common linear protocol on ImageNet classification']                                                                                   |
+| paper_11 | ['Learn useful representations by predicting the future in latent space']                                                              | ['Considerably outperforms previous methods for self-supervised and semi-supervised learning on ImageNet']                                                                     |
+| paper_12 | ['Learn self-supervised image representation by interacting and learning from the online and target networks']                         | ['Reaches top-1 classification accuracy of 74.3% on ImageNet and performs on par or better than the current state of the art on both transfer and semi-supervised benchmarks'] |
+| paper_13 | ['Simultaneously cluster the data while enforcing consistency between cluster assignments produced for different image augmentations'] | ['Achieves 75.3% top-1 accuracy on ImageNet with ResNet-50 and surpasses supervised pretraining on all considered transfer tasks']                                             |
+
+MATCHES:
+Objective of Learning (semantic content, robust features): 
+Task Performance (e.g., state-of-the-art results, surpassing supervised learning): 

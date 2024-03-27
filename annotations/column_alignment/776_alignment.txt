@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method                                                                                                                                                 | Language applicability         |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------|
+| Paper_1 | ['Hybrid Genetic Algorithm for phone categorization']                                                                                                  | ['English']                    |
+| Paper_2 | ['Backpropagation learning in feed-forward and recurrent feed-forward connectionist networks for syllable boundary assignment']                        | ['Dutch']                      |
+| Paper_3 | ['Linguistic theories of syllabification and discriminative learning technique combining Support Vector Machine and Hidden Markov Model technologies'] | ['English, Dutch, German']     |
+| Paper_4 | ['Linguistic theories of syllabification and discriminative learning technique combining Support Vector Machine and Hidden Markov Model technologies'] | ['English, Dutch, German']     |
+| Paper_5 | ['Entropy based phonotactic segmentation, sequence labeling approach, and hybrid approach']                                                            | ['Manipuri (Indian language)'] |
+
+MATCHES:
+Method: 1
+Language applicability: NA

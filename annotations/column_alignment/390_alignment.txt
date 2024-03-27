@@ -1,0 +1,32 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Techniques for extracting typing features                                                | Methods for comparing typing patterns                                                             | Evaluation of authentication performance                                                                       | Consideration of user identity                                                                                     |
+|:--------|:-----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['touch-based features, including spatial features such as touch position and pressure'] | ['calculating error rates, such as equal error rates (EER)']                                      | ['comparing the effectiveness of using spatial features to using temporal features']                           | ['comparing the typing patterns of known users to those of attackers']                                             |
+| paper_2 | ['both keystroke and handwriting features, such as timing and pressure']                 | ['N/A']                                                                                           | ['error rates under 2%']                                                                                       | ['comparing the typing patterns of known users to those of impostors']                                             |
+| paper_3 | ['virtual key typing, including both typing biometrics and hand morphology']             | ['calculating error rates, such as false acceptance rates (FAR) and false rejection rates (FRR)'] | ['comparing the effectiveness of using typing biometrics and hand morphology to other authentication methods'] | ['comparing the typing patterns of known users to those of impostors during both the login and post-login stages'] |
+| paper_4 | ['free text typing, including both keystroke dynamics and typing rhythm']                | ['calculating false alarm rates (FAR) and impostor pass rates (IPR)']                             | ['low false alarm and impostor pass rates']                                                                    | ['comparing the typing patterns of known users to those of impostors']                                             |
+
+MATCHES:
+Techniques for extracting typing features: 
+Methods for comparing typing patterns: 
+Evaluation of authentication performance: 
+Consideration of user identity: 

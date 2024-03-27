@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Threat Analysis                                                                                                                                                                                                           | Countermeasures                                                                                                                                                          |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Inexpensive RF-based detection of drones, physical characteristics of drone body, detection at distances, and overall system accuracy are evaluated.']                                                                  | ['N/A']                                                                                                                                                                  |
+| paper_2  | ['Threat analysis of security flaws in Datalink communications in aviation, including an evaluation of potential impacts and a proof-of-concept implementation of attacks with SDR.']                                     | ['Proposition of ARINC 823 ACARS Message Security (AMS) standard for authentication, and an analysis of its real-world impact in terms of frequency congestion.']        |
+| paper_3  | ['Evaluation of the cybersecurity of TPMS wireless communications interface and the proposal of a more secure TPMS protocol using LFSR-based message encryption.']                                                        | ['Proposal and evaluation of incorporating a more secure TPMS protocol using LFSR-based message encryption.']                                                            |
+| paper_4  | ['Proposed defense method against spoofing attacks on FM-based indoor localization, including two levels of detection and real-world experiments with USRPs.']                                                            | ['Presentation of a defense method against spoofing attacks on FM-based indoor localization, including two levels of detection, and real-world experiments with USRPs.'] |
+| paper_5  | ['Reviewing SDRs for conventional and spoofing mitigation modes and the capabilities for maintaining immunity against spoofing attacks. A case study budget analysis is also presented.']                                 | ['N/A']                                                                                                                                                                  |
+| paper_6  | ['Exploration of serious security issues in Bluetooth revision 2.1+ Secure Simple Pairing (SSP) and the practicality of the attack, implemented with GNU Radio using USRP and USRP2 devices.']                            | ['N/A']                                                                                                                                                                  |
+| paper_7  | ['Demonstration of vulnerabilities in GSM security through an active attack at the Um interface using USRP B200 and OpenBTS.']                                                                                            | ['N/A']                                                                                                                                                                  |
+| paper_8  | ['Analysis of vulnerabilities in LTE access network protocols and practical attacks to leak device location and deny service. Presentation of countermeasures to resist the attacks.']                                    | ['Presentation of several countermeasures to resist specific attacks, and discussion of possible trade-offs and safety margins for future specifications.']              |
+| paper_9  | ['Proposal of a heterogeneous computing framework for aeronautical surveillance systems using SDR framework for manned aircraft.']                                                                                        | ['N/A']                                                                                                                                                                  |
+| paper_10 | ["Survey of SDR technology to support security attacks against DECT digital voice communication, including a complete implementation of a passive eavesdropping attack and evaluation of the framework's effectiveness."] | ['N/A']                                                                                                                                                                  |
+| paper_11 | ['Proposal of a practical, fast, and energy-efficient key agreement scheme using random bits transmission with waveform shaking for NFC devices, ensuring security against eavesdropping attacks.']                       | ['N/A']                                                                                                                                                                  |
+| paper_12 | ['Implementation of a reconfigurable IoT gateway based on an SDR platform to cover short-range wireless protocols and standards, with the ability to detect and configure communication.']                                | ['N/A']                                                                                                                                                                  |
+| paper_13 | ['Development of a low-cost and all-in-one mobile receiver system for realistic eavesdropping attacks on computer displays from long distances, demonstrating the effectiveness of the system.']                          | ['N/A']                                                                                                                                                                  |
+| paper_14 | ['A novel jamming attack against OFDM systems compared with known techniques, including the implementation of the attack through SDR and monitoring the communication performance under different attacks.']              | ['N/A']                                                                                                                                                                  |
+| paper_15 | ['A novel jamming attack against OFDM systems compared with known techniques, including the implementation of the attack through SDR and monitoring the communication performance under different attacks.']              | ['N/A']                                                                                                                                                                  |
+| paper_16 | ['Description of a test setup to test tactical radio networks against cyber vulnerabilities, adapting the tools used in IP network testing for tactical radio networks to improve security.']                             | ['N/A']                                                                                                                                                                  |
+| paper_17 | ['Proposal and implementation of GenePrint, a generic and accurate physical-layer identification system for UHF RFID tags, demonstrating high identification accuracy and resilience to attacks.']                        | ['N/A']                                                                                                                                                                  |
+| paper_18 | ['A methodology to study the PHY layer vulnerability of wireless protocols in hostile radio environments, analyzing each subsystem and developing open-source software enabling research and education using SDR.']       | ['N/A']                                                                                                                                                                  |
+
+MATCHES:
+Threat Analysis: 
+Countermeasures: 

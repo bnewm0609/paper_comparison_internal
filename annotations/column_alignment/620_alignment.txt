@@ -1,0 +1,49 @@
+ID: 7dd8ac96-57c9-43c7-830b-f82862f262b7
+
+GOLD TABLE:
+|          | Usage             | Meta Class     | # Categories   | Train       | Val        | Test       | Prompts   |
+|---------:|:------------------|:---------------|:---------------|:------------|:-----------|:-----------|:----------|
+|  4309276 | ['Evaluation']    | ['textures']   | ['47']         | ['1,880']   | ['1,880']  | ['1,880']  | ['154']   |
+| 16922659 | ['-']             | ['birds']      | ['555']        | ['21,536']  | ['2,393']  | ['24,633'] | ['22']    |
+|  3181866 | ['-']             | ['dogs']       | ['120']        | ['10,800']  | ['1,200']  | ['8,580']  | ['33']    |
+| 15193013 | ['-']             | ['flowers']    | ['102']        | ['1,020']   | ['1,020']  | ['6,149']  | ['26']    |
+| 18268744 | ['-']             | ['all']        | ['10']         | ['40,000']  | ['10,000'] | ['10,000'] | ['42']    |
+| 16852518 | ['-']             | ['numbers']    | ['10']         | ['58,605']  | ['14,652'] | ['26,032'] | ['3']     |
+|  1309931 | ['Meta Training'] | ['scenes']     | ['397']        | ['108,754'] | ['-']      | ['-']      | ['128']   |
+|   308212 | ['Meta Training'] | ['all']        | ['10']         | ['5,000']   | ['-']      | ['8,000']  | ['43']    |
+| 22188073 | ['Meta Training'] | ['vegetables'] | ['200']        | ['20,000']  | ['10,000'] | ['61,117'] | ['95']    |
+|   383200 | ['Meta Training'] | ['cats,dogs']  | ['37']         | ['3,680']   | ['-']      | ['3,669']  | ['18']    |
+| 11810992 | ['Meta Training'] | ['remote']     | ['10']         | ['27,000']  | ['-']      | ['-']      | ['12']    |
+
+GOLD SCHEMA:
+0: Usage
+1: Meta Class
+2: # Categories
+3: Train
+4: Val
+5: Test
+6: Prompts
+
+PREDICTION PATH:../../metric_validation_0/7dd8ac96-57c9-43c7-830b-f82862f262b7/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of dataset used (e.g. CIFAR-10, Stanford Dogs)   | Number of classes in the dataset   | Number of images in the dataset   |
+|:---------|:------------------------------------------------------|:-----------------------------------|:----------------------------------|
+| Paper 1  | ['CIFAR-10', 'CIFAR-100']                             | [10, 100]                          | ['N/A']                           |
+| Paper 2  | ['CIFAR-10', 'CIFAR-100']                             | [10, 100]                          | ['N/A']                           |
+| Paper 3  | ['Stanford Dogs']                                     | [120]                              | [22000]                           |
+| Paper 4  | ['N/A']                                               | [37]                               | ['N/A']                           |
+| Paper 5  | ['N/A']                                               | [103]                              | ['N/A']                           |
+| Paper 6  | ['N/A']                                               | ['N/A']                            | ['N/A']                           |
+| Paper 7  | ['Sentinel-2 satellite images']                       | [10]                               | [27000]                           |
+| Paper 8  | ['SUN database']                                      | [899]                              | [130519]                          |
+| Paper 9  | ['Street View images']                                | ['N/A']                            | [600000]                          |
+| Paper 10 | ['NABirds']                                           | [555]                              | [48562]                           |
+| Paper 11 | ['CIFAR', 'NORB', 'STL']                              | ['N/A']                            | ['N/A']                           |
+| Paper 12 | ['VegFru']                                            | [292]                              | [160000]                          |
+| Paper 13 | ['VegFru']                                            | [292]                              | [160000]                          |
+
+MATCHES:
+Type of dataset used (e.g. CIFAR-10, Stanford Dogs): 
+Number of classes in the dataset: 
+Number of images in the dataset: 

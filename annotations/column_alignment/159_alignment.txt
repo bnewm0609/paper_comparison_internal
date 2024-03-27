@@ -1,0 +1,27 @@
+ID: ec6033dc-4e55-4127-8cc2-6a23b64c181c
+
+GOLD TABLE:
+|           | Epochs   | Batch   |
+|----------:|:---------|:--------|
+| 222066580 | ['1500'] | ['4']   |
+| 250627826 | ['500']  | ['4']   |
+| 243832686 | ['500']  | ['16']  |
+| 235265851 | ['1500'] | ['16']  |
+
+GOLD SCHEMA:
+0: Epochs
+1: Batch
+
+PREDICTION PATH:../../metric_validation_0/ec6033dc-4e55-4127-8cc2-6a23b64c181c/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Primary Strategy for Detection                      | Dataset and Evaluation                                                                                                                  |
+|:--------|:----------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Asymmetric Contextual Modulation']                | ['Public dataset not available, introduced a new dataset with open annotations', 'Not mentioned']                                       |
+| Paper_2 | ['Shape-based, Edge Information Aggregation']       | ['Proposed a new benchmark called IRSTD-1k', 'Evaluated on IRSTD-1k, two public datasets mentioned']                                    |
+| Paper_3 | ['Attention-Guided Pyramid Context']                | ['Two available infrared small target datasets used', 'Evaluated on the datasets without mentioning the names']                         |
+| Paper_4 | ['Dense Nested Attention, Progressive Interaction'] | ['Introduced a new dataset named NUDT-SIRST along with evaluation metrics', 'Evaluated on NUDT-SIRST, other public datasets mentioned'] |
+
+MATCHES:
+Primary Strategy for Detection: 
+Dataset and Evaluation: 

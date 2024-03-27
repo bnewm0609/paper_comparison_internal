@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Detection based on linguistic features                                                                                                                           | Detection based on semantic and emotional features                                                                                 | Detection based on colluder behavior                                                                                                                                           |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The study employed a probabilistic language modeling based computational model and used KL divergence for the detection of untruthful reviews.']               | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                                                        |
+| paper_2 | ['The paper focused on the linguistic features such as word n-gram features and differences in writing styles between real and pseudo fake reviews.']            | ['Explored behavioral features, semantic and emotional aspects in addition to linguistic features for detecting fake reviews.']    | ['Proposed a method to analyze colluder behavior using pairwise features and differences in psychological states of pseudo fake reviewers and real reviewers.']                |
+| paper_3 | ['The study explored pairwise features in collusion signals found in reviewers’ rating behaviors and linguistic patterns as linguistic features.']               | ['N/A']                                                                                                                            | ['Explored multiple heterogeneous pairwise features to capture correlations among colluders and proposed an unsupervised colluder detecting framework.']                       |
+| paper_4 | ['Identified specific linguistic features such as redundant terms, pauses, and sentence length as significant for distinguishing fake and trustworthy reviews.'] | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                                                        |
+| paper_5 | ['Focused on semantic and emotion-based features in addition to traditional methods based on content, reviewer info, and behavior for detecting fake reviews.']  | ['Proposed new features based on review density, semantic and emotion, and evaluated their efficiency in detecting fake reviews.'] | ['Considered traditional methods and behavioral features about reviewers and their reviews for learning to improve the classification result on real-life opinion spam data.'] |
+| paper_6 | ['The paper proposed a neural network model to encode semantic meaning of reviews for detecting deceptive opinion spam.']                                        | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                                                        |
+| paper_7 | ['Performed detection of fake reviews using linguistic features extracted based on Latent Dirichlet Allocation (LDA).']                                          | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                                                        |
+
+MATCHES:
+Detection based on linguistic features: 
+Detection based on semantic and emotional features: 
+Detection based on colluder behavior: 

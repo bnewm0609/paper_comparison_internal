@@ -1,0 +1,32 @@
+ID: 95c3954e-5daf-4039-8362-896ec07c6208
+
+GOLD TABLE:
+|          | Approach   | Driving environment                                     | Generalization   | Low Computational complexity   | Uncertainty: model errors/noisy measurements   | Experiments          |
+|---------:|:-----------|:--------------------------------------------------------|:-----------------|:-------------------------------|:-----------------------------------------------|:---------------------|
+| 13725991 | ['-']      | ['Autonomous driving in urban environment']             | ['+ +']          | ['+']                          | ['-']                                          | ['Real & Simulated'] |
+| 15780954 | ['-']      | ['Autonomous driving in real traffic situations']       | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+| 54457648 | ['-']      | ['Autonomous Driving in multiple urban configurations'] | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+
+GOLD SCHEMA:
+0: Approach
+1: Driving environment
+2: Generalization
+3: Low Computational complexity
+4: Uncertainty: model errors/noisy measurements
+5: Experiments
+
+PREDICTION PATH:../../metric_validation_0/95c3954e-5daf-4039-8362-896ec07c6208/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Learning approaches and algorithms                                              | Training data requirements and sources                                                            | Handling complex driving scenarios                                                                                         | Integration of learned models with autonomous driving systems                                                                       | Evaluation methods and metrics for learned models                                       |
+|:--------|:--------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|
+| paper_1 | ['Close-to-production sensor hardware, vision and radar sensors, digital maps'] | ['N/A']                                                                                           | ['Rural roads, small villages, major cities, intersections with and without traffic lights, roundabouts, narrow passages'] | ['Vision and radar-based perception, digital road maps, video-based self-localization, motion planning in complex urban scenarios'] | ['Autonomous journey on a historic route, comprehension of complex traffic situations'] |
+| paper_2 | ['Convolutional neural network, end-to-end learning']                           | ['Minimum training data from humans, front-facing camera']                                        | ['Local roads, highways, parking lots, unpaved roads, areas with unclear visual guidance']                                 | ['Mapping raw pixels from a single front-facing camera directly to steering commands']                                              | ['Driving in traffic on local roads, highways, parking lots, unpaved roads']            |
+| paper_3 | ['Imitation learning, perturbations']                                           | ['30 million examples, perception system for preprocessing, controller for executing on the car'] | ['Complex driving scenarios, collisions, going off the road']                                                              | ['Policy for autonomous driving via imitation learning']                                                                            | ['Simulation, real-world driving, ablation experiments']                                |
+
+MATCHES:
+Learning approaches and algorithms: 
+Training data requirements and sources: 
+Handling complex driving scenarios: 
+Integration of learned models with autonomous driving systems: 
+Evaluation methods and metrics for learned models: 

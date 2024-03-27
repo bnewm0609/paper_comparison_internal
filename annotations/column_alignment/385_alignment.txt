@@ -1,0 +1,33 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Applicability of Authentication Methods   | Authentication Performance                             | Authentication Mechanism                     | Usability Tradeoffs                                         | Security Concerns                                                    |
+|:--------|:------------------------------------------|:-------------------------------------------------------|:---------------------------------------------|:------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1 | ['mobile touchscreens']                   | ['spatial touch features reduce EER']                  | ['keystroke biometrics']                     | ['evaluations and fixed hand postures affect usability']    | ['evaluation assumptions can lead to overly optimistic evaluations'] |
+| paper_2 | ['smartphones and tablets']               | ['error rates under 2%']                               | ['keystroke and handwriting authentication'] | ['focus on improving security without tradeoffs mentioned'] | ['mentions limitations of existing approaches']                      |
+| paper_3 | ['mobile devices']                        | ['maintain security and usability']                    | ['virtual key typing based authentication']  | ['focus on maintaining usability along with security']      | ['conflicting requirements of security and usability']               |
+| paper_4 | ['free text']                             | ['False Alarm Rate < 5%, Impostor Pass Rate < 0.005%'] | ['keystroke analysis']                       | ['high accuracy proportional to available information']     | ['useful for user authentication and intrusion detection']           |
+
+MATCHES:
+Applicability of Authentication Methods: 
+Authentication Performance: 
+Authentication Mechanism: 
+Usability Tradeoffs: 
+Security Concerns: 

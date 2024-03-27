@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Linguistic features                                                                                                                                                                        | Word n-gram features                                               | Behavioural features                                                                                                                                                                    |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The development of a novel computational methodology to combat online review spam', 'The probabilistic language modeling based computational model for detection of untruthful reviews'] | ['N/A']                                                            | ['N/A']                                                                                                                                                                                 |
+| paper_2 | ['Discussing classification and analysis of real and pseudo reviews using word n-gram features']                                                                                           | ['Reporting an accuracy of 89.6% using only word n-gram features'] | ['Proposing an additional set of behavioral features about reviewers and their reviews for learning, which dramatically improves classification result on real-life opinion spam data'] |
+| paper_3 | ['Exploration of multiple heterogeneous pairwise features in virtue of some collusion signals found in reviewers’ rating behaviors and linguistic patterns']                               | ['Classifying experiments employing only n-gram features']         | ['N/A']                                                                                                                                                                                 |
+| paper_4 | ['Detailed analysis of linguistic features for distinguishing fake and trustworthy online reviews']                                                                                        | ['N/A']                                                            | ['N/A']                                                                                                                                                                                 |
+| paper_5 | ['Discussion of semantic and emotion features for fake review detection']                                                                                                                  | ['N/A']                                                            | ['N/A']                                                                                                                                                                                 |
+| paper_6 | ['Exploration of linguistic and psychological cues for deceptive opinion spam detection']                                                                                                  | ['N/A']                                                            | ['N/A']                                                                                                                                                                                 |
+| paper_7 | ['Distinguishing between fake reviews and non-fake reviews using linguistic features']                                                                                                     | ['N/A']                                                            | ['N/A']                                                                                                                                                                                 |
+
+MATCHES:
+Linguistic features: 
+Word n-gram features: 
+Behavioural features: 

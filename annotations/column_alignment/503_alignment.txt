@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model Type                                                     | Database Used                                                                      | Performance Improvement                                           | Data Source                                                                        |
+|:--------|:---------------------------------------------------------------|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| Paper 1 | ['Conditional Generative Adversarial Network (cGAN)']          | ['NICE.II training dataset, MICHE database, CASIA-Iris-Distance database']         | ['Improved recognition performance compared to existing studies'] | ['UBIRS.v2, NICE.II, MICHE, CASIA-Iris-Distance']                                  |
+| Paper 2 | ['Streamlined network with segmentation and decision network'] | ['National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset'] | ['Fatigue detection precision of 96.72%']                         | ['National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset'] |
+
+MATCHES:
+Model Type: 
+Database Used: 
+Performance Improvement: 
+Data Source: 

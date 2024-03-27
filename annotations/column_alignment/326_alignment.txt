@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Language Modeling Approach                                                                                  | Types of Review Data                                                                                                  | Detection Techniques                                                                                                          |
+|:--------|:------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Computational methodology for spam detection based on KL divergence and probabilistic language modeling'] | ['Detection of untruthful reviews for large e-Commerce site']                                                         | ['Effective detection using computational methods grounded on KL divergence and probabilistic language modeling']             |
+| paper_2 | ['Supervised learning approach and use of word n-gram features for fake review detection']                  | ['Comparison of fake review detection accuracies on pseudo AMT data and real-life data']                              | ['Supervised learning approach and utilization of word n-gram features for fake review detection']                            |
+| paper_3 | ['Exploration of multiple pairwise features in collusion signals for spam detection']                       | ['Exploration of pairwise features for detecting spam campaigns in product review websites']                          | ['Exploration of multiple pairwise features and an unsupervised colluder detecting framework for spam detection']             |
+| paper_4 | ['Detailed analysis of linguistic features for distinguishing fake and trustworthy reviews']                | ['Detailed analysis of linguistic features for distinguishing fake and trustworthy reviews']                          | ['Employment of machine learning classification algorithms to discriminate fake from real reviews using linguistic features'] |
+| paper_5 | ['Use of semantic and emotion-based features for fake review detection']                                    | ['Utilization of semantic and emotion-based features for fake review detection']                                      | ['Proposed model, algorithm, and features proved efficient in fake review detection task']                                    |
+| paper_6 | ['Utilization of neural network model for detecting deceptive opinion spam']                                | ['Detection of deceptive opinion spam based on hotel, restaurant, and doctor domains']                                | ['Empirical exploration of a neural network model for detecting deceptive opinion spam']                                      |
+| paper_7 | ['Detection based on linguistic features in terms of Latent Dirichlet Allocation (LDA)']                    | ['Method to distinguish between fake and non-fake reviews using linguistic features in terms of Yelp Filter Dataset'] | ['Effective detection based on linguistic features in terms of Latent Dirichlet Allocation (LDA)']                            |
+
+MATCHES:
+Language Modeling Approach: 
+Types of Review Data: 
+Detection Techniques: 

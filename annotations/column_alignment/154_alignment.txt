@@ -1,0 +1,29 @@
+ID: c5f434c2-7bac-47ed-8dcb-be78c4f7ac67
+
+GOLD TABLE:
+|           | Personality assessment questionnaire              | Item count   |
+|----------:|:--------------------------------------------------|:-------------|
+|  59804394 | ['IPIP 50-version']                               | ['50']       |
+|  39888164 | ['Big-five marker scale (BFMS) {{cite:4351c2f}}'] | ['100']      |
+|  12589916 | ['BFI-10']                                        | ['10']       |
+| 132309131 | ['IPIP-NEO-60']                                   | ['60']       |
+|  46855347 | ['IPIP 100-version']                              | ['100']      |
+
+GOLD SCHEMA:
+0: Personality assessment questionnaire
+1: Item count
+
+PREDICTION PATH:../../metric_validation_0/c5f434c2-7bac-47ed-8dcb-be78c4f7ac67/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Personality Traits                                                                                                          | Application Domain                              |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------|
+| Paper 1 | ['Personality-based user similarity measure for collaborative filtering recommender systems', 'Big Five personality model'] | ['Collaborative filtering recommender systems'] |
+| Paper 2 | ['Emotion and personality recognition using commercial sensors', 'Big Five personality scales']                             | ['Emotion and personality recognition']         |
+| Paper 3 | ['Personality-aware recommendation for computational advertising', 'Big Five personality factors']                          | ['Computational advertising']                   |
+| Paper 4 | ['Friend recommendation system based on Big-Five personality traits and hybrid filtering', 'Big Five personality traits']   | ['Friend recommendation system']                |
+| Paper 5 | ['Personality similarity between romantic partners and friends', 'Behavior-based personality measures']                     | ['Personality research']                        |
+
+MATCHES:
+Personality Traits: 
+Application Domain: 

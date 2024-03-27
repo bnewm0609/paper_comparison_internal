@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Features used in machine learning models                                                                      | Performance of machine learning models                                                                |
+|:--------|:--------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                       | ['52% accuracy among 282 authors']                                                                    |
+| paper_2 | ['Novel set of features including decompiled source code and stylistic representations embedded in assembly'] | ['Up to 96% accuracy with 100 candidate programmers and 83% accuracy with 600 candidate programmers'] |
+
+MATCHES:
+Features used in machine learning models: 
+Performance of machine learning models: 

@@ -1,0 +1,34 @@
+ID: a79431cf-5fbc-45af-949c-0c3f5549e6ed
+
+GOLD TABLE:
+|           | Task                            | Samples     | Classes   |
+|----------:|:--------------------------------|:------------|:----------|
+|  15676318 | ['Speech, Music, and Noise']    | ['2,016']   | ['3']     |
+|  17567398 | ['Human Sounds']                | ['400']     | ['10']    |
+|   4719239 | ['Commands Recognition']        | ['100,503'] | ['12']    |
+|  14369452 | ['Emotion Detection']           | ['7,438']   | ['6']     |
+| 244899987 | ['Keyword Spotting']            | ['28,039']  | ['20']    |
+| 248571603 | ['Health Condition Monitoring'] | ['21,024']  | ['6']     |
+
+GOLD SCHEMA:
+0: Task
+1: Samples
+2: Classes
+
+PREDICTION PATH:../../metric_validation_0/a79431cf-5fbc-45af-949c-0c3f5549e6ed/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Research Focus                           | Data Size                                                                                                | Applications                                                                             |
+|:--------|:-----------------------------------------|:---------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
+| Paper 1 | Music, Speech, and Noise Corpus          | Varied - music from several genres, speech from twelve languages, and technical and non-technical noises | Voice activity detection, music/speech discrimination                                    |
+| Paper 2 | Environmental Sound Classification       | 2000 short clips of 50 classes & 250000 unlabeled auditory excerpts                                      | Environmental sound classification research activities                                   |
+| Paper 3 | Limited-Vocabulary Speech Recognition    | Audio dataset of spoken words in several languages; not specified                                        | Training and evaluating keyword spotting systems                                         |
+| Paper 4 | Emotional Multimodal Actors Dataset      | 7,442 clips of 91 actors with diverse ethnic backgrounds                                                 | Study of multi-modal emotion expression and perception                                   |
+| Paper 5 | Multilingual Spoken Words Corpus         | Over 23.4 million 1-second spoken examples in 50 languages                                               | Academic research and commercial applications in keyword spotting and spoken term search |
+| Paper 6 | Multilingual Spoken Words Corpus         | Over 23.4 million 1-second spoken examples in 50 languages                                               | Academic research and commercial applications in keyword spotting and spoken term search |
+| Paper 7 | Improving Human Vocal Sounds Recognition | 21,000 crowdsourced recordings of vocalizations from 3,365 subjects                                      | Automatic sound transcription, health condition monitoring                               |
+
+MATCHES:
+Research Focus: 
+Data Size: 
+Applications: 

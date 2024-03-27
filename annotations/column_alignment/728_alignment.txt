@@ -1,0 +1,29 @@
+ID: 922d9133-f613-42d2-b191-b75c784e550f
+
+GOLD TABLE:
+|           | Dataset             | Dim.          |
+|----------:|:--------------------|:--------------|
+|  10659969 | ['Moons']           | ['2']         |
+|  60282629 | ['MNIST']           | ['28x28']     |
+|    702279 | ['Fashion MNIST']   | ['28x28']     |
+|  18268744 | ['CIFAR10']         | ['32x32x3']   |
+| 198967908 | ['CelebA-HQ (128)'] | ['128x128x3'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Dim.
+
+PREDICTION PATH:../../metric_validation_0/922d9133-f613-42d2-b191-b75c784e550f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Techniques used                                              | Evaluation metrics                    |
+|:--------|:-------------------------------------------------------------|:--------------------------------------|
+| paper_1 | ['N/A']                                                      | ['N/A']                               |
+| paper_2 | ['N/A']                                                      | ['N/A']                               |
+| paper_3 | ['N/A']                                                      | ['N/A']                               |
+| paper_4 | ['N/A']                                                      | ['N/A']                               |
+| paper_5 | ['MaskGAN: a novel framework for facial image manipulation'] | ['Attribute transfer and style copy'] |
+
+MATCHES:
+Techniques used: 
+Evaluation metrics: 

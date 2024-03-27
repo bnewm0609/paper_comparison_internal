@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Objective functions and constraints                                                                                                             | Decision variables and optimization algorithms                                                                                                                                                             | Case study and location-specific details                                                                                                                                                              | Evaluation and performance metrics                                                                 |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| paper_1 | ['Multiobjective network design problem with objectives: accessibility, use of urban space by parking, operating deficit, and climate impact.'] | ['Decision variables: location of park and ride facilities, train stations, and frequency of public transport lines. Optimization algorithm: Epsilon Non-dominated Sorting Genetic Algorithm (e-NSGAII).'] | ['Case study in the city region of Amsterdam in The Netherlands. Demand forecast for 2030 used. Comparison between demand scenarios: 2020 demand prediction, Transit-Oriented Development scenario.'] | ['Pareto set approximation approach, performance evaluation based on different demand scenarios.'] |
+| paper_2 | ['Performance measured over the entire network and time. Markov Decision Process modeling.']                                                    | ['No specific decision variables mentioned. Optimization algorithm: Approximate Dynamic Programming (ADP) and Value of Perfect Information (VPI).']                                                        | ['No specific case study or location-specific details mentioned.']                                                                                                                                    | ['Numerical experiments showing improvement over profit achieved by common practice heuristics.']  |
+
+MATCHES:
+Objective functions and constraints: 
+Decision variables and optimization algorithms: 
+Case study and location-specific details: 
+Evaluation and performance metrics: 

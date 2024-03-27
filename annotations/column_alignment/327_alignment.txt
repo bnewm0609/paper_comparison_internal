@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Supervised learning                                                                                                                   | Neural network approaches                                  | Probabilistic language modeling                                                                                                       |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['KL divergence and probabilistic language modeling based computational model is effective for the detection of untruthful reviews.'] | ['N/A']                                                    | ['KL divergence and probabilistic language modeling based computational model is effective for the detection of untruthful reviews.'] |
+| paper_2 | ['Supervised learning has been one of the main approaches for solving the problem of fake review detection.']                         | ['N/A']                                                    | ['N/A']                                                                                                                               |
+| paper_3 | ['N/A']                                                                                                                               | ['N/A']                                                    | ['N/A']                                                                                                                               |
+| paper_4 | ['N/A']                                                                                                                               | ['N/A']                                                    | ['N/A']                                                                                                                               |
+| paper_5 | ['N/A']                                                                                                                               | ['N/A']                                                    | ['N/A']                                                                                                                               |
+| paper_6 | ['N/A']                                                                                                                               | ['Deceptive opinion spam detection using neural network.'] | ['N/A']                                                                                                                               |
+| paper_7 | ['N/A']                                                                                                                               | ['N/A']                                                    | ['N/A']                                                                                                                               |
+
+MATCHES:
+Supervised learning: 
+Neural network approaches: 
+Probabilistic language modeling: 

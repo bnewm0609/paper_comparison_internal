@@ -1,0 +1,44 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Scope and size of dataset                                                                                                                                                                                                                                                                        | Types of sensors and data included                                                                          |
+|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['1000 scenes, each 20s long, and fully annotated with 3D bounding boxes for 23 classes and 8 attributes, 7x as many annotations and 100x as many images as the pioneering KITTI dataset.']                                                                                                      | ['6 cameras, 5 radars and 1 lidar']                                                                         |
+| paper_2  | ['1150 scenes that each span 20 seconds, consisting of well synchronized and calibrated high quality LiDAR and camera data captured across a range of urban and suburban geographies, 15x more diverse than the largest camera+LiDAR dataset available based on our proposed diversity metric.'] | ['synchronized and calibrated high quality LiDAR and camera data']                                          |
+| paper_3  | ['389 stereo and optical flow image pairs, stereo visual odometry sequences of 39.2 km length, and more than 200k 3D object annotations captured in cluttered scenarios.']                                                                                                                       | ['four high resolution video cameras, a Velodyne laser scanner and a state-of-the-art localization system'] |
+| paper_4  | ['Data from existing and new sources, consisting of recordings from a large set of cameras, providing a large variety of different scenarios, including urban, rural, and highway scenes, day and night recordings, and all four seasons.']                                                      | ['cameras']                                                                                                 |
+| paper_5  | ['Videos with multiple people labeled with person tracks and articulated pose']                                                                                                                                                                                                                  | ['Videos with multiple people labeled with person tracks and articulated pose']                             |
+| paper_6  | ['More than 15,000 person trajectories in 720 sequences']                                                                                                                                                                                                                                        | ['Not specified in the abstract']                                                                           |
+| paper_7  | ['Videos with multiple people labeled with person tracks and articulated pose']                                                                                                                                                                                                                  | ['Videos with multiple people labeled with person tracks and articulated pose']                             |
+| paper_8  | ['40 cameras across 10 intersections and contains more than 200K annotated bounding boxes']                                                                                                                                                                                                      | ['HD videos from 40 cameras']                                                                               |
+| paper_9  | ['100K videos and 10 tasks to evaluate the exciting progress of image recognition algorithms on autonomous driving, The dataset possesses geographic, environmental, and weather diversity']                                                                                                     | ['HD videos, GPS, and sensor readings']                                                                     |
+| paper_10 | ['10,870 video frames with 977 distinct objects (cars and pedestrians) annotated with pixel-level masks']                                                                                                                                                                                        | ['RGB videos, depth maps, and 3D cuboids']                                                                  |
+| paper_11 | ['10,870 video frames with 977 distinct objects (cars and pedestrians) annotated with pixel-level masks']                                                                                                                                                                                        | ['RGB videos, depth maps, and 3D cuboids']                                                                  |
+| paper_12 | ['More than 3 hours of synchronized HD videos from 40 cameras across 10 intersections, with the longest distance between two simultaneous cameras being 2.5 km, and 200K annotated bounding boxes']                                                                                              | ['HD videos, GPS, and sensor readings']                                                                     |
+| paper_13 | ['8 new sequences depicting very crowded challenging scenes']                                                                                                                                                                                                                                    | ['RGB videos, sensor readings, (No mention of lidar or radar)']                                             |
+
+MATCHES:
+Scope and size of dataset: 
+Types of sensors and data included: 

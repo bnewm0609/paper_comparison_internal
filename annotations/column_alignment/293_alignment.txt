@@ -1,0 +1,42 @@
+ID: 14f6d93a-4d71-438b-9705-93514627bc75
+
+GOLD TABLE:
+|           | Name        | Method                                              |
+|----------:|:------------|:----------------------------------------------------|
+| 124273988 | ['binseg']  | ['Binary Segmentation']                             |
+|  15721047 | ['bocpd']   | ['Bayesian Online Change Point Detection']          |
+|  21681143 | ['bocpdms'] | ['bocpd with Model Selection']                      |
+|    858268 | ['cpnp']    | ['Nonparametric Change Point Detection']            |
+|  54586890 | ['ecp']     | ['Energy Change Point']                             |
+|    211152 | ['kcpa']    | ['Kernel Change-Point Analysis']                    |
+|   5627005 | ['pelt']    | ['Pruned Exact Linear Time']                        |
+|  12515984 | ['prophet'] | ['Prophet']                                         |
+|  88520997 | ['rfpop']   | ['Robust Functional Pruning Optimal\nPartitioning'] |
+|  30533655 | ['wbs']     | ['Wild Binary Segmentation']                        |
+| 212717962 | ['zero']    | ['No Change Points']                                |
+
+GOLD SCHEMA:
+0: Name
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/14f6d93a-4d71-438b-9705-93514627bc75/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Method/approach used                                                                                                                       | Model/Algorithm used                                                                                         | Assumptions on data                                                                                                                                                        |
+|:---------|:-------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Cluster Analysis Method for Grouping Means in the Analysis of Variance']                                                                 | ['Likelihood ratio test']                                                                                    | ['Existence of the αth absolute moment, for some α ∈ (0, 2)']                                                                                                              |
+| Paper 2  | ['Bayesian Online Changepoint Detection']                                                                                                  | ['Message-passing algorithm']                                                                                | ['Independent model parameters before and after the changepoint']                                                                                                          |
+| Paper 3  | ['Spatio-temporal Bayesian On-line Changepoint Detection with Model Selection', 'Spatially structured Vector Autoregressions (VARs)']      | ['Online algorithm for exact inference']                                                                     | ['Non-stationary spatio-temporal processes']                                                                                                                               |
+| Paper 4  | ['A computationally efficient nonparametric approach for changepoint detection', 'PELT', 'Changepoints Over a Range of PenaltieS (CROPS)'] | ['Dynamic programming', 'Pruned Exact Linear Time (PELT)', 'Changepoints Over a Range of PenaltieS (CROPS)'] | ['Penalty to avoid under/over-fitting the model']                                                                                                                          |
+| Paper 5  | ['A Nonparametric Approach for Multiple Change Point Analysis of Multivariate Data', 'Hierarchical clustering', 'None']                    | ['Divisive and agglomerative algorithms']                                                                    | ['No assumptions regarding the nature of the change in distribution or any distribution assumptions beyond the existence of the αth absolute moment, for some α ∈ (0, 2)'] |
+| Paper 6  | ['Kernel Change-point Analysis', 'Maximum kernel Fisher discriminant ratio']                                                               | ['Test statistic based on the maximum kernel Fisher discriminant ratio']                                     | ['Temporal observations']                                                                                                                                                  |
+| Paper 7  | ['Optimal detection of changepoints with a linear computational cost', 'None']                                                             | ['A new method for finding the minimum of cost functions']                                                   | ['Unlabelled sample of observations', 'Two or more distributions']                                                                                                         |
+| Paper 8  | ['N/A']                                                                                                                                    | ['Modular regression model']                                                                                 | ['Variety of time series', 'Time series modeling expertise is relatively rare']                                                                                            |
+| Paper 9  | ['Changepoint Detection in the Presence of Outliers', 'Penalised cost approaches with biweight loss function']                             | ['Efficient dynamic programming algorithm', 'Penalised cost criteria']                                       | ['Presence of outliers or heavy-tailed noise', 'Data needs to be analyzed online']                                                                                         |
+| Paper 10 | ['Wild binary segmentation (WBS) for multiple change-point detection']                                                                     | ['Wild binary segmentation (WBS)', 'Thresholding', 'Strengthened Schwarz information criterion']             | ['Increasing number of change-points with the sample size']                                                                                                                |
+| Paper 11 | ['N/A']                                                                                                                                    | ['N/A']                                                                                                      | ['N/A']                                                                                                                                                                    |
+
+MATCHES:
+Method/approach used: 
+Model/Algorithm used: 
+Assumptions on data: 

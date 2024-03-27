@@ -1,0 +1,61 @@
+ID: 2ad79925-6779-4856-8854-f09c72134c69
+
+GOLD TABLE:
+|           | Reinforcement Learning Technique                     | Application                                            |
+|----------:|:-----------------------------------------------------|:-------------------------------------------------------|
+|   3116531 | ['Model-based, PEGASUS']                             | ['Helicopter control']                                 |
+|   7142905 | ['Model-based, PEGASUS']                             | ['Helicopter hovering and maneuvers']                  |
+|  15279814 | ['Differential Dynamic Programming']                 | ['Helicopter aerobatic maneuvers']                     |
+|   2387578 | ['Model-based; LWLR,Policy Iteration']               | ['Quadrotor altitude control']                         |
+|  16266708 | ['Fitted Value Iteration']                           | ['Quadrotor velocity control']                         |
+|  10259326 | ['Finite Action-set Learning Automata']              | ['Quadrotor trajectory tracking and attitude control'] |
+|   5539001 | ['MPC Guided Policy Search']                         | ['Quadrotor obstacle avoidance']                       |
+|  24546802 | ['Neural network policy']                            | ['Waypoint tracking and recovery tests']               |
+|  58004760 | ['Deep model-based']                                 | ['Hovering']                                           |
+|   4790080 | ['DDPG, TRPO, PPO']                                  | ['Attitude control']                                   |
+| 156055134 | ['PPO']                                              | ['Attitude control']                                   |
+| 128176516 | ['DPG']                                              | ['UAV control']                                        |
+|  17109433 | ['Model-based,TEXPLORE']                             | ['UAV navigation']                                     |
+|   2277178 | ['Q-Learning']                                       | ['UAV navigation']                                     |
+|  52300915 | ['Q-Learning with function approximation']           | ['UAV navigation']                                     |
+|  59285205 | ['Fast-RDPG']                                        | ['UAV navigation']                                     |
+|  53212475 | ['Deep recurrent Q network with temporal attention'] | ['Obstacle avoidance']                                 |
+|  52162679 | ['DQN']                                              | ['Autonomous landing']                                 |
+
+GOLD SCHEMA:
+0: Reinforcement Learning Technique
+1: Application
+
+PREDICTION PATH:../../metric_validation_0/2ad79925-6779-4856-8854-f09c72134c69/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | model-based reinforcement learning   | unsupervised learning   | deep reinforcement learning   | MBRL    | Q-learning   | PPO     | DQN     | TD3     |
+|:---------|:-------------------------------------|:------------------------|:------------------------------|:--------|:-------------|:--------|:--------|:--------|
+| paper_1  | ['Yes']                              | ['N/A']                 | ['No']                        | ['Yes'] | ['No']       | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_2  | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_3  | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_4  | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_5  | ['Yes']                              | ['Yes']                 | ['No']                        | ['Yes'] | ['No']       | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_6  | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['Yes'] | ['N/A'] | ['N/A'] |
+| paper_7  | ['N/A']                              | ['N/A']                 | ['Yes']                       | ['N/A'] | ['N/A']      | ['No']  | ['Yes'] | ['N/A'] |
+| paper_8  | ['N/A']                              | ['N/A']                 | ['Yes']                       | ['N/A'] | ['N/A']      | ['Yes'] | ['No']  | ['N/A'] |
+| paper_9  | ['Yes']                              | ['N/A']                 | ['No']                        | ['Yes'] | ['No']       | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_10 | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['Yes']      | ['Yes'] | ['N/A'] | ['N/A'] |
+| paper_11 | ['N/A']                              | ['N/A']                 | ['Yes']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['Yes'] | ['Yes'] |
+| paper_12 | ['Yes']                              | ['N/A']                 | ['No']                        | ['Yes'] | ['No']       | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_13 | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_14 | ['N/A']                              | ['N/A']                 | ['N/A']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_15 | ['N/A']                              | ['Yes']                 | ['No']                        | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+| paper_16 | ['N/A']                              | ['N/A']                 | ['Yes']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['Yes'] | ['N/A'] |
+| paper_17 | ['N/A']                              | ['N/A']                 | ['No']                        | ['N/A'] | ['N/A']      | ['N/A'] | ['No']  | ['N/A'] |
+| paper_18 | ['N/A']                              | ['N/A']                 | ['Yes']                       | ['N/A'] | ['N/A']      | ['N/A'] | ['N/A'] | ['N/A'] |
+
+MATCHES:
+model-based reinforcement learning: 
+unsupervised learning: 
+deep reinforcement learning: 
+MBRL: 
+Q-learning: 
+PPO: 
+DQN: 
+TD3: 

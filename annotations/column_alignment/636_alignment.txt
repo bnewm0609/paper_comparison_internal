@@ -1,0 +1,30 @@
+ID: 6f7faa13-6377-43fc-a57a-8d88efdf569d
+
+GOLD TABLE:
+|          | Model                                                                              | Learning                                                                                              | Advantages                                                                           | Disadvantages                                                                                                       |
+|---------:|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| 18421517 | ['Track features of segmented objects']                                            | ['Match features across frames']                                                                      | ['More robust than shape tracking, may allow some deformation (aspect change)']      | ['Features may not be consistently present, selection of appropriate features is important, computation intensive'] |
+| 14320286 | ['Features of objects case as state vectors of network representing motion model'] | ['Learning techniques such as expectation maximization are used to progressively update the network'] | ['Predictive nature, learns motion adaptively']                                      | ['Requires features as state variables, very computation intensive, cannot deal with complex motion patterns']      |
+| 12758993 | ['Computes motion maps or flow vectors to determine consistent motion patterns']   | ['Cluster using modified k-means clustering on flow maps or compute flow equation at each pixel']     | ['Wakes and waves are automatically suppressed due to inconsistent motion patterns'] | ['Cannot deal with boat maneuvers and is computation intensive']                                                    |
+
+GOLD SCHEMA:
+0: Model
+1: Learning
+2: Advantages
+3: Disadvantages
+
+PREDICTION PATH:../../metric_validation_0/6f7faa13-6377-43fc-a57a-8d88efdf569d/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Maritime Surveillance System                                                                      | Detection Techniques                           | Surveillance Environment                              | Real-time Monitoring                                                       |
+|:--------|:--------------------------------------------------------------------------------------------------|:-----------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------------------------|
+| paper_1 | ['Automatic Maritime Surveillance with Visual Target Detection']                                  | ['Haar-like classifier']                       | ['Global view adding a visual dimension to AIS data'] | ['Effective results with different light conditions and camera positions'] |
+| paper_2 | ['Evaluation of Maritime Vision Techniques for Aerial Search of Humans in Maritime Environments'] | ['Range of machine vision approaches']         | ['Lost humans in vast stretches of ocean']            | ['Real-time tracking and detection in maritime environments']              |
+| paper_3 | ['Argos - a Video Surveillance System for boat Traffic Monitoring in Venice']                     | ['Real-time boat tracking with good accuracy'] | ['City of Venice (Italy) boat traffic monitoring']    | ['Continuous 24/7 day and night monitoring in Venice']                     |
+| paper_4 | ['Argos - a Video Surveillance System for boat Traffic Monitoring in Venice']                     | ['Real-time boat tracking with good accuracy'] | ['City of Venice (Italy) boat traffic monitoring']    | ['Continuous 24/7 day and night monitoring in Venice']                     |
+
+MATCHES:
+Maritime Surveillance System: 
+Detection Techniques: 
+Surveillance Environment: 
+Real-time Monitoring: 

@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Speedup Performance   | Algorithm Approach                                                                                          |
+|:--------|:----------------------|:------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['5-10x speedup']     | ['Optimized version of CCL for GPUs using GPGPU techniques and the UnionFind algorithm']                    |
+| Paper 2 | ['1.61x speedup']     | ['New parallel algorithm of CCL with GPU architecture for the binary image, improved Union-Find technique'] |
+
+MATCHES:
+Speedup Performance: 
+Algorithm Approach: 

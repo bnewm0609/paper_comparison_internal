@@ -1,0 +1,45 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Number of sequences and frames in dataset                                               | Types of objects and scenarios included in annotations                 | Evaluation metrics used                                                                                                  |
+|:---------|:----------------------------------------------------------------------------------------|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | [20]                                                                                    | ['23 classes and 8 attributes in 3D bounding boxes']                   | ['N/A']                                                                                                                  |
+| Paper 2  | [1150]                                                                                  | ['2D and 3D bounding boxes with consistent identifiers across frames'] | ['2D and 3D detection, tracking tasks']                                                                                  |
+| Paper 3  | ['39.2 km length of stereo visual odometry sequences']                                  | ['Cars and pedestrians in cluttered scenarios']                        | ['Stereo, optical flow, visual odometry/SLAM, and 3D object detection benchmarks']                                       |
+| Paper 4  | ['Multiple target tracking dataset, no specific number of sequences mentioned']         | ['Multiple targets, focus on surveillance applications']               | ['Multiple target tracking']                                                                                             |
+| Paper 5  | [44]                                                                                    | ['Multiple people']                                                    | ['Multiple object tracking']                                                                                             |
+| Paper 6  | ['720, 15,000 person trajectories']                                                     | ['People in 720 sequences']                                            | ['ID Switches, fragments']                                                                                               |
+| Paper 7  | ['Videos with multiple people']                                                         | ['Multiple people in videos']                                          | ['Single-frame multi-person pose estimation, multi-person pose estimation in videos, multi-person articulated tracking'] |
+| Paper 8  | ['VisDrone-MOT2019']                                                                    | ['Moving objects in drone-based datasets']                             | ['MOT metrics']                                                                                                          |
+| Paper 9  | ['100K videos']                                                                         | ['Multiple tasks for autonomous driving']                              | ['Multiple tasks for autonomous driving']                                                                                |
+| Paper 10 | ['10,870 video frames']                                                                 | ['Cars and pedestrians with pixel-level annotations']                  | ['Existing multi-object tracking metrics']                                                                               |
+| Paper 11 | ['10,870 video frames']                                                                 | ['Cars and pedestrians with pixel-level annotations']                  | ['Existing multi-object tracking metrics']                                                                               |
+| Paper 12 | ['More than 3 hours of synchronized HD videos from 40 cameras across 10 intersections'] | ['Vehicles with different models and urban traffic flow conditions']   | ['MTMC tracking, MTSC tracking, ReID, object detection']                                                                 |
+| Paper 13 | ['8 new sequences']                                                                     | ['People in crowded challenging scenes']                               | ['Multiple object tracking in extremely crowded scenarios']                                                              |
+
+MATCHES:
+Number of sequences and frames in dataset: 
+Types of objects and scenarios included in annotations: 
+Evaluation metrics used: 

@@ -1,0 +1,33 @@
+ID: 3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6
+
+GOLD TABLE:
+|           | Category             | Method                            |
+|----------:|:---------------------|:----------------------------------|
+| 204104363 | ['By Main Variance'] | ['PLS']                           |
+| 100331255 | ['-']                | ['iPLS & mIPW-PLS']               |
+| 126254919 | ['-']                | ['Spectra segment']               |
+| 181779897 | ['-']                | ["By main elements' intensities"] |
+| 227253762 | ['Deep']             | ['CNN']                           |
+| 195218599 | ['By Evaluation']    | ['BestKSelct']                    |
+|  46882558 | ['Others']           | ['GA']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Reduction in root mean square errors of prediction for specific elements                                                                                                                                                                                | Comparison of the quantitative analysis results with conventional internal calibration approach                                                                                                                                                         |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                                                                                                                 | ['N/A']                                                                                                                                                                                                                                                 |
+| paper_2 | ['The root mean square error of prediction (RMSEP) showed more satisfactory results compared with conventional methods. The limits of detection (LODs) obtained for Cu, Ba, Cr, Mg, and Ca were provided as 11.4, 4.3, 3.6, 529.5, and 307.6 mg kg−1.'] | ['The paper compares the quantitative analysis results with conventional internal calibration approaches and shows improved predictive ability as well as reduction in root mean square error of prediction (RMSEP) compared to conventional methods.'] |
+| paper_3 | ['N/A']                                                                                                                                                                                                                                                 | ['N/A']                                                                                                                                                                                                                                                 |
+| paper_4 | ['N/A']                                                                                                                                                                                                                                                 | ['N/A']                                                                                                                                                                                                                                                 |
+| paper_5 | ['N/A']                                                                                                                                                                                                                                                 | ['N/A']                                                                                                                                                                                                                                                 |
+| paper_6 | ['N/A']                                                                                                                                                                                                                                                 | ['N/A']                                                                                                                                                                                                                                                 |
+| paper_7 | ['The reduction rates of the root mean square errors of prediction (RMSEPs) for the elements Cu and V can reach 78.9% and 80.6%, respectively, when compared to the conventional internal calibration approach.']                                       | ['There is a comparison with the conventional internal calibration approach, which shows reduction rates of the RMSEP values reaching 78.9% and 80.6% for copper (Cu) and vanadium (V) elements, respectively.']                                        |
+
+MATCHES:
+Reduction in root mean square errors of prediction for specific elements: 
+Comparison of the quantitative analysis results with conventional internal calibration approach: 

@@ -1,0 +1,36 @@
+ID: a07d0b86-db68-4fa1-bb26-d00069f5bd60
+
+GOLD TABLE:
+|           | Loss                      | Training set   |
+|----------:|:--------------------------|:---------------|
+|  52195299 | ['Softmax']               | ['VoxCeleb1']  |
+|  54200945 | ['-']                     | ['VoxCeleb1']  |
+|   4881455 | ['A-Softmax + GNLL']      | ['VoxCeleb1']  |
+|   4407761 | ['Softmax']               | ['VoxCeleb1']  |
+|  51713108 | ['AM-Softmax']            | ['VoxCeleb1']  |
+|  49211906 | ['Softmax + Contrastive'] | ['VoxCeleb2']  |
+|  67856245 | ['Softmax']               | ['VoxCeleb2']  |
+| 202751677 | ['AAM']                   | ['VoxCeleb1']  |
+
+GOLD SCHEMA:
+0: Loss
+1: Training set
+
+PREDICTION PATH:../../metric_validation_0/a07d0b86-db68-4fa1-bb26-d00069f5bd60/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods for speaker recognition                                                                                                                   | Datasets used for evaluation                 |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------|
+| paper_1 | ['Convolutional Neural Network (CNN) based speaker recognition model']                                                                            | ['TIMIT dataset']                            |
+| paper_2 | ['Convolutional Neural Network (CNN) based speaker recognition model']                                                                            | ['TIMIT dataset']                            |
+| paper_3 | ['Maximizing the mutual information between the encoded representations of chunks of speech']                                                     | ['N/A']                                      |
+| paper_4 | ['End-to-end speaker and language recognition system']                                                                                            | ['Voxceleb and NIST LRE 07 datasets']        |
+| paper_5 | ['Attentive statistics pooling for deep speaker embedding']                                                                                       | ['NIST SRE 2012 and the VoxCeleb data sets'] |
+| paper_6 | ['Augmenting the training and testing data, finding the optimal dimensionality of embedding space and use of more discriminative loss functions'] | ['VoxCeleb dataset']                         |
+| paper_7 | ['VoxCeleb2: Deep Speaker Recognition']                                                                                                           | ['VoxCeleb2 dataset']                        |
+| paper_8 | ['Utterance-level aggregation for speaker recognition in the wild']                                                                               | ['VoxCeleb1 dataset']                        |
+| paper_9 | ['Deep convolutional feature extractor, self-attentive pooling and large-margin loss functions']                                                  | ['N/A']                                      |
+
+MATCHES:
+Methods for speaker recognition: 
+Datasets used for evaluation: 

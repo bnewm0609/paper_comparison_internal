@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Eye Movement                                 | Method of Study                                                                    | Main Findings                                                                                                                                                                                                                                                                                 |
+|:--------|:-----------------------------------------------------|:-----------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Optokinetic eye movements']                        | ['Scleral search coil technique']                                                  | ['Optokinetic eye movements can be elicited by radial optic flow fields simulating self-motion. Eye movements are linked to the parafoveal flow field, i.e., the motion in the direction of gaze. In the retinal projection of the optic flow, such eye movements superimpose retinal slip.'] |
+| Paper 2 | ['Reading eye movements']                            | ['Power spectral density analysis and fractal dimension determination']            | ['Evidence of chaotic behavior in reading eye movements. Fractal dimension of the system’s presumed attractor seems directly related to qualitative assessment of reading ability.']                                                                                                          |
+| Paper 3 | ['Eye movements during head impulses']               | ['Video head impulse test and scleral search coils']                               | ['vHIT detects dysfunction of individual vertical semicircular canals in vestibular patients as accurately as scleral search coils. Unlike search coils, vHIT is non-invasive, easy to use and hence practical in clinics.']                                                                  |
+| Paper 4 | ['Eye movements during whole-body rotation']         | ['Whole body rotation on a 6DF motion platform and scleral search coil technique'] | ['Gain and co-linearity of 3D VOR depended on the orientation of the stimulus axis. Systematic deviations were found in particular during horizontal axis stimulation.']                                                                                                                      |
+| Paper 5 | ['Disconjugate vestibulo-ocular responses']          | ['Monaural air conducted tones and averaged EOG']                                  | ['Unilateral activation of the vestibular labyrinth by brief air conducted tones can elicit disconjugate reflex eye movements in healthy subjects.']                                                                                                                                          |
+| Paper 6 | ['Eye movements during vibrational impulse stimuli'] | ['Vibrations of the skull and EOG']                                                | ['Responses to skull vibration in UVD may reflect the otolith mediated sustained skew torsion or a phasic VOR.']                                                                                                                                                                              |
+| Paper 7 | ['Anticipatory eye movements during walking turns']  | ['Walking trials, EOG, and body segment kinematics']                               | ['Visual cues assist in producing cranio-caudal control during walking turns in PD.']                                                                                                                                                                                                         |
+| Paper 8 | ['Eye movements for human-computer interface']       | ['Electrooculography and Elman and distributed time delay neural network']         | ['Eye movement signal classification models can achieve over 90% accuracy for HCI applications using EOG signals.']                                                                                                                                                                           |
+
+MATCHES:
+Type of Eye Movement: 
+Method of Study: 
+Main Findings: 

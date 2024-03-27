@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Depth of the GCN models                                                                                                                                             | Methods to address over-smoothing                                                                                                                              |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                             | ['N/A']                                                                                                                                                        |
+| paper_2 | ['Proposes new ways to train very deep GCNs using residual/dense connections and dilated convolutions. Specifically mentions a 56-layer GCN in their experiments.'] | ['Proposes new ways to train very deep GCNs using residual/dense connections and dilated convolutions as methods to address over-smoothing.']                  |
+| paper_3 | ['Studies designing and analyzing deep GCN models. Proposes GCNII model with techniques to enable deep GCNs.']                                                      | ['Proposes GCNII model with techniques to effectively relieve the problem of over-smoothing.']                                                                 |
+| paper_4 | ['Studies the deeper GCN and proposes a novel convolutional kernel named GCN+ to alleviate over-smoothing.']                                                        | ['Introduces a novel convolutional kernel named GCN+ which has lower parameter amount while relieving the over-smoothing inherently.']                         |
+| paper_5 | ['Provides insights towards deeper graph neural networks and proposes Deep Adaptive Graph Neural Network (DAGNN) for adapting to large receptive fields.']          | ['Proposes Deep Adaptive Graph Neural Network (DAGNN) to adaptively incorporate information from large receptive fields to address the over-smoothing issue.'] |
+| paper_6 | ['Studies performance degradation in deep GCNs and proposes Node Normalization technique to address the issue.']                                                    | ["Proposes Node Normalization technique which scales each node's features using its own standard deviation to address performance degradation of GCNs."]       |
+| paper_7 | ['N/A']                                                                                                                                                             | ['N/A']                                                                                                                                                        |
+| paper_8 | ['N/A']                                                                                                                                                             | ['N/A']                                                                                                                                                        |
+| paper_9 | ['N/A']                                                                                                                                                             | ['N/A']                                                                                                                                                        |
+
+MATCHES:
+Depth of the GCN models: 
+Methods to address over-smoothing: 

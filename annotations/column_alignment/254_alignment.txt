@@ -1,0 +1,31 @@
+ID: 7981ed6f-fb3a-4b4a-a306-b09ae2876d3a
+
+GOLD TABLE:
+|           | Carrier frequency   | Component type   | Monolithic IC integration   | RF bandwidth   | Synchronization                   |
+|----------:|:--------------------|:-----------------|:----------------------------|:---------------|:----------------------------------|
+|  52076321 | ['142 GHz']         | ['COTS']         | ['No']                      | ['4 GHz']      | ['External: Rubidium clock']      |
+|   3349886 | ['28 GHz']          | ['COTS']         | ['No']                      | ['800 MHz']    | ['External: GPS disciplined']     |
+| 221970525 | ['142 GHz']         | ['COTS+EVB']     | ['Yes (65 nm CMOS)']        | ['2 GHz']      | ['On-board support: Sync signal'] |
+
+GOLD SCHEMA:
+0: Carrier frequency
+1: Component type
+2: Monolithic IC integration
+3: RF bandwidth
+4: Synchronization
+
+PREDICTION PATH:../../metric_validation_0/7981ed6f-fb3a-4b4a-a306-b09ae2876d3a/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Frequency Band                                | Propagation Measurement Environment                                                                     | RF Bandwidth                                                             | Application Focus                                                 | Channel Sounder Technology                                                                                                                                           |
+|:--------|:----------------------------------------------|:--------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------|:------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Above 100 GHz']                             | ['140 GHz, indoor wideband propagation measurements and penetration measurements for common materials'] | ['140 GHz wideband']                                                     | ['Wireless communication research and activities above 100 GHz']  | ['Design of a 140 GHz wideband channel sounder system']                                                                                                              |
+| paper_2 | ['28 GHz']                                    | ['28 GHz, typical suburban environment']                                                                | ['400-megachip-per-second broadband sliding correlator channel sounder'] | ['Suburban millimeter wave propagation measurements']             | ['Custom-designed broadband sliding correlator channel sounder']                                                                                                     |
+| paper_3 | ['Millimeter-wave and Terahertz frequencies'] | ['Millimeter-wave and Terahertz frequencies, wireless communications and channel sounding system']      | ['2 GHz null-to-null RF bandwidth']                                      | ['Wireless sensing, imaging, position location, cloud computing'] | ['Sliding correlator based channel sounder with 2 GHz null-to-null RF bandwidth in a single monolithic integrated circuit (IC) fabricated in 65 nm CMOS technology'] |
+
+MATCHES:
+Frequency Band: 
+Propagation Measurement Environment: 
+RF Bandwidth: 
+Application Focus: 
+Channel Sounder Technology: 

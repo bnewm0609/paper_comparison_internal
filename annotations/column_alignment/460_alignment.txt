@@ -1,0 +1,27 @@
+ID: 8492db98-0c47-4a9c-87c7-ef0a45ef6628
+
+GOLD TABLE:
+|           | Task             | Target    | Sensor   | Best Method     |
+|----------:|:-----------------|:----------|:---------|:----------------|
+| 201099006 | ['Detection']    | ['Trees'] | ['RGB']  | ['RetinaNet']   |
+| 210846858 | ['Segmentation'] | ['Trees'] | ['RGB']  | ['FC-DenseNet'] |
+
+GOLD SCHEMA:
+0: Task
+1: Target
+2: Sensor
+3: Best Method
+
+PREDICTION PATH:../../metric_validation_0/8492db98-0c47-4a9c-87c7-ef0a45ef6628/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of deep learning architecture used (CNN-based vs. Fully Convolutional Networks)   | Evaluation criteria (precision, accuracy, computational load)   | Species targeted for detection      | Performance metrics (average precision, F1-score, IoU)   |
+|:--------|:---------------------------------------------------------------------------------------|:----------------------------------------------------------------|:------------------------------------|:---------------------------------------------------------|
+| paper_1 | ['CNN-based']                                                                          | ['Precision, computational load']                               | ['Dipteryx alata Vogel (Fabaceae)'] | ['Average precision: 92%, N/A, N/A']                     |
+| paper_2 | ['Fully Convolutional Networks']                                                       | ['Precision, accuracy, computational load']                     | ['Dipteryx alata Vogel (cumbaru)']  | ['N/A, F1-score: 87.0% - 96.1%, IoU: 77.1% - 92.5%']     |
+
+MATCHES:
+Type of deep learning architecture used (CNN-based vs. Fully Convolutional Networks): 
+Evaluation criteria (precision, accuracy, computational load): 
+Species targeted for detection: 
+Performance metrics (average precision, F1-score, IoU): 

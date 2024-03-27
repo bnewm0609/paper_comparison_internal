@@ -1,0 +1,37 @@
+ID: 336815ab-ef12-4edc-b44f-f137ba4184f7
+
+GOLD TABLE:
+|           | Interpetability Categories        | Methods      | Coverage         | Explanation Type   |
+|----------:|:----------------------------------|:-------------|:-----------------|:-------------------|
+| 231623890 | ['Backpropagation-based Methods'] | ['LRP']      | ['Local/Global'] | ['Attribution']    |
+|   3849381 | ['Backpropagation-based Methods'] | ['DeepLIFT'] | ['Local/Global'] | ['Attribution']    |
+| 243833165 | ['Backpropagation-based Methods'] | ['CAM']      | ['Local']        | ['Attribution']    |
+| 252625385 | ['Perturbation-based Methods']    | ['LIME']     | ['Local']        | ['Attribution']    |
+| 230997466 | ['Perturbation-based Methods']    | ['SHAP']     | ['Local']        | ['Attribution']    |
+|  38456023 | ['Rule-based Methods']            | ['FIS']      | ['Global']       | ['Fuzzy Rules']    |
+|  24244444 | ['Rule-based Methods']            | ['BS']       | ['Global']       | ['Bayesian Rules'] |
+
+GOLD SCHEMA:
+0: Interpetability Categories
+1: Methods
+2: Coverage
+3: Explanation Type
+
+PREDICTION PATH:../../metric_validation_0/336815ab-ef12-4edc-b44f-f137ba4184f7/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | model type                                      | dataset used                                                                                                                                              | evaluation metric                         | application area                        |
+|:--------|:------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------|:----------------------------------------|
+| paper_1 | ['Convolutional Neural Network']                | ['BCI competition data sets IV_2a, IV_2b, OpenBMI']                                                                                                       | ['accuracy']                              | ['Brain-computer interface']            |
+| paper_2 | ['Convolutional Neural Network']                | ['P300 visual-evoked potentials, error-related negativity responses (ERN), movement-related cortical potentials (MRCP), and sensory motor rhythms (SMR)'] | ['accuracy']                              | ['Brain-computer interface']            |
+| paper_3 | ['Convolutional Neural Network']                | ['EEG data from 11 subjects in a driving scenario']                                                                                                       | ['accuracy']                              | ['Driver drowsiness recognition']       |
+| paper_4 | ['Convolutional Neural Network']                | ['EEG data with blink events']                                                                                                                            | ['classification performance (accuracy)'] | ['Eye blink analysis']                  |
+| paper_5 | ['Deep Neural Network']                         | ['EEG data for eye state detection']                                                                                                                      | ['accuracy']                              | ['Health monitoring']                   |
+| paper_6 | ['Takagi-Sugeno-Kang (TSK) Fuzzy Logic System'] | ['EEG data from epileptic patients']                                                                                                                      | ['accuracy, F1 score']                    | ['Epileptic EEG signal identification'] |
+| paper_7 | ['Bayesian-copula Discriminant Classifier']     | ['EEG data during daytime short nap']                                                                                                                     | ['evaluation criteria']                   | ['Drowsiness detection']                |
+
+MATCHES:
+model type: 
+dataset used: 
+evaluation metric: 
+application area: 

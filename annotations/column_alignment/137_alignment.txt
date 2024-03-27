@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Exact solutions provided                                                                            | Historical context                                                   | Methods used to solve                                        | Interest in soluble problems                                  |
+|:--------|:----------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|:-------------------------------------------------------------|:--------------------------------------------------------------|
+| Paper 1 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 2 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 3 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 4 | ['Exact solution for the two-dimensional Ising model in the absence of an external magnetic field'] | ['First given almost twenty years ago in a famous paper by Onsager'] | ['Theory of Lie algebras, theory of spinor representations'] | ['Testing approximate methods on an exactly soluble problem'] |
+| Paper 5 | ['Exact solution for the two-dimensional Ising model in the absence of an external magnetic field'] | ['First given almost twenty years ago in a famous paper by Onsager'] | ['Theory of Lie algebras, theory of spinor representations'] | ['Testing approximate methods on an exactly soluble problem'] |
+| Paper 6 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 7 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 8 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+| Paper 9 | ['N/A']                                                                                             | ['N/A']                                                              | ['N/A']                                                      | ['N/A']                                                       |
+
+MATCHES:
+Exact solutions provided: 
+Historical context: 
+Methods used to solve: 
+Interest in soluble problems: 

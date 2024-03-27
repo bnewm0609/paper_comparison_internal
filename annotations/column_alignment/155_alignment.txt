@@ -1,0 +1,29 @@
+ID: c5f434c2-7bac-47ed-8dcb-be78c4f7ac67
+
+GOLD TABLE:
+|           | Personality assessment questionnaire              | Item count   |
+|----------:|:--------------------------------------------------|:-------------|
+|  59804394 | ['IPIP 50-version']                               | ['50']       |
+|  39888164 | ['Big-five marker scale (BFMS) {{cite:4351c2f}}'] | ['100']      |
+|  12589916 | ['BFI-10']                                        | ['10']       |
+| 132309131 | ['IPIP-NEO-60']                                   | ['60']       |
+|  46855347 | ['IPIP 100-version']                              | ['100']      |
+
+GOLD SCHEMA:
+0: Personality assessment questionnaire
+1: Item count
+
+PREDICTION PATH:../../metric_validation_0/c5f434c2-7bac-47ed-8dcb-be78c4f7ac67/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Measurement of personality: self-report vs. behavior-based   | Impact of personality on decision making: consumer buying tendency and friend recommendation   |
+|:--------|:-------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| paper_1 | ['behavior-based']                                           | ['N/A']                                                                                        |
+| paper_2 | ['behavior-based']                                           | ['N/A']                                                                                        |
+| paper_3 | ['N/A']                                                      | ['consumer buying tendency']                                                                   |
+| paper_4 | ['N/A']                                                      | ['friend recommendation']                                                                      |
+| paper_5 | ['behavior-based']                                           | ['N/A']                                                                                        |
+
+MATCHES:
+Measurement of personality: self-report vs. behavior-based: 
+Impact of personality on decision making: consumer buying tendency and friend recommendation: 

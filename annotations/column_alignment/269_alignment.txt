@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Optimization Technique                                                                            | System Considered                                                   | Key Environmental/Economic Objective                                                                                           |
+|:---------|:--------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Particle Swarm Optimization (PSO)']                                                             | ['Power Systems']                                                   | ['Economic Load Dispatch (ELD)']                                                                                               |
+| Paper 2  | ['Fuzzy Self Adaptive Particle Swarm Optimization (FSAPSO)']                                      | ['Micro Grid']                                                      | ['Optimal Operational Planning, Energy Costs Minimization, Pollutant Emissions Reduction, Utilization of Renewable Resources'] |
+| Paper 3  | ['Particle Swarm Optimization (PSO)']                                                             | ['CHP-Based Micro-Grid']                                            | ['Economic Power Sharing in CHP-Based Micro-Grid, Optimal Deployment of Distributed Energy Resources (DERs)']                  |
+| Paper 4  | ['Particle Swarm Optimization (PSO), Imperialist Competitive Algorithm (ICA)']                    | ['Multi-microgrids']                                                | ['Probabilistic optimal power dispatch in multi-microgrids using heuristic algorithms']                                        |
+| Paper 5  | ['Particle Swarm Optimization (PSO)']                                                             | ['Multi-microgrids']                                                | ['Optimal Power Dispatch of Multi-Microgrids']                                                                                 |
+| Paper 6  | ['Quantum-Inspired Particle Swarm Optimization (QPSO)']                                           | ['Power System, Wind Power']                                        | ['Power System Operations Considering Wind Power Uncertainty and Carbon Tax']                                                  |
+| Paper 7  | ['Particle Swarm Optimization (PSO)']                                                             | ['Demand Response and Distributed Generation Resources Scheduling'] | ['Integrated Demand Response and DG Resources Scheduling']                                                                     |
+| Paper 8  | ['Fuzzy Adaptive Particle Swarm Optimization']                                                    | ['Distribution Systems']                                            | ['Power Loss Minimization in Distribution Systems']                                                                            |
+| Paper 9  | ['Multiple Objective Particle Swarm Optimization']                                                | ['Wind-Integrated Power System']                                    | ['Risk Management for Wind-Integrated Power System']                                                                           |
+| Paper 10 | ['Binary Particle Swarm Optimization (BPSO), Chaotic Binary Particle Swarm Optimization (CBPSO)'] | ['Microgrid']                                                       | ['Stochastic Optimal Operation of Microgrid']                                                                                  |
+
+MATCHES:
+Optimization Technique: 
+System Considered: 
+Key Environmental/Economic Objective: 

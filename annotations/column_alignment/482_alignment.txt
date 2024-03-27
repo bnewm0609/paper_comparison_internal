@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Optimization for GPU architecture                                                                                                                                                                                                                          | Comparison with existing GPU-based techniques                                                                                                                                                                                                                                                               |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['We propose an optimized version of CCL for GPUs using GPGPU techniques and the UnionFind algorithm to solve the CCL problem. Our algorithm presented a 5-10x speedup in relation to the serial algorithm and performed similarly to Label Equivalence.'] | ['We compare the performance of our optimized CCL algorithm with an efficient serial algorithm and with Label Equivalence, another method proposed in the literature which uses GPUs as well. Our algorithm proved to be more predictable in the sense that its execution time is more image-independent.'] |
+| paper_2 | ['We improved the Union-Find technique of CCL using GPGPU and developed the parallel algorithm to run fast in divided areas of each one line. Our approach was a 1.61x speedup compared with Union-find when runs on the large image.']                    | ['We compared our proposed algorithm with Union-Find technique and the Label Equivalence technique by an experiment using the CUDA. Our approach showed a 1.61x speedup compared with Union-find when running on the large image.']                                                                         |
+
+MATCHES:
+Optimization for GPU architecture: 
+Comparison with existing GPU-based techniques: 

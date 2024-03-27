@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of data augmentation used                                                           | Training datasets used for evaluation                                                                   | Improvement in recognition performance                                    | Limitations and disadvantages of augmentation method                                          |
+|:--------|:-----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
+| paper_1 | ['iris image augmentation based on a conditional generative adversarial network (cGAN)'] | ['NICE.II training dataset (selected from UBIRS.v2), MICHE database, and CASIA-Iris-Distance database'] | ['The recognition performance was improved compared to existing studies'] | ['Conditioning of the generative adversarial network model when using the periocular region'] |
+| paper_2 | ['N/A']                                                                                  | ['National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset']                      | ['Superior accuracy over the state-of-the-art techniques']                | ['N/A']                                                                                       |
+
+MATCHES:
+Type of data augmentation used: 
+Training datasets used for evaluation: 
+Improvement in recognition performance: 
+Limitations and disadvantages of augmentation method: 

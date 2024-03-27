@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Application Domains                                                                                                 | Challenges and Limitations                                                                                                                                                               |
+|:---------|:--------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Unmanned Aerial Vehicles (UAVs), deep learning applications for perception, planning, localization, and control'] | ['Application of deep learning for UAV-based solutions, challenges faced in deep learning applications for UAVs']                                                                        |
+| paper_2  | ['Autonomous planetary rover navigation']                                                                           | ['Reducing reliance on human experts for navigational tasks, challenges in effective navigation in harsh and complex Martian terrains']                                                  |
+| paper_3  | ['Image processing, computer vision, speech recognition, machine translation, robotics and control']                | ['Performance comparisons between deep learning and traditional machine learning approaches']                                                                                            |
+| paper_4  | ['Autonomous visual navigation using deep reinforcement learning']                                                  | ['Challenges which reinforcement learning is facing, limitations of reinforcement learning']                                                                                             |
+| paper_5  | ['Prediction models with big data']                                                                                 | ['Challenges in the mathematical and computational methodology underlying deep learning models']                                                                                         |
+| paper_6  | ['Deep learning technologies used in autonomous driving']                                                           | ['Design challenges for AI architectures in autonomous driving, safety, training data sources, and computational hardware challenges']                                                   |
+| paper_7  | ['Inertial navigation system enhancement using AI technology']                                                      | ['Challenges in sensor design and selection, calibration and error modeling, navigation and motion-sensing algorithms, multi-sensor information fusion']                                 |
+| paper_8  | ['Applications of deep learning for self-driving cars']                                                             | ['Problems in self-driving cars and their solutions based on deep learning methods, challenges in obstacle detection, scene recognition, lane detection, navigation, and path planning'] |
+| paper_9  | ['Localization and mapping using deep learning']                                                                    | ['Limitations of current models']                                                                                                                                                        |
+| paper_10 | ['Convolutional Neural Networks (CNN) analysis and applications']                                                   | ['Rules of thumb for function selection for Convolutional Neural Networks (CNN), open issues and promising directions for CNN']                                                          |
+| paper_11 | ['Urban navigation systems for visually impaired people']                                                           | ['Challenges faced in assistive outdoor navigation for visually impaired people']                                                                                                        |
+| paper_12 | ['Spacecraft dynamics, navigation, and control using deep learning and artificial neural networks']                 | ['Advantages and disadvantages of using artificial neural networks for spacecraft dynamics control, guidance, and navigation, limitations of artificial neural networks']                |
+| paper_13 | ['Visual navigation and positioning for autonomous unmanned underwater vehicles (UUVs)']                            | ['Comparison of geometry-based methods and deep learning-based methods for UUV visual navigation and positioning, limitations of visual navigation and positioning methods']             |
+| paper_14 | ['Autonomous UAV navigation using Reinforcement Learning (RL)']                                                     | ['Characteristics of RL algorithms for UAV navigation, potential gaps and opportunities']                                                                                                |
+| paper_15 | ['Obstacle detection methods for the safe navigation of unmanned vehicles']                                         | ['Challenges in image-based obstacle detection using unmanned vehicles, limitations of current obstacle detection techniques']                                                           |
+
+MATCHES:
+Application Domains: 
+Challenges and Limitations: 

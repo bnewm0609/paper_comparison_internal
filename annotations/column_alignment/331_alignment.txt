@@ -1,0 +1,36 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of approach                                                                             | Novelty of the approach                                                                                                                                     | Datasets used                                                  | Evaluation metrics used                         |
+|:--------|:---------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------|:------------------------------------------------|
+| paper_1 | ['KL divergence and probabilistic language modeling']                                        | ['Proposing a computational methodology for combating online review spam']                                                                                  | ['Large e-Commerce site']                                      | ['Accuracy']                                    |
+| paper_2 | ['n-gram features']                                                                          | ['Performing comprehensive classification experiments on real-life data', 'Discovering psycholinguistic phenomena about forced and natural fake reviewers'] | ['Yelp.com filtered (fake) and unfiltered (non-fake) reviews'] | ['Accuracy']                                    |
+| paper_3 | ['Rating behaviors and linguistic patterns']                                                 | ['Exploring multiple heterogeneous pairwise features to model relationships among colluders', 'Proposing an unsupervised colluder detecting framework']     | ['Real dataset from popular product review websites']          | ['F1 score', 'Precision', 'Recall']             |
+| paper_4 | ['Linguistic features']                                                                      | ['Detailed analysis of linguistic features for distinguishing fake and trustworthy online reviews']                                                         | ['Not mentioned']                                              | ['Accuracy', 'F1-score', 'Precision', 'Recall'] |
+| paper_5 | ['Review density, semantic, small world model, emotion']                                     | ['Proposing new features for fake review detection', 'Efficiency compared to traditional methods']                                                          | ['Not mentioned']                                              | ['Accuracy']                                    |
+| paper_6 | ['Convolutional neural network and gated recurrent neural network with attention mechanism'] | ['Learning document-level representation for detecting deceptive opinion spam with neural network']                                                         | ['Hotel, Restaurant, and Doctor reviews']                      | ['Accuracy', 'F1-score']                        |
+| paper_7 | ['Latent Dirichlet Allocation']                                                              | ['Detecting fake reviews based on linguistic features and Latent Dirichlet Allocation']                                                                     | ['Yelp Filter Dataset']                                        | ['Precision', 'Recall']                         |
+
+MATCHES:
+Type of approach: 
+Novelty of the approach: 
+Datasets used: 
+Evaluation metrics used: 

@@ -1,0 +1,37 @@
+ID: 3560e8ad-2a9d-4160-bdf8-007ab0e734e3
+
+GOLD TABLE:
+|          | Domain                   | Proposed Method                      | Transferable   | Generalizable   | Matching Performance   |
+|---------:|:-------------------------|:-------------------------------------|:---------------|:----------------|:-----------------------|
+| 19953360 | ['Face images']          | ['Multimodal Discriminant Analysis'] | ['Yes']        | ['Yes']         | ['Severely degraded']  |
+|  3333907 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 13818729 | ['Face images']          | ['Semi-Adversarial Networks']        | ['Yes']        | ['No']          | ['Mostly retained']    |
+| 43975656 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 51890585 | ['Face images']          | ['Ensemble of SAN models']           | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+| 59553616 | ['Face representations'] | ['SensitiveNet']                     | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+
+GOLD SCHEMA:
+0: Domain
+1: Proposed Method
+2: Transferable
+3: Generalizable
+4: Matching Performance
+
+PREDICTION PATH:../../metric_validation_0/3560e8ad-2a9d-4160-bdf8-007ab0e734e3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method used for perturbing face images                                                                | Attributes that are preserved during perturbation (e.g., gender, race, age, etc.)   | Privacy measures (e.g., k-anonymity, L-diversity, t-closeness) incorporated in the method   | Evaluation methods used to measure the effectiveness of perturbation                  | Applicability of the method to various biometric matchers and gender classifiers         |
+|:--------|:------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
+| paper_1 | ['Subspace decomposition onto the face encoding scheme']                                              | ['Gender, race, age']                                                               | ['k-anonymity, L-diversity, t-closeness']                                                   | ['Experiments with a commercial facial analysis software']                            | ['Allow other computer vision analyses, such as gender detection, to proceed unimpeded'] |
+| paper_2 | ['Systematically perturbs input image based on arbitrary biometric matcher and attribute classifier'] | ['Biometric utility, perturbed gender']                                             | ['No specific privacy measures mentioned']                                                  | ['Experimental analysis']                                                             | ['Given an arbitrary biometric matcher and an attribute classifier']                     |
+| paper_3 | ['Design and evaluate a convolutional autoencoder']                                                   | ['Face recognition, no gender classification']                                      | ['No specific privacy measures mentioned']                                                  | ['Extensive experiments']                                                             | ['Successfully used for face recognition but not for gender classification']             |
+| paper_4 | ['Adversarial perturbation based algorithm']                                                          | ['Preserves identity information and visual content']                               | ['Adversarial perturbation based algorithm']                                                | ['Experiments on MUCT, LFWcrop, and CelebA databases']                                | ['Preserves image quality and identity information']                                     |
+| paper_5 | ['Semi Adversarial Networks (SAN)']                                                                   | ['Confounding arbitrary gender classifiers']                                        | ['No specific privacy measures mentioned']                                                  | ['Extensive experiments using different unseen gender classifiers and face matchers'] | ['Designing an ensemble SAN model that generates a diverse set of perturbed outputs']    |
+| paper_6 | ['Triplet loss learning generalization']                                                              | ['Sensitive information removal process']                                           | ['No specific privacy measures mentioned']                                                  | ['Evaluated on face recognition technologies using state-of-the-art algorithms']      | ['Retains competitive performance in a face recognition task']                           |
+
+MATCHES:
+Method used for perturbing face images: 
+Attributes that are preserved during perturbation (e.g., gender, race, age, etc.): 
+Privacy measures (e.g., k-anonymity, L-diversity, t-closeness) incorporated in the method: 
+Evaluation methods used to measure the effectiveness of perturbation: 
+Applicability of the method to various biometric matchers and gender classifiers: 

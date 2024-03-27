@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Data creation techniques used                                       | Data representation methods                                                                               | Dataset comparisons                                                         |
+|:--------|:--------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------|
+| Paper 1 | ['Using data from CMU-MOSEI']                                       | ['Using data from CMU-MOSEI, Dynamic Fusion Graph']                                                       | ['Comparing to previously proposed fusion techniques, DFG']                 |
+| Paper 2 | ['Using conservation of energy, GDML implementation']               | ['Using a restricted number of samples from AIMD trajectories, Hilbert space of vector-valued functions'] | ['Comparing to explicit AIMD calculations']                                 |
+| Paper 3 | ['Using continuous-filter convolutional layers']                    | ['Using atomistic systems, continuous-filter convolutional layers']                                       | ['Comparing to regular ab initio molecular dynamics']                       |
+| Paper 4 | ['Using quantum mechanical simulations, density functional theory'] | ['Using quantum mechanical simulations, density functional theory']                                       | ['Comparing to other electrocatalysts, Open Catalyst Project OC20 dataset'] |
+| Paper 5 | ['Using 3D molecular learning methods']                             | ['Using 3D molecular learning methods']                                                                   | ['Comparing to one- and two-dimensional representations']                   |
+| Paper 6 | ['Using MDAnalysis']                                                | ['Using MDAnalysis']                                                                                      | ['Comparing to other molecular dynamics simulation software']               |
+| Paper 7 | ['Using a Convolutional Deep Belief Network, ModelNet']             | ['Using a Convolutional Deep Belief Network']                                                             | ['Comparing to the-state-of-the-arts in a variety of tasks']                |
+| Paper 8 | ['Using scanned indoor scene data, ScanObjectNN']                   | ['Using point cloud data']                                                                                | ['Comparing to CAD model datasets such as ModelNet40']                      |
+
+MATCHES:
+Data creation techniques used: 
+Data representation methods: 
+Dataset comparisons: 

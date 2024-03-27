@@ -1,0 +1,30 @@
+ID: 900fc22d-501e-4fd8-8a12-4fd2c96483ea
+
+GOLD TABLE:
+|           | Domain           | Key characteristics                                            |
+|----------:|:-----------------|:---------------------------------------------------------------|
+| 216404355 | ['Smart City']   | ['Complexity capture']                                         |
+| 233674190 | ['Smart City']   | ['Situational awareness, Monitoring, Analysis, Understanding'] |
+| 219507572 | ['Supply Chain'] | ['Resilience, Replication, Simulation']                        |
+| 235543230 | ['Supply Chain'] | ['Decision making, Holistic improvements']                     |
+| 256194278 | ['Ports']        | ['Simulation, Modelling, Fault detection, Monitoring']         |
+
+GOLD SCHEMA:
+0: Domain
+1: Key characteristics
+
+PREDICTION PATH:../../metric_validation_0/900fc22d-501e-4fd8-8a12-4fd2c96483ea/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Application Domain   | Research Approach                                                                                    |
+|:--------|:---------------------|:-----------------------------------------------------------------------------------------------------|
+| paper_1 | ['Smart Cities']     | ['Implementation of Urban Digital Twin for Citizen Empowerment']                                     |
+| paper_2 | ['Smart Cities']     | ['Review of City Digital Twin Potentials and Proposed Research Agenda']                              |
+| paper_3 | ['Supply Chains']    | ['Theorizing and Implementing Digital Supply Chain Twin for Disruption Management']                  |
+| paper_4 | ['Supply Chains']    | ['Proposal for Holistic Digital Supply Chain Twin for Multimodal Supply Chains']                     |
+| paper_5 | ['Ports']            | ['Analysis of Digital Twins for Ports Derived from Smart City and Supply Chain Twinning Experience'] |
+| paper_6 | ['Ports']            | ['Analysis of Digital Twins for Ports Derived from Smart City and Supply Chain Twinning Experience'] |
+
+MATCHES:
+Application Domain: 
+Research Approach: 

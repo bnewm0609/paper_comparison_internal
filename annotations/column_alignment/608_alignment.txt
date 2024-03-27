@@ -1,0 +1,35 @@
+ID: d9f833ee-070d-4384-868b-dcd94efbcfa6
+
+GOLD TABLE:
+|           | *Quantum learning technique                    | *Application                                                 |
+|----------:|:-----------------------------------------------|:-------------------------------------------------------------|
+| 227219578 | ['Variational quantum unsampling']             | ['Deep learning']                                            |
+| 195767325 | ['Variational quantum circuit']                | ['Deep reinforcement learning, supervised learning']         |
+|  49317921 | ['Continuous-variable quantum neural network'] | ['Convolutional, recurrent, and residual networks']          |
+| 209404942 | ['Quantum transfer learning']                  | ['Image recognition']                                        |
+| 128140142 | ['Density-based spatial clustering']           | ['Continuous-variable quantum key distribution']             |
+| 117542570 | ['Quantum circuit learning']                   | ['Neural networks in near-term, low-depth quantum circuits'] |
+|   4531946 | ['Quantum tensor network circuit']             | ['Discriminative and generative learning']                   |
+|  54475947 | ['Quantum generative model']                   | ['Data correlation characterization']                        |
+
+GOLD SCHEMA:
+0: *Quantum learning technique
+1: *Application
+
+PREDICTION PATH:../../metric_validation_0/d9f833ee-070d-4384-868b-dcd94efbcfa6/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Training classical and quantum models with the same framework   | Qubit-efficient schemes based on tensor networks   |
+|:--------|:----------------------------------------------------------------|:---------------------------------------------------|
+| paper_1 | ['N/A']                                                         | ['N/A']                                            |
+| paper_2 | ['N/A']                                                         | ['N/A']                                            |
+| paper_3 | ['N/A']                                                         | ['N/A']                                            |
+| paper_4 | ['Yes', 'Yes']                                                  | ['N/A']                                            |
+| paper_5 | ['N/A']                                                         | ['N/A']                                            |
+| paper_6 | ['N/A']                                                         | ['N/A']                                            |
+| paper_7 | ['Yes', 'Yes']                                                  | ['Yes', 'Yes']                                     |
+| paper_8 | ['N/A']                                                         | ['N/A']                                            |
+
+MATCHES:
+Training classical and quantum models with the same framework: 
+Qubit-efficient schemes based on tensor networks: 

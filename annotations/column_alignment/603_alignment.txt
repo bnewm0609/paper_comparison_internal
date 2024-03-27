@@ -1,0 +1,35 @@
+ID: d9f833ee-070d-4384-868b-dcd94efbcfa6
+
+GOLD TABLE:
+|           | *Quantum learning technique                    | *Application                                                 |
+|----------:|:-----------------------------------------------|:-------------------------------------------------------------|
+| 227219578 | ['Variational quantum unsampling']             | ['Deep learning']                                            |
+| 195767325 | ['Variational quantum circuit']                | ['Deep reinforcement learning, supervised learning']         |
+|  49317921 | ['Continuous-variable quantum neural network'] | ['Convolutional, recurrent, and residual networks']          |
+| 209404942 | ['Quantum transfer learning']                  | ['Image recognition']                                        |
+| 128140142 | ['Density-based spatial clustering']           | ['Continuous-variable quantum key distribution']             |
+| 117542570 | ['Quantum circuit learning']                   | ['Neural networks in near-term, low-depth quantum circuits'] |
+|   4531946 | ['Quantum tensor network circuit']             | ['Discriminative and generative learning']                   |
+|  54475947 | ['Quantum generative model']                   | ['Data correlation characterization']                        |
+
+GOLD SCHEMA:
+0: *Quantum learning technique
+1: *Application
+
+PREDICTION PATH:../../metric_validation_0/d9f833ee-070d-4384-868b-dcd94efbcfa6/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Quantum Application                                                                   | Modeling Techniques                                                               |
+|:--------|:--------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| paper_1 | ['Pattern classification on near-term quantum hardware']                              | ['Artificial neurons and feed-forward neural networks']                           |
+| paper_2 | ['Deep reinforcement learning for noisy intermediate scale quantum (NISQ) devices']   | ['Variational quantum circuits for deep reinforcement learning']                  |
+| paper_3 | ['Quantum neural networks for highly nonlinear transformations']                      | ['Continuous-variable (CV) quantum neural networks']                              |
+| paper_4 | ['Transfer learning for image recognition and quantum state classification']          | ['Hybrid classical-quantum neural networks with transfer learning']               |
+| paper_5 | ['Modulation format identification for continuous-variable quantum key distribution'] | ['DBSCAN machine learning algorithm for modulation format identification']        |
+| paper_6 | ['Machine learning on near-term quantum processors']                                  | ['Quantum circuit learning for machine learning on near-term quantum processors'] |
+| paper_7 | ['Tensor network approaches for both discriminative and generative learning']         | ['Tensor networks for discriminative and generative learning']                    |
+| paper_8 | ['Quantum generative model for probability distribution representation']              | ['Quantum machine learning algorithm based on generative models']                 |
+
+MATCHES:
+Quantum Application: 
+Modeling Techniques: 

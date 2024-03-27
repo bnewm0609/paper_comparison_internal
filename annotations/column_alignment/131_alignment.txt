@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dimension 1: Quantum Computation                          | Dimension 2: Computational Complexity                | Dimension 3: Quantum Mechanics                         | Dimension 4: Application Domains                 |
+|:--------|:----------------------------------------------------------|:-----------------------------------------------------|:-------------------------------------------------------|:-------------------------------------------------|
+| Paper 1 | ['Quantum Turing machine model']                          | ['Complexity theoretic viewpoint']                   | ['Quantum mechanical primitives']                      | ['Quantum algorithm and computation']            |
+| Paper 2 | ['Quantum computing complexity theory']                   | ['Complexity theoretic model comparison']            | ['Purely quantum mechanical primitives']               | ['Quantum computation and complexity theory']    |
+| Paper 3 | ['Quantum approximate optimization algorithm']            | ['Algorithm complexity and optimization problems']   | ['Quantum circuit for optimization problems']          | ['Quantum optimization algorithms']              |
+| Paper 4 | ['Quantum computation and phase transition']              | ['Solution complexity and many-body problems']       | ['Quantum mechanics and Ising model']                  | ['Ising model and many-body problems']           |
+| Paper 5 | ['Quantum dynamics in Ising model']                       | ['Exact solution and phase transition complexity']   | ['Quantum dynamics and nontrivial many-body problems'] | ['Exact solution methods and phase transitions'] |
+| Paper 6 | ['Quantum benchmark suite for NISQ evaluation']           | ['Benchmark complexity for quantum hardware']        | ['Quantum algorithms and routines']                    | ['Benchmark suite for NISQ evaluation']          |
+| Paper 7 | ['Quantum benchmark suite for NISQ evaluation']           | ['Benchmark complexity for NISQ evaluation']         | ['Quantum simulators and benchmark suite']             | ['Quantum simulators and algorithm benchmark']   |
+| Paper 8 | ['Fast quantum mechanical algorithm for database search'] | ['Quantum algorithm complexity for database search'] | ['Quantum mechanical algorithm for database search']   | ['Quantum database search algorithm']            |
+| Paper 9 | ['New quantum ripple-carry addition circuit']             | ['Quantum addition circuit complexity']              | ['Linear-depth ripple-carry quantum addition circuit'] | ['Quantum addition circuit for computing']       |
+
+MATCHES:
+Dimension 1: Quantum Computation: 
+Dimension 2: Computational Complexity: 
+Dimension 3: Quantum Mechanics: 
+Dimension 4: Application Domains: 

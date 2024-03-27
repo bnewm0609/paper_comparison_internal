@@ -1,0 +1,27 @@
+ID: 367543a0-5c99-4f23-8c8e-cced4c330670
+
+GOLD TABLE:
+|           | Swarm Algorithms                      | Acronym   |
+|----------:|:--------------------------------------|:----------|
+|  13719410 | ['Circular Structure of Puffer Fish'] | ['CSPF']  |
+|  14083654 | ['Fish School Search']                | ['FSS']   |
+|  11251844 | ['Great Salmon Run']                  | ['GSR']   |
+| 205711669 | ['Shark Smell Optimization']          | ['ShSO']  |
+
+GOLD SCHEMA:
+0: Swarm Algorithms
+1: Acronym
+
+PREDICTION PATH:../../metric_validation_0/367543a0-5c99-4f23-8c8e-cced4c330670/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Inspiration source                     | Comparison with other optimization techniques                                                                                                                                                                                                           |
+|:--------|:---------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Circular structures of puffer fish'] | ['The results of the proposed algorithm are compared with genetic algorithm through various performance criteria']                                                                                                                                      |
+| Paper 2 | ['Fish school behavior']               | ['The FSS algorithm is compared with, and in some cases outperforms, well-known intelligent algorithms such as particle swarm optimization in high-dimensional searches']                                                                               |
+| Paper 3 | ['The great salmon run']               | ['TGSR is compared with most of the well-known proposed optimisation techniques such as PMGA, SA, DEA, PSO, BA, ABC, FA and CS']                                                                                                                        |
+| Paper 4 | ['Shark smell optimization']           | ['The effectiveness of the suggested approach is compared with many other heuristic optimization methods based on standard benchmark functions, and it is also applied for the solution of load frequency control problem in electrical power systems'] |
+
+MATCHES:
+Inspiration source: 
+Comparison with other optimization techniques: 

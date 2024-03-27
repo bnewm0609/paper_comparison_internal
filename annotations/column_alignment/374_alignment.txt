@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Attack types and targets                                                            | Implementation and feasibility demonstration provided   |
+|:---------|:------------------------------------------------------------------------------------|:--------------------------------------------------------|
+| paper_1  | ['Spoofing', 'Drones']                                                              | ['Yes']                                                 |
+| paper_2  | ['Impersonation', 'Message spoofing', 'ACARS', 'FANS-1/A']                          | ['Yes']                                                 |
+| paper_3  | ['Eavesdropping', 'Tire Pressure Monitoring System (TPMS)']                         | ['Yes']                                                 |
+| paper_4  | ['Spoofing', 'FM indoor localization']                                              | ['Yes']                                                 |
+| paper_5  | ['Spoofing', 'GNSS']                                                                | ['Yes']                                                 |
+| paper_6  | ['Man-in-the-middle', 'Bluetooth 2.1+ Secure Simple Pairing in Passkey Entry Mode'] | ['Yes']                                                 |
+| paper_7  | ['Spoofing', 'GSM']                                                                 | ['Yes']                                                 |
+| paper_8  | ['Semi-passive / Active location leakage', 'LTE']                                   | ['Yes']                                                 |
+| paper_9  | ['N/A']                                                                             | ['No']                                                  |
+| paper_10 | ['Passive eavesdropping', 'DECT']                                                   | ['Yes']                                                 |
+| paper_11 | ['Passive eavesdropping', 'NFC']                                                    | ['Yes']                                                 |
+| paper_12 | ['Spoofing', 'IoT Gateway']                                                         | ['Yes']                                                 |
+| paper_13 | ['Eavesdropping', 'Computer display']                                               | ['Yes']                                                 |
+| paper_14 | ['PHY based Jamming', 'OFDM systems']                                               | ['Yes']                                                 |
+| paper_15 | ['PHY based Jamming', 'OFDM systems']                                               | ['Yes']                                                 |
+| paper_16 | ['Cyber attacks', 'Tactical radio networks']                                        | ['Yes']                                                 |
+| paper_17 | ['Physical-layer identification', 'UHF RFID tags']                                  | ['Yes']                                                 |
+| paper_18 | ['PHY layer vulnerability analysis', 'LTE downlink']                                | ['Yes']                                                 |
+
+MATCHES:
+Attack types and targets: 
+Implementation and feasibility demonstration provided: 

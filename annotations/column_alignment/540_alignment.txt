@@ -1,0 +1,33 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset Size                                | Annotation Quality                       | Application Domain                                    | Dataset Source                                       | Contribution to Research Field                                     |
+|:--------|:--------------------------------------------|:-----------------------------------------|:------------------------------------------------------|:-----------------------------------------------------|:-------------------------------------------------------------------|
+| Paper 1 | ['70,958 image pairs']                      | ['More accurate and richer annotations'] | ['Semantic correspondence in computer vision']        | ['New large-scale benchmark dataset SPair-71k']      | ['Reliable testbed for studying semantic correspondence']          |
+| Paper 2 | ['20,580 dog images']                       | ['2D joint and silhouette annotations']  | ['3D pose and shape recovery of dogs']                | ['Stanford Dog dataset and StanfordExtra']           | ['Parameterized model (SMBLD) and novel annotation dataset']       |
+| Paper 3 | ['21,997 real-world images']                | ['21 landmarks per image']               | ['Facial landmark localization for face recognition'] | ['Annotated Facial Landmarks in the Wild (AFLW)']    | ['Comprehensive set of annotations for multi-view face detection'] |
+| Paper 4 | ['Significantly more keypoints per animal'] | ['Ground truth annotations']             | ['Keypoint detection of quadruped animals']           | ['AwA Pose, a novel dataset for keypoint detection'] | ['Helps in the design and evaluation of improved models']          |
+
+MATCHES:
+Dataset Size: 
+Annotation Quality: 
+Application Domain: 
+Dataset Source: 
+Contribution to Research Field: 

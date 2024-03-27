@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Field of study                                                        | Uncertainty quantification method                            |
+|:---------|:----------------------------------------------------------------------|:-------------------------------------------------------------|
+| paper_1  | ['Epidemiology']                                                      | nan                                                          |
+| paper_2  | ['Machine learning, chemistry']                                       | ['Bayesian inference']                                       |
+| paper_3  | ['Machine learning, uncertainty quantification, chemistry']           | ['Bayesian semi-supervised learning']                        |
+| paper_4  | ['Machine learning, uncertainty quantification, chemistry']           | ['Scalable uncertainty estimation methods']                  |
+| paper_5  | ['Machine learning, uncertainty quantification, chemistry']           | ['Uncertainty quantification using neural networks']         |
+| paper_6  | ['Machine learning, uncertainty quantification, chemistry']           | ['Uncertainty quantification using neural networks']         |
+| paper_7  | ['Machine learning, uncertainty quantification, materials science']   | ['Convolutional neural network, Gaussian process regressor'] |
+| paper_8  | ['Machine learning, uncertainty quantification, chemistry']           | ['Evidential deep learning']                                 |
+| paper_9  | ['Machine learning, uncertainty quantification, protein engineering'] | ['Deep learning uncertainty quantification methods']         |
+| paper_10 | ['Machine learning, uncertainty quantification, chemistry, physics']  | ['Gaussian processes']                                       |
+| paper_11 | ['Machine learning, uncertainty quantification, chemistry']           | ['Localized Neural Kernel (LNK)']                            |
+| paper_12 | ['Machine learning, uncertainty quantification, chemistry']           | ['Non-Bayesian approach']                                    |
+| paper_13 | ['Machine learning, materials science']                               | ['Machine-learning framework']                               |
+
+MATCHES:
+Field of study: 
+Uncertainty quantification method: 

@@ -1,0 +1,35 @@
+ID: d9f833ee-070d-4384-868b-dcd94efbcfa6
+
+GOLD TABLE:
+|           | *Quantum learning technique                    | *Application                                                 |
+|----------:|:-----------------------------------------------|:-------------------------------------------------------------|
+| 227219578 | ['Variational quantum unsampling']             | ['Deep learning']                                            |
+| 195767325 | ['Variational quantum circuit']                | ['Deep reinforcement learning, supervised learning']         |
+|  49317921 | ['Continuous-variable quantum neural network'] | ['Convolutional, recurrent, and residual networks']          |
+| 209404942 | ['Quantum transfer learning']                  | ['Image recognition']                                        |
+| 128140142 | ['Density-based spatial clustering']           | ['Continuous-variable quantum key distribution']             |
+| 117542570 | ['Quantum circuit learning']                   | ['Neural networks in near-term, low-depth quantum circuits'] |
+|   4531946 | ['Quantum tensor network circuit']             | ['Discriminative and generative learning']                   |
+|  54475947 | ['Quantum generative model']                   | ['Data correlation characterization']                        |
+
+GOLD SCHEMA:
+0: *Quantum learning technique
+1: *Application
+
+PREDICTION PATH:../../metric_validation_0/d9f833ee-070d-4384-868b-dcd94efbcfa6/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Algorithms and techniques                                                                                              | Comparison to classical neural networks                                                                                                                                                                                                                                                        |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Variational learning for quantum artificial neural networks']                                                        | ['The quantum neural network is fully compatible with the overall memory-efficient feed-forward architecture, but it reduces the quantum circuit depth required to determine the activation probability of single neurons upon input of the relevant data-encoding quantum states.']           |
+| paper_2 | ['Variational quantum circuits for deep reinforcement learning']                                                       | ['The variational quantum circuits can be deployed in many near-term NISQ machines and use a quantum information encoding scheme to reduce the number of model parameters compared to classical neural networks.']                                                                             |
+| paper_3 | ['Continuous-variable quantum neural networks']                                                                        | ['The CV quantum neural network can encode highly nonlinear transformations while remaining completely unitary, and a classical network can be embedded into the quantum formalism.']                                                                                                          |
+| paper_4 | ['Transfer learning in hybrid classical-quantum neural networks']                                                      | ['A pre-trained classical network is modified and augmented by a final variational quantum circuit, allowing optimal pre-processing of high dimensional data with any state-of-the-art classical network and embedding a select set of highly informative features into a quantum processor.'] |
+| paper_5 | ['Blind modulation format identification using the DBSCAN algorithm for continuous-variable quantum key distribution'] | ['N/A']                                                                                                                                                                                                                                                                                        |
+| paper_6 | ['Quantum circuit learning']                                                                                           | ['The proposed framework paves the way toward applications of near-term quantum devices for quantum machine learning.']                                                                                                                                                                        |
+| paper_7 | ['Towards quantum machine learning with tensor networks']                                                              | ['Tensor network circuits provide qubit-efficient schemes that can benefit from the same theoretical and algorithmic developments as classical machine learning.']                                                                                                                             |
+| paper_8 | ['A quantum machine learning algorithm based on generative models']                                                    | ['The quantum generative model is more capable of representing probability distributions compared with classical generative models and has exponential speedup in learning and inference at least for some instances if a quantum computer cannot be efficiently simulated classically.']      |
+
+MATCHES:
+Algorithms and techniques: 
+Comparison to classical neural networks: 

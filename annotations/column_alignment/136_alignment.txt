@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Benchmark coverage              | Benchmark scope                                                          | Benchmark variety                                                                                                                       | Tools tested with benchmarks                                                                                               |
+|:--------|:--------------------------------|:-------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                         | ['N/A']                                                                  | ['N/A']                                                                                                                                 | ['N/A']                                                                                                                    |
+| paper_2 | ['N/A']                         | ['N/A']                                                                  | ['N/A']                                                                                                                                 | ['N/A']                                                                                                                    |
+| paper_3 | ['MaxCut on regular graphs']    | ['Approximate solutions for combinatorial optimization problems']        | ['Regular graphs, optimization']                                                                                                        | ['Efficient classical preprocessing']                                                                                      |
+| paper_4 | ['Two-Dimensional Ising Model'] | ['Exact soluble problem of many Fermions']                               | ['Spins or alloy ordering, square lattice, phase transition']                                                                           | ["Onsager's theory of Lie algebras, Kaufman's spinor representations, Yang's calculation of spontaneous magnetization"]    |
+| paper_5 | ['Two-Dimensional Ising Model'] | ['Exact soluble problem of many Fermions']                               | ['Spins or alloy ordering, square lattice, phase transition']                                                                           | ["Onsager's theory of Lie algebras, Kaufman's spinor representations, Yang's calculation of spontaneous magnetization"]    |
+| paper_6 | ['QASMBench']                   | ['Evaluation and verification of NISQ-era quantum computing components'] | ['Chemistry, simulation, linear algebra, searching, optimization, quantum arithmetic, machine learning, fault tolerance, cryptography'] | ['Different assemblers, optimizers, schedulers, error correction technologies, quantum simulators on classical computers'] |
+| paper_7 | ['QASMBench']                   | ['Evaluation and verification of NISQ-era quantum computing components'] | ['Chemistry, simulation, linear algebra, searching, optimization, quantum arithmetic, machine learning, fault tolerance, cryptography'] | ['Different assemblers, optimizers, schedulers, error correction technologies, quantum simulators on classical computers'] |
+| paper_8 | ['N/A']                         | ['Quantum mechanical algorithm for database search']                     | ['Database search']                                                                                                                     | ['N/A']                                                                                                                    |
+| paper_9 | ['N/A']                         | ['Linear-depth ripple-carry quantum addition circuit']                   | ['Quantum addition circuit']                                                                                                            | ['N/A']                                                                                                                    |
+
+MATCHES:
+Benchmark coverage: 
+Benchmark scope: 
+Benchmark variety: 
+Tools tested with benchmarks: 

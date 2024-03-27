@@ -1,0 +1,43 @@
+ID: 0191f26f-b545-43be-aa9f-69adef97e28c
+
+GOLD TABLE:
+|           | Blockchain             | Type                | Consensus              | Technologies                                    |
+|----------:|:-----------------------|:--------------------|:-----------------------|:------------------------------------------------|
+| 216485725 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart contracts, Swarm, DOS, Bloom filter']   |
+|  85502289 | ['Ethereum']           | ['Permission']      | ['Proof of work']      | ['Smart Contract']                              |
+| 214761403 | ['Ethereum']           | ['Consortium']      | ['Proof of work']      | ['Smart contract, Swarm, Oracle']               |
+|  27257114 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart Contract, IPFS, SDN']                   |
+| 221118885 | ['Hyperledger Fabric'] | ['Private']         | ['Kafka']              | ['Chain code, SDN,\nThreat Platform']           |
+| 207973175 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Deep learning(LSTM), SDN']    |
+| 211559340 | ['Generic']            | ['Private']         | ['-']                  | ['SDN']                                         |
+|  84186926 | ['Hyperledger']        | ['-']               | ['Kafka']              | ['SDN, IoT']                                    |
+| 218504016 | ['Ethereum']           | ['Public, Private'] | ['Proof-of-Authority'] | ['Smart Contract']                              |
+| 211689822 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Software Defined Networking'] |
+
+GOLD SCHEMA:
+0: Blockchain
+1: Type
+2: Consensus
+3: Technologies
+
+PREDICTION PATH:../../metric_validation_0/0191f26f-b545-43be-aa9f-69adef97e28c/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Sharing of malicious IP addresses among security operation centers                                | Utilization of consortium blockchain for collaborative defense                            | Efficient comparison and matching of IP lists using smart contracts                                   | Utilization of blockchain for collaborative mitigation and distributed defense                                                     |
+|:---------|:--------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Decentralized DDoS data exchange platform, SOChain, using blockchain technology']               | ['Privacy-Preserving DDoS Data Exchange Service Over SOC Consortium Blockchain']          | ['Novel dual-level Bloom filter for efficient searches with privacy protection']                      | ['Designed method without revealing the information to the public']                                                                |
+| paper_2  | ['Blockchain based online trading system for DDoS mitigation services']                           | ['Blockchain Based Online Trading System for DDoS Mitigation Services']                   | ['N/A']                                                                                               | ['Trust infrastructure for the victim network using blockchain']                                                                   |
+| paper_3  | ['Consortium blockchain-based system for sharing malicious IPs among security operation centers'] | ['A Collaborative DDoS Defense Platform Based on Blockchain Technology']                  | ['Smart contract responsible for IP comparison and matching without human interference']              | ['Utilizing elliptic curve cryptography to ensure data confidentiality and integrity']                                             |
+| paper_4  | ['Blockchain Signaling System (BloSS) for coordinated DDoS defense']                              | ['Cooperative, Multi-domain DDoS Defense by a Blockchain Signaling System']               | ['N/A']                                                                                               | ['Reducing complexity of signaling DDoS attack information using blockchain technology']                                           |
+| paper_5  | ['Secure distributed model using blockchain technology for sharing cyber threat intelligence']    | ['Collaborative Cyber Attack Defense in SDN Networks using Blockchain Technology']        | ['Smart contracts to guarantee immutable logic for IP list comparison']                               | ['Tamper-proof record-keeping and immutable logic using blockchain']                                                               |
+| paper_6  | ['Distributed Blockchain (DBC) for preventing DDoS botnet in IoT']                                | ['DDoS Botnet Prevention using Blockchain in Software Defined Internet of Things']        | ['Using blockchain and SDN to detect and mitigate botnets']                                           | ['Prevent network to be the part of botnet using blockchain and SDN']                                                              |
+| paper_7  | ['Ethereum Smart Contract and Blockchain technology for collaborative DDoS mitigation']           | ['Collaborative DDoS Mitigation Solution Based on Ethereum Smart Contract and RNN-LSTM']  | ['Platform for autonomous systems to share resources and defense capabilities using smart contracts'] | ['Platform where many autonomous systems can share hardware resources and defense capabilities using blockchain technology']       |
+| paper_8  | ['Blockchain-based network provider collaborations for orchestrating DDoS mitigation']            | ['Orchestrating DDoS mitigation via blockchain-based network provider collaborations']    | ['Smart contracts for signaling, coordination, and orchestration of collaborative mitigation']        | ['Establishment of trusted federations among network domains for collaborative mitigation using blockchain-based smart contracts'] |
+| paper_9  | ['BlockSDN: Blockchain-as-a-Service for Software Defined Networking']                             | ['BlockSDN: Blockchain-as-a-Service for Software Defined Networking in Smart City']       | ['N/A']                                                                                               | ['Blockchain as a service framework for SDN security in smart city applications']                                                  |
+| paper_10 | ['Co-IoT: A blockchain-based framework for collaborative DDoS mitigation']                        | ['Collaborative DDoS Mitigation Scheme in IoT Environment Based on Blockchain Using SDN'] | ["Smart contracts (Ethereum's smart contracts) for collaboration among SDN-based domains"]            | ['Decentralized collaboration among SDN-based domains using blockchain-based smart contracts']                                     |
+
+MATCHES:
+Sharing of malicious IP addresses among security operation centers: 
+Utilization of consortium blockchain for collaborative defense: 
+Efficient comparison and matching of IP lists using smart contracts: 
+Utilization of blockchain for collaborative mitigation and distributed defense: 

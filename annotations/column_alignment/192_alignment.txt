@@ -1,0 +1,35 @@
+ID: 53285b40-86e5-419a-b47b-d1adca8319ce
+
+GOLD TABLE:
+|           | Main approach                            | Environment   | Obstacle avoidance   | Coordination   | Sensing ability   |
+|----------:|:-----------------------------------------|:--------------|:---------------------|:---------------|:------------------|
+| 230511448 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Perfect']       |
+| 246826797 | ['Deep\nReinforcement Learning']         | ['Air (3D)']  | ['Static']           | ['Yes']        | ['Limited']       |
+| 247818114 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['No']               | ['No']         | ['Perfect']       |
+| 199543302 | ['Meta-reinforcement learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Limited']       |
+| 251134882 | ['Bayesian fusion and machine learning'] | ['Land (2D)'] | ['No']               | ['Yes']        | ['Limited']       |
+
+GOLD SCHEMA:
+0: Main approach
+1: Environment
+2: Obstacle avoidance
+3: Coordination
+4: Sensing ability
+
+PREDICTION PATH:../../metric_validation_0/53285b40-86e5-419a-b47b-d1adca8319ce/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods used for training (e.g., DQN, DDPG, MADDPG)                   | Use of target prediction networks      | Comparison of learning capabilities in various environment difficulties                                                                                                                                                                                                                                                     | Handling of time-out and attenuation mechanisms                                                                                     | Meta-learning based policy gradient methods for trust modeling in human-robot interaction                                              |
+|:--------|:----------------------------------------------------------------------|:---------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['curriculum deep reinforcement learning']                            | ['N/A']                                | ['curriculum learning, making the agent learn simpler tasks before learning more complicated ones']                                                                                                                                                                                                                         | ['N/A']                                                                                                                             | ['N/A']                                                                                                                                |
+| paper_2 | ['multiagent deep deterministic policy gradient (MADDPG)']            | ['target prediction network (TP Net)'] | ['multi-UAV pursuit-evasion game with online motion planning by deep reinforcement learning, experiments conducted to verify the state-of-the-art performance of the proposed strategy, both in the normal and antidamaged situations']                                                                                     | ['N/A']                                                                                                                             | ['N/A']                                                                                                                                |
+| paper_3 | ['deep Q network (DQN)', 'deep deterministic policy gradient (DDPG)'] | ['N/A']                                | ['value-based deep Q network (DQN) model and the deep deterministic policy gradient (DDPG) model, modifications to the DQN model effectively increase the escape probabilities to the same level as the DDPG model, performance enhancement over the naive evasion model in harsh environments than in loose environments'] | ['reward mechanism with a time-out strategy and the game environment with an attenuation mechanism of the steering angle of sheep'] | ['N/A']                                                                                                                                |
+| paper_4 | ['meta-learning based policy gradient method']                        | ['N/A']                                | ['meta-learning based policy gradient method for addressing the problem of adaptation in human-robot interaction, adaptation algorithms influence human-robot interaction and trust modelling']                                                                                                                             | ['N/A']                                                                                                                             | ['meta-learning based policy gradient method for addressing the problem of adaptation in human-robot interaction and trust modelling'] |
+| paper_5 | ['N/A']                                                               | ['N/A']                                | ['N/A']                                                                                                                                                                                                                                                                                                                     | ['N/A']                                                                                                                             | ['N/A']                                                                                                                                |
+
+MATCHES:
+Methods used for training (e.g., DQN, DDPG, MADDPG): 
+Use of target prediction networks: 
+Comparison of learning capabilities in various environment difficulties: 
+Handling of time-out and attenuation mechanisms: 
+Meta-learning based policy gradient methods for trust modeling in human-robot interaction: 

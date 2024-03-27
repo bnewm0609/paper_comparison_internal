@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Uncertainty Quantification for Molecular Property Prediction                                      | Application of Bayesian Inference in Chemoinformatics                                                           |
+|:---------|:--------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                           | ['N/A']                                                                                                         |
+| paper_2  | ['Enables reliable prediction with quantitative uncertainty analysis']                            | ['Applies Bayesian inference for reliable prediction of molecular properties']                                  |
+| paper_3  | ['Uncertainty estimate used for experiment design']                                               | ['Statistically principled method using Bayesian inference for uncertainty estimation']                         |
+| paper_4  | ['Focuses on uncertainty quantification in deep learning-based molecular property prediction']    | ['Evaluates scalable uncertainty estimation methods using Bayesian inference']                                  |
+| paper_5  | ['Systematic evaluation of uncertainty quantification methods for molecular property prediction'] | ['Applies neural networks for uncertainty quantification in molecular property prediction']                     |
+| paper_6  | ['Systematic evaluation of uncertainty quantification methods for molecular property prediction'] | ['Applies neural networks for uncertainty quantification in molecular property prediction']                     |
+| paper_7  | ['Presents a suite of figures and metrics to judge the quality of uncertainty estimates']         | ['Uses machine learning frameworks for comparing uncertainty quantifications in material property predictions'] |
+| paper_8  | ['Utilizes evidential uncertainty quantification for molecular property prediction']              | ['Applies evidential deep learning for uncertainty quantification in molecular property prediction']            |
+| paper_9  | ['Benchmarking of uncertainty quantification methods for protein engineering']                    | ['Benchmarks uncertainty quantification methods using Bayesian optimization for protein engineering']           |
+| paper_10 | ['Uses Gaussian Processes for uncertainty-aware predictions at extreme lengthscales']             | ['Applies Gaussian Processes for uncertainty quantification at extreme lengthscales']                           |
+| paper_11 | ['Proposes a new method for uncertainty estimation in molecular force fields']                    | ['Proposes a new Bayesian inference-based method for uncertainty estimation in molecular force fields']         |
+| paper_12 | ['Non-Bayesian approach for uncertainty estimation in data-derived densities']                    | ['Non-Bayesian approach for managing uncertainty in data-derived densities using regression models']            |
+| paper_13 | ['Utilizes machine learning framework for predicting the electronic density of states']           | ['Applies machine learning for predicting the electronic density of states using quasiparticle energy levels']  |
+
+MATCHES:
+Uncertainty Quantification for Molecular Property Prediction: 
+Application of Bayesian Inference in Chemoinformatics: 

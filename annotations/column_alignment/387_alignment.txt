@@ -1,0 +1,33 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of authentication (keystroke, handwriting)   | Authentication performance (error rates, effectiveness)                            | Applicability to different contexts (hardware limitations, environment constraints)                              | Comparison to traditional authentication methods                                      | Security improvements on mobile devices                                                                     |
+|:--------|:--------------------------------------------------|:-----------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Keystroke']                                     | ['Equal error rates (EER) reduced by 26.4 - 36.8% relative to previous features.'] | ['Spatial touch features reduce implicit authentication error rates']                                            | ['N/A']                                                                               | ['N/A']                                                                                                     |
+| paper_2 | ['Keystroke and handwriting']                     | ['Error rates under 2%']                                                           | ['Suggests a mixture of keystroke-based and handwriting-based authentication method using capacitive displays.'] | ['Ignore traditional methods like smartcards or face recognition due to limitations'] | ['Effectivity of new approach demonstrated with error rates under 2%']                                      |
+| paper_3 | ['Keystroke']                                     | ['TAP can maintain both security and usability for the mobile system.']            | ['TAP enhances security of the mobile device and considered usability and different typing settings.']           | ['N/A']                                                                               | ['TAP transparently enhances the security of the mobile device']                                            |
+| paper_4 | ['Keystroke']                                     | ['False Alarm Rate of less than 5% and an Impostor Pass Rate of less than 0.005%'] | ['Method can be useful in computer security as a complementary or alternative way to user authentication.']      | ['N/A']                                                                               | ['Method can be useful in computer security as a complementary or alternative way to user authentication.'] |
+
+MATCHES:
+Type of authentication (keystroke, handwriting): 
+Authentication performance (error rates, effectiveness): 
+Applicability to different contexts (hardware limitations, environment constraints): 
+Comparison to traditional authentication methods: 
+Security improvements on mobile devices: 

@@ -1,0 +1,50 @@
+ID: 70b7fda9-0485-4cf2-adf6-d6aa43a72a60
+
+GOLD TABLE:
+|           | Category                      | Challenge               | Short Description                                                                                                      |
+|----------:|:------------------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+|  28227133 | ['7[12]*Data and Evaluation'] | ['Big Data']            | ['Volume, velocity, variety, veracity, and value of big data can be problematic.']                                     |
+|   2242825 | ['-']                         | ['High-Dimensionality'] | ['Many numbers of features for each datapoint can cause sparsity of data which makes anomaly detection more arduous.'] |
+|   3314665 | ['-']                         | ['Heterogeneity']       | ['Diversity and variety of data types, formats, and structures in systems.']                                           |
+| 235421996 | ['-']                         | ['Obscured Anomalies']  | ['Outliers can be in disguise, especially the anomalies that are caused by a smart entity.']                           |
+|  56208557 | ['-']                         | ['Unclean Data']        | ['Many proposed models work based on the hypothesis that clean data is available which is not realistic.']             |
+| 214371919 | ['4[8]*Nature of Anomaly']    | ['Changing Nature']     | ['Novel and new types of anomalies can happen, and anomalies may adapt themselves with anomaly detection algorithms.'] |
+| 234278156 | ['-']                         | ['Disparate Sources']   | ['Anomalies can happen in many different layers and parts of systems.']                                                |
+| 215872173 | ['-']                         | ['Noise Resilience']    | ['In many cases, noises in the input data can mislead the models and be detected as false positives.']                 |
+|   1610415 | ['5[9]*Real-World']           | ['Inference Time']      | ['In real-world applications, it is vital to detect anomalies in a timely manner to take the appropriate action.']     |
+| 231423554 | ['-']                         | ['Privacy']             | ['In many applications, the data of the users should be protected.']                                                   |
+| 238586083 | ['-']                         | ['Ciphered Data']       | ['In many environments, the exchanged data is ciphered.']                                                              |
+| 232076515 | ['-']                         | ['Dynamic Systems']     | ['Real-world systems often change over the time and have dynamic nature.']                                             |
+| 235195790 | ['-']                         | ['Interpretability']    | ['In real-world setups, the cause of the anomaly is important.']                                                       |
+| 238237738 | ['-']                         | ['Domain Shift']        | ['The model trained on one domain, cannot generalize even to a slightly different domain.']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Challenge
+2: Short Description
+
+PREDICTION PATH:../../metric_validation_0/70b7fda9-0485-4cf2-adf6-d6aa43a72a60/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Paper Type     | Anomaly Detection   | Data Type             |
+|:---------|:---------------|:--------------------|:----------------------|
+| Paper 1  | ['Survey']     | ['Yes']             | ['Graphs']            |
+| Paper 2  | ['Not Survey'] | ['No']              | ['Text']              |
+| Paper 3  | ['Not Survey'] | ['No']              | ['Graphs']            |
+| Paper 4  | ['Not Survey'] | ['Yes']             | ['Graphs']            |
+| Paper 5  | ['Not Survey'] | ['Yes']             | ['Graphs']            |
+| Paper 6  | ['Not Survey'] | ['Yes']             | ['Various']           |
+| Paper 7  | ['Not Survey'] | ['Yes']             | ['Various']           |
+| Paper 8  | ['Not Survey'] | ['No']              | ['Various']           |
+| Paper 9  | ['Not Survey'] | ['Yes']             | ['Sensor']            |
+| Paper 10 | ['Not Survey'] | ['Yes']             | ['Video']             |
+| Paper 11 | ['Survey']     | ['Yes']             | ['Various']           |
+| Paper 12 | ['Not Survey'] | ['Yes']             | ['Network']           |
+| Paper 13 | ['Not Survey'] | ['Yes']             | ['Graphs']            |
+| Paper 14 | ['Survey']     | ['Yes']             | ['Various']           |
+| Paper 15 | ['Not Survey'] | ['Yes']             | ['Attributed Graphs'] |
+
+MATCHES:
+Paper Type: 
+Anomaly Detection: 
+Data Type: 

@@ -1,0 +1,30 @@
+ID: 6f7faa13-6377-43fc-a57a-8d88efdf569d
+
+GOLD TABLE:
+|          | Model                                                                              | Learning                                                                                              | Advantages                                                                           | Disadvantages                                                                                                       |
+|---------:|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| 18421517 | ['Track features of segmented objects']                                            | ['Match features across frames']                                                                      | ['More robust than shape tracking, may allow some deformation (aspect change)']      | ['Features may not be consistently present, selection of appropriate features is important, computation intensive'] |
+| 14320286 | ['Features of objects case as state vectors of network representing motion model'] | ['Learning techniques such as expectation maximization are used to progressively update the network'] | ['Predictive nature, learns motion adaptively']                                      | ['Requires features as state variables, very computation intensive, cannot deal with complex motion patterns']      |
+| 12758993 | ['Computes motion maps or flow vectors to determine consistent motion patterns']   | ['Cluster using modified k-means clustering on flow maps or compute flow equation at each pixel']     | ['Wakes and waves are automatically suppressed due to inconsistent motion patterns'] | ['Cannot deal with boat maneuvers and is computation intensive']                                                    |
+
+GOLD SCHEMA:
+0: Model
+1: Learning
+2: Advantages
+3: Disadvantages
+
+PREDICTION PATH:../../metric_validation_0/6f7faa13-6377-43fc-a57a-8d88efdf569d/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Application domain                                      | Methodology                                                                                                      | Context                                                                       | Evaluation                                                                    |
+|:--------|:--------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| Paper 1 | ['Maritime surveillance with automatic boat detection'] | ['Haar-like classifier for boat detection', 'Temporal filtering for false alarm reduction']                      | ['Maritime environment with different light conditions and camera positions'] | ['Experimental results with different light conditions and camera positions'] |
+| Paper 2 | ['Maritime search and rescue with machine vision']      | ['Point target detection and temporal tracking', 'Evaluation of different color spaces and tracking techniques'] | ['Maritime environment with a focus on Hidden Markov Model based tracking']   | ['Evaluation of different point target detection and tracking techniques']    |
+| Paper 3 | ['Boat traffic monitoring in Venice']                   | ['Background modeling and boat tracking']                                                                        | ['City of Venice (Italy) with 24/7/365 operation']                            | ["Significant experimental evaluation of the system's performance"]           |
+| Paper 4 | ['Boat traffic monitoring in Venice']                   | ['Background modeling and boat tracking']                                                                        | ['City of Venice (Italy) with 24/7/365 operation']                            | ["Significant experimental evaluation of the system's performance"]           |
+
+MATCHES:
+Application domain: 
+Methodology: 
+Context: 
+Evaluation: 

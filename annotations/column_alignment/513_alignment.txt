@@ -1,0 +1,33 @@
+ID: 0f3a0b21-945b-4c45-af04-d969bcdcfee2
+
+GOLD TABLE:
+|          | year     | # classes   | # img train / val*   | quality   |
+|---------:|:---------|:------------|:---------------------|:----------|
+| 11266650 | ['2014'] | ['012']     | ['28,648 / 02,113']  | ['+']     |
+|  4794860 | ['2018'] | ['009']     | ['0 / 05,818']       | ['+++']   |
+
+GOLD SCHEMA:
+0: year
+1: # classes
+2: # img train / val*
+3: quality
+
+PREDICTION PATH:../../metric_validation_0/0f3a0b21-945b-4c45-af04-d969bcdcfee2/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size and diversity of the dataset                                 | Types of annotations provided                                                | Applications of the dataset                                     | Evaluation metrics used for 3D reconstruction and pose estimation   | Results of state-of-the-art algorithms on the dataset                                                        | Comparison of algorithms in terms of 3D reconstruction and pose estimation accuracy   | Approach for 3D object shape and pose estimation                        | Use of deep learning and other machine learning techniques   | Pixel-level 2D-3D alignment techniques   | Multi-task learning approaches                                             |
+|:--------|:------------------------------------------------------------------|:-----------------------------------------------------------------------------|:----------------------------------------------------------------|:--------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:------------------------------------------------------------------------|:-------------------------------------------------------------|:-----------------------------------------|:---------------------------------------------------------------------------|
+| paper_1 | ['12 rigid categories with 3,000+ object instances per category'] | ['3D annotations for 12 rigid categories from PASCAL VOC 2012 and ImageNet'] | ['3D detection, pose estimation, and object description']       | ['N/A']                                                             | ['Results of variations of DPM on PASCAL3D+']                                                                | ['N/A']                                                                               | ['3D object detection and pose estimation methods']                     | ['N/A']                                                      | ['N/A']                                  | ['N/A']                                                                    |
+| paper_2 | ['Large-scale dataset of diverse image-shape pairs']              | ['Pixel-level 2D-3D alignment between images and 3D shapes']                 | ['Shape reconstruction, retrieval, viewpoint estimation, etc.'] | ['Metrics calibrated through behavioral studies']                   | ['State-of-the-art performance on 3D reconstruction and pose estimation using multi-task learning approach'] | ['Comparison of algorithms using Pix3D']                                              | ['Multi-task learning model for 3D reconstruction and pose estimation'] | ['Deep learning and multi-task learning techniques']         | ['Pixel-level 2D-3D alignment in Pix3D'] | ['Multi-task learning approach for 3D reconstruction and pose estimation'] |
+
+MATCHES:
+Size and diversity of the dataset: 
+Types of annotations provided: 
+Applications of the dataset: 
+Evaluation metrics used for 3D reconstruction and pose estimation: 
+Results of state-of-the-art algorithms on the dataset: 
+Comparison of algorithms in terms of 3D reconstruction and pose estimation accuracy: 
+Approach for 3D object shape and pose estimation: 
+Use of deep learning and other machine learning techniques: 
+Pixel-level 2D-3D alignment techniques: 
+Multi-task learning approaches: 

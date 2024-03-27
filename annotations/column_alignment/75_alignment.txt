@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method of Eye Movement Analysis                     | Focus of Eye Movement Study                                                    | Clinical Application of Eye Movement Studies                                                     |
+|:--------|:----------------------------------------------------|:-------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| paper_1 | ['Scleral search coil technique']                   | ['Optokinetic eye movements and radial optic flow']                            | ['Understanding optokinetic eye movements and their effects on optic flow processing']           |
+| paper_2 | ['New method based on nonlinear dynamics']          | ['Eye movements during reading']                                               | ['Assessing reading ability and oculomotor behavior']                                            |
+| paper_3 | ['Video head impulse test (vHIT) and search coils'] | ['Vertical semicircular canal dysfunction']                                    | ['Detecting vertical semicircular canal dysfunction as accurately as scleral search coils']      |
+| paper_4 | ['Scleral search coil technique']                   | ['Three dimensional vestibular ocular reflex testing']                         | ['Quantifying gaze stabilization and testing vestibular function']                               |
+| paper_5 | ['Averaged EOG recordings']                         | ['Disconjugate vestibulo-ocular responses to transient stimuli']               | ['Eliciting disconjugate reflex eye movements and identifying vestibular lesions']               |
+| paper_6 | ['EOG recordings']                                  | ['Vibrational impulse stimuli and vestibular reflex']                          | ['Evaluating responses to detect vestibular lesions']                                            |
+| paper_7 | ['Electrooculography (EOG) and Optotrak cameras']   | ['Anticipatory eye movement and walking turns']                                | ["Promoting cranio-caudal control during walking turns in individuals with Parkinson's disease"] |
+| paper_8 | ['Electrooculography (EOG)']                        | ['Eye movement signal classification for developing human-computer interface'] | ['Testing feasibility of developing a human-computer interface using electrooculogram signals']  |
+
+MATCHES:
+Method of Eye Movement Analysis: 
+Focus of Eye Movement Study: 
+Clinical Application of Eye Movement Studies: 

@@ -1,0 +1,35 @@
+ID: 8e40ad31-28ab-4723-ae18-bb9ea3ae422f
+
+GOLD TABLE:
+|          | Train      | Valid     | Test       | Total      | Source        |
+|---------:|:-----------|:----------|:-----------|:-----------|:--------------|
+| 44145664 | ['3,067']  | ['306']   | ['784']    | ['3,834']  | ['Twitter']   |
+|  3218493 | ['48,007'] | ['6,858'] | ['13,717'] | ['68,582'] | ['Twitter']   |
+| 10168779 | ['1,327']  | ['189']   | ['381']    | ['1,897']  | ['Twitter']   |
+|  4311707 | ['10,934'] | ['2,734'] | ['3,406']  | ['17,074'] | ['Reddit']    |
+| 15828278 | ['3,284']  | ['469']   | ['939']    | ['4,692']  | ['Dialogues'] |
+
+GOLD SCHEMA:
+0: Train
+1: Valid
+2: Test
+3: Total
+4: Source
+
+PREDICTION PATH:../../metric_validation_0/8e40ad31-28ab-4723-ae18-bb9ea3ae422f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of tweets or statements   | Manual or automatic labeling   | Context provided   |
+|:--------|:---------------------------------|:-------------------------------|:-------------------|
+| paper_1 | [3834]                           | ['Manual']                     | ['User, Topic']    |
+| paper_2 | [7000]                           | ['Manual']                     | ['User, Topic']    |
+| paper_3 | ['N/A']                          | ['Automatic']                  | ['Topic']          |
+| paper_4 | [1300000]                        | ['Self-annotated']             | ['User, Topic']    |
+| paper_5 | [1300000]                        | ['Self-annotated']             | ['User, Topic']    |
+| paper_6 | ['N/A']                          | ['Automatic']                  | ['Topic']          |
+| paper_7 | ['N/A']                          | ['Automatic']                  | ['Topic']          |
+
+MATCHES:
+Number of tweets or statements: 
+Manual or automatic labeling: 
+Context provided: 

@@ -1,0 +1,30 @@
+ID: 900fc22d-501e-4fd8-8a12-4fd2c96483ea
+
+GOLD TABLE:
+|           | Domain           | Key characteristics                                            |
+|----------:|:-----------------|:---------------------------------------------------------------|
+| 216404355 | ['Smart City']   | ['Complexity capture']                                         |
+| 233674190 | ['Smart City']   | ['Situational awareness, Monitoring, Analysis, Understanding'] |
+| 219507572 | ['Supply Chain'] | ['Resilience, Replication, Simulation']                        |
+| 235543230 | ['Supply Chain'] | ['Decision making, Holistic improvements']                     |
+| 256194278 | ['Ports']        | ['Simulation, Modelling, Fault detection, Monitoring']         |
+
+GOLD SCHEMA:
+0: Domain
+1: Key characteristics
+
+PREDICTION PATH:../../metric_validation_0/900fc22d-501e-4fd8-8a12-4fd2c96483ea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types and sources of data used                                                                                                                                                | Modeling techniques and approaches                                                     |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['3D model of the built environment', 'Street network model (space syntax)', 'Urban mobility simulation', 'Wind flow simulation', 'Volunteered geographic information (VGI)'] | ['Data models', 'Visualization platform for virtual reality', 'Survey-based analysis'] |
+| paper_2 | ['N/A']                                                                                                                                                                       | ['Digital twin technology', 'Data processing efficiency']                              |
+| paper_3 | ['Supply chain (SC) data', 'Risk data', 'Disruption modeling data', 'Performance assessment data']                                                                            | ['Model-based approach', 'Data-driven approach', 'Digital SC twin model']              |
+| paper_4 | ['N/A']                                                                                                                                                                       | ['Digital Supply Chain Twin (DSCT) framework']                                         |
+| paper_5 | ['Port process data', 'Port resource, facility, and operation data']                                                                                                          | ['Digital twin integration']                                                           |
+| paper_6 | ['Port process data', 'Port resource, facility, and operation data']                                                                                                          | ['Digital twin integration']                                                           |
+
+MATCHES:
+Types and sources of data used: 
+Modeling techniques and approaches: 

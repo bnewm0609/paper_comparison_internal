@@ -1,0 +1,29 @@
+ID: 82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8
+
+GOLD TABLE:
+|           | Anomaly     | Pose      |
+|----------:|:------------|:----------|
+|  72941049 | ['Anomaly'] | ['Pose']  |
+| 236950792 | ['Anomaly'] | ['Pixel'] |
+| 233423473 | ['Action']  | ['Pose']  |
+| 236428765 | ['Action']  | ['Pose']  |
+| 249065776 | ['Action']  | ['Pixel'] |
+
+GOLD SCHEMA:
+0: Anomaly
+1: Pose
+
+PREDICTION PATH:../../metric_validation_0/82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | The use of graph convolutional networks (GCNs)   | The method for addressing skeleton-based video analysis (anomaly detection or action recognition)   |
+|:--------|:-------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                          | ['Anomaly Detection']                                                                               |
+| paper_2 | ['N/A']                                          | ['Anomaly Detection']                                                                               |
+| paper_3 | ['Yes']                                          | ['Action Recognition']                                                                              |
+| paper_4 | ['Yes']                                          | ['Action Recognition']                                                                              |
+| paper_5 | ['N/A']                                          | ['Action Recognition']                                                                              |
+
+MATCHES:
+The use of graph convolutional networks (GCNs): 
+The method for addressing skeleton-based video analysis (anomaly detection or action recognition): 

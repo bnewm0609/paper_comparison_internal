@@ -1,0 +1,31 @@
+ID: 7981ed6f-fb3a-4b4a-a306-b09ae2876d3a
+
+GOLD TABLE:
+|           | Carrier frequency   | Component type   | Monolithic IC integration   | RF bandwidth   | Synchronization                   |
+|----------:|:--------------------|:-----------------|:----------------------------|:---------------|:----------------------------------|
+|  52076321 | ['142 GHz']         | ['COTS']         | ['No']                      | ['4 GHz']      | ['External: Rubidium clock']      |
+|   3349886 | ['28 GHz']          | ['COTS']         | ['No']                      | ['800 MHz']    | ['External: GPS disciplined']     |
+| 221970525 | ['142 GHz']         | ['COTS+EVB']     | ['Yes (65 nm CMOS)']        | ['2 GHz']      | ['On-board support: Sync signal'] |
+
+GOLD SCHEMA:
+0: Carrier frequency
+1: Component type
+2: Monolithic IC integration
+3: RF bandwidth
+4: Synchronization
+
+PREDICTION PATH:../../metric_validation_0/7981ed6f-fb3a-4b4a-a306-b09ae2876d3a/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Frequency of Measurements (GHz)   | Type of Environment   | Equipment Used                                                                                                                                                       | Transmitter Deployment Setup                                                   | Path Loss Models Used                                      |
+|:--------|:----------------------------------|:----------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:-----------------------------------------------------------|
+| paper_1 | ['140 GHz']                       | ['Indoor']            | ['140 GHz wideband channel sounder system']                                                                                                                          | ['N/A']                                                                        | ['N/A']                                                    |
+| paper_2 | ['28 GHz']                        | ['Suburban']          | ['400-megachip-per-second custom-designed broadband sliding correlator channel sounder, highly directional 22-dBi (15º half-power beamwidth) horn antennas']         | ['Transmitter installed at a height of 27m to emulate a microcell deployment'] | ['Over-rooftop model, ITU-R P.1411-9 site-specific model'] |
+| paper_3 | ['2 GHz']                         | ['N/A']               | ['Sliding correlator based channel sounder with 2 GHz null-to-null RF bandwidth in a single monolithic integrated circuit (IC) fabricated in 65 nm CMOS technology'] | ['N/A']                                                                        | ['N/A']                                                    |
+
+MATCHES:
+Frequency of Measurements (GHz): 
+Type of Environment: 
+Equipment Used: 
+Transmitter Deployment Setup: 
+Path Loss Models Used: 

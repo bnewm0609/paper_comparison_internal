@@ -1,0 +1,35 @@
+ID: 3560e8ad-2a9d-4160-bdf8-007ab0e734e3
+
+GOLD TABLE:
+|          | Domain                   | Proposed Method                      | Transferable   | Generalizable   | Matching Performance   |
+|---------:|:-------------------------|:-------------------------------------|:---------------|:----------------|:-----------------------|
+| 19953360 | ['Face images']          | ['Multimodal Discriminant Analysis'] | ['Yes']        | ['Yes']         | ['Severely degraded']  |
+|  3333907 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 13818729 | ['Face images']          | ['Semi-Adversarial Networks']        | ['Yes']        | ['No']          | ['Mostly retained']    |
+| 43975656 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 51890585 | ['Face images']          | ['Ensemble of SAN models']           | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+| 59553616 | ['Face representations'] | ['SensitiveNet']                     | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+
+GOLD SCHEMA:
+0: Domain
+1: Proposed Method
+2: Transferable
+3: Generalizable
+4: Matching Performance
+
+PREDICTION PATH:../../metric_validation_0/3560e8ad-2a9d-4160-bdf8-007ab0e734e3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Controllable Face Privacy                                                                                                                             | Soft biometric privacy: Retaining biometric utility of face images while perturbing gender                                                                                          | Anonymizing k-Facial Attributes via Adversarial Perturbations                                                                                                                                               |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Yes, extensive experiments using commercial facial analysis software were conducted and the results showed that the proposed method is effective.'] | ['No, the paper did not analyze methods for imparting gender privacy to face images.']                                                                                              | ['N/A']                                                                                                                                                                                                     |
+| paper_2 | ['No, the paper did not conduct experiments using commercial facial analysis software.']                                                              | ['Yes, extensive experiments were conducted using a face matcher and the results showed that the proposed method is effective.']                                                    | ['N/A']                                                                                                                                                                                                     |
+| paper_3 | ['No, the paper did not conduct experiments using commercial facial analysis software.']                                                              | ['No, the paper did not analyze methods for imparting gender privacy to face images.']                                                                                              | ['N/A']                                                                                                                                                                                                     |
+| paper_4 | ['No, the paper did not conduct experiments using commercial facial analysis software.']                                                              | ['No, the paper did not analyze methods for imparting gender privacy to face images.']                                                                                              | ['Yes, extensive experiments were conducted using an attribute prediction algorithm and the results showed that the proposed algorithm is effective in preserving image quality and identity information.'] |
+| paper_5 | ['No, the paper did not conduct experiments using commercial facial analysis software.']                                                              | ['Yes, extensive experiments were conducted using different unseen gender classifiers and face matchers and the results showed that the proposed ensemble SAN model is effective.'] | ['N/A']                                                                                                                                                                                                     |
+| paper_6 | ['No, the paper did not conduct experiments using commercial facial analysis software.']                                                              | ['No, the paper did not analyze methods for imparting gender privacy to face images.']                                                                                              | ['N/A']                                                                                                                                                                                                     |
+
+MATCHES:
+Controllable Face Privacy: 
+Soft biometric privacy: Retaining biometric utility of face images while perturbing gender: 
+Anonymizing k-Facial Attributes via Adversarial Perturbations: 

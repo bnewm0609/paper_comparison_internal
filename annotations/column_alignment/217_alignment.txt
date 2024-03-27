@@ -1,0 +1,25 @@
+ID: 7e1ee0ef-aa94-4c34-b22c-5bbae338db30
+
+GOLD TABLE:
+|           | Total Number of Samples   | Number of Used Samples   | Feature Dimension   |
+|----------:|:--------------------------|:-------------------------|:--------------------|
+| 220317169 | ['52416']                 | ['20000']                | ['11']              |
+| 154318866 | ['19735']                 | ['20000']                | ['33']              |
+
+GOLD SCHEMA:
+0: Total Number of Samples
+1: Number of Used Samples
+2: Feature Dimension
+
+PREDICTION PATH:../../metric_validation_0/7e1ee0ef-aa94-4c34-b22c-5bbae338db30/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|        | Scope of Change                                                                    | Drivers of Change                                                                       | Effects of Change                                                   |
+|:-------|:-----------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|:--------------------------------------------------------------------|
+| POWER  | ['Transformation of English feudalism during the tenth to fifteenth centuries']    | ['Peculiar nature of English feudalism and its differences from continental neighbors'] | ['Cohesion, flexibility, and proto-democracy that England enjoyed'] |
+| Energy | ['Addition of more seats in economy class and squeezing of seats in the new 787s'] | ['Need to increase revenue']                                                            | ['Discomfort of passengers in tighter spaces']                      |
+
+MATCHES:
+Scope of Change: 
+Drivers of Change: 
+Effects of Change: 

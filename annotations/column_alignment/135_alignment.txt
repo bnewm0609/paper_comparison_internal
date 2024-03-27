@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Field of Study                               | Problem Addressed                                                 | Methods Used                                                             | Contributions and Results                                                                                                                                                                          |
+|:--------|:---------------------------------------------|:------------------------------------------------------------------|:-------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Quantum Complexity Theory']                | ['Quantum Computation from a Complexity Theoretic Viewpoint']     | ['Quantum Turing Machines, Complexity Theory']                           | ['Existence of an Efficient Universal Quantum Turing Machine, Quantum Turing Machine Model as a Discrete Model of Computation, Violation of the Church-Turing Thesis for Quantum Turing Machines'] |
+| Paper_2 | ['Quantum Complexity Theory']                | ['Quantum Computation from a Complexity Theoretic Viewpoint']     | ['Quantum Turing Machines, Complexity Theory']                           | ['Existence of an Efficient Universal Quantum Turing Machine, Quantum Turing Machine Model as a Discrete Model of Computation, Violation of the Church-Turing Thesis for Quantum Turing Machines'] |
+| Paper_3 | ['Quantum Approximate Optimization']         | ['Approximate Solutions for Combinatorial Optimization Problems'] | ['Quantum Approximate Optimization Algorithm']                           | ['Quantum Algorithm for Approximate Solutions of Combinatorial Optimization Problems, Performance Analysis for MaxCut on Regular Graphs']                                                          |
+| Paper_4 | ['Statistical Mechanics, Many-Body Problem'] | ['Exact Solution of the Two-Dimensional Ising Model']             | ['Statistical Mechanics, Many-Body Theory']                              | ['Exact Solution of the Two-Dimensional Ising Model using Lie Algebras', 'Phase Transition in the Two-Dimensional Ising Model']                                                                    |
+| Paper_5 | ['Statistical Mechanics, Many-Body Problem'] | ['Exact Solution of the Two-Dimensional Ising Model']             | ['Statistical Mechanics, Many-Body Theory']                              | ['Exact Solution of the Two-Dimensional Ising Model using Lie Algebras', 'Phase Transition in the Two-Dimensional Ising Model']                                                                    |
+| Paper_6 | ['Quantum Computing, Benchmarking']          | ['Benchmarking for NISQ Evaluation and Simulation']               | ['Quantum Assembler, Optimizer, Scheduler, Error Correction, Simulator'] | ['QASMBench: A Low-level QASM Benchmark Suite for NISQ Evaluation and Simulation']                                                                                                                 |
+| Paper_7 | ['Quantum Computing, Benchmarking']          | ['Benchmarking for NISQ Evaluation and Simulation']               | ['Quantum Assembler, Optimizer, Scheduler, Error Correction, Simulator'] | ['QASMBench: A Low-level QASM Benchmark Suite for NISQ Evaluation and Simulation']                                                                                                                 |
+| Paper_8 | ['Quantum Computing, Algorithms']            | ['Database Search']                                               | ['Quantum Mechanical Algorithm']                                         | ['Quantum Mechanical Algorithm for Database Search']                                                                                                                                               |
+| Paper_9 | ['Quantum Computing, Circuits']              | ['Quantum Ripple-Carry Addition Circuit']                         | ['Quantum Circuit Design']                                               | ['Linear-Depth Ripple-Carry Quantum Addition Circuit using a Single Ancillary Qubit']                                                                                                              |
+
+MATCHES:
+Field of Study: 
+Problem Addressed: 
+Methods Used: 
+Contributions and Results: 

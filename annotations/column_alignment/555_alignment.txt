@@ -1,0 +1,31 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Energy Shared               | Market Mechanism Used                                      |
+|:--------|:------------------------------------|:-----------------------------------------------------------|
+| Paper 1 | ['PV Energy']                       | ['Stackelberg Game']                                       |
+| Paper 2 | ['Generalized Energy']              | ['Generalized Game-Theoretic Model']                       |
+| Paper 3 | ['Energy and Energy Storage']       | ['Online Algorithm']                                       |
+| Paper 4 | ['Electricity and Hydrogen Energy'] | ['Integrated Energy Sharing and Distributed Optimization'] |
+| Paper 5 | ['Electrical and Thermal Energy']   | ['Transactive Energy Mechanism']                           |
+| Paper 6 | ['Electricity Storage']             | ['Sharing Economy, Non-convex Non-cooperative Game']       |
+
+MATCHES:
+Type of Energy Shared: 
+Market Mechanism Used: 

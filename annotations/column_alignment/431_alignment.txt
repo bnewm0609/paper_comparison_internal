@@ -1,0 +1,48 @@
+ID: 9d0e8423-370b-4028-8b6c-8ea946bc995c
+
+GOLD TABLE:
+|           | Domain              | Audit Material            | Complexity   | Algorithms                                                 | Feature Selection   | Time Series   | Dataset            | Data Type                 | Data Available   | Metrics                                       |
+|----------:|:--------------------|:--------------------------|:-------------|:-----------------------------------------------------------|:--------------------|:--------------|:-------------------|:--------------------------|:-----------------|:----------------------------------------------|
+|   1586658 | ['Energy']          | ['Physical']              | ['Simple']   | ['MSA, SVM, and ANN']                                      | ['No']              | ['Yes']       | ['PMU']            | ['Actual, and Simulated'] | ['No']           | ['Accuracy']                                  |
+|   3778374 | ['Healthcare']      | ['Physical']              | ['Simple']   | ['k-NN, NN, SVM, DT, NB, and ZeroR.']                      | ['No']              | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['Accuracy, Precision, Recall,and F1 Score']  |
+| 198351215 | ['Water']           | ['Network, and Physical'] | ['Hybrid']   | ['SVM, and SMC']                                           | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy, Sensitivity, and Specificity']    |
+| 198329283 | ['Smart Home']      | ['Network']               | ['Simple']   | ['NB, BN, J48, Zero R, OneR, Logistic, SVM, MLP, and RF']  | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['F1 Score']                                  |
+| 109929259 | ['Energy']          | ['Physical']              | ['SImple']   | ['BR with ARD']                                            | ['No']              | ['Yes']       | ['Annon']          | ['Simulated']             | ['No']           | ['FP, FN, and PT']                            |
+| 195469712 | ['Gas, and Energy'] | ['Physical']              | ['Simple']   | ['ELM']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['ROC, TPR, and FPR']                         |
+| 195352080 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['SVM']                                                    | ['Yes']             | ['Yes']       | ['SWaT, and WADI'] | ['Actual']                | ['Yes']          | ['Accuracy']                                  |
+|  21292826 | ['Annon']           | ['Physical']              | ['SImple']   | ['CNN']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy']                                  |
+| 199527319 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['RF, NBTree, LMT, J48, PART, MLP, HTree, LogF, and SVM.'] | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Precision, and Sensitivity']                |
+| 208278076 | ['Water']           | ['Physical']              | ['Simple']   | ['NN']                                                     | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Accuracy, Precision, Recall, and F1 score'] |
+
+GOLD SCHEMA:
+0: Domain
+1: Audit Material
+2: Complexity
+3: Algorithms
+4: Feature Selection
+5: Time Series
+6: Dataset
+7: Data Type
+8: Data Available
+9: Metrics
+
+PREDICTION PATH:../../metric_validation_0/9d0e8423-370b-4028-8b6c-8ea946bc995c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of sensors used                                  | Physical measurements considered                        | Deterioration modeling and analysis                            |
+|:---------|:-------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------------|
+| paper_1  | ['smart grids', 'sensors', 'actuators', 'controllers'] | ['power network data', 'wireless sensor networks data'] | ['N/A']                                                        |
+| paper_2  | ['medical sensors']                                    | ['physiological data']                                  | ['N/A']                                                        |
+| paper_3  | ['sensors', 'actuators', 'controllers']                | ['industry environment data']                           | ['reliability and protection against cyber threats modeling']  |
+| paper_4  | ['IoT devices']                                        | ['IoT devices network activity']                        | ['N/A']                                                        |
+| paper_5  | ['power grid sensors']                                 | ['partial noisy measurements from power grid sensors']  | ['line failure detection and probability calculation']         |
+| paper_6  | ['gas turbines sensors']                               | ['physical measurements from heavy-duty gas turbines']  | ['attack detection using physical behavior modeling']          |
+| paper_7  | ['sensors in Cyber-Physical Systems']                  | ['process and sensor noise in Cyber-Physical Systems']  | ['sensor and process noise pattern analysis']                  |
+| paper_8  | ['embedded processor']                                 | ['embedded processor code execution']                   | ['thermal side channels monitoring and anomaly detection']     |
+| paper_9  | ['sensors in Industrial Control Systems']              | ['physical system state and detector system state']     | ['stateful anomaly detector and estimation residual matching'] |
+| paper_10 | ['sensors in Industrial Control Systems']              | ['signals from sensors in Industrial Control Systems']  | ['control system state estimation and attack detection']       |
+
+MATCHES:
+Types of sensors used: 
+Physical measurements considered: 
+Deterioration modeling and analysis: 

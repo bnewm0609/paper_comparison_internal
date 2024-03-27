@@ -1,0 +1,29 @@
+ID: 46fd6d34-5004-405c-a1b5-d83d964d714f
+
+GOLD TABLE:
+|          | Architecture     | Depth   |
+|---------:|:-----------------|:--------|
+|  2895645 | ['CPCPFF']       | ['4']   |
+|   744633 | ['PCCPCCPCFFF']  | ['8']   |
+| 10647804 | ['CPCPIIPIPFFF'] | ['11']  |
+|  2482804 | ['CPNCPNCPCFF']  | ['6']   |
+| 18374345 | ['CPCPCPFF']     | ['5']   |
+
+GOLD SCHEMA:
+0: Architecture
+1: Depth
+
+PREDICTION PATH:../../metric_validation_0/46fd6d34-5004-405c-a1b5-d83d964d714f/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method                                                     | Application                                                                                                                     |
+|:--------|:-----------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Deep Learning using Support Vector Machines']            | ['Classification tasks such as speech recognition, image classification, natural language processing, and bioinformatics data'] |
+| Paper_2 | ['Deep Learning with Multiple CNNs and Ensemble Learning'] | ['Facial Expression Recognition in the Wild']                                                                                   |
+| Paper_3 | ['Deep Neural Networks']                                   | ['Automated Facial Expression Recognition across multiple databases']                                                           |
+| Paper_4 | ['Deep Learning with Pairwise-face Reasoning']             | ['Social Relation Traits Learning from Face Images']                                                                            |
+| Paper_5 | ['Deep Learning with Alignment-mapping Networks']          | ['Facial Expression Recognition in real-world conditions with non-alignable faces']                                             |
+
+MATCHES:
+Method: 
+Application: 

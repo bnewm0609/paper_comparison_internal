@@ -1,0 +1,31 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Game-theoretic model                                                                                                                                                                                    | Cost minimization                                                                                                                                                                              |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Proposed a Stackelberg game approach for Energy Sharing Management (ESM) with a leader (microgrid operator) and followers (prosumers)']                                                               | ['Verified effectiveness of the ESM model in terms of profit of microgrid operator, utilities of prosumers, and net energy of the microgrid']                                                  |
+| paper_2 | ['Introduced a novel energy sharing mechanism based on a generalized game-theoretic model with Nash equilibrium properties']                                                                            | ["Demonstrated that prosumers' total cost decreases with increasing price sensitivity and the Nash equilibrium approaches social optimal as the number of prosumers grows"]                    |
+| paper_3 | ['Designed an online algorithm for cost-aware energy sharing in a residential community based on the Lyapunov optimization theory and Nash bargaining theory']                                          | ['Developed an online algorithm to achieve nearly 12% cost reduction for the community and ensured fairness among residents']                                                                  |
+| paper_4 | ['Proposed an integrated energy sharing model for electricity and hydrogen and applied distributed optimization method to address privacy concerns']                                                    | ['Conducted simulations revealing that integrated energy sharing of hydrogen and electricity can achieve the lowest total system cost and largest total social welfare']                       |
+| paper_5 | ['Developed a transactive energy (TE) mechanism-supported energy sharing strategy and employed ADMM algorithm for distributed optimization of energy sharing in multi-energy complementary microgrids'] | ['Demonstrated the effectiveness of the multi-energy sharing scheme considering integrated demand response (IDR) and the distributed algorithm for implementation']                            |
+| paper_6 | ['Characterized equilibrium prices for shared electricity storage in a spot market and formulated storage investment decisions of firms as a non-cooperative game']                                     | ['Characterized equilibrium prices for shared storage in a spot market and formulated storage investment decisions of the firms to achieve unique Nash equilibrium supporting social welfare'] |
+
+MATCHES:
+Game-theoretic model: 
+Cost minimization: 

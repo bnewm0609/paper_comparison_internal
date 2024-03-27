@@ -1,0 +1,33 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Tradeoff between security and usability                                                         | Authentication methods impacting device accessibility                                                                                                                                                                    | Secure user identity management                                                                                                           | Usability in different settings (without pressure and haptic feedback, with pressure information, with both pressure and haptic feedback)   | Continuous authentication and protection                                                                       |
+|:--------|:------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['We show that these practices can lead to overly optimistic evaluations.']                     | ['N/A']                                                                                                                                                                                                                  | ['N/A']                                                                                                                                   | ['N/A']                                                                                                                                     | ['N/A']                                                                                                        |
+| paper_2 | ['This paper will demonstrate the effectivity of this new approach with error rates under 2%.'] | ['N/A']                                                                                                                                                                                                                  | ['N/A']                                                                                                                                   | ['N/A']                                                                                                                                     | ['N/A']                                                                                                        |
+| paper_3 | ['Usable solutions are often insecure, while secure solutions hinder device accessibility.']    | ['TAP transparently enhances the security of the mobile device and accomplishes secure user identity management with a simple password. It takes steps toward addressing this tradeoff between security and usability.'] | ['TAP transparently enhances the security of the mobile device and accomplishes secure user identity management with a simple password.'] | ['We evaluated three user studies which compare authentication performance under different virtual key typing settings.']                   | ["TAP transparently monitors the user's virtual key dynamics behavior to continuously authenticate the user."] |
+| paper_4 | ['Different trade-offs are, however, possible.']                                                | ['N/A']                                                                                                                                                                                                                  | ['N/A']                                                                                                                                   | ['N/A']                                                                                                                                     | ['N/A']                                                                                                        |
+
+MATCHES:
+Tradeoff between security and usability: 
+Authentication methods impacting device accessibility: 
+Secure user identity management: 
+Usability in different settings (without pressure and haptic feedback, with pressure information, with both pressure and haptic feedback): 
+Continuous authentication and protection: 

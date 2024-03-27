@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Specific NLP task or problem being addressed   | Type of data used in research                                        | Methods or techniques applied in the research                                                                                   |
+|:--------|:-----------------------------------------------|:---------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Sentiment Analysis']                         | ['Movie reviews with document-level sentiment polarity annotations'] | ['Unsupervised vector-based approaches, sentiment classification models with sentiment and non-sentiment annotations']          |
+| paper_2 | ['Extractive Reading Comprehension']           | ['SQuAD dataset with adversarially written unanswerable questions']  | ['Model that can detect if no answer is supported by the paragraph and abstain from answering, SQuADRUn dataset interrogation'] |
+| paper_3 | ['Semantic Textual Similarity (STS)']          | ['Multilingual and cross-lingual text pairs and MTQE data']          | ['STS shared task evaluation, multilingual and cross-lingual pairs, MTQE data evaluation']                                      |
+
+MATCHES:
+Specific NLP task or problem being addressed: 
+Type of data used in research: 
+Methods or techniques applied in the research: 

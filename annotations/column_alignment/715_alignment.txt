@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Novel model or algorithm introduced for recognition or retrieval                      | Performance metrics and comparative experimental results                                                                                                                       |
+|:---------|:--------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Market-1501 dataset; Bag-of-Words descriptor']                                      | ['Competitive accuracy on VIPeR, CUHK03, and Market-1501 datasets; Scalable on large-scale 500k dataset']                                                                      |
+| paper_2  | ['Human3.6M dataset; predictive methods for 3D human sensing']                        | ['20% improvement in performance compared to the largest existing public dataset for this problem']                                                                            |
+| paper_3  | ['DeepFashion1 dataset; FashionNet model']                                            | ['Extensive experiments demonstrating the effectiveness of FashionNet and the usefulness of DeepFashion']                                                                      |
+| paper_4  | ['Multi-View Clothing (MVC) dataset; state-of-the-art deep learning method']          | ['Baseline results for the attribute prediction and clothing retrieval performance']                                                                                           |
+| paper_5  | ['Contextualized Convolutional Neural Network (Co-CNN) architecture']                 | ['Significant superiority of Co-CNN over other state-of-the-arts for human parsing']                                                                                           |
+| paper_6  | ['VIrtual Try-On Network (VITON)']                                                    | ['Promising performance in the image-based virtual try-on task over state-of-the-art generative models']                                                                       |
+| paper_7  | ['Multi-pose Guided Virtual Try-On Network (MG-VTON)']                                | ['Significantly outperforms all state-of-the-art methods both qualitatively and quantitatively']                                                                               |
+| paper_8  | ['FashionOn network']                                                                 | ['State-of-the-art virtual try-on performance both qualitatively and quantitatively']                                                                                          |
+| paper_9  | ['Pose-guided virtual try-on scheme based on generative adversarial networks (GANs)'] | ['Superiority over the state-of-the-art methods in several aspects, such as robustness in occlusion case and preserving face identity, shape consistency and clothes details'] |
+| paper_10 | ['Volumetric, x-y-t, patch classifiers (actemes)']                                    | ['Significant improvement over state-of-the-art low-level features']                                                                                                           |
+| paper_11 | ['Motion and Content decomposed Generative Adversarial Network (MoCoGAN) framework']  | ['Effectiveness of the proposed framework verified through extensive experimental results on several challenging datasets']                                                    |
+| paper_12 | ['DwNet, a GAN-based architecture']                                                   | ['State-of-the-art quantitative and qualitative performance on benchmark datasets']                                                                                            |
+| paper_13 | ['Liquid Warping GAN with Liquid Warping Block (LWB)']                                | ['Effectiveness of our method in several aspects, such as robustness in occlusion case and preserving face identity, shape consistency and clothes details']                   |
+| paper_14 | ['Flow-navigated Warping Generative Adversarial Network (FW-GAN)']                    | ['Significantly outperforms other methods both qualitatively and quantitatively']                                                                                              |
+
+MATCHES:
+Novel model or algorithm introduced for recognition or retrieval: 
+Performance metrics and comparative experimental results: 

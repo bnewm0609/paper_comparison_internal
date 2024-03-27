@@ -1,0 +1,33 @@
+ID: 95c3954e-5daf-4039-8362-896ec07c6208
+
+GOLD TABLE:
+|          | Approach   | Driving environment                                     | Generalization   | Low Computational complexity   | Uncertainty: model errors/noisy measurements   | Experiments          |
+|---------:|:-----------|:--------------------------------------------------------|:-----------------|:-------------------------------|:-----------------------------------------------|:---------------------|
+| 13725991 | ['-']      | ['Autonomous driving in urban environment']             | ['+ +']          | ['+']                          | ['-']                                          | ['Real & Simulated'] |
+| 15780954 | ['-']      | ['Autonomous driving in real traffic situations']       | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+| 54457648 | ['-']      | ['Autonomous Driving in multiple urban configurations'] | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+
+GOLD SCHEMA:
+0: Approach
+1: Driving environment
+2: Generalization
+3: Low Computational complexity
+4: Uncertainty: model errors/noisy measurements
+5: Experiments
+
+PREDICTION PATH:../../metric_validation_0/95c3954e-5daf-4039-8362-896ec07c6208/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sensor Hardware                      | Learning Approach (End-to-End vs. Imitation)   | Challenging Scenarios                                                                      | Training Data                                                                                  | Robustness                                                                                                    | Real-World Performance                                     |
+|:--------|:-------------------------------------|:-----------------------------------------------|:-------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------|
+| paper_1 | ['Radar sensors and vision sensors'] | ['Imitation learning']                         | ['Rural roads, small villages, major cities, intersections, roundabouts, narrow passages'] | ['N/A']                                                                                        | ['N/A']                                                                                                       | ['N/A']                                                    |
+| paper_2 | ['Front-facing camera']              | ['End-to-end learning']                        | ['Local roads without lane markings, highways, areas with unclear visual guidance']        | ['Raw pixels from a single front-facing camera']                                               | ['System self-optimizes all processing steps simultaneously']                                                 | ['Operates in real-world at 30 frames per second']         |
+| paper_3 | ['N/A']                              | ['Imitation learning']                         | ['Complex driving scenarios']                                                              | ["30 million examples, synthesized data in the form of perturbations to the expert's driving"] | ['Learner exposed to synthesized data, additional losses penalize undesirable events and encourage progress'] | ['Demonstrated the model driving a car in the real world'] |
+
+MATCHES:
+Sensor Hardware: 
+Learning Approach (End-to-End vs. Imitation): 
+Challenging Scenarios: 
+Training Data: 
+Robustness: 
+Real-World Performance: 

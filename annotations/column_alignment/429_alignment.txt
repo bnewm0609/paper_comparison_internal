@@ -1,0 +1,48 @@
+ID: 9d0e8423-370b-4028-8b6c-8ea946bc995c
+
+GOLD TABLE:
+|           | Domain              | Audit Material            | Complexity   | Algorithms                                                 | Feature Selection   | Time Series   | Dataset            | Data Type                 | Data Available   | Metrics                                       |
+|----------:|:--------------------|:--------------------------|:-------------|:-----------------------------------------------------------|:--------------------|:--------------|:-------------------|:--------------------------|:-----------------|:----------------------------------------------|
+|   1586658 | ['Energy']          | ['Physical']              | ['Simple']   | ['MSA, SVM, and ANN']                                      | ['No']              | ['Yes']       | ['PMU']            | ['Actual, and Simulated'] | ['No']           | ['Accuracy']                                  |
+|   3778374 | ['Healthcare']      | ['Physical']              | ['Simple']   | ['k-NN, NN, SVM, DT, NB, and ZeroR.']                      | ['No']              | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['Accuracy, Precision, Recall,and F1 Score']  |
+| 198351215 | ['Water']           | ['Network, and Physical'] | ['Hybrid']   | ['SVM, and SMC']                                           | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy, Sensitivity, and Specificity']    |
+| 198329283 | ['Smart Home']      | ['Network']               | ['Simple']   | ['NB, BN, J48, Zero R, OneR, Logistic, SVM, MLP, and RF']  | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['F1 Score']                                  |
+| 109929259 | ['Energy']          | ['Physical']              | ['SImple']   | ['BR with ARD']                                            | ['No']              | ['Yes']       | ['Annon']          | ['Simulated']             | ['No']           | ['FP, FN, and PT']                            |
+| 195469712 | ['Gas, and Energy'] | ['Physical']              | ['Simple']   | ['ELM']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['ROC, TPR, and FPR']                         |
+| 195352080 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['SVM']                                                    | ['Yes']             | ['Yes']       | ['SWaT, and WADI'] | ['Actual']                | ['Yes']          | ['Accuracy']                                  |
+|  21292826 | ['Annon']           | ['Physical']              | ['SImple']   | ['CNN']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy']                                  |
+| 199527319 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['RF, NBTree, LMT, J48, PART, MLP, HTree, LogF, and SVM.'] | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Precision, and Sensitivity']                |
+| 208278076 | ['Water']           | ['Physical']              | ['Simple']   | ['NN']                                                     | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Accuracy, Precision, Recall, and F1 score'] |
+
+GOLD SCHEMA:
+0: Domain
+1: Audit Material
+2: Complexity
+3: Algorithms
+4: Feature Selection
+5: Time Series
+6: Dataset
+7: Data Type
+8: Data Available
+9: Metrics
+
+PREDICTION PATH:../../metric_validation_0/9d0e8423-370b-4028-8b6c-8ea946bc995c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Attack type and taxonomy                       | Detection and mitigation methods                                     | Performance evaluation metrics                                   |
+|:---------|:-----------------------------------------------|:---------------------------------------------------------------------|:-----------------------------------------------------------------|
+| paper_1  | ['False data injection cyber-physical attack'] | ['Data analytical method based on margin setting algorithm']         | ['Detection accuracy']                                           |
+| paper_2  | ['N/A']                                        | ['Fuzzy logic, especially fuzzy if-then rules']                      | ['Accuracy as compared to traditional supervised algorithms']    |
+| paper_3  | ['Cyber-physical attack']                      | ['Learned MAPE-K base model']                                        | ['Accuracy in detecting cyber threats']                          |
+| paper_4  | ['Network-based attack']                       | ['Supervised intrusion detection system']                            | ['F-measure']                                                    |
+| paper_5  | ['Cyber-physical attack']                      | ['Bayesian regression-based PROBER Algorithm']                       | ['Probability of line failure detection']                        |
+| paper_6  | ['Cyber-physical attack']                      | ['Machine learning-based attack detection scheme']                   | ['Early detection of attacks or malicious activities']           |
+| paper_7  | ['Sensor spoofing attack']                     | ['Noise fingerprinting scheme based on Kalman filter']               | ['Accuracy in identifying the sensor and process']               |
+| paper_8  | ['N/A']                                        | ['Deep learning networks in conjunction with thermal side channels'] | ['Precision, sensitivity, and Matthews correlation coefficient'] |
+| paper_9  | ['Stealthy attack']                            | ['Stateful Detector']                                                | ['Precision, sensitivity, and Matthews correlation coefficient'] |
+| paper_10 | ['N/A']                                        | ['Digital signal processing technologies with neural networks']      | ['Errors of the second kind']                                    |
+
+MATCHES:
+Attack type and taxonomy: 
+Detection and mitigation methods: 
+Performance evaluation metrics: 

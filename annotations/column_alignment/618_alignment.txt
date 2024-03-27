@@ -1,0 +1,51 @@
+ID: 7dd8ac96-57c9-43c7-830b-f82862f262b7
+
+GOLD TABLE:
+|          | Usage             | Meta Class     | # Categories   | Train       | Val        | Test       | Prompts   |
+|---------:|:------------------|:---------------|:---------------|:------------|:-----------|:-----------|:----------|
+|  4309276 | ['Evaluation']    | ['textures']   | ['47']         | ['1,880']   | ['1,880']  | ['1,880']  | ['154']   |
+| 16922659 | ['-']             | ['birds']      | ['555']        | ['21,536']  | ['2,393']  | ['24,633'] | ['22']    |
+|  3181866 | ['-']             | ['dogs']       | ['120']        | ['10,800']  | ['1,200']  | ['8,580']  | ['33']    |
+| 15193013 | ['-']             | ['flowers']    | ['102']        | ['1,020']   | ['1,020']  | ['6,149']  | ['26']    |
+| 18268744 | ['-']             | ['all']        | ['10']         | ['40,000']  | ['10,000'] | ['10,000'] | ['42']    |
+| 16852518 | ['-']             | ['numbers']    | ['10']         | ['58,605']  | ['14,652'] | ['26,032'] | ['3']     |
+|  1309931 | ['Meta Training'] | ['scenes']     | ['397']        | ['108,754'] | ['-']      | ['-']      | ['128']   |
+|   308212 | ['Meta Training'] | ['all']        | ['10']         | ['5,000']   | ['-']      | ['8,000']  | ['43']    |
+| 22188073 | ['Meta Training'] | ['vegetables'] | ['200']        | ['20,000']  | ['10,000'] | ['61,117'] | ['95']    |
+|   383200 | ['Meta Training'] | ['cats,dogs']  | ['37']         | ['3,680']   | ['-']      | ['3,669']  | ['18']    |
+| 11810992 | ['Meta Training'] | ['remote']     | ['10']         | ['27,000']  | ['-']      | ['-']      | ['12']    |
+
+GOLD SCHEMA:
+0: Usage
+1: Meta Class
+2: # Categories
+3: Train
+4: Val
+5: Test
+6: Prompts
+
+PREDICTION PATH:../../metric_validation_0/7dd8ac96-57c9-43c7-830b-f82862f262b7/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Benchmark dataset       | State-of-the-art performance   | Image dataset size                                              | Feature learning algorithms                                                              | Unlabeled data                                                                                                |
+|:---------|:------------------------|:-------------------------------|:----------------------------------------------------------------|:-----------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['CIFAR-10, CIFAR-100'] | ['N/A']                        | ['Millions of tiny colour images']                              | ['multi-layer generative model']                                                         | ['large set of unlabeled tiny images']                                                                        |
+| paper_2  | ['CIFAR-10, CIFAR-100'] | ['N/A']                        | ['Millions of tiny colour images']                              | ['multi-layer generative model']                                                         | ['large set of unlabeled tiny images']                                                                        |
+| paper_3  | ['Stanford Dogs']       | ['N/A']                        | ['22,000 annotated images of dogs']                             | ['N/A']                                                                                  | ['N/A']                                                                                                       |
+| paper_4  | ['N/A']                 | ['N/A']                        | ['Covering 37 different breeds of cats and dogs']               | ['deformable part model, bag-of-words model']                                            | ['N/A']                                                                                                       |
+| paper_5  | ['N/A']                 | ['72.8%']                      | ['103 class flower dataset']                                    | ['multiple kernel framework with a SVM classifier']                                      | ['N/A']                                                                                                       |
+| paper_6  | ['DTD']                 | ['N/A']                        | ['Large dataset of patterns']                                   | ['Improved Fisher Vector (IFV), Deep Convolutional-network Activation Features (DeCAF)'] | ['N/A']                                                                                                       |
+| paper_7  | ['N/A']                 | ['98.57%']                     | ['27,000 labeled images']                                       | ['deep convolutional neural networks']                                                   | ['N/A']                                                                                                       |
+| paper_8  | ['SUN database']        | ['N/A']                        | ['130,519 images']                                              | ['N/A']                                                                                  | ['N/A']                                                                                                       |
+| paper_9  | ['Street View images']  | ['N/A']                        | ['Over 600,000 labeled digits cropped from Street View images'] | ['unsupervised feature learning methods']                                                | ['benchmark dataset for research use containing over 600,000 labeled digits cropped from Street View images'] |
+| paper_10 | ['NABirds']             | ['N/A']                        | ['48,562 images of North American birds']                       | ['multiple granularity features, Compact Bilinear Pooling']                              | ['N/A']                                                                                                       |
+| paper_11 | ['CIFAR-10, NORB, STL'] | ['97.2%']                      | ['Large dataset of images']                                     | ['sparse auto-encoders, sparse RBMs, K-means clustering, Gaussian mixtures']             | ['N/A']                                                                                                       |
+| paper_12 | ['VegFru']              | ['N/A']                        | ['160,000 images in total']                                     | ['HybridNet']                                                                            | ['N/A']                                                                                                       |
+| paper_13 | ['VegFru']              | ['N/A']                        | ['160,000 images in total']                                     | ['HybridNet']                                                                            | ['N/A']                                                                                                       |
+
+MATCHES:
+Benchmark dataset: 
+State-of-the-art performance: 
+Image dataset size: 
+Feature learning algorithms: 
+Unlabeled data: 

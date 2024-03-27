@@ -1,0 +1,36 @@
+ID: 336815ab-ef12-4edc-b44f-f137ba4184f7
+
+GOLD TABLE:
+|           | Interpetability Categories        | Methods      | Coverage         | Explanation Type   |
+|----------:|:----------------------------------|:-------------|:-----------------|:-------------------|
+| 231623890 | ['Backpropagation-based Methods'] | ['LRP']      | ['Local/Global'] | ['Attribution']    |
+|   3849381 | ['Backpropagation-based Methods'] | ['DeepLIFT'] | ['Local/Global'] | ['Attribution']    |
+| 243833165 | ['Backpropagation-based Methods'] | ['CAM']      | ['Local']        | ['Attribution']    |
+| 252625385 | ['Perturbation-based Methods']    | ['LIME']     | ['Local']        | ['Attribution']    |
+| 230997466 | ['Perturbation-based Methods']    | ['SHAP']     | ['Local']        | ['Attribution']    |
+|  38456023 | ['Rule-based Methods']            | ['FIS']      | ['Global']       | ['Fuzzy Rules']    |
+|  24244444 | ['Rule-based Methods']            | ['BS']       | ['Global']       | ['Bayesian Rules'] |
+
+GOLD SCHEMA:
+0: Interpetability Categories
+1: Methods
+2: Coverage
+3: Explanation Type
+
+PREDICTION PATH:../../metric_validation_0/336815ab-ef12-4edc-b44f-f137ba4184f7/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of EEG signal used                   | BCI paradigm                            | Specific application                    |
+|:--------|:------------------------------------------|:----------------------------------------|:----------------------------------------|
+| paper_1 | ['Spatiospectral feature representation'] | ['M vement imagery']                    | ['Motor imagery classification']        |
+| paper_2 | ['EEGNet']                                | ['N/A']                                 | ['EEG-based BCIs']                      |
+| paper_3 | ['Raw EEG signals']                       | ['Driver drowsiness recognition']       | ['Driver drowsiness recognition']       |
+| paper_4 | ['Raw EEG signals']                       | ['Eye blinks detection']                | ['EEG-based BCI applications']          |
+| paper_5 | ['Raw EEG signals']                       | ['Eye state detection']                 | ['Health monitoring systems']           |
+| paper_6 | ['Raw EEG signals']                       | ['Epileptic EEG signal identification'] | ['Epileptic EEG signal identification'] |
+| paper_7 | ['Raw EEG signals']                       | ['Drowsiness detection']                | ['Drowsiness detection']                |
+
+MATCHES:
+Type of EEG signal used: 
+BCI paradigm: 
+Specific application: 

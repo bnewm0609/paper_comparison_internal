@@ -1,0 +1,65 @@
+ID: 468251ef-ecdc-4841-9e23-b7099cedf8d1
+
+GOLD TABLE:
+|           | Issue                   | EA      | Metric                                 | Paradigm   |
+|----------:|:------------------------|:--------|:---------------------------------------|:-----------|
+|  16433158 | ['Job Scheduling']      | ['GA']  | ['execution time']                     | ['CC']     |
+|  17360386 | ['Job Scheduling']      | ['GA']  | ['response time']                      | ['CC']     |
+| 251566434 | ['Job Scheduling']      | ['GA']  | ['makespan']                           | ['CC']     |
+|    864772 | ['Job Scheduling']      | ['GA']  | ['makespan, resource utilization']     | ['CC']     |
+|  44189939 | ['Job Scheduling']      | ['GA']  | ['makespan, computing cost']           | ['CC']     |
+|  56360428 | ['Job Scheduling']      | ['GA']  | ['execution time, cost']               | ['FC']     |
+|  52909343 | ['-']                   | ['AIS'] | ['response time']                      | ['FC']     |
+|  44583059 | ['Resource Allocation'] | ['GA']  | ['energy consumption, latency']        | ['MEC']    |
+|  46341709 | ['Task Offloading']     | ['AIS'] | ['security and privacy']               | ['CC']     |
+|    429207 | ['-']                   | ['GA']  | ['execution time, energy consumption'] | ['MCC']    |
+|   4505178 | ['-']                   | ['GA']  | ['energy consumption']                 | ['MCC']    |
+| 204183689 | ['-']                   | ['GA']  | ['latency']                            | ['FC']     |
+|  70096009 | ['-']                   | ['AIS'] | ['security and privacy']               | ['EC']     |
+|  46218274 | ['-']                   | ['AIS'] | ['security and privacy']               | ['FC']     |
+|  10869780 | ['-']                   | ['GA']  | ['latency']                            | ['EC']     |
+| 201906355 | ['-']                   | ['GA']  | ['energy consumption']                 | ['MEC']    |
+|   5485443 | ['-']                   | ['GA']  | ['execution time, energy consumption'] | ['MCC']    |
+| 219413789 | ['-']                   | ['GA']  | ['energy consumption, latency']        | ['MEC']    |
+| 202568496 | ['Joint issues']        | ['DE']  | ['energy consumption']                 | ['MEC']    |
+|  49568720 | ['Joint issues']        | ['GA']  | ['energy consumption']                 | ['MEC']    |
+| 212945191 | ['Joint issues']        | ['GA']  | ['makespan']                           | ['MEC']    |
+
+GOLD SCHEMA:
+0: Issue
+1: EA
+2: Metric
+3: Paradigm
+
+PREDICTION PATH:../../metric_validation_0/468251ef-ecdc-4841-9e23-b7099cedf8d1/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Virtualization technology used   | Resource management techniques                                   | Load balancing techniques                                                           | Quality of Service (QoS) requirements                                                                                   |
+|:---------|:---------------------------------|:-----------------------------------------------------------------|:------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                          | ['Adaptive genetic algorithm', 'Priority mechanism']             | ['An improved adaptive genetic algorithm based on priority mechanism']              | ['This approach ensures to make the least execution time and guarantees the QoS requirement of customer job']           |
+| paper_2  | ['N/A']                          | ['Genetic Algorithm', 'Dynamic allocation', 'Load distribution'] | ['Genetic Algorithm based task scheduling technique']                               | ['The overall response time (QoS) should be minimal']                                                                   |
+| paper_3  | ['N/A']                          | ['Genetic Algorithm', 'Load balancing']                          | ['Genetic Algorithm for optimal job scheduling and load balancing']                 | ['The proposed technique called Random Make Genetic Optimizer (RMGO) can minimize the makespan']                        |
+| paper_4  | ['N/A']                          | ['Scheduling algorithms', 'Load balancing']                      | ['Scheduling using improved genetic algorithm']                                     | ['A good scheduling technique also helps in efficient utilization of the resources']                                    |
+| paper_5  | ['N/A']                          | ['Improved genetic algorithm']                                   | ['Genetic Algorithm for optimal job scheduling and load balancing']                 | ['The proposed algorithm minimizes execution time and execution cost as well']                                          |
+| paper_6  | ['N/A']                          | ['Evolutionary algorithm']                                       | ['N/A']                                                                             | ['Our proposed approach aimed at achieving the optimal tradeoff between the execution time and operating costs']        |
+| paper_7  | ['N/A']                          | ['Immune mechanism']                                             | ['N/A']                                                                             | ['Achieve the optimal task finishing time reducing']                                                                    |
+| paper_8  | ['N/A']                          | ['Caching', 'Energy consumption minimization']                   | ['N/A']                                                                             | ['Minimize the energy consumption of the system while satisfying average download latency constraints']                 |
+| paper_9  | ['N/A']                          | ['Artificial immune algorithm']                                  | ['N/A']                                                                             | ['An efficient data security strategy for cloud computing']                                                             |
+| paper_10 | ['N/A']                          | ['Genetic algorithm']                                            | ['Genetic algorithm based offloading method']                                       | ['Optimize execution time and energy consumption of executing mobile services']                                         |
+| paper_11 | ['N/A']                          | ['Genetic algorithm']                                            | ['Genetic algorithm based optimization algorithm']                                  | ['Minimizing the cost function which is combination of Communication energy and computation energy']                    |
+| paper_12 | ['N/A']                          | ['Optimization model', 'Genetic algorithms']                     | ['Genetic algorithm based service placement']                                       | ['Minimize the experienced latency']                                                                                    |
+| paper_13 | ['N/A']                          | ['Immune system', 'Edge computing']                              | ['N/A']                                                                             | ['Enable the creation of a proactive defense architecture, an immune system']                                           |
+| paper_14 | ['N/A']                          | ['Artificial Immune System']                                     | ['N/A']                                                                             | ['Distributed and lightweight IDS based on an Artificial Immune System (AIS)']                                          |
+| paper_15 | ['N/A']                          | ['Genetic algorithm']                                            | ['Genetic algorithm based offloading strategy']                                     | ['Maximizing the number of tasks that should be executed on wearable devices with guaranteed delay fraud requirements'] |
+| paper_16 | ['N/A']                          | ['Task caching', 'Genetic algorithm']                            | ['Genetic algorithm based task migration strategy']                                 | ['Satisfying minimum energy consumption']                                                                               |
+| paper_17 | ['N/A']                          | ['Genetic algorithm']                                            | ['Genetic algorithm based decision algorithm for multisite computation offloading'] | ['Energy consumption, execution time, and weighted cost model']                                                         |
+| paper_18 | ['N/A']                          | ['Computation offloading', 'Multi-objective optimization']       | ['N/A']                                                                             | ['Minimize both the energy consumption and task processing delay']                                                      |
+| paper_19 | ['N/A']                          | ['Task scheduling', 'Differential evolution algorithm']          | ['N/A']                                                                             | ['Minimizing system energy consumption']                                                                                |
+| paper_20 | ['N/A']                          | ['Computation offloading', 'Genetic algorithm']                  | ['Genetic algorithm based computation algorithm']                                   | ['Minimize the energy consumption of the UEs']                                                                          |
+| paper_21 | ['N/A']                          | ['Genetic algorithm', 'Resource allocation']                     | ['Genetic algorithm based optimization of offloading and resource allocation']      | ['Minimizing user task completion time']                                                                                |
+
+MATCHES:
+Virtualization technology used: 
+Resource management techniques: 
+Load balancing techniques: 
+Quality of Service (QoS) requirements: 

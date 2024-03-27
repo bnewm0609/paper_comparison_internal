@@ -1,0 +1,37 @@
+ID: fef1be89-2ea0-47e8-8784-8c68d290224e
+
+GOLD TABLE:
+|           | Dataset       | Method          |
+|----------:|:--------------|:----------------|
+| 247793124 | ['LivoxSimu'] | ['ALSO (ours)'] |
+| 245952568 | ['-']         | ['ALSO (ours)'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/fef1be89-2ea0-47e8-8784-8c68d290224e/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Method Focus                                                                                                                    | Experimental Results                                                                                               |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 2  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 3  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 4  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 5  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 6  | ['Self-supervised pretraining method for 3D perception models tailored to autonomous driving data.']                            | ['Produces 3D representations that transfer well on semantic segmentation and object detection tasks.']            |
+| Paper 7  | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 8  | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 9  | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 10 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 11 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 12 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 13 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 14 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 15 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+| Paper 16 | ['New contrastive learning approach for representation learning for 3D point cloud data in the context of autonomous driving.'] | ['Achieves competitive performance and learns a more descriptive feature representation for 3D point cloud data.'] |
+
+MATCHES:
+Method Focus: 
+Experimental Results: 

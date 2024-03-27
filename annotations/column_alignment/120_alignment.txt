@@ -1,0 +1,33 @@
+ID: a45087b0-4383-4722-aa75-7ec8ff299cbf
+
+GOLD TABLE:
+|         | ID     | Attr #1                      | A#1 Cat   | Attr #2            | A#2 Cat   |
+|--------:|:-------|:-----------------------------|:----------|:-------------------|:----------|
+| 8314975 | ['1']  | ['Occupation']               | ['14']    | ['Native Country'] | ['41']    |
+|  700906 | ['11'] | ['Lower right Y coordinate'] | ['186']   | ['Traffic Sign']   | ['43']    |
+
+GOLD SCHEMA:
+0: ID
+1: Attr #1
+2: A#1 Cat
+3: Attr #2
+4: A#2 Cat
+
+PREDICTION PATH:../../metric_validation_0/a45087b0-4383-4722-aa75-7ec8ff299cbf/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Evaluation metrics used for comparison          | Baseline algorithms used for comparison                                                         | Results of the evaluation   | Comparison with the state-of-the-art methods           |
+|:--------|:------------------------------------------------|:------------------------------------------------------------------------------------------------|:----------------------------|:-------------------------------------------------------|
+| paper_1 | ['N/A']                                         | ['N/A']                                                                                         | ['N/A']                     | ['N/A']                                                |
+| paper_2 | ['N/A']                                         | ['N/A']                                                                                         | ['N/A']                     | ['N/A']                                                |
+| paper_3 | ['N/A']                                         | ['N/A']                                                                                         | ['N/A']                     | ['N/A']                                                |
+| paper_4 | ['N/A']                                         | ['N/A']                                                                                         | ['N/A']                     | ['N/A']                                                |
+| paper_5 | ['N/A']                                         | ['N/A']                                                                                         | ['N/A']                     | ['N/A']                                                |
+| paper_6 | ['Accuracy', 'Precision', 'Recall', 'F1 score'] | ['Viola-Jones detector based on Haar features', 'Linear classifier relying on HOG descriptors'] | [87.5, 92.3, 91.1, 91.7]    | ['Proposed algorithm outperforms baseline algorithms'] |
+| paper_7 | ['Accuracy', 'Precision', 'Recall', 'F1 score'] | ['Viola-Jones detector based on Haar features', 'Linear classifier relying on HOG descriptors'] | [88.4, 93.2, 92.0, 92.6]    | ['Proposed algorithm outperforms baseline algorithms'] |
+
+MATCHES:
+Evaluation metrics used for comparison: 
+Baseline algorithms used for comparison: 
+Results of the evaluation: 
+Comparison with the state-of-the-art methods: 

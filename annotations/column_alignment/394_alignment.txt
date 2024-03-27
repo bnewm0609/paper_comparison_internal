@@ -1,0 +1,36 @@
+ID: a07d0b86-db68-4fa1-bb26-d00069f5bd60
+
+GOLD TABLE:
+|           | Loss                      | Training set   |
+|----------:|:--------------------------|:---------------|
+|  52195299 | ['Softmax']               | ['VoxCeleb1']  |
+|  54200945 | ['-']                     | ['VoxCeleb1']  |
+|   4881455 | ['A-Softmax + GNLL']      | ['VoxCeleb1']  |
+|   4407761 | ['Softmax']               | ['VoxCeleb1']  |
+|  51713108 | ['AM-Softmax']            | ['VoxCeleb1']  |
+|  49211906 | ['Softmax + Contrastive'] | ['VoxCeleb2']  |
+|  67856245 | ['Softmax']               | ['VoxCeleb2']  |
+| 202751677 | ['AAM']                   | ['VoxCeleb1']  |
+
+GOLD SCHEMA:
+0: Loss
+1: Training set
+
+PREDICTION PATH:../../metric_validation_0/a07d0b86-db68-4fa1-bb26-d00069f5bd60/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Use of Convolutional Neural Networks (CNN) for speaker recognition                                                                                                                                                                                                               | Extraction of robust speaker embeddings using frame-level representations                                                                                                                                                                      |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Propose a Convolutional Neural Network (CNN) based speaker recognition model for extracting robust speaker embeddings.']                                                                                                                                                       | ['Modify the structure to extract frame-level speaker embeddings from each hidden layer.']                                                                                                                                                     |
+| paper_2 | ['Propose a Convolutional Neural Network (CNN) based speaker recognition model for extracting robust speaker embeddings.']                                                                                                                                                       | ['Modify the structure to extract frame-level speaker embeddings from each hidden layer.']                                                                                                                                                     |
+| paper_3 | ['N/A']                                                                                                                                                                                                                                                                          | ['N/A']                                                                                                                                                                                                                                        |
+| paper_4 | ['N/A']                                                                                                                                                                                                                                                                          | ['N/A']                                                                                                                                                                                                                                        |
+| paper_5 | ['N/A']                                                                                                                                                                                                                                                                          | ['Utilize an attention mechanism to give different weights to different frames and generate weighted means and standard deviations to capture long-term variations in speaker characteristics.']                                               |
+| paper_6 | ['N/A']                                                                                                                                                                                                                                                                          | ['Augment the training and testing data, find the optimal dimensionality of embedding space and use more discriminative loss functions to improve identification and verification accuracy of a text-independent speaker recognition system.'] |
+| paper_7 | ['Introduce a very large-scale audio-visual speaker recognition dataset collected from open-source media. Develop and compare Convolutional Neural Network (CNN) models and training strategies that can effectively recognize identities from voice under various conditions.'] | ['N/A']                                                                                                                                                                                                                                        |
+| paper_8 | ['N/A']                                                                                                                                                                                                                                                                          | ["Propose a powerful speaker recognition deep network using 'thin-ResNet' trunk architecture and dictionary-based NetVLAD or GhostVLAD layer to aggregate features across time for utterance-level aggregation."]                              |
+| paper_9 | ['Analyze the performance of end-to-end deep speaker recognizers on two popular text-independent tasks. Achieve state-of-the-art performance on VoxCeleb using a combination of deep convolutional feature extractor, self-attentive pooling, and large-margin loss functions.'] | ['N/A']                                                                                                                                                                                                                                        |
+
+MATCHES:
+Use of Convolutional Neural Networks (CNN) for speaker recognition: 
+Extraction of robust speaker embeddings using frame-level representations: 

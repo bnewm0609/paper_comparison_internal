@@ -1,0 +1,31 @@
+ID: 8360b24e-3194-416b-b6c0-885fca2c9d71
+
+GOLD TABLE:
+|           | Benchmark                                         | Gender   | Harms                          |
+|----------:|:--------------------------------------------------|:---------|:-------------------------------|
+| 167217680 | ['Synthetic equity evaluation corpus (EEC)']      | ['b']    | ['R: under-rep, stereotyping'] |
+| 216641970 | ['BERT-based perturbations on natural sentences'] | ['b']    | ['R: under-rep, stereotyping'] |
+| 173991101 | ['WinoMT']                                        | ['b']    | ['R: under-rep, stereotyping'] |
+|  76654723 | ['Europarl (generic)']                            | ['b']    | ['A: quality']                 |
+| 220047833 | ['Trustpilot (reviews with gender and age)']      | ['b']    | ['R: under-rep']               |
+
+GOLD SCHEMA:
+0: Benchmark
+1: Gender
+2: Harms
+
+PREDICTION PATH:../../metric_validation_0/8360b24e-3194-416b-b6c0-885fca2c9d71/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Reduction of model bias                                                                                                                                               | Impact on employment and recommendation systems                                                                                                      | Cross-lingual challenges                                                                                                                                                                                      |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['We evaluate gender bias in conventional machine translation systems utilizing the proposed measure, which is termed here as translation gender bias index (TGBI).'] | ['The need for a system that reduces the model bias has grown in areas such as image captioning, content recommendation, and automated employment.'] | ['The task being cross-lingual and challenging to define.']                                                                                                                                                   |
+| paper_2 | ['The examples in our benchmark expose where model representations are gendered.']                                                                                    | ['We use our method to compile an evaluation benchmark spanning examples for four languages from three language families.']                          | ['The examples in our benchmark expose where model representations are gendered, and the unintended consequences these gendered representations can have in downstream application.']                         |
+| paper_3 | ['We devise an automatic gender bias evaluation method for eight target languages with grammatical gender, based on morphological analysis.']                         | ['None applicable: No specific content found.']                                                                                                      | ['Our analyses show that four popular industrial MT systems and two recent state-of-the-art academic MT models are significantly prone to gender-biased translation errors for all tested target languages.'] |
+| paper_4 | ['Our experiments show that adding a gender feature to an NMT system significantly improves the translation quality for some language pairs.']                        | ['None applicable: No specific content found.']                                                                                                      | ['None applicable: No specific content found.']                                                                                                                                                               |
+| paper_5 | ['Our findings suggest that translation models reflect demographic bias in the training data.']                                                                       | ['None applicable: No specific content found.']                                                                                                      | ['None applicable: No specific content found.']                                                                                                                                                               |
+
+MATCHES:
+Reduction of model bias: 
+Impact on employment and recommendation systems: 
+Cross-lingual challenges: 

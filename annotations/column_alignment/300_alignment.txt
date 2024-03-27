@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Markov Decision Process modeling                                                                 | Approximate Dynamic Programming (ADP) and heuristics                                                                                                  | Utilization of Bayesian exploration and VPI                                                                                        | Comparison of performance with traditional heuristics                                                                           |
+|:--------|:-------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                          | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                            | ['N/A']                                                                                                                         |
+| paper_2 | ['The paper discusses the modeling of the transportation problem as a Markov Decision Process.'] | ['The paper proposes a heuristic solution based on Approximate Dynamic Programming (ADP) and mentions the use of heuristics in solving the problem.'] | ['The paper discusses the inclusion of Bayesian exploration using the Value of Perfect Information (VPI) in solving the problem.'] | ['The paper compares the proposed ADP-VPI combination with common practice heuristics and shows more than 20% gain in profit.'] |
+
+MATCHES:
+Markov Decision Process modeling: 
+Approximate Dynamic Programming (ADP) and heuristics: 
+Utilization of Bayesian exploration and VPI: 
+Comparison of performance with traditional heuristics: 

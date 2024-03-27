@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Target nuclide     | Experimental method                                                                                                                 |
+|:--------|:-------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['2H', '239Pu']    | ['large liquid scintillator method']                                                                                                |
+| paper_2 | ['239Pu']          | ['measurement of discrete gamma rays using the large-scale Compton-suppressed array of Ge detectors, GEANIE']                       |
+| paper_3 | ['239Pu']          | ['not explicitly stated, but possibly activation measurement, neutron-counting experiment, or measurement using reaction modeling'] |
+| paper_4 | ['239Pu', '241Am'] | ['alpha- and gamma-spectroscopy measurements of the post–irradiation ratios relative to calibration reactions']                     |
+
+MATCHES:
+Target nuclide: 
+Experimental method: 

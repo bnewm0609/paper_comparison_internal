@@ -1,0 +1,35 @@
+ID: 6c7a124f-8eee-49af-b669-af725f30eb11
+
+GOLD TABLE:
+|           | Feature Categories   | Features                                              | Component   |
+|----------:|:---------------------|:------------------------------------------------------|:------------|
+|  32133565 | ['Lingo-stats']      | ['Unigram language model']                            | ['Users']   |
+|  15124465 | ['Lingo-stats']      | ['POS-based features']                                | ['Reviews'] |
+|   1290263 | ['Lingo-stats']      | ['Pairwise features']                                 | ['Users']   |
+| 232062541 | ['Lingo-stats']      | ['puasality, lexical diversity, emotiveness']         | ['Reviews'] |
+|  33457009 | ['WE']               | ['WE through skip-gram, positive and negative ratio'] | ['Reviews'] |
+|  15536792 | ['WE']               | ['CBOW']                                              | ['Reviews'] |
+|  49419223 | ['WE']               | ['Skipgram + word frequency']                         | ['Reviews'] |
+
+GOLD SCHEMA:
+0: Feature Categories
+1: Features
+2: Component
+
+PREDICTION PATH:../../metric_validation_0/6c7a124f-8eee-49af-b669-af725f30eb11/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology                                                                                | Data Source                                       | Evaluation Metrics                                   |
+|:--------|:-------------------------------------------------------------------------------------------|:--------------------------------------------------|:-----------------------------------------------------|
+| Paper_1 | ['KL divergence and probabilistic language modeling']                                      | ['Large e-Commerce site (implicit)']              | ['Accuracy for spam detection']                      |
+| Paper_2 | ['Using n-gram features, KL-divergence, and behavioral features']                          | ['Yelp.com']                                      | ['Classification accuracy', 'KL-divergence']         |
+| Paper_3 | ['Multiple heterogeneous pairwise features and unsupervised colluder detecting framework'] | ['Popular product review websites']               | ['Classification accuracy']                          |
+| Paper_4 | ['Natural language processing approach with linguistic features']                          | ['Online reviews']                                | ['Classification accuracy']                          |
+| Paper_5 | ['Review density, semantic, and emotion features']                                         | ['Online reviews and reviewer info']              | ['Performance compared to traditional methods']      |
+| Paper_6 | ['Neural network model with convolutional and recurrent neural networks']                  | ['Hotel, Restaurant, and Doctor review datasets'] | ['Performance compared to state-of-the-art methods'] |
+| Paper_7 | ['LDA-based feature extraction']                                                           | ['Yelp Filter Dataset']                           | ['Effectiveness of LDA-based feature extraction']    |
+
+MATCHES:
+Methodology: 
+Data Source: 
+Evaluation Metrics: 

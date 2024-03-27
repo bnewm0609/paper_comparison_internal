@@ -1,0 +1,35 @@
+ID: 53285b40-86e5-419a-b47b-d1adca8319ce
+
+GOLD TABLE:
+|           | Main approach                            | Environment   | Obstacle avoidance   | Coordination   | Sensing ability   |
+|----------:|:-----------------------------------------|:--------------|:---------------------|:---------------|:------------------|
+| 230511448 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Perfect']       |
+| 246826797 | ['Deep\nReinforcement Learning']         | ['Air (3D)']  | ['Static']           | ['Yes']        | ['Limited']       |
+| 247818114 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['No']               | ['No']         | ['Perfect']       |
+| 199543302 | ['Meta-reinforcement learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Limited']       |
+| 251134882 | ['Bayesian fusion and machine learning'] | ['Land (2D)'] | ['No']               | ['Yes']        | ['Limited']       |
+
+GOLD SCHEMA:
+0: Main approach
+1: Environment
+2: Obstacle avoidance
+3: Coordination
+4: Sensing ability
+
+PREDICTION PATH:../../metric_validation_0/53285b40-86e5-419a-b47b-d1adca8319ce/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Game environment and physics engine used                         | Types of agents (e.g., pursuer and evader) and their kinematics   | Consideration of obstacles and their influence on the game                  | Use of curriculum learning or similar approaches for improving system performance   | Comparison of performance against intelligent opponents                                             |
+|:--------|:-----------------------------------------------------------------|:------------------------------------------------------------------|:----------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| paper_1 | ['A physics engine is used, but not specified in the abstract.'] | ['A pursuer and an evader with kinematic constraints are used.']  | ['Obstacles are considered and their influence is considered in the game.'] | ['Curriculum learning is used to improve system performance.']                      | ['Comparative simulation results are presented for the performance against intelligent opponents.'] |
+| paper_2 | ['The PES framework with a physics engine is used.']             | ['Multiple pursuers (quadcopters) and a target.']                 | ['Obstacles are considered in the game.']                                   | ['N/A']                                                                             | ['The performance of the proposed strategy is verified with experiments.']                          |
+| paper_3 | ['N/A']                                                          | ['A dog and a sheep with specific kinematics.']                   | ['N/A']                                                                     | ['N/A']                                                                             | ['The performance of the DQN and DDPG models are compared.']                                        |
+| paper_4 | ['N/A']                                                          | ['N/A']                                                           | ['N/A']                                                                     | ['N/A']                                                                             | ['N/A']                                                                                             |
+| paper_5 | ['N/A']                                                          | ['N/A']                                                           | ['N/A']                                                                     | ['N/A']                                                                             | ['N/A']                                                                                             |
+
+MATCHES:
+Game environment and physics engine used: 
+Types of agents (e.g., pursuer and evader) and their kinematics: 
+Consideration of obstacles and their influence on the game: 
+Use of curriculum learning or similar approaches for improving system performance: 
+Comparison of performance against intelligent opponents: 

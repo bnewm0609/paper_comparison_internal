@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Mathematical model used for evaluation                                     | Additional nuclear data utilization for cross-section evaluation                                   |
+|:--------|:---------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| paper_1 | ['Statistical preequilibrium model']                                       | ['N/A']                                                                                            |
+| paper_2 | ['Enhanced Hauser-Feshbach model']                                         | ['N/A']                                                                                            |
+| paper_3 | ['Reaction modeling with consistency arguments supported by nuclear data'] | ['Other nuclear data utilized to put constraints on the shape and magnitude of the cross section'] |
+| paper_4 | ['N/A']                                                                    | ['N/A']                                                                                            |
+
+MATCHES:
+Mathematical model used for evaluation: 
+Additional nuclear data utilization for cross-section evaluation: 

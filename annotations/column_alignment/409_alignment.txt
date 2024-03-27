@@ -1,0 +1,44 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of algorithms evaluated                                             | Evaluation metrics used                                         |
+|:---------|:--------------------------------------------------------------------------|:----------------------------------------------------------------|
+| paper_1  | ['object detection', 'tracking', 'segmentation']                          | ['N/A']                                                         |
+| paper_2  | ['object detection', 'tracking']                                          | ['N/A']                                                         |
+| paper_3  | ['stereo', 'optical flow', 'visual odometry/SLAM', '3D object detection'] | ['accuracy', 'precision', 'recall', 'F1 score', 'running time'] |
+| paper_4  | ['multiple target tracking']                                              | ['N/A']                                                         |
+| paper_5  | ['multiple people tracking']                                              | ['N/A']                                                         |
+| paper_6  | ['multiple object tracking']                                              | ['misclassification rate']                                      |
+| paper_7  | ['human pose estimation', 'articulated tracking']                         | ['N/A']                                                         |
+| paper_8  | ['multiple object tracking']                                              | ['N/A']                                                         |
+| paper_9  | ['detection', 'tracking', 'segmentation']                                 | ['N/A']                                                         |
+| paper_10 | ['multiple object tracking and segmentation']                             | ['N/A']                                                         |
+| paper_11 | ['multiple object tracking and segmentation']                             | ['N/A']                                                         |
+| paper_12 | ['multi-target multi-camera tracking', 're-identification']               | ['N/A']                                                         |
+| paper_13 | ['multiple object tracking']                                              | ['N/A']                                                         |
+
+MATCHES:
+Types of algorithms evaluated: 
+Evaluation metrics used: 

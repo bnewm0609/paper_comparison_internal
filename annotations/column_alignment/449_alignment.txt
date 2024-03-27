@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Languages detected   | Data collection methods                                                                                                                                                                                                                     | Feature extraction techniques                         | Classification algorithms used                                                   | Evaluation metrics                                                                                      |
+|:--------|:---------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------|:---------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Amharic']          | ['N/A']                                                                                                                                                                                                                                     | ['Word2Vec and TF-IDF']                               | ['Random forest and Naïve Bayes']                                                | ['79.83% accuracy']                                                                                     |
+| paper_2 | ['Amharic']          | ['collected from 5 consecutive years in Ethiopia (5Js), namely from 2018-2022, following the ‘June’ events in Ethiopia using Yandex Toloka crowdsourcing platform']                                                                         | ['N/A']                                               | ['Classical machine learning algorithms, LR and SVM, NB, LSTM, BiLSTM, and CNN'] | ['F1 score of 0.49, 0.46, and 0.44 for LR, SVM, and NB, and 0.48 and 0.50 for Am-FLAIR and Am-RoBERTa'] |
+| paper_3 | ['Afaan Oromo']      | ['collected a total of 12,812 posts and comments from Facebook']                                                                                                                                                                            | ['BOW, TF-IDF, word2vec, and Keras Embedding layers'] | ['BiLSTM with pre-trained word2vec feature extraction']                          | ['better accuracy of 0.84 and 0.88 for eight classes and two classes, respectively']                    |
+| paper_4 | ['Afan Oromo']       | ['collected comments and posts from social media like Facebook and Twitter pages of BBC Afan Oromo, OBN Afan Oromo, Fana Afan Oromo Program, Politicians, Activists, Religious Men, and Oromia Communication Bureau using Face pager tool'] | ['N/A']                                               | ['N/A']                                                                          | ['N/A']                                                                                                 |
+| paper_5 | ['Afaan Oromo']      | ['crawl data from Facebook posts and comments by using Face pager and scrap storm API']                                                                                                                                                     | ['TF-IDF, N-gram, and W2vec']                         | ['SVM with TF-IDF, N-gram, and W2vec feature extraction']                        | ['accuracy, F-score, recall and precision measurements']                                                |
+
+MATCHES:
+Languages detected: 
+Data collection methods: 
+Feature extraction techniques: 
+Classification algorithms used: 
+Evaluation metrics: 

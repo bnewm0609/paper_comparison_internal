@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Scale of the dataset and amount of annotations                                                                                              | Diversity of scenarios and images within the dataset                                                                                       |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Market-1501 dataset contains over 32,000 annotated bboxes and a distractor set of over 500K images.']                                     | ['Market-1501 dataset images from different perspectives and various environments.']                                                       |
+| paper_2  | ['Human3.6M dataset has 3.6 million accurate 3D human poses and diverse set of motions and poses under typical human activities.']          | ['Human3.6M dataset comprises diverse motions and poses encountered in typical human activities.']                                         |
+| paper_3  | ['DeepFashion1 dataset contains over 800,000 richly annotated images.']                                                                     | ['DeepFashion1 dataset contains images taken under different scenarios including store, street snapshot, and consumer.']                   |
+| paper_4  | ['Multi-View Clothing dataset provides four different views for each clothing item and 264 attributes for describing clothing appearance.'] | ['Multi-View Clothing dataset provides four different views for each clothing item, showcasing diverse clothing items and various views.'] |
+| paper_5  | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_6  | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_7  | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_8  | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_9  | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_10 | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_11 | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_12 | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_13 | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+| paper_14 | ['N/A']                                                                                                                                     | ['N/A']                                                                                                                                    |
+
+MATCHES:
+Scale of the dataset and amount of annotations: 
+Diversity of scenarios and images within the dataset: 

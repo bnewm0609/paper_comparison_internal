@@ -1,0 +1,29 @@
+ID: b5b73d12-e797-447a-ac52-ac6e8c7c7a77
+
+GOLD TABLE:
+|           | Method         | dataset   | comments                  |
+|----------:|:---------------|:----------|:--------------------------|
+|   3138661 | ['MLP']        | ['3559']  | ['edge + 3-layer MLP']    |
+|  19358648 | ['fasterRCNN'] | ['-']     | ['Very complex and slow'] |
+| 212649623 | ['M2Det']      | ['5000']  | ['Very complex and slow'] |
+|  54033357 | ['VGG16 etc.'] | ['3500']  | ['Very complex and slow'] |
+
+GOLD SCHEMA:
+0: Method
+1: dataset
+2: comments
+
+PREDICTION PATH:../../metric_validation_0/b5b73d12-e797-447a-ac52-ac6e8c7c7a77/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Detection Algorithm                                                                                                         | Dataset and Methodology                                                                                                                       | Performance and Application                                                                                        |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | Proposes algorithms for detecting firearms and knives with limited false alarms                                             | Focuses on automated detection and recognition of dangerous situations for CCTV systems                                                       | Specificity and sensitivity of knife detection are significantly better                                            |
+| Paper 2 | Uses Faster R-CNN deep learning for automatic gun detection from cluttered scenes                                           | Utilizes Deep Convolutional Network (DCN) and transfer learning for automatic gun detection                                                   | Achieves propitious performance of automatic gun detection from cluttered scenes                                   |
+| Paper 3 | Introduces a novel large-scale dataset and uses a multi-level feature pyramid network for gun detection                     | Introduces a novel large-scale dataset of handguns and uses a single-stage object detector with a multi-level feature pyramid network (M2Det) | Increases the average precision of gun detection at different scales significantly compared to existing approaches |
+| Paper 4 | Uses real-time object detection with Convolutional Neural Networks (CNNs) for rapid detection and classification of weapons | Uses a Tensorflow-based implementation of the Overfeat network for detecting and classifying weapons in images                                | Achieves 93% training accuracy and 89% test accuracy with adjusted hyperparameters                                 |
+
+MATCHES:
+Detection Algorithm: 
+Dataset and Methodology: 
+Performance and Application: 

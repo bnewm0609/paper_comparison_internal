@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Annotation method (polygon prediction, graph convolutional network, 3D point cloud segmentation)   | Annotation efficiency (speed of annotation, human annotation time reduction)   | Performance comparison (agreement with ground truth, generalization capabilities)                             |
+|:--------|:---------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                            | ['N/A']                                                                        | ['N/A']                                                                                                       |
+| paper_2 | ['polygon prediction']                                                                             | ['4.7x speed-up, 78.4% agreement in IoU with ground truth']                    | ['Typical agreement between human annotators, generalization capabilities to unseen datasets']                |
+| paper_3 | ['graph convolutional network']                                                                    | ['29.3ms in automatic, 2.6ms in interactive mode']                             | ['Outperforms all existing approaches']                                                                       |
+| paper_4 | ['3D point cloud segmentation']                                                                    | ['30x lower human annotation time']                                            | ['Generalization to previously unseen data']                                                                  |
+| paper_5 | ['N/A']                                                                                            | ['60% reduction in labeling efforts']                                          | ['Saves up to 60% labeling efforts']                                                                          |
+| paper_6 | ['3D point cloud segmentation']                                                                    | ['N/A']                                                                        | ['Recover a substantial amount of accurate cuboids, can be used to train 3D vehicle detectors']               |
+| paper_7 | ['N/A']                                                                                            | ['6.2x acceleration of annotation speed']                                      | ['Significantly improved label quality, higher instance-level precision and recall, higher bounding box IoU'] |
+
+MATCHES:
+Annotation method (polygon prediction, graph convolutional network, 3D point cloud segmentation): 
+Annotation efficiency (speed of annotation, human annotation time reduction): 
+Performance comparison (agreement with ground truth, generalization capabilities): 

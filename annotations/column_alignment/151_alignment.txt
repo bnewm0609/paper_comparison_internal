@@ -1,0 +1,29 @@
+ID: c5f434c2-7bac-47ed-8dcb-be78c4f7ac67
+
+GOLD TABLE:
+|           | Personality assessment questionnaire              | Item count   |
+|----------:|:--------------------------------------------------|:-------------|
+|  59804394 | ['IPIP 50-version']                               | ['50']       |
+|  39888164 | ['Big-five marker scale (BFMS) {{cite:4351c2f}}'] | ['100']      |
+|  12589916 | ['BFI-10']                                        | ['10']       |
+| 132309131 | ['IPIP-NEO-60']                                   | ['60']       |
+|  46855347 | ['IPIP 100-version']                              | ['100']      |
+
+GOLD SCHEMA:
+0: Personality assessment questionnaire
+1: Item count
+
+PREDICTION PATH:../../metric_validation_0/c5f434c2-7bac-47ed-8dcb-be78c4f7ac67/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Relevance to Personality                                                                   | Methodology                                                                                                                                 |
+|:--------|:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Personality-based user similarity measure']                                              | ['Novel approach for calculating user similarity based on big five personality model']                                                      |
+| paper_2 | ['Emotion and personality recognition using physiological sensors']                        | ['Use of physiological sensors for emotion and personality recognition']                                                                    |
+| paper_3 | ['Using personality perspective to determine associations in consumer buying tendency']    | ["Development of a benchmark for computational advertising enriched with Big-Five users' personality factors and personal users' pictures"] |
+| paper_4 | ['Friend recommendation system based on Big-Five personality traits and hybrid filtering'] | ['Evaluation of a friend recommendation system based on the Big-Five personality traits model and hybrid filtering']                        |
+| paper_5 | ['Examining personality similarity between friends and romantic partners']                 | ['Employed behavior-based personality measures to study personality similarity between romantic partners and friends']                      |
+
+MATCHES:
+Relevance to Personality: 
+Methodology: 

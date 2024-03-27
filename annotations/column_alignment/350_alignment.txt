@@ -1,0 +1,43 @@
+ID: 33d1dcd3-eeb5-4e81-bba2-5a9ecc730856
+
+GOLD TABLE:
+|          | Model                                                        | Main Contribution                                        |
+|---------:|:-------------------------------------------------------------|:---------------------------------------------------------|
+| 12054943 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ['and high uncoded BER of the eavesdropper']             |
+| 37018232 | ['No CSI of the receiver and eavesdropper']                  | ['and zero diversity of\nthe eavesdropper']              |
+|  8778619 | ['No CSI of the receiver and eavesdropper']                  | ['to make the eavesdropper unable to decode the signal'] |
+|  6102369 | ['No CSI of the receiver and eavesdropper']                  | ['by using\nM-PSK modulation and OSTBC']                 |
+|  7786858 | ['No CSI of the receiver and eavesdropper']                  | ["to deliberately randomize the eavesdropper's signal"]  |
+| 16575249 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ["the eavesdropper's correctly decoding probability"]    |
+| 35469277 | ['Perfect CSIT\nof the receiver, SCSIT of the eavesdropper'] | ['Analyze the SER of confidential information']          |
+
+GOLD SCHEMA:
+0: Model
+1: Main Contribution
+
+PREDICTION PATH:../../metric_validation_0/33d1dcd3-eeb5-4e81-bba2-5a9ecc730856/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Channel model   | SEP quantification                            | Diversity order preservation                                                                     |
+|:---------|:----------------|:----------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| paper_1  | ['MIMO']        | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_2  | ['MIMO']        | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_3  | ['MIMO']        | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_4  | ['MIMO']        | ['N/A']                                       | ['Yes, full diversity for legitimate channel, diversity order reduced to zero for eavesdropper'] |
+| paper_5  | ['MIMO']        | ['N/A']                                       | ['Yes, full diversity for legitimate channel, diversity order reduced to zero for eavesdropper'] |
+| paper_6  | ['MIMO']        | ['N/A']                                       | ['Yes, full diversity for legitimate channel, diversity order reduced to zero for eavesdropper'] |
+| paper_7  | ['MISOME']      | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_8  | ['MISOME']      | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_9  | ['MISOME']      | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_10 | ['MISOME']      | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_11 | ['N/A']         | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_12 | ['N/A']         | ['N/A']                                       | ['N/A']                                                                                          |
+| paper_13 | ['MIMO']        | ["Yes, for Eve's decoding error probability"] | ['N/A']                                                                                          |
+| paper_14 | ['MIMO']        | ["Yes, for Eve's decoding error probability"] | ['N/A']                                                                                          |
+| paper_15 | ['MISOME']      | ['Yes, using δ-secrecy SEP']                  | ['Yes, preserves secrecy diversity of order nt - ne']                                            |
+| paper_16 | ['MISOME']      | ['Yes, using δ-secrecy SEP']                  | ['Yes, preserves secrecy diversity of order nt - ne']                                            |
+
+MATCHES:
+Channel model: 
+SEP quantification: 
+Diversity order preservation: 

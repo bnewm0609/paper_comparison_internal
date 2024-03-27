@@ -1,0 +1,25 @@
+ID: 9bab2bd8-e02b-4398-9c2a-fe8f5354cced
+
+GOLD TABLE:
+|          | #     | Dataset         |
+|---------:|:------|:----------------|
+| 18993998 | ['2'] | ['Our dataset'] |
+| 16224335 | ['4'] | ['Our Dataset'] |
+
+GOLD SCHEMA:
+0: #
+1: Dataset
+
+PREDICTION PATH:../../metric_validation_0/9bab2bd8-e02b-4398-9c2a-fe8f5354cced/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset used for experimentation   | Performance evaluation metric   |
+|:--------|:-----------------------------------|:--------------------------------|
+| Paper 1 | ['SemEval 2014']                   | ['N/A']                         |
+| Paper 2 | ['SemEval 2014']                   | ['N/A']                         |
+| Paper 3 | ['N/A']                            | ['N/A']                         |
+| Paper 4 | ['N/A']                            | ['N/A']                         |
+
+MATCHES:
+Dataset used for experimentation: 
+Performance evaluation metric: 

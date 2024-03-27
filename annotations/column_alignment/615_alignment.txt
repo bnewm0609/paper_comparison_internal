@@ -1,0 +1,51 @@
+ID: 7dd8ac96-57c9-43c7-830b-f82862f262b7
+
+GOLD TABLE:
+|          | Usage             | Meta Class     | # Categories   | Train       | Val        | Test       | Prompts   |
+|---------:|:------------------|:---------------|:---------------|:------------|:-----------|:-----------|:----------|
+|  4309276 | ['Evaluation']    | ['textures']   | ['47']         | ['1,880']   | ['1,880']  | ['1,880']  | ['154']   |
+| 16922659 | ['-']             | ['birds']      | ['555']        | ['21,536']  | ['2,393']  | ['24,633'] | ['22']    |
+|  3181866 | ['-']             | ['dogs']       | ['120']        | ['10,800']  | ['1,200']  | ['8,580']  | ['33']    |
+| 15193013 | ['-']             | ['flowers']    | ['102']        | ['1,020']   | ['1,020']  | ['6,149']  | ['26']    |
+| 18268744 | ['-']             | ['all']        | ['10']         | ['40,000']  | ['10,000'] | ['10,000'] | ['42']    |
+| 16852518 | ['-']             | ['numbers']    | ['10']         | ['58,605']  | ['14,652'] | ['26,032'] | ['3']     |
+|  1309931 | ['Meta Training'] | ['scenes']     | ['397']        | ['108,754'] | ['-']      | ['-']      | ['128']   |
+|   308212 | ['Meta Training'] | ['all']        | ['10']         | ['5,000']   | ['-']      | ['8,000']  | ['43']    |
+| 22188073 | ['Meta Training'] | ['vegetables'] | ['200']        | ['20,000']  | ['10,000'] | ['61,117'] | ['95']    |
+|   383200 | ['Meta Training'] | ['cats,dogs']  | ['37']         | ['3,680']   | ['-']      | ['3,669']  | ['18']    |
+| 11810992 | ['Meta Training'] | ['remote']     | ['10']         | ['27,000']  | ['-']      | ['-']      | ['12']    |
+
+GOLD SCHEMA:
+0: Usage
+1: Meta Class
+2: # Categories
+3: Train
+4: Val
+5: Test
+6: Prompts
+
+PREDICTION PATH:../../metric_validation_0/7dd8ac96-57c9-43c7-830b-f82862f262b7/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Number of classes   | Annotated images   | Dataset size   | Hierarchical labeling                                                                                                    | Categorization based on characteristics                                               |
+|:---------|:--------------------|:-------------------|:---------------|:-------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|
+| paper_1  | ['10', '100']       | ['Yes']            | ['N/A']        | ['Describes hierarchical labeling using CIFAR-10 and CIFAR-100 sets.']                                                   | ['N/A']                                                                               |
+| paper_2  | ['10', '100']       | ['Yes']            | ['N/A']        | ['Describes hierarchical labeling using CIFAR-10 and CIFAR-100 sets.']                                                   | ['N/A']                                                                               |
+| paper_3  | ['120']             | ['Yes']            | ['22,000']     | ["Discusses hierarchical labeling of dogs' images with 120 species."]                                                    | ['Discusses categorization of dogs based on their characteristics.']                  |
+| paper_4  | ['37']              | ['Yes']            | ['N/A']        | ['N/A']                                                                                                                  | ['Discusses categorization of animal breeds based on their characteristics.']         |
+| paper_5  | ['103']             | ['N/A']            | ['N/A']        | ['N/A']                                                                                                                  | ['N/A']                                                                               |
+| paper_6  | ['N/A']             | ['Yes']            | ['N/A']        | ['N/A']                                                                                                                  | ['N/A']                                                                               |
+| paper_7  | ['10']              | ['Yes']            | ['27,000']     | ['N/A']                                                                                                                  | ['N/A']                                                                               |
+| paper_8  | ['899']             | ['N/A']            | ['130,519']    | ['Describes a new extensive Scene UNderstanding (SUN) database that contains 899 categories.']                           | ['N/A']                                                                               |
+| paper_9  | ['N/A']             | ['N/A']            | ['600,000']    | ['N/A']                                                                                                                  | ['N/A']                                                                               |
+| paper_10 | ['555']             | ['Yes']            | ['48,562']     | ['Describes the NABirds dataset containing 555 categories and part annotations.']                                        | ['Discusses categorization of birds based on their characteristics.']                 |
+| paper_11 | ['N/A']             | ['N/A']            | ['N/A']        | ['N/A']                                                                                                                  | ['N/A']                                                                               |
+| paper_12 | ['25', '292']       | ['Yes']            | ['160,000']    | ['Discusses hierarchical labeling of vegetables and fruits with 25 upper-level categories and 292 subordinate classes.'] | ['Discusses categorization of vegetables and fruits based on their characteristics.'] |
+| paper_13 | ['25', '292']       | ['Yes']            | ['160,000']    | ['Discusses hierarchical labeling of vegetables and fruits with 25 upper-level categories and 292 subordinate classes.'] | ['Discusses categorization of vegetables and fruits based on their characteristics.'] |
+
+MATCHES:
+Number of classes: 
+Annotated images: 
+Dataset size: 
+Hierarchical labeling: 
+Categorization based on characteristics: 

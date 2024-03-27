@@ -1,0 +1,33 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Authentication Method                                          | Data Used                                                                            | Stage of Authentication                           | Evaluation Metrics                                                         | Error Rates                                                                         |
+|:--------|:---------------------------------------------------------------|:-------------------------------------------------------------------------------------|:--------------------------------------------------|:---------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| Paper 1 | ['Mobile keystroke biometrics with spatial touch features']    | ['Touch-specific features of typing behavior on mobile touchscreens']                | ['Login stage and post-login']                    | ['Equal Error Rates (EER)']                                                | ['A reduction of 26.4% - 36.8% in EER']                                             |
+| Paper 2 | ['Keystroke and handwriting authentication on mobile devices'] | ['Data from smartphones and tablets, including both keystroke and handwriting data'] | ['Login stage']                                   | ['Error rates']                                                            | ['Error rates under 2%']                                                            |
+| Paper 3 | ['Virtual key typing based authentication']                    | ['Virtual key typing dynamics behavior']                                             | ['Login stage and post-login']                    | ['Authentication performance under different virtual key typing settings'] | ['Not provided']                                                                    |
+| Paper 4 | ['Keystroke analysis of free text']                            | ['Typing samples of free text entered by users without specific constraints']        | ['After an authentication phase has been passed'] | ['False Alarm Rate, Impostor Pass Rate']                                   | ['False Alarm Rate of less than 5%, and an Impostor Pass Rate of less than 0.005%'] |
+
+MATCHES:
+Authentication Method: 
+Data Used: 
+Stage of Authentication: 
+Evaluation Metrics: 
+Error Rates: 

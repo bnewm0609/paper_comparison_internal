@@ -1,0 +1,33 @@
+ID: a45087b0-4383-4722-aa75-7ec8ff299cbf
+
+GOLD TABLE:
+|         | ID     | Attr #1                      | A#1 Cat   | Attr #2            | A#2 Cat   |
+|--------:|:-------|:-----------------------------|:----------|:-------------------|:----------|
+| 8314975 | ['1']  | ['Occupation']               | ['14']    | ['Native Country'] | ['41']    |
+|  700906 | ['11'] | ['Lower right Y coordinate'] | ['186']   | ['Traffic Sign']   | ['43']    |
+
+GOLD SCHEMA:
+0: ID
+1: Attr #1
+2: A#1 Cat
+3: Attr #2
+4: A#2 Cat
+
+PREDICTION PATH:../../metric_validation_0/a45087b0-4383-4722-aa75-7ec8ff299cbf/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Source of the data set                      | Number and variety of images in the data set      | Categories of signs included in the data set   | Preprocessing of the data set                        |
+|:--------|:--------------------------------------------|:--------------------------------------------------|:-----------------------------------------------|:-----------------------------------------------------|
+| Paper 1 | ['N/A']                                     | ['N/A']                                           | ['N/A']                                        | ['N/A']                                              |
+| Paper 2 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+| Paper 3 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+| Paper 4 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+| Paper 5 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+| Paper 6 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+| Paper 7 | ['German Traffic Sign Detection Benchmark'] | ['Benchmark data set for traffic sign detection'] | ['Traffic signs']                              | ['Separation of sign detection from classification'] |
+
+MATCHES:
+Source of the data set: 
+Number and variety of images in the data set: 
+Categories of signs included in the data set: 
+Preprocessing of the data set: 

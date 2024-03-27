@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology (e.g., machine learning vs. stylistic representations)                                                                                                                                                                                                                | Accuracy of authorship attribution                                                |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| paper_1 | ['Finer-grained technique for author identification of basic blocks']                                                                                                                                                                                                             | ['52% accuracy among 282 authors']                                                |
+| paper_2 | ['Machine learning using a novel set of features, including ones obtained by decompiling the executable binary to source code, and a powerful set of techniques from the domain of source code authorship attribution along with stylistic representations embedded in assembly'] | ['Up to 96% accuracy with 100 candidates and 83% with 600 candidate programmers'] |
+
+MATCHES:
+Methodology (e.g., machine learning vs. stylistic representations): 
+Accuracy of authorship attribution: 

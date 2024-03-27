@@ -1,0 +1,70 @@
+ID: ea633ba2-44f4-4a74-b096-dd319318ca97
+
+GOLD TABLE:
+|           | Language       | Pretrained from                | Corpora                                                     | Publicly Available   | Evaluation                                                                                     |
+|----------:|:---------------|:-------------------------------|:------------------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------------------|
+| 211678011 | ['Japanese']   | ['Scratch']                    | ['Japanese Clinical Text + Japanese Wikipedia']             | ['No']               | ['Text Classification']                                                                        |
+| 226283634 | ['Portuguese'] | ['Multilingual BERT']          | ['Brazilian Clinical Text + Biomedical Text']               | ['Yes']              | ['Clinical Concept Extraction']                                                                |
+| 215416118 | ['Russian']    | ['Multilingual BERT']          | ['Russian and English Health Reviews']                      | ['Yes']              | ['ADR Tweets Classification']                                                                  |
+| 225452639 | ['German']     | ['General German BERT']        | ['Private Radiology Reports']                               | ['No']               | ['Radiology Reports Classification']                                                           |
+| 218564040 | ['Spanish']    | ['Scratch']                    | ['Spanish Biomedical Text']                                 | ['No']               | ['Biomedical NER']                                                                             |
+| 232283435 | ['Arabic']     | ['AraBERT']                    | ['General Arabic Text+ Arabic Biomedical Text']             | ['No']               | ['Biomedical NER']                                                                             |
+| 219956480 | ['French']     | ['CamemBERT {{cite:a40b78e}}'] | ['French Biomedical Corpus']                                | ['No']               | ['Biomedical NER']                                                                             |
+| 221293343 | ['Chinese']    | ['General Chinese BERT']       | ['Chinese Biomedical Text, Encyclopedia , Medical records'] | ['Yes']              | ['ChineseBLUE']                                                                                |
+| 220409271 | ['Japanese']   | ['Scratch']                    | ['Japanese Clinical Text']                                  | ['Yes']              | ['Text Classification']                                                                        |
+| 233240721 | ['Persian']    | ['ParsBERT {{cite:d02ce8d}}']  | ['Persian Medical Corpus']                                  | ['No']               | ['Medical Question Classification, Medical Question Retrieval and Medical Sentiment Analysis'] |
+| 235077408 | ['Spanish']    | ['XLM-R {{cite:e715160}}']     | ['Spanish Clinical Text corpus']                            | ['Yes']              | ['Medical Coding']                                                                             |
+
+GOLD SCHEMA:
+0: Language
+1: Pretrained from
+2: Corpora
+3: Publicly Available
+4: Evaluation
+
+PREDICTION PATH:../../metric_validation_0/ea633ba2-44f4-4a74-b096-dd319318ca97/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Language       | Task                                         | Method                           |
+|:---------|:---------------|:---------------------------------------------|:---------------------------------|
+| paper_1  | ['Arabic']     | ['Arabic NLP tasks']                         | nan                              |
+| paper_2  | ['Portuguese'] | ['Clinical NER']                             | nan                              |
+| paper_3  | ['Portuguese'] | ['Clinical NER']                             | nan                              |
+| paper_4  | ['Portuguese'] | ['Clinical NER']                             | nan                              |
+| paper_5  | ['Russian']    | ['NER and Sentence Classification']          | nan                              |
+| paper_6  | ['Russian']    | ['NER and Sentence Classification']          | nan                              |
+| paper_7  | ['English']    | ['Chest Radiographic Report Classification'] | nan                              |
+| paper_8  | ['English']    | ['Chest Radiographic Report Classification'] | nan                              |
+| paper_9  | ['Spanish']    | ['NER for Biomedical Literature']            | nan                              |
+| paper_10 | ['Arabic']     | ['Biomedical NER']                           | nan                              |
+| paper_11 | ['French']     | ['Biomedical NER']                           | nan                              |
+| paper_12 | ['Chinese']    | ['Biomedical NER and Text Mining']           | nan                              |
+| paper_13 | ['Japanese']   | ['Clinical NER']                             | nan                              |
+| paper_14 | ['Persian']    | ['Medical Text Classification']              | nan                              |
+| paper_15 | ['Spanish']    | ['Clinical Coding']                          | nan                              |
+| paper_16 | ['Spanish']    | ['Clinical Coding']                          | nan                              |
+| paper_17 | ['Spanish']    | ['Clinical Coding']                          | nan                              |
+| Paper 1  | nan            | nan                                          | ['BERT', 'Transformer']          |
+| Paper 2  | nan            | nan                                          | ['BERT', 'BioBERTpt']            |
+| Paper 3  | nan            | nan                                          | ['BERT', 'BioBERTpt']            |
+| Paper 4  | nan            | nan                                          | ['BERT', 'BioBERTpt']            |
+| Paper 5  | nan            | nan                                          | ['BERT']                         |
+| Paper 6  | nan            | nan                                          | ['BERT']                         |
+| Paper 7  | nan            | nan                                          | ['BERT']                         |
+| Paper 8  | nan            | nan                                          | ['BERT']                         |
+| Paper 9  | nan            | nan                                          | ['BERT']                         |
+| Paper 10 | nan            | nan                                          | ['BERT']                         |
+| Paper 11 | nan            | nan                                          | ['BERT']                         |
+| Paper 12 | nan            | nan                                          | ['BERT']                         |
+| Paper 13 | nan            | nan                                          | ['BERT']                         |
+| Paper 14 | nan            | nan                                          | ['BERT']                         |
+| Paper 15 | nan            | nan                                          | ['mBERT', 'BETO', 'XLM-RoBERTa'] |
+| Paper 16 | nan            | nan                                          | ['mBERT', 'BETO', 'XLM-RoBERTa'] |
+| Paper 17 | nan            | nan                                          | ['mBERT', 'BETO', 'XLM-RoBERTa'] |
+
+MATCHES:
+Language: 
+Task: 
+Method: 
+Task: 
+Language: 

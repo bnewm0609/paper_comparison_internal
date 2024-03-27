@@ -1,0 +1,31 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | baselines provided    | performance metrics                       | model architectures                                               |
+|:--------|:----------------------|:------------------------------------------|:------------------------------------------------------------------|
+| paper_1 | ['SPair-71k dataset'] | ['Accuracy of semantic correspondence']   | ['Deep learning model for semantic correspondence']               |
+| paper_2 | ['N/A']               | ['3D pose and shape estimation accuracy'] | ['Convolutional neural network for 3D pose and shape estimation'] |
+| paper_3 | ['N/A']               | ['Facial landmark localization accuracy'] | ['Convolutional neural network for facial landmark localization'] |
+| paper_4 | ['N/A']               | ['Keypoint detection accuracy']           | ['Deep learning model for keypoint detection']                    |
+
+MATCHES:
+baselines provided: 
+performance metrics: 
+model architectures: 
