@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | First-order approximation of the solution to the optimization problem                                                                                                                                                                          | Introduction of a novel convolutional kernel (GCN+)   |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_2 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_3 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_4 | ['In this paper, we interpret the current graph convolutional operations from an optimization perspective and argue that over-smoothing is mainly caused by the naive first-order approximation of the solution to the optimization problem.'] | ['N/A']                                               |
+| paper_5 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_6 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_7 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_8 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+| paper_9 | ['N/A']                                                                                                                                                                                                                                        | ['N/A']                                               |
+
+MATCHES:
+First-order approximation of the solution to the optimization problem: 
+Introduction of a novel convolutional kernel (GCN+): 

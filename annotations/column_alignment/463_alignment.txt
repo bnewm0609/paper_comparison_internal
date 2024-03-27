@@ -1,0 +1,27 @@
+ID: 8492db98-0c47-4a9c-87c7-ef0a45ef6628
+
+GOLD TABLE:
+|           | Task             | Target    | Sensor   | Best Method     |
+|----------:|:-----------------|:----------|:---------|:----------------|
+| 201099006 | ['Detection']    | ['Trees'] | ['RGB']  | ['RetinaNet']   |
+| 210846858 | ['Segmentation'] | ['Trees'] | ['RGB']  | ['FC-DenseNet'] |
+
+GOLD SCHEMA:
+0: Task
+1: Target
+2: Sensor
+3: Best Method
+
+PREDICTION PATH:../../metric_validation_0/8492db98-0c47-4a9c-87c7-ef0a45ef6628/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods/architectures used                       | Objectives                                                                                                 | Evaluation metrics                                                                     | Results and performance                                                                                             |
+|:--------|:-------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Faster R-CNN', 'YOLOv3', 'RetinaNet']          | ['Evaluate the usage of CNN-based methods for tree detection on UAV RGB imagery']                          | ['Average precision']                                                                  | ['Average precision around 92% with processing times below 30 miliseconds']                                         |
+| paper_2 | ['SegNet', 'U-Net', 'FC-DenseNet', 'DeepLabv3+'] | ['Propose and evaluate five FCNs for tree species segmentation and verify CRFs as a post-processing step'] | ['Classification accuracy', 'F1-score', 'IoU correponding to Intersection over Union'] | ['Average overall accuracy ranging from 88.9% to 96.7%, F1-score between 87.0% and 96.1%, IoU from 77.1% to 92.5%'] |
+
+MATCHES:
+Methods/architectures used: 
+Objectives: 
+Evaluation metrics: 
+Results and performance: 

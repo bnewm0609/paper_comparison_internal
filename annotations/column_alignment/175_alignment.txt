@@ -1,0 +1,31 @@
+ID: 71a84e95-d891-4177-b307-4019dd0ca8d5
+
+GOLD TABLE:
+|           | Dataset        | # Graphs   | Citation                                                                                                 |
+|----------:|:---------------|:-----------|:---------------------------------------------------------------------------------------------------------|
+|  19990980 | ['MUTAG']      | ['188']    | ['SUGAR {{cite:ee5d887}}, SubgraphX {{cite:41b660c}}, XGNN {{cite:8ff5482}}, GraphAug {{cite:081dd9e}}'] |
+|   9620021 | ['PTC']        | ['344']    | ['SUGAR {{cite:ee5d887}}']                                                                               |
+|   8174592 | ['PROTEINS']   | ['1113']   | ['SUGAR {{cite:ee5d887}}, GraphAug {{cite:081dd9e}}']                                                    |
+| 217680306 | ['BBBP']       | ['2039']   | ['SubgraphX {{cite:41b660c}}']                                                                           |
+| 229923402 | ['GRAPH-SST2'] | ['70042']  | ['SubgraphX {{cite:41b660c}}']                                                                           |
+
+GOLD SCHEMA:
+0: Dataset
+1: # Graphs
+2: Citation
+
+PREDICTION PATH:../../metric_validation_0/71a84e95-d891-4177-b307-4019dd0ca8d5/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Science                                 | Predictive Model                                                              | Dataset                           |
+|:--------|:------------------------------------------------|:------------------------------------------------------------------------------|:----------------------------------|
+| Paper 1 | ['Biochemistry']                                | ['No predictive model']                                                       | ['No dataset presented']          |
+| Paper 2 | ['Machine Learning', 'Bioinformatics']          | ['Yes (Multiple machine learning models for toxicology)']                     | ['PTC dataset']                   |
+| Paper 3 | ['Machine Learning', 'Bioinformatics']          | ['Yes (Graph kernels and support vector machine)']                            | ['No specific dataset presented'] |
+| Paper 4 | ['Machine Learning', 'Bioinformatics']          | ['Yes (Multiple machine learning algorithms for molecular machine learning)'] | ['Multiple datasets presented']   |
+| Paper 5 | ['Machine Learning', 'Artificial Intelligence'] | ['No (Survey on Graph Neural Network explainability)']                        | ['Multiple datasets presented']   |
+
+MATCHES:
+Type of Science: 
+Predictive Model: 
+Dataset: 

@@ -1,0 +1,37 @@
+ID: 01c458ee-e887-4bff-ad32-a696c64c9590
+
+GOLD TABLE:
+|           | Task           | Metric       | Description                        | # Train Inst.   | # Test Inst.   |
+|----------:|:---------------|:-------------|:-----------------------------------|:----------------|:---------------|
+|  52054914 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['12,627']      | ['1,422']      |
+|  17677052 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['8,588']       | ['302']        |
+| 203661778 | ['NER']        | ['Micro-F1'] | ['Drug and Adverse Drug Event']    | ['36,384']      | ['23,462']     |
+|  15493987 | ['NER']        | ['Micro-F1'] | ['Events']                         | ['16,468']      | ['13,594']     |
+|  30029552 | ['NER']        | ['Micro-F1'] | ['Problems, Treatments and Tests'] | ['27,837']      | ['45,009']     |
+|  96437052 | ['NER']        | ['Micro-F1'] | ['UMLS Semantic Groups (French)']  | ['2,695']       | ['2,260']      |
+
+GOLD SCHEMA:
+0: Task
+1: Metric
+2: Description
+3: # Train Inst.
+4: # Test Inst.
+
+PREDICTION PATH:../../metric_validation_0/01c458ee-e887-4bff-ad32-a696c64c9590/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Generalization capabilities of ML models                                                                                 | Approach for medical question answering                                                                                                                                  | Focus on specialized medical domain                                                                                                | Application of deep learning and knowledge incorporation                                                                                                             | Challenges in medical text understanding                                                                                        |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Lack of generalization capabilities in specialized, knowledge-intensive domains with limited training data']           | ['Leveraging transfer learning using datasets from the open domain and incorporating domain knowledge']                                                                  | ['NLI grounded in the medical history of patients']                                                                                | ['Leverage transfer learning using datasets from the open domain and incorporate domain knowledge']                                                                  | ['State of the art models still lack generalization capabilities']                                                              |
+| Paper 2 | ['Addressing the challenge of increasing heterogeneity and specialization of medical texts']                             | ['Detection of similar questions based on Recognizing Question Entailment (RQE)']                                                                                        | ['Focused on medical question answering using Frequently Asked Question (FAQs) and consumer health questions']                     | ['New approach for the detection of similar questions based on Recognizing Question Entailment (RQE)']                                                               | ['Automated question answering is becoming more challenging with increasing heterogeneity and specialization of medical texts'] |
+| Paper 3 | ['High performance for many concept types, but significant improvement required for certain tasks']                      | ['Focused on the extraction of adverse drug events from clinical records']                                                                                               | ['Extraction of adverse drug events from clinical records']                                                                        | ['Proposed deep learning-based methods with hand-designed features']                                                                                                 | ['High performance for many concept types, but significant improvement required for ADEs and Reasons']                          |
+| Paper 4 | ['Focused on evaluating temporal relations in clinical narratives']                                                      | ['Evaluating temporal relations in clinical text']                                                                                                                       | ['Focused on evaluating temporal relations in clinical narratives']                                                                | ['Information extraction tasks targeted clinically significant events and temporal expressions']                                                                     | ['Focused on evaluating temporal relations, including clinically significant events and temporal expressions']                  |
+| Paper 5 | ['Using machine learning approaches augmented with rule-based systems to determine concepts, assertions, and relations'] | ['Developing systems using machine learning approaches augmented with rule-based systems for concept extraction, assertion classification, and relation classification'] | ['Task focused on concept extraction, assertion classification, and relation classification in clinical records']                  | ['Showed that machine learning approaches could be augmented with rule-based systems for concept extraction, assertion classification, and relation classification'] | ['Machine learning approaches augmented with rule-based systems can determine concepts, assertions, and relations']             |
+| Paper 6 | ['Addressing Natural Language Processing in the French biomedical community']                                            | ['Development of an extensive French corpus of biomedical documents annotated at the entity and concept level']                                                          | ['Development of an extensive French corpus of biomedical documents in the variety of languages used by the biomedical community'] | ['Used automatic pre-annotations validated by trained human annotators for entity annotations']                                                                      | ['Annotated an extensive French corpus of biomedical documents in multiple languages']                                          |
+
+MATCHES:
+Generalization capabilities of ML models: 
+Approach for medical question answering: 
+Focus on specialized medical domain: 
+Application of deep learning and knowledge incorporation: 
+Challenges in medical text understanding: 

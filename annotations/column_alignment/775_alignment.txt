@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Effectiveness of data-driven methods for syllabification                                                                                                                                 | Performance of sequence labeling approaches for syllabification                                                             |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                                                  | ['N/A']                                                                                                                     |
+| paper_2 | ['N/A']                                                                                                                                                                                  | ['N/A']                                                                                                                     |
+| paper_3 | ['N/A']                                                                                                                                                                                  | ['N/A']                                                                                                                     |
+| paper_4 | ['N/A']                                                                                                                                                                                  | ['N/A']                                                                                                                     |
+| paper_5 | ['This paper proposes several data-driven methods for automatic syllabification of words written in Manipuri language. The proposed methods outperform the baseline rule-based method.'] | ['From various experimental observations, it is evident that CRF (sequence labeling approach) provides 97% word accuracy.'] |
+
+MATCHES:
+Effectiveness of data-driven methods for syllabification: NA
+Performance of sequence labeling approaches for syllabification: NA

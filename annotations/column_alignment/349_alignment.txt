@@ -1,0 +1,42 @@
+ID: 33d1dcd3-eeb5-4e81-bba2-5a9ecc730856
+
+GOLD TABLE:
+|          | Model                                                        | Main Contribution                                        |
+|---------:|:-------------------------------------------------------------|:---------------------------------------------------------|
+| 12054943 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ['and high uncoded BER of the eavesdropper']             |
+| 37018232 | ['No CSI of the receiver and eavesdropper']                  | ['and zero diversity of\nthe eavesdropper']              |
+|  8778619 | ['No CSI of the receiver and eavesdropper']                  | ['to make the eavesdropper unable to decode the signal'] |
+|  6102369 | ['No CSI of the receiver and eavesdropper']                  | ['by using\nM-PSK modulation and OSTBC']                 |
+|  7786858 | ['No CSI of the receiver and eavesdropper']                  | ["to deliberately randomize the eavesdropper's signal"]  |
+| 16575249 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ["the eavesdropper's correctly decoding probability"]    |
+| 35469277 | ['Perfect CSIT\nof the receiver, SCSIT of the eavesdropper'] | ['Analyze the SER of confidential information']          |
+
+GOLD SCHEMA:
+0: Model
+1: Main Contribution
+
+PREDICTION PATH:../../metric_validation_0/33d1dcd3-eeb5-4e81-bba2-5a9ecc730856/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Information conveyed by strength indicators                                                        | Effect on diversity order                                  |
+|:---------|:---------------------------------------------------------------------------------------------------|:-----------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_2  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_3  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_4  | ['Yes, the method uses receive signal strength indicators to randomly rotate information symbols'] | ['Reduces the diversity order of an eavesdropper to zero'] |
+| paper_5  | ['Yes, the method uses receive signal strength indicators to randomly rotate information symbols'] | ['Reduces the diversity order of an eavesdropper to zero'] |
+| paper_6  | ['Yes, the method uses receive signal strength indicators to randomly rotate information symbols'] | ['Reduces the diversity order of an eavesdropper to zero'] |
+| paper_7  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_8  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_9  | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_10 | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_11 | ['No, the paper focuses on low probability of interception using signal processing techniques']    | ['N/A']                                                    |
+| paper_12 | ['No, the paper focuses on low probability of interception using signal processing techniques']    | ['N/A']                                                    |
+| paper_13 | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_14 | ['N/A']                                                                                            | ['N/A']                                                    |
+| paper_15 | ['N/A']                                                                                            | ['Preserves the secrecy diversity of order nt - ne']       |
+| paper_16 | ['N/A']                                                                                            | ['Preserves the secrecy diversity of order nt - ne']       |
+
+MATCHES:
+Information conveyed by strength indicators: 
+Effect on diversity order: 

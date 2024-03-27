@@ -1,0 +1,44 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Methods for MOT used                                                                       | MOT performance metrics used                                                                                                                                                                                                                |
+|:---------|:-------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['nuScenes']                                                                               | ['NDS (NuScenes detection score), mAP (Mean Average Precision), TDS (Track detection score)']                                                                                                                                               |
+| paper_2  | ['Waymo Open Dataset']                                                                     | ['Metrics for 2D and 3D object detection, 3D tracking metrics (Not explicitly mentioned)']                                                                                                                                                  |
+| paper_3  | ['KITTI']                                                                                  | ['Metrics for stereo, optical flow, visual odometry/SLAM, 3D object detection (Not explicitly mentioned)']                                                                                                                                  |
+| paper_4  | ['MOTChallenge 2015 (No specific method proposed)']                                        | ['N/A']                                                                                                                                                                                                                                     |
+| paper_5  | ['MOT16 (No specific method proposed)']                                                    | ['N/A']                                                                                                                                                                                                                                     |
+| paper_6  | ['PathTrack (No specific method proposed)']                                                | ['IDS (Identifier switch)']                                                                                                                                                                                                                 |
+| paper_7  | ['PoseTrack (No specific method proposed)']                                                | ['PCK (Percentage of Correct Keypoints), OKS (Object Keypoint Similarity)']                                                                                                                                                                 |
+| paper_8  | ['VisDrone-MOT2019 (No specific method proposed)']                                         | ['MOTA (Multi-Object Tracking Accuracy), MOTP (Multi-Object Tracking Precision), ID-switch (ID switches), MT (Mostly tracked targets), ML (Mostly lost targets), MM (Mostly matched targets), Frag (Fragmentations), FP (False positives)'] |
+| paper_9  | ['BDD100K (No specific method proposed)']                                                  | ['N/A']                                                                                                                                                                                                                                     |
+| paper_10 | ['MOTS (Joint detection, tracking, and segmentation with a single convolutional network)'] | ['Extended MOT metrics for MOTS task']                                                                                                                                                                                                      |
+| paper_11 | ['MOTS (Joint detection, tracking, and segmentation with a single convolutional network)'] | ['Extended MOT metrics for MOTS task']                                                                                                                                                                                                      |
+| paper_12 | ['CityFlow (No specific method proposed)']                                                 | ['ID-F1, ID-Precision, ID-Recall, MT (Mostly tracked targets), ML (Mostly lost targets), MM (Mostly matched targets), Frag (Fragmentations), FP (False positives)']                                                                         |
+| paper_13 | ['MOT20 (No specific method proposed)']                                                    | ['N/A']                                                                                                                                                                                                                                     |
+
+MATCHES:
+Methods for MOT used: 
+MOT performance metrics used: 

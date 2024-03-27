@@ -1,0 +1,50 @@
+ID: 70b7fda9-0485-4cf2-adf6-d6aa43a72a60
+
+GOLD TABLE:
+|           | Category                      | Challenge               | Short Description                                                                                                      |
+|----------:|:------------------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+|  28227133 | ['7[12]*Data and Evaluation'] | ['Big Data']            | ['Volume, velocity, variety, veracity, and value of big data can be problematic.']                                     |
+|   2242825 | ['-']                         | ['High-Dimensionality'] | ['Many numbers of features for each datapoint can cause sparsity of data which makes anomaly detection more arduous.'] |
+|   3314665 | ['-']                         | ['Heterogeneity']       | ['Diversity and variety of data types, formats, and structures in systems.']                                           |
+| 235421996 | ['-']                         | ['Obscured Anomalies']  | ['Outliers can be in disguise, especially the anomalies that are caused by a smart entity.']                           |
+|  56208557 | ['-']                         | ['Unclean Data']        | ['Many proposed models work based on the hypothesis that clean data is available which is not realistic.']             |
+| 214371919 | ['4[8]*Nature of Anomaly']    | ['Changing Nature']     | ['Novel and new types of anomalies can happen, and anomalies may adapt themselves with anomaly detection algorithms.'] |
+| 234278156 | ['-']                         | ['Disparate Sources']   | ['Anomalies can happen in many different layers and parts of systems.']                                                |
+| 215872173 | ['-']                         | ['Noise Resilience']    | ['In many cases, noises in the input data can mislead the models and be detected as false positives.']                 |
+|   1610415 | ['5[9]*Real-World']           | ['Inference Time']      | ['In real-world applications, it is vital to detect anomalies in a timely manner to take the appropriate action.']     |
+| 231423554 | ['-']                         | ['Privacy']             | ['In many applications, the data of the users should be protected.']                                                   |
+| 238586083 | ['-']                         | ['Ciphered Data']       | ['In many environments, the exchanged data is ciphered.']                                                              |
+| 232076515 | ['-']                         | ['Dynamic Systems']     | ['Real-world systems often change over the time and have dynamic nature.']                                             |
+| 235195790 | ['-']                         | ['Interpretability']    | ['In real-world setups, the cause of the anomaly is important.']                                                       |
+| 238237738 | ['-']                         | ['Domain Shift']        | ['The model trained on one domain, cannot generalize even to a slightly different domain.']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Challenge
+2: Short Description
+
+PREDICTION PATH:../../metric_validation_0/70b7fda9-0485-4cf2-adf6-d6aa43a72a60/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Algorithmic Concepts                                                              | Application Domain                                                             | Anomaly Detection Techniques                                                        |
+|:---------|:----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| Paper 1  | ['Dynamic Programming']                                                           | ['Dynamic Programming']                                                        | ['Historical Development of Dynamic Programming']                                   |
+| Paper 2  | ['Data Science, Big Data, Education']                                             | ['Data Science, Big Data, Education']                                          | ['Survey on Data Science Education and Strategies']                                 |
+| Paper 3  | ['Big Data, Anomaly Detection, Industrial Networks']                              | ['Industrial Networks, Critical Infrastructures, Big Data']                    | ['Survey on Big Data Anomaly Detection Systems for Industrial Networks']            |
+| Paper 4  | ['Graph Anomaly Detection, Deep Learning']                                        | ['Anomaly Detection, Security, Finance, Medicine']                             | ['Graph Anomaly Detection with Deep Learning, Taxonomy']                            |
+| Paper 5  | ['Graph Anomaly Detection, Deep Learning']                                        | ['Anomaly Detection, Security, Finance, Medicine']                             | ['Graph Anomaly Detection with Deep Learning, Taxonomy']                            |
+| Paper 6  | ['Graph Learning, Robust Graph Learning']                                         | ['Data Clustering, Semi-supervised Learning, Image/Document Clustering']       | ['Graph Learning from Noisy Data, Manifold Regularized RPCA']                       |
+| Paper 7  | ['Anomaly Detection, KPI Abrupt Changes']                                         | ['Online Anomaly Detection, KPI Monitoring, Internet-based Services']          | ['Unsupervised Online Anomaly Detection with Parameter Adaptation']                 |
+| Paper 8  | ['Machine Learning Classifiers, Heterogeneous Traffic, Anomaly Detection']        | ['Classifier Model for Detecting Anomalies in Heterogeneous Traffic']          | ['Mathematical Validation of Machine Learning Classifier']                          |
+| Paper 9  | ['Anomaly Detection, Noise Removal']                                              | ['Noise Reduction in Industrial IoT Sensor Data']                              | ['Noise Removal in IIoT Data, Anomaly Preservation']                                |
+| Paper 10 | ['Anomaly Detection in Surveillance Videos']                                      | ['Real-world Anomaly Detection in Surveillance Videos']                        | ['Anomaly Learning from Surveillance Videos, Multiple Instance Learning Framework'] |
+| Paper 11 | ['Deep Learning, Privacy and Security Issues']                                    | ['Deep Learning, Privacy, Security, Adversarial Examples']                     | ['DL Privacy and Security, Attacks, Defenses']                                      |
+| Paper 12 | ['Anomaly Detection in Encrypted Traffic, Deep Learning']                         | ['Anomaly Detection in Encrypted Network Traffic']                             | ['Anomaly Detection in Encrypted Traffic, Deep Learning Models']                    |
+| Paper 13 | ['Anomaly Detection on Attribute Networks, Contrastive Self-Supervised Learning'] | ['Anomaly Detection on Attributed Networks']                                   | ['Anomaly Detection on Attributed Networks, Contrastive Self-Supervised Learning']  |
+| Paper 14 | ['Anomaly Detection, Failure Root Cause Analysis, Cloud Applications']            | ['Anomaly Detection, Failure Root Cause Analysis, Multi-Service Applications'] | ['Anomaly Detection and Failure Root Cause Analysis in Multi-Service Applications'] |
+| Paper 15 | ['Cross-Domain Graph Anomaly Detection']                                          | ['Cross-Domain Anomaly Detection in Attributed Graphs']                        | ['Cross-Domain Anomaly Detection with Domain Adaptation, Graph Attentive Encoder']  |
+
+MATCHES:
+Algorithmic Concepts: 
+Application Domain: 
+Anomaly Detection Techniques: 

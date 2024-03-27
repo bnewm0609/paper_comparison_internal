@@ -1,0 +1,73 @@
+ID: 72c275e4-daa1-4167-9bc6-52a7c9e12678
+
+GOLD TABLE:
+|           | Year     | Format   | Application                               | Dataset                      |
+|----------:|:---------|:---------|:------------------------------------------|:-----------------------------|
+|  44090629 | ['2002'] | ['3D']   | ['Needle biopsy/brachytherapy']           | ['in-vitro/ex-vivo']         |
+|    366482 | ['2004'] | ['3D']   | ['Needle biopsy/brachytherapy']           | ['in-vitro/ex-vivo']         |
+|  16133671 | ['2006'] | ['3D']   | ['Tntracardiac operation']                | ['in-vitro/in-vivo']         |
+|  71618043 | ['2007'] | ['3D']   | ['RF-ablation for uterine operation']     | ['in-vitro']                 |
+|  13850725 | ['2008'] | ['3D']   | ['RF-ablation for uterine operation']     | ['in-vitro']                 |
+|  23333865 | ['2008'] | ['3D']   | ['Biopsy/neurological']                   | ['simulation']               |
+|   9717468 | ['2009'] | ['3D']   | ['Biopsy']                                | ['in-vitro']                 |
+| 120056076 | ['2009'] | ['3D']   | ['Biopsy']                                | ['in-vitro']                 |
+|   1050681 | ['2011'] | ['3D']   | ['Catheter intervention']                 | ['in-vitro']                 |
+|  35709222 | ['2013'] | ['3D']   | ['Needle biopsy']                         | ['simulation']               |
+|  23753903 | ['2013'] | ['3D']   | ['Catheter for cardiac/prostate/biopsy']  | ['in-vivo']                  |
+|    192941 | ['2013'] | ['3D+t'] | ['Prostate therapy']                      | ['in-vitro/ex-vivo/in-vivo'] |
+|  30221626 | ['2013'] | ['3D+t'] | ['Needle biopsy']                         | ['simulation']               |
+|   2686827 | ['2013'] | ['3D']   | ['prostate therapy']                      | ['in-vitro/ex-vivo/in-vivo'] |
+|  17828891 | ['2014'] | ['3D']   | ['Catheter biopsy']                       | ['simulation']               |
+|  21735174 | ['2014'] | ['2D']   | ['Needle biopsy/nerve block']             | ['in-vitro']                 |
+|  32002072 | ['2014'] | ['2D']   | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|   3832958 | ['2014'] | ['2D+t'] | ['Needle biopsy/anesthesia/delivery']     | ['in-vitro/ex-vivo']         |
+| 263874918 | ['2015'] | ['2D+t'] | ['Needle biopsy/anesthesia/delivery']     | ['in-vitro/in-vivo']         |
+|    764870 | ['2015'] | ['2D+t'] | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|  43465739 | ['2016'] | ['3D']   | ['Needle anesthesia/ablation']            | ['ex-vivo']                  |
+|  39051995 | ['2016'] | ['2D+t'] | ['Needle biopsy/nerve block/anesthesias'] | ['in-vitro/in-vivo']         |
+|  15992584 | ['2016'] | ['2D+t'] | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|  52984015 | ['2018'] | ['2D']   | ['Needle intervention']                   | ['ex-vivo']                  |
+| 204815855 | ['2019'] | ['2D+t'] | ['Anesthesia/biopsy/brachytherapy']       | ['in-vitro']                 |
+
+GOLD SCHEMA:
+0: Year
+1: Format
+2: Application
+3: Dataset
+
+PREDICTION PATH:../../metric_validation_0/72c275e4-daa1-4167-9bc6-52a7c9e12678/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Method (e.g., Hough transform, machine learning, projection-based, texture-based)   | Accuracy in position detection                                                                                     | Accuracy in orientation detection                                                     | Computational time or speed of detection                                      |
+|:---------|:------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| paper_1  | ['Projection-based needle segmentation']                                            | ['1 degree orientation within 1 to 3 seconds']                                                                     | ['Within 1 degree']                                                                   | ['About 1 to 3 seconds on a 500 MHz computer']                                |
+| paper_2  | ['Projection-based needle segmentation']                                            | ['0.7 mm position accuracy, 1.2° orientation accuracy, 13 fps']                                                    | ['1.2° in orientation']                                                               | ['Speed of 13 fps on a 1.3-GHz PC']                                           |
+| paper_3  | ['Texture-based instrument segmentation']                                           | ['Correct instrument segmentation and position of the instrument shaft']                                           | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_4  | ['3D Hough transform']                                                              | ['Feasibility of needle segmentation in 3D US images']                                                             | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_5  | ['3D Improved Hough Transform']                                                     | ['Position deviation less than 2mm, angular deviation much less than 2°, average computational time less than 2s'] | ['Less than 2° angular deviation']                                                    | ['Average computational time less than 2 seconds on a Pentium IV 2.80GHz PC'] |
+| paper_6  | ['Parallel integral projection transform']                                          | ['Localization accuracy of order of hundreds of micrometers']                                                      | ['Localization accuracy of hundreds of micrometers']                                  | ['N/A']                                                                       |
+| paper_7  | ['Curved needle segmentation']                                                      | ['Curved needle segmentation in 3D ultrasound images']                                                             | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_8  | ['Phase grouping']                                                                  | ['3D Phase-grouping is more accurate and faster without using pre-information']                                    | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_9  | ['Tubular structure enhancement']                                                   | ['Tubular structure enhancement for surgical instrument detection']                                                | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_10 | ['ROI-based needle tracking']                                                       | ['Well-selected ROI strategy provides simpler situations by reducing the number of outliers']                      | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_11 | ['Automated catheter detection']                                                    | ['Fast detection in 3D ultrasound images with quantitative comparisons']                                           | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_12 | ['Automatic localization of the da Vinci Surgical Instrument Tips']                 | ['Feasibility and accuracy of automatic registration in TRUS images']                                              | ['Achieved localization accuracy of 2.68 mm']                                         | ['N/A']                                                                       |
+| paper_13 | ['ROI-based RANSAC and Kalman Method']                                              | ['More robust than the RANSAC algorithm']                                                                          | ['More robust than RANSAC algorithm.']                                                | ['N/A']                                                                       |
+| paper_14 | ['3D Hough transform']                                                              | ['Endpoint localization accuracy of 0.5-1 mm in agar phantom and in-vivo patient images']                          | ['Endpoint localization accuracy of 0.7 mm in position']                              | ['Mean execution time of 2 seconds']                                          |
+| paper_15 | ['Edge-based method']                                                               | ['Improvement in accuracy and speed compared to the previous RANSAC method']                                       | ['Improved accuracy in low noise levels']                                             | ['N/A']                                                                       |
+| paper_16 | ['Needle tip estimation using hypoechoic markers']                                  | ['Location accuracy affected by ultrasound image resolution and probe frequency']                                  | ['Accuracy affected by ultrasound image resolution and probe frequency']              | ['N/A']                                                                       |
+| paper_17 | ['Entropy-based parameter tuning']                                                  | ['Reduced tracking time and successful needle tip estimation']                                                     | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_18 | ['Needle localization using a moving stylet/catheter']                              | ['High tip localization accuracy in water bath and bovine tissue']                                                 | ['Best localization accuracy with plastic catheter, RMSE = 0.32 mm']                  | ['A reduction of processing time by 24%']                                     |
+| paper_19 | ['Flow parameters based spectral coherency']                                        | ['Appropriate localization accuracy for hand tremour, vibrational, and rotational needle movements']               | ['Locates needle trajectory with RMS localization accuracy of 0.5 mm (hand tremour)'] | ['N/A']                                                                       |
+| paper_20 | ['Gabor filter-based needle tip localization']                                      | ['RMS of the tip position is 1.17 mm']                                                                             | ['RMS of 1.17 mm for tip position']                                                   | ['Reduction of processing time by 56%, without a GPU']                        |
+| paper_21 | ['Automated needle plane detection']                                                | ['Ability to detect steep needles in 3D ultrasound data with high accuracy']                                       | ['High accuracy needle detection']                                                    | ['N/A']                                                                       |
+| paper_22 | ['Tremor motion-based hand-held needle localization']                               | ['Good localization accuracy in agar phantom and in-vivo porcine cases']                                           | ['Locates needle tip with accuracy of 1.53 mm']                                       | ['N/A']                                                                       |
+| paper_23 | ['Visual tracking of biopsy needles']                                               | ['Precision of the visual needle tip tracking in different challenging conditions']                                | ['N/A']                                                                               | ['N/A']                                                                       |
+| paper_24 | ['Needle localization using power Doppler and B-mode ultrasound image analyses']    | ['Automatic, reliable, and accurate needle localization outperforms other methods']                                | ['Achieves automatic, reliable and accurate needle localization']                     | ['N/A']                                                                       |
+| paper_25 | ['Real-time needle tip localization using Kalman Filter']                           | ['Stable and accurate results in both stationary and dynamic situations']                                          | ['More stable and accurate result for real-time needle tip localization']             | ['N/A']                                                                       |
+
+MATCHES:
+Method (e.g., Hough transform, machine learning, projection-based, texture-based): 
+Accuracy in position detection: 
+Accuracy in orientation detection: 
+Computational time or speed of detection: 

@@ -1,0 +1,29 @@
+ID: f9504841-2129-417c-a504-7b2d57ca509b
+
+GOLD TABLE:
+|           | Team       | Task    |
+|----------:|:-----------|:--------|
+| 264441549 | ['BIT.UA'] | ['NER'] |
+| 264441337 | ['-']      | ['EL']  |
+| 264441481 | ['-']      | ['DI']  |
+| 264441503 | ['Fusion'] | ['NER'] |
+| 260514387 | ['-']      | ['EL']  |
+
+GOLD SCHEMA:
+0: Team
+1: Task
+
+PREDICTION PATH:../../metric_validation_0/f9504841-2129-417c-a504-7b2d57ca509b/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach to Procedure Recognition                                                                         | Use of Pre-trained Models                              |
+|:--------|:----------------------------------------------------------------------------------------------------------|:-------------------------------------------------------|
+| Paper 1 | ['Transformer models with Masked Conditional Random Fields and a contextualized sliding window strategy'] | ['Yes - Transformer models and sentence transformers'] |
+| Paper 2 | ['Separate NER and entity linking modules using BERT-based models']                                       | ['Yes - Spanish RoBERTa model and SapBERT XLMR-large'] |
+| Paper 3 | ['Hybrid approach combining fine-tuned transformers and dictionary-based solution']                       | ['Yes - Fine-tuned transformers']                      |
+| Paper 4 | ['RoBERTa-based model for NER and sequential process for normalization']                                  | ['Yes - RoBERTa-based model']                          |
+| Paper 5 | ['Overview of the BioASQ challenge and the MedProcNER task']                                              | ['N/A - Overview paper']                               |
+
+MATCHES:
+Approach to Procedure Recognition: 
+Use of Pre-trained Models: 

@@ -1,0 +1,33 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of input data (pressure, haptic feedback, hand morphology)   | Authentication performance (error rates, accuracy)                                            | Usability of the authentication method                                 | Evaluation schemes used                                                                                     | Comparison between different hand postures                         |
+|:--------|:------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
+| paper_1 | ['hand morphology, typing behavior']                              | ['equal error rates (EER) by 26.4 - 36.8% relative to the previously used temporal features'] | ['quantify the influence of common evaluation assumptions']            | ['known attacker data, training and testing on data from a single typing session, and fixed hand postures'] | ['authentication works better for some hand postures than others'] |
+| paper_2 | ['haptic feedback, keystroke dynamics']                           | ['error rates under 2%']                                                                      | ['N/A']                                                                | ['N/A']                                                                                                     | ['N/A']                                                            |
+| paper_3 | ['pressure, haptic feedback, hand morphology']                    | ['authentication performance under different virtual key typing settings']                    | ['TAP can maintain both security and usability for the mobile system'] | ['three user studies comparing authentication performance under different virtual key typing settings']     | ['N/A']                                                            |
+| paper_4 | ['typing behavior, keystroke dynamics']                           | ['False Alarm Rate of less than 5% and an Impostor Pass Rate of less than 0.005%']            | ['N/A']                                                                | ['N/A']                                                                                                     | ['N/A']                                                            |
+
+MATCHES:
+Type of input data (pressure, haptic feedback, hand morphology): 
+Authentication performance (error rates, accuracy): 
+Usability of the authentication method: 
+Evaluation schemes used: 
+Comparison between different hand postures: 

@@ -1,0 +1,25 @@
+ID: 7e1ee0ef-aa94-4c34-b22c-5bbae338db30
+
+GOLD TABLE:
+|           | Total Number of Samples   | Number of Used Samples   | Feature Dimension   |
+|----------:|:--------------------------|:-------------------------|:--------------------|
+| 220317169 | ['52416']                 | ['20000']                | ['11']              |
+| 154318866 | ['19735']                 | ['20000']                | ['33']              |
+
+GOLD SCHEMA:
+0: Total Number of Samples
+1: Number of Used Samples
+2: Feature Dimension
+
+PREDICTION PATH:../../metric_validation_0/7e1ee0ef-aa94-4c34-b22c-5bbae338db30/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|        | Focus of the paper                                                                                                       | Relevance to social or natural science                                                                               | Application or Theoretical                                                                                                      |
+|:-------|:-------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| POWER  | ['Macro level', 'The paper discusses historical and societal changes in England at a macro level.']                      | ['Social Science', 'The paper is rooted in historical and sociological analysis.']                                   | ['Theoretical', 'The paper focuses on explaining theories and the historical context, without providing an explicit solution.'] |
+| Energy | ['Micro level', 'The paper discusses the decision of airlines to add more seats in the economy class at a micro level.'] | ['Natural Science', 'The paper is focused on the natural science aspect of airplane design and passenger capacity.'] | ['Application', 'The paper discusses the application of new seating arrangements in the airline industry.']                     |
+
+MATCHES:
+Focus of the paper: 
+Relevance to social or natural science: 
+Application or Theoretical: 

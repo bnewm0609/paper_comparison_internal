@@ -1,0 +1,35 @@
+ID: a79431cf-5fbc-45af-949c-0c3f5549e6ed
+
+GOLD TABLE:
+|           | Task                            | Samples     | Classes   |
+|----------:|:--------------------------------|:------------|:----------|
+|  15676318 | ['Speech, Music, and Noise']    | ['2,016']   | ['3']     |
+|  17567398 | ['Human Sounds']                | ['400']     | ['10']    |
+|   4719239 | ['Commands Recognition']        | ['100,503'] | ['12']    |
+|  14369452 | ['Emotion Detection']           | ['7,438']   | ['6']     |
+| 244899987 | ['Keyword Spotting']            | ['28,039']  | ['20']    |
+| 248571603 | ['Health Condition Monitoring'] | ['21,024']  | ['6']     |
+
+GOLD SCHEMA:
+0: Task
+1: Samples
+2: Classes
+
+PREDICTION PATH:../../metric_validation_0/a79431cf-5fbc-45af-949c-0c3f5549e6ed/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                      | Number of audio samples in the dataset   | Number and types of audio labels                                        | Number of modalities (audio, visual, etc.)   |
+|:---------------------------------------------------------------------|:-----------------------------------------|:------------------------------------------------------------------------|:---------------------------------------------|
+| MUSAN: A Music, Speech, and Noise Corpus                             | [2000]                                   | ['music', 'speech', 'noise']                                            | [1]                                          |
+| ESC: Dataset for Environmental Sound Classification                  | [230000]                                 | ['50 classes of various common sound events']                           | [1]                                          |
+| Speech Commands: A Dataset for Limited-Vocabulary Speech Recognition | [65000]                                  | ['10 words']                                                            | [1]                                          |
+| CREMA-D: Crowd-Sourced Emotional Multimodal Actors Dataset           | [7442]                                   | nan                                                                     | nan                                          |
+| Multilingual Spoken Words Corpus                                     | [23400000]                               | ['spoken words in 50 languages']                                        | [1]                                          |
+| Multilingual Spoken Words Corpus (same as Paper 5, repeated)         | [23400000]                               | ['spoken words in 50 languages']                                        | [1]                                          |
+| Vocalsound: A Dataset for Improving Human Vocal Sounds Recognition   | [21000]                                  | ['laughter', 'sighs', 'coughs', 'throat clearing', 'sneezes', 'sniffs'] | [1]                                          |
+| CREMA-D: Crowd-Sourced Emotional Multimodal ActorsDataset            | nan                                      | ['happy', 'sad', 'anger', 'fear', 'disgust', 'neutral']                 | [1]                                          |
+
+MATCHES:
+Number of audio samples in the dataset: 
+Number and types of audio labels: 
+Number of modalities (audio, visual, etc.): 

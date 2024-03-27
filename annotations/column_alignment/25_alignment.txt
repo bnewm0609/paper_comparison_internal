@@ -1,0 +1,31 @@
+ID: 8360b24e-3194-416b-b6c0-885fca2c9d71
+
+GOLD TABLE:
+|           | Benchmark                                         | Gender   | Harms                          |
+|----------:|:--------------------------------------------------|:---------|:-------------------------------|
+| 167217680 | ['Synthetic equity evaluation corpus (EEC)']      | ['b']    | ['R: under-rep, stereotyping'] |
+| 216641970 | ['BERT-based perturbations on natural sentences'] | ['b']    | ['R: under-rep, stereotyping'] |
+| 173991101 | ['WinoMT']                                        | ['b']    | ['R: under-rep, stereotyping'] |
+|  76654723 | ['Europarl (generic)']                            | ['b']    | ['A: quality']                 |
+| 220047833 | ['Trustpilot (reviews with gender and age)']      | ['b']    | ['R: under-rep']               |
+
+GOLD SCHEMA:
+0: Benchmark
+1: Gender
+2: Harms
+
+PREDICTION PATH:../../metric_validation_0/8360b24e-3194-416b-b6c0-885fca2c9d71/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method for Evaluating Gender Bias                                                                                                                                     | Data Source                                                                                                                                   | Main Findings                                                                                                                                                                                                                                        |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Proposes a scheme for making up a test set that evaluates the gender bias in a machine translation system using a Korean language corpus.']                         | ['Korean language with gender-neutral pronouns.', '4,236 sentences generated for evaluation.']                                                | ['Developed a translation gender bias index (TGBI) for evaluating gender bias in conventional machine translation systems.', 'TGBI is available online along with the corpus and code for evaluation.']                                              |
+| Paper 2 | ['Develops a novel technique to mine examples from real-world data spanning examples for four languages from three language families.']                               | ['Real-world data spanning four languages from three language families.', 'An evaluation benchmark publicly released.']                       | ['Compiled an evaluation benchmark to facilitate research on gendered language issues in deployed machine translation systems.', 'Exposed unintended consequences of gendered representations in downstream applications.']                          |
+| Paper 3 | ['Presents the first challenge set and evaluation protocol for the analysis of gender bias in machine translation using two recent coreference resolution datasets.'] | ['Two recent coreference resolution datasets composed of English sentences.', 'Data and code publicly available for eight target languages.'] | ['Presented the first challenge set and evaluation protocol for gender bias in machine translation.', 'Showed that popular industrial and recent academic MT models are prone to gender-biased translation errors for all tested target languages.'] |
+| Paper 4 | ['Integrates gender information into NMT systems using large datasets with speaker information for 20 language pairs.']                                               | ['Compilation of large datasets with speaker information for 20 language pairs.']                                                             | ['Demonstrated that integrating gender information into NMT systems significantly improves translation quality for some language pairs.']                                                                                                            |
+| Paper 5 | ['Analyzes the output of three commercial machine translation systems to show their reflection of demographic bias in the training data.']                            | ['Data from three commercial machine translation systems: Bing, DeepL, and Google.']                                                          | ['Highlighted that current commercial machine translation systems reflect demographic bias in the training data.', 'Raised interest in taking stylistic considerations into account in machine translation.']                                        |
+
+MATCHES:
+Method for Evaluating Gender Bias: 
+Data Source: 
+Main Findings: 

@@ -1,0 +1,44 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Geographic/Environmental Diversity                                                                               | Scale and Level of Data Annotation                                                                                                                  |
+|:---------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Highly diverse dataset with 5 radars, 1 lidar, and 6 cameras']                                                 | ['Fully annotated with 3D bounding boxes for 23 classes and 8 attributes']                                                                          |
+| Paper 2  | ['Comprehensive dataset with LiDAR and camera data captured across urban and suburban areas']                    | ['Exhaustively annotated with 2D and 3D bounding boxes, with consistent identifiers across frames']                                                 |
+| Paper 3  | ['Equipped with four high-resolution video cameras and a Velodyne laser scanner, capturing cluttered scenarios'] | ['Comprises 389 stereo and optical flow image pairs, stereo visual odometry sequences of 39.2 km length, and more than 200k 3D object annotations'] |
+| Paper 4  | ['Addresses standardization of quantitative benchmarks for multiple target tracking']                            | ['Describes a novel multiple object tracking benchmark aimed to address such issues']                                                               |
+| Paper 5  | ['Focuses on precision and a diverse dataset for multiple object tracking']                                      | ['Offers a significant increase in the number of labeled boxes, and provides multiple object classes beside pedestrians']                           |
+| Paper 6  | ['Annotates trajectories and releases a large-scale dataset for tracking approaches']                            | ['Crowdsources the PathTrack dataset, with more than 15,000 person trajectories in 720 sequences']                                                  |
+| Paper 7  | ['A new large-scale benchmark for video-based human pose estimation and tracking']                               | ['Collects, annotates, and releases a new dataset that features videos with multiple people labeled with person tracks and articulated pose']       |
+| Paper 8  | ['Evaluates multi-object tracking algorithms on drones, reporting results and state-of-the-art methods']         | ['Reports the results of 12 submitted MOT algorithms and 6 state-of-the-art MOT algorithms on the collected drone-based dataset']                   |
+| Paper 9  | ['Largest driving video dataset with geographic, environmental, and weather diversity for autonomous driving']   | ['Constructs BDD100K, the largest driving video dataset with 100K videos and 10 tasks to evaluate vision algorithms on autonomous driving']         |
+| Paper 10 | ['Extends multi-object tracking to MOTS, providing pixel-level annotations and diverse training tasks']          | ['Creates dense pixel-level annotations for two existing tracking datasets using a semi-automatic annotation procedure']                            |
+| Paper 11 | ['Extends multi-object tracking to MOTS, providing pixel-level annotations and diverse training tasks']          | ['Creates dense pixel-level annotations for two existing tracking datasets using a semi-automatic annotation procedure']                            |
+| Paper 12 | ['City-scale benchmark dataset for multi-target multi-camera vehicle tracking and re-identification']            | ['Contains more than 200K annotated bounding boxes covering a wide range of scenes, viewing angles, vehicle models, and urban traffic flow']        |
+| Paper 13 | ['Launches a new benchmark for multi-object tracking in crowded challenging scenes']                             | ['Launches a new benchmark for multi-object tracking in crowded challenging scenes']                                                                |
+
+MATCHES:
+Geographic/Environmental Diversity: 
+Scale and Level of Data Annotation: 

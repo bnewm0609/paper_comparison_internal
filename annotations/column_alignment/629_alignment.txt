@@ -1,0 +1,43 @@
+ID: 0191f26f-b545-43be-aa9f-69adef97e28c
+
+GOLD TABLE:
+|           | Blockchain             | Type                | Consensus              | Technologies                                    |
+|----------:|:-----------------------|:--------------------|:-----------------------|:------------------------------------------------|
+| 216485725 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart contracts, Swarm, DOS, Bloom filter']   |
+|  85502289 | ['Ethereum']           | ['Permission']      | ['Proof of work']      | ['Smart Contract']                              |
+| 214761403 | ['Ethereum']           | ['Consortium']      | ['Proof of work']      | ['Smart contract, Swarm, Oracle']               |
+|  27257114 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart Contract, IPFS, SDN']                   |
+| 221118885 | ['Hyperledger Fabric'] | ['Private']         | ['Kafka']              | ['Chain code, SDN,\nThreat Platform']           |
+| 207973175 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Deep learning(LSTM), SDN']    |
+| 211559340 | ['Generic']            | ['Private']         | ['-']                  | ['SDN']                                         |
+|  84186926 | ['Hyperledger']        | ['-']               | ['Kafka']              | ['SDN, IoT']                                    |
+| 218504016 | ['Ethereum']           | ['Public, Private'] | ['Proof-of-Authority'] | ['Smart Contract']                              |
+| 211689822 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Software Defined Networking'] |
+
+GOLD SCHEMA:
+0: Blockchain
+1: Type
+2: Consensus
+3: Technologies
+
+PREDICTION PATH:../../metric_validation_0/0191f26f-b545-43be-aa9f-69adef97e28c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of DDoS attacks addressed                    | Mitigation techniques and strategies                                    | Performance evaluation                                       | Limitations and future work                                        |
+|:---------|:--------------------------------------------------|:------------------------------------------------------------------------|:-------------------------------------------------------------|:-------------------------------------------------------------------|
+| paper_1  | ['IoT devices, Dyn attack']                       | ['blockchain technology, content verifier, smart contract']             | ['validation using a testbed']                               | ['scalability, number of nodes in consortium blockchain']          |
+| paper_2  | ['resource wasting in intermediate networks']     | ['blockchain based online trading system']                              | ['simulation based evaluation']                              | ['incentive mechanism for service providers']                      |
+| paper_3  | ['various types of attacks']                      | ['consortium blockchain, smart contract, elliptic curve cryptography']  | ['N/A']                                                      | ['security verification']                                          |
+| paper_4  | ['large-scale attacks']                           | ['Blockchain Signaling System (BloSS)']                                 | ['performance evaluation of BloSS system']                   | ['interoperability with existing DDoS defense systems']            |
+| paper_5  | ['zero-day and malware campaigns']                | ['blockchain technology, smart contracts']                              | ['simulation based evaluation']                              | ['performance optimization']                                       |
+| paper_6  | ['DDoS botnets']                                  | ['blockchain and SDN']                                                  | ['simulation based evaluation']                              | ['optimization of consensus protocol']                             |
+| paper_7  | ['wide-ranging attacks']                          | ['blockchain technology, RNN-LSTM']                                     | ['N/A']                                                      | ['scalability, evaluation of proposed mitigation technique']       |
+| paper_8  | ['massive distributed denial-of-service attacks'] | ['blockchain-based smart contracts, eXpress Data Path (XDP) framework'] | ['proof-of-concept prototype, realistic network conditions'] | ['scalability, integration with existing network infrastructures'] |
+| paper_9  | ['DDoS attacks on smart cities']                  | ['BlockSDN framework']                                                  | ['N/A']                                                      | ['performance evaluation, optimization of blockchain parameters']  |
+| paper_10 | ['DDoS botnets in IoT environment']               | ['blockchain-based framework, smart contracts']                         | ['deployed on Ethereum official test network Ropsten']       | ['cost optimization, improving mitigation efficiency']             |
+
+MATCHES:
+Type of DDoS attacks addressed: 
+Mitigation techniques and strategies: 
+Performance evaluation: 
+Limitations and future work: 

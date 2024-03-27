@@ -1,0 +1,29 @@
+ID: 82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8
+
+GOLD TABLE:
+|           | Anomaly     | Pose      |
+|----------:|:------------|:----------|
+|  72941049 | ['Anomaly'] | ['Pose']  |
+| 236950792 | ['Anomaly'] | ['Pixel'] |
+| 233423473 | ['Action']  | ['Pose']  |
+| 236428765 | ['Action']  | ['Pose']  |
+| 249065776 | ['Action']  | ['Pixel'] |
+
+GOLD SCHEMA:
+0: Anomaly
+1: Pose
+
+PREDICTION PATH:../../metric_validation_0/82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Learning Approach                                                | Performance Metrics                                                          |
+|:--------|:-----------------------------------------------------------------|:-----------------------------------------------------------------------------|
+| Paper 1 | ['Skeleton features for anomaly detection']                      | ['Superior outlier detection']                                               |
+| Paper 2 | ['Weakly-supervised video-level labels for anomaly detection']   | ['Improved subtle anomaly discriminability and sample efficiency']           |
+| Paper 3 | ['3D heatmap volume-based approach for action recognition']      | ['State-of-the-art performance on multiple benchmarks']                      |
+| Paper 4 | ['Channel-wise topology refinement for action recognition']      | ['Notably outperforms state-of-the-art methods on various datasets']         |
+| Paper 5 | ['Model-based multimodal network fusion for action recognition'] | ['Outperforms state-of-the-art approaches on multiple evaluation protocols'] |
+
+MATCHES:
+Learning Approach: 
+Performance Metrics: 

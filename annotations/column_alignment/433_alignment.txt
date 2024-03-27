@@ -1,0 +1,65 @@
+ID: e4459d7e-c1db-435a-8fdf-728317419ebd
+
+GOLD TABLE:
+|           | Optimizer                      | Batch Size   | Epoch    |
+|----------:|:-------------------------------|:-------------|:---------|
+| 235771540 | ['Adam']                       | ['NA']       | ['NA']   |
+|  52284436 | ['Adam']                       | ['NA']       | ['15']   |
+| 216465778 | ['Adam']                       | ['NA']       | ['15']   |
+| 212646385 | ['Adam']                       | ['NA']       | ['NA']   |
+|  53108672 | ['Adam']                       | ['NA']       | ['NA']   |
+| 235771211 | ['Adam']                       | ['64']       | ['NA']   |
+|  40762981 | ['SGD with Nesterov momentum'] | ['NA']       | ['100']  |
+| 146058215 | ['NA']                         | ['NA']       | ['NA']   |
+|   4531539 | ['Adam']                       | ['NA']       | ['NA']   |
+| 234082789 | ['Adam']                       | ['5']        | ['NA']   |
+| 231979425 | ['Adam']                       | ['NA']       | ['NA']   |
+| 209458171 | ['Adam']                       | ['NA']       | ['NA']   |
+| 208209257 | ['NA']                         | ['NA']       | ['NA']   |
+|  35019434 | ['SGD with momentum']          | ['NA']       | ['20']   |
+|  14688745 | ['RMSprop']                    | ['NA']       | ['NA']   |
+|  52153773 | ['Adam']                       | ['4']        | ['25']   |
+| 221136012 | ['Adam']                       | ['NA']       | ['70']   |
+|  18004775 | ['SGD with momentum']          | ['30']       | ['1000'] |
+|  13749489 | ['Adam']                       | ['NA']       | ['NA']   |
+| 146082119 | ['SGD']                        | ['NA']       | ['NA']   |
+|  53872628 | ['Adam']                       | ['NA']       | ['NA']   |
+|  18642708 | ['RMSprop']                    | ['NA']       | ['1000'] |
+
+GOLD SCHEMA:
+0: Optimizer
+1: Batch Size
+2: Epoch
+
+PREDICTION PATH:../../metric_validation_0/e4459d7e-c1db-435a-8fdf-728317419ebd/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Model Architecture                                                                                                            | Training Strategy                                                                                                                                             | Performance Metrics                                                                                                      |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Spectral correlation module (SCM) learning global spectral information and CNN integration']                                | ['Encoding center frequencies with input feature map of SCM']                                                                                                 | ['State-of-the-art overall accuracy of 83.5% on the MedleyDB dataset.']                                                  |
+| paper_2  | ['Hybrid neural network imitating human pitch perception with spectral and temporal model']                                   | ['Combining individual neural networks to constitute composite NN simulating duplex model']                                                                   | ['Outperforms other conventional methods in singing melody extraction.']                                                 |
+| paper_3  | ['Multi-resolution fully convolutional network with spectro-temporal decomposition']                                          | ['Including spectro-temporal multi-resolution decomposition and semantic segmentation for bottom-up and top-down processing']                                 | ['Model outperforms all previously proposed methods in almost all objective evaluation metrics.']                        |
+| paper_4  | ['Fully convolutional network (FCN) with dense encoder and CFP input representation']                                         | ['Comparative performance evaluation against other methods using CFP representation']                                                                         | ['Achieves state-of-the-art performance with less computation and fewer parameters.']                                    |
+| paper_5  | ['Streamlined encoder/decoder network with pooling indices and bottleneck layer']                                             | ['Localization of melody in frequency using pooling indices and bottleneck layer for melody estimation']                                                      | ['Achieve result close to the state-of-the-art with much fewer convolutional layers and simpler convolution modules.']   |
+| paper_6  | ['Hrnet-Blstm model with multi-resolution feature learning and unvoiced frames loss function']                                | ['Large-scale pitch refinement from melody MIDI files with multi-resolution feature learning in HRNet and BLSTM layer for temporal information exploitation'] | ['Proposed system outperforms four state-of-the-art algorithms in most cases.']                                          |
+| paper_7  | ['Classification-based melody extraction using deep convolutional neural networks']                                           | ['SPE and SVAD model based on deep CNNs for vocal pitch prediction and voice activity detection']                                                             | ['Model is comparable to state-of-the-art algorithms.']                                                                  |
+| paper_8  | ['Two-stage multi-resolution end-to-end model using 1-D and 2-D CNN kernels']                                                 | ['1-D and 2-D multi-resolution analysis, successively carried out by using 1-D and 2-D CNN kernels']                                                          | ['Outperforms three compared systems in three out of five public databases.']                                            |
+| paper_9  | ['Salience representations for F0 estimation in polyphonic music using a fully convolutional neural network']                 | ['Salience representations for F0 estimation trained using a large, semi-automatically generated f0 dataset']                                                 | ['Our models achieve state-of-the-art performance on several multi-f 0 and melody datasets.']                            |
+| paper_10 | ['HRNet-based singing voice separation and encoder-decoder-based F0 estimation']                                              | ['HRNet-based singing voice separation and encoder-decoder F0 estimation with HRNet and encoder-decoder network']                                             | ['Outperforms other state-of-the-art algorithms in most cases.']                                                         |
+| paper_11 | ['Hierarchical attention network (HANME) with context vector learning and CRNN for spatial and temporal features extraction'] | ['Hierarchical attention network with context vector learning based on CRNN and partial parameter adaptation']                                                | ['The experimental study demonstrates the superiority of our method compared with other state-of-the-art ones.']         |
+| paper_12 | ['Joint singing pitch estimation and voice separation using a multi-task learning approach with harmonic masks']              | ['Unified network for vocal F0 saliency estimation and vocal and accompaniment separation with a U-Net']                                                      | ['The proposed unified network outperformed the conventional independent networks for vocal extraction and separation.'] |
+| paper_13 | ['Joint singing voice separation and F0 estimation using deep U-Net architectures']                                           | ['Joint separation and estimation of fundamental frequency in time-frequency domain using a stacked architecture']                                            | ['Best joint model achieves state-of-the-art results for vocal-f0 estimation on the iKala dataset.']                     |
+| paper_14 | ['Melody extraction and detection using LSTM-RNN with harmonic sum loss and deep architectures']                              | ['LSTM-RNN for extracting melody with harmonic sum loss and focus on octave mismatch and interference suppression']                                           | ['The performance of the proposed method is better than or comparable to other state-of-the-art algorithms.']            |
+| paper_15 | ['Melody extraction using multi-column deep neural networks for classiﬁcation and pitch-shifting data augmentation']          | ['Melody extraction on vocal segments using multi-column deep neural networks']                                                                               | ['We show incremental improvements of the melody prediction.']                                                           |
+| paper_16 | ['Multitask learning architecture for simultaneous multiple-f0, melody, vocal, and bass line estimation']                     | ['Multitask deep learning architecture trained using large, semi-automatically annotated dataset']                                                            | ['The multitask model outperforms its single-task counterparts.']                                                        |
+| paper_17 | ['Semi-supervised learning using teacher-student models for vocal melody extraction']                                         | ['Semi-supervised learning using teacher-student models for vocal melody extraction with data augmentation and artificially generated testing data']          | ['The results show that the SSL method significantly increases the performance against supervised learning only.']       |
+| paper_18 | ['Singing voice melody transcription using DNN models and vocal sequence segmentation']                                       | ['DNN-based melody f0 estimation, segmenting vocal sequences, and combination for singing voice melody transcription']                                        | ['Exhibits highest accuracy through a better generalization on two different music databases.']                          |
+| paper_19 | ['Vocal melody extraction using patch-based CNN for time-frequency representation']                                           | ['Vocal melody extraction with patch-based CNN using novel time-frequency representation']                                                                    | ['Experiments on various datasets show excellent speed and competitive accuracy.']                                       |
+| paper_20 | ['Vocal melody extraction with DNN-based pitch estimation and salience-based pitch refinement using melody MIDI files']       | ['DNN model trained for melody extraction using melody MIDI files as labels, and F0 salience-based pitch refinement']                                         | ['Outperforms four state-of-the-art melody extraction methods in most cases.']                                           |
+| paper_21 | ['Vocal melody extraction using semantic segmentation and audio-symbolic domain transfer learning with dilated convolution']  | ['Melody extraction based on DCNN with dilated convolution and adaptive progressive neural network for domain-transfer']                                      | ['Competitive accuracy of the proposed method on various datasets.']                                                     |
+| paper_22 | ['Singing voice separation and pitch extraction from monaural polyphonic audio music via DNN and adaptive pitch tracking']    | ['Deep neural networks for singing voice separation and adaptive pitch tracking for pitch estimation']                                                        | ['Outperforms a previous state-of-the-art approach in raw-pitch accuracy.']                                              |
+
+MATCHES:
+Model Architecture: 
+Training Strategy: 
+Performance Metrics: 

@@ -1,0 +1,37 @@
+ID: 3560e8ad-2a9d-4160-bdf8-007ab0e734e3
+
+GOLD TABLE:
+|          | Domain                   | Proposed Method                      | Transferable   | Generalizable   | Matching Performance   |
+|---------:|:-------------------------|:-------------------------------------|:---------------|:----------------|:-----------------------|
+| 19953360 | ['Face images']          | ['Multimodal Discriminant Analysis'] | ['Yes']        | ['Yes']         | ['Severely degraded']  |
+|  3333907 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 13818729 | ['Face images']          | ['Semi-Adversarial Networks']        | ['Yes']        | ['No']          | ['Mostly retained']    |
+| 43975656 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 51890585 | ['Face images']          | ['Ensemble of SAN models']           | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+| 59553616 | ['Face representations'] | ['SensitiveNet']                     | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+
+GOLD SCHEMA:
+0: Domain
+1: Proposed Method
+2: Transferable
+3: Generalizable
+4: Matching Performance
+
+PREDICTION PATH:../../metric_validation_0/3560e8ad-2a9d-4160-bdf8-007ab0e734e3/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method                                    | Attribute Control               | Preserves Biometric Utility   | Training Strategy             | Experimental Validation                                                                |
+|:--------|:------------------------------------------|:--------------------------------|:------------------------------|:------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['Controllable Face Privacy']             | ['Identity, Gender, Race, Age'] | ['Yes, for gender detection'] | ['Subspace decomposition']    | ['Commercial facial analysis software']                                                |
+| paper_2 | ['Face image perturbation']               | ['Gender']                      | ['Yes, for face matching']    | ['Systematic perturbation']   | ['Gender classifier, face matcher']                                                    |
+| paper_3 | ['Semi-adversarial Networks']             | ['Gender']                      | ['Yes, for face matching']    | ['Semi-adversarial training'] | ['Autoencoder with gender classifier and face matcher']                                |
+| paper_4 | ['Adversarial perturbations']             | ['Selective attributes']        | ['Yes, for face recognition'] | ['Adversarial perturbation']  | ['MUCT, LFWcrop, CelebA']                                                              |
+| paper_5 | ['Ensemble of Semi Adversarial Networks'] | ['Gender']                      | ['Yes, for face matching']    | ['Ensemble of SANs']          | ['Various unseen gender classifiers and face matchers']                                |
+| paper_6 | ['SensitiveNets']                         | ['Gender, Ethnicity']           | ['Yes, for face recognition'] | ['Triplet loss learning']     | ['State-of-the-art algorithms, publicly available benchmarks, new annotation dataset'] |
+
+MATCHES:
+Method: 
+Attribute Control: 
+Preserves Biometric Utility: 
+Training Strategy: 
+Experimental Validation: 

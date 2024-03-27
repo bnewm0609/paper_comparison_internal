@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Methodologies                                                                                                                                                                                                                                                                         | Comparison of Techniques                                                                                                                                                                      |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Review of reported uses and applications of deep learning for UAVs', 'Description of the main deep learning techniques for UAVs']                                                                                                                                                   | ['N/A']                                                                                                                                                                                       |
+| paper_2  | ['Survey of work applicable to autonomous planetary rover navigation', 'Discussion of ongoing challenges and promising future research directions']                                                                                                                                   | ['N/A']                                                                                                                                                                                       |
+| paper_3  | ['State-of-the-art survey on deep learning theory and architectures', 'Presentation of advances in the area of Deep Learning (DL) with detailed coverage of DL approaches and their applications']                                                                                    | ['N/A']                                                                                                                                                                                       |
+| paper_4  | ['Overview of reinforcement learning (RL) algorithm with deep learning techniques for autonomous visual navigation', 'Discussion of the challenges reinforcement learning is facing in the field of robotics']                                                                        | ['N/A']                                                                                                                                                                                       |
+| paper_5  | ['Introductory review of deep learning approaches, including major core architectures and their composability', 'Presentation of a basic understanding of core architectural building blocks and their applications']                                                                 | ['N/A']                                                                                                                                                                                       |
+| paper_6  | ['Survey of deep learning technologies used in autonomous driving', 'Investigation of methodologies used for driving scene perception, path planning, behavior arbitration, and motion control']                                                                                      | ['Comparison of modular perception-planning-action pipeline and End2End systems', 'Investigation of the strengths and limitations of deep learning and AI approaches for autonomous driving'] |
+| paper_7  | ['Review of using AI technology to enhance inertial sensing, including sensor design, calibration, navigation algorithms, and multi-sensor information fusion', 'Summarization of advantages and challenges of AI-enhanced inertial sensing']                                         | ['Summarization of advantages and challenges of AI-enhanced inertial sensing', 'N/A']                                                                                                         |
+| paper_8  | ['Review of theories and applications of deep learning for self-driving cars', 'Analysis of main problems and their solutions based on deep learning methods for self-driving cars']                                                                                                  | ['Analysis of main problems and their solutions based on deep learning methods for self-driving cars', 'Summary of applications of deep learning methods for self-driving cars']              |
+| paper_9  | ['Comprehensive survey of localization and mapping using deep learning', 'Proposition of a new taxonomy for localization and mapping']                                                                                                                                                | ['N/A', 'N/A']                                                                                                                                                                                |
+| paper_10 | ['Review of classic and advanced CNN models with experimental analysis and applications of one-dimensional, two-dimensional, and multi-dimensional convolution', 'Discussion of open issues and promising directions for CNN']                                                        | ['N/A', 'N/A']                                                                                                                                                                                |
+| paper_11 | ['Systematic review of research directly in, or relevant to, assistive outdoor navigation for BVIP', 'Overview of research progress in the domain and guidance on future directions']                                                                                                 | ['Analysis of work directly in, or relevant to, assistive outdoor navigation for BVIP', 'Overview of commercial and non-commercial navigation applications targeted at BVIP']                 |
+| paper_12 | ['Overview of deep learning and artificial neural networks for spacecraft dynamics, navigation, and control', 'Review and comparison of applications of artificial neural networks to system identification, control synthesis, and optical navigation']                              | ['N/A', 'N/A']                                                                                                                                                                                |
+| paper_13 | ['Literature overview of visual navigation and positioning of autonomous UUVs', 'Comparison of geometry-based methods and deep learning-based methods for UUV visual navigation and positioning']                                                                                     | ['Analysis and comparison of geometry-based and deep learning-based methods for UUV visual navigation and positioning', 'N/A']                                                                |
+| paper_14 | ['Survey of main UAV navigation tasks, navigation frameworks, and simulation software', 'Classification and discussion of RL algorithms and implications in different UAV navigation problems']                                                                                       | ['Classification and discussion of RL algorithms and implications in different UAV navigation problems', 'Discussion of identified gaps and opportunities in UAV navigation research']        |
+| paper_15 | ['Review of various image-based obstacle detection techniques employed by unmanned vehicles such as USVs, UAVs, and MAVs', 'Classification and discussion of monocular and stereo-based methods and the potential and challenges of deep learning techniques for obstacle detection'] | ['Classification and discussion of monocular and stereo-based methods and the potential and challenges of deep learning techniques for obstacle detection', 'N/A']                            |
+
+MATCHES:
+Methodologies: 
+Comparison of Techniques: 

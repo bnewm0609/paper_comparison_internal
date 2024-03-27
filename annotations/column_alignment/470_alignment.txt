@@ -1,0 +1,25 @@
+ID: db5113ea-add9-4283-9971-ffc5667e1701
+
+GOLD TABLE:
+|           | Attack Vector     | Study               |
+|----------:|:------------------|:--------------------|
+| 207158066 | ['SQL Injection'] | ['[S59, S62, S70]'] |
+|   6924018 | ['Malware/RAT']   | ['[S1, S41]']       |
+|   5071459 | ['Steganography'] | ['[S3, S9, S20]']   |
+
+GOLD SCHEMA:
+0: Attack Vector
+1: Study
+
+PREDICTION PATH:../../metric_validation_0/db5113ea-add9-4283-9971-ffc5667e1701/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                         | Methods for reducing false positives                                                                                                                                                                                                                                                                                                                                                 | Impact on system performance                                                                                                                                                         |
+|:------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AMNESIA: analysis and monitoring for NEutralizing SQL-injection attacks | ['The paper proposes a model-based approach that uses program analysis and runtime monitoring to detect and prevent SQL injection attacks. The technique automatically builds a model of legitimate queries and checks dynamically-generated queries against the model. The technique was able to detect and prevent all attempted attacks without generating any false positives.'] | ['The paper mentions that the proposed technique did not generate any false positives. However, it does not provide any quantitative analysis of the impact on system performance.'] |
+| Towards an Evidence-Based Understanding of Electronic Data Sources      | ['N/A']                                                                                                                                                                                                                                                                                                                                                                              | ['N/A']                                                                                                                                                                              |
+| Clustering intrusion detection alarms to support root cause analysis    | ['N/A']                                                                                                                                                                                                                                                                                                                                                                              | ['N/A']                                                                                                                                                                              |
+
+MATCHES:
+Methods for reducing false positives: 
+Impact on system performance: 

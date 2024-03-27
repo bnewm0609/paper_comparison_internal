@@ -1,0 +1,29 @@
+ID: b1eaa703-c651-4cf6-a9c5-00648d6b5fb8
+
+GOLD TABLE:
+|           | Title                                                                             | Year     | Key Contributions                                                                                                                                                                                                                                                                                    |
+|----------:|:----------------------------------------------------------------------------------|:---------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 204838141 | ['Mobile Edge Computing in Unmanned Aerial Vehicle Networks']                     | ['2019'] | ['The paper presents three UEC architectures based on the role of UAVs in UEC. It provides a brief survey on computational offloading and resource allocation in UEC.']                                                                                                                              |
+| 237598052 | ['Energy Efficient UAV-Enabled Mobile Edge Computing for IoT Devices: A Review']  | ['2021'] | ['The paper presents a brief survey on UEC networks with a focus on energy efficiency. It introduces basic terminologies and architectures used in UEC. It also presents various techniques and challenges related to computational offloading and a brief overview of resource management in UEC.'] |
+| 245165746 | ['UAV-Enabled Mobile Edge-Computing for IoT Based on AI: A Comprehensive Review'] | ['2021'] | ['This paper presents a review on deep learning and machine learning techniques used in various application of UEC.']                                                                                                                                                                                |
+| 248132152 | ['UAV-Enhanced Edge Intelligence: A Survey']                                      | ['2022'] | ['The paper introduces and presents various applications of UAV-enhanced edge intelligence systems. It also discusses some challenges and future research directions for UAV-enhanced Edge Intelligent systems.']                                                                                    |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Key Contributions
+
+PREDICTION PATH:../../metric_validation_0/b1eaa703-c651-4cf6-a9c5-00648d6b5fb8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | UAV Types and Characteristics                                                             | UAV Integration                                                                                                                | UAV Flight Time and Coverage                                                                               |
+|:--------|:------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+| paper_1 | ['UAVs are used in mobile edge computing networks']                                       | ['UAVs are integrated into MEC networks to improve computation performance and decrease execution latency']                    | ['N/A']                                                                                                    |
+| paper_2 | ['UAVs are integrated with MEC servers to provide computational services to IoT devices'] | ['UAV-enabled MEC (U-MEC) system has flexible mobility and more computational capability compared to terrestrial MEC network'] | ['UAVs support line-of-sight (LoS) links with users, mitigating small-scale fading and shadowing effects'] |
+| paper_3 | ['UAVs are becoming integrated into a wide range of modern IoT applications']             | ['UAV-enabled MEC architecture is used for computation-intensive offloading and latency issues']                               | ['N/A']                                                                                                    |
+| paper_4 | ['UAVs provide line-of-sight communication links and better coverage']                    | ['UAVs are integrated into EI systems for low latency and low cost']                                                           | ['UAVs provide maneuverability, versatility, and maneuverability']                                         |
+
+MATCHES:
+UAV Types and Characteristics: 
+UAV Integration: 
+UAV Flight Time and Coverage: 

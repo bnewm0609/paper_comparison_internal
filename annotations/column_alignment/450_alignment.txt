@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Data sources                                                                                                                                                                              | Corpus size                       | Preprocessing methods                                                                                 | Vocabulary size   | Availability of resources                                      |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------|:------------------------------------------------------------------------------------------------------|:------------------|:---------------------------------------------------------------|
+| paper_1 | ['Amharic Facebook posts and comments']                                                                                                                                                   | ['10-fold cross-validation data'] | ['Word2Vec, TF-IDF, Random forest, Naïve Bayes']                                                      | ['N/A']           | ['N/A']                                                        |
+| paper_2 | ['Amharic tweets']                                                                                                                                                                        | ['5,267 tweets']                  | ['N/A']                                                                                               | ['N/A']           | ['Dataset, source code, and models with a permissive license'] |
+| paper_3 | ['Afaan Oromo posts and comments from Facebook']                                                                                                                                          | ['12,812 posts and comments']     | ['Different feature extraction techniques such as BOW, TF-IDF, word2vec, and Keras Embedding layers'] | ['N/A']           | ['N/A']                                                        |
+| paper_4 | ['Afan Oromo comments and posts from Facebook, Twitter, BBC Afan Oromo, OBN Afan Oromo, Fana Afan Oromo Program, Politicians, Activists, Religious Men, and Oromia Communication Bureau'] | ['N/A']                           | ['Text preprocessing tasks such as removing special characters, stop-words, HTML tags']               | ['N/A']           | ['N/A']                                                        |
+| paper_5 | ['Afaan Oromoo language Facebook posts and comments']                                                                                                                                     | ['N/A']                           | ['TF-IDF, N-gram, and W2vec feature extraction']                                                      | ['N/A']           | ['N/A']                                                        |
+
+MATCHES:
+Data sources: 
+Corpus size: 
+Preprocessing methods: 
+Vocabulary size: 
+Availability of resources: 

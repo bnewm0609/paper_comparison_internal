@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Target population for clinical application                                                                                                        | Clinical benefits of the research                                                                                                 | Limitations and future directions for clinical application                                                                                         |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Normal subjects, macaque monkeys']                                                                                                              | ['Understanding optokinetic eye movements and their effects on processing optic flow']                                            | ['Further investigation of the influence of eye movements in optic flow analysis']                                                                 |
+| paper_2 | ['Readers with varying reading abilities']                                                                                                        | ['Analysis of reading eye movements based on nonlinear dynamics, offering a promising approach for modeling oculomotor behavior'] | ['Larger sample size and replication study to confirm the utility of fractal analysis in distinguishing between normal and abnormal reading']      |
+| paper_3 | ['Vestibular patients, individuals with semicircular canal dysfunction']                                                                          | ['Non-invasive, easy-to-use detection of vertical semicircular canal dysfunction']                                                | ['Considering individual differences and factors influencing vHIT measures in clinical practice']                                                  |
+| paper_4 | ['Individuals with vestibular disorders']                                                                                                         | ['Measurement of 3D vestibular ocular reflex (VOR) using whole body rotation on a 6DF motion platform']                           | ['Incorporating 3D translation VOR testing into the method, testing other stimulation frequencies, and testing subjects with vestibular deficits'] |
+| paper_5 | ['Healthy subjects']                                                                                                                              | ['Evidence of disconjugate reflex eye movements elicited by brief air conducted tones']                                           | ['Exploration of the mechanisms underlying the elicited responses and the potential therapeutic implications']                                     |
+| paper_6 | ['Patients with unilateral vestibular loss (UVD), patients with bilateral vestibular loss, patients with ocular situation in vestibular testing'] | ['Investigating vestibulo-ocular reflex (VOR) and otolithic reflexes using skull vibrations and detecting vestibular lesions']    | ['Determining the exact origin of evoked responses and further validation of the method in clinical settings']                                     |
+| paper_7 | ["Individuals with Parkinson's disease (PD)"]                                                                                                     | ['Visual cues assist in producing cranio-caudal control during walking turns in PD']                                              | ['Investigating the long-term effects of visual cue training and other potential interventions for PD']                                            |
+| paper_8 | ['Paralyzed patients without motor nervous system signal issues']                                                                                 | ['Designing human-computer interfaces (HCIs) using electrooculogram (EOG) signals for paralyzed patients']                        | ['Improving the accuracy and consistency of EOG-based HCI signals, and expanding the number of controllable devices']                              |
+
+MATCHES:
+Target population for clinical application: 
+Clinical benefits of the research: 
+Limitations and future directions for clinical application: 

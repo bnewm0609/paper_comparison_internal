@@ -1,0 +1,29 @@
+ID: 82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8
+
+GOLD TABLE:
+|           | Anomaly     | Pose      |
+|----------:|:------------|:----------|
+|  72941049 | ['Anomaly'] | ['Pose']  |
+| 236950792 | ['Anomaly'] | ['Pixel'] |
+| 233423473 | ['Action']  | ['Pose']  |
+| 236428765 | ['Action']  | ['Pose']  |
+| 249065776 | ['Action']  | ['Pixel'] |
+
+GOLD SCHEMA:
+0: Anomaly
+1: Pose
+
+PREDICTION PATH:../../metric_validation_0/82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology                                                         | Scope of Anomaly Detection                           |
+|:--------|:--------------------------------------------------------------------|:-----------------------------------------------------|
+| Paper 1 | ['Message-Passing Encoder-Decoder Recurrent Network']               | ['Surveillance video sequences for human movements'] |
+| Paper 2 | ['Robust Temporal Feature Magnitude learning with MIL']             | ['Weakly-supervised video anomaly detection']        |
+| Paper 3 | ['PoseConv3D using 3D heatmap volume']                              | ['Skeleton-based action recognition']                |
+| Paper 4 | ['Channel-wise Topology Refinement Graph Convolution']              | ['Skeleton-based action recognition']                |
+| Paper 5 | ['Model-based multimodal network (MMNet) with skeleton-RGB fusion'] | ['RGB-D video-based human action recognition']       |
+
+MATCHES:
+Methodology: 
+Scope of Anomaly Detection: 

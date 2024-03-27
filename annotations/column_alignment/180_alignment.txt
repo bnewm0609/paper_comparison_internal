@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Focus on Deep Learning Techniques                                                                                                                                 | Application Domain                                                                                               |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Focuses on reviewing deep learning methods and their applications for Unmanned Aerial Vehicles (UAVs)']                                                         | ['Focuses on deep learning applications for Unmanned Aerial Vehicles (UAVs)']                                    |
+| Paper 2  | ['Surveys work applicable to adaptive and intelligent navigation of autonomous planetary rovers']                                                                 | ['Focuses on autonomous planetary rover navigation in planetary terrains']                                       |
+| Paper 3  | ['Presents a state-of-the-art survey on deep learning theory and architectures, covering various application domains']                                            | ['Encompasses various application domains that utilize deep learning techniques']                                |
+| Paper 4  | ['Highlights the overview of autonomous visual navigation using deep reinforcement learning']                                                                     | ['Focuses on visual navigation using deep reinforcement learning']                                               |
+| Paper 5  | ['Reviews deep learning for prediction models with big data, providing an introductory overview']                                                                 | ['Focuses on deep learning applications for prediction models with big data']                                    |
+| Paper 6  | ['Surveys deep learning techniques specifically for autonomous driving applications']                                                                             | ['Focuses on deep learning technologies used in autonomous driving']                                             |
+| Paper 7  | ['Reviews the research on using AI technology to enhance inertial sensing']                                                                                       | ['Focuses on using AI technology to enhance inertial sensing']                                                   |
+| Paper 8  | ['Presents a survey on theories and applications of deep learning for self-driving cars']                                                                         | ['Focuses on theories and applications of deep learning for self-driving cars']                                  |
+| Paper 9  | ['Surveys deep learning for localization and mapping, focusing on spatial machine intelligence']                                                                  | ['Focuses on deep learning-based localization and mapping']                                                      |
+| Paper 10 | ['Provides an analysis, applications, and prospects of Convolutional Neural Networks']                                                                            | ['Encompasses various applications and prospects of Convolutional Neural Networks']                              |
+| Paper 11 | ['Presents a systematic review of urban navigation systems for visually impaired people, especially focusing on computer vision and machine learning approaches'] | ['Focuses on urban navigation systems for visually impaired people']                                             |
+| Paper 12 | ['Introduces the employment of artificial neural networks and deep learning methods for spacecraft dynamics, navigation, and control']                            | ['Applies artificial neural networks and deep learning methods to spacecraft dynamics, navigation, and control'] |
+| Paper 13 | ['Surveys the visual navigation and positioning for autonomous unmanned underwater vehicles, focusing on vision-based methods']                                   | ['Focuses on visual navigation and positioning for autonomous unmanned underwater vehicles']                     |
+| Paper 14 | ['Offers a systematic review of autonomous UAV navigation using reinforcement learning, discussing the environment, algorithm characteristics, and applications'] | ['Focuses on autonomous UAV navigation using reinforcement learning']                                            |
+| Paper 15 | ['Reviews image-based obstacle detection methods for the safe navigation of unmanned vehicles using various image-based techniques']                              | ['Reviews various image-based obstacle detection methods employed by unmanned vehicles']                         |
+
+MATCHES:
+Focus on Deep Learning Techniques: 
+Application Domain: 

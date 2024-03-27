@@ -1,0 +1,23 @@
+ID: 41ee5929-ef7d-49b0-b25d-b0caf7c167dd
+
+GOLD TABLE:
+|           | Age recording format   | Example   |
+|----------:|:-----------------------|:----------|
+| 221128548 | ['exact age']          | ['64']    |
+| 220483201 | ['not available']      | ['NA']    |
+
+GOLD SCHEMA:
+0: Age recording format
+1: Example
+
+PREDICTION PATH:../../metric_validation_0/41ee5929-ef7d-49b0-b25d-b0caf7c167dd/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Study design                                                                                                                                                                                                                                                                                                               | Findings on immune cell types                                                                                                                                                                                                                                                                                                                                                                                            |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Performed high-dimensional flow cytometry of hospitalized COVID-19 patients and found three prominent and distinct immunotypes related to disease severity and clinical parameters.']                                                                                                                                    | ['Reduced expression of HLA-DR by myeloid cells, impaired mTOR signaling and IFN-α production by plasmacytoid dendritic cells:{ N/A}, Enhanced plasma levels of inflammatory mediators which correlated with disease severity and increased bacterial products in plasma.']                                                                                                                                              |
+| paper_2 | ['Performed single-cell RNA sequencing using peripheral blood mononuclear cells (PBMCs) obtained from healthy donors, patients with mild or severe COVID-19, and patients with severe influenza. Compared immune responses in patients with mild and severe COVID-19 with immune responses in severe cases of influenza.'] | ['TNF/IL-1β–driven inflammation as defining characteristics of COVID-19 that was relatively weak in the response to influenza, Type I interferons to be key drivers of inflammation in severe COVID-19, Type I IFN response coexisted with the TNF/IL-1β–driven inflammation in classical monocytes from patients with severe COVID-19, and type I IFN–driven inflammatory features in patients with severe influenza.'] |
+
+MATCHES:
+Study design: 
+Findings on immune cell types: 

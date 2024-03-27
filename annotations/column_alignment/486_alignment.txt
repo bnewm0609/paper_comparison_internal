@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Performance of the CCL algorithm on GPUs   | Comparison with serial and other GPU-based CCL methods                                                                                       |
+|:--------|:-------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['5-10x']                                  | ['performed similar to Label Equivalence, but proved to be more predictable in the sense that its execution time is more image-independent'] |
+| Paper 2 | ['1.61x compared with Union-find']         | ['a 1.61x speedup compared with Union-find when runs on the large image']                                                                    |
+
+MATCHES:
+Performance of the CCL algorithm on GPUs: 
+Comparison with serial and other GPU-based CCL methods: 

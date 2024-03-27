@@ -1,0 +1,29 @@
+ID: 922d9133-f613-42d2-b191-b75c784e550f
+
+GOLD TABLE:
+|           | Dataset             | Dim.          |
+|----------:|:--------------------|:--------------|
+|  10659969 | ['Moons']           | ['2']         |
+|  60282629 | ['MNIST']           | ['28x28']     |
+|    702279 | ['Fashion MNIST']   | ['28x28']     |
+|  18268744 | ['CIFAR10']         | ['32x32x3']   |
+| 198967908 | ['CelebA-HQ (128)'] | ['128x128x3'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Dim.
+
+PREDICTION PATH:../../metric_validation_0/922d9133-f613-42d2-b191-b75c784e550f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Object recognition                                                                                                                         | Facial image manipulation                                                  |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------|
+| paper_1 | ['We show that object recognition is significantly improved by pre-training a layer of features on a large set of unlabeled tiny images.'] | ['N/A']                                                                    |
+| paper_2 | ['N/A']                                                                                                                                    | ['N/A']                                                                    |
+| paper_3 | ['N/A']                                                                                                                                    | ['N/A']                                                                    |
+| paper_4 | ['N/A']                                                                                                                                    | ['N/A']                                                                    |
+| paper_5 | ['N/A']                                                                                                                                    | ['Facial image manipulation has achieved great progress in recent years.'] |
+
+MATCHES:
+Object recognition: 
+Facial image manipulation: 

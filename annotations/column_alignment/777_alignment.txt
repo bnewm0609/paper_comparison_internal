@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Purpose of syllabification                                                                                                                                                                                                     | Datasets used for syllabification      |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------|
+| paper_1 | ['A novel, low cost, and language agnostic approach to dividing words into their corresponding syllables using a hybrid genetic algorithm and hidden Markov model sequence classifier.']                                       | ['English words']                      |
+| paper_2 | ['Investigating the generalization capabilities of backpropagation learning in feed-forward and recurrent feed-forward connectionist networks interactive phonological and morphological constraints in Dutch (hyphenation).'] | ['Dutch orthographic representations'] |
+| paper_3 | ['Presenting approaches based on linguistic theories of syllabification and a discriminative learning technique that combines Support Vector Machine and Hidden Markov Model technologies to syllabify phonemes.']             | ['English, Dutch, and German']         |
+| paper_4 | ['Presenting approaches based on linguistic theories of syllabification and a discriminative learning technique that combines Support Vector Machine and Hidden Markov Model technologies to syllabify phonemes.']             | ['English, Dutch, and German']         |
+| paper_5 | ['Developing data-driven methods for automatic syllabification of words written in Manipuri language, one of the scheduled Indian languages.']                                                                                 | ['N/A']                                |
+
+MATCHES:
+Purpose of syllabification: NA
+Datasets used for syllabification: 0

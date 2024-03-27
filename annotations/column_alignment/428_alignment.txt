@@ -1,0 +1,48 @@
+ID: 9d0e8423-370b-4028-8b6c-8ea946bc995c
+
+GOLD TABLE:
+|           | Domain              | Audit Material            | Complexity   | Algorithms                                                 | Feature Selection   | Time Series   | Dataset            | Data Type                 | Data Available   | Metrics                                       |
+|----------:|:--------------------|:--------------------------|:-------------|:-----------------------------------------------------------|:--------------------|:--------------|:-------------------|:--------------------------|:-----------------|:----------------------------------------------|
+|   1586658 | ['Energy']          | ['Physical']              | ['Simple']   | ['MSA, SVM, and ANN']                                      | ['No']              | ['Yes']       | ['PMU']            | ['Actual, and Simulated'] | ['No']           | ['Accuracy']                                  |
+|   3778374 | ['Healthcare']      | ['Physical']              | ['Simple']   | ['k-NN, NN, SVM, DT, NB, and ZeroR.']                      | ['No']              | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['Accuracy, Precision, Recall,and F1 Score']  |
+| 198351215 | ['Water']           | ['Network, and Physical'] | ['Hybrid']   | ['SVM, and SMC']                                           | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy, Sensitivity, and Specificity']    |
+| 198329283 | ['Smart Home']      | ['Network']               | ['Simple']   | ['NB, BN, J48, Zero R, OneR, Logistic, SVM, MLP, and RF']  | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['F1 Score']                                  |
+| 109929259 | ['Energy']          | ['Physical']              | ['SImple']   | ['BR with ARD']                                            | ['No']              | ['Yes']       | ['Annon']          | ['Simulated']             | ['No']           | ['FP, FN, and PT']                            |
+| 195469712 | ['Gas, and Energy'] | ['Physical']              | ['Simple']   | ['ELM']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual, and Simulated'] | ['No']           | ['ROC, TPR, and FPR']                         |
+| 195352080 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['SVM']                                                    | ['Yes']             | ['Yes']       | ['SWaT, and WADI'] | ['Actual']                | ['Yes']          | ['Accuracy']                                  |
+|  21292826 | ['Annon']           | ['Physical']              | ['SImple']   | ['CNN']                                                    | ['Yes']             | ['Yes']       | ['Annon']          | ['Actual']                | ['No']           | ['Accuracy']                                  |
+| 199527319 | ['Water']           | ['Network, and Physical'] | ['Simple']   | ['RF, NBTree, LMT, J48, PART, MLP, HTree, LogF, and SVM.'] | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Precision, and Sensitivity']                |
+| 208278076 | ['Water']           | ['Physical']              | ['Simple']   | ['NN']                                                     | ['Yes']             | ['Yes']       | ['SWaT']           | ['Actual']                | ['Yes']          | ['Accuracy, Precision, Recall, and F1 score'] |
+
+GOLD SCHEMA:
+0: Domain
+1: Audit Material
+2: Complexity
+3: Algorithms
+4: Feature Selection
+5: Time Series
+6: Dataset
+7: Data Type
+8: Data Available
+9: Metrics
+
+PREDICTION PATH:../../metric_validation_0/9d0e8423-370b-4028-8b6c-8ea946bc995c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of CPS/smart grid application                                 | Security concerns and threat model                                                      | Proposed security measures and techniques                                                                       |
+|:---------|:-------------------------------------------------------------------|:----------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['False data injection mitigation in smart grids']                 | ['False data injection cyber-physical threat, network attacks, CPS controller attacks'] | ['Data analytical method based on data-centric paradigm employing the margin setting algorithm (MSA)']          |
+| Paper 2  | ['Medical Cyber Physical Systems']                                 | ['Large number of false alarms in medical CPS']                                         | ['Medical Fuzzy Alarm Filter (MFAFilter) using fuzzy logic and fuzzy if-then rules']                            |
+| Paper 3  | ['Industry 4.0 cyber-physical systems']                            | ['Cyber threats in CPSs']                                                               | ['Learned monitor, analyze, plan, execute, and knowledge (MAPE-K) base model']                                  |
+| Paper 4  | ['Smart home IoT devices']                                         | ['Network based cyber-attacks on IoT networks']                                         | ['Three layer intrusion detection system (IDS) with supervised approach']                                       |
+| Paper 5  | ['Power grid line failure detection after cyber-physical attacks'] | ['Line trippings and loss of measurement feeds']                                        | ['PROBER Algorithm for probabilistically detecting line failures after an attack']                              |
+| Paper 6  | ['Heavy-duty gas turbines of combined cycle power plants']         | ['Attacks or malicious activities in heavy-duty gas turbines']                          | ['Machine learning-based attack detection (AD) scheme']                                                         |
+| Paper 7  | ['Cyber-Physical Systems (CPSs)']                                  | ['Data integrity attacks on sensors']                                                   | ['Combined fingerprint for sensor and process noise, Kalman filter, time domain and frequency domain features'] |
+| Paper 8  | ['Embedded systems']                                               | ['Device aging, thermal side channels']                                                 | ['Deep learning networks in conjunction with thermal side channels']                                            |
+| Paper 9  | ['Industrial control systems']                                     | ['Stealthy attacks on industrial control systems']                                      | ['Stateful Detector (SD)']                                                                                      |
+| Paper 10 | ['Industrial Control Systems (ICS)']                               | ['Zero-day attacks on ICS']                                                             | ['Digital signal processing (DSP), comb of digital low-pass filters']                                           |
+
+MATCHES:
+Type of CPS/smart grid application: 
+Security concerns and threat model: 
+Proposed security measures and techniques: 

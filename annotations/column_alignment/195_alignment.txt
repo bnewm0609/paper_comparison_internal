@@ -1,0 +1,35 @@
+ID: 53285b40-86e5-419a-b47b-d1adca8319ce
+
+GOLD TABLE:
+|           | Main approach                            | Environment   | Obstacle avoidance   | Coordination   | Sensing ability   |
+|----------:|:-----------------------------------------|:--------------|:---------------------|:---------------|:------------------|
+| 230511448 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Perfect']       |
+| 246826797 | ['Deep\nReinforcement Learning']         | ['Air (3D)']  | ['Static']           | ['Yes']        | ['Limited']       |
+| 247818114 | ['Deep Reinforcement Learning']          | ['Land (2D)'] | ['No']               | ['No']         | ['Perfect']       |
+| 199543302 | ['Meta-reinforcement learning']          | ['Land (2D)'] | ['Static']           | ['No']         | ['Limited']       |
+| 251134882 | ['Bayesian fusion and machine learning'] | ['Land (2D)'] | ['No']               | ['Yes']        | ['Limited']       |
+
+GOLD SCHEMA:
+0: Main approach
+1: Environment
+2: Obstacle avoidance
+3: Coordination
+4: Sensing ability
+
+PREDICTION PATH:../../metric_validation_0/53285b40-86e5-419a-b47b-d1adca8319ce/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Applications of reinforcement learning in robotics                                                                                   | Effect of adaptation algorithms on trust modeling                                                                                     | Use of mixed reality in robotics scenarios                                                                                 | Analysis of perceived trustworthiness due to adaptation techniques                                                                 | Development of datasets to represent hazardous environments for robotics applications                                                          |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Yes, the paper uses a curriculum deep reinforcement learning approach for the pursuit-evasion game in robotics.']                  | ['N/A']                                                                                                                               | ['N/A']                                                                                                                    | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                        |
+| paper_2 | ['Yes, the paper uses multiagent deep deterministic policy gradient (MADDPG) formulation for the pursuit-evasion game in robotics.'] | ['N/A']                                                                                                                               | ['N/A']                                                                                                                    | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                        |
+| paper_3 | ['Yes, the paper applies deep reinforcement learning (DRL) to a bio-inspired differential game problem: the dog sheep game.']        | ['N/A']                                                                                                                               | ['N/A']                                                                                                                    | ['N/A']                                                                                                                            | ['N/A']                                                                                                                                        |
+| paper_4 | ['N/A']                                                                                                                              | ['Yes, the paper investigates the impact of meta-learning based adaptation algorithms on trust modeling in human-robot interaction.'] | ['Yes, the paper uses mixed reality in an escape room scenario to test adaptation algorithms in human-robot interaction.'] | ['Yes, the paper analyzed perceived trustworthiness due to meta-learning based adaptation techniques in human-robot interaction.'] | ['N/A']                                                                                                                                        |
+| paper_5 | ['N/A']                                                                                                                              | ['N/A']                                                                                                                               | ['N/A']                                                                                                                    | ['N/A']                                                                                                                            | ['Yes, the paper proposes to harness movies and TV shows to develop a dataset representing hazardous environments for robotics applications.'] |
+
+MATCHES:
+Applications of reinforcement learning in robotics: 
+Effect of adaptation algorithms on trust modeling: 
+Use of mixed reality in robotics scenarios: 
+Analysis of perceived trustworthiness due to adaptation techniques: 
+Development of datasets to represent hazardous environments for robotics applications: 

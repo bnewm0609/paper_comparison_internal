@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Features extracted for iris analysis                     | Techniques used for iris segmentation   | Role of iris analysis in the system                 | Performance metrics for iris analysis   |
+|:--------|:---------------------------------------------------------|:----------------------------------------|:----------------------------------------------------|:----------------------------------------|
+| paper_1 | ['Normalized iris images', 'Iris and pupil coordinates'] | ['N/A']                                 | ['Data augmentation for iris recognition']          | ['Recognition performance']             |
+| paper_2 | ['Pupil and iris features']                              | ['Light U-Net structure']               | ['Detection of eye openness for fatigue detection'] | ['Precision']                           |
+
+MATCHES:
+Features extracted for iris analysis: 
+Techniques used for iris segmentation: 
+Role of iris analysis in the system: 
+Performance metrics for iris analysis: 

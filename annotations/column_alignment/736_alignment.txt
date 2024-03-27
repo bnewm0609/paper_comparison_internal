@@ -1,0 +1,39 @@
+ID: 3f19b779-230c-438b-8d31-82cbbb31bcb8
+
+GOLD TABLE:
+|           | (Task)          | Group class   | Train set size   | Test set size (per group)   | No. of trials   | No. of epochs   | Input Shape/Config.   |
+|----------:|:----------------|:--------------|:-----------------|:----------------------------|:----------------|:----------------|:----------------------|
+| 199577425 | ['(Gender)']    | ['Race']      | ['10900']        | ['760']                     | ['5']           | ['35']          | ['3x100x100']         |
+|   1987503 | ['(Species)']   | ['Skin tone'] | ['1500']         | ['250']                     | ['5']           | ['60']          | ['3x256x256']         |
+|    810708 | ['(Age)']       | ['Gender']    | ['7700']         | ['970']                     | ['5']           | ['65']          | ['3x100x100']         |
+|  40094999 | ['(Diagnosis)'] | ['Gender']    | ['1500']         | ['250']                     | ['7']           | ['40']          | ['3x256x256']         |
+| 221142094 | ['(Gender)']    | ['Species']   | ['750']          | ['90']                      | ['5']           | ['20']          | ['3x100x100']         |
+
+GOLD SCHEMA:
+0: (Task)
+1: Group class
+2: Train set size
+3: Test set size (per group)
+4: No. of trials
+5: No. of epochs
+6: Input Shape/Config.
+
+PREDICTION PATH:../../metric_validation_0/3f19b779-230c-438b-8d31-82cbbb31bcb8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Problem being addressed                                     | Dataset used                                             | Performance evaluation method                                                | Performance results                                                                               | Comparison to other methods                                                          | Limitations/Future work                                                                   | Applications/Implications                                                           |
+|:--------|:------------------------------------------------------------|:---------------------------------------------------------|:-----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| Paper 1 | ['Race bias in face image datasets and models']             | ['FairFace dataset', 'YFCC-100M Flickr dataset']         | ['Generalization performance on existing and novel face attribute datasets'] | ['Models trained on FairFace show better accuracy and consistency across race and gender groups'] | ["Comparison of face attribute models' accuracy on the FairFace dataset"]            | ['Further reducing bias and expanding the dataset']                                       | ['Improved face analytic systems for diverse racial groups']                        |
+| Paper 2 | ['The security and vulnerabilities of the Asirra CAPTCHA']  | ['Asirra CAPTCHA dataset']                               | ['Accuracy in distinguishing cat and dog images']                            | ['Created a classifier that is 82.7% accurate in distinguishing cat and dog images']              | ["Comparison of the classifier's success rate with the estimate provided by Asirra"] | ['Investigating the impact of the attacks on partial credit and token bucket algorithms'] | ['Caution against deploying Asirra without safeguards']                             |
+| Paper 3 | ['Face aging and generative modeling']                      | ['A large collection of face images with age labels']    | ['Qualitative evaluation of age progression/regression results']             | ['Generative model can directly produce the image with desired age attribute']                    | ['Comparison with other state-of-the-art face aging works']                          | ['Exploring more conditions for the generative model']                                    | ['Aging and rejuvenating faces for various applications']                           |
+| Paper 4 | ['Pneumonia detection using deep learning on chest X-rays'] | ['ChestX-ray14']                                         | ['F1 metric comparison with radiologists on a test set']                     | ['CheXNet exceeds average radiologist performance on the F1 metric']                              | ['Comparison with other pneumonia detection methods']                                | ['Applying the method to other diseases']                                                 | ['Automated and accurate pneumonia detection for chest X-rays']                     |
+| Paper 5 | ['Chicken gender classification for animal welfare']        | ['A dataset of chicken flock and single chicken images'] | ['Accuracy of chicken gender classification']                                | ['Average accuracy of 96.85% in chicken gender classification']                                   | ['Comparison with other chicken gender classification methods']                      | ['Limitations of the dataset and potential for further improvements in accuracy']         | ['Efficient and accurate gender ratio estimation for free-range chicken producers'] |
+
+MATCHES:
+Problem being addressed: 
+Dataset used: 
+Performance evaluation method: 
+Performance results: 
+Comparison to other methods: 
+Limitations/Future work: 
+Applications/Implications: 

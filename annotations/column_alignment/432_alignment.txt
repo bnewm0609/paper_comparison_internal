@@ -1,0 +1,87 @@
+ID: e4459d7e-c1db-435a-8fdf-728317419ebd
+
+GOLD TABLE:
+|           | Optimizer                      | Batch Size   | Epoch    |
+|----------:|:-------------------------------|:-------------|:---------|
+| 235771540 | ['Adam']                       | ['NA']       | ['NA']   |
+|  52284436 | ['Adam']                       | ['NA']       | ['15']   |
+| 216465778 | ['Adam']                       | ['NA']       | ['15']   |
+| 212646385 | ['Adam']                       | ['NA']       | ['NA']   |
+|  53108672 | ['Adam']                       | ['NA']       | ['NA']   |
+| 235771211 | ['Adam']                       | ['64']       | ['NA']   |
+|  40762981 | ['SGD with Nesterov momentum'] | ['NA']       | ['100']  |
+| 146058215 | ['NA']                         | ['NA']       | ['NA']   |
+|   4531539 | ['Adam']                       | ['NA']       | ['NA']   |
+| 234082789 | ['Adam']                       | ['5']        | ['NA']   |
+| 231979425 | ['Adam']                       | ['NA']       | ['NA']   |
+| 209458171 | ['Adam']                       | ['NA']       | ['NA']   |
+| 208209257 | ['NA']                         | ['NA']       | ['NA']   |
+|  35019434 | ['SGD with momentum']          | ['NA']       | ['20']   |
+|  14688745 | ['RMSprop']                    | ['NA']       | ['NA']   |
+|  52153773 | ['Adam']                       | ['4']        | ['25']   |
+| 221136012 | ['Adam']                       | ['NA']       | ['70']   |
+|  18004775 | ['SGD with momentum']          | ['30']       | ['1000'] |
+|  13749489 | ['Adam']                       | ['NA']       | ['NA']   |
+| 146082119 | ['SGD']                        | ['NA']       | ['NA']   |
+|  53872628 | ['Adam']                       | ['NA']       | ['NA']   |
+|  18642708 | ['RMSprop']                    | ['NA']       | ['1000'] |
+
+GOLD SCHEMA:
+0: Optimizer
+1: Batch Size
+2: Epoch
+
+PREDICTION PATH:../../metric_validation_0/e4459d7e-c1db-435a-8fdf-728317419ebd/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Approach                                                                              | Performance                                                                                    | Singing Melody Extraction Models                                                               |
+|:---------|:--------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| Paper 1  | ['Spectral Correlation Modeling']                                                     | ['83.5% overall accuracy on the MedleyDB dataset']                                             | nan                                                                                            |
+| Paper 2  | ['Duplex Model of Pitch Perception']                                                  | ['Outperforms conventional methods in singing melody extraction']                              | nan                                                                                            |
+| Paper 3  | ['Multi-Dilation and Multi-Resolution Fully Convolutional Network']                   | ['Outperforms all previously proposed methods']                                                | nan                                                                                            |
+| Paper 4  | ['Multi-Scale Fully Convolutional Network']                                           | ['Achieves state-of-the-art performance with less computation and fewer parameters']           | nan                                                                                            |
+| Paper 5  | ['Streamlined Encoder/decoder Architecture']                                          | ['Achieve result close to the state-of-the-art with much fewer convolutional layers']          | nan                                                                                            |
+| Paper 6  | ['HRNet-Blstm Model With Two-Stage Training']                                         | ['Outperforms four state-of-the-art algorithms in most cases']                                 | nan                                                                                            |
+| Paper 7  | ['Deep Convolutional Neural Networks']                                                | ['Comparable to state-of-the-art algorithms']                                                  | nan                                                                                            |
+| Paper 8  | ['Two-stage Multi-resolution End-to-end Model']                                       | ['Outperforms three compared systems in three out of five public databases']                   | nan                                                                                            |
+| Paper 9  | ['Deep Salience Representations for F0 Estimation']                                   | ['State-of-the-art performance on several multi-F0 and melody datasets']                       | nan                                                                                            |
+| Paper 10 | ['HRNet-Based Singing Voice Separation and Encoder-Decoder-Based F0 Estimation']      | ['Outperforms other state-of-the-art algorithms in most cases']                                | nan                                                                                            |
+| Paper 11 | ['Hierarchical Attention Network']                                                    | ['Outperforms other state-of-the-art methods on several datasets']                             | nan                                                                                            |
+| Paper 12 | ['Neural Harmonic Structure Renderer']                                                | ['Outperformed the conventional independent networks']                                         | nan                                                                                            |
+| Paper 13 | ['Deep U-Net Architectures']                                                          | ['Achieves state-of-the-art results for vocal- $f_{0}$ estimation']                            | nan                                                                                            |
+| Paper 14 | ['LSTM-RNN with Harmonic Sum Loss']                                                   | ['Performance is better than or comparable to other state-of-the-art algorithms']              | nan                                                                                            |
+| Paper 15 | ['Multi-Column Deep Neural Networks']                                                 | ['Incremental improvements in melody prediction']                                              | nan                                                                                            |
+| Paper 16 | ['Multitask Learning']                                                                | ['Outperforms its single-task counterparts']                                                   | nan                                                                                            |
+| Paper 17 | ['Teacher-Student Models for Vocal Melody Extraction']                                | ['Significantly increases the performance against supervised learning only']                   | nan                                                                                            |
+| Paper 18 | ['DNN-based Pitch Estimation and Vocal Sequences Segmentation']                       | ['Exhibits highest accuracy through a better generalization on two different music databases'] | nan                                                                                            |
+| Paper 19 | ['Patch-based CNN Model']                                                             | ['Shows excellent speed and competitive accuracy']                                             | nan                                                                                            |
+| Paper 20 | ['DNN-based Pitch Estimation and Salience-based Pitch Refinement']                    | ['Outperforms four state-of-the-art melody extraction methods in most cases']                  | nan                                                                                            |
+| Paper 21 | ['Semantic Segmentation and Audio-symbolic Domain Transfer Learning']                 | ['Competitive accuracy on various datasets']                                                   | nan                                                                                            |
+| Paper 22 | ['Singing Voice Separation and Pitch Extraction via DNN and Adaptive Pitch Tracking'] | ['Outperforms a previous state-of-the-art approach in raw-pitch accuracy']                     | nan                                                                                            |
+| paper_1  | nan                                                                                   | nan                                                                                            | ['Explicit spectral correlation modeling']                                                     |
+| paper_2  | nan                                                                                   | nan                                                                                            | ['Hybrid neural network based on the duplex model of pitch perception']                        |
+| paper_3  | nan                                                                                   | nan                                                                                            | ['Multi-dilation and multi-resolution fully convolutional network']                            |
+| paper_4  | nan                                                                                   | nan                                                                                            | ['Multi-scale fully convolutional network']                                                    |
+| paper_5  | nan                                                                                   | nan                                                                                            | ['Streamlined encoder/decoder architecture']                                                   |
+| paper_6  | nan                                                                                   | nan                                                                                            | ['HRNet-BLSTM model with two-stage training']                                                  |
+| paper_7  | nan                                                                                   | nan                                                                                            | ['Classification-based approach using deep convolutional neural networks']                     |
+| paper_8  | nan                                                                                   | nan                                                                                            | ['Two-stage multi-resolution end-to-end CNN model']                                            |
+| paper_9  | nan                                                                                   | nan                                                                                            | ['Deep learning model for salience representations']                                           |
+| paper_10 | nan                                                                                   | nan                                                                                            | ['HRNet-based singing voice separation and encoder-decoder F0 estimation']                     |
+| paper_11 | nan                                                                                   | nan                                                                                            | ['Hierarchical attention network']                                                             |
+| paper_12 | nan                                                                                   | nan                                                                                            | ['Joint singing pitch estimation and voice separation']                                        |
+| paper_13 | nan                                                                                   | nan                                                                                            | ['Joint singing voice separation and F0 estimation with deep U-Net architectures']             |
+| paper_14 | nan                                                                                   | nan                                                                                            | ['LSTM-RNN for extracting melody and detecting regions']                                       |
+| paper_15 | nan                                                                                   | nan                                                                                            | ['Multi-column deep neural networks for melody extraction']                                    |
+| paper_16 | nan                                                                                   | nan                                                                                            | ['Multitask learning for fundamental frequency estimation']                                    |
+| paper_17 | nan                                                                                   | nan                                                                                            | ['Semi-supervised learning using teacher-student models']                                      |
+| paper_18 | nan                                                                                   | nan                                                                                            | ['Singing voice melody transcription using DNN']                                               |
+| paper_19 | nan                                                                                   | nan                                                                                            | ['Patch-based CNN model for vocal melody extraction']                                          |
+| paper_20 | nan                                                                                   | nan                                                                                            | ['Vocal melody extraction via DNN-based pitch estimation and salience-based pitch refinement'] |
+| paper_21 | nan                                                                                   | nan                                                                                            | ['Semantic segmentation and audio-symbolic domain transfer learning']                          |
+| paper_22 | nan                                                                                   | nan                                                                                            | ['Singing voice separation and pitch extraction via DNN and adaptive pitch tracking']          |
+
+MATCHES:
+Approach: 
+Performance: 
+Singing Melody Extraction Models: 

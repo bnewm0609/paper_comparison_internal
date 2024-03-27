@@ -1,0 +1,26 @@
+ID: f135ea39-e12f-4616-99f1-73204e997fb3
+
+GOLD TABLE:
+|           | Dataset            | # of images   | Categories                                             |
+|----------:|:-------------------|:--------------|:-------------------------------------------------------|
+| 215736956 | ['Dataset 3 (D3)'] | ['2,138']     | ['Covid, Normal, No_findings, PneumoniaB, PneumoniaV'] |
+| 214668039 | ['Dataset 4 (D4)'] | ['320']       | ['Covid, Normal, PneumoniaB, PneumoniaV']              |
+
+GOLD SCHEMA:
+0: Dataset
+1: # of images
+2: Categories
+
+PREDICTION PATH:../../metric_validation_0/f135ea39-e12f-4616-99f1-73204e997fb3/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model Performance                                                                                                                                            | Primary Data Source                                                  | Data Collection Size                            |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|:------------------------------------------------|
+| Paper 1 | ['Overall accuracy of 89.6%', 'Precision and recall rate for COVID-19 cases are 93% and 98.2%', 'Classification accuracy of 95% for 3-class classification'] | ['Uses two different publicly available databases for X-ray images'] | ['No specific mention of data collection size'] |
+| Paper 2 | ['Overall accuracy of 89.6%', 'Precision and recall rate for COVID-19 cases are 93% and 98.2%', 'Classification accuracy of 95% for 3-class classification'] | ['Uses two different publicly available databases for X-ray images'] | ['No specific mention of data collection size'] |
+| Paper 3 | ['No model performance information provided']                                                                                                                | ['Assembles medical images from websites and publications']          | ['Contains 123 frontal view X-rays']            |
+
+MATCHES:
+Model Performance: 
+Primary Data Source: 
+Data Collection Size: 

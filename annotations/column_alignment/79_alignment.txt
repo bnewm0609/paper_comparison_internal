@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods of recording eye movements                          | Purpose of eye movement analysis                                                                                                                                         | Summary of eye movement characteristics                                                                                                                                                           |
+|:--------|:------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['scleral search coil technique']                           | ['to quantify parameters of optokinetic eye movements, consider their effects on the processing of optic flow']                                                          | ['regular pattern of interchanging fast and slow eye movements, 2 Hz frequency, direction and speed of slow phase eye movements, time course of the eye movement immediately after each saccade'] |
+| paper_2 | ['eye movements were recorded']                             | ['to analyze reading eye movements, evidence of chaotic, nonlinear dynamical behavior']                                                                                  | ['chaotic, nonlinear dynamical behavior, fractal dimension determination']                                                                                                                        |
+| paper_3 | ['video head impulse test (vHIT) and scleral search coils'] | ['to detect semicircular canal dysfunction']                                                                                                                             | ['covert and overt catch-up saccades, mean VOR gain difference']                                                                                                                                  |
+| paper_4 | ['scleral search coil technique']                           | ['to measure 3D VOR, quantify gaze stabilization']                                                                                                                       | ['input-output ratio (gain), misalignment (co-linearity) of the 3D VOR']                                                                                                                          |
+| paper_5 | ['eye movements were recorded by averaged EOG']             | ['to determine whether unilateral activation of the vestibular labyrinth by brief air conducted tones can elicit disconjugate reflex eye movements in healthy subjects'] | ['bi- or triphasic transient EOG responses, duration of about 10 ms, latency of 7-8 ms']                                                                                                          |
+| paper_6 | ['EOG']                                                     | ['to evoke the vestibulo-ocular reflex (VOR) and detect vestibular lesions']                                                                                             | ['responses between 5 ms and 20 ms, compensatory to the second phase of the sine wave of vibration impulse']                                                                                      |
+| paper_7 | ['electrooculography (EOG)']                                | ['to examine if visual cues could train anticipatory eye movement']                                                                                                      | ['cranio-caudal sequencing, EOG recorded horizontal saccades at 1024 Hz']                                                                                                                         |
+| paper_8 | ['electrooculogram (EOG)']                                  | ['to classify eye movement signals for developing human-computer interface']                                                                                             | ['Elman and distributed time delay neural network classification of eye movement signals']                                                                                                        |
+
+MATCHES:
+Methods of recording eye movements: 
+Purpose of eye movement analysis: 
+Summary of eye movement characteristics: 

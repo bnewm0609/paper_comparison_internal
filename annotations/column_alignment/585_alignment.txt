@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size and diversity of the dataset                                                | Number and types of supported tasks                                       | Evaluation metrics and benchmark results                                                                       |
+|:--------|:---------------------------------------------------------------------------------|:--------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['100K videos and 10 tasks', 'geographic, environmental, and weather diversity'] | ['10 tasks including object detection, segmentation, and tracking']       | ['IoU agreement between models and original ground-truth']                                                     |
+| paper_2 | ['N/A']                                                                          | ['Pixel-labeling']                                                        | ['Speed-up factors of 4.7x and 7.3x for segmentation agreement']                                               |
+| paper_3 | ['N/A']                                                                          | ['Polygon and spline-based annotations']                                  | ['29.3ms in automatic mode, 2.6ms in interactive mode']                                                        |
+| paper_4 | ['KITTI 3D object detection dataset and Autonomoose self-driving vehicle']       | ['3D point cloud segmentation, 3D bounding boxes, and class annotations'] | ['30x lower human annotation time']                                                                            |
+| paper_5 | ['N/A']                                                                          | ['LiDAR 3D object detection']                                             | ['Up to 60% of labeling efforts saved']                                                                        |
+| paper_6 | ['Synthetic data and real samples from the KITTI3D dataset']                     | ['9D cuboids and 3D shapes']                                              | ['State-of-the-art 3D vehicle detection results']                                                              |
+| paper_7 | ['LiDAR point clouds from autonomous vehicles']                                  | ['LiDAR-based detection']                                                 | ['6.2x faster annotation speed', '23.6% and 2.2% higher precision and recall', '2.0% higher bounding box IoU'] |
+
+MATCHES:
+Size and diversity of the dataset: 
+Number and types of supported tasks: 
+Evaluation metrics and benchmark results: 

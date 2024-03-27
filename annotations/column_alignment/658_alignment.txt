@@ -1,0 +1,37 @@
+ID: 01c458ee-e887-4bff-ad32-a696c64c9590
+
+GOLD TABLE:
+|           | Task           | Metric       | Description                        | # Train Inst.   | # Test Inst.   |
+|----------:|:---------------|:-------------|:-----------------------------------|:----------------|:---------------|
+|  52054914 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['12,627']      | ['1,422']      |
+|  17677052 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['8,588']       | ['302']        |
+| 203661778 | ['NER']        | ['Micro-F1'] | ['Drug and Adverse Drug Event']    | ['36,384']      | ['23,462']     |
+|  15493987 | ['NER']        | ['Micro-F1'] | ['Events']                         | ['16,468']      | ['13,594']     |
+|  30029552 | ['NER']        | ['Micro-F1'] | ['Problems, Treatments and Tests'] | ['27,837']      | ['45,009']     |
+|  96437052 | ['NER']        | ['Micro-F1'] | ['UMLS Semantic Groups (French)']  | ['2,695']       | ['2,260']      |
+
+GOLD SCHEMA:
+0: Task
+1: Metric
+2: Description
+3: # Train Inst.
+4: # Test Inst.
+
+PREDICTION PATH:../../metric_validation_0/01c458ee-e887-4bff-ad32-a696c64c9590/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Use of deep neural networks                                                                                                          | Leveraging transfer learning                                                                               | Incorporation of domain knowledge                                                                                | Performance improvement strategies                                                                                                                                                           | Specialized dataset creation                                                                                                                               |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['State of the art models using deep neural networks have become very good in learning an accurate mapping from inputs to outputs.'] | ['We present strategies to leverage transfer learning using datasets from the open domain, such as SNLI.'] | ['Incorporate domain knowledge from external data and lexical sources, such as medical terminologies.']          | ['Our results demonstrate performance gains using transfer learning and incorporating domain knowledge.']                                                                                    | ['We introduce MedNLI - a dataset annotated by doctors, performing a natural language inference task (NLI), grounded in the medical history of patients.'] |
+| paper_2 | ['N/A']                                                                                                                              | ['N/A']                                                                                                    | ['N/A']                                                                                                          | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                    |
+| paper_3 | ['Deep learning-based methods with hand-designed features were proposed for concept extraction and relation classification tasks.']  | ['N/A']                                                                                                    | ['Incorporating the larger context or outside knowledge will likely improve the performance of future systems.'] | ['This challenge shows that significant improvement is still required for ADEs and Reasons, and larger context or outside knowledge will likely improve the performance of future systems.'] | ['N/A']                                                                                                                                                    |
+| paper_4 | ['N/A']                                                                                                                              | ['N/A']                                                                                                    | ['N/A']                                                                                                          | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                    |
+| paper_5 | ['N/A']                                                                                                                              | ['N/A']                                                                                                    | ['N/A']                                                                                                          | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                    |
+| paper_6 | ['N/A']                                                                                                                              | ['N/A']                                                                                                    | ['N/A']                                                                                                          | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                    |
+
+MATCHES:
+Use of deep neural networks: 
+Leveraging transfer learning: 
+Incorporation of domain knowledge: 
+Performance improvement strategies: 
+Specialized dataset creation: 

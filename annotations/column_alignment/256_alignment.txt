@@ -1,0 +1,31 @@
+ID: 7981ed6f-fb3a-4b4a-a306-b09ae2876d3a
+
+GOLD TABLE:
+|           | Carrier frequency   | Component type   | Monolithic IC integration   | RF bandwidth   | Synchronization                   |
+|----------:|:--------------------|:-----------------|:----------------------------|:---------------|:----------------------------------|
+|  52076321 | ['142 GHz']         | ['COTS']         | ['No']                      | ['4 GHz']      | ['External: Rubidium clock']      |
+|   3349886 | ['28 GHz']          | ['COTS']         | ['No']                      | ['800 MHz']    | ['External: GPS disciplined']     |
+| 221970525 | ['142 GHz']         | ['COTS+EVB']     | ['Yes (65 nm CMOS)']        | ['2 GHz']      | ['On-board support: Sync signal'] |
+
+GOLD SCHEMA:
+0: Carrier frequency
+1: Component type
+2: Monolithic IC integration
+3: RF bandwidth
+4: Synchronization
+
+PREDICTION PATH:../../metric_validation_0/7981ed6f-fb3a-4b4a-a306-b09ae2876d3a/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Frequency Band   | Measurement Environment   | Sounder System                                                                    | Key Outcome                                                                                                                     | Potential Applications                                                                               |
+|:--------|:-----------------|:--------------------------|:----------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
+| Paper 1 | [140]            | ['Indoor']                | ['140 GHz Wideband Channel Sounder']                                              | ['Design of a 140 GHz wideband channel sounder system and proposal for indoor wideband propagation measurements at 140 GHz']    | ['6G and beyond, 100 GHz Ghz and above']                                                             |
+| Paper 2 | [28]             | ['Suburban Outdoor']      | ['400-Mhz Custom-Designed Broadband Sliding Correlator Channel Sounder']          | ['Millimeter wave propagation measurements at 28 GHz, comparison with channel models, and RMSE analysis']                       | ['5G mm-wave']                                                                                       |
+| Paper 3 | [None]           | [None]                    | ['Sliding Correlator Based Channel Sounder with 2 GHz Null-to-Null RF Bandwidth'] | ['Design and evaluation board (EVB) for a sliding correlator based channel sounder with gigabit-per-second baseband operation'] | ['Wireless sensing, imaging, position location, cloud computing, and wireless channel measurements'] |
+
+MATCHES:
+Frequency Band: 
+Measurement Environment: 
+Sounder System: 
+Key Outcome: 
+Potential Applications: 

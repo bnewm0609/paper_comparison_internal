@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Problem domains                         | Approximation strategies                       | Optimization algorithms and circuit depth   | Resource requirements                  |
+|:--------|:----------------------------------------|:-----------------------------------------------|:--------------------------------------------|:---------------------------------------|
+| paper_1 | ['Quantum complexity theory']           | ['N/A']                                        | ['Quantum Turing machine model']            | ['N/A']                                |
+| paper_2 | ['Quantum complexity theory']           | ['N/A']                                        | ['Quantum Turing machine model']            | ['N/A']                                |
+| paper_3 | ['Combinatorial optimization problems'] | ['Quantum Approximate Optimization Algorithm'] | ['Quantum circuit with unitary gates']      | ['Qubits and classical preprocessing'] |
+| paper_4 | ['Two-dimensional Ising Model']         | ['N/A']                                        | ["Onsager's exact solution"]                | ['N/A']                                |
+| paper_5 | ['Two-dimensional Ising Model']         | ['N/A']                                        | ["Onsager's exact solution"]                | ['N/A']                                |
+| paper_6 | ['N/A']                                 | ['N/A']                                        | ['N/A']                                     | ['Qubits and classical resources']     |
+| paper_7 | ['N/A']                                 | ['N/A']                                        | ['N/A']                                     | ['Qubits and classical resources']     |
+| paper_8 | ['Database search']                     | ['N/A']                                        | ["Grover's algorithm"]                      | ['Qubits and quantum gates']           |
+| paper_9 | ['Quantum arithmetic (addition)']       | ['N/A']                                        | ['New linear-depth ripple-carry adder']     | ['Qubits and classical resources']     |
+
+MATCHES:
+Problem domains: 
+Approximation strategies: 
+Optimization algorithms and circuit depth: 
+Resource requirements: 

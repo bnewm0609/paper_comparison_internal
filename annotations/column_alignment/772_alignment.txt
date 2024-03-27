@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach for Syllabification                                                                             | Performance Metrics                                                                                                                       |
+|:--------|:---------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Hybrid genetic algorithm & hidden Markov model sequence classifier']                                   | ['Promising preliminary results – trained and tested on English words']                                                                   |
+| Paper_2 | ['Backpropagation learning in feed-forward and recurrent feed-forward connectionist networks']           | ['Generalization performance not better than best symbolic pattern matching approaches']                                                  |
+| Paper_3 | ['Linguistic theories of syllabification & Support Vector Machine and Hidden Markov Model technologies'] | ['Language-independent SVM-based approach advances current state-of-the-art, achieving high word accuracy in English, Dutch, and German'] |
+| Paper_4 | ['Linguistic theories of syllabification & Support Vector Machine and Hidden Markov Model technologies'] | ['Language-independent SVM-based approach advances current state-of-the-art, achieving high word accuracy in English, Dutch, and German'] |
+| Paper_5 | ['Language-independent rule-based approach & sequence labeling and rule-based method']                   | ['Proposed methods outperform the baseline rule-based method, providing high word accuracy']                                              |
+
+MATCHES:
+Approach for Syllabification: NA
+Performance Metrics: NA

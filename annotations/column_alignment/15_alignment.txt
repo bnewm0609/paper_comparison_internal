@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of ML models used                         | Tasks the ML models were trained on                                                                                                          | Performance of ML models on benchmarks                                                                                                    |
+|:--------|:-----------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['deep learning']                              | ['sentiment analysis and emotion recognition']                                                                                               | ['Competitive performance compared to the previous state of the art']                                                                     |
+| paper_2 | ['gradient-domain machine learning']           | ['construct accurate molecular force fields']                                                                                                | ['Accuracy of 0.3 kcal mol-1 for energies and 1 kcal mol-1 Å-1 for atomic forces using only 1000 conformational geometries for training'] |
+| paper_3 | ['deep learning']                              | ['predict a range of properties across chemical space for molecules and materials']                                                          | ['Accurately predicting a range of properties across chemical space for molecules and materials']                                         |
+| paper_4 | ['machine learning']                           | ['find low-cost electrocatalysts to drive electrochemical reactions']                                                                        | ['N/A']                                                                                                                                   |
+| paper_5 | ['deep neural networks']                       | ['molecular learning tasks such as prediction of molecular properties, 3D shape prediction, and protein-ligand binding affinity prediction'] | ['Consistently improve performance relative to methods based on one- and two-dimensional representations']                                |
+| paper_6 | ['N/A']                                        | ['N/A']                                                                                                                                      | ['N/A']                                                                                                                                   |
+| paper_7 | ['Convolutional Deep Belief Network']          | ['represent a 3D shape as a probability distribution of binary variables on a 3D voxel grid']                                                | ['Significant performance improvement over the-state-of-the-arts in a variety of tasks']                                                  |
+| paper_8 | ['point cloud classification neural networks'] | ['3D object classification']                                                                                                                 | ['Achieve state-of-the-art performance on classifying objects with cluttered background']                                                 |
+
+MATCHES:
+Type of ML models used: 
+Tasks the ML models were trained on: 
+Performance of ML models on benchmarks: 

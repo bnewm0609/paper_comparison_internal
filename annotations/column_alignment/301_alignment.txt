@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Optimization Method                                                                                                                              | Transportation Mode                     | Consideration of Uncertainty                            | Performance Measure                                                                                        |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------|:--------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Multiobjective network design problem solved using e-NSGAII']                                                                                  | ['Multimodal passenger transportation'] | ['Yes, considers uncertainty in transportation demand'] | ['Accessibility, use of urban space by parking, operating deficit, and climate impact']                    |
+| Paper 2 | ['Markov Decision Process solved using Approximate Dynamic Programming (ADP) and Bayesian exploration using Value of Perfect Information (VPI)'] | ['Synchromodal freight transportation'] | ['Yes, considers uncertainty in freight arrivals']      | ['Performance over the entire network and over time, more than 20% gains over common practice heuristics'] |
+
+MATCHES:
+Optimization Method: 
+Transportation Mode: 
+Consideration of Uncertainty: 
+Performance Measure: 

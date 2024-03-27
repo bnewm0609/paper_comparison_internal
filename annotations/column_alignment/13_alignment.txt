@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Field of Study                  | Methodology                                          | Applications                                                  |
+|:--------|:--------------------------------|:-----------------------------------------------------|:--------------------------------------------------------------|
+| Paper_1 | ['Natural Language Processing'] | ['Multimodal analysis, Dynamic Fusion Graph']        | ['Sentiment analysis, emotion recognition']                   |
+| Paper_2 | ['Physical Sciences']           | ['Gradient-domain machine learning']                 | ['Quantitative molecular dynamics simulations']               |
+| Paper_3 | ['Physical Sciences']           | ['Deep learning, SchNet architecture']               | ['Potential-energy surfaces, molecular dynamics simulations'] |
+| Paper_4 | ['Physical Sciences']           | ['Quantum mechanical simulations, machine learning'] | ['Renewable energy storage, electrocatalyst design']          |
+| Paper_5 | ['Biology, Chemistry']          | ['Three-dimensional molecular learning methods']     | ['Biomolecular problems, quantum-mechanical properties']      |
+| Paper_6 | ['Physical Sciences']           | ['Molecular dynamics analysis, Python package']      | ['Molecular dynamics trajectory analysis']                    |
+| Paper_7 | ['Computer Vision']             | ['Convolutional Deep Belief Network']                | ['3D shape recognition, shape completion']                    |
+| Paper_8 | ['3D Computer Vision']          | ['Point cloud classification, neural networks']      | ['Real-world point cloud object classification']              |
+
+MATCHES:
+Field of Study: 
+Methodology: 
+Applications: 

@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Objectives considered in the network design problem                                       | Decision variables in the network design problem                                                  | Types of transportation networks                | Approach to find Pareto solutions                                                                                                           |
+|:--------|:------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['accessibility', 'use of urban space by parking', 'operating deficit', 'climate impact'] | ['location of park and ride facilities', 'train stations', 'frequency of public transport lines'] | ['multimodal passenger transportation network'] | ['Epsilon Non-dominated Sorting Genetic Algorithm (e-NSGAII)']                                                                              |
+| paper_2 | ['N/A']                                                                                   | ['N/A']                                                                                           | ['synchromodal transportation network']         | ['heuristic solution based on Approximate Dynamic Programming (ADP) and Bayesian exploration using the Value of Perfect Information (VPI)'] |
+
+MATCHES:
+Objectives considered in the network design problem: 
+Decision variables in the network design problem: 
+Types of transportation networks: 
+Approach to find Pareto solutions: 

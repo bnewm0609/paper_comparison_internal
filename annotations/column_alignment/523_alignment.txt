@@ -1,0 +1,67 @@
+ID: 04f07bbb-0d49-43cf-bd66-974168293f31
+
+GOLD TABLE:
+|           | Title                                                                                                                         | Year     | Venue    |
+|----------:|:------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
+| 251627122 | ['Android Source Code Vulnerability Detection: A Systematic Literature Review']                                               | ['2023'] | ['CSUR'] |
+| 232168946 | ['Deep Learning for Android Malware Defenses: A Systematic Literature Review']                                                | ['2022'] | ['CSUR'] |
+| 245880916 | ['Dynamic Testing Techniques of Non-Functional Requirements in Mobile Apps: A Systematic Mapping Study']                      | ['2022'] | ['CSUR'] |
+| 235485108 | ['A Survey of Privacy Vulnerabilities of Mobile Device Sensors']                                                              | ['2022'] | ['CSUR'] |
+| 233388246 | ['A Systematic Survey on Android API Usage for Data-Driven Analytics with Smartphones']                                       | ['2022'] | ['CSUR'] |
+| 245158991 | ['A systematic mapping study addressing the reliability of mobile applications: The need to move beyond testing reliability'] | ['2022'] | ['JSS']  |
+| 236956425 | ['Research on Third-Party Libraries in Android Apps: A Taxonomy and Systematic Literature Review']                            | ['2021'] | ['TSE']  |
+| 203952955 | ['Mobile app privacy in software engineering research: A systematic mapping study']                                           | ['2021'] | ['IST']  |
+| 235473987 | ['Measurement-based Experiments on the Mobile Web: A Systematic Mapping Study']                                               | ['2021'] | ['EASE'] |
+| 211041290 | ['Autonomous Visual Navigation for Mobile Robots: A Systematic Literature Review']                                            | ['2020'] | ['CSUR'] |
+| 211040739 | ['A Survey of Context Simulation for Testing Mobile Context-Aware Applications']                                              | ['2020'] | ['CSUR'] |
+| 230611063 | ['A Survey of Android Malware Detection with Deep Neural Models']                                                             | ['2020'] | ['CSUR'] |
+|  53752448 | ['Rebooting Research on Detecting Repackaged Android Apps: Literature Review and Benchmark']                                  | ['2019'] | ['TSE']  |
+|  68211642 | ['App store effects on software engineering practices']                                                                       | ['2019'] | ['TSE']  |
+|  59337596 | ['A Survey and Taxonomy of Core Concepts and Research Challenges in Cross-Platform Mobile Development']                       | ['2018'] | ['CSUR'] |
+|  52193398 | ['A Survey on Recent OS-Level Energy Management Techniques for Mobile Processing Units']                                      | ['2018'] | ['TPDS'] |
+|  53462302 | ['Automated Testing of Android Apps: A Systematic Literature Review']                                                         | ['2018'] | ['TRel'] |
+|   1750981 | ['Toward Engineering a Secure Android Ecosystem: A Survey of Existing Techniques']                                            | ['2016'] | ['CSUR'] |
+|   8323376 | ['A survey of app store analysis for software engineering']                                                                   | ['2016'] | ['TSE']  |
+|  14205536 | ['A survey on smartphone-based systems for opportunistic user context recognition']                                           | ['2013'] | ['CSUR'] |
+|  17846346 | ['Survey and analysis of current mobile learning applications and technologies']                                              | ['2013'] | ['CSUR'] |
+| 245397809 | ['A mapping study on mutation testing for mobile applications']                                                               | ['2022'] | ['STVR'] |
+| 234256916 | ['A survey of performance optimization for mobile applications']                                                              | ['2021'] | ['TSE']  |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Venue
+
+PREDICTION PATH:../../metric_validation_0/04f07bbb-0d49-43cf-bd66-974168293f31/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Threats and vulnerabilities                                                                                                                           | Solutions and techniques                                                                                                   | Evaluation      |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|:----------------|
+| paper_1  | ['Lack of automated mechanisms to identify, test, and fix source code vulnerabilities at the early stages of design and development']                 | ['Machine Learning (ML)-based methods and conventional methods related to vulnerability detection']                        | ['Security']    |
+| paper_2  | ['Malicious applications (particularly those targeting the Android platform)']                                                                        | ['DL techniques to thwart Android malware attacks']                                                                        | ['Security']    |
+| paper_3  | ['N/A']                                                                                                                                               | ['Dynamic techniques and automation tools for testing mobile apps regarding NFRs']                                         | ['N/A']         |
+| paper_4  | ['Personal and sensitive data captured by mobile devices']                                                                                            | ['Privacy methods to protect the sensitive data while preserving data utility for analysis']                               | ['Privacy']     |
+| paper_5  | ['N/A']                                                                                                                                               | ['Usage Statistics API (US API) and Accessibility Service API (AS API) for collecting app usage data']                     | ['N/A']         |
+| paper_6  | ['Lack of research on understanding reliability with regard to context-awareness, self-healing, ageing and rejuvenation, and runtime event handling'] | ['Context-awareness, self-healing, ageing and rejuvenation, and runtime event handling']                                   | ['Reliability'] |
+| paper_7  | ['Third-party libraries bring security risks such as privacy leaks or increased attack surfaces']                                                     | ['Automated detection, security and privacy analysis of TPLs, TPL attributes analysis']                                    | ['Security']    |
+| paper_8  | ['Privacy-invading practices of apps']                                                                                                                | ['Proposing tools for detecting privacy leaks']                                                                            | ['Privacy']     |
+| paper_9  | ['N/A']                                                                                                                                               | ['Measurement-based experiments to investigate the factors influencing QoE']                                               | ['N/A']         |
+| paper_10 | ['Vision-based methods for indoor environments and ground robots']                                                                                    | ['Vision-based methods for indoor environments and ground robots']                                                         | ['N/A']         |
+| paper_11 | ['Dynamic context data in specific scenarios']                                                                                                        | ['Context simulation techniques for testing mobile context-aware applications']                                            | ['N/A']         |
+| paper_12 | ['Android malware detection or classification as a big data problem']                                                                                 | ['DL-based Android malware detection and classification']                                                                  | ['Security']    |
+| paper_13 | ['Repackaging as a serious threat to the Android ecosystem']                                                                                          | ['Rebooting the research in repackaged app detection']                                                                     | ['Security']    |
+| paper_14 | ['App stores affecting software engineering tasks']                                                                                                   | ['Bridging the gap between developers and users, increasing market transparency, and affecting mobile release management'] | ['N/A']         |
+| paper_15 | ['Proliferation and fragmentation of devices and platforms']                                                                                          | ['Cross-platform app development approaches and techniques']                                                               | ['N/A']         |
+| paper_16 | ['Energy consumption of mobile processing units']                                                                                                     | ['OS-level energy management techniques for mobile processing units']                                                      | ['N/A']         |
+| paper_17 | ['Various testing approaches for ensuring that not only functional requirements but also nonfunctional requirements are satisfied']                   | ['Testing approaches for Android app testing']                                                                             | ['N/A']         |
+| paper_18 | ['Security problems and solutions in the Android ecosystem']                                                                                          | ['Security architecture and practices in the Android ecosystem']                                                           | ['Security']    |
+| paper_19 | ['Information about applications obtained from app stores']                                                                                           | ['App Store Analysis studies']                                                                                             | ['N/A']         |
+| paper_20 | ['Nonintrusive autonomous sensing and context recognition']                                                                                           | ['Opportunistic sensing techniques on mobile phones']                                                                      | ['N/A']         |
+| paper_21 | ['Mobile learning (m-learning) as an emerging learning model']                                                                                        | ['Mobile learning (m-learning) projects and applications']                                                                 | ['N/A']         |
+| paper_22 | ['Mutation testing for mobile apps']                                                                                                                  | ['Mutation testing for mobile apps']                                                                                       | ['N/A']         |
+| paper_23 | ['Non-functional performance optimization for Android applications']                                                                                  | ['Non-functional performance optimization approaches for Android applications']                                            | ['N/A']         |
+
+MATCHES:
+Threats and vulnerabilities: 
+Solutions and techniques: 
+Evaluation: 

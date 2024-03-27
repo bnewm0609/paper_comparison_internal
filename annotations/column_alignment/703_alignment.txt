@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Reaction type                               | Energy range of the experiment                                 |
+|:--------|:--------------------------------------------|:---------------------------------------------------------------|
+| paper_1 | ['(n,2n) cross section']                    | ['threshold to 13 MeV for 2H and 239Pu']                       |
+| paper_2 | ['(n,2n(gamma)i) and (n,2n) cross section'] | ['LANSCE/WNR on the 60R flight line, n energies < 20 MeV']     |
+| paper_3 | ['(n, 2n) cross section']                   | ['threshold to 20 MeV for 239Pu']                              |
+| paper_4 | ['(n, 2n) cross section']                   | ['neutron energies from 13.7 to 15.1 MeV for 239Pu and 241Am'] |
+
+MATCHES:
+Reaction type: 
+Energy range of the experiment: 

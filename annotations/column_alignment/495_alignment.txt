@@ -1,0 +1,37 @@
+ID: fef1be89-2ea0-47e8-8784-8c68d290224e
+
+GOLD TABLE:
+|           | Dataset       | Method          |
+|----------:|:--------------|:----------------|
+| 247793124 | ['LivoxSimu'] | ['ALSO (ours)'] |
+| 245952568 | ['-']         | ['ALSO (ours)'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/fef1be89-2ea0-47e8-8784-8c68d290224e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Superpixel algorithm used   | Effect on the pooled feature representations   |
+|:---------|:----------------------------|:-----------------------------------------------|
+| paper_1  | ['N/A']                     | ['N/A']                                        |
+| paper_2  | ['N/A']                     | ['N/A']                                        |
+| paper_3  | ['N/A']                     | ['N/A']                                        |
+| paper_4  | ['N/A']                     | ['N/A']                                        |
+| paper_5  | ['N/A']                     | ['N/A']                                        |
+| paper_6  | ['N/A']                     | ['N/A']                                        |
+| paper_7  | ['N/A']                     | ['N/A']                                        |
+| paper_8  | ['N/A']                     | ['N/A']                                        |
+| paper_9  | ['N/A']                     | ['N/A']                                        |
+| paper_10 | ['N/A']                     | ['N/A']                                        |
+| paper_11 | ['N/A']                     | ['N/A']                                        |
+| paper_12 | ['N/A']                     | ['N/A']                                        |
+| paper_13 | ['N/A']                     | ['N/A']                                        |
+| paper_14 | ['N/A']                     | ['N/A']                                        |
+| paper_15 | ['N/A']                     | ['N/A']                                        |
+| paper_16 | ['N/A']                     | ['N/A']                                        |
+
+MATCHES:
+Superpixel algorithm used: 
+Effect on the pooled feature representations: 

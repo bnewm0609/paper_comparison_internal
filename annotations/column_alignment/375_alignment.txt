@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of wireless communication systems studied                                               | Nature of security risks and vulnerabilities                                                  |
+|:---------|:----------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|
+| paper_1  | ['Drone RF communication']                                                                    | ['Lack of message authentication or confidentiality in drone RF communication']               |
+| paper_2  | ['Aeronautical datalink communications (ACARS and FANS-1/A)']                                 | ['Lack of message authentication or confidentiality in aeronautical datalink communications'] |
+| paper_3  | ['Tire Pressure Monitoring System (TPMS)']                                                    | ['Potential cyber threats in TPMS wireless communications interface']                         |
+| paper_4  | ['FM-based indoor localization']                                                              | ['Spoofing attacks against FM-based indoor localization']                                     |
+| paper_5  | ['Global Navigation Satellite Systems (GNSS)']                                                | ['Vulnerability of GNSS signals to interference and spoofing']                                |
+| paper_6  | ['Bluetooth 2.1+ Secure Simple Pairing']                                                      | ['Man-in-the-middle attack on Bluetooth 2.1+ Secure Simple Pairing']                          |
+| paper_7  | ['GSM']                                                                                       | ['Vulnerabilities in the GSM security architecture']                                          |
+| paper_8  | ['4G/LTE']                                                                                    | ['Location leakage and service denial attacks in 4G/LTE']                                     |
+| paper_9  | ['Aeronautical surveillance system for drone delivery']                                       | ['Security and privacy for aeronautical surveillance system for drone delivery']              |
+| paper_10 | ['Digital Enhanced Cordless Telecommunication DECT']                                          | ['Passive eavesdropping of digital voice communication']                                      |
+| paper_11 | ['Near Field Communication (NFC)']                                                            | ['Eavesdropping attack on NFC devices']                                                       |
+| paper_12 | ['Short-range terrestrial communications embedded on affordable, low-power wireless devices'] | ['Security and privacy for IoT gateway']                                                      |
+| paper_13 | ['Computer displays']                                                                         | ['Information leakage threat from computer display emanations']                               |
+| paper_14 | ['OFDM systems']                                                                              | ['Impact of PHY based Jamming attacks on OFDM systems']                                       |
+| paper_15 | ['OFDM systems']                                                                              | ['Impact of PHY based Jamming attacks on OFDM systems']                                       |
+| paper_16 | ['Tactical radio networks']                                                                   | ['Cyber vulnerabilities in tactical radio networks']                                          |
+| paper_17 | ['UHF RFID tags']                                                                             | ['Generic and accurate physical-layer identification for UHF RFID tags']                      |
+| paper_18 | ['4G LTE downlink']                                                                           | ['PHY layer vulnerability of wireless protocols in hostile radio environments']               |
+
+MATCHES:
+Types of wireless communication systems studied: 
+Nature of security risks and vulnerabilities: 

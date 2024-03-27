@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Methodology                                                                                                                                        | Performance Metrics                                                                               |
+|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|
+| paper_1  | ['Data collection from various sources for cancer statistics']                                                                                     | ['NLocale']                                                                                       |
+| paper_2  | ['Deep neural networks with Bayesian inference for reliable prediction and quantitative uncertainty analysis']                                     | ['More reliable prediction']                                                                      |
+| paper_3  | ['Statistically principled method to quantify uncertainty of machine learning models for molecular properties prediction']                         | ['Reliable prediction']                                                                           |
+| paper_4  | ['Evaluating and comparing uncertainty quantification methods for molecular property prediction']                                                  | ['Comparison based on several quantitative criteria, unspecified']                                |
+| paper_5  | ['Systematic evaluation of uncertainty quantification methods in the context of regression tasks']                                                 | ['Systematically evaluated based on multiple complementary performance metrics, unspecified']     |
+| paper_6  | ['Systematic evaluation of uncertainty quantification methods in the context of regression tasks']                                                 | ['Systematically evaluated based on multiple complementary performance metrics, unspecified']     |
+| paper_7  | ['Gaussian process regressor with a convolutional neural network supplying features for predicting adsorption energies and uncertainty estimates'] | ['Accuracy, calibration, and sharpness (no specific numerical values)']                           |
+| paper_8  | ['Evidential uncertainties for calibrated predictions, sample-efficient training, and improved experimental validation rates']                     | ['Calibrated predictions, sample-efficient training, and improved experimental validation rates'] |
+| paper_9  | ['Benchmarking uncertainty quantification methods on protein engineering regression tasks']                                                        | ['Accuracy, calibration, coverage, width, and rank correlation (no specific numerical values)']   |
+| paper_10 | ['Using Gaussian processes for fitting datasets in the observational and experimental sciences and Bayesian optimization']                         | ['NLocale']                                                                                       |
+| paper_11 | ['Localized Neural Kernel (LNK)—Gaussian Process-based extension to existing GNNs']                                                                | ['AUC-ROC score (no specific numerical value)']                                                   |
+| paper_12 | ['Estimates of uncertainty to distinguish accurate from inaccurate predictions of electron density']                                               | ['Guaranteed acceleration to self-consistency']                                                   |
+| paper_13 | ['Machine-learning (ML) framework to predict electronic density of states (DOS) in condensed matter']                                              | ['NLocale']                                                                                       |
+
+MATCHES:
+Methodology: 
+Performance Metrics: 

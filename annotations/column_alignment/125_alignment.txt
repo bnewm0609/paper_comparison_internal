@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Depth of the Model   | Method for Learning Representations                          |
+|:--------|:---------------------|:-------------------------------------------------------------|
+| Paper 1 | [1]                  | ['Jumping Knowledge Networks']                               |
+| Paper 2 | [56]                 | ['Residual/dense connections and dilated convolutions']      |
+| Paper 3 | ['2 to 56']          | ['Initial residual and identity mapping']                    |
+| Paper 4 | [2]                  | ['GCN+ with a lower parameter amount']                       |
+| Paper 5 | ['2 to 56']          | ['Decoupling representation transformation and propagation'] |
+| Paper 6 | ['2 to 56']          | ['Node normalization']                                       |
+| Paper 7 | [5]                  | ['Graph Transformer network']                                |
+| Paper 8 | [5]                  | ['Gradient-based adversarial perturbations']                 |
+| Paper 9 | [5]                  | ['Attentive Context Normalization']                          |
+
+MATCHES:
+Depth of the Model: 
+Method for Learning Representations: 

@@ -1,0 +1,25 @@
+ID: 9bab2bd8-e02b-4398-9c2a-fe8f5354cced
+
+GOLD TABLE:
+|          | #     | Dataset         |
+|---------:|:------|:----------------|
+| 18993998 | ['2'] | ['Our dataset'] |
+| 16224335 | ['4'] | ['Our Dataset'] |
+
+GOLD SCHEMA:
+0: #
+1: Dataset
+
+PREDICTION PATH:../../metric_validation_0/9bab2bd8-e02b-4398-9c2a-fe8f5354cced/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Specific deep learning techniques used   | Applications of the model                                                                                           |
+|:--------|:-----------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Attention-based LSTM']                 | ['Aspect-level sentiment classification']                                                                           |
+| Paper 2 | ['Attention-based LSTM']                 | ['Aspect-level sentiment classification']                                                                           |
+| Paper 3 | ['Deep learning, neural nets']           | ['Automatic tag predictions for images on social media, understanding sentiment and mood during/after an election'] |
+| Paper 4 | ['Deep learning, neural nets']           | ['Automatic tag predictions for images on social media, understanding sentiment and mood during/after an election'] |
+
+MATCHES:
+Specific deep learning techniques used: 
+Applications of the model: 

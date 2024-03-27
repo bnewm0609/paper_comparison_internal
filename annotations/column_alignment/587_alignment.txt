@@ -1,0 +1,41 @@
+ID: 4c143552-790b-46bb-9463-587a756d69e0
+
+GOLD TABLE:
+|           | # Cit.   | Application                                | Input Data         | AI model(s)                             | XAI method(s)                        | Dataset(s)                        |
+|----------:|:---------|:-------------------------------------------|:-------------------|:----------------------------------------|:-------------------------------------|:----------------------------------|
+| 244662871 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['RF, GBDT']                            | ['SHAP, LIME']                       | ['Sylhet Diabetes datasetsylhet'] |
+| 239039896 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['TabNet, XGBoost, LightGBM, CatBoost'] | ['SHAP (all), attention (TabNet)']   | ['Retrospective study']           |
+| 233434246 | ['1']    | ['Voice pathology assessment']             | ['Audio features'] | ['ExtraTrees']                          | ['SHAP,Morris sensitivity analysis'] | ['Pilot study']                   |
+| 245387254 | ['0']    | ['Lung cancer life expectancy prediction'] | ['EHR']            | ['RF']                                  | ['LIME, SHAP']                       | ['Simulacrum datasetsimulacrum']  |
+| 236980957 | ['9']    | ['Lung cancer mortality prediction']       | ['EHR']            | ['XGBoost']                             | ['LIME, SHAP, Anchors']              | ['Simulacrum dataset']            |
+| 231639221 | ['0']    | ['ICU mortality risk prediction']          | ['EHR']            | ['RF, MLP']                             | ['SHAP']                             | ['MIMIC-III']                     |
+| 230997466 | ['3']    | ['Eye state detection']                    | ['EEG']            | ['XGBoost, DNN']                        | ['SHAP']                             | ['Pilot study']                   |
+
+GOLD SCHEMA:
+0: # Cit.
+1: Application
+2: Input Data
+3: AI model(s)
+4: XAI method(s)
+5: Dataset(s)
+
+PREDICTION PATH:../../metric_validation_0/4c143552-790b-46bb-9463-587a756d69e0/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model Type                                                                      | Interpretability Technique                                        | Application                                             | Performance                                                            | Data Type                                                             | Clinical Relevance                                                                 |
+|:--------|:--------------------------------------------------------------------------------|:------------------------------------------------------------------|:--------------------------------------------------------|:-----------------------------------------------------------------------|:----------------------------------------------------------------------|:-----------------------------------------------------------------------------------|
+| paper_1 | ['Deep neural network (DNN)']                                                   | ['Real-time prediction, interpretability of DNN model']           | ['Eye state detection using EEG signals']               | ['Promising results for real-time prediction']                         | ['EEG signals']                                                       | ['Application in healthcare for real-time predictions']                            |
+| paper_2 | ['Random Forest (RF), Gradient Boosting (GB)']                                  | ['SHAP, LIME for RF and GB algorithms']                           | ['Diagnosis of diabetes']                               | ['Detailed interpretability while maintaining accuracy']               | ['Biomedical data']                                                   | ['Importance of understanding ML decisions in critical scenarios like healthcare'] |
+| paper_3 | ['Attentional neural network, TabNet']                                          | ['SHAP, model-specific feature importance, mask in TabNet']       | ['Prediction of type 2 diabetes']                       | ['Consistent results from model-agnostic and model-specific methods']  | ['Tabular health screening records']                                  | ['Understanding the attributes affecting the aggravation of type 2 diabetes']      |
+| paper_4 | ['Extra Trees classifier']                                                      | ['Explainable AI (XAI), feature interpretability analysis']       | ['Vocal cord pathology discrimination']                 | ['Accuracy: 0.9565, F1-score: 0.9130']                                 | ['Acoustic, frequency, and noise features']                           | ['Feasibility of machine learning in clinical care and planning']                  |
+| paper_5 | ['N/A']                                                                         | ['LIME, SHAP algorithms']                                         | ['Medical data analytics']                              | ['N/A']                                                                | ['Medical datasets']                                                  | ['N/A']                                                                            |
+| paper_6 | ['SHAP, LIME, Scoped Rules']                                                    | ['SHAP, LIME, Scoped Rules for analyzing EHRs']                   | ['Analysis of Electronic Health Records (EHRs)']        | ['Different XAI methods generated different top features']             | ['Electronic Health Records (EHRs)']                                  | ['Challenges of applying XAI techniques in healthcare']                            |
+| paper_7 | ['Logistic regression, decision trees, random forests, multilayer perceptrons'] | ['Comparison of machine learning techniques for risk prediction'] | ['Intensive Care Unit (ICU) mortality risk prediction'] | ['High degree of agreement across different machine learning methods'] | ["Patients' profiles extracted from the MIMIC-III clinical database"] | ['Potential for clinicians to interpret risk predictions']                         |
+
+MATCHES:
+Model Type: 
+Interpretability Technique: 
+Application: 
+Performance: 
+Data Type: 
+Clinical Relevance: 

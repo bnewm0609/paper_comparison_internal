@@ -1,0 +1,25 @@
+ID: db5113ea-add9-4283-9971-ffc5667e1701
+
+GOLD TABLE:
+|           | Attack Vector     | Study               |
+|----------:|:------------------|:--------------------|
+| 207158066 | ['SQL Injection'] | ['[S59, S62, S70]'] |
+|   6924018 | ['Malware/RAT']   | ['[S1, S41]']       |
+|   5071459 | ['Steganography'] | ['[S3, S9, S20]']   |
+
+GOLD SCHEMA:
+0: Attack Vector
+1: Study
+
+PREDICTION PATH:../../metric_validation_0/db5113ea-add9-4283-9971-ffc5667e1701/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                         | Type of threats targeted               | Prevention mechanisms used                                                                                                                            |
+|:------------------------------------------------------------------------|:---------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AMNESIA: analysis and monitoring for NEutralizing SQL-injection attacks | ['SQL injection attacks']              | ['Model-based approach using program analysis and runtime monitoring to detect and prevent illegal queries before they are executed on the database'] |
+| Towards an Evidence-Based Understanding of Electronic Data Sources      | ['N/A']                                | ['N/A']                                                                                                                                               |
+| Clustering intrusion detection alarms to support root cause analysis    | ['Various intrusion detection alarms'] | ['Alarm clustering to identify root causes and reduce alarm load']                                                                                    |
+
+MATCHES:
+Type of threats targeted: 
+Prevention mechanisms used: 

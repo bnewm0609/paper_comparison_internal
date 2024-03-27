@@ -1,0 +1,29 @@
+ID: f9504841-2129-417c-a504-7b2d57ca509b
+
+GOLD TABLE:
+|           | Team       | Task    |
+|----------:|:-----------|:--------|
+| 264441549 | ['BIT.UA'] | ['NER'] |
+| 264441337 | ['-']      | ['EL']  |
+| 264441481 | ['-']      | ['DI']  |
+| 264441503 | ['Fusion'] | ['NER'] |
+| 260514387 | ['-']      | ['EL']  |
+
+GOLD SCHEMA:
+0: Team
+1: Task
+
+PREDICTION PATH:../../metric_validation_0/f9504841-2129-417c-a504-7b2d57ca509b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model/Approach Used                                                                                                                               | Performance Metrics                                                                    |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['Transformer models with Masked Conditional Random Fields for procedure recognition, contextualized sliding window strategy, data augmentation'] | ['NER (subtask-1) score of 79.85%, subtasks 2 and 3 with scores of 31.68% and 35.85%'] |
+| paper_2 | ['Separate named entity recognition and entity linking modules, BERT-based models for NER, cross-lingual SapBERT XLMR-large for entity linking']  | ['0.71 F1 score on NER subtask, 0.53 F1 score on linking subtask']                     |
+| paper_3 | ['Fine-tuned transformers with domain-specific corpora, dictionary-based solution']                                                               | ['0.5505 f1-score on the test set of the challenge']                                   |
+| paper_4 | ['RoBERTa model pre-trained on biomedical and clinical data, literal string matching, embedding similarity search']                               | ['0.7568 micro-averaged F1 score on the NER sub-task, 0.5267 on the NORM sub-task']    |
+| paper_5 | ['N/A']                                                                                                                                           | ['N/A']                                                                                |
+
+MATCHES:
+Model/Approach Used: 
+Performance Metrics: 

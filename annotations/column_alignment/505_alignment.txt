@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Details of segmentation network used                                                                                                             | Accuracy and generalization of eye openness estimation                       | Datasets used for testing the detection method                                                          | Comparative analysis with state-of-the-art techniques                |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1 | ['Iris image augmentation based on conditional generative adversarial network', 'Normalized iris images used as input for the cGAN-based model'] | ['Improved recognition performance compared to existing studies']            | ['NICE.II training dataset (selected from UBIRS.v2), MICHE database, and CASIA-Iris-Distance database'] | ['N/A']                                                              |
+| paper_2 | ['Segmentation network uses light U-Net structure for pixel-level classification on eye images']                                                 | ['Achieved 96.72% precision of fatigue detection on NTHU-DDD Video Dataset'] | ['Tested on National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset']            | ['Possesses superior accuracy over the state-of-the-art techniques'] |
+
+MATCHES:
+Details of segmentation network used: 
+Accuracy and generalization of eye openness estimation: 
+Datasets used for testing the detection method: 
+Comparative analysis with state-of-the-art techniques: 

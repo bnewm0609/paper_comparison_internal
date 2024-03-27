@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Stochastic transportation arrivals and timeliness                                                                                                                                                                                                                                                                                           | Use of multiple transportation modes                                                                                                                                                                 | Performance metrics and measurement over time                                                                                                                                                                                                   | Proposed heuristic-based solution and optimization strategies                                                                                                                                                                                                             |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The Pareto solutions resulting from one demand scenario are assessed based on a different demand scenario to test whether they are still Pareto optimal under this different demand scenario. Results indicate that a different transportation demand has a strong influence on the Pareto optimal performance of solutions in the set.'] | ['In a case study in the city region of Amsterdam in The Netherlands, the location of park and ride facilities, train stations and the frequency of public transport lines are decision variables.'] | ['The Pareto set is approximated by the Epsilon Non-dominated Sorting Genetic Algorithm (e-NSGAII). Results indicate that a different transportation demand has a strong influence on the Pareto optimal performance of solutions in the set.'] | ['The Pareto set is approximated by the Epsilon Non-dominated Sorting Genetic Algorithm (e-NSGAII). We study the inclusion of Bayesian exploration using the Value of Perfect Information (VPI).']                                                                        |
+| paper_2 | ['We study the problem of scheduling freight transportation in a synchromodal network considering stochastic freight arrivals. Freights can be transported using any mode and any route as long as they arrive to their destination within their time-window.']                                                                             | ['In a synchromodal network, freights can be transported using any mode and any route']                                                                                                              | ['Performance is measured over the entire network and over time. Furthermore, we show how our proposed ADP-VPI combination achieves more than 20% gains over the profit achieved by common practice heuristics.']                               | ['We model this problem as a Markov Decision Process and propose a heuristic solution based on Approximate Dynamic Programming (ADP). We show how our proposed ADP-VPI combination achieves more than 20% gains over the profit achieved by common practice heuristics.'] |
+
+MATCHES:
+Stochastic transportation arrivals and timeliness: 
+Use of multiple transportation modes: 
+Performance metrics and measurement over time: 
+Proposed heuristic-based solution and optimization strategies: 

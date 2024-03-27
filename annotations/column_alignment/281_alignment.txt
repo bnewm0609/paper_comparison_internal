@@ -1,0 +1,23 @@
+ID: 41ee5929-ef7d-49b0-b25d-b0caf7c167dd
+
+GOLD TABLE:
+|           | Age recording format   | Example   |
+|----------:|:-----------------------|:----------|
+| 221128548 | ['exact age']          | ['64']    |
+| 220483201 | ['not available']      | ['NA']    |
+
+GOLD SCHEMA:
+0: Age recording format
+1: Example
+
+PREDICTION PATH:../../metric_validation_0/41ee5929-ef7d-49b0-b25d-b0caf7c167dd/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Primary Focus                                                                  | Role of Type I Interferons                                                                                                       |
+|:--------|:-------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Immune profiling and systems biology approach to assess COVID-19 patients']  | ['Type I interferons are part of the immune response to COVID-19, but no direct correlation with disease severity is mentioned'] |
+| Paper 2 | ['Immunophenotyping of COVID-19 and influenza to understand disease severity'] | ['Type I interferons play a pivotal role in exacerbating inflammation in severe COVID-19']                                       |
+
+MATCHES:
+Primary Focus: 
+Role of Type I Interferons: 

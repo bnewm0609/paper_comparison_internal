@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Application Domains                                                                                                                                               | Deep Learning Techniques                                                                                                                                                                                                                                |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Unmanned Aerial Vehicles (UAVs)']                                                                                                                               | ['Learning representations from complex data, deep learning techniques for unmanned aerial vehicles']                                                                                                                                                   |
+| paper_2  | ['Autonomous planetary rovers']                                                                                                                                   | ['Adaptive and intelligent navigation methods for autonomous planetary rovers']                                                                                                                                                                         |
+| paper_3  | ['Image processing, computer vision, speech recognition, machine translation, medical imaging, robotics and control, natural language processing, cybersecurity'] | ['Deep Neural Network (DNN), Convolutional Neural Network (CNN), Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM), Auto-Encoder (AE), Deep Belief Network (DBN), Generative Adversarial Network (GAN), Deep Reinforcement Learning (DRL)'] |
+| paper_4  | ['Robotic visual navigation']                                                                                                                                     | ['Deep Reinforcement Learning (RL), methods and algorithms for autonomous visual navigation']                                                                                                                                                           |
+| paper_5  | ['Artificial intelligence, machine learning, big data analysis']                                                                                                  | ['Deep Feedforward Neural Networks (D-FFNN), Convolutional Neural Networks (CNNs), Deep Belief Networks (DBNs), Autoencoders (AEs), Long Short-Term Memory (LSTM) networks']                                                                            |
+| paper_6  | ['Autonomous driving']                                                                                                                                            | ['Deep learning technologies used in self-driving architectures, convolutional and recurrent neural networks, deep reinforcement learning']                                                                                                             |
+| paper_7  | ['Intelligent transportation systems, mobile mapping, location-based services, unmanned systems, transportation big data']                                        | ['AI technology for enhancing inertial sensing, navigation and motion-sensing algorithms']                                                                                                                                                              |
+| paper_8  | ['Self-driving cars, image processing, natural language understanding']                                                                                           | ['Applications of deep learning methods in self-driving cars, obstacle detection, scene recognition, lane detection, and navigation']                                                                                                                   |
+| paper_9  | ['Robotics, computer vision, machine learning']                                                                                                                   | ['Deep learning based localization and mapping, on-board sensors for motion tracking and scene understanding']                                                                                                                                          |
+| paper_10 | ['Computer vision, natural language processing']                                                                                                                  | ['Applications of Convolutional Neural Network (CNN) in various domains including computer vision and natural language processing']                                                                                                                     |
+| paper_11 | ['Assistive outdoor navigation for blind and visually impaired people']                                                                                           | ['Assistive outdoor navigation for visually impaired people using computer vision and machine learning approaches']                                                                                                                                     |
+| paper_12 | ['Spacecraft dynamics control, guidance, and navigation']                                                                                                         | ['Application of artificial neural network architectures for spacecraft dynamics, control and navigation']                                                                                                                                              |
+| paper_13 | ['Unmanned underwater vehicles (UUVs), marine infrastructure inspections']                                                                                        | ['Vision-based navigation and positioning methods for autonomous underwater vehicles using deep learning techniques']                                                                                                                                   |
+| paper_14 | ['Unmanned Aerial Vehicles (UAVs)']                                                                                                                               | ['Reinforcement Learning (RL) algorithms for autonomous UAV navigation tasks']                                                                                                                                                                          |
+| paper_15 | ['Unmanned Aerial Vehicles (UAVs), Unmanned Surface Vehicles (USVs), Micro Aerial Vehicles (MAVs)']                                                               | ['Image-based obstacle detection techniques employed by unmanned vehicles']                                                                                                                                                                             |
+
+MATCHES:
+Application Domains: 
+Deep Learning Techniques: 

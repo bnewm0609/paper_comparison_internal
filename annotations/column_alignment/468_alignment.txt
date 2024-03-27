@@ -1,0 +1,25 @@
+ID: db5113ea-add9-4283-9971-ffc5667e1701
+
+GOLD TABLE:
+|           | Attack Vector     | Study               |
+|----------:|:------------------|:--------------------|
+| 207158066 | ['SQL Injection'] | ['[S59, S62, S70]'] |
+|   6924018 | ['Malware/RAT']   | ['[S1, S41]']       |
+|   5071459 | ['Steganography'] | ['[S3, S9, S20]']   |
+
+GOLD SCHEMA:
+0: Attack Vector
+1: Study
+
+PREDICTION PATH:../../metric_validation_0/db5113ea-add9-4283-9971-ffc5667e1701/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Primary focus                                                     | Methodology                                                           |
+|:--------|:------------------------------------------------------------------|:----------------------------------------------------------------------|
+| Paper_1 | ['SQL-injection attacks detection and prevention']                | ['Model-based approach (static and dynamic)']                         |
+| Paper_2 | ['Identifying relevant papers in software engineering']           | ['Proposing metrics and evidence-based heuristics for EDS selection'] |
+| Paper_3 | ['Intrusion detection alarms clustering and root cause analysis'] | ['Alarm-clustering method']                                           |
+
+MATCHES:
+Primary focus: 
+Methodology: 

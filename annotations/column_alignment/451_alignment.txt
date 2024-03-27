@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Algorithms used                                                                                                                                                                              | Feature extraction techniques                           | Evaluation metrics                             | Performance comparison                                                                                                                                                                                | Publicly released datasets and models                   |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|:-----------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
+| paper_1 | ['Random forest', 'Naïve Bayes']                                                                                                                                                             | ['Word2Vec', 'TF-IDF']                                  | ['Accuracy']                                   | ['79.83% accuracy for Word2Vec embedding-based model']                                                                                                                                                | ['N/A']                                                 |
+| paper_2 | ['Logistic Regression', 'Support Vector Machine', 'Naïve Bayes', 'Long Short-Term Memory', 'Bidirectional Long Short-Term Memory', 'Convolutional Neural Network', 'Am-FLAIR', 'Am-RoBERTa'] | ['Not specified']                                       | ['F1 score']                                   | ['LR and SVM achieve F1 score of 0.49, NB archives an F1 score of 0.46, deep learning algorithms achieve F1 score of 0.44, Am-FLAIR achieves F1 score of 0.48, Am-RoBERTa achieves F1 score of 0.50'] | ['Datasets, source code, and models publicly released'] |
+| paper_3 | ['Logistic Regression', 'Support Vector Machine', 'Naïve Bayes', 'Long Short-Term Memory', 'Bidirectional Long Short-Term Memory', 'Convolutional Neural Network']                           | ['BOW', 'TF-IDF', 'word2vec', 'Keras Embedding layers'] | ['Accuracy']                                   | ['BiLSTM with pre-trained word2vec feature extraction achieves better accuracy of 0.84 and 0.88 for eight classes and two classes, respectively']                                                     | ['N/A']                                                 |
+| paper_4 | ['Machine learning algorithm not specified']                                                                                                                                                 | ['Not specified']                                       | ['Not specified']                              | ['Not specified']                                                                                                                                                                                     | ['N/A']                                                 |
+| paper_5 | ['Support Vector Machine']                                                                                                                                                                   | ['TF-IDF', 'N-gram', 'W2vec']                           | ['Accuracy', 'F-score', 'Recall', 'Precision'] | ['SVM with n-gram combination with TF-IDF achieves 96% in all metrics']                                                                                                                               | ['N/A']                                                 |
+
+MATCHES:
+Algorithms used: 
+Feature extraction techniques: 
+Evaluation metrics: 
+Performance comparison: 
+Publicly released datasets and models: 

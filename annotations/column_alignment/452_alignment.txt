@@ -1,0 +1,27 @@
+ID: 11798252-0e7b-4eb5-9ab0-881ae06ffa40
+
+GOLD TABLE:
+|           | Name            | Size        | Dim      |
+|----------:|:----------------|:------------|:---------|
+|  15023467 | ['ForestCover'] | ['286,048'] | ['10']   |
+|   6505449 | ['Creditfraud'] | ['284,807'] | ['29']   |
+| 220891274 | ['stream51']    | ['150,736'] | ['2048'] |
+
+GOLD SCHEMA:
+0: Name
+1: Size
+2: Dim
+
+PREDICTION PATH:../../metric_validation_0/11798252-0e7b-4eb5-9ab0-881ae06ffa40/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Under Sampling and Probability Calibration                          | Anomaly Detection Method                                                        | Model Adaptability and Learning Paradigms                                                                                                         |
+|:--------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Analyzes the effects of under sampling on posterior probability'] | ['Focuses on unbalanced classification and probability calibration']            | ['Analyzes the bias due to under sampling and its impact on the classification accuracy and probability calibration']                             |
+| paper_2 | ['Does not discuss under sampling or probability calibration']      | ['Proposes a fundamentally different model-based method for anomaly detection'] | ['Introduces a new model-based method with adaptability to large data sets and high-dimensional problems']                                        |
+| paper_3 | ['Does not discuss under sampling or probability calibration']      | ['Introduces a new dataset for streaming classification and novelty detection'] | ['Presents a new dataset and experimental metrics for streaming classification and novelty recognition in an online streaming learning paradigm'] |
+
+MATCHES:
+Under Sampling and Probability Calibration: 
+Anomaly Detection Method: 
+Model Adaptability and Learning Paradigms: 

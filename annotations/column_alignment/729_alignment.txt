@@ -1,0 +1,39 @@
+ID: 3f19b779-230c-438b-8d31-82cbbb31bcb8
+
+GOLD TABLE:
+|           | (Task)          | Group class   | Train set size   | Test set size (per group)   | No. of trials   | No. of epochs   | Input Shape/Config.   |
+|----------:|:----------------|:--------------|:-----------------|:----------------------------|:----------------|:----------------|:----------------------|
+| 199577425 | ['(Gender)']    | ['Race']      | ['10900']        | ['760']                     | ['5']           | ['35']          | ['3x100x100']         |
+|   1987503 | ['(Species)']   | ['Skin tone'] | ['1500']         | ['250']                     | ['5']           | ['60']          | ['3x256x256']         |
+|    810708 | ['(Age)']       | ['Gender']    | ['7700']         | ['970']                     | ['5']           | ['65']          | ['3x100x100']         |
+|  40094999 | ['(Diagnosis)'] | ['Gender']    | ['1500']         | ['250']                     | ['7']           | ['40']          | ['3x256x256']         |
+| 221142094 | ['(Gender)']    | ['Species']   | ['750']          | ['90']                      | ['5']           | ['20']          | ['3x100x100']         |
+
+GOLD SCHEMA:
+0: (Task)
+1: Group class
+2: Train set size
+3: Test set size (per group)
+4: No. of trials
+5: No. of epochs
+6: Input Shape/Config.
+
+PREDICTION PATH:../../metric_validation_0/3f19b779-230c-438b-8d31-82cbbb31bcb8/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Bias in dataset representation                     | Image classification performance                     | Face aging and generation                                          | Radiologist-level disease detection                                 | Computer vision application in agriculture                   | Impact of machine learning attacks                               | Dataset size and training complexity                     |
+|:--------|:---------------------------------------------------|:-----------------------------------------------------|:-------------------------------------------------------------------|:--------------------------------------------------------------------|:-------------------------------------------------------------|:-----------------------------------------------------------------|:---------------------------------------------------------|
+| paper_1 | ['Balanced dataset across race groups']            | ['Performance measurement on novel datasets']        | ['Focuses on face attribute dataset rather than age progression']  | ['Focuses on face attribute dataset rather than disease detection'] | ['Not relevant to agriculture']                              | ['Not relevant to Asirra CAPTCHA']                               | ['Large dataset with 108,501 images']                    |
+| paper_2 | ['Does not focus on dataset bias']                 | ['Investigates Asirra CAPTCHA performance']          | ['Not relevant to face aging and generation']                      | ['Not relevant to radiologist-level disease detection']             | ['Not relevant to agriculture']                              | ['Investigates machine learning attacks against Asirra CAPTCHA'] | ['Not relevant to dataset size and training complexity'] |
+| paper_3 | ['Not relevant to bias in dataset representation'] | ['Not relevant to image classification performance'] | ['Proposes age progression/regression through a generative model'] | ['Not relevant to radiologist-level disease detection']             | ['Not relevant to agriculture']                              | ['Not relevant to machine learning attacks']                     | ['Not relevant to dataset size and training complexity'] |
+| paper_4 | ['Does not focus on dataset bias']                 | ['Detects pneumonia on chest X-rays']                | ['Not relevant to face aging and generation']                      | ['Detects pneumonia at radiologist level']                          | ['Not relevant to agriculture']                              | ['Not relevant to machine learning attacks']                     | ['Large publicly available chest X-ray dataset']         |
+| paper_5 | ['Not relevant to bias in dataset representation'] | ['Classifies gender of chickens in images']          | ['Not relevant to face aging and generation']                      | ['Not relevant to radiologist-level disease detection']             | ['Estimates gender ratio of chickens using computer vision'] | ['Not relevant to machine learning attacks']                     | ['Large chicken gender classification database']         |
+
+MATCHES:
+Bias in dataset representation: 
+Image classification performance: 
+Face aging and generation: 
+Radiologist-level disease detection: 
+Computer vision application in agriculture: 
+Impact of machine learning attacks: 
+Dataset size and training complexity: 

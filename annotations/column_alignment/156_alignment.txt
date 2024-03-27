@@ -1,0 +1,29 @@
+ID: c5f434c2-7bac-47ed-8dcb-be78c4f7ac67
+
+GOLD TABLE:
+|           | Personality assessment questionnaire              | Item count   |
+|----------:|:--------------------------------------------------|:-------------|
+|  59804394 | ['IPIP 50-version']                               | ['50']       |
+|  39888164 | ['Big-five marker scale (BFMS) {{cite:4351c2f}}'] | ['100']      |
+|  12589916 | ['BFI-10']                                        | ['10']       |
+| 132309131 | ['IPIP-NEO-60']                                   | ['60']       |
+|  46855347 | ['IPIP 100-version']                              | ['100']      |
+
+GOLD SCHEMA:
+0: Personality assessment questionnaire
+1: Item count
+
+PREDICTION PATH:../../metric_validation_0/c5f434c2-7bac-47ed-8dcb-be78c4f7ac67/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Usage of Big-Five personality model in collaborative filtering recommendation systems                                                                       | Connection between personality traits and emotional states via physiological responses                                                                                                                                   |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['The proposed approach in this paper uses the big five personality model for calculating user similarity in collaborative filtering recommender systems.'] | ['N/A']                                                                                                                                                                                                                  |
+| Paper 2 | ['N/A']                                                                                                                                                     | ['ASCERTAIN is the first database to connect personality traits and emotional states via physiological responses. It contains big-five personality scales, emotional self-ratings, and physiological data of 58 users.'] |
+| Paper 3 | ['N/A']                                                                                                                                                     | ['N/A']                                                                                                                                                                                                                  |
+| Paper 4 | ['N/A']                                                                                                                                                     | ['N/A']                                                                                                                                                                                                                  |
+| Paper 5 | ['N/A']                                                                                                                                                     | ['N/A']                                                                                                                                                                                                                  |
+
+MATCHES:
+Usage of Big-Five personality model in collaborative filtering recommendation systems: 
+Connection between personality traits and emotional states via physiological responses: 

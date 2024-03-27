@@ -1,0 +1,25 @@
+ID: 31c80ad2-a4ce-4d17-a8fe-80a14c6c8fcc
+
+GOLD TABLE:
+|         | Highlights/Objectives                                                                                                                                                                                                                               | Performances and Achievements                                                                                                                                                               |
+|--------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5634462 | ['A distributed multi-tenancy approach access control.\n\nAccess control only suits in infrastructure levels - as physical hosts and hypervisors.']                                                                                                 | ['Simpler, scalable and robust techniques.\n\nRequires extra processing power.']                                                                                                            |
+| 3543367 | ['CP-ABE based multi-authority data access control scheme in Fog-cloud computing systems.\n\nOutsourced encryption and decryption computations.']                                                                                                   | ['User and attribute revocation can be performed efficiently.\n\nSecure and highly efficient scheme.']                                                                                      |
+| 1681367 | ['A hybrid and fine-grained access control solution.\n\nMost of the decryption process can be outsourced.\n\nSecure and suitable in the Fog computing environment.\n\nPerfectly applicable for resource-constrained IoT devices and applications.'] | ['Efficiency of data access is improved.\n\nKey management cost is greatly reduced.\n\nThe limitation and drawbacks of this method is it can be applied only in centralized architecture.'] |
+
+GOLD SCHEMA:
+0: Highlights/Objectives
+1: Performances and Achievements
+
+PREDICTION PATH:../../metric_validation_0/31c80ad2-a4ce-4d17-a8fe-80a14c6c8fcc/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Access Control Mechanism                                                             | Data Privacy and Efficiency                                                                                                                                                                                  |
+|:--------|:-------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Hypervisor-based access control mechanism']                                        | ['Supports more sophisticated access control policies, simpler, more scalable and more robust than existing network-based techniques.']                                                                      |
+| paper_2 | ['Verifiable outsourced multi-authority access control scheme']                      | ['Secure and highly efficient access control scheme with efficient user and attribute revocation method.']                                                                                                   |
+| paper_3 | ['Owner-forced data search and access authorization scheme spanning user-fog-cloud'] | ['Supports both index encryption with search ability and data encryption with fine-grained access control ability, significantly improving data access efficiency and reducing the cost of key management.'] |
+
+MATCHES:
+Access Control Mechanism: 
+Data Privacy and Efficiency: 

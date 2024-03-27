@@ -1,0 +1,31 @@
+ID: 71a84e95-d891-4177-b307-4019dd0ca8d5
+
+GOLD TABLE:
+|           | Dataset        | # Graphs   | Citation                                                                                                 |
+|----------:|:---------------|:-----------|:---------------------------------------------------------------------------------------------------------|
+|  19990980 | ['MUTAG']      | ['188']    | ['SUGAR {{cite:ee5d887}}, SubgraphX {{cite:41b660c}}, XGNN {{cite:8ff5482}}, GraphAug {{cite:081dd9e}}'] |
+|   9620021 | ['PTC']        | ['344']    | ['SUGAR {{cite:ee5d887}}']                                                                               |
+|   8174592 | ['PROTEINS']   | ['1113']   | ['SUGAR {{cite:ee5d887}}, GraphAug {{cite:081dd9e}}']                                                    |
+| 217680306 | ['BBBP']       | ['2039']   | ['SubgraphX {{cite:41b660c}}']                                                                           |
+| 229923402 | ['GRAPH-SST2'] | ['70042']  | ['SubgraphX {{cite:41b660c}}']                                                                           |
+
+GOLD SCHEMA:
+0: Dataset
+1: # Graphs
+2: Citation
+
+PREDICTION PATH:../../metric_validation_0/71a84e95-d891-4177-b307-4019dd0ca8d5/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Explainability techniques for graph neural networks                                                                                                                                                                                             | Standardized testbed for evaluations                                                                                                                                                                                                    | Common algorithms and evaluation metrics   |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                                                                                                         | ['N/A']                                                                                                                                                                                                                                 | ['N/A']                                    |
+| paper_2 | ['N/A']                                                                                                                                                                                                                                         | ['Details of a Predictive Toxicology Challenge (PTC) competition are discussed, which aimed to test the state-of-the-art in applying machine learning to form predictive models for chemical carcinogenesis from molecular structure.'] | ['N/A']                                    |
+| paper_3 | ['N/A']                                                                                                                                                                                                                                         | ['N/A']                                                                                                                                                                                                                                 | ['N/A']                                    |
+| paper_4 | ['N/A']                                                                                                                                                                                                                                         | ['N/A']                                                                                                                                                                                                                                 | ['N/A']                                    |
+| paper_5 | ['In this survey paper, a unified and taxonomic view of current GNN explainability methods is provided. It discusses the limitations of deep models, the need for post hoc techniques to explain predictions, and the area of explainability.'] | ['The paper provides a standardized testbed for GNN explainability, including datasets, common algorithms, and evaluation metrics, facilitating comprehensive experiments to compare and analyze the performance of many techniques.']  | ['N/A']                                    |
+
+MATCHES:
+Explainability techniques for graph neural networks: 
+Standardized testbed for evaluations: 
+Common algorithms and evaluation metrics: 

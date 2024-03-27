@@ -1,0 +1,27 @@
+ID: 0f3a0b21-945b-4c45-af04-d969bcdcfee2
+
+GOLD TABLE:
+|          | year     | # classes   | # img train / val*   | quality   |
+|---------:|:---------|:------------|:---------------------|:----------|
+| 11266650 | ['2014'] | ['012']     | ['28,648 / 02,113']  | ['+']     |
+|  4794860 | ['2018'] | ['009']     | ['0 / 05,818']       | ['+++']   |
+
+GOLD SCHEMA:
+0: year
+1: # classes
+2: # img train / val*
+3: quality
+
+PREDICTION PATH:../../metric_validation_0/0f3a0b21-945b-4c45-af04-d969bcdcfee2/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                               | Variety of object categories                                   | Number of annotated object instances              | Availability of baseline algorithms                             |
+|:--------|:--------------------------------------------------|:---------------------------------------------------------------|:--------------------------------------------------|:----------------------------------------------------------------|
+| paper_1 | ['More than 3,000 object instances per category'] | ['12 rigid categories augmented with 3D annotations']          | ['More than 3,000 object instances per category'] | ['Variations of DPM used as baselines for object detection']    |
+| paper_2 | ['N/A']                                           | ['Diverse image-shape pairs with pixel-level 2D-3D alignment'] | ['N/A']                                           | ['Cutting-edge reconstruction algorithms benchmarked on Pix3D'] |
+
+MATCHES:
+Size of the dataset: 
+Variety of object categories: 
+Number of annotated object instances: 
+Availability of baseline algorithms: 

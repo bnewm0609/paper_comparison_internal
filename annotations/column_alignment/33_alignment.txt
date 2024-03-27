@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Comparison metrics for regression tasks                                                                                     | Challenges and limitations of existing methods                                                                                                         |
+|:---------|:----------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                                                     | ['N/A']                                                                                                                                                |
+| paper_2  | ['N/A']                                                                                                                     | ['N/A']                                                                                                                                                |
+| paper_3  | ['N/A']                                                                                                                     | ['N/A']                                                                                                                                                |
+| paper_4  | ['Evaluating Scalable Uncertainty Estimation Methods for Deep Learning-Based Molecular Property Prediction']                | ['DNN performance is affected by the volume and the quality of the training samples']                                                                  |
+| paper_5  | ['We systematically evaluate several methods on five regression datasets using multiple complementary performance metrics'] | ['there is no clear consensus on the comparative performance of these models']                                                                         |
+| paper_6  | ['We systematically evaluate several methods on five regression datasets using multiple complementary performance metrics'] | ['there is no clear consensus on the comparative performance of these models']                                                                         |
+| paper_7  | ['N/A']                                                                                                                     | ['The computational catalysis field does not yet have a standard procedure for judging the quality of such uncertainty estimates']                     |
+| paper_8  | ['N/A']                                                                                                                     | ['these models can struggle with generalization to out-of-domain examples']                                                                            |
+| paper_9  | ['Machine learning sequence-function models for proteins could enable significant advances in protein engineering']         | ['not clear if these results extend to protein datasets']                                                                                              |
+| paper_10 | ['N/A']                                                                                                                     | ['N/A']                                                                                                                                                |
+| paper_11 | ['None of the previous works satisfies all criteria.']                                                                      | ['none of the previous works satisfies all criteria']                                                                                                  |
+| paper_12 | ['N/A']                                                                                                                     | ['extrapolations of densities learned from a training set to dissimilar structures could result in inaccurate results']                                |
+| paper_13 | ['N/A']                                                                                                                     | ['there is a tradeoff to be made between the systematic error associated with the smoothening and the error in the ML model for a specific structure'] |
+
+MATCHES:
+Comparison metrics for regression tasks: 
+Challenges and limitations of existing methods: 

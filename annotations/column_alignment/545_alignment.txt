@@ -1,0 +1,33 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Problem domain                              | Dataset                                                                                                                  | Methodology                                                          | Evaluation                                                                                                               | Contributions                                                                                                                                                  |
+|:--------|:--------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Semantic correspondence']                 | ['SPair-71k', '70,958 image pairs', 'diverse viewpoint and scale']                                                       | ['Benchmark dataset for semantic correspondence']                    | ['Baseline results for recent methods on SPair-71k']                                                                     | ['New large-scale benchmark dataset for semantic correspondence']                                                                                              |
+| paper_2 | ['3D pose and shape recovery of dogs']      | ['Stanford Dog dataset', '20,580 dog images', '2D joint and silhouette annotations']                                     | ['Expectation maximization for 3D pose and shape recovery']          | ['Results on Stanford Dog dataset', 'parameterized model SMBLD released']                                                | ['Automatic, end-to-end method for recovering 3D pose and shape of dogs', 'New parameterized model SMBLD', 'New annotation dataset StanfordExtra']             |
+| paper_3 | ['Facial landmark localization']            | ['AFLW', '21,997 real-world images', 'up to 21 landmarks per image', 'multi-view', 'expression, ethnicity, age, gender'] | ['Facial landmark localization using convolutional neural networks'] | ['Evaluation on AFLW', 'evaluation of multi-view face detection, facial landmark localization and face pose estimation'] | ['Novel database for facial landmark localization', 'Annotation of up to 21 landmarks per image', 'Rich set of tools for integration of other face databases'] |
+| paper_4 | ['Keypoint detection of quadruped animals'] | ['AwA Pose', 'images of quadruped animals', 'generic set of keypoints']                                                  | ['Deep learning model for keypoint detection']                       | ['Benchmarked with a state-of-the-art deep learning model', 'evaluated for seen and unseen animal cases']                | ['Novel dataset for keypoint detection of quadruped animals', 'Significantly more keypoints per animal', 'More diverse animals than existing datasets']        |
+
+MATCHES:
+Problem domain: 
+Dataset: 
+Methodology: 
+Evaluation: 
+Contributions: 

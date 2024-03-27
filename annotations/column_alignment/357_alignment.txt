@@ -1,0 +1,31 @@
+ID: 7aca2591-3b79-4f87-bfd3-0919bd3f37e9
+
+GOLD TABLE:
+|           | UML type                             | Description                                                                                                                                                                                                                               |
+|----------:|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  10110058 | ['Statechart and sequence diagrams'] | ['Uses statecharts and sequence diagrams to model the medical robots procedure, and the interaction between the system and the user']                                                                                                     |
+|  20798677 | ['SysML']                            | ['An extension of SysML is used to model functional and non-functional requirements for automotive car systems']                                                                                                                          |
+|   4569485 | ['Use Cases']                        | ['First study created use cases for traffic scenarios and proposed navigation solutions for vision impaired people. Second study generated a use case for a young girl suffering from Attention Deficit/- Hyperactivity Disorder (ADHD)'] |
+|  46837299 | ['Actionable Use Case']              | ['Proposes an actionable use case diagram as a means of collaboration between the data scientist and the software engineer']                                                                                                              |
+| 232106463 | ['Semi-formal UML']                  | ['Proposed a model called "Dataset Requirements Concept Model" (DRCM) to display requirements needed for the structure of datasets']                                                                                                      |
+| 222805326 | ['Activity Diagram']                 | ['The study gathers requirements and models them using use cases and activity diagrams to model a configuration system for an Unmanned Aerial Vehicles']                                                                                  |
+
+GOLD SCHEMA:
+0: UML type
+1: Description
+
+PREDICTION PATH:../../metric_validation_0/7aca2591-3b79-4f87-bfd3-0919bd3f37e9/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Degree of autonomy                                        | Application scenarios                                     |
+|:--------|:----------------------------------------------------------|:----------------------------------------------------------|
+| paper_1 | ['high', 'N/A']                                           | ['surgical robotics', 'N/A']                              |
+| paper_2 | ['semi-autonomous', 'emergency response']                 | ['emergency response', 'N/A']                             |
+| paper_3 | ['N/A', 'visually impaired road users']                   | ['N/A', 'visually impaired road users']                   |
+| paper_4 | ['N/A', 'automotive systems design']                      | ['automotive systems design', 'N/A']                      |
+| paper_5 | ['N/A', 'big data software']                              | ['N/A', 'big data software']                              |
+| paper_6 | ['N/A', 'deep learning dataset requirements engineering'] | ['N/A', 'deep learning dataset requirements engineering'] |
+
+MATCHES:
+Degree of autonomy: 
+Application scenarios: 

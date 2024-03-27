@@ -1,0 +1,27 @@
+ID: 8492db98-0c47-4a9c-87c7-ef0a45ef6628
+
+GOLD TABLE:
+|           | Task             | Target    | Sensor   | Best Method     |
+|----------:|:-----------------|:----------|:---------|:----------------|
+| 201099006 | ['Detection']    | ['Trees'] | ['RGB']  | ['RetinaNet']   |
+| 210846858 | ['Segmentation'] | ['Trees'] | ['RGB']  | ['FC-DenseNet'] |
+
+GOLD SCHEMA:
+0: Task
+1: Target
+2: Sensor
+3: Best Method
+
+PREDICTION PATH:../../metric_validation_0/8492db98-0c47-4a9c-87c7-ef0a45ef6628/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Detection Method                           | Image Source                   | Species of Interest                 | Performance Metrics                                                                            |
+|:--------|:-------------------------------------------|:-------------------------------|:------------------------------------|:-----------------------------------------------------------------------------------------------|
+| Paper 1 | ['Faster R-CNN, YOLOv3, RetinaNet']        | ['RGB images captured by UAV'] | ['Dipteryx alata Vogel (Fabaceae)'] | ['Average precision around 92%, processing times below 30 ms']                                 |
+| Paper 2 | ['SegNet, U-Net, FC-DenseNet, DeepLabv3+'] | ['RGB images captured by UAV'] | ['Dipteryx alata Vogel (cumbaru)']  | ['Overall accuracy 88.9% to 96.7%, F1-score between 87.0% and 96.1%, IoU from 77.1% to 92.5%'] |
+
+MATCHES:
+Detection Method: 
+Image Source: 
+Species of Interest: 
+Performance Metrics: 

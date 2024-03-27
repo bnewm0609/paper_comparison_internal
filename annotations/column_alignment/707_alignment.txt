@@ -1,0 +1,40 @@
+ID: 15cb9496-d480-4d44-9d0a-de9f6c7a8123
+
+GOLD TABLE:
+|           | Tasks                    | Dataset           | Graphs    | Features   |
+|----------:|:-------------------------|:------------------|:----------|:-----------|
+| 202572927 | ['Node Classification']  | ['Tree-Grid']     | ['1']     | ['10']     |
+| 237347079 | ['Node Classification']  | ['Syn-Cora']      | ['1']     | ['1,433']  |
+| 226281363 | ['Graph Classification'] | ['BA-2motifs']    | ['1,000'] | ['10']     |
+| 236980318 | ['Graph Classification'] | ['Infection']     | ['10']    | ['2']      |
+| 229923402 | ['Graph Classification'] | ['Graph-Twitter'] | ['6,940'] | ['768']    |
+|  19990980 | ['Graph Classification'] | ['MUTAG']         | ['188']   | ['14']     |
+
+GOLD SCHEMA:
+0: Tasks
+1: Dataset
+2: Graphs
+3: Features
+
+PREDICTION PATH:../../metric_validation_0/15cb9496-d480-4d44-9d0a-de9f6c7a8123/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Domain                                        | Methodology                                                                                                        | Contribution                                                                                              | Explainability                                                                                                 |
+|:---------|:----------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Toxicology and molecular orbital energies'] | ['Quantitative structure-activity relationship, molecular orbital energies, hydrophobicity, mutagenicity testing'] | ['Derivation of a quantitative structure-activity relationship for 188 congeners, predictive toxicology'] | ['Quantitative predictability of mutagenicity, value in the design of less mutagenic bioactive compounds']     |
+| paper_2  | ['Graph Neural Networks']                     | ['Explainability methods for Graph Neural Networks, taxonomic survey']                                             | ['Unified and taxonomic view, testbed for GNN explainability, comprehensive experiments']                 | ['Unified, taxonomic treatments of GNN explainability, standardized testbed for evaluations']                  |
+| paper_3  | ['Graph Neural Networks']                     | ['Explainability methods for Graph Neural Networks, taxonomic survey']                                             | ['Unified and taxonomic view, testbed for GNN explainability, comprehensive experiments']                 | ['Unified, taxonomic treatments of GNN explainability, standardized testbed for evaluations']                  |
+| paper_4  | ['Graph Neural Networks']                     | ['Explainability methods for Graph Neural Networks, taxonomic survey']                                             | ['Unified and taxonomic view, testbed for GNN explainability, comprehensive experiments']                 | ['Unified, taxonomic treatments of GNN explainability, standardized testbed for evaluations']                  |
+| paper_5  | ['Graph Neural Networks']                     | ['GNNExplainer, model-agnostic approach for explaining predictions of GNNs']                                       | ['GnnExplainer for interpretability, visualization of semantically relevant structures']                  | ['Interpretable explanations for predictions of any GNN-based model on any graph-based machine learning task'] |
+| paper_6  | ['Graph Neural Networks']                     | ['GNNExplainer, model-agnostic approach for explaining predictions of GNNs']                                       | ['GnnExplainer for interpretability, visualization of semantically relevant structures']                  | ['Interpretable explanations for predictions of any GNN-based model on any graph-based machine learning task'] |
+| paper_7  | ['Graph Neural Networks']                     | ['GNNExplainer, model-agnostic approach for explaining predictions of GNNs']                                       | ['GnnExplainer for interpretability, visualization of semantically relevant structures']                  | ['Interpretable explanations for predictions of any GNN-based model on any graph-based machine learning task'] |
+| paper_8  | ['Graph Neural Networks']                     | ['GNNExplainer, model-agnostic approach for explaining predictions of GNNs']                                       | ['GnnExplainer for interpretability, visualization of semantically relevant structures']                  | ['Interpretable explanations for predictions of any GNN-based model on any graph-based machine learning task'] |
+| paper_9  | ['Graph Neural Networks']                     | ['Self-explainable Graph Neural Network, finding K-nearest labeled nodes for explainable node classification']     | ['Novel framework for self-explainable GNNs, explainable node classification']                            | ['Simultaneous predictions and explanations for GNNs']                                                         |
+| paper_10 | ['Graph Neural Networks']                     | ['Parameterized Explainer for Graph Neural Network, explaining predictions made by GNNs']                          | ['Parameterized explainer for GNNs, better generalization, competitive performance']                      | ['Addressing challenges in explaining multiple instances collectively, better generalization ability']         |
+| paper_11 | ['Graph Neural Networks']                     | ['Novel benchmarks for evaluating explanation methods in GNNs']                                                    | ['Introduction of novel benchmarks for evaluating explanation methods in GNNs']                           | ['Introduction of novel benchmarks for evaluating explanation methods in GNNs']                                |
+
+MATCHES:
+Domain: 
+Methodology: 
+Contribution: 
+Explainability: 

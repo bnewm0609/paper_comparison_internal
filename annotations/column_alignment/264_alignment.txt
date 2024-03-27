@@ -1,0 +1,31 @@
+ID: 0c08592c-2499-453e-b250-12ee469069a8
+
+GOLD TABLE:
+|           | System Name             | Team affiliations                                 |
+|----------:|:------------------------|:--------------------------------------------------|
+| 225040083 | ['VerT5erini']          | ['University of Waterloo']                        |
+| 229923480 | ['ParagraphJoint']      | ['UT Dallas / Chan Zuckerburg Initiative / UCLA'] |
+| 226239683 | ['Law & Econ']          | ['ETH Zurich']                                    |
+| 233387973 | ['QMUL-SDS']            | ['Queen Mary University of London']               |
+| 216867133 | ['first_1']             | ['Ping An of China']                              |
+| 233231692 | ['bioBert for sciFact'] | ['-']                                             |
+
+GOLD SCHEMA:
+0: System Name
+1: Team affiliations
+
+PREDICTION PATH:../../metric_validation_0/0c08592c-2499-453e-b250-12ee469069a8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model Architecture                                                                                                        | Performance Metrics                                                                                                        |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Baseline models and combined training on a large dataset of claims about Wikipedia articles and SciFact data']          | ['N/A']                                                                                                                    |
+| paper_2 | ['VERT5ERINI, exploiting T5 for abstract retrieval, sentence selection, and label prediction']                            | ['Outperforms a strong baseline in each of the three steps: abstract retrieval, sentence selection, and label prediction'] |
+| paper_3 | ['Paragraph-level multi-task learning model, computing sequence of contextualized sentence embeddings from a BERT model'] | ['N/A']                                                                                                                    |
+| paper_4 | ['N/A']                                                                                                                   | ['N/A']                                                                                                                    |
+| paper_5 | ["QMUL-SDS's approach of training a BioBERT-large classifier for scientific claim verification"]                          | ['Substantial improvements on the dev set compared to the baseline system']                                                |
+| paper_6 | ['N/A']                                                                                                                   | ['N/A']                                                                                                                    |
+
+MATCHES:
+Model Architecture: 
+Performance Metrics: 

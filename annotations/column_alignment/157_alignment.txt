@@ -1,0 +1,27 @@
+ID: ec6033dc-4e55-4127-8cc2-6a23b64c181c
+
+GOLD TABLE:
+|           | Epochs   | Batch   |
+|----------:|:---------|:--------|
+| 222066580 | ['1500'] | ['4']   |
+| 250627826 | ['500']  | ['4']   |
+| 243832686 | ['500']  | ['16']  |
+| 235265851 | ['1500'] | ['16']  |
+
+GOLD SCHEMA:
+0: Epochs
+1: Batch
+
+PREDICTION PATH:../../metric_validation_0/ec6033dc-4e55-4127-8cc2-6a23b64c181c/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Innovation Contribution                                | Performance Evaluation                        |
+|:--------|:-------------------------------------------------------|:----------------------------------------------|
+| Paper 1 | ['Open dataset contribution']                          | ['Outperforms state-of-the-art methods']      |
+| Paper 2 | ['Novel infrared shape network (ISNet)']               | ['Outperforms state-of-the-art methods']      |
+| Paper 3 | ['Attention-guided pyramid context network (AGPCNet)'] | ['Achieves new state-of-the-art performance'] |
+| Paper 4 | ['Dense nested attention network (DNA-Net)']           | ['Outperforms state-of-the-art methods']      |
+
+MATCHES:
+Innovation Contribution: 
+Performance Evaluation: 

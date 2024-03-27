@@ -1,0 +1,35 @@
+ID: d9f833ee-070d-4384-868b-dcd94efbcfa6
+
+GOLD TABLE:
+|           | *Quantum learning technique                    | *Application                                                 |
+|----------:|:-----------------------------------------------|:-------------------------------------------------------------|
+| 227219578 | ['Variational quantum unsampling']             | ['Deep learning']                                            |
+| 195767325 | ['Variational quantum circuit']                | ['Deep reinforcement learning, supervised learning']         |
+|  49317921 | ['Continuous-variable quantum neural network'] | ['Convolutional, recurrent, and residual networks']          |
+| 209404942 | ['Quantum transfer learning']                  | ['Image recognition']                                        |
+| 128140142 | ['Density-based spatial clustering']           | ['Continuous-variable quantum key distribution']             |
+| 117542570 | ['Quantum circuit learning']                   | ['Neural networks in near-term, low-depth quantum circuits'] |
+|   4531946 | ['Quantum tensor network circuit']             | ['Discriminative and generative learning']                   |
+|  54475947 | ['Quantum generative model']                   | ['Data correlation characterization']                        |
+
+GOLD SCHEMA:
+0: *Quantum learning technique
+1: *Application
+
+PREDICTION PATH:../../metric_validation_0/d9f833ee-070d-4384-868b-dcd94efbcfa6/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Application domain                                                          | Approach to quantum computing integration                                                                                                    |
+|:--------|:----------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Pattern classification on near-term quantum hardware']                    | ['Efficient individual quantum nodes based on variational unsampling protocols']                                                             |
+| paper_2 | ['Deep reinforcement learning']                                             | ['Reshaping classical deep reinforcement learning algorithms into variational quantum circuits, use of quantum information encoding scheme'] |
+| paper_3 | ['Fraud detection, Tetris image generation, classical-quantum autoencoder'] | ['Continuous-variable architecture with Gaussian and non-Gaussian gates, embedding classical network into the quantum formalism']            |
+| paper_4 | ['Image recognition, quantum state classification']                         | ['Augmenting pre-trained classical network by a final variational quantum circuit, quantum transfer learning']                               |
+| paper_5 | ['Continuous-variable quantum key distribution']                            | ['Application of DBSCAN machine learning algorithm in continuous-variable quantum key distribution']                                         |
+| paper_6 | ['Machine learning on near-term quantum processors']                        | ['Hybrid algorithm for machine learning on near-term quantum processors']                                                                    |
+| paper_7 | ['Handwriting recognition']                                                 | ['Tensor network circuits for discriminative and generative learning']                                                                       |
+| paper_8 | ['Quantum machine learning, generative models']                             | ['Quantum learning algorithm based on a quantum generative model']                                                                           |
+
+MATCHES:
+Application domain: 
+Approach to quantum computing integration: 

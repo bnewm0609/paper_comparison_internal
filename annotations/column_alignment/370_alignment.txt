@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | System Platforms and Configurations                                   | Protocols and Techniques                                                      |
+|:---------|:----------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| paper_1  | ['Software defined radio (SDR) implementation']                       | ['RF-based detection of drone presence']                                      |
+| paper_2  | ['Software defined radio (SDR) implementation']                       | ['Datalink digital communications protocols (ACARS, FANS-1/A)']               |
+| paper_3  | ['Universal Serial Radio Peripheral (USRP)']                          | ['Linear feedback shift register (LFSR)-based message encryption']            |
+| paper_4  | ['Universal Software Radio Peripheral (USRP)']                        | ['FM-based indoor localization and defense methods']                          |
+| paper_5  | ['Software-defined radio GNSS instrumentation']                       | ['Spoofing mitigation techniques for GNSS']                                   |
+| paper_6  | ['GNU Radio platform on USRP and USRP2 devices']                      | ['Attack on Bluetooth 2.1+ Secure Simple Pairing']                            |
+| paper_7  | ['Universal Software Radio Peripheral (USRP) B200 board and OpenBTS'] | ['Vulnerabilities in the GSM security architecture']                          |
+| paper_8  | ['LTE mobile devices in real LTE networks']                           | ['Practical attacks against 4G/LTE mobile communication systems']             |
+| paper_9  | ['Beagle Bone Black (BBB), Linux Ubuntu 14']                          | ['Aeronautical surveillance system and software applications']                |
+| paper_10 | ['Software-defined radio SDR technology']                             | ['Passive eavesdropping of Digital Enhanced Cordless Telecommunication']      |
+| paper_11 | ['Waveform shaking for NFC devices with USRP']                        | ['Secret Key Agreement using full-duplex NFC with waveform shaking']          |
+| paper_12 | ['Software Defined Radio (SDR) platform']                             | ['Reconfigurable IoT Gateway using SDR platform']                             |
+| paper_13 | ['Low-cost and all-in-one mobile receiver for eavesdropping']         | ['Eavesdropping attacks on computer displays using a mobile receiver system'] |
+| paper_14 | ['Software defined radio (SDR) based implementation']                 | ['PHY-based Jamming attacks against OFDM systems']                            |
+| paper_15 | ['Software define radio (SDR) based implementation']                  | ['PHY-based Jamming attacks against OFDM systems']                            |
+| paper_16 | ['Test setup using publicly available tools']                         | ['Cyber attacks in tactical radio networks']                                  |
+| paper_17 | ['USRP-based monitor and UHF passive tags']                           | ['Physical-layer identification for UHF RFID tags (GenePrint)']               |
+| paper_18 | ['Open-source SDR tools for LTE PHY layer analysis']                  | ['LTE PHY layer vulnerability analysis using open-source SDR tools']          |
+
+MATCHES:
+System Platforms and Configurations: 
+Protocols and Techniques: 

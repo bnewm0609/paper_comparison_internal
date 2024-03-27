@@ -1,0 +1,29 @@
+ID: 46fd6d34-5004-405c-a1b5-d83d964d714f
+
+GOLD TABLE:
+|          | Architecture     | Depth   |
+|---------:|:-----------------|:--------|
+|  2895645 | ['CPCPFF']       | ['4']   |
+|   744633 | ['PCCPCCPCFFF']  | ['8']   |
+| 10647804 | ['CPCPIIPIPFFF'] | ['11']  |
+|  2482804 | ['CPNCPNCPCFF']  | ['6']   |
+| 18374345 | ['CPCPCPFF']     | ['5']   |
+
+GOLD SCHEMA:
+0: Architecture
+1: Depth
+
+PREDICTION PATH:../../metric_validation_0/46fd6d34-5004-405c-a1b5-d83d964d714f/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach to Deep Learning                                                                                | Application Domain                                                                                  |
+|:--------|:---------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| paper_1 | ['Replacing softmax layer with linear support vector machine for significant gains on datasets']         | ['Bioinformatics, speech recognition, image classification, and natural language processing']       |
+| paper_2 | ['Use of pre-trained multiple deep convolutional neural networks (CNN) models']                          | ['Emotion Recognition in the Wild Challenge (EmotiW)']                                              |
+| paper_3 | ['Proposal of a single deep neural network architecture specifically for facial expression recognition'] | ['Automated Facial Expression Recognition (FER) across multiple well-known standard face datasets'] |
+| paper_4 | ['Use of a deep model that learns a rich face representation for social relation prediction']            | ['Characterisation and quantification of fine-grained social relation traits from face images']     |
+| paper_5 | ['Introduction of alignment-mapping networks (AMNs) for handling non-alignable faces']                   | ['Automatic affect recognition in the wild']                                                        |
+
+MATCHES:
+Approach to Deep Learning: 
+Application Domain: 

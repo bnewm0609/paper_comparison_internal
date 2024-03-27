@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Forecasting methods and scenarios                                                                    | Impact of uncertain demand on solutions                                                                                                                                                                                                                                                         | Analysis of solution sensitivity to demand                                                 | Comparison of different demand scenarios                                                                                                                                                                                                                                                                                                         |
+|:--------|:-----------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Demand forecast for 2030 used, underlying demand model contains uncertainty to a certain extent.'] | ['Different transportation demand strongly influences the Pareto optimal performance of solutions. 70% of the solutions do not perform Pareto optimal when assessed using a different transportation demand. Loss in objective function values is small (a 2% decrease in hypervolume value).'] | ['The resulting decision variables are relatively insensitive for transportation demand.'] | ['Differences are analyzed between Pareto sets from two other demand scenarios: a 2020 demand prediction and a Transit-Oriented Development scenario. Pareto solutions resulting from one demand scenario are assessed based on a different demand scenario to test whether they are still Pareto optimal under the different demand scenario.'] |
+| paper_2 | ['N/A']                                                                                              | ['N/A']                                                                                                                                                                                                                                                                                         | ['N/A']                                                                                    | ['N/A']                                                                                                                                                                                                                                                                                                                                          |
+
+MATCHES:
+Forecasting methods and scenarios: 
+Impact of uncertain demand on solutions: 
+Analysis of solution sensitivity to demand: 
+Comparison of different demand scenarios: 

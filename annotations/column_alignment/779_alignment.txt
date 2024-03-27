@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types of machine learning algorithms used                                                                                                                               | Comparison of generalization performance                                                                                            |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Genetic Algorithm', 'Hidden Markov Model']                                                                                                                            | ['N/A']                                                                                                                             |
+| paper_2 | ['Backpropagation learning in feed-forward and recurrent feed-forward connectionist networks', 'Symbolic pattern matching approaches', 'Exemplar-based generalization'] | ['Backpropagation learning generalization performance not better than symbolic pattern matching and exemplar-based generalization'] |
+| paper_3 | ['Support Vector Machine', 'Hidden Markov Model']                                                                                                                       | ['Transparent implementation of sonority sequencing principle is more accurate than previous implementations']                      |
+| paper_4 | ['Support Vector Machine', 'Hidden Markov Model']                                                                                                                       | ['Transparent implementation of sonority sequencing principle is more accurate than previous implementations']                      |
+| paper_5 | ['Entropy based phonotactic segmentation', 'CRF (sequence labeling approach)', 'Hybrid approach']                                                                       | ['Proposed methods outperform the baseline rule-based method']                                                                      |
+
+MATCHES:
+Types of machine learning algorithms used: NA
+Comparison of generalization performance: NA

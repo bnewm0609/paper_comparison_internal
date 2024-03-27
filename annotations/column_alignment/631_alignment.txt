@@ -1,0 +1,43 @@
+ID: 0191f26f-b545-43be-aa9f-69adef97e28c
+
+GOLD TABLE:
+|           | Blockchain             | Type                | Consensus              | Technologies                                    |
+|----------:|:-----------------------|:--------------------|:-----------------------|:------------------------------------------------|
+| 216485725 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart contracts, Swarm, DOS, Bloom filter']   |
+|  85502289 | ['Ethereum']           | ['Permission']      | ['Proof of work']      | ['Smart Contract']                              |
+| 214761403 | ['Ethereum']           | ['Consortium']      | ['Proof of work']      | ['Smart contract, Swarm, Oracle']               |
+|  27257114 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart Contract, IPFS, SDN']                   |
+| 221118885 | ['Hyperledger Fabric'] | ['Private']         | ['Kafka']              | ['Chain code, SDN,\nThreat Platform']           |
+| 207973175 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Deep learning(LSTM), SDN']    |
+| 211559340 | ['Generic']            | ['Private']         | ['-']                  | ['SDN']                                         |
+|  84186926 | ['Hyperledger']        | ['-']               | ['Kafka']              | ['SDN, IoT']                                    |
+| 218504016 | ['Ethereum']           | ['Public, Private'] | ['Proof-of-Authority'] | ['Smart Contract']                              |
+| 211689822 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Software Defined Networking'] |
+
+GOLD SCHEMA:
+0: Blockchain
+1: Type
+2: Consensus
+3: Technologies
+
+PREDICTION PATH:../../metric_validation_0/0191f26f-b545-43be-aa9f-69adef97e28c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Actors involved in collaboration                                             | Incentive mechanisms             | Trust establishment and maintenance                  | Communication and signaling protocols    |
+|:---------|:-----------------------------------------------------------------------------|:---------------------------------|:-----------------------------------------------------|:-----------------------------------------|
+| paper_1  | ['Security Operation Centers (SOCs)', 'Content Verifier']                    | ['DDoS_coin token']              | ['Contribution-based trust', 'Content verification'] | ['Smart contracts']                      |
+| paper_2  | ['Victim network', 'Remote service providers']                               | ['Sophisticated credit system']  | ['Blockchain-based trust infrastructure']            | ['Blockchain']                           |
+| paper_3  | ['Security Operation Centers (SOCs)']                                        | ['N/A']                          | ['Elliptic curve cryptography']                      | ['Smart contract']                       |
+| paper_4  | ['Distributed Denial-of-Service (DDoS) defense systems', 'Hardware devices'] | ['Financial incentives']         | ['Blockchain technology']                            | ['Blockchain Signaling System (BloSS)']  |
+| paper_5  | ['Diverse participants in the blockchain network']                           | ['Tamper-proof record-keeping']  | ['Immutable logic guarantee using smart contracts']  | ['Software-Defined Networking (SDN)']    |
+| paper_6  | ['Internet of Things (IoT) devices', 'Control center']                       | ['Distributed Blockchain (DBC)'] | ['Blockchain and SDN']                               | ['SDN and Distributed Blockchain (DBC)'] |
+| paper_7  | ['Autonomous systems (ASS)']                                                 | ['Blockchain technology']        | ['Blockchain technology']                            | ['Blockchain technology']                |
+| paper_8  | ['Adjacent and disjoint network domains (autonomous systems)']               | ['Reputation scores']            | ['Reputation scores', 'Network flow weights']        | ['Blockchain-based smart contracts']     |
+| paper_9  | ['Smart city applications', 'BlockSDN framework']                            | ['Blockchain-as-a-service']      | ['Permissioned blockchain']                          | ['Blockchain-as-a-service']              |
+| paper_10 | ['SDN-based domains', "Ethereum's smart contracts"]                          | ['Smart contracts']              | ['Decentralized manner', 'Smart contracts']          | ["Ethereum's smart contracts"]           |
+
+MATCHES:
+Actors involved in collaboration: 
+Incentive mechanisms: 
+Trust establishment and maintenance: 
+Communication and signaling protocols: 

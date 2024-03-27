@@ -1,0 +1,23 @@
+ID: ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f
+
+GOLD TABLE:
+|           | Category            | N      |
+|----------:|:--------------------|:-------|
+|  19355285 | ['Placebo-Control'] | ['4']  |
+| 222081054 | ['Placebo Study']   | ['12'] |
+
+GOLD SCHEMA:
+0: Category
+1: N
+
+PREDICTION PATH:../../metric_validation_0/ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of technology                             | Stress reduction mechanism                    |
+|:--------|:-----------------------------------------------|:----------------------------------------------|
+| Paper 1 | BrightBeat's visual and auditory interventions | Slower breathing, improved calmness and focus |
+| Paper 2 | N/A                                            | N/A                                           |
+
+MATCHES:
+Type of technology: 
+Stress reduction mechanism: 

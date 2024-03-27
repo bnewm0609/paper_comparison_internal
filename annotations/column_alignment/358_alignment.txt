@@ -1,0 +1,31 @@
+ID: 7aca2591-3b79-4f87-bfd3-0919bd3f37e9
+
+GOLD TABLE:
+|           | UML type                             | Description                                                                                                                                                                                                                               |
+|----------:|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  10110058 | ['Statechart and sequence diagrams'] | ['Uses statecharts and sequence diagrams to model the medical robots procedure, and the interaction between the system and the user']                                                                                                     |
+|  20798677 | ['SysML']                            | ['An extension of SysML is used to model functional and non-functional requirements for automotive car systems']                                                                                                                          |
+|   4569485 | ['Use Cases']                        | ['First study created use cases for traffic scenarios and proposed navigation solutions for vision impaired people. Second study generated a use case for a young girl suffering from Attention Deficit/- Hyperactivity Disorder (ADHD)'] |
+|  46837299 | ['Actionable Use Case']              | ['Proposes an actionable use case diagram as a means of collaboration between the data scientist and the software engineer']                                                                                                              |
+| 232106463 | ['Semi-formal UML']                  | ['Proposed a model called "Dataset Requirements Concept Model" (DRCM) to display requirements needed for the structure of datasets']                                                                                                      |
+| 222805326 | ['Activity Diagram']                 | ['The study gathers requirements and models them using use cases and activity diagrams to model a configuration system for an Unmanned Aerial Vehicles']                                                                                  |
+
+GOLD SCHEMA:
+0: UML type
+1: Description
+
+PREDICTION PATH:../../metric_validation_0/7aca2591-3b79-4f87-bfd3-0919bd3f37e9/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Challenges                                                                                                                                           | Solutions                                                                                                                                                                     |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Lack of real-world applications for automatic surgical robots']                                                                                    | ['Methodology for transforming surgical requirements into formal models of robotic tasks']                                                                                    |
+| paper_2 | ['Limited usage of Unmanned Aerial Vehicles (UAVs) in emergency response missions and potential for increased autonomy']                             | ['Configurable, multi-user, multi-UAV system for supporting the use of semi-autonomous UAVs in diverse emergency response missions']                                          |
+| paper_3 | ['Lack of a concept for transferring algorithms from camera-based Advanced Driver Assistance Systems to the domain of visually impaired road users'] | ['Concept for transferring algorithms from camera-based Advanced Driver Assistance Systems to the domain of visually impaired road users']                                    |
+| paper_4 | ['Increasing complexity of electric/electronic systems in passenger cars and the need for cross-domain requirements engineering']                    | ['Model-based approach to automotive requirements engineering for the overall passenger car development based on SysML']                                                      |
+| paper_5 | ['Lack of collaboration between software engineers and data scientists in discovering business values from massive data through data mining']        | ['New requirement engineering model that allows software engineers and data scientists to discover business values hand in hand as part of the software requirement process'] |
+| paper_6 | ['Poor specification of the datasets’ structure in deep learning applications']                                                                      | ['MDE method for improving deep learning dataset requirements engineering using Alloy and UML']                                                                               |
+
+MATCHES:
+Challenges: 
+Solutions: 

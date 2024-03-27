@@ -1,0 +1,41 @@
+ID: 4c143552-790b-46bb-9463-587a756d69e0
+
+GOLD TABLE:
+|           | # Cit.   | Application                                | Input Data         | AI model(s)                             | XAI method(s)                        | Dataset(s)                        |
+|----------:|:---------|:-------------------------------------------|:-------------------|:----------------------------------------|:-------------------------------------|:----------------------------------|
+| 244662871 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['RF, GBDT']                            | ['SHAP, LIME']                       | ['Sylhet Diabetes datasetsylhet'] |
+| 239039896 | ['1']    | ['Diabetes diagnosis']                     | ['EHR']            | ['TabNet, XGBoost, LightGBM, CatBoost'] | ['SHAP (all), attention (TabNet)']   | ['Retrospective study']           |
+| 233434246 | ['1']    | ['Voice pathology assessment']             | ['Audio features'] | ['ExtraTrees']                          | ['SHAP,Morris sensitivity analysis'] | ['Pilot study']                   |
+| 245387254 | ['0']    | ['Lung cancer life expectancy prediction'] | ['EHR']            | ['RF']                                  | ['LIME, SHAP']                       | ['Simulacrum datasetsimulacrum']  |
+| 236980957 | ['9']    | ['Lung cancer mortality prediction']       | ['EHR']            | ['XGBoost']                             | ['LIME, SHAP, Anchors']              | ['Simulacrum dataset']            |
+| 231639221 | ['0']    | ['ICU mortality risk prediction']          | ['EHR']            | ['RF, MLP']                             | ['SHAP']                             | ['MIMIC-III']                     |
+| 230997466 | ['3']    | ['Eye state detection']                    | ['EEG']            | ['XGBoost, DNN']                        | ['SHAP']                             | ['Pilot study']                   |
+
+GOLD SCHEMA:
+0: # Cit.
+1: Application
+2: Input Data
+3: AI model(s)
+4: XAI method(s)
+5: Dataset(s)
+
+PREDICTION PATH:../../metric_validation_0/4c143552-790b-46bb-9463-587a756d69e0/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model                                                                           | Task                                                                                                 | Interpretability                                                                                 | Data                                                                  | Evaluation                                                        | Results                                                                                                                 |
+|:--------|:--------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Deep Neural Network (DNN)']                                                   | ['Eye state detection using EEG signals']                                                            | ['Interpretable framework']                                                                      | ['EEG signals']                                                       | ['Case study on eye state detection']                             | ['Promising results for real-time prediction']                                                                          |
+| Paper 2 | ['Random Forest (RF), Gradient Boosting (GB)']                                  | ['Diagnosing diabetes']                                                                              | ['Interpretable Machine Learning (IML)']                                                         | ['Healthcare data for diagnosing diabetes']                           | ['Experiments with SHAP and LIME IML models']                     | ['Detailed interpretability while maintaining accuracy']                                                                |
+| Paper 3 | ['TabNet']                                                                      | ['Predicting aggravation of type 2 diabetes']                                                        | ['Attentional neural network']                                                                   | ['Tabular health screening records']                                  | ['Both model-agnostic and model-specific interpretation methods'] | ['Mask provides information regarding which items in a biochemical analysis affect the aggravation of type 2 diabetes'] |
+| Paper 4 | ['Multiple classifiers']                                                        | ['Discriminating between vocal cord pathologies']                                                    | ['Explainable AI (XAI), feature interpretability analysis']                                      | ['Sustained phonation recordings']                                    | ['Batched cross validation']                                      | ['Feasibility of machine learning to accurately discriminate between different types of vocal cord pathologies']        |
+| Paper 5 | ['LIME, SHAP']                                                                  | ['Analysing COVID-19 control measure effectiveness, estimating lung cancer patient life expectancy'] | ['Local Interpretable Model-Agnostic Explanations (LIME), SHapley Additive exPlanations (SHAP)'] | ['COVID-19 control measures data, lung cancer patient data']          | ['Not specified']                                                 | ['Transferability of medical sub-domains and reveal deep insights from data']                                           |
+| Paper 6 | ['SHAP, LIME, Scoped Rules']                                                    | ['Analysing Electronic Health Records (EHRs)']                                                       | ['eXplainable Artificial Intelligence (XAI)']                                                    | ['Electronic Health Records (EHRs)']                                  | ['Large-scale EHR dataset']                                       | ['Comparison of features in terms of prediction importance']                                                            |
+| Paper 7 | ['Logistic regression, decision trees, random forests, multilayer perceptrons'] | ['Predicting mortality risk in ICU patients']                                                        | ['Interpretable risk calculators']                                                               | ["Patients' profiles extracted from the MIMIC-III clinical database"] | ['Benchmarking study with various machine learning methods']      | ['High degree of agreement across the considered machine learning methods.']                                            |
+
+MATCHES:
+Model: 
+Task: 
+Interpretability: 
+Data: 
+Evaluation: 
+Results: 

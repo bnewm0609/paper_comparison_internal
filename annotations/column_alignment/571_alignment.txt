@@ -1,0 +1,27 @@
+ID: d6fc8459-4175-4fc1-90eb-25cf6c798a2a
+
+GOLD TABLE:
+|           | Dataset   | #C    |
+|----------:|:----------|:------|
+|   6143824 | ['FN']    | ['2'] |
+| 215754328 | ['HATE']  | ['2'] |
+|   1428702 | ['IMDB']  | ['2'] |
+|   5034059 | ['SST']   | ['2'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: #C
+
+PREDICTION PATH:../../metric_validation_0/d6fc8459-4175-4fc1-90eb-25cf6c798a2a/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | NLP Task Focus                                                 | Model Evaluation                                                                                                                                   |
+|:--------|:---------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['General Language Understanding Evaluation benchmark (GLUE)'] | ['Evaluating and analyzing the performance of models across a diverse range of existing NLU tasks']                                                |
+| paper_2 | ['Sentiment Analysis']                                         | ['Evaluating the model using small, widely used sentiment and subjectivity corpora']                                                               |
+| paper_3 | ['Satirical News Detection']                                   | ['Investigating the difference between paragraph-level features and document-level features and analyzing them on a large satirical news dataset'] |
+| paper_4 | ['Weight Poisoning Attacks on Pre-trained Models']             | ["Experiments on sentiment classification, toxicity detection, and spam detection to show the attack's applicability and threat"]                  |
+
+MATCHES:
+NLP Task Focus: 
+Model Evaluation: 

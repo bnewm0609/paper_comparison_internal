@@ -1,0 +1,42 @@
+ID: 33d1dcd3-eeb5-4e81-bba2-5a9ecc730856
+
+GOLD TABLE:
+|          | Model                                                        | Main Contribution                                        |
+|---------:|:-------------------------------------------------------------|:---------------------------------------------------------|
+| 12054943 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ['and high uncoded BER of the eavesdropper']             |
+| 37018232 | ['No CSI of the receiver and eavesdropper']                  | ['and zero diversity of\nthe eavesdropper']              |
+|  8778619 | ['No CSI of the receiver and eavesdropper']                  | ['to make the eavesdropper unable to decode the signal'] |
+|  6102369 | ['No CSI of the receiver and eavesdropper']                  | ['by using\nM-PSK modulation and OSTBC']                 |
+|  7786858 | ['No CSI of the receiver and eavesdropper']                  | ["to deliberately randomize the eavesdropper's signal"]  |
+| 16575249 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ["the eavesdropper's correctly decoding probability"]    |
+| 35469277 | ['Perfect CSIT\nof the receiver, SCSIT of the eavesdropper'] | ['Analyze the SER of confidential information']          |
+
+GOLD SCHEMA:
+0: Model
+1: Main Contribution
+
+PREDICTION PATH:../../metric_validation_0/33d1dcd3-eeb5-4e81-bba2-5a9ecc730856/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | LPI analysis                                                                                   | Use cases                                                               |
+|:---------|:-----------------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                                        | ['MIMO Gaussian wiretap channels']                                      |
+| paper_2  | ['N/A']                                                                                        | ['MIMO Gaussian wiretap channels']                                      |
+| paper_3  | ['N/A']                                                                                        | ['MIMO Gaussian wiretap channels']                                      |
+| paper_4  | ['N/A']                                                                                        | ['Space-time block code with channel reciprocity']                      |
+| paper_5  | ['N/A']                                                                                        | ['Space-time block code with channel reciprocity']                      |
+| paper_6  | ['N/A']                                                                                        | ['Space-time block code with channel reciprocity']                      |
+| paper_7  | ['Randomized array transmission scheme, antenna array redundancy, channel diversity']          | ['Multiple input single output wiretap channel']                        |
+| paper_8  | ['Randomized array transmission scheme, antenna array redundancy, channel diversity']          | ['Multiple input single output wiretap channel']                        |
+| paper_9  | ['N/A']                                                                                        | ['Rayleigh flat fading channels with multiple antenna eavesdropper']    |
+| paper_10 | ['N/A']                                                                                        | ['Rayleigh flat fading channels with multiple antenna eavesdropper']    |
+| paper_11 | ['Randomized array transmission scheme, antenna array redundancy, channel diversity analysis'] | ['Physical-layer security over wireless networks']                      |
+| paper_12 | ['Randomized array transmission scheme, antenna array redundancy, channel diversity analysis'] | ['Physical-layer security over wireless networks']                      |
+| paper_13 | ['N/A']                                                                                        | ['MIMO wiretap channels']                                               |
+| paper_14 | ['N/A']                                                                                        | ['MIMO wiretap channels']                                               |
+| paper_15 | ['N/A']                                                                                        | ['Multiple-input single-output multiple-eavesdropper wiretap channels'] |
+| paper_16 | ['N/A']                                                                                        | ['Multiple-input single-output multiple-eavesdropper wiretap channels'] |
+
+MATCHES:
+LPI analysis: 
+Use cases: 

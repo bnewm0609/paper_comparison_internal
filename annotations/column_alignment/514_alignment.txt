@@ -1,0 +1,90 @@
+ID: 04f07bbb-0d49-43cf-bd66-974168293f31
+
+GOLD TABLE:
+|           | Title                                                                                                                         | Year     | Venue    |
+|----------:|:------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
+| 251627122 | ['Android Source Code Vulnerability Detection: A Systematic Literature Review']                                               | ['2023'] | ['CSUR'] |
+| 232168946 | ['Deep Learning for Android Malware Defenses: A Systematic Literature Review']                                                | ['2022'] | ['CSUR'] |
+| 245880916 | ['Dynamic Testing Techniques of Non-Functional Requirements in Mobile Apps: A Systematic Mapping Study']                      | ['2022'] | ['CSUR'] |
+| 235485108 | ['A Survey of Privacy Vulnerabilities of Mobile Device Sensors']                                                              | ['2022'] | ['CSUR'] |
+| 233388246 | ['A Systematic Survey on Android API Usage for Data-Driven Analytics with Smartphones']                                       | ['2022'] | ['CSUR'] |
+| 245158991 | ['A systematic mapping study addressing the reliability of mobile applications: The need to move beyond testing reliability'] | ['2022'] | ['JSS']  |
+| 236956425 | ['Research on Third-Party Libraries in Android Apps: A Taxonomy and Systematic Literature Review']                            | ['2021'] | ['TSE']  |
+| 203952955 | ['Mobile app privacy in software engineering research: A systematic mapping study']                                           | ['2021'] | ['IST']  |
+| 235473987 | ['Measurement-based Experiments on the Mobile Web: A Systematic Mapping Study']                                               | ['2021'] | ['EASE'] |
+| 211041290 | ['Autonomous Visual Navigation for Mobile Robots: A Systematic Literature Review']                                            | ['2020'] | ['CSUR'] |
+| 211040739 | ['A Survey of Context Simulation for Testing Mobile Context-Aware Applications']                                              | ['2020'] | ['CSUR'] |
+| 230611063 | ['A Survey of Android Malware Detection with Deep Neural Models']                                                             | ['2020'] | ['CSUR'] |
+|  53752448 | ['Rebooting Research on Detecting Repackaged Android Apps: Literature Review and Benchmark']                                  | ['2019'] | ['TSE']  |
+|  68211642 | ['App store effects on software engineering practices']                                                                       | ['2019'] | ['TSE']  |
+|  59337596 | ['A Survey and Taxonomy of Core Concepts and Research Challenges in Cross-Platform Mobile Development']                       | ['2018'] | ['CSUR'] |
+|  52193398 | ['A Survey on Recent OS-Level Energy Management Techniques for Mobile Processing Units']                                      | ['2018'] | ['TPDS'] |
+|  53462302 | ['Automated Testing of Android Apps: A Systematic Literature Review']                                                         | ['2018'] | ['TRel'] |
+|   1750981 | ['Toward Engineering a Secure Android Ecosystem: A Survey of Existing Techniques']                                            | ['2016'] | ['CSUR'] |
+|   8323376 | ['A survey of app store analysis for software engineering']                                                                   | ['2016'] | ['TSE']  |
+|  14205536 | ['A survey on smartphone-based systems for opportunistic user context recognition']                                           | ['2013'] | ['CSUR'] |
+|  17846346 | ['Survey and analysis of current mobile learning applications and technologies']                                              | ['2013'] | ['CSUR'] |
+| 245397809 | ['A mapping study on mutation testing for mobile applications']                                                               | ['2022'] | ['STVR'] |
+| 234256916 | ['A survey of performance optimization for mobile applications']                                                              | ['2021'] | ['TSE']  |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Venue
+
+PREDICTION PATH:../../metric_validation_0/04f07bbb-0d49-43cf-bd66-974168293f31/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Dimension 1 - Focus                                                                                     | Dimension 2 - Methodology                     | Research_Methodology                          |
+|:---------|:--------------------------------------------------------------------------------------------------------|:----------------------------------------------|:----------------------------------------------|
+| Paper 1  | ['Android Source Code Vulnerability Detection']                                                         | ['Systematic Literature Review']              | nan                                           |
+| Paper 2  | ['Deep Learning for Android Malware Defenses']                                                          | ['Systematic Literature Review']              | nan                                           |
+| Paper 3  | ['Dynamic Testing Techniques of Non-functional Requirements in Mobile Apps']                            | ['Systematic Mapping Study']                  | nan                                           |
+| Paper 4  | ['A Survey of Privacy Vulnerabilities of Mobile Device Sensors']                                        | ['Survey']                                    | nan                                           |
+| Paper 5  | ['A Systematic Survey on Android API Usage for Data-Driven Analytics with Smartphones']                 | ['Systematic Survey']                         | nan                                           |
+| Paper 6  | ['A Systematic Mapping Study Addressing the Reliability of Mobile Applications']                        | ['Systematic Mapping Study']                  | nan                                           |
+| Paper 7  | ['Research on Third-Party Libraries in Android Apps']                                                   | ['Taxonomy and Systematic Literature Review'] | nan                                           |
+| Paper 8  | ['Mobile App Privacy in Software Engineering Research']                                                 | ['Systematic Mapping Study']                  | nan                                           |
+| Paper 9  | ['Measurement-based Experiments on the Mobile Web']                                                     | ['Systematic Mapping Study']                  | nan                                           |
+| Paper 10 | ['Autonomous Visual Navigation for Mobile Robots']                                                      | ['Systematic Literature Review']              | nan                                           |
+| Paper 11 | ['A Survey of Context Simulation for Testing Mobile Context-Aware Applications']                        | ['Survey']                                    | nan                                           |
+| Paper 12 | ['A Survey of Android Malware Detection with Deep Neural Models']                                       | ['Survey']                                    | nan                                           |
+| Paper 13 | ['Rebooting Research on Detecting Repackaged Android Apps']                                             | ['Literature Review and Benchmark']           | nan                                           |
+| Paper 14 | ['App Store Effects on Software Engineering Practices']                                                 | ['Developer interviews and questionnaires']   | nan                                           |
+| Paper 15 | ['A Survey and Taxonomy of Core Concepts and Research Challenges in Cross-Platform Mobile Development'] | ['Survey']                                    | nan                                           |
+| Paper 16 | ['A Survey on Recent OS-Level Energy Management Techniques for Mobile Processing Units']                | ['Survey']                                    | nan                                           |
+| Paper 17 | ['Automated Testing of Android Apps']                                                                   | ['Systematic Literature Review']              | nan                                           |
+| Paper 18 | ['Toward Engineering a Secure Android Ecosystem']                                                       | ['Survey']                                    | nan                                           |
+| Paper 19 | ['A Survey of App Store Analysis for Software Engineering']                                             | ['Survey and Analysis']                       | nan                                           |
+| Paper 20 | ['A survey on smartphone-based systems for opportunistic user context recognition']                     | ['Survey']                                    | nan                                           |
+| Paper 21 | ['Survey and analysis of current mobile learning applications and technologies']                        | ['Survey and Analysis']                       | nan                                           |
+| Paper 22 | ['A mapping study on mutation testing for mobile applications']                                         | ['Mapping Study']                             | nan                                           |
+| Paper 23 | ['A Survey of Performance Optimization for Mobile Applications']                                        | ['Survey']                                    | nan                                           |
+| Paper_1  | nan                                                                                                     | nan                                           | ['Systematic Literature Review']              |
+| Paper_2  | nan                                                                                                     | nan                                           | ['Systematic Literature Review']              |
+| Paper_3  | nan                                                                                                     | nan                                           | ['Systematic Mapping Study']                  |
+| Paper_4  | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_5  | nan                                                                                                     | nan                                           | ['Systematic Survey']                         |
+| Paper_6  | nan                                                                                                     | nan                                           | ['Systematic Mapping Study']                  |
+| Paper_7  | nan                                                                                                     | nan                                           | ['Taxonomy and Systematic Literature Review'] |
+| Paper_8  | nan                                                                                                     | nan                                           | ['Systematic Mapping Study']                  |
+| Paper_9  | nan                                                                                                     | nan                                           | ['Systematic Mapping Study']                  |
+| Paper_10 | nan                                                                                                     | nan                                           | ['Systematic Literature Review']              |
+| Paper_11 | nan                                                                                                     | nan                                           | ['Systematic Literature Review']              |
+| Paper_12 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_13 | nan                                                                                                     | nan                                           | ['Literature Review and Benchmark']           |
+| Paper_14 | nan                                                                                                     | nan                                           | ['Interviews and Questionnaires']             |
+| Paper_15 | nan                                                                                                     | nan                                           | ['Survey and Taxonomy']                       |
+| Paper_16 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_17 | nan                                                                                                     | nan                                           | ['Systematic Literature Review']              |
+| Paper_18 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_19 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_20 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+| Paper_21 | nan                                                                                                     | nan                                           | ['Literature Review']                         |
+| Paper_22 | nan                                                                                                     | nan                                           | ['Mapping Study']                             |
+| Paper_23 | nan                                                                                                     | nan                                           | ['Survey']                                    |
+
+MATCHES:
+Dimension 1 - Focus: 
+Dimension 2 - Methodology: 
+Research_Methodology: 

@@ -1,0 +1,55 @@
+ID: 2ad79925-6779-4856-8854-f09c72134c69
+
+GOLD TABLE:
+|           | Reinforcement Learning Technique                     | Application                                            |
+|----------:|:-----------------------------------------------------|:-------------------------------------------------------|
+|   3116531 | ['Model-based, PEGASUS']                             | ['Helicopter control']                                 |
+|   7142905 | ['Model-based, PEGASUS']                             | ['Helicopter hovering and maneuvers']                  |
+|  15279814 | ['Differential Dynamic Programming']                 | ['Helicopter aerobatic maneuvers']                     |
+|   2387578 | ['Model-based; LWLR,Policy Iteration']               | ['Quadrotor altitude control']                         |
+|  16266708 | ['Fitted Value Iteration']                           | ['Quadrotor velocity control']                         |
+|  10259326 | ['Finite Action-set Learning Automata']              | ['Quadrotor trajectory tracking and attitude control'] |
+|   5539001 | ['MPC Guided Policy Search']                         | ['Quadrotor obstacle avoidance']                       |
+|  24546802 | ['Neural network policy']                            | ['Waypoint tracking and recovery tests']               |
+|  58004760 | ['Deep model-based']                                 | ['Hovering']                                           |
+|   4790080 | ['DDPG, TRPO, PPO']                                  | ['Attitude control']                                   |
+| 156055134 | ['PPO']                                              | ['Attitude control']                                   |
+| 128176516 | ['DPG']                                              | ['UAV control']                                        |
+|  17109433 | ['Model-based,TEXPLORE']                             | ['UAV navigation']                                     |
+|   2277178 | ['Q-Learning']                                       | ['UAV navigation']                                     |
+|  52300915 | ['Q-Learning with function approximation']           | ['UAV navigation']                                     |
+|  59285205 | ['Fast-RDPG']                                        | ['UAV navigation']                                     |
+|  53212475 | ['Deep recurrent Q network with temporal attention'] | ['Obstacle avoidance']                                 |
+|  52162679 | ['DQN']                                              | ['Autonomous landing']                                 |
+
+GOLD SCHEMA:
+0: Reinforcement Learning Technique
+1: Application
+
+PREDICTION PATH:../../metric_validation_0/2ad79925-6779-4856-8854-f09c72134c69/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Reinforcement Learning Application                                                                            | UAV Application                                                    |
+|:---------|:--------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|
+| paper_1  | ['Partially observed Markovian decision problems, policy search methods']                                     | ['Flying an autonomous helicopter']                                |
+| paper_2  | ['Autonomous helicopter flight, application of reinforcement learning']                                       | ['Autonomous helicopter flight']                                   |
+| paper_3  | ['An Application of Reinforcement Learning to Aerobatic Helicopter Flight']                                   | ['Aerobatic maneuvers for real RC helicopter']                     |
+| paper_4  | ['Multi-agent quadrotor testbed control design: integral sliding mode vs. reinforcement learning']            | ['Multi-vehicle testbed control, quadrotors, altitude control']    |
+| paper_5  | ['Controller design for quadrotor UAVs using reinforcement learning']                                         | ['Controller design for quadrotor UAVs']                           |
+| paper_6  | ['Attitude and path tracking controllers for quad-rotor robots using reinforcement learning']                 | ['Attitude and path tracking control for quad-rotor robots']       |
+| paper_7  | ['Learning Deep Control Policies for Autonomous Aerial Vehicles with MPC-Guided Policy Search']               | ['Autonomous Aerial Vehicles, quadcopters, obstacle avoidance']    |
+| paper_8  | ['Control of a Quadrotor with Reinforcement Learning']                                                        | ['Quadrotor control using reinforcement learning']                 |
+| paper_9  | ['Low-Level Control of a Quadrotor With Deep Model-Based Reinforcement Learning']                             | ['Low-Level Control of a Quadrotor']                               |
+| paper_10 | ['Reinforcement Learning for UAV Attitude Control']                                                           | ['UAV attitude control using reinforcement learning']              |
+| paper_11 | ['Deep Reinforcement Learning Attitude Control of Fixed-Wing UAVs Using Proximal Policy optimization']        | ['Deep Reinforcement Learning Attitude Control for UAVs']          |
+| paper_12 | ['Deterministic Policy Gradient With Integral Compensator for Robust Quadrotor Control']                      | ['Robust control strategy for quadrotors']                         |
+| paper_13 | ['Autonomous navigation of UAV by using real-time model-based reinforcement learning']                        | ['UAV navigation by real-time model-based reinforcement learning'] |
+| paper_14 | ['Autonomous UAV Navigation Using Reinforcement Learning']                                                    | ['UAV navigation using reinforcement learning']                    |
+| paper_15 | ['Reinforcement Learning for Autonomous UAV Navigation Using Function Approximation']                         | ['Autonomous UAV Navigation Using Function Approximation']         |
+| paper_16 | ['Autonomous Navigation of UAVs in Large-Scale Complex Environments: A Deep Reinforcement Learning Approach'] | ['Autonomous UAV Navigation in Large-Scale Complex Environments']  |
+| paper_17 | ['Memory-Based Deep Reinforcement Learning for Obstacle Avoidance in UAV With Limited Environment Knowledge'] | ['Obstacle Avoidance in UAV With Limited Environment Knowledge']   |
+| paper_18 | ['Toward End-to-End Control for UAV Autonomous Landing via Deep Reinforcement Learning']                      | ['End-to-End Control for UAV Autonomous Landing']                  |
+
+MATCHES:
+Reinforcement Learning Application: 
+UAV Application: 

@@ -1,0 +1,43 @@
+ID: 92039bd0-9ed0-44b5-b2bc-a298c985d3e1
+
+GOLD TABLE:
+|           | Arch     | Domain        | Embedding Network           | Extractor Network        | Remarks                                          |
+|----------:|:---------|:--------------|:----------------------------|:-------------------------|:-------------------------------------------------|
+| 210473431 | ['CNN']  | ['Spatial']   | ['Channel Coding & CNN']    | ['Channel coding & CNN'] | ['Channel Coding & CNN for attacks']             |
+|  52988697 | ['CNN']  | ['Frequency'] | ['CC layer & DCT layer']    | ['DCT layer']            | ['Diffusion mechanism']                          |
+| 224981296 | ['CNN']  | ['Spatial']   | ['CNN & AP']                | ['CNN']                  | ['Robustness against geometric attacks']         |
+| 236966013 | ['GAN']  | ['Frequency'] | ['IG attention mask & CNN'] | ['CNN']                  | ['IG mask improves capacity and robustness']     |
+| 203641981 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Min-max formulation for robust optimisation']  |
+| 204836916 | ['GAN']  | ['Spatial']   | ['AL']                      | ['FC layer']             | ['Two stage training']                           |
+| 210845641 | ['GAN']  | ['Spatial']   | ['CNN']                     | ['CNN + FC layers']      | ['Robust against rotation and JPEG compression'] |
+|  59413797 | ['WGAN'] | ['Spatial']   | ['CB & ASP']                | ['CNN']                  | ['High payload capacity']                        |
+| 218869832 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Spatial spread embedding technique']           |
+| 219531492 | ['WGAN'] | ['Spatial']   | ['CNN']                     | ['CNN + AP']             | ['Double discriminator-detector']                |
+
+GOLD SCHEMA:
+0: Arch
+1: Domain
+2: Embedding Network
+3: Extractor Network
+4: Remarks
+
+PREDICTION PATH:../../metric_validation_0/92039bd0-9ed0-44b5-b2bc-a298c985d3e1/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Customizability for robustness vs. imperceptibility                                                         | Training with simulated attacks as a differentiable network layer                                | Improvement in watermarking robustness                                                                                       |
+|:---------|:------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | N/A                                                                                                         | N/A                                                                                              | Improvement of robustness through adversarial training and channel coding                                                    |
+| paper_2  | The framework is customizable for the level of robustness vs. imperceptibility                              | The proposed framework simulates various attacks as a differentiable network layer               | Improved robustness through diffusion of watermark information and simulated attacks as a differentiable network layer       |
+| paper_3  | Controllability of the trade-off relationship between watermark invisibility and robustness against attacks | N/A                                                                                              | Robustness against various pixel-value change attacks and geometric attacks                                                  |
+| paper_4  | N/A                                                                                                         | N/A                                                                                              | Improvement of robustness through Inverse Gradient Attention mechanism                                                       |
+| paper_5  | N/A                                                                                                         | Robustness improved using robust optimization in training                                        | Robustness improved using robust optimization in training                                                                    |
+| paper_6  | Improvement of robustness through two-stage separable deep learning                                         | ADOT is used to obtain a decoder that is robust and practical enough to accept any type of noise | Improvement of robustness through a two-stage separable deep learning framework                                              |
+| paper_7  | N/A                                                                                                         | Attack simulator consists of a rotation layer and an additive noise layer                        | Generating high-quality stego-images and extracting watermarks that are robust against rotation and JPEG compression attacks |
+| paper_8  | N/A                                                                                                         | N/A                                                                                              | Achieving state-of-the-art payloads and evading detection by steganalysis tools                                              |
+| paper_9  | Increasing robustness by reducing the local bits per pixel capacity                                         | ADVERSARIAL TRAINING used to obtain the model                                                    | Highly robust spatial-spread deep neural image watermarking                                                                  |
+| paper_10 | Robustness against various types of attacks and compression, specifically JPEG                              | N/A                                                                                              | Robustness against various types of attacks and compression, especially JPEG                                                 |
+
+MATCHES:
+Customizability for robustness vs. imperceptibility: 
+Training with simulated attacks as a differentiable network layer: 
+Improvement in watermarking robustness: 

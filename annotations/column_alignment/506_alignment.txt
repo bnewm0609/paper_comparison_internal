@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Field of Study                             | Methodology                                                                    | Objective                                                          | Datasets Used                                                                                       |
+|:--------|:-------------------------------------------|:-------------------------------------------------------------------------------|:-------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Computer Vision, Biometrics']            | ['Conditional Generative Adversarial Network (cGAN), Iris image augmentation'] | ['Improve iris recognition performance with limited labeled data'] | ['NICE.II training dataset (selected from UBIRS.v2), MICHE database, CASIA-Iris-Distance database'] |
+| Paper 2 | ['Computer Vision, Transportation Safety'] | ['Pupil and iris segmentation, Eye openness estimation']                       | ['Detect driver fatigue by analyzing eye states']                  | ['National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset']                  |
+
+MATCHES:
+Field of Study: 
+Methodology: 
+Objective: 
+Datasets Used: 

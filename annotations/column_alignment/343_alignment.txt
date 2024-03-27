@@ -1,0 +1,63 @@
+ID: 6b3cca46-4ef7-471a-9232-2bc0fcd7013e
+
+GOLD TABLE:
+|           | Dataset                                                                                      | Neural Network Architecture                                  | Year     |
+|----------:|:---------------------------------------------------------------------------------------------|:-------------------------------------------------------------|:---------|
+|   3508314 | ['UCI - Individual household electric power consumption']                                    | ['LSTM + Repeat vector + LSTM + 2x FCL']                     | ['2016'] |
+|  57362815 | ['Australia SGDS Smart Grid Dataset']                                                        | ['Stacked LSTM + FCL']                                       | ['2017'] |
+|  43337949 | ['Fremont, CA 15min Retail building electricity load']                                       | ['Missing or incomplete architecture description']           | ['2017'] |
+|  52119305 | ['Irish CBTs - Residential and SMEs']                                                        | ['Stacked LSTM + Pooling mechanism']                         | ['2018'] |
+| 115973916 | ['UK-DALE Domestic Appliance-Level Electricity dataset']                                     | ['2x Conv + 1x LSTM + FCL']                                  | ['2018'] |
+| 115293345 | ['UCI - Individual household electric power consumption']                                    | ['Missing or incomplete architecture description']           | ['2019'] |
+| 204901622 | ['UCI - Individual household electric power consumption']                                    | ['2x Conv + Bi + LSTM + 2x FCL']                             | ['2019'] |
+| 212621952 | ['UCI - Individual household electric power consumption']                                    | ['2x Conv + 2x LSTM (Encoder) + 2x LSTM (Decoder) + 2x FCL'] | ['2020'] |
+| 220660721 | ['Pecan Street Research Institute']                                                          | ['2x LSTM (same size) + FCL']                                | ['2020'] |
+| 212647795 | ['Non-disclosed or private data']                                                            | ['Sequence to Sequence with attention']                      | ['2020'] |
+| 227278939 | ['Global Energy Forecasting Competition 2012']                                               | ['Missing or incomplete architecture description']           | ['2020'] |
+| 249436260 | ['Pecan Street Research Institute']                                                          | ['Missing or incomplete architecture description']           | ['2021'] |
+| 235212462 | ['Low Carbon London Dataset']                                                                | ['2x LSTM (same size) + FCL']                                | ['2021'] |
+| 245146761 | ['Australia SGDS Smart Grid Dataset']                                                        | ['2x LSTM (same size) + FCL']                                | ['2021'] |
+| 235738701 | ['Low Carbon London Dataset']                                                                | ['LSTM (64) + LSTM (32) + FCL']                              | ['2021'] |
+| 246028450 | ['Pecan Street Research Institute']                                                          | ['2x LSTM (same size) + FCL']                                | ['2021'] |
+| 237490419 | ['Commission for Energy Regulation (CER)']                                                   | ['Missing or incomplete architecture description']           | ['2021'] |
+| 246477605 | ['CU-BEMS, smart building electricity consumption and indoor environmental sensor datasets'] | ['Missing or incomplete architecture description']           | ['2021'] |
+| 248774855 | ['Low Carbon London Dataset']                                                                | ['Missing or incomplete architecture description']           | ['2022'] |
+| 243953827 | ['Commission for Energy Regulation (CER)']                                                   | ['Missing or incomplete architecture description']           | ['2022'] |
+| 247187907 | ['Solar Home Electricity Data from Eastern Australia']                                       | ['LSTM (256) + LSTM (128) + FCL']                            | ['2022'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Neural Network Architecture
+2: Year
+
+PREDICTION PATH:../../metric_validation_0/6b3cca46-4ef7-471a-9232-2bc0fcd7013e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Variants of LSTM used (vanilla, stacked, etc.)   | Attention mechanisms used   | Comparison with other RNN architectures                                                      |
+|:---------|:-------------------------------------------------|:----------------------------|:---------------------------------------------------------------------------------------------|
+| paper_1  | ['vanilla']                                      | ['N/A']                     | ['N/A']                                                                                      |
+| paper_2  | ['vanilla']                                      | ['N/A']                     | ['N/A']                                                                                      |
+| paper_3  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_4  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_5  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_6  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_7  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_8  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_9  | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_10 | ['vanilla']                                      | ['Bahdanau']                | ['Sequence to Sequence RNN with Bahdanau attention outperforms vanilla, LSTM, and GRU RNNs'] |
+| paper_11 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_12 | ['vanilla']                                      | ['N/A']                     | ['N/A']                                                                                      |
+| paper_13 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_14 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_15 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_16 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_17 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_18 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_19 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_20 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+| paper_21 | ['N/A']                                          | ['N/A']                     | ['N/A']                                                                                      |
+
+MATCHES:
+Variants of LSTM used (vanilla, stacked, etc.): 
+Attention mechanisms used: 
+Comparison with other RNN architectures: 

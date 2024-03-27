@@ -1,0 +1,27 @@
+ID: 11798252-0e7b-4eb5-9ab0-881ae06ffa40
+
+GOLD TABLE:
+|           | Name            | Size        | Dim      |
+|----------:|:----------------|:------------|:---------|
+|  15023467 | ['ForestCover'] | ['286,048'] | ['10']   |
+|   6505449 | ['Creditfraud'] | ['284,807'] | ['29']   |
+| 220891274 | ['stream51']    | ['150,736'] | ['2048'] |
+
+GOLD SCHEMA:
+0: Name
+1: Size
+2: Dim
+
+PREDICTION PATH:../../metric_validation_0/11798252-0e7b-4eb5-9ab0-881ae06ffa40/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Use of real-world unbalanced datasets in the evaluation   | Evaluation on datasets with a large number of irrelevant attributes   | Introduction of a new dataset for streaming classification and novelty recognition   |
+|:--------|:----------------------------------------------------------|:----------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+| paper_1 | ['Yes']                                                   | ['No']                                                                | ['No']                                                                               |
+| paper_2 | ['No']                                                    | ['Yes']                                                               | ['No']                                                                               |
+| paper_3 | ['No']                                                    | ['No']                                                                | ['Yes']                                                                              |
+
+MATCHES:
+Use of real-world unbalanced datasets in the evaluation: 
+Evaluation on datasets with a large number of irrelevant attributes: 
+Introduction of a new dataset for streaming classification and novelty recognition: 

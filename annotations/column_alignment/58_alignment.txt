@@ -1,0 +1,33 @@
+ID: e017f23d-a90f-4443-a5ec-946869cb0a49
+
+GOLD TABLE:
+|           | Year     | Image Type             | Intra/Inter Mode Collapse   | Application Type    | Proposed Solution                            |
+|----------:|:---------|:-----------------------|:----------------------------|:--------------------|:---------------------------------------------|
+| 252846395 | ['2023'] | ['X-ray Images']       | ['Intra']                   | ['Image Synthesis'] | ['Self-attention and multi-scale gradients'] |
+| 204904838 | ['2021'] | ['Dermoscopic Images'] | ['Intra']                   | ['Image Synthesis'] | ['Self Attention']                           |
+| 244714924 | ['2021'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['SSIM loss']                                |
+| 232061669 | ['2020'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['VAEGAN']                                   |
+
+GOLD SCHEMA:
+0: Year
+1: Image Type
+2: Intra/Inter Mode Collapse
+3: Application Type
+4: Proposed Solution
+
+PREDICTION PATH:../../metric_validation_0/e017f23d-a90f-4443-a5ec-946869cb0a49/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of GAN-based data augmentation used                            | Medical image type (e.g., X-ray, skin lesion, MR)   | Application of data augmentation (e.g., classification, path planning)   | Comparison with traditional data augmentation methods      | Performance of data augmentation in terms of classification/path planning accuracy                  |
+|:--------|:--------------------------------------------------------------------|:----------------------------------------------------|:-------------------------------------------------------------------------|:-----------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| paper_1 | ['MSG-SAGAN']                                                       | ['X-ray']                                           | ['Diversified X-ray image synthesis']                                    | ['Yes, compared with MSG-GAN']                             | ['Outperforms MSG-GAN in synthesizing diversified images']                                          |
+| paper_2 | ['Self-Attention based Progressive Generative Adversarial Network'] | ['Skin lesion']                                     | ['Skin cancer classification']                                           | ['Yes, compared with manually designed data augmentation'] | ['Achieves an accuracy of 70.1%']                                                                   |
+| paper_3 | ['PGGAN-SSIM']                                                      | ['MR']                                              | ['Brain tumor MR image synthesis']                                       | ['Yes, compared with traditional data augmentation']       | ['Exceeds other GAN-based methods, achieving promising performance improvement in FID and MS-SSIM'] |
+| paper_4 | ['Deep Convolutional Refined Auto-Encoding Alpha GAN']              | ['3D brain MRI']                                    | ['Path planning']                                                        | ['N/A']                                                    | ['N/A']                                                                                             |
+
+MATCHES:
+Type of GAN-based data augmentation used: 
+Medical image type (e.g., X-ray, skin lesion, MR): 
+Application of data augmentation (e.g., classification, path planning): 
+Comparison with traditional data augmentation methods: 
+Performance of data augmentation in terms of classification/path planning accuracy: 

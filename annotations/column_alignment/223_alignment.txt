@@ -1,0 +1,37 @@
+ID: e1512e4e-5a65-42a7-8e88-41dbfebbeba8
+
+GOLD TABLE:
+|          | Algorithms                   | Applications                                                                                        |
+|---------:|:-----------------------------|:----------------------------------------------------------------------------------------------------|
+| 10588433 | ['RBF-NN']                   | ['Predict the path loss']                                                                           |
+| 19607115 | ['RVM']                      | ['Estimate DoA of MPCs']                                                                            |
+| 37130060 | ['RVM']                      | ['Filter the noise embedded MPCs to determine the PDP']                                             |
+| 44232249 | ['FNN and RBF-NN']           | ['Predict the intermediate points in ray launching simulation to obtain the indoor received power'] |
+|  9013158 | ['ANN']                      | ['Produce the CIR with a limited number of cluster-nuclei']                                         |
+| 41841631 | ['MLP']                      | ['Predict the outdoor received signal strength']                                                    |
+|  3427187 | ['LASSO']                    | ['Estimate the CIR based on channel measurement data']                                              |
+| 88514780 | ['SVM']                      | ['Predict the path loss']                                                                           |
+| 44025148 | ['K-means, FCM, and DBSCAN'] | ['Clustering and tracking MPCs']                                                                    |
+
+GOLD SCHEMA:
+0: Algorithms
+1: Applications
+
+PREDICTION PATH:../../metric_validation_0/e1512e4e-5a65-42a7-8e88-41dbfebbeba8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Neural Network used                    | Techniques used for improving neural network performance                              |
+|:--------|:-----------------------------------------------|:--------------------------------------------------------------------------------------|
+| paper_1 | ['Radial Basis Function (RBF) neural network'] | ['Adaptive learning using hybrid competitive and recursive least squares algorithms'] |
+| paper_2 | ['N/A']                                        | ['Sparse Bayesian learning (SBL) and refined 1-D searching procedure']                |
+| paper_3 | ['Relevance Vector Machine (RVM)']             | ['Comparison with CFAR multipath identification scheme']                              |
+| paper_4 | ['N/A']                                        | ['Neural network-aided 3-D ray launching algorithm']                                  |
+| paper_5 | ['N/A']                                        | ['N/A']                                                                               |
+| paper_6 | ['Artificial Neural Network (ANN)']            | ['Hybrid application with ITU-R model']                                               |
+| paper_7 | ['N/A']                                        | ['Subspace projection and LASSO optimization']                                        |
+| paper_8 | ['Support Vector Machine (SVM)']               | ['Support vector machine techniques for classification and regression']               |
+| paper_9 | ['N/A']                                        | ['N/A']                                                                               |
+
+MATCHES:
+Type of Neural Network used: 
+Techniques used for improving neural network performance: 

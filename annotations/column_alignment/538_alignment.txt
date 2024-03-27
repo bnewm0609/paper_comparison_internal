@@ -1,0 +1,33 @@
+ID: 3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6
+
+GOLD TABLE:
+|           | Category             | Method                            |
+|----------:|:---------------------|:----------------------------------|
+| 204104363 | ['By Main Variance'] | ['PLS']                           |
+| 100331255 | ['-']                | ['iPLS & mIPW-PLS']               |
+| 126254919 | ['-']                | ['Spectra segment']               |
+| 181779897 | ['-']                | ["By main elements' intensities"] |
+| 227253762 | ['Deep']             | ['CNN']                           |
+| 195218599 | ['By Evaluation']    | ['BestKSelct']                    |
+|  46882558 | ['Others']           | ['GA']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sample type and properties   | Soil matrix effects and analysis techniques                                      |
+|:--------|:-----------------------------|:---------------------------------------------------------------------------------|
+| paper_1 | ['farmland soils in China']  | ['LIBS technique combined with partial least squares regression (PLSR)']         |
+| paper_2 | ['soil samples']             | ['LIBS']                                                                         |
+| paper_3 | ['agricultural soils']       | ['support vector machine method', 'laser-induced breakdown spectroscopy (LIBS)'] |
+| paper_4 | ['soils']                    | ['laser induced breakdown spectroscopy (LIBS)']                                  |
+| paper_5 | ['N/A']                      | ['laser induced breakdown spectroscopy (LIBS)']                                  |
+| paper_6 | ['soil']                     | ['laser-induced breakdown spectroscopy (LIBS)']                                  |
+| paper_7 | ['steel samples']            | ['laser-induced breakdown spectroscopy (LIBS)']                                  |
+
+MATCHES:
+Sample type and properties: 
+Soil matrix effects and analysis techniques: 

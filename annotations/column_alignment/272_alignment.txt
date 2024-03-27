@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Objective functions considered                                                | Comparison of Pareto-optimal solutions                                                     | Use of real-world data                                                                                 |
+|:---------|:------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Economic load dispatch using PSO algorithms']                               | ['N/A']                                                                                    | ['N/A']                                                                                                |
+| paper_2  | ['Energy costs minimization and pollutant emissions reduction']               | ['Compares proposed FSAPSO algorithm with conventional PSO and genetic algorithm (GA)']    | ['N/A']                                                                                                |
+| paper_3  | ['Economic deployment of distributed energy resources (DERs)']                | ['Compares optimization using differential evolution (DE) with PSO']                       | ['N/A']                                                                                                |
+| paper_4  | ['Economic operation of Small Scale Energy Zones (SSEZs)']                    | ['Compares results using Imperialist Competitive Algorithm (ICA) and PSO']                 | ['N/A']                                                                                                |
+| paper_5  | ['Economic operation of multi-microgrids (MMGs)']                             | ['N/A']                                                                                    | ['N/A']                                                                                                |
+| paper_6  | ['Integration of wind power uncertainty and carbon tax in economic dispatch'] | ['N/A']                                                                                    | ['Uses real wind speed data obtained from meteorological stations in Australia']                       |
+| paper_7  | ['Minimization of the operation costs of a virtual power player']             | ['N/A']                                                                                    | ['Considers a real 937 bus distribution network, with 20310 consumers and 548 distributed generators'] |
+| paper_8  | ['Power loss minimization in distribution systems']                           | ['N/A']                                                                                    | ['N/A']                                                                                                |
+| paper_9  | ['Risk management for wind-integrated power system']                          | ['Pareto-optimal solutions obtained using multiple objective particle swarm optimization'] | ['Uses real power system data from the IEEE 30-bus power system']                                      |
+| paper_10 | ['Total economic cost and network loss minimization for microgrid operation'] | ['N/A']                                                                                    | ['N/A']                                                                                                |
+
+MATCHES:
+Objective functions considered: 
+Comparison of Pareto-optimal solutions: 
+Use of real-world data: 

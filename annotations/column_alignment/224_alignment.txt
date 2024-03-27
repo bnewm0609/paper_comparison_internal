@@ -1,0 +1,37 @@
+ID: e1512e4e-5a65-42a7-8e88-41dbfebbeba8
+
+GOLD TABLE:
+|          | Algorithms                   | Applications                                                                                        |
+|---------:|:-----------------------------|:----------------------------------------------------------------------------------------------------|
+| 10588433 | ['RBF-NN']                   | ['Predict the path loss']                                                                           |
+| 19607115 | ['RVM']                      | ['Estimate DoA of MPCs']                                                                            |
+| 37130060 | ['RVM']                      | ['Filter the noise embedded MPCs to determine the PDP']                                             |
+| 44232249 | ['FNN and RBF-NN']           | ['Predict the intermediate points in ray launching simulation to obtain the indoor received power'] |
+|  9013158 | ['ANN']                      | ['Produce the CIR with a limited number of cluster-nuclei']                                         |
+| 41841631 | ['MLP']                      | ['Predict the outdoor received signal strength']                                                    |
+|  3427187 | ['LASSO']                    | ['Estimate the CIR based on channel measurement data']                                              |
+| 88514780 | ['SVM']                      | ['Predict the path loss']                                                                           |
+| 44025148 | ['K-means, FCM, and DBSCAN'] | ['Clustering and tracking MPCs']                                                                    |
+
+GOLD SCHEMA:
+0: Algorithms
+1: Applications
+
+PREDICTION PATH:../../metric_validation_0/e1512e4e-5a65-42a7-8e88-41dbfebbeba8/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Channel Model used                       | Methodology used for Channel Modeling and Prediction                                                   |
+|:--------|:-------------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Radial Basis Function Neural Network']         | ['Radial Basis Function Neural Network with Hybrid Competitive and Recursive Least Squares Algorithm'] |
+| paper_2 | ['N/A']                                          | ['Efficient Maximum Likelihood Estimation based on Sparse Bayesian Learning']                          |
+| paper_3 | ['Relevance Vector Machine']                     | ['Relevance Vector Machine']                                                                           |
+| paper_4 | ['Ray Launching-Neural Network Approach']        | ['Ray Launching-Neural Network Approach']                                                              |
+| paper_5 | ['Cluster-Nuclei Based Channel Model']           | ['Cluster-Nuclei Based Channel Model']                                                                 |
+| paper_6 | ['ITU-R/ANN']                                    | ['ITU-R/ANN']                                                                                          |
+| paper_7 | ['Tapped Delay Line with c-LASSO']               | ['Tapped Delay Line with c-LASSO']                                                                     |
+| paper_8 | ['Support Vector Machines']                      | ['Support Vector Machines']                                                                            |
+| paper_9 | ['Clustering-Enabled Wireless Channel Modeling'] | ['Clustering-Enabled Wireless Channel Modeling with Big Data Algorithms']                              |
+
+MATCHES:
+Type of Channel Model used: 
+Methodology used for Channel Modeling and Prediction: 

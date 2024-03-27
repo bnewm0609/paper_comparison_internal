@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset composition                                                   | Dataset size                                                         | Data collection methods                                                 |
+|:--------|:----------------------------------------------------------------------|:---------------------------------------------------------------------|:------------------------------------------------------------------------|
+| Paper 1 | ['Multimodal language data (text, visual, acoustic)']                 | ['linear scale (the largest dataset)']                               | ['From CMU Multimodal Opinion Sentiment and Emotion Intensity dataset'] |
+| Paper 2 | ['Molecular dynamics simulation trajectories']                        | ['1000 conformational geometries']                                   | ['Ab initio molecular dynamics (AIMD) trajectories']                    |
+| Paper 3 | ['Molecular and material data']                                       | ['Various']                                                          | ['Not explicitly mentioned in the abstract']                            |
+| Paper 4 | ['Quantum mechanical simulations of electrocatalysts']                | ['N/A (not explicitly mentioned)']                                   | ['Quantum mechanical simulations (density functional theory)']          |
+| Paper 5 | ['Biomolecular 3D structure data']                                    | ['Various (different benchmark datasets, not explicitly mentioned)'] | ['Not explicitly mentioned in the abstract']                            |
+| Paper 6 | ['Molecular dynamics simulation trajectories and protein structures'] | ['N/A (not explicitly mentioned)']                                   | ['Molecular dynamics simulations']                                      |
+| Paper 7 | ['3D CAD model data']                                                 | ['120,000 unique 3D CAD models']                                     | ['From raw CAD data']                                                   |
+| Paper 8 | ['Real-world point cloud object data from scanned indoor scenes']     | ['7,091 real-world point cloud object instances']                    | ['Scan indoor scene data']                                              |
+
+MATCHES:
+Dataset composition: 
+Dataset size: 
+Data collection methods: 

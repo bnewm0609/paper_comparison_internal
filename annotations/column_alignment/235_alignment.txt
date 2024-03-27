@@ -1,0 +1,34 @@
+ID: a79431cf-5fbc-45af-949c-0c3f5549e6ed
+
+GOLD TABLE:
+|           | Task                            | Samples     | Classes   |
+|----------:|:--------------------------------|:------------|:----------|
+|  15676318 | ['Speech, Music, and Noise']    | ['2,016']   | ['3']     |
+|  17567398 | ['Human Sounds']                | ['400']     | ['10']    |
+|   4719239 | ['Commands Recognition']        | ['100,503'] | ['12']    |
+|  14369452 | ['Emotion Detection']           | ['7,438']   | ['6']     |
+| 244899987 | ['Keyword Spotting']            | ['28,039']  | ['20']    |
+| 248571603 | ['Health Condition Monitoring'] | ['21,024']  | ['6']     |
+
+GOLD SCHEMA:
+0: Task
+1: Samples
+2: Classes
+
+PREDICTION PATH:../../metric_validation_0/a79431cf-5fbc-45af-949c-0c3f5549e6ed/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                                           | Type of sound included (speech, music, noise, environmental, emotion, vocalizations)               | Methods of dataset creation and verification                                                                         |
+|:--------|:--------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Music: N/A', 'Speech: N/A', 'Noise: N/A']                   | ['Music: Several genres', 'Speech: Twelve languages', 'Noise: Technical and non-technical noises'] | ['Collected data: N/A', 'Verification: N/A']                                                                         |
+| paper_2 | ['2000 short clips', '250000 unlabeled auditory excerpts']    | ['Environmental sound, various common sound events']                                               | ['Data collection: Freesound project', 'Verification: Human accuracy evaluation and baseline classifier comparison'] |
+| paper_3 | ['N/A']                                                       | ['Limited-vocabulary speech recognition dataset']                                                  | ['Dataset creation: N/A', 'Verification: N/A']                                                                       |
+| paper_4 | ['N/A']                                                       | ['Categorical emotion labels, vocal emotional expressions']                                        | ['Creation: Audio-visual emotional expressions', 'Verification: Crowd-sourced emotion rating']                       |
+| paper_5 | ['340,000 keywords', '23.4 million 1-second spoken examples'] | ['Spoken words in 50 languages']                                                                   | ['Data generation: Forced alignment on crowd-sourced audio', 'Verification: Outlier detection and accuracy metrics'] |
+| paper_6 | ['340,000 keywords', '23.4 million 1-second spoken examples'] | ['Spoken words in 50 languages']                                                                   | ['Data generation: Forced alignment on crowd-sourced audio', 'Verification: Outlier detection and accuracy metrics'] |
+| paper_7 | ['21,000 recordings']                                         | ['Laughter, sighs, coughs, throat clearing, sneezes, sniffs']                                      | ['Data creation: Crowdsourced recordings', 'Verification: Improvement in model performance']                         |
+
+MATCHES:
+Size of the dataset: 
+Type of sound included (speech, music, noise, environmental, emotion, vocalizations): 
+Methods of dataset creation and verification: 

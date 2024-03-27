@@ -1,0 +1,37 @@
+ID: fef1be89-2ea0-47e8-8784-8c68d290224e
+
+GOLD TABLE:
+|           | Dataset       | Method          |
+|----------:|:--------------|:----------------|
+| 247793124 | ['LivoxSimu'] | ['ALSO (ours)'] |
+| 245952568 | ['-']         | ['ALSO (ours)'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/fef1be89-2ea0-47e8-8784-8c68d290224e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Utilization of Synchronized Image and Lidar Sensors                                                     | 3D Semantic Segmentation and Object Detection Performance                           |
+|:---------|:--------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| paper_1  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_2  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_3  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_4  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_5  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_6  | ['Discuss the use of synchronized and calibrated image and Lidar sensors in autonomous driving setups'] | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_7  | ['N/A']                                                                                                 | ['N/A']                                                                             |
+| paper_8  | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_9  | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_10 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_11 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_12 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_13 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_14 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_15 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+| paper_16 | ['N/A']                                                                                                 | ['Presents findings related to 3D semantic segmentation or object detection tasks'] |
+
+MATCHES:
+Utilization of Synchronized Image and Lidar Sensors: 
+3D Semantic Segmentation and Object Detection Performance: 

@@ -1,0 +1,23 @@
+ID: 41ee5929-ef7d-49b0-b25d-b0caf7c167dd
+
+GOLD TABLE:
+|           | Age recording format   | Example   |
+|----------:|:-----------------------|:----------|
+| 221128548 | ['exact age']          | ['64']    |
+| 220483201 | ['not available']      | ['NA']    |
+
+GOLD SCHEMA:
+0: Age recording format
+1: Example
+
+PREDICTION PATH:../../metric_validation_0/41ee5929-ef7d-49b0-b25d-b0caf7c167dd/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Molecular markers associated with disease severity                                                                                                  | Type I interferon (IFN) response                                                                                                                                                              |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['High-dimensional flow cytometry identified three distinct immunotypes associated with disease severity in COVID-19 patients']                     | ['The myeloid cells of patients with severe COVID-19 exhibited a lack of type I interferons']                                                                                                 |
+| paper_2 | ['Patients with severe COVID-19 exhibited hyperinflammatory signatures across all types of cells among peripheral blood mononuclear cells (PBMCs)'] | ['Patients with severe COVID-19 showed a coexistence of type I interferon (IFN) response with the TNF/IL-1β driven inflammation, whereas this was not seen in patients with milder COVID-19'] |
+
+MATCHES:
+Molecular markers associated with disease severity: 
+Type I interferon (IFN) response: 

@@ -1,0 +1,37 @@
+ID: e1512e4e-5a65-42a7-8e88-41dbfebbeba8
+
+GOLD TABLE:
+|          | Algorithms                   | Applications                                                                                        |
+|---------:|:-----------------------------|:----------------------------------------------------------------------------------------------------|
+| 10588433 | ['RBF-NN']                   | ['Predict the path loss']                                                                           |
+| 19607115 | ['RVM']                      | ['Estimate DoA of MPCs']                                                                            |
+| 37130060 | ['RVM']                      | ['Filter the noise embedded MPCs to determine the PDP']                                             |
+| 44232249 | ['FNN and RBF-NN']           | ['Predict the intermediate points in ray launching simulation to obtain the indoor received power'] |
+|  9013158 | ['ANN']                      | ['Produce the CIR with a limited number of cluster-nuclei']                                         |
+| 41841631 | ['MLP']                      | ['Predict the outdoor received signal strength']                                                    |
+|  3427187 | ['LASSO']                    | ['Estimate the CIR based on channel measurement data']                                              |
+| 88514780 | ['SVM']                      | ['Predict the path loss']                                                                           |
+| 44025148 | ['K-means, FCM, and DBSCAN'] | ['Clustering and tracking MPCs']                                                                    |
+
+GOLD SCHEMA:
+0: Algorithms
+1: Applications
+
+PREDICTION PATH:../../metric_validation_0/e1512e4e-5a65-42a7-8e88-41dbfebbeba8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Estimation method                               | Computational complexity                                       |
+|:--------|:------------------------------------------------|:---------------------------------------------------------------|
+| paper_1 | ['RBF neural network']                          | ['N/A']                                                        |
+| paper_2 | ['Sparse Bayesian learning (SBL)']              | ['N/A']                                                        |
+| paper_3 | ['Relevance Vector Machine (RVM)']              | ['N/A']                                                        |
+| paper_4 | ['Ray launching algorithm with neural network'] | ['reducing computational complexity']                          |
+| paper_5 | ['Cluster-nuclei based model']                  | ['low complexity with limited number of cluster-nuclei']       |
+| paper_6 | ['Artificial Neural Network (ANN)']             | ['N/A']                                                        |
+| paper_7 | ['Complex LASSO algorithm']                     | ['N/A']                                                        |
+| paper_8 | ['Support Vector Machines (SVM)']               | ['acceptable computational cost']                              |
+| paper_9 | ['Clustering techniques']                       | ['algorithmic techniques developed for big data applications'] |
+
+MATCHES:
+Estimation method: 
+Computational complexity: 

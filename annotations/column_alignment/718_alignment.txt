@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Size and diversity of datasets                                                                                                                      | Data annotations and types                                                                           |
+|:---------|:----------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
+| paper_1  | ['32,000 annotated bounding boxes, plus a distractor set of over 500K images']                                                                      | ['Annotated bounding boxes']                                                                         |
+| paper_2  | ['3.6 Million accurate 3D Human poses, 5 female and 6 male subjects, 4 different viewpoints']                                                       | ['3D Human poses']                                                                                   |
+| paper_3  | ['Over 800,000 images, richly annotated with massive attributes, clothing landmarks, and correspondence of images taken under different scenarios'] | ['Massive attributes, clothing landmarks, correspondence of images taken under different scenarios'] |
+| paper_4  | ['Clothing dataset with four different views for each clothing item, 264 attributes for describing clothing appearance']                            | ['Four different views, 264 attributes for describing clothing appearance']                          |
+| paper_5  | ['Human parsing dataset with pixel-wise categorization']                                                                                            | ['Pixel-wise categorization']                                                                        |
+| paper_6  | ['Zalando dataset with clothing item and person images']                                                                                            | ['Clothing item and person images']                                                                  |
+| paper_7  | ['Dataset with person images and desired clothes images, desired poses']                                                                            | ['Desired clothes images, desired poses']                                                            |
+| paper_8  | ['Dataset with user images, in-shop clothing images, and target poses']                                                                             | ['User images, in-shop clothing images, target poses']                                               |
+| paper_9  | ['Dataset with clothing item images and two model images in different poses']                                                                       | ['Clothing item images, model images in different poses']                                            |
+| paper_10 | ['Dataset with challenging consumer videos, action label, 2D position of key points and their visibilities for each video frame']                   | ['Key points and their visibilities']                                                                |
+| paper_11 | ['Several challenging datasets for video generation']                                                                                               | ['Content and motion parts']                                                                         |
+| paper_12 | ['Two benchmark datasets: TaiChi and Fashion Modeling']                                                                                             | ['Pose-guided representation']                                                                       |
+| paper_13 | ['Newly built iPER dataset for the evaluation of human motion imitation, appearance transfer, and novel view synthesis']                            | ['3D body mesh recovery, joint location and rotation, personalized body shape']                      |
+| paper_14 | ['Newly collected dataset with person images, desired clothes images, and a series of target poses']                                                | ['Person image, desired clothes image, series of target poses']                                      |
+
+MATCHES:
+Size and diversity of datasets: 
+Data annotations and types: 

@@ -1,0 +1,51 @@
+ID: ea633ba2-44f4-4a74-b096-dd319318ca97
+
+GOLD TABLE:
+|           | Language       | Pretrained from                | Corpora                                                     | Publicly Available   | Evaluation                                                                                     |
+|----------:|:---------------|:-------------------------------|:------------------------------------------------------------|:---------------------|:-----------------------------------------------------------------------------------------------|
+| 211678011 | ['Japanese']   | ['Scratch']                    | ['Japanese Clinical Text + Japanese Wikipedia']             | ['No']               | ['Text Classification']                                                                        |
+| 226283634 | ['Portuguese'] | ['Multilingual BERT']          | ['Brazilian Clinical Text + Biomedical Text']               | ['Yes']              | ['Clinical Concept Extraction']                                                                |
+| 215416118 | ['Russian']    | ['Multilingual BERT']          | ['Russian and English Health Reviews']                      | ['Yes']              | ['ADR Tweets Classification']                                                                  |
+| 225452639 | ['German']     | ['General German BERT']        | ['Private Radiology Reports']                               | ['No']               | ['Radiology Reports Classification']                                                           |
+| 218564040 | ['Spanish']    | ['Scratch']                    | ['Spanish Biomedical Text']                                 | ['No']               | ['Biomedical NER']                                                                             |
+| 232283435 | ['Arabic']     | ['AraBERT']                    | ['General Arabic Text+ Arabic Biomedical Text']             | ['No']               | ['Biomedical NER']                                                                             |
+| 219956480 | ['French']     | ['CamemBERT {{cite:a40b78e}}'] | ['French Biomedical Corpus']                                | ['No']               | ['Biomedical NER']                                                                             |
+| 221293343 | ['Chinese']    | ['General Chinese BERT']       | ['Chinese Biomedical Text, Encyclopedia , Medical records'] | ['Yes']              | ['ChineseBLUE']                                                                                |
+| 220409271 | ['Japanese']   | ['Scratch']                    | ['Japanese Clinical Text']                                  | ['Yes']              | ['Text Classification']                                                                        |
+| 233240721 | ['Persian']    | ['ParsBERT {{cite:d02ce8d}}']  | ['Persian Medical Corpus']                                  | ['No']               | ['Medical Question Classification, Medical Question Retrieval and Medical Sentiment Analysis'] |
+| 235077408 | ['Spanish']    | ['XLM-R {{cite:e715160}}']     | ['Spanish Clinical Text corpus']                            | ['Yes']              | ['Medical Coding']                                                                             |
+
+GOLD SCHEMA:
+0: Language
+1: Pretrained from
+2: Corpora
+3: Publicly Available
+4: Evaluation
+
+PREDICTION PATH:../../metric_validation_0/ea633ba2-44f4-4a74-b096-dd319318ca97/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Transformer architecture and configuration   | BERT pre-training methods                  | Fine-tuning techniques                                                     |
+|:---------|:---------------------------------------------|:-------------------------------------------|:---------------------------------------------------------------------------|
+| paper_1  | ['AraBERT']                                  | ['Arabic corpus']                          | ['Arabic NLP tasks']                                                       |
+| paper_2  | ['N/A']                                      | ['Multilingual-BERT + transfer learning']  | ['Named-entity recognition (NER)']                                         |
+| paper_3  | ['N/A']                                      | ['Multilingual-BERT + transfer learning']  | ['Named-entity recognition (NER)']                                         |
+| paper_4  | ['N/A']                                      | ['Multilingual-BERT + transfer learning']  | ['Named-entity recognition (NER)']                                         |
+| paper_5  | ['RuDR-BERT']                                | ['RuDR-BERT pre-training method']          | ['Named entity recognition (NER) and multi-label sentence classification'] |
+| paper_6  | ['RuDR-BERT']                                | ['RuDR-BERT pre-training method']          | ['Named entity recognition (NER) and multi-label sentence classification'] |
+| paper_7  | ['BERT']                                     | ['N/A']                                    | ['Text classification']                                                    |
+| paper_8  | ['BERT']                                     | ['N/A']                                    | ['N/A']                                                                    |
+| paper_9  | ['BERT']                                     | ['Trained from scratch']                   | ['Named entity recognition']                                               |
+| paper_10 | ['ABioNER']                                  | ['Small-scale biomedical dataset']         | ['Named entity recognition']                                               |
+| paper_11 | ['Contextualized language models']           | ['N/A']                                    | ['Named entity recognition in French biomedical text']                     |
+| paper_12 | ['BERT']                                     | ['BERT pre-training method']               | ['Chinese biomedical text mining']                                         |
+| paper_13 | ['BERT-base']                                | ['BERT-base pre-training method']          | ['NTCIR-13 MedWeb task with eight labels']                                 |
+| paper_14 | ['SINA-BERT']                                | ['Large-scale corpus of medical contents'] | ['Medical question retrieval']                                             |
+| paper_15 | ['mBERT', 'BETO', 'XLM-R']                   | ['Real-world oncology clinical cases']     | ['Automatic clinical coding in Spanish']                                   |
+| paper_16 | ['mBERT', 'BETO', 'XLM-R']                   | ['Real-world oncology clinical cases']     | ['Automatic clinical coding in Spanish']                                   |
+| paper_17 | ['mBERT', 'BETO', 'XLM-R']                   | ['Real-world oncology clinical cases']     | ['Automatic clinical coding in Spanish']                                   |
+
+MATCHES:
+Transformer architecture and configuration: 
+BERT pre-training methods: 
+Fine-tuning techniques: 

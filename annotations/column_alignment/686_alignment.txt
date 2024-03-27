@@ -1,0 +1,25 @@
+ID: 915f13ea-b8d0-473b-8fc0-af2af7e3deb1
+
+GOLD TABLE:
+|           | agent        | hyperparameters                                    |
+|----------:|:-------------|:---------------------------------------------------|
+|    160705 | ['dropout']  | ['learning rate, network, dropout rate']           |
+|   6294674 | ['ensemble'] | ['learning rate, network, ensemble size']          |
+| 236087380 | ['epinet']   | ['learning rate, network, prior, index dimension'] |
+
+GOLD SCHEMA:
+0: agent
+1: hyperparameters
+
+PREDICTION PATH:../../metric_validation_0/915f13ea-b8d0-473b-8fc0-af2af7e3deb1/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Framework for representing model uncertainty                                                                 | Impact on test accuracy and computational complexity                                                                             |
+|:--------|:-------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Dropout training in deep neural networks as approximate Bayesian inference in deep Gaussian processes']    | ['Considerable improvement in predictive log-likelihood and RMSE without sacrificing computational complexity or test accuracy'] |
+| paper_2 | ['Simple and scalable predictive uncertainty estimation using deep ensembles']                               | ['Well-calibrated uncertainty estimates with very little hyperparameter tuning']                                                 |
+| paper_3 | ['Introduction of epistemic neural network (ENN) as an interface for models that produce joint predictions'] | ['Conventional neural networks outperform large ensembles with orders of magnitude less computation']                            |
+
+MATCHES:
+Framework for representing model uncertainty: 
+Impact on test accuracy and computational complexity: 

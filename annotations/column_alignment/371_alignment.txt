@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of Communication                                              | Security Vulnerabilities and Mitigation                                       |
+|:---------|:-------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| Paper 1  | ['Drone RF communication']                                         | ['RF-based drone detection and potential security threats']                   |
+| Paper 2  | ['Aeronautical Datalink communications']                           | ['Lack of security measures in aeronautical datalink communications']         |
+| Paper 3  | ['Tire Pressure Monitoring System (TPMS) wireless communications'] | ['Cyber-security of TPMS wireless communications']                            |
+| Paper 4  | ['FM-based indoor localization']                                   | ['Remote spoofing attack and defense method in FM-based indoor localization'] |
+| Paper 5  | ['Global Navigation Satellite Systems (GNSS)']                     | ['GNSS signal vulnerabilities and spoofing mitigation techniques']            |
+| Paper 6  | ['Bluetooth']                                                      | ['Bluetooth 2.1+ Secure Simple Pairing (SSP) vulnerabilities']                |
+| Paper 7  | ['GSM']                                                            | ['GSM security vulnerabilities and attacks']                                  |
+| Paper 8  | ['4G/LTE']                                                         | ['LTE access network protocol vulnerabilities and attacks']                   |
+| Paper 9  | ['Aeronautical surveillance system for drone delivery']            | ['Aeronautical surveillance system for drone delivery security']              |
+| Paper 10 | ['Digital Enhanced Cordless Telecommunication (DECT)']             | ['DECT digital voice communication eavesdropping attack']                     |
+| Paper 11 | ['Near Field Communication (NFC)']                                 | ['NFC security vulnerabilities and key agreement scheme']                     |
+| Paper 12 | ['Internet of Things (IoT)']                                       | ['IoT gateway security and SDR platform']                                     |
+| Paper 13 | ['Computer display RF emanations']                                 | ['Computer display image leakage threat']                                     |
+| Paper 14 | ['Orthogonal Frequency-Division Multiplexing (OFDM)']              | ['PHY based jamming attacks against OFDM systems']                            |
+| Paper 15 | ['Orthogonal Frequency-Division Multiplexing (OFDM)']              | ['PHY based jamming attacks against OFDM systems']                            |
+| Paper 16 | ['Tactical radio networks']                                        | ['Cyber vulnerabilities in tactical radio networks']                          |
+| Paper 17 | ['UHF RFID']                                                       | ['Physical-layer identification for UHF RFID tags']                           |
+| Paper 18 | ['LTE']                                                            | ['LTE PHY layer vulnerabilities and testing using open-source SDR tools']     |
+
+MATCHES:
+Type of Communication: 
+Security Vulnerabilities and Mitigation: 

@@ -1,0 +1,44 @@
+ID: eba7fb00-2de5-483c-b5c6-45039bb6f367
+
+GOLD TABLE:
+|           | Year     | Annotation        |
+|----------:|:---------|:------------------|
+|   6724907 | ['2012'] | ['2D box/3D box'] |
+|   8902565 | ['2015'] | ['2D box/3D box'] |
+|  15430338 | ['2017'] | ['2D box']        |
+|   4747740 | ['2017'] | ['2D box']        |
+|   4768761 | ['2018'] | ['Pose']          |
+| 207925291 | ['2018'] | ['2D box']        |
+| 215415900 | ['2018'] | ['2D box/Mask']   |
+|  60440659 | ['2019'] | ['Mask']          |
+|  85459559 | ['2019'] | ['2D box']        |
+| 214605627 | ['2020'] | ['2D box']        |
+| 209140225 | ['2020'] | ['2D box/3D box'] |
+|  85517967 | ['2020'] | ['3D box']        |
+
+GOLD SCHEMA:
+0: Year
+1: Annotation
+
+PREDICTION PATH:../../metric_validation_0/eba7fb00-2de5-483c-b5c6-45039bb6f367/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Data modality                | Target task                                                               |
+|:---------|:-----------------------------|:--------------------------------------------------------------------------|
+| Paper 1  | ['Camera', 'Lidar', 'Radar'] | ['3D detection', 'Tracking']                                              |
+| Paper 2  | ['Camera', 'Lidar']          | ['3D detection', 'Tracking']                                              |
+| Paper 3  | ['Camera', 'Lidar']          | ['Stereo', 'Optical flow', 'Visual odometry/SLAM', '3D object detection'] |
+| Paper 4  | ['Camera']                   | ['Tracking']                                                              |
+| Paper 5  | ['Camera']                   | ['Pedestrian tracking']                                                   |
+| Paper 6  | ['Camera']                   | ['Trajectory annotation', 'MOT']                                          |
+| Paper 7  | ['Camera']                   | ['Pose estimation', 'Pose tracking']                                      |
+| Paper 8  | ['Camera']                   | ['Drone MOT']                                                             |
+| Paper 9  | ['Camera']                   | ['Heterogeneous multitask learning']                                      |
+| Paper 10 | ['Camera']                   | ['MOT', 'Segmentation']                                                   |
+| Paper 11 | ['Camera']                   | ['MOT', 'Segmentation']                                                   |
+| Paper 12 | ['Camera']                   | ['MTMC tracking', 'MTSC tracking', 'Object detection', 'ReID']            |
+| Paper 13 | ['Camera']                   | ['Crowd tracking']                                                        |
+
+MATCHES:
+Data modality: 
+Target task: 

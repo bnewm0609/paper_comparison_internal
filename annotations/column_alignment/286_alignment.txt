@@ -1,0 +1,29 @@
+ID: b5b73d12-e797-447a-ac52-ac6e8c7c7a77
+
+GOLD TABLE:
+|           | Method         | dataset   | comments                  |
+|----------:|:---------------|:----------|:--------------------------|
+|   3138661 | ['MLP']        | ['3559']  | ['edge + 3-layer MLP']    |
+|  19358648 | ['fasterRCNN'] | ['-']     | ['Very complex and slow'] |
+| 212649623 | ['M2Det']      | ['5000']  | ['Very complex and slow'] |
+|  54033357 | ['VGG16 etc.'] | ['3500']  | ['Very complex and slow'] |
+
+GOLD SCHEMA:
+0: Method
+1: dataset
+2: comments
+
+PREDICTION PATH:../../metric_validation_0/b5b73d12-e797-447a-ac52-ac6e8c7c7a77/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Techniques used for gun detection                                                                                                                                               | Dataset used for training and testing the model                           | Evaluation metrics used for measuring the performance   |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|:--------------------------------------------------------|
+| paper_1 | ['Automated detection and recognition of dangerous situations for CCTV systems using algorithms that alert the human operator when a firearm or knife is visible in the image'] | ['N/A']                                                                   | ['Specificity and sensitivity']                         |
+| paper_2 | ['Automatic gun detection from cluttered scenes using a state-of-the-art Faster Region-based CNN model (Faster R-CNN) through transfer learning']                               | ['Internet Movie Firearms Database (IMFDB)']                              | ['Classification accuracy']                             |
+| paper_3 | ['A single-stage object detector using a multi-level feature pyramid network (M2Det) is trained on a novel large scale dataset of hand guns captured using a CCTV camera']      | ['A novel large scale dataset of hand guns captured using a CCTV camera'] | ['Average precision']                                   |
+| paper_4 | ['Tensorflow-based implementation of the Overfeat network as an integrated network for detecting and classifying weapons in images']                                            | ['N/A']                                                                   | ['Training accuracy and test accuracy']                 |
+
+MATCHES:
+Techniques used for gun detection: 
+Dataset used for training and testing the model: 
+Evaluation metrics used for measuring the performance: 

@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Analysis and interpretation of the over-smoothing problem                                                     | Proposed solutions to mitigate over-smoothing                                                                |
+|:--------|:--------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Flexibly leverages different neighborhood ranges to enable better structure-aware representation']          | ['Proposes jumping knowledge (JK) networks architecture']                                                    |
+| paper_2 | ['Graph Convolutional Networks are limited to very shallow models due to the vanishing gradient problem']     | ['Presents new ways to successfully train very deep GCNs']                                                   |
+| paper_3 | ['GCN models are shallow due to the over-smoothing problem']                                                  | ['Introduces two techniques: Initial residual and Identity mapping']                                         |
+| paper_4 | ['Graph convolutional networks suffer from over-smoothing when stacking more layers']                         | ['Develops novel insights towards the deeper GCN and introduces a novel convolutional kernel named GCN+']    |
+| paper_5 | ['Performance decreases when going deeper due to the over-smoothing issue']                                   | ['Decouples representation transformation and propagation to enable deeper graph neural networks']           |
+| paper_6 | ['Variance amplification identified as a key factor for causing performance drop due to over-smoothing']      | ['Proposes a variance-controlling technique named Node Normalization (NodeNorm)']                            |
+| paper_7 | ['GNN suffers performance drop when the model gets deep and tends to amplify feature variance']               | ['Proposes a novel Unified Message Passaging Model (UniMP) that incorporates feature and label propagation'] |
+| paper_8 | ['Remains an open question how to effectively augment graph data to enhance the performance of GNNs']         | ['Proposes Free Large-scale Adversarial Augmentation on Graphs (FLAG)']                                      |
+| paper_9 | ['ACNe provides a significant leap in performance compared to the state-of-the-art under noise and outliers'] | ['Proposes Attentive Context Normalization (ACN) for robust permutation-equivariant learning']               |
+
+MATCHES:
+Analysis and interpretation of the over-smoothing problem: 
+Proposed solutions to mitigate over-smoothing: 

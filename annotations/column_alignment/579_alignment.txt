@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset Size                                                                                                                                          | Annotation Efficiency                                                                                                               | Generalization to Unseen Data                                                                                                                                    |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Largest driving video dataset with 100K videos and 10 tasks']                                                                                       | ['Benchmark for heterogeneous multitask learning']                                                                                  | ['Useful for training models that are less likely to be surprised by new conditions']                                                                            |
+| paper_2 | ['Focused on annotating object instances with a polygon-RNN']                                                                                         | ['Speeds up the annotation process by a factor of 4.7 across all classes in Cityscapes']                                            | ['Shows generalization capabilities of the approach to unseen datasets']                                                                                         |
+| paper_3 | ['Proposing a new framework that outperforms all existing approaches in automatic mode and is significantly more efficient in interactive mode']      | ['Runs at 29.3ms in automatic, and 2.6ms in interactive mode, making it 10x and 100x faster than Polygon-RNN++']                    | ['Demonstrates generalization capabilities of the network through evaluation on previously unseen data']                                                         |
+| paper_4 | ['Introducing a novel ground truth generation method for 3D object detection']                                                                        | ['Requires 30x lower human annotation time']                                                                                        | ['Tests the proposed scheme on previously unseen data from the Autonomoose self-driving vehicle to demonstrate generalization capabilities']                     |
+| paper_5 | ['Proposing an active learning method to train a LiDAR 3D object detector with the least amount of labeled training data necessary']                  | ['Proposes an active learning method to train a LiDAR 3D object detector with the least amount of labeled training data necessary'] | ['Works under different uncertainty estimations and query functions and can save up to 60% of the labeling efforts while reaching the same network performance'] |
+| paper_6 | ['Presenting an automatic annotation pipeline to recover 9D cuboids and 3D shapes from pre-trained off-the-shelf 2D detectors and sparse LiDAR data'] | ['Recovering a substantial amount of accurate cuboids on the KITTI3D dataset']                                                      | ['Uses a curriculum learning strategy, iteratively retraining on samples of increasing difficulty in subsequent self-improving annotation rounds']               |
+| paper_7 | ['Proposing LATTE, an open-sourced annotation tool for LiDAR point clouds']                                                                           | ['Accelerates the annotation speed by 6.2x and significantly improves label quality']                                               | ['Features innovations such as sensor fusion, one-click annotation, and tracking to improve label quality, and accelerate the annotation speed']                 |
+
+MATCHES:
+Dataset Size: 
+Annotation Efficiency: 
+Generalization to Unseen Data: 

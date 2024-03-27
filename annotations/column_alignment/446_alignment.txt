@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Data Source                                                                                                                                            | Annotation Method                                                                              | Annotator Agreement Measurement   | Public Dataset Release                                        | License or Accessibility                         |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|:----------------------------------|:--------------------------------------------------------------|:-------------------------------------------------|
+| paper_1 | ['Amharic Facebook posts and comments']                                                                                                                | ['Manual annotation by authors']                                                               | ['N/A']                           | ['Not publicly released']                                     | ['N/A']                                          |
+| paper_2 | ['Ethiopian tweets (5Js dataset)']                                                                                                                     | ['Crowdsourcing annotation using Yandex Toloka platform']                                      | ["Fleiss' kappa score of 0.34"]   | ['Data, source code, and models publicly released on GitHub'] | ['Released with a permissive license on GitHub'] |
+| paper_3 | ['Facebook posts and comments in Afaan Oromo language']                                                                                                | ['Manual annotation by authors']                                                               | ['N/A']                           | ['Not publicly released']                                     | ['N/A']                                          |
+| paper_4 | ['BBC Afan Oromo, OBN Afan Oromo, Fana Afan Oromo Program, Politicians, Activists, Religious Men, and Oromia Communication Bureau social media pages'] | ['Manual annotation by authors and evaluators using Afan Oromo hate speech evaluation system'] | ['N/A']                           | ['Not publicly released']                                     | ['N/A']                                          |
+| paper_5 | ['Facebook posts and comments in Afaan Oromoo language']                                                                                               | ['Manual annotation by authors']                                                               | ['N/A']                           | ['Dataset not publicly released']                             | ['N/A']                                          |
+
+MATCHES:
+Data Source: 
+Annotation Method: 
+Annotator Agreement Measurement: 
+Public Dataset Release: 
+License or Accessibility: 

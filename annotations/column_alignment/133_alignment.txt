@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Problem type (e.g., Ising model)               | Exact solvability   | Methodology (e.g., Lie algebras)                                   | Applications of the solution                                            |
+|:--------|:-----------------------------------------------|:--------------------|:-------------------------------------------------------------------|:------------------------------------------------------------------------|
+| paper_1 | ['Quantum Turing machines']                    | ['N/A']             | ['Quantum computation, complexity theory']                         | ['Theory of quantum computation, computational complexity']             |
+| paper_2 | ['Quantum Turing machines']                    | ['N/A']             | ['Quantum computation, complexity theory']                         | ['Theory of quantum computation, computational complexity']             |
+| paper_3 | ['Quantum Approximate Optimization Algorithm'] | ['N/A']             | ['Quantum algorithm, quantum circuit, combinatorial optimization'] | ['Optimization problems, quantum computing approaches']                 |
+| paper_4 | ['Two-Dimensional Ising Model']                | ['Exactly soluble'] | ['Lie algebras']                                                   | ['Phase transitions, testing approximate methods']                      |
+| paper_5 | ['Two-Dimensional Ising Model']                | ['Exactly soluble'] | ['Lie algebras, spinor representations']                           | ['Phase transitions, testing approximate methods']                      |
+| paper_6 | ['Quantum Computing']                          | ['N/A']             | ['Quantum algorithms, quantum circuits, NISQ-era evaluation']      | ['Benchmarking quantum hardware, quantum simulators, error correction'] |
+| paper_7 | ['Quantum Computing']                          | ['N/A']             | ['Quantum algorithms, quantum circuits, NISQ-era evaluation']      | ['Benchmarking quantum hardware, quantum simulators, error correction'] |
+| paper_8 | ['Database Search']                            | ['N/A']             | ['Quantum mechanical algorithm']                                   | ['Database search algorithms']                                          |
+| paper_9 | ['Quantum addition circuit']                   | ['N/A']             | ['Quantum addition circuit']                                       | ['Quantum computing, quantum arithmetic']                               |
+
+MATCHES:
+Problem type (e.g., Ising model): 
+Exact solvability: 
+Methodology (e.g., Lie algebras): 
+Applications of the solution: 

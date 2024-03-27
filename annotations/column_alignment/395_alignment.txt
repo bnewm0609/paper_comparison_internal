@@ -1,0 +1,36 @@
+ID: a07d0b86-db68-4fa1-bb26-d00069f5bd60
+
+GOLD TABLE:
+|           | Loss                      | Training set   |
+|----------:|:--------------------------|:---------------|
+|  52195299 | ['Softmax']               | ['VoxCeleb1']  |
+|  54200945 | ['-']                     | ['VoxCeleb1']  |
+|   4881455 | ['A-Softmax + GNLL']      | ['VoxCeleb1']  |
+|   4407761 | ['Softmax']               | ['VoxCeleb1']  |
+|  51713108 | ['AM-Softmax']            | ['VoxCeleb1']  |
+|  49211906 | ['Softmax + Contrastive'] | ['VoxCeleb2']  |
+|  67856245 | ['Softmax']               | ['VoxCeleb2']  |
+| 202751677 | ['AAM']                   | ['VoxCeleb1']  |
+
+GOLD SCHEMA:
+0: Loss
+1: Training set
+
+PREDICTION PATH:../../metric_validation_0/a07d0b86-db68-4fa1-bb26-d00069f5bd60/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology                                                                  | Dataset and Performance                                                                                 |
+|:--------|:-----------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| Paper_1 | ['CNN-based frame-level speaker embeddings']                                 | ['TIMIT dataset, not specifically mentioned']                                                           |
+| Paper_2 | ['CNN-based frame-level speaker embeddings']                                 | ['TIMIT dataset, not specifically mentioned']                                                           |
+| Paper_3 | ['Mutual Information with Encoder-Discriminator architecture']               | ['Not mentioned, but achieved state-of-the-art results on a speaker identification task']               |
+| Paper_4 | ['End-to-End system with different encoding layers and losses']              | ['VoxCeleb and NIST LRE 07 datasets, performance improvement']                                          |
+| Paper_5 | ['Attentive Statistics Pooling']                                             | ['NIST SRE 2012 and VoxCeleb datasets, EER reduction']                                                  |
+| Paper_6 | ['Data augmentation, optimal dimensionality and loss functions']             | ['VoxCeleb dataset, state-of-the-art identification and competitive verification']                      |
+| Paper_7 | ['Large-scale audio-visual speaker recognition dataset']                     | ['VoxCeleb2 dataset, larger than previously available datasets']                                        |
+| Paper_8 | ['Thin-ResNet trunk architecture and dictionary-based temporal aggregation'] | ['VoxCeleb1 dataset, state-of-the-art performance']                                                     |
+| Paper_9 | ['Modular or monolithic deep speaker recognition']                           | ['VoxCeleb and NIST-SRE 2016 datasets, state-of-the-art performance and modular framework improvement'] |
+
+MATCHES:
+Methodology: 
+Dataset and Performance: 

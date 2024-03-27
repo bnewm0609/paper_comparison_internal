@@ -1,0 +1,33 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of Images   | Annotation Quality                       | Dataset Diversity                                                          | Research Impact                                                                                                                    | Comparison to Previous Datasets                                                                                    |
+|:--------|:-------------------|:-----------------------------------------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['70,958']         | ['More accurate and richer annotations'] | ['Diverse variations in viewpoint and scale']                              | ['Provides a reliable testbed to study the problem of semantic correspondence']                                                    | ['Significantly larger in number and contains more accurate and richer annotations compared to previous datasets'] |
+| paper_2 | ['20,580']         | ['2D joint and silhouette annotations']  | ['Large variation in shape between dog breeds, significant occlusion']     | ['Provides a new parameterized model and annotation dataset to the research community']                                            | ['N/A']                                                                                                            |
+| paper_3 | ['21,997']         | ['Up to 21 landmarks per image']         | ['Large variety in face appearance, imaging and environmental conditions'] | ['Well suited to train and test algorithms for multi-view face detection, facial landmark localization, and face pose estimation'] | ['Overcomes the limitations of previous databases']                                                                |
+| paper_4 | ['N/A']            | ['N/A']                                  | ['Significantly more diverse animals than existing datasets']              | ['Helps the computer vision community in the design and evaluation of improved models']                                            | ['N/A']                                                                                                            |
+
+MATCHES:
+Number of Images: 
+Annotation Quality: 
+Dataset Diversity: 
+Research Impact: 
+Comparison to Previous Datasets: 

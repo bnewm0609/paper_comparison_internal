@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Task Focus                                                                  | Dataset and Corpus                                                                                    | Methods and Techniques                                                                            |
+|:--------|:----------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Sentiment Analysis', 'Classification']                                    | ['Small sentiment and subjectivity corpora', 'A large dataset of movie reviews']                      | ['Unsupervised and supervised techniques for learning word vectors']                              |
+| Paper 2 | ['Question Answering', 'Unanswerable Questions']                            | ['SQuAD (Stanford Question Answering Dataset)', 'SQuADRUn (with over 50,000 unanswerable questions)'] | ['Extractive reading comprehension systems', 'Crowdworkers written unanswerable questions']       |
+| Paper 3 | ['Semantic Textual Similarity', 'Multilingual and Crosslingual Evaluation'] | ['Semantic Textual Similarity shared task data (2012-2017)', 'STS Benchmark']                         | ['Semantic Textual Similarity measurements', 'Quality estimation for machine translation (MTQE)'] |
+
+MATCHES:
+Task Focus: 
+Dataset and Corpus: 
+Methods and Techniques: 

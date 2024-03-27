@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | size and diversity of datasets used                                                                                   | number of categories in datasets   | use of data augmentation techniques                                                                                                     |
+|:--------|:----------------------------------------------------------------------------------------------------------------------|:-----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['3D object representations for fine-grained categorization']                                                         | ['N/A']                            | ['N/A']                                                                                                                                 |
+| paper_2 | ['103-class flower dataset']                                                                                          | ['103']                            | ['multiple kernel framework with a SVM classifier (no explicit mention of data augmentation techniques)']                               |
+| paper_3 | ['Caltech-UCSD Birds-200-2011 dataset (roughly doubled the number of images per category from the previous version)'] | ['200 bird species']               | ['N/A']                                                                                                                                 |
+| paper_4 | ['Places Database (10 million scene photographs)']                                                                    | ['365 scene categories']           | ['Convolutional Neural Networks (CNNs) (no explicit mention of data augmentation techniques)']                                          |
+| paper_5 | ['large-scale collection of fine-art paintings']                                                                      | ['N/A']                            | ['metric learning approaches assumption (no explicit mention of data augmentation techniques)']                                         |
+| paper_6 | ['20,000 unique sketches evenly distributed over 250 object categories']                                              | ['250 object categories']          | ['bag-of-features sketch representation and multi-class support vector machines (no explicit mention of data augmentation techniques)'] |
+
+MATCHES:
+size and diversity of datasets used: 
+number of categories in datasets: 
+use of data augmentation techniques: 

@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Visual Features for Paintings                                                                                                                         | Learning Similarity Metrics                                                                                                                           | Prediction Tasks (e.g. predicting painting's style, genre, and artist)                                                                                                                                                                                                                  |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                                                                                                                                                                 |
+| paper_2 | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                                                                                                                                                                 |
+| paper_3 | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                                                                                                                                                                 |
+| paper_4 | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                                                                                                                                                                 |
+| paper_5 | ['We investigate a comprehensive list of visual features and metric learning approaches to learn an optimized similarity measure between paintings.'] | ['We investigate a comprehensive list of visual features and metric learning approaches to learn an optimized similarity measure between paintings.'] | ["We develop a machine that is able to make aesthetic-related semantic-level judgments, such as predicting a painting's style, genre, and artist, as well as providing similarity measures optimized based on the knowledge available in the domain of art historical interpretation."] |
+| paper_6 | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                               | ['N/A']                                                                                                                                                                                                                                                                                 |
+
+MATCHES:
+Visual Features for Paintings: 
+Learning Similarity Metrics: 
+Prediction Tasks (e.g. predicting painting's style, genre, and artist): 

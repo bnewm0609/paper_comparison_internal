@@ -1,0 +1,33 @@
+ID: 52ec1596-0f73-43f5-b738-df34580a2f80
+
+GOLD TABLE:
+|           | # Images   | # Pairs   | # Classes   | Annotations          | Matching Diversity   |
+|----------:|:-----------|:----------|:------------|:---------------------|:---------------------|
+| 201653520 | ['2k']     | ['70k']   | ['18']      | ['KP (3-30), Bbox']  | ['Med']              |
+| 220686531 | ['10k']    | ['10k']   | ['120']     | ['KP (24), Bbox']    | ['Med']              |
+|  17432920 | ['13k']    | ['10k']   | ['-']       | ['KP(5)']            | ['Low']              |
+| 237363914 | ['10k']    | ['10k']   | ['36']      | ['KP (30-40), Bbox'] | ['High']             |
+
+GOLD SCHEMA:
+0: # Images
+1: # Pairs
+2: # Classes
+3: Annotations
+4: Matching Diversity
+
+PREDICTION PATH:../../metric_validation_0/52ec1596-0f73-43f5-b738-df34580a2f80/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of Images                                      | Variations in Annotation                                                                       | Method Evaluations                                                                        | Availability of Baselines                                                                     | Public Availability                                                                                |
+|:--------|:------------------------------------------------------|:-----------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|
+| paper_1 | ['SPair-71k dataset contains 70,958 image pairs']     | ['SPair-71k contains diverse variations in viewpoint and scale, with richer annotations']      | ['Results of recent methods provided as baselines']                                       | ['Results of recent methods are provided as baselines']                                       | ['SPair-71k benchmark dataset available online at http://cvlab.postech.ac.kr/research/SPair-71k/'] |
+| paper_2 | ['Stanford Dog dataset with 20,580 images']           | ['Detailed 2D joint and silhouette annotations along with a new parameterized model SMBLD']    | ['Method evaluations not explicitly mentioned']                                           | ['New parameterized model SMBLD released alongside our new annotation dataset StanfordExtra'] | ['New annotation dataset StanfordExtra released to the research community']                        |
+| paper_3 | ['AFLW database with 21,997 real-world images']       | ['AFLW exhibits a large variety in face appearance and provides up to 21 landmarks per image'] | ['Tools provided to ease integration of other face databases and associated annotations'] | ['No specific mention of availability of baselines']                                          | ['AFLW and associated tools well suited to train and test algorithms']                             |
+| paper_4 | ['AwA Pose dataset content not explicitly mentioned'] | ['AwA Pose detailed variations in annotation not mentioned']                                   | ['Benchmarked the dataset with a state-of-the-art deep learning model']                   | ['Effective dataset benchmarked against a state-of-the-art deep learning model']              | ['No specific mention of public availability']                                                     |
+
+MATCHES:
+Number of Images: 
+Variations in Annotation: 
+Method Evaluations: 
+Availability of Baselines: 
+Public Availability: 

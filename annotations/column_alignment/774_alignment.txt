@@ -1,0 +1,28 @@
+ID: 7ed7e269-f74a-40f6-8707-bcb13edf2e15
+
+GOLD TABLE:
+|          | Dataset           | Method          |
+|---------:|:------------------|:----------------|
+| 49669987 | ['English CELEX'] | ['Data-driven'] |
+| 17187359 | ['English CELEX'] | ['Data-driven'] |
+|  2994107 | ['Dutch CELEX']   | ['Data-driven'] |
+|  2883185 | ['IIT-Guwahat']   | ['Hybrid']      |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/7ed7e269-f74a-40f6-8707-bcb13edf2e15/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Language-specific accuracy of syllabification methods                                        | Comparison of linguistic theories for syllabification                            |
+|:--------|:---------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| paper_1 | ['English: preliminary results']                                                             | ['N/A']                                                                          |
+| paper_2 | ['Dutch: N/A']                                                                               | ['N/A']                                                                          |
+| paper_3 | ['English: word accuracy over 98%, Dutch and German: word accuracy over 99%']                | ['Comparison of different approaches, but not specifically linguistic theories'] |
+| paper_4 | ['English: word accuracy over 98%, Dutch and German: word accuracy over 99%']                | ['Comparison of different approaches, but not specifically linguistic theories'] |
+| paper_5 | ['Manipuri: entropy based phonotactic segmentation (96%), CRF (97%), hybrid approach (98%)'] | ['N/A']                                                                          |
+
+MATCHES:
+Language-specific accuracy of syllabification methods: NA
+Comparison of linguistic theories for syllabification: NA

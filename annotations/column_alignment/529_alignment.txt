@@ -1,0 +1,33 @@
+ID: 95c3954e-5daf-4039-8362-896ec07c6208
+
+GOLD TABLE:
+|          | Approach   | Driving environment                                     | Generalization   | Low Computational complexity   | Uncertainty: model errors/noisy measurements   | Experiments          |
+|---------:|:-----------|:--------------------------------------------------------|:-----------------|:-------------------------------|:-----------------------------------------------|:---------------------|
+| 13725991 | ['-']      | ['Autonomous driving in urban environment']             | ['+ +']          | ['+']                          | ['-']                                          | ['Real & Simulated'] |
+| 15780954 | ['-']      | ['Autonomous driving in real traffic situations']       | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+| 54457648 | ['-']      | ['Autonomous Driving in multiple urban configurations'] | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+
+GOLD SCHEMA:
+0: Approach
+1: Driving environment
+2: Generalization
+3: Low Computational complexity
+4: Uncertainty: model errors/noisy measurements
+5: Experiments
+
+PREDICTION PATH:../../metric_validation_0/95c3954e-5daf-4039-8362-896ec07c6208/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sensor types and configurations   | Data processing and interpretation                                                    | Map usage and integration with sensors                                    | Robustness and accuracy of perception                                                                                    | Combining vision and radar data             | Video-based self-localization     |
+|:--------|:----------------------------------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------|:----------------------------------|
+| paper_1 | ['vision and radar sensors']      | ['close-to-production sensor hardware, relies solely on vision and radar sensors']    | ['digital maps for accurate understanding of complex traffic situations'] | ['comprehensive understanding of complex traffic situations']                                                            | ['vision and radar sensors in combination'] | ['video-based self-localization'] |
+| paper_2 | ['single front-facing camera']    | ['raw pixels from a single front-facing camera mapped directly to steering commands'] | ['N/A']                                                                   | ['learns to drive in traffic on local roads, highways, parking lots, and unpaved roads']                                 | ['N/A']                                     | ['N/A']                           |
+| paper_3 | ['N/A']                           | ['N/A']                                                                               | ['N/A']                                                                   | ['robust enough to drive a real vehicle, handles complex driving scenarios, and responds to appropriate causal factors'] | ['N/A']                                     | ['N/A']                           |
+
+MATCHES:
+Sensor types and configurations: 
+Data processing and interpretation: 
+Map usage and integration with sensors: 
+Robustness and accuracy of perception: 
+Combining vision and radar data: 
+Video-based self-localization: 

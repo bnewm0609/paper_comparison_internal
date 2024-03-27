@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Techniques Used                                                                                                                                           | Feature Dimensions                                | Comparison with Different Languages   | Evaluation Metrics Used                  | Model Performance Comparison    |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------|:--------------------------------------|:-----------------------------------------|:--------------------------------|
+| paper_1 | ['Apache Spark, Random Forest, Naïve Bayes, Word2Vec, TF-IDF']                                                                                            | ['Word2Vec, TF-IDF']                              | ['N/A']                               | ['Accuracy']                             | ['79.83% accuracy']             |
+| paper_2 | ['Classical machine learning algorithms (LR, SVM, NB), Deep learning algorithms (LSTM, BiLSTM, CNN), Contextual embedding models (Am-FLAIR, Am-RoBERTa)'] | ['N/A']                                           | ['N/A']                               | ['F1 score']                             | ['N/A']                         |
+| paper_3 | ['Different machine learning algorithms (classical, ensemble, deep learning), BOW, TF-IDF, Word2Vec, Keras Embedding layers']                             | ['BOW, TF-IDF, Word2Vec, Keras Embedding layers'] | ['N/A']                               | ['Accuracy']                             | ['0.84 accuracy']               |
+| paper_4 | ['Machine learning algorithm, hate speech evaluation system']                                                                                             | ['N/A']                                           | ['N/A']                               | ['N/A']                                  | ['N/A']                         |
+| paper_5 | ['SVM with TF-IDF, N-gram, W2vec feature extraction']                                                                                                     | ['TF-IDF, N-gram, W2vec']                         | ['N/A']                               | ['Accuracy, F-score, recall, precision'] | ['96% accuracy in all metrics'] |
+
+MATCHES:
+Techniques Used: 
+Feature Dimensions: 
+Comparison with Different Languages: 
+Evaluation Metrics Used: 
+Model Performance Comparison: 

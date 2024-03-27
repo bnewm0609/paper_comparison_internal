@@ -1,0 +1,38 @@
+ID: 58ef0c0f-e4b8-4d06-b4ba-0bdad86544c5
+
+GOLD TABLE:
+|          | Classes   | Size (train/test)   | Accuracy measure   |
+|---------:|:----------|:--------------------|:-------------------|
+| 18268744 | ['10']    | ['50,000/10,000']   | ['top-1']          |
+| 10860374 | ['500']   | ['47,386/2,443']    | ['top-1']          |
+|  1309931 | ['397']   | ['19,850/19,850']   | ['top-1']          |
+| 16632981 | ['196']   | ['8,144/8,041']     | ['top-1']          |
+|  2118703 | ['100']   | ['6,667/3,333']     | ['mean per-class'] |
+|  4309276 | ['47']    | ['3,760/1,880']     | ['top-1']          |
+|   383200 | ['37']    | ['3,680/3,369']     | ['mean per-class'] |
+| 15193013 | ['102']   | ['2,040/6,149']     | ['mean per-class'] |
+
+GOLD SCHEMA:
+0: Classes
+1: Size (train/test)
+2: Accuracy measure
+
+PREDICTION PATH:../../metric_validation_0/58ef0c0f-e4b8-4d06-b4ba-0bdad86544c5/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of classes in the dataset     | Process for labeling the images                                                           | Challenges in dataset collection and annotation                      |
+|:--------|:-------------------------------------|:------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1 | ['6000 (CIFAR-10), 600 (CIFAR-100)'] | ['Manual labeling with two sets of reliable labels (CIFAR-10 and CIFAR-100)']             | ['Difficulty in obtaining reliable class labels']                    |
+| paper_2 | ['6000 (CIFAR-10), 600 (CIFAR-100)'] | ['Manual labeling with two sets of reliable labels (CIFAR-10 and CIFAR-100)']             | ['Difficulty in obtaining reliable class labels']                    |
+| paper_3 | ['37']                               | ['Automatic classification using shape and appearance models']                            | ['Deformability and subtle differences between pet breeds']          |
+| paper_4 | ['103']                              | ['Supervised learning with annotation of 103 classes of flowers']                         | ['Large between-class similarity and small within-class similarity'] |
+| paper_5 | ['N/A']                              | ['N/A']                                                                                   | ['N/A']                                                              |
+| paper_6 | ['100']                              | ['N/A']                                                                                   | ['N/A']                                                              |
+| paper_7 | ['899']                              | ['Manual labeling and annotation']                                                        | ['Limited scope of currently-used databases']                        |
+| paper_8 | ['500']                              | ['Manual labeling, one-vs-most classifiers, and estimating spatio-temporal class priors'] | ['Challenges in distinguishing highly similar species of birds']     |
+| paper_9 | ['197']                              | ['N/A']                                                                                   | ['Difficulty encountered during the collection of the dataset']      |
+
+MATCHES:
+Number of classes in the dataset: 
+Process for labeling the images: 
+Challenges in dataset collection and annotation: 

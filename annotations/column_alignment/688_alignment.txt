@@ -1,0 +1,26 @@
+ID: 915f13ea-b8d0-473b-8fc0-af2af7e3deb1
+
+GOLD TABLE:
+|           | agent        | hyperparameters                                    |
+|----------:|:-------------|:---------------------------------------------------|
+|    160705 | ['dropout']  | ['learning rate, network, dropout rate']           |
+|   6294674 | ['ensemble'] | ['learning rate, network, ensemble size']          |
+| 236087380 | ['epinet']   | ['learning rate, network, prior, index dimension'] |
+
+GOLD SCHEMA:
+0: agent
+1: hyperparameters
+
+PREDICTION PATH:../../metric_validation_0/915f13ea-b8d0-473b-8fc0-af2af7e3deb1/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method for modeling uncertainty in deep learning                   | Performance comparison to existing state-of-the-art methods                                                  | Calibration and robustness of predictive uncertainty                                                         |
+|:--------|:-------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Dropout as a Bayesian Approximation in deep Gaussian processes'] | ['Improvement in predictive log-likelihood and RMSE on MNIST compared to existing state-of-the-art methods'] | ['Well-calibrated uncertainty estimates with dropout NNs']                                                   |
+| paper_2 | ['Deep Ensembles']                                                 | ['Comparable or better uncertainty estimates than approximate Bayesian NNs']                                 | ['Well-calibrated uncertainty estimates and robustness to dataset shift']                                    |
+| paper_3 | ['Epistemic Neural Network Architecture']                          | ['N/A']                                                                                                      | ['Robustness and quality of uncertainty estimates, especially for out-of-distribution examples in ImageNet'] |
+
+MATCHES:
+Method for modeling uncertainty in deep learning: 
+Performance comparison to existing state-of-the-art methods: 
+Calibration and robustness of predictive uncertainty: 

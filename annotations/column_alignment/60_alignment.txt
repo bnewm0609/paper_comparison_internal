@@ -1,0 +1,33 @@
+ID: e017f23d-a90f-4443-a5ec-946869cb0a49
+
+GOLD TABLE:
+|           | Year     | Image Type             | Intra/Inter Mode Collapse   | Application Type    | Proposed Solution                            |
+|----------:|:---------|:-----------------------|:----------------------------|:--------------------|:---------------------------------------------|
+| 252846395 | ['2023'] | ['X-ray Images']       | ['Intra']                   | ['Image Synthesis'] | ['Self-attention and multi-scale gradients'] |
+| 204904838 | ['2021'] | ['Dermoscopic Images'] | ['Intra']                   | ['Image Synthesis'] | ['Self Attention']                           |
+| 244714924 | ['2021'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['SSIM loss']                                |
+| 232061669 | ['2020'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['VAEGAN']                                   |
+
+GOLD SCHEMA:
+0: Year
+1: Image Type
+2: Intra/Inter Mode Collapse
+3: Application Type
+4: Proposed Solution
+
+PREDICTION PATH:../../metric_validation_0/e017f23d-a90f-4443-a5ec-946869cb0a49/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Quantitative analysis methods (e.g., MS-SSIM, FID, classification accuracy)   | Qualitative analysis methods (visual comparisons)   | Comparison with other synthetic image generation methods   | Realism of the generated images          | Diversity of the generated images                                                  |
+|:--------|:------------------------------------------------------------------------------|:----------------------------------------------------|:-----------------------------------------------------------|:-----------------------------------------|:-----------------------------------------------------------------------------------|
+| Paper 1 | ['MS-SSIM', 'FID']                                                            | ['N/A']                                             | ['compared with MSG-GAN']                                  | ['realistic X-ray images']               | ['diversified images']                                                             |
+| Paper 2 | ['N/A']                                                                       | ['N/A']                                             | ['N/A']                                                    | ['highly realistic skin lesion samples'] | ['fine-grained samples with clinically-meaningful information']                    |
+| Paper 3 | ['FID', 'MS-SSIM']                                                            | ['N/A']                                             | ['compared with other GAN-based methods']                  | ['realistic brain tumor MR images']      | ['PGGAN-SSIM successfully generates images that fill the real image distribution'] |
+| Paper 4 | ['N/A']                                                                       | ['N/A']                                             | ['N/A']                                                    | ['realistic 3D brain MRI data']          | ['more realistic samples with smoothed shapes']                                    |
+
+MATCHES:
+Quantitative analysis methods (e.g., MS-SSIM, FID, classification accuracy): 
+Qualitative analysis methods (visual comparisons): 
+Comparison with other synthetic image generation methods: 
+Realism of the generated images: 
+Diversity of the generated images: 

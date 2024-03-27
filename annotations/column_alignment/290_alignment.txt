@@ -1,0 +1,41 @@
+ID: 14f6d93a-4d71-438b-9705-93514627bc75
+
+GOLD TABLE:
+|           | Name        | Method                                              |
+|----------:|:------------|:----------------------------------------------------|
+| 124273988 | ['binseg']  | ['Binary Segmentation']                             |
+|  15721047 | ['bocpd']   | ['Bayesian Online Change Point Detection']          |
+|  21681143 | ['bocpdms'] | ['bocpd with Model Selection']                      |
+|    858268 | ['cpnp']    | ['Nonparametric Change Point Detection']            |
+|  54586890 | ['ecp']     | ['Energy Change Point']                             |
+|    211152 | ['kcpa']    | ['Kernel Change-Point Analysis']                    |
+|   5627005 | ['pelt']    | ['Pruned Exact Linear Time']                        |
+|  12515984 | ['prophet'] | ['Prophet']                                         |
+|  88520997 | ['rfpop']   | ['Robust Functional Pruning Optimal\nPartitioning'] |
+|  30533655 | ['wbs']     | ['Wild Binary Segmentation']                        |
+| 212717962 | ['zero']    | ['No Change Points']                                |
+
+GOLD SCHEMA:
+0: Name
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/14f6d93a-4d71-438b-9705-93514627bc75/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Computational cost                                                                 | Accuracy                                                                                       |
+|:---------|:-----------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                                                            | ['N/A']                                                                                        |
+| paper_2  | ['N/A']                                                                            | ['N/A']                                                                                        |
+| paper_3  | ['Linear and constant time complexity']                                            | ['Outperforms the state of the art for multivariate data']                                     |
+| paper_4  | ['Efficient dynamic programming algorithm, close to linear in the amount of data'] | ['Adversely affected by the screening procedure, quality of detected changepoints discussed']  |
+| paper_5  | ['N/A']                                                                            | ['Provides consistent estimates, compared with competing methods in a simulation study']       |
+| paper_6  | ['N/A']                                                                            | ['Promising experimental results presented']                                                   |
+| paper_7  | ['Linear computational cost']                                                      | ['Substantial improvement in the accuracy of the inferred segmentation of the data']           |
+| paper_8  | ['N/A']                                                                            | ['Describes performance analyses to compare and evaluate forecasting procedures']              |
+| paper_9  | ['Efficient dynamic programming algorithm']                                        | ['Consistently estimates the number of changepoints and accurately estimates their locations'] |
+| paper_10 | ['N/A']                                                                            | ['Offers very good practical performance in comparison with the state of the art']             |
+| paper_11 | ['N/A']                                                                            | ['Provides ground truth on change points for evaluation of change point detection algorithms'] |
+
+MATCHES:
+Computational cost: 
+Accuracy: 

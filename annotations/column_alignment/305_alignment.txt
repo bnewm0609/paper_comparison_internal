@@ -1,0 +1,31 @@
+ID: 2aad0947-1bd3-4b7a-8332-8c3efa3d6392
+
+GOLD TABLE:
+|           | No    | Title                                                                                                                                                                                                                                                                 |
+|----------:|:------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 193179455 | ['1'] | ['Kontemplasi Politik (Belajar Dari Kisah Perang Badar Menurut Sirah Ibnu Hisyam Dan Al-thabari) (Political Contemplation (Learning from the Story of the Battle of Badr According to the Sirah of Ibn Hisham and Al-Thabari))']                                      |
+| 181419409 | ['2'] | ["Isra Mi'raj Sebagai Perjalanan Religi: Studi Analisis Peristiwa Isra Mi'raj Nabi Muhammad Menurut Al Qur'an Dan Hadits (Isra Mi'raj as a Religious Journey: An Analytical Study of the Isra Mi'raj Event of Prophet Muhammad According to the Qur'an and Hadiths)"] |
+| 221700756 | ['4'] | ['Sejarah Sosial-Politik Arab: Dari Hegemoni Romawi-Persia Hingga Kebangkitan Arab Islam (Arab Social-Political History: From Roman-Persian Hegemony to the Rise of Arab Islam)']                                                                                     |
+| 237879696 | ['5'] | ["Pendidikan Karakter dalam Buku Sirah Nabawiyah Karya Syaikh Shafiyyurrahman al-Mubarakfuri (Character Education in the Book of the Prophet's Biography by Sheikh Shafiyyurrahman al-Mubarakfuri)"]                                                                  |
+| 191016969 | ['6'] | ["Sirah Nabawiyah dan Demitologisasi Kehidupan Nabi (Prophetic Biography and Demythologization of the Prophet's Life)"]                                                                                                                                               |
+| 171913397 | ['8'] | ['Tata kelola pemerintahan negara madinah pada masa nabi Muhammad saw (The governance system of the Madinah state during the time of Prophet Muhammad (peace be upon him).)']                                                                                         |
+
+GOLD SCHEMA:
+0: No
+1: Title
+
+PREDICTION PATH:../../metric_validation_0/2aad0947-1bd3-4b7a-8332-8c3efa3d6392/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Historical Analysis                                                                                                                                                                         | Religious Perspective                                                                                                                   |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Focused on the political contemplation of the Battle of Badar in early Islamic history.']                                                                                                 | ['Focuses on the political and historical aspects of the Battle of Badar.']                                                             |
+| paper_2 | ["Analyzes the religious significance and historical implications of the Isra Mi'raj event in Islam."]                                                                                      | ["Analyzes the religious significance of the Isra Mi'raj event according to the Quran and Hadith, providing a religious perspective."]  |
+| paper_3 | ['Explores the socio-political history of Arabia from Roman-Persian hegemony to the rise of Islamic Arabs.']                                                                                | ['Provides a comprehensive religious perspective on the socio-political history of Arabia and the rise of Islam.']                      |
+| paper_4 | ['Discusses the role of character education in the context of the book Sirah Nabawiyah by Syaikh Shafiyyurrahman al-Mubarakfuri.']                                                          | ['Examines character education through the lens of religious teachings and the importance of Sirah Nabawiyah in shaping values.']       |
+| paper_5 | ['Focuses on the demythologization of the life of the Prophet Muhammad through the understanding of Sirah Nabawiyah.']                                                                      | ["Emphasizes the role of Sirah Nabawiyah in understanding the religious aspects of Prophet Muhammad's life and character."]             |
+| paper_6 | ['Delves into the governance structure of the state of Madinah during the time of Prophet Muhammad, emphasizing his role as a leader and the reformative impact of the governance system.'] | ['Provides a religious perspective on the governance of the state of Madinah, highlighting the Islamic ethical and moral foundations.'] |
+
+MATCHES:
+Historical Analysis: 
+Religious Perspective: 

@@ -1,0 +1,26 @@
+ID: f135ea39-e12f-4616-99f1-73204e997fb3
+
+GOLD TABLE:
+|           | Dataset            | # of images   | Categories                                             |
+|----------:|:-------------------|:--------------|:-------------------------------------------------------|
+| 215736956 | ['Dataset 3 (D3)'] | ['2,138']     | ['Covid, Normal, No_findings, PneumoniaB, PneumoniaV'] |
+| 214668039 | ['Dataset 4 (D4)'] | ['320']       | ['Covid, Normal, PneumoniaB, PneumoniaV']              |
+
+GOLD SCHEMA:
+0: Dataset
+1: # of images
+2: Categories
+
+PREDICTION PATH:../../metric_validation_0/f135ea39-e12f-4616-99f1-73204e997fb3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Model architecture                                                                 | Classification categories                                    | Evaluation metrics                                                                                                                                                         |
+|:--------|:-----------------------------------------------------------------------------------|:-------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | CoroNet is based on the Xception architecture pre-trained on the ImageNet dataset. | COVID-19 vs Pneumonia bacterial vs Pneumonia viral vs Normal | Overall accuracy: 89.6%, Precision and recall rate for COVID-19 cases are 93% and 98.2% for 4-class cases and a classification accuracy of 95% for 3-class classification. |
+| paper_2 | CoroNet is based on the Xception architecture pre-trained on the ImageNet dataset. | COVID-19 vs Pneumonia bacterial vs Pneumonia viral vs Normal | Overall accuracy: 89.6%, Precision and recall rate for COVID-19 cases are 93% and 98.2% for 4-class cases and a classification accuracy of 95% for 3-class classification. |
+| paper_3 | N/A                                                                                | N/A                                                          | N/A                                                                                                                                                                        |
+
+MATCHES:
+Model architecture: 
+Classification categories: 
+Evaluation metrics: 

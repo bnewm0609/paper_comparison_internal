@@ -1,0 +1,41 @@
+ID: 14f6d93a-4d71-438b-9705-93514627bc75
+
+GOLD TABLE:
+|           | Name        | Method                                              |
+|----------:|:------------|:----------------------------------------------------|
+| 124273988 | ['binseg']  | ['Binary Segmentation']                             |
+|  15721047 | ['bocpd']   | ['Bayesian Online Change Point Detection']          |
+|  21681143 | ['bocpdms'] | ['bocpd with Model Selection']                      |
+|    858268 | ['cpnp']    | ['Nonparametric Change Point Detection']            |
+|  54586890 | ['ecp']     | ['Energy Change Point']                             |
+|    211152 | ['kcpa']    | ['Kernel Change-Point Analysis']                    |
+|   5627005 | ['pelt']    | ['Pruned Exact Linear Time']                        |
+|  12515984 | ['prophet'] | ['Prophet']                                         |
+|  88520997 | ['rfpop']   | ['Robust Functional Pruning Optimal\nPartitioning'] |
+|  30533655 | ['wbs']     | ['Wild Binary Segmentation']                        |
+| 212717962 | ['zero']    | ['No Change Points']                                |
+
+GOLD SCHEMA:
+0: Name
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/14f6d93a-4d71-438b-9705-93514627bc75/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Dimension 1: Methodology                                          | Dimension 2: Application Domain                     |
+|:---------|:------------------------------------------------------------------|:----------------------------------------------------|
+| Paper 1  | ['Cluster Analysis']                                              | ['Analysis of Variance']                            |
+| Paper 2  | ['Bayesian Online Changepoint Detection']                         | ['Finance, Biometrics, Robotics']                   |
+| Paper 3  | ['Spatio-temporal Bayesian On-line Changepoint Detection']        | ['Spatio-temporal Processes']                       |
+| Paper 4  | ['Nonparametric Changepoint Detection']                           | ['Changepoint Detection in Physical Activity']      |
+| Paper 5  | ['Nonparametric Approach for Multivariate Change Point Analysis'] | ['Genetics, Finance, Spatio-temporal Analysis']     |
+| Paper 6  | ['Kernel Change-point Analysis']                                  | ['Mental Tasks, Pop Song Indexation']               |
+| Paper 7  | ['Optimal Detection of Changepoints']                             | ['Applications in Genetics, Finance']               |
+| Paper 8  | ['Forecasting at Scale']                                          | ['Capacity Planning, Anomaly Detection']            |
+| Paper 9  | ['Changepoint Detection in the Presence of Outliers']             | ['Robust Changepoint Detection']                    |
+| Paper 10 | ['Wild Binary Segmentation for Multiple Change-point Detection']  | ['Estimation of Multiple Change-points']            |
+| Paper 11 | ['An Evaluation of Change Point Detection Algorithms']            | ['Evaluation of Change Point Detection Algorithms'] |
+
+MATCHES:
+Dimension 1: Methodology: 
+Dimension 2: Application Domain: 

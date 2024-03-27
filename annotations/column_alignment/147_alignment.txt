@@ -1,0 +1,55 @@
+ID: 2ad79925-6779-4856-8854-f09c72134c69
+
+GOLD TABLE:
+|           | Reinforcement Learning Technique                     | Application                                            |
+|----------:|:-----------------------------------------------------|:-------------------------------------------------------|
+|   3116531 | ['Model-based, PEGASUS']                             | ['Helicopter control']                                 |
+|   7142905 | ['Model-based, PEGASUS']                             | ['Helicopter hovering and maneuvers']                  |
+|  15279814 | ['Differential Dynamic Programming']                 | ['Helicopter aerobatic maneuvers']                     |
+|   2387578 | ['Model-based; LWLR,Policy Iteration']               | ['Quadrotor altitude control']                         |
+|  16266708 | ['Fitted Value Iteration']                           | ['Quadrotor velocity control']                         |
+|  10259326 | ['Finite Action-set Learning Automata']              | ['Quadrotor trajectory tracking and attitude control'] |
+|   5539001 | ['MPC Guided Policy Search']                         | ['Quadrotor obstacle avoidance']                       |
+|  24546802 | ['Neural network policy']                            | ['Waypoint tracking and recovery tests']               |
+|  58004760 | ['Deep model-based']                                 | ['Hovering']                                           |
+|   4790080 | ['DDPG, TRPO, PPO']                                  | ['Attitude control']                                   |
+| 156055134 | ['PPO']                                              | ['Attitude control']                                   |
+| 128176516 | ['DPG']                                              | ['UAV control']                                        |
+|  17109433 | ['Model-based,TEXPLORE']                             | ['UAV navigation']                                     |
+|   2277178 | ['Q-Learning']                                       | ['UAV navigation']                                     |
+|  52300915 | ['Q-Learning with function approximation']           | ['UAV navigation']                                     |
+|  59285205 | ['Fast-RDPG']                                        | ['UAV navigation']                                     |
+|  53212475 | ['Deep recurrent Q network with temporal attention'] | ['Obstacle avoidance']                                 |
+|  52162679 | ['DQN']                                              | ['Autonomous landing']                                 |
+
+GOLD SCHEMA:
+0: Reinforcement Learning Technique
+1: Application
+
+PREDICTION PATH:../../metric_validation_0/2ad79925-6779-4856-8854-f09c72134c69/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Control Approach                                                                         | Application                                                  |
+|:---------|:-----------------------------------------------------------------------------------------|:-------------------------------------------------------------|
+| Paper 1  | ['Reinforcement learning policy search methods']                                         | ['Autonomous helicopter control']                            |
+| Paper 2  | ['Reinforcement learning']                                                               | ['Autonomous helicopter flight']                             |
+| Paper 3  | ['Reinforcement learning (DDP)']                                                         | ['Aerobatic helicopter flight']                              |
+| Paper 4  | ['Integral sliding mode', 'Reinforcement learning']                                      | ['Quadrotor testbed control']                                |
+| Paper 5  | ['Reinforcement learning']                                                               | ['Quadrotor UAV control']                                    |
+| Paper 6  | ['Reinforcement learning (Learning Automata)']                                           | ['Quad-rotor aerial robot control']                          |
+| Paper 7  | ['Model predictive control (MPC) and reinforcement learning']                            | ['Autonomous aerial vehicle control']                        |
+| Paper 8  | ['Reinforcement learning']                                                               | ['Quadrotor control']                                        |
+| Paper 9  | ['Model-based reinforcement learning (MBRL)']                                            | ['Quadrotor control']                                        |
+| Paper 10 | ['Proportional-Integral-Derivative (PID) control and reinforcement learning']            | ['Attitude control for unmanned aerial vehicles']            |
+| Paper 11 | ['Proportional-Integral-Derivative (PID) control and deep reinforcement learning (DRL)'] | ['Attitude control for fixed-wing unmanned aerial vehicles'] |
+| Paper 12 | ['Deterministic policy gradient algorithm and reinforcement learning']                   | ['Quadrotor control']                                        |
+| Paper 13 | ['Model-based reinforcement learning']                                                   | ['Quadcopter navigation']                                    |
+| Paper 14 | ['Reinforcement learning']                                                               | ['Unmanned aerial vehicle navigation']                       |
+| Paper 15 | ['Function approximation based reinforcement learning']                                  | ['Unmanned aerial vehicle navigation']                       |
+| Paper 16 | ['Deep reinforcement learning (DRL)']                                                    | ['Unmanned aerial vehicle navigation']                       |
+| Paper 17 | ['Deep reinforcement learning with temporal attention']                                  | ['UAV obstacle avoidance']                                   |
+| Paper 18 | ['Deep reinforcement learning (DQNs)']                                                   | ['UAV autonomous landing']                                   |
+
+MATCHES:
+Control Approach: 
+Application: 

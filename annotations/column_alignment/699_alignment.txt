@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Neutron energy range for cross section measurement   | Methods used for cross section measurement                                                                                      |
+|:--------|:-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['7.5 MeV to 15 MeV']                                | ['Large liquid scintillator method']                                                                                            |
+| paper_2 | ['N/A']                                              | ['Large-scale Compton-suppressed array of Ge detectors (GEANIE), nuclear modeling (enhanced Hauser-Feshbach)']                  |
+| paper_3 | ['Threshold to 20 MeV']                              | ['Utilization of new cross section measurements by the GEANIE collaboration in combination with nuclear reaction calculations'] |
+| paper_4 | ['13.7 MeV to 15.1 MeV']                             | ['α- and γ-spectroscopy measurements, post–irradiation ratios, and calibration reactions']                                      |
+
+MATCHES:
+Neutron energy range for cross section measurement: 
+Methods used for cross section measurement: 

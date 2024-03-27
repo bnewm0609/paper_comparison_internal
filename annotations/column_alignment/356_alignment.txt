@@ -1,0 +1,31 @@
+ID: 7aca2591-3b79-4f87-bfd3-0919bd3f37e9
+
+GOLD TABLE:
+|           | UML type                             | Description                                                                                                                                                                                                                               |
+|----------:|:-------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  10110058 | ['Statechart and sequence diagrams'] | ['Uses statecharts and sequence diagrams to model the medical robots procedure, and the interaction between the system and the user']                                                                                                     |
+|  20798677 | ['SysML']                            | ['An extension of SysML is used to model functional and non-functional requirements for automotive car systems']                                                                                                                          |
+|   4569485 | ['Use Cases']                        | ['First study created use cases for traffic scenarios and proposed navigation solutions for vision impaired people. Second study generated a use case for a young girl suffering from Attention Deficit/- Hyperactivity Disorder (ADHD)'] |
+|  46837299 | ['Actionable Use Case']              | ['Proposes an actionable use case diagram as a means of collaboration between the data scientist and the software engineer']                                                                                                              |
+| 232106463 | ['Semi-formal UML']                  | ['Proposed a model called "Dataset Requirements Concept Model" (DRCM) to display requirements needed for the structure of datasets']                                                                                                      |
+| 222805326 | ['Activity Diagram']                 | ['The study gathers requirements and models them using use cases and activity diagrams to model a configuration system for an Unmanned Aerial Vehicles']                                                                                  |
+
+GOLD SCHEMA:
+0: UML type
+1: Description
+
+PREDICTION PATH:../../metric_validation_0/7aca2591-3b79-4f87-bfd3-0919bd3f37e9/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology                                                                                                                                                                        | Tool support                                                                                                                    |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The paper describes a design specification process for surgical robots using a requirements engineering approach.']                                                              | ['N/A']                                                                                                                         |
+| paper_2 | ['The paper presents a requirements-driven approach for creating a software product line of highly configurable scenarios based on different missions.']                           | ['The paper presents a configuration tool for generating mission-specific configurations for 20 different use case scenarios.'] |
+| paper_3 | ['The paper gathers requirements of visually impaired road users for transferring algorithms from camera-based Advanced Driver Assistance Systems using expert interviews.']       | ['N/A']                                                                                                                         |
+| paper_4 | ['The paper proposes a model-based approach to automotive requirements engineering for overall passenger car development based on SysML.']                                         | ['The paper uses SysML as a modeling language for requirements engineering.']                                                   |
+| paper_5 | ['The paper presents a new requirement engineering model that allows software engineers and data scientists to discover business values as part of software requirement process.'] | ['N/A']                                                                                                                         |
+| paper_6 | ['N/A']                                                                                                                                                                            | ['N/A']                                                                                                                         |
+
+MATCHES:
+Methodology: 
+Tool support: 

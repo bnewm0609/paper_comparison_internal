@@ -1,0 +1,39 @@
+ID: 3f19b779-230c-438b-8d31-82cbbb31bcb8
+
+GOLD TABLE:
+|           | (Task)          | Group class   | Train set size   | Test set size (per group)   | No. of trials   | No. of epochs   | Input Shape/Config.   |
+|----------:|:----------------|:--------------|:-----------------|:----------------------------|:----------------|:----------------|:----------------------|
+| 199577425 | ['(Gender)']    | ['Race']      | ['10900']        | ['760']                     | ['5']           | ['35']          | ['3x100x100']         |
+|   1987503 | ['(Species)']   | ['Skin tone'] | ['1500']         | ['250']                     | ['5']           | ['60']          | ['3x256x256']         |
+|    810708 | ['(Age)']       | ['Gender']    | ['7700']         | ['970']                     | ['5']           | ['65']          | ['3x100x100']         |
+|  40094999 | ['(Diagnosis)'] | ['Gender']    | ['1500']         | ['250']                     | ['7']           | ['40']          | ['3x256x256']         |
+| 221142094 | ['(Gender)']    | ['Species']   | ['750']          | ['90']                      | ['5']           | ['20']          | ['3x100x100']         |
+
+GOLD SCHEMA:
+0: (Task)
+1: Group class
+2: Train set size
+3: Test set size (per group)
+4: No. of trials
+5: No. of epochs
+6: Input Shape/Config.
+
+PREDICTION PATH:../../metric_validation_0/3f19b779-230c-438b-8d31-82cbbb31bcb8/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Domain                | Task                                | Method                                                                | Performance Metric                                                                    | Datasets Used                                                  | Real-World Impact                                                            | Code and Models Available   |
+|:--------|:----------------------|:------------------------------------|:----------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:---------------------------------------------------------------|:-----------------------------------------------------------------------------|:----------------------------|
+| paper_1 | ['Computer Vision']   | ['Face Attribute Classification']   | ['Construction of a balanced face attribute dataset']                 | ['Generalization performance, balanced accuracy across gender, race, and age groups'] | ['YFCC-100M Flickr dataset']                                   | ['Mitigating race bias in face attribute classification models and systems'] | ['Yes']                     |
+| paper_2 | ['Computer Security'] | ['CAPTCHA Solving']                 | ['Classification of images using support-vector machine classifiers'] | ['Classification accuracy, probability of solving a 12-image Asirra challenge']       | ['Asirra CAPTCHA dataset']                                     | ['Caution against deploying Asirra CAPTCHA without safeguards']              | ['No']                      |
+| paper_3 | ['Computer Vision']   | ['Face Age Progression/Regression'] | ['Conditional adversarial autoencoder']                               | ['Photo-realism of generated faces']                                                  | ['Unlabeled face images with age labels']                      | ['Generative modeling of face aging']                                        | ['No']                      |
+| paper_4 | ['Computer Vision']   | ['Pneumonia Detection']             | ['Convolutional neural network']                                      | ['F1 metric']                                                                         | ['ChestX-ray14']                                               | ['Pneumonia detection at a level exceeding practicing radiologists']         | ['Yes']                     |
+| paper_5 | ['Computer Vision']   | ['Chicken Gender Classification']   | ['Deep neural network and object detection']                          | ['Average accuracy']                                                                  | ['Manually annotated chicken flock and single chicken images'] | ['Estimation of the gender ratio of chickens for animal welfare purposes']   | ['Yes']                     |
+
+MATCHES:
+Domain: 
+Task: 
+Method: 
+Performance Metric: 
+Datasets Used: 
+Real-World Impact: 
+Code and Models Available: 

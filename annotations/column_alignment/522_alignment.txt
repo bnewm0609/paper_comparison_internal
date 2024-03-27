@@ -1,0 +1,90 @@
+ID: 04f07bbb-0d49-43cf-bd66-974168293f31
+
+GOLD TABLE:
+|           | Title                                                                                                                         | Year     | Venue    |
+|----------:|:------------------------------------------------------------------------------------------------------------------------------|:---------|:---------|
+| 251627122 | ['Android Source Code Vulnerability Detection: A Systematic Literature Review']                                               | ['2023'] | ['CSUR'] |
+| 232168946 | ['Deep Learning for Android Malware Defenses: A Systematic Literature Review']                                                | ['2022'] | ['CSUR'] |
+| 245880916 | ['Dynamic Testing Techniques of Non-Functional Requirements in Mobile Apps: A Systematic Mapping Study']                      | ['2022'] | ['CSUR'] |
+| 235485108 | ['A Survey of Privacy Vulnerabilities of Mobile Device Sensors']                                                              | ['2022'] | ['CSUR'] |
+| 233388246 | ['A Systematic Survey on Android API Usage for Data-Driven Analytics with Smartphones']                                       | ['2022'] | ['CSUR'] |
+| 245158991 | ['A systematic mapping study addressing the reliability of mobile applications: The need to move beyond testing reliability'] | ['2022'] | ['JSS']  |
+| 236956425 | ['Research on Third-Party Libraries in Android Apps: A Taxonomy and Systematic Literature Review']                            | ['2021'] | ['TSE']  |
+| 203952955 | ['Mobile app privacy in software engineering research: A systematic mapping study']                                           | ['2021'] | ['IST']  |
+| 235473987 | ['Measurement-based Experiments on the Mobile Web: A Systematic Mapping Study']                                               | ['2021'] | ['EASE'] |
+| 211041290 | ['Autonomous Visual Navigation for Mobile Robots: A Systematic Literature Review']                                            | ['2020'] | ['CSUR'] |
+| 211040739 | ['A Survey of Context Simulation for Testing Mobile Context-Aware Applications']                                              | ['2020'] | ['CSUR'] |
+| 230611063 | ['A Survey of Android Malware Detection with Deep Neural Models']                                                             | ['2020'] | ['CSUR'] |
+|  53752448 | ['Rebooting Research on Detecting Repackaged Android Apps: Literature Review and Benchmark']                                  | ['2019'] | ['TSE']  |
+|  68211642 | ['App store effects on software engineering practices']                                                                       | ['2019'] | ['TSE']  |
+|  59337596 | ['A Survey and Taxonomy of Core Concepts and Research Challenges in Cross-Platform Mobile Development']                       | ['2018'] | ['CSUR'] |
+|  52193398 | ['A Survey on Recent OS-Level Energy Management Techniques for Mobile Processing Units']                                      | ['2018'] | ['TPDS'] |
+|  53462302 | ['Automated Testing of Android Apps: A Systematic Literature Review']                                                         | ['2018'] | ['TRel'] |
+|   1750981 | ['Toward Engineering a Secure Android Ecosystem: A Survey of Existing Techniques']                                            | ['2016'] | ['CSUR'] |
+|   8323376 | ['A survey of app store analysis for software engineering']                                                                   | ['2016'] | ['TSE']  |
+|  14205536 | ['A survey on smartphone-based systems for opportunistic user context recognition']                                           | ['2013'] | ['CSUR'] |
+|  17846346 | ['Survey and analysis of current mobile learning applications and technologies']                                              | ['2013'] | ['CSUR'] |
+| 245397809 | ['A mapping study on mutation testing for mobile applications']                                                               | ['2022'] | ['STVR'] |
+| 234256916 | ['A survey of performance optimization for mobile applications']                                                              | ['2021'] | ['TSE']  |
+
+GOLD SCHEMA:
+0: Title
+1: Year
+2: Venue
+
+PREDICTION PATH:../../metric_validation_0/04f07bbb-0d49-43cf-bd66-974168293f31/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Platform           | API usage                                                               | Functionality                                                                                                   |
+|:---------|:-------------------|:------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_2  | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_3  | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_4  | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_5  | ['Android']        | ['Usage Statistics API (US API)', 'Accessibility Service API (AS API)'] | nan                                                                                                             |
+| paper_6  | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_7  | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_8  | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_9  | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_10 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_11 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_12 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_13 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_14 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_15 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_16 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_17 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_18 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_19 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_20 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_21 | ['Mobile devices'] | ['N/A']                                                                 | nan                                                                                                             |
+| paper_22 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| paper_23 | ['Android']        | ['N/A']                                                                 | nan                                                                                                             |
+| Paper 1  | nan                | nan                                                                     | ['Improving the security of Android applications by detecting source code vulnerabilities and malicious codes'] |
+| Paper 2  | nan                | nan                                                                     | ['Employing deep learning techniques to thwart Android malware attacks']                                        |
+| Paper 3  | nan                | nan                                                                     | ['Dynamic testing techniques for mobile apps regarding non-functional requirements (NFRs)']                     |
+| Paper 4  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 5  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 6  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 7  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 8  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 9  | nan                | nan                                                                     | ['N/A']                                                                                                         |
+| Paper 10 | nan                | nan                                                                     | ['Autonomous navigation for mobile robots using vision']                                                        |
+| Paper 11 | nan                | nan                                                                     | ['Context simulation for testing mobile context-aware applications']                                            |
+| Paper 12 | nan                | nan                                                                     | ['Android malware detection with deep neural models']                                                           |
+| P 13     | nan                | nan                                                                     | ['Detecting repackaged Android apps']                                                                           |
+| Paper 14 | nan                | nan                                                                     | ['App store effects on software engineering practices']                                                         |
+| Paper 15 | nan                | nan                                                                     | ['Cross-platform mobile development']                                                                           |
+| Paper 16 | nan                | nan                                                                     | ['OS-level energy management techniques for mobile processing units']                                           |
+| Paper 17 | nan                | nan                                                                     | ['Automated testing of Android apps']                                                                           |
+| Paper 18 | nan                | nan                                                                     | ['Engineering a secure Android ecosystem']                                                                      |
+| Paper 19 | nan                | nan                                                                     | ['App store analysis for software engineering']                                                                 |
+| Paper 20 | nan                | nan                                                                     | ['Smartphone-based systems for opportunistic user context recognition']                                         |
+| Paper 21 | nan                | nan                                                                     | ['Mobile learning applications and technologies']                                                               |
+| Paper 22 | nan                | nan                                                                     | ['Mutation testing for mobile applications']                                                                    |
+| Paper 23 | nan                | nan                                                                     | ['Performance optimization for mobile applications']                                                            |
+
+MATCHES:
+Platform: 
+API usage: 
+Functionality: 

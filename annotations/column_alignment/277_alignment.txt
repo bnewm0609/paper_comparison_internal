@@ -1,0 +1,41 @@
+ID: 74cda759-32e4-4a3f-94cd-be20f46a3b2e
+
+GOLD TABLE:
+|           | Type of PSO       | Type of the ELD problem                                   | Test system                                     |
+|----------:|:------------------|:----------------------------------------------------------|:------------------------------------------------|
+| 109850510 | ['FSAPSO']        | ['A survey paper in micro-grids power dispatch']          | ['A typical micro-grid test system']            |
+|  33864281 | ['PSO']           | ['CHP-dispatch with losses and emission in micro-grids']  | ['IEEE 14-bus five-gen.']                       |
+|  44243215 | ['PSO, ICA']      | ['Micro-grids with WT and PV power dispatch']             | ['A typical three-gen. micro-grid test system'] |
+|   5329675 | ['PSO']           | ['Micro-grids with WT and PV with losses power dispatch'] | ['A typical three-gen. micro-grid test system'] |
+|  15406693 | ['-']             | ['using actual mathematical modelling of the resources']  | ['-']                                           |
+|  13749012 | ['QPSO']          | ['ELD of smart grids with uncertainty and carbon tax']    | ['Modified IEEE 30-bus six-gen.']               |
+| 109624004 | ['Modeified PSO'] | ['ELD with demand response and presence of DG']           | ['A real test system']                          |
+| 113217306 | ['FAPSO']         | ['ELD with demand response from consumers']               | ['A typical 18-bus system with 3-WT']           |
+| 206785017 | ['MPSO']          | ['ELD with risk based WT']                                | ['IEEE 30-bus six-gen.']                        |
+|  57189418 | ['CBPSO, fuzzy']  | ['Multi objective EED']                                   | ['A typical distribution network']              |
+
+GOLD SCHEMA:
+0: Type of PSO
+1: Type of the ELD problem
+2: Test system
+
+PREDICTION PATH:../../metric_validation_0/74cda759-32e4-4a3f-94cd-be20f46a3b2e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Economic aspects considered (e.g., cost minimization, energy costs minimization, total operating cost)   | Constrained optimization problem formulation (e.g., equality and inequality constraints)                          | Performance evaluation and comparison with other methods (e.g., computational efficiency, convergence speed, quality of solutions)   |
+|:---------|:---------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['minimization of total operating cost of power systems']                                                | ['various equality and inequality constraints specific to ELD problems']                                          | ['N/A']                                                                                                                              |
+| paper_2  | ['minimization of total operating cost, reduction of pollutant emissions']                               | ['equality and inequality constraints for minimizing total operating cost and emissions']                         | ['comparison with conventional PSO and genetic algorithm (GA)']                                                                      |
+| paper_3  | ['minimization of fuel cost, consideration of NOx emissions']                                            | ['real power demand equality constraint, heat balance inequality constraint, and DER capacity limits constraint'] | ['comparison of results with PSO']                                                                                                   |
+| paper_4  | ['minimization of operating cost for Micro grids']                                                       | ['total operating cost and power transaction constraints between MGs and the main grid']                          | ['comparative study of ICA and PSO algorithms']                                                                                      |
+| paper_5  | ['minimization of operation cost of each MGs']                                                           | ['power transaction constraints between MGs and the main grid']                                                   | ['N/A']                                                                                                                              |
+| paper_6  | ['minimization of operation cost with the influence of wind power uncertainty and carbon taxes']         | ['constraints for wind power uncertainty and carbon taxes']                                                       | ['comparison of QPSO with other ED models']                                                                                          |
+| paper_7  | ['minimization of operation costs of a virtual power player']                                            | ['network constraints']                                                                                           | ['comparison with a deterministic approach and with PSO without mutation and Evolutionary PSO']                                      |
+| paper_8  | ['minimization of power loss']                                                                           | ['load response and power loss constraints']                                                                      | ['comparison with a previous heuristic method for power loss minimization']                                                          |
+| paper_9  | ['minimization of operation cost and risk']                                                              | ["cost, risk, and loss of load and 'spilling' wind energy constraints"]                                           | ['analysis of Pareto-optimal solutions']                                                                                             |
+| paper_10 | ['minimization of total economic cost and network loss']                                                 | ['constraints for uncontrollable microsources, storage devices, and network losses']                              | ['comparison of CBPSO with BPSO']                                                                                                    |
+
+MATCHES:
+Economic aspects considered (e.g., cost minimization, energy costs minimization, total operating cost): 
+Constrained optimization problem formulation (e.g., equality and inequality constraints): 
+Performance evaluation and comparison with other methods (e.g., computational efficiency, convergence speed, quality of solutions): 

@@ -1,0 +1,31 @@
+ID: 0c08592c-2499-453e-b250-12ee469069a8
+
+GOLD TABLE:
+|           | System Name             | Team affiliations                                 |
+|----------:|:------------------------|:--------------------------------------------------|
+| 225040083 | ['VerT5erini']          | ['University of Waterloo']                        |
+| 229923480 | ['ParagraphJoint']      | ['UT Dallas / Chan Zuckerburg Initiative / UCLA'] |
+| 226239683 | ['Law & Econ']          | ['ETH Zurich']                                    |
+| 233387973 | ['QMUL-SDS']            | ['Queen Mary University of London']               |
+| 216867133 | ['first_1']             | ['Ping An of China']                              |
+| 233231692 | ['bioBert for sciFact'] | ['-']                                             |
+
+GOLD SCHEMA:
+0: System Name
+1: Team affiliations
+
+PREDICTION PATH:../../metric_validation_0/0c08592c-2499-453e-b250-12ee469069a8/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach to Scientific Claim Verification                                                                                                | Performance on COVID-19 Claims                                                                               |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Uses a dataset of expert-written scientific claims paired with evidence-containing abstracts annotated with labels and rationales']    | ['Able to identify plausible evidence for 23 / 36 claims relevant to COVID-19 on the CORD-19 corpus']        |
+| paper_2 | ['Adapts a pretrained sequence-to-sequence model to the task of scientific claim verification in the biomedical domain']                 | ['Generalizes to two new datasets of COVID-19 claims using evidence from the ever-expanding CORD-19 corpus'] |
+| paper_3 | ['Proposes a paragraph-level, multi-task learning model for direct computation of contextualized sentence embeddings from a BERT model'] | ['N/A']                                                                                                      |
+| paper_4 | ['N/A']                                                                                                                                  | ['N/A']                                                                                                      |
+| paper_5 | ['Presents an approach that performs scientific claim verification by doing binary classifications step-by-step']                        | ['Achieves substantial improvements on the dev set and is the No. 4 team on the leaderboard']                |
+| paper_6 | ['N/A']                                                                                                                                  | ['N/A']                                                                                                      |
+
+MATCHES:
+Approach to Scientific Claim Verification: 
+Performance on COVID-19 Claims: 

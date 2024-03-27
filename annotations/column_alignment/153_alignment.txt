@@ -1,0 +1,29 @@
+ID: c5f434c2-7bac-47ed-8dcb-be78c4f7ac67
+
+GOLD TABLE:
+|           | Personality assessment questionnaire              | Item count   |
+|----------:|:--------------------------------------------------|:-------------|
+|  59804394 | ['IPIP 50-version']                               | ['50']       |
+|  39888164 | ['Big-five marker scale (BFMS) {{cite:4351c2f}}'] | ['100']      |
+|  12589916 | ['BFI-10']                                        | ['10']       |
+| 132309131 | ['IPIP-NEO-60']                                   | ['60']       |
+|  46855347 | ['IPIP 100-version']                              | ['100']      |
+
+GOLD SCHEMA:
+0: Personality assessment questionnaire
+1: Item count
+
+PREDICTION PATH:../../metric_validation_0/c5f434c2-7bac-47ed-8dcb-be78c4f7ac67/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Physiological Correlates of Emotion and Personality                                                                                                  | Emotion and Personality Trait Recognition                                                                                                                                                 |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                              | ['N/A']                                                                                                                                                                                   |
+| paper_2 | ['Physiological responses including EEG, ECG, GSR, and facial activity data were studied to examine the correlations with emotion and personality.'] | ['The paper discusses binary emotion and personality trait recognition using physiological features and reports above-chance recognition for both affective and personality dimensions.'] |
+| paper_3 | ['N/A']                                                                                                                                              | ['N/A']                                                                                                                                                                                   |
+| paper_4 | ['N/A']                                                                                                                                              | ['N/A']                                                                                                                                                                                   |
+| paper_5 | ['N/A']                                                                                                                                              | ['N/A']                                                                                                                                                                                   |
+
+MATCHES:
+Physiological Correlates of Emotion and Personality: 
+Emotion and Personality Trait Recognition: 

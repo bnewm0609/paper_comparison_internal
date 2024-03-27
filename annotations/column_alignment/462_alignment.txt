@@ -1,0 +1,27 @@
+ID: 8492db98-0c47-4a9c-87c7-ef0a45ef6628
+
+GOLD TABLE:
+|           | Task             | Target    | Sensor   | Best Method     |
+|----------:|:-----------------|:----------|:---------|:----------------|
+| 201099006 | ['Detection']    | ['Trees'] | ['RGB']  | ['RetinaNet']   |
+| 210846858 | ['Segmentation'] | ['Trees'] | ['RGB']  | ['FC-DenseNet'] |
+
+GOLD SCHEMA:
+0: Task
+1: Target
+2: Sensor
+3: Best Method
+
+PREDICTION PATH:../../metric_validation_0/8492db98-0c47-4a9c-87c7-ef0a45ef6628/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodology                                                                                                    | Objective                                                                                            | Dataset                                                                                          | Results                                                                                                                 |
+|:--------|:---------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Convolutional Neural Network (CNN)-based methods for object detection: Faster R-CNN, YOLOv3, and RetinaNet'] | ['Detection and classification of tree species using high spatial resolution RGB imagery from UAVs'] | ['RGB images of a forested urban area in midwest Brazil, target object is Dipteryx alata Vogel'] | ['Average precision around 92% with processing times below 30 miliseconds']                                             |
+| Paper 2 | ['Fully convolutional networks (FCNs) for semantic segmentation: SegNet, U-Net, FC-DenseNet, and DeepLabv3+']  | ['Semantic segmentation of a single tree species in high resolution UAV optical imagery']            | ['RGB images of an urban area, target species is Dipteryx alata Vogel']                          | ['Average overall accuracy ranging from 88.9% to 96.7%, F1-score between 87.0% and 96.1%, and IoU from 77.1% to 92.5%'] |
+
+MATCHES:
+Methodology: 
+Objective: 
+Dataset: 
+Results: 

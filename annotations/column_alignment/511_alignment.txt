@@ -1,0 +1,27 @@
+ID: 0f3a0b21-945b-4c45-af04-d969bcdcfee2
+
+GOLD TABLE:
+|          | year     | # classes   | # img train / val*   | quality   |
+|---------:|:---------|:------------|:---------------------|:----------|
+| 11266650 | ['2014'] | ['012']     | ['28,648 / 02,113']  | ['+']     |
+|  4794860 | ['2018'] | ['009']     | ['0 / 05,818']       | ['+++']   |
+
+GOLD SCHEMA:
+0: year
+1: # classes
+2: # img train / val*
+3: quality
+
+PREDICTION PATH:../../metric_validation_0/0f3a0b21-945b-4c45-af04-d969bcdcfee2/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                               | Level of alignment between 2D images and 3D shapes   | Calibration of evaluation criteria                                                                      | Performance of reconstruction algorithms                                                                        |
+|:--------|:--------------------------------------------------|:-----------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['More than 3,000 object instances per category'] | ['N/A']                                              | ['N/A']                                                                                                 | ['N/A']                                                                                                         |
+| paper_2 | ['N/A']                                           | ['Pix3D has pixel-level 2D-3D alignment']            | ['Calibration of evaluation criteria for 3D shape reconstruction conducted through behavioral studies'] | ['Multi-task learning approach achieves state-of-the-art performance on 3D reconstruction and pose estimation'] |
+
+MATCHES:
+Size of the dataset: 
+Level of alignment between 2D images and 3D shapes: 
+Calibration of evaluation criteria: 
+Performance of reconstruction algorithms: 

@@ -1,0 +1,31 @@
+ID: 71a84e95-d891-4177-b307-4019dd0ca8d5
+
+GOLD TABLE:
+|           | Dataset        | # Graphs   | Citation                                                                                                 |
+|----------:|:---------------|:-----------|:---------------------------------------------------------------------------------------------------------|
+|  19990980 | ['MUTAG']      | ['188']    | ['SUGAR {{cite:ee5d887}}, SubgraphX {{cite:41b660c}}, XGNN {{cite:8ff5482}}, GraphAug {{cite:081dd9e}}'] |
+|   9620021 | ['PTC']        | ['344']    | ['SUGAR {{cite:ee5d887}}']                                                                               |
+|   8174592 | ['PROTEINS']   | ['1113']   | ['SUGAR {{cite:ee5d887}}, GraphAug {{cite:081dd9e}}']                                                    |
+| 217680306 | ['BBBP']       | ['2039']   | ['SubgraphX {{cite:41b660c}}']                                                                           |
+| 229923402 | ['GRAPH-SST2'] | ['70042']  | ['SubgraphX {{cite:41b660c}}']                                                                           |
+
+GOLD SCHEMA:
+0: Dataset
+1: # Graphs
+2: Citation
+
+PREDICTION PATH:../../metric_validation_0/71a84e95-d891-4177-b307-4019dd0ca8d5/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Graph kernels for protein function prediction                                                                                                                                                | Integration of protein information from various sources                                                                                                        | Optimization of protein graph attributes                                                                              |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                        | ['N/A']                                                                                                               |
+| paper_2 | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                        | ['N/A']                                                                                                               |
+| paper_3 | ['Our graph model, derivable from protein sequence and structure only, is competitive with vector models that require additional protein information, such as the size of surface pockets.'] | ['We have laid the foundation for a protein function prediction system that integrates protein information from various sources efficiently and effectively.'] | ['Hyperkernels allow us to select and to optimally combine the most relevant node attributes in our protein graphs.'] |
+| paper_4 | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                        | ['N/A']                                                                                                               |
+| paper_5 | ['N/A']                                                                                                                                                                                      | ['N/A']                                                                                                                                                        | ['N/A']                                                                                                               |
+
+MATCHES:
+Graph kernels for protein function prediction: 
+Integration of protein information from various sources: 
+Optimization of protein graph attributes: 

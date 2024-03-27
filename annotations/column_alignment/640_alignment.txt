@@ -1,0 +1,30 @@
+ID: 6f7faa13-6377-43fc-a57a-8d88efdf569d
+
+GOLD TABLE:
+|          | Model                                                                              | Learning                                                                                              | Advantages                                                                           | Disadvantages                                                                                                       |
+|---------:|:-----------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| 18421517 | ['Track features of segmented objects']                                            | ['Match features across frames']                                                                      | ['More robust than shape tracking, may allow some deformation (aspect change)']      | ['Features may not be consistently present, selection of appropriate features is important, computation intensive'] |
+| 14320286 | ['Features of objects case as state vectors of network representing motion model'] | ['Learning techniques such as expectation maximization are used to progressively update the network'] | ['Predictive nature, learns motion adaptively']                                      | ['Requires features as state variables, very computation intensive, cannot deal with complex motion patterns']      |
+| 12758993 | ['Computes motion maps or flow vectors to determine consistent motion patterns']   | ['Cluster using modified k-means clustering on flow maps or compute flow equation at each pixel']     | ['Wakes and waves are automatically suppressed due to inconsistent motion patterns'] | ['Cannot deal with boat maneuvers and is computation intensive']                                                    |
+
+GOLD SCHEMA:
+0: Model
+1: Learning
+2: Advantages
+3: Disadvantages
+
+PREDICTION PATH:../../metric_validation_0/6f7faa13-6377-43fc-a57a-8d88efdf569d/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Target Detection Techniques                                         | Tracking Techniques                                                                               | Color Spaces for Target Detection   | Utilization of Hidden Markov Models                                                    |
+|:--------|:--------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:------------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['Haar-like classifier is used for boat detection.']                | ['Detection results are filtered over time to reduce false alarm rate.']                          | ['N/A']                             | ['N/A']                                                                                |
+| paper_2 | ['Four different point target detection techniques are evaluated.'] | ['Two tracking techniques are evaluated in the paper.']                                           | ['N/A']                             | ['The paper has a particular focus on Hidden Markov Model based tracking techniques.'] |
+| paper_3 | ['N/A']                                                             | ['The system is able to track the boats navigating the channel with good accuracy in real-time.'] | ['N/A']                             | ['N/A']                                                                                |
+| paper_4 | ['N/A']                                                             | ['The system is able to track the boats navigating the channel with good accuracy in real-time.'] | ['N/A']                             | ['N/A']                                                                                |
+
+MATCHES:
+Target Detection Techniques: 
+Tracking Techniques: 
+Color Spaces for Target Detection: 
+Utilization of Hidden Markov Models: 

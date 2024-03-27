@@ -1,0 +1,38 @@
+ID: 773906fd-2015-4d9b-94c9-0e0e1a46c2ae
+
+GOLD TABLE:
+|           | Description                            | qubits   | gates     | Mem.       |
+|----------:|:---------------------------------------|:---------|:----------|:-----------|
+|    676378 | ['Bernstein-Vazirani algorithm']       | ['35']   | ['119']   | ['512 GB'] |
+| 118149905 | ['Quantum approx. optimization']       | ['30']   | ['1,380'] | ['16 GB']  |
+| 121952442 | ['Quantum simulation for ising model'] | ['35']   | ['414']   | ['512 GB'] |
+| 260535806 | ['Quantum neural network']             | ['31']   | ['164']   | ['32 GB']  |
+| 207198067 | ["Grover's algorithm"]                 | ['31']   | ['207']   | ['32 GB']  |
+| 118445805 | ['Quantum Ripple-Carry adder']         | ['37']   | ['154']   | ['2 TB']   |
+
+GOLD SCHEMA:
+0: Description
+1: qubits
+2: gates
+3: Mem.
+
+PREDICTION PATH:../../metric_validation_0/773906fd-2015-4d9b-94c9-0e0e1a46c2ae/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Purpose (e.g., evaluation, verification)                                      | Included quantum algorithms and routines                | Generality vs. usability trade-off                                      | Hardware and software requirements                                    |
+|:--------|:------------------------------------------------------------------------------|:--------------------------------------------------------|:------------------------------------------------------------------------|:----------------------------------------------------------------------|
+| paper_1 | ['Complexity theoretic study of quantum computation']                         | ['Efficient universal quantum Turing machine']          | ['Focus on complexity-theoretic quantum computation features']          | ['N/A']                                                               |
+| paper_2 | ['Complexity theoretic study of quantum computation']                         | ['Efficient universal quantum Turing machine']          | ['Focus on complexity-theoretic quantum computation features']          | ['N/A']                                                               |
+| paper_3 | ['Producing approximate solutions for combinatorial optimization problems']   | ['Approximate optimization algorithm']                  | ['Quality of approximation improves with increased p value']            | ['Depends on a positive integer p and input size']                    |
+| paper_4 | ['Exact solution of the two-dimensional Ising model']                         | ['Exact solution for the two-dimensional Ising model']  | ['Exact solution of the two-dimensional Ising model']                   | ['N/A']                                                               |
+| paper_5 | ['Exact solution of the two-dimensional Ising model']                         | ['Exact solution for the two-dimensional Ising model']  | ['Exact solution of the two-dimensional Ising model']                   | ['N/A']                                                               |
+| paper_6 | ['Benchmark suite for evaluating and verifying quantum computing properties'] | ['Benchmark suite for a variety of quantum algorithms'] | ['Trade-off between generality and usability in a suite of benchmarks'] | ['Depends on hardware and software for quantum algorithm evaluation'] |
+| paper_7 | ['Benchmark suite for evaluating and verifying quantum computing properties'] | ['Benchmark suite for a variety of quantum algorithms'] | ['Trade-off between generality and usability in a suite of benchmarks'] | ['Depends on hardware and software for quantum algorithm evaluation'] |
+| paper_8 | ['Fast quantum mechanical algorithm for database search']                     | ['Quantum mechanical algorithm for database search']    | ['Faster search algorithm with quantum mechanical systems']             | ['Depends on the size of N for the phone directory']                  |
+| paper_9 | ['New linear-depth ripple-carry quantum addition circuit']                    | ['Ripple-carry quantum addition circuit']               | ['Linear-depth circuit with improved efficiency']                       | ['Lower depth and fewer gates than previous ripple-carry adders']     |
+
+MATCHES:
+Purpose (e.g., evaluation, verification): 
+Included quantum algorithms and routines: 
+Generality vs. usability trade-off: 
+Hardware and software requirements: 

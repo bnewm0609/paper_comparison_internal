@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Approach for human parsing                      | Pose estimation methods                                                                              |
+|:---------|:------------------------------------------------|:-----------------------------------------------------------------------------------------------------|
+| paper_1  | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_2  | ['N/A']                                         | ['Human3.6M dataset with synchronized image, human motion capture, and time of flight (depth) data'] |
+| paper_3  | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_4  | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_5  | ['Contextualized Convolutional Neural Network'] | ['N/A']                                                                                              |
+| paper_6  | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_7  | ['N/A']                                         | ['Multi-pose Guided Virtual Try-On Network']                                                         |
+| paper_8  | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_9  | ['N/A']                                         | ['Pose-guided virtual try-on scheme']                                                                |
+| paper_10 | ['N/A']                                         | ['Spatiotemporal localization of actions']                                                           |
+| paper_11 | ['N/A']                                         | ['N/A']                                                                                              |
+| paper_12 | ['N/A']                                         | ['Dense intermediate pose-guided representation']                                                    |
+| paper_13 | ['N/A']                                         | ['3D body mesh recovery module']                                                                     |
+| paper_14 | ['N/A']                                         | ['N/A']                                                                                              |
+
+MATCHES:
+Approach for human parsing: 
+Pose estimation methods: 

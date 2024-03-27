@@ -1,0 +1,42 @@
+ID: 33d1dcd3-eeb5-4e81-bba2-5a9ecc730856
+
+GOLD TABLE:
+|          | Model                                                        | Main Contribution                                        |
+|---------:|:-------------------------------------------------------------|:---------------------------------------------------------|
+| 12054943 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ['and high uncoded BER of the eavesdropper']             |
+| 37018232 | ['No CSI of the receiver and eavesdropper']                  | ['and zero diversity of\nthe eavesdropper']              |
+|  8778619 | ['No CSI of the receiver and eavesdropper']                  | ['to make the eavesdropper unable to decode the signal'] |
+|  6102369 | ['No CSI of the receiver and eavesdropper']                  | ['by using\nM-PSK modulation and OSTBC']                 |
+|  7786858 | ['No CSI of the receiver and eavesdropper']                  | ["to deliberately randomize the eavesdropper's signal"]  |
+| 16575249 | ['Perfect CSI of the receiver, no CSI of the eavesdropper']  | ["the eavesdropper's correctly decoding probability"]    |
+| 35469277 | ['Perfect CSIT\nof the receiver, SCSIT of the eavesdropper'] | ['Analyze the SER of confidential information']          |
+
+GOLD SCHEMA:
+0: Model
+1: Main Contribution
+
+PREDICTION PATH:../../metric_validation_0/33d1dcd3-eeb5-4e81-bba2-5a9ecc730856/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Security Approach                                                                           | Wireless Channel                                                      |
+|:---------|:--------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|
+| paper_1  | ['Asymptotically high SNR regime security approach with artificial noise alignment']        | ['MIMO Gaussian wiretap channels']                                    |
+| paper_2  | ['Asymptotically high SNR regime security approach with artificial noise alignment']        | ['MIMO Gaussian wiretap channels']                                    |
+| paper_3  | ['Asymptotically high SNR regime security approach with artificial noise alignment']        | ['MIMO Gaussian wiretap channels']                                    |
+| paper_4  | ['Channel reciprocity-based security approach without Transmitter CSI']                     | ['Space-Time Block Coding without Transmitter CSI']                   |
+| paper_5  | ['Channel reciprocity-based security approach without Transmitter CSI']                     | ['Space-Time Block Coding without Transmitter CSI']                   |
+| paper_6  | ['Channel reciprocity-based security approach without Transmitter CSI']                     | ['Space-Time Block Coding without Transmitter CSI']                   |
+| paper_7  | ['Security approach for Secret Channel Secrecy without unrealistic assumptions']            | ['MISO wiretap channel']                                              |
+| paper_8  | ['Security approach for Secret Channel Secrecy without unrealistic assumptions']            | ['MISO wiretap channel']                                              |
+| paper_9  | ['Security approach for Rayleigh flat fading channels with M-ary PSK and OSTBC']            | ['Rayleigh flat fading channels']                                     |
+| paper_10 | ['Security approach for Rayleigh flat fading channels with M-ary PSK and OSTBC']            | ['Rayleigh flat fading channels']                                     |
+| paper_11 | ['Signal randomization using antenna array redundancy for low-probability-of-interception'] | ['Randomized array transmission for low-probability-of-interception'] |
+| paper_12 | ['Signal randomization using antenna array redundancy for low-probability-of-interception'] | ['Randomized array transmission for low-probability-of-interception'] |
+| paper_13 | ["MIMO lattice wiretap code design criterion to minimize Eve's error probability"]          | ['MIMO wiretap channels, block fading channels']                      |
+| paper_14 | ["MIMO lattice wiretap code design criterion to minimize Eve's error probability"]          | ['MIMO wiretap channels, block fading channels']                      |
+| paper_15 | ['Secure communication over MISOME wiretap channel using artificial-noise strategy']        | ['Multiple-input single-output Rayleigh-fading channel']              |
+| paper_16 | ['Secure communication over MISOME wiretap channel using artificial-noise strategy']        | ['Multiple-input single-output Rayleigh-fading channel']              |
+
+MATCHES:
+Security Approach: 
+Wireless Channel: 

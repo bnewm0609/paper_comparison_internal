@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Number of Images per Class                                               | Annotated Attributes                       | Method of Collecting and Filtering Data                                        |
+|:--------|:-------------------------------------------------------------------------|:-------------------------------------------|:-------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                  | ['N/A']                                    | ['N/A']                                                                        |
+| paper_2 | ['N/A']                                                                  | ['N/A']                                    | ['N/A']                                                                        |
+| paper_3 | ['doubles the number of images per category']                            | ['part localization annotations']          | ['filtered by multiple users of Mechanical Turk']                              |
+| paper_4 | ['10 million image database']                                            | ['labeled with scene semantic categories'] | ['N/A']                                                                        |
+| paper_5 | ['N/A']                                                                  | ['N/A']                                    | ['N/A']                                                                        |
+| paper_6 | ['20,000 unique sketches evenly distributed over 250 object categories'] | ['N/A']                                    | ['We release the complete crowd-sourced dataset of sketches to the community'] |
+
+MATCHES:
+Number of Images per Class: 
+Annotated Attributes: 
+Method of Collecting and Filtering Data: 

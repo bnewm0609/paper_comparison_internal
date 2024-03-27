@@ -1,0 +1,37 @@
+ID: 01c458ee-e887-4bff-ad32-a696c64c9590
+
+GOLD TABLE:
+|           | Task           | Metric       | Description                        | # Train Inst.   | # Test Inst.   |
+|----------:|:---------------|:-------------|:-----------------------------------|:----------------|:---------------|
+|  52054914 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['12,627']      | ['1,422']      |
+|  17677052 | ['Entailment'] | ['Accuracy'] | ['Sentence Pair Entailment']       | ['8,588']       | ['302']        |
+| 203661778 | ['NER']        | ['Micro-F1'] | ['Drug and Adverse Drug Event']    | ['36,384']      | ['23,462']     |
+|  15493987 | ['NER']        | ['Micro-F1'] | ['Events']                         | ['16,468']      | ['13,594']     |
+|  30029552 | ['NER']        | ['Micro-F1'] | ['Problems, Treatments and Tests'] | ['27,837']      | ['45,009']     |
+|  96437052 | ['NER']        | ['Micro-F1'] | ['UMLS Semantic Groups (French)']  | ['2,695']       | ['2,260']      |
+
+GOLD SCHEMA:
+0: Task
+1: Metric
+2: Description
+3: # Train Inst.
+4: # Test Inst.
+
+PREDICTION PATH:../../metric_validation_0/01c458ee-e887-4bff-ad32-a696c64c9590/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods for event detection                                                                                                                                   | Normalization of temporal expressions                                                            | Classification of temporal relations                                                       | Performance of different ML methods                                                                                                           | Hybrid approaches for relation classification                                                                                                |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['leveraged transfer learning using datasets from the open domain, and incorporate domain knowledge from external data and lexical sources']                  | ['N/A']                                                                                          | ['N/A']                                                                                    | ['demonstrate performance gains using transfer learning and domain knowledge strategies']                                                     | ['N/A']                                                                                                                                      |
+| paper_2 | ['N/A']                                                                                                                                                       | ['N/A']                                                                                          | ['N/A']                                                                                    | ['N/A']                                                                                                                                       | ['N/A']                                                                                                                                      |
+| paper_3 | ['performed an analysis of the results to identify the state of the art in concept extraction and relation classification tasks']                             | ['N/A']                                                                                          | ['evaluated 3 tasks: concept extraction, relation classification, and end-to-end systems'] | ['set a high performance bar with F1 scores of 0.9418 for concept extraction, 0.9630 for relation classification, and 0.8905 for end-to-end'] | ['N/A']                                                                                                                                      |
+| paper_4 | ['evaluated systems on clinically significant events and temporal expressions, showing that statistical ML methods consistently showed superior performance'] | ['normalized the values of the extracted temporal expressions to an ISO specification standard'] | ['identified temporal relations between clinical events and temporal expressions']         | ['statistical ML methods consistently showed superior performance for event detection']                                                       | ['systems using hybrid approaches that combined ML and heuristics based methods produced the best results']                                  |
+| paper_5 | ['showed that machine learning approaches could be augmented with rule-based systems to determine concepts, assertions, and relations']                       | ['N/A']                                                                                          | ['assigned relation types that hold between medical problems, tests, and treatments']      | ['N/A']                                                                                                                                       | ['ensembles of classifiers, information from unlabeled data, and external knowledge sources can help when the training data are inadequate'] |
+| paper_6 | ['N/A']                                                                                                                                                       | ['achieved above 0.83 precision for entity pre-annotations']                                     | ['N/A']                                                                                    | ['N/A']                                                                                                                                       | ['N/A']                                                                                                                                      |
+
+MATCHES:
+Methods for event detection: 
+Normalization of temporal expressions: 
+Classification of temporal relations: 
+Performance of different ML methods: 
+Hybrid approaches for relation classification: 

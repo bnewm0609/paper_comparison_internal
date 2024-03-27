@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Features (e.g. local shape/texture, boundary shape, spatial distribution)   | Learning Algorithms for Feature Combination (e.g. multiple kernel framework and SVM classifier)   | Performance Improvement based on Feature Combination                            |
+|:--------|:------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| paper_1 | ['3D object representations, local feature appearance, location']                   | ['N/A']                                                                                           | ['Outperform state-of-the-art 2D counterparts for fine-grained categorization'] |
+| paper_2 | ['Local shape/texture, boundary shape, spatial distribution, color']                | ['Multiple kernel framework, SVM classifier']                                                     | ['Vastly improves performance, from 55.1% to 72.8%']                            |
+| paper_3 | ['N/A']                                                                             | ['N/A']                                                                                           | ['N/A']                                                                         |
+| paper_4 | ['N/A']                                                                             | ['N/A']                                                                                           | ['N/A']                                                                         |
+| paper_5 | ['Visual features, similarity measure']                                             | ['N/A']                                                                                           | ['Optimized similarity measure based on visual features']                       |
+| paper_6 | ['N/A']                                                                             | ['Bag-of-features sketch representation, multi-class support vector machines']                    | ['Recognition method able to identify unknown sketches with 56% accuracy']      |
+
+MATCHES:
+Type of Features (e.g. local shape/texture, boundary shape, spatial distribution): 
+Learning Algorithms for Feature Combination (e.g. multiple kernel framework and SVM classifier): 
+Performance Improvement based on Feature Combination: 

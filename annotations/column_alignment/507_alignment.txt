@@ -1,0 +1,27 @@
+ID: 96fc5e6a-3d39-4d7c-8841-22bb4ff107eb
+
+GOLD TABLE:
+|           | Year                | Task                          | Network    | Datasets     |
+|----------:|:--------------------|:------------------------------|:-----------|:-------------|
+| 202158622 | ['0em4pt4pt\n2019'] | ['Image enhancement']         | ['cGAN']   | ['MICHE']    |
+| 222097604 | ['0em4pt4pt\n2020'] | ['Fatigue driving detection'] | ['Custom'] | ['NTHU-DDD'] |
+
+GOLD SCHEMA:
+0: Year
+1: Task
+2: Network
+3: Datasets
+
+PREDICTION PATH:../../metric_validation_0/96fc5e6a-3d39-4d7c-8841-22bb4ff107eb/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methods used for data augmentation                                                            | Effects on recognition performance                                                                                                                   | Datasets used for testing                                                                               | Challenges and limitations                                           |
+|:--------|:----------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1 | ['Conditional Generative Adversarial Network (cGAN)-based data augmentation for iris images'] | ['Improvement in recognition performance using NICE.II training dataset (selected from UBIRS.v2), MICHE database, and CASIA-Iris-Distance database'] | ['NICE.II training dataset (selected from UBIRS.v2)', 'MICHE database', 'CASIA-Iris-Distance database'] | ['cGAN model limitations when using the periocular region as input'] |
+| paper_2 | ['N/A']                                                                                       | ['N/A']                                                                                                                                              | ['National Tsing Hua University Drowsy Driver Detection (NTHU-DDD) Video Dataset']                      | ['N/A']                                                              |
+
+MATCHES:
+Methods used for data augmentation: 
+Effects on recognition performance: 
+Datasets used for testing: 
+Challenges and limitations: 

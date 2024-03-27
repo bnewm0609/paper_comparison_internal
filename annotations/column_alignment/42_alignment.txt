@@ -1,0 +1,43 @@
+ID: 1a4d511f-99f9-4d0c-8dba-483f65e4ee9b
+
+GOLD TABLE:
+|           | Sensor            | Object        | Sensor Position   | Algorithms                                                       | Advantages                                                                               | limitation                                                                                                                          |
+|----------:|:------------------|:--------------|:------------------|:-----------------------------------------------------------------|:-----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| 237001279 | ['6-axis IMU']    | ['Arm']       | ['wrist']         | ['RNN']                                                          | ['accurate arm tracking with single wrist-worn IMU']                                     | ['body must be in static state so that IMU data are merely caused by arm motion']                                                   |
+|    616233 | ['9-axis IMU']    | ['Arm']       | ['wrist']         | ['Modified hidden Markov model (HMM)']                           | ['accurate real-time arm tracking with single wrist-worn IMU']                           | ['compasses incorporated in wearable devices are prone to errors, especially in indoor environments; tracking on the move falters'] |
+|  16142980 | ['IMUs']          | ['full body'] | ['all joints']    | ['sensor fusion (sensor kinematics, biomechanical model, etc.)'] | ['full body motion animation']                                                           | ['sensors are installed in each joints; expensive']                                                                                 |
+| 206612638 | ['IMUs']          | ['arm']       | ['arm']           | ['unscented Kalman filter']                                      | ['continuously shoulder /elbow angle estimation compensating the drift error over time'] | ['only joint angle of shoulder and elbow were explored']                                                                            |
+| 222417658 | ['60GHz Radar']   | ['hand']      | ['environment']   | ['CA-CFAR (Cell Averaging-Constant False Alarm Rate)']           | ['precise, robust and calibration-free system']                                          | ['high cost, deployment complexity']                                                                                                |
+| 237618928 | ['capacitive']    | ['hand']      | ['wrist']         | ['CNN']                                                          | ['compact, running on the edge']                                                         | ['lack of generalization and robustness']                                                                                           |
+| 212114266 | ['capacitive']    | ['fingers']   | ['middle finger'] | ['LSTM']                                                         | ['compact, low cost']                                                                    | ['low-resistive to environmental variation']                                                                                        |
+| 214768654 | ['strain sensor'] | ['fingers']   | ['fingers']       | ['proportional summation (PS)']                                  | ['high accuracy for finger tracking']                                                    | ['complexity in wearability, lack of generalization']                                                                               |
+
+GOLD SCHEMA:
+0: Sensor
+1: Object
+2: Sensor Position
+3: Algorithms
+4: Advantages
+5: limitation
+
+PREDICTION PATH:../../metric_validation_0/1a4d511f-99f9-4d0c-8dba-483f65e4ee9b/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sensor type                                  | Data processing                                                                                                          | Tracking accuracy                                                  | Tracked body parts                                      | Applications                                                                 | Use of machine learning   |
+|:--------|:---------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------|:--------------------------------------------------------|:-----------------------------------------------------------------------------|:--------------------------|
+| Paper 1 | ['6-axis IMU sensor']                        | ['Recurrent neural network (RNN)']                                                                                       | ['Comparable results to state-of-the-art approaches']              | ['3D arm motion']                                       | ['Virtual physical therapy and fitness training']                            | ['Yes']                   |
+| Paper 2 | ['IMU sensors and anatomy of arm joints']    | ['Modified hidden Markov model (HMM)']                                                                                   | ['Around 9.2 cm of median error for free-form postures']           | ['3D posture of the entire arm - both wrist and elbow'] | ['Generic platform for gesture-based applications']                          | ['No']                    |
+| Paper 3 | ['Miniature inertial sensors']               | ['State-of-the-art miniature inertial sensors, biomechanical models and sensor fusion algorithms']                       | ['Full-body human motion capture']                                 | ['Full-body human motion']                              | ['Full-body human motion capture']                                           | ['No']                    |
+| Paper 4 | ['Wearable inertial measurement units']      | ['Unscented Kalman filter']                                                                                              | ['Less than 8 ° for all shoulder and elbow angles']                | ['Movement of the arm']                                 | ['Continuous monitoring of human movement']                                  | ['No']                    |
+| Paper 5 | ['Commodity 60GHz Wi-Fi radio as a radar']   | ['Digital beamforming technique, pulsed radar, Doppler velocity, subsample peak interpolation and smoothing techniques'] | ['Average tracking error of 2.5% of the distance from the device'] | ['Handwriting']                                         | ['Handwriting tracking']                                                     | ['No']                    |
+| Paper 6 | ['Capacitive sensors']                       | ['Convolutional hidden layer']                                                                                           | ['Accuracy of 96.4%']                                              | ['Hand gestures']                                       | ['On-board hand gesture recognition']                                        | ['Yes']                   |
+| Paper 7 | ['Capacitive sensors']                       | ['Long short-term memory (LSTM)']                                                                                        | ['Mean absolute error of 13.02 degrees over all finger angles']    | ['Finger tracking']                                     | ['Interaction using natural finger movements']                               | ['Yes']                   |
+| Paper 8 | ['Fiber Bragg grating (FBG) strain sensors'] | ['Point strain (PTS), Area summation (AREA), Proportional summation (PS), and PS/Interference (PS/I or PS/I_α)']         | ['Mean absolute error (MAE) of 1.63 ± 1.97°']                      | ['Finger joint angles']                                 | ['Measuring finger joint angles of different hand sizes with high accuracy'] | ['No']                    |
+
+MATCHES:
+Sensor type: 
+Data processing: 
+Tracking accuracy: 
+Tracked body parts: 
+Applications: 
+Use of machine learning: 

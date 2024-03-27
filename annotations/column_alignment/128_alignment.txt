@@ -1,0 +1,37 @@
+ID: 4acce5ed-493d-43b0-b729-89a55f16605e
+
+GOLD TABLE:
+|           | Total epoch   | Hidden dimension   |
+|----------:|:--------------|:-------------------|
+|  47018956 | ['500']       | ['128']            |
+| 201070021 | ['500']       | ['128']            |
+| 220363476 | ['1000']      | ['256']            |
+| 221879032 | ['1500']      | ['256']            |
+| 220647438 | ['1000']      | ['256']            |
+| 237497467 | ['400']       | ['-']              |
+| 221534325 | ['2000']      | ['128']            |
+| 224803622 | ['500']       | ['256']            |
+| 195820446 | ['2000']      | ['256']            |
+
+GOLD SCHEMA:
+0: Total epoch
+1: Hidden dimension
+
+PREDICTION PATH:../../metric_validation_0/4acce5ed-493d-43b0-b729-89a55f16605e/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Techniques to relieve over-smoothing                                                                     | Interpretation of over-smoothing from an optimization perspective                                                                                           |
+|:--------|:---------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                  | ['N/A']                                                                                                                                                     |
+| paper_2 | ['N/A']                                                                                                  | ['N/A']                                                                                                                                                     |
+| paper_3 | ['GCNII with Initial residual and Identity mapping']                                                     | ['Interprets over-smoothing from the perspective of the naive first-order approximation']                                                                   |
+| paper_4 | ['N/A']                                                                                                  | ['Introduces metrics to measure over-smoothing on node-level tasks, calculates the fraction of pairwise distance between connected and disconnected nodes'] |
+| paper_5 | ['Decoupling representation transformation and propagation, Deep Adaptive Graph Neural Network (DAGNN)'] | ['N/A']                                                                                                                                                     |
+| paper_6 | ['Node Normalization (NodeNorm)']                                                                        | ['N/A']                                                                                                                                                     |
+| paper_7 | ['N/A']                                                                                                  | ['N/A']                                                                                                                                                     |
+| paper_8 | ['N/A']                                                                                                  | ['N/A']                                                                                                                                                     |
+| paper_9 | ['N/A']                                                                                                  | ['N/A']                                                                                                                                                     |
+
+MATCHES:
+Techniques to relieve over-smoothing: 
+Interpretation of over-smoothing from an optimization perspective: 

@@ -1,0 +1,29 @@
+ID: 922d9133-f613-42d2-b191-b75c784e550f
+
+GOLD TABLE:
+|           | Dataset             | Dim.          |
+|----------:|:--------------------|:--------------|
+|  10659969 | ['Moons']           | ['2']         |
+|  60282629 | ['MNIST']           | ['28x28']     |
+|    702279 | ['Fashion MNIST']   | ['28x28']     |
+|  18268744 | ['CIFAR10']         | ['32x32x3']   |
+| 198967908 | ['CelebA-HQ (128)'] | ['128x128x3'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Dim.
+
+PREDICTION PATH:../../metric_validation_0/922d9133-f613-42d2-b191-b75c784e550f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                                             | Size of dataset                                                                                                                                                                       | Purpose of dataset                                                                                                                                       |
+|:--------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 - Learning Multiple Layers of Features from Tiny Images                             | ['Millions of tiny color images']                                                                                                                                                     | ['Unsupervised training of deep generative models and object recognition experiments']                                                                   |
+| Paper 2 - Scikit-learn: Machine Learning in Python                                          | ['N/A']                                                                                                                                                                               | ['Integrating machine learning algorithms for medium-scale supervised and unsupervised problems, making machine learning accessible to non-specialists'] |
+| Paper 3 - The mnist database of handwritten digits                                          | ['60,000 training images and 10,000 test images of handwritten digits']                                                                                                               | ['Benchmarking machine learning algorithms for recognizing handwritten digits']                                                                          |
+| Paper 4 - Fashion-MNIST: a Novel Image Dataset for Benchmarking Machine Learning Algorithms | ['70,000 grayscale images of fashion products (60,000 training and 10,000 test images)']                                                                                              | ['Benchmarking machine learning algorithms for recognizing fashion products']                                                                            |
+| Paper 5 - MaskGAN: Towards Diverse and Interactive Facial Image Manipulation                | ['A large-scale high-resolution face dataset with fine-grained mask annotations named CelebAMask-HQ, specifically, 30,000 images with 19 semantic segmentation map annotations each'] | ['Enabling diverse and interactive face manipulation for facial attribute transfer and style copy tasks']                                                |
+
+MATCHES:
+Size of dataset: 
+Purpose of dataset: 

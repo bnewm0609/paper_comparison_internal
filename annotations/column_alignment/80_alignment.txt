@@ -1,0 +1,37 @@
+ID: 294c73b1-4bdd-4b95-bb11-0a09ccfdf154
+
+GOLD TABLE:
+|           | Year     | Method   | Sampling Rate (Hz)   |
+|----------:|:---------|:---------|:---------------------|
+|   9742779 | ['1998'] | ['SSC']  | ['500']              |
+|  44665584 | ['2001'] | ['SSC']  | ['200']              |
+|   8838701 | ['2013'] | ['SSC']  | ['1000']             |
+|  30929442 | ['2013'] | ['SSC']  | ['1000']             |
+|  15132485 | ['2005'] | ['EOG']  | ['10,000']           |
+|   7734460 | ['2005'] | ['EOG']  | ['10,000']           |
+| 212650070 | ['2020'] | ['EOG']  | ['1024']             |
+| 245003691 | ['2021'] | ['EOG']  | ['100']              |
+
+GOLD SCHEMA:
+0: Year
+1: Method
+2: Sampling Rate (Hz)
+
+PREDICTION PATH:../../metric_validation_0/294c73b1-4bdd-4b95-bb11-0a09ccfdf154/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types of vestibular function tests                                                                          | Stimuli used for vestibular function assessment                                                                  | Data analysis methods for vestibular function assessment                                                                 |
+|:--------|:------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Optokinetic eye movements elicited by radial optic flow']                                                 | ['Radial optic flow']                                                                                            | ['Power spectral density analysis and fractal dimension determination']                                                  |
+| paper_2 | ['Fractal Analysis of Eye Movements']                                                                       | ['Not specified in the abstract']                                                                                | ['Not specified in the abstract']                                                                                        |
+| paper_3 | ['Video Head Impulse Test (vHIT)']                                                                          | ['Small unpredictable head rotations']                                                                           | ['Comparison with scleral search coil recordings']                                                                       |
+| paper_4 | ['3D vestibular ocular reflex testing using a six degrees of freedom motion platform']                      | ['Sinusoidal and impulse stimulation, whole-body small amplitude sinusoidal and constant acceleration impulses'] | ['Input-output ratio (gain) and misalignment (co-linearity) of the 3D VOR']                                              |
+| paper_5 | ['Short latency disconjugate vestibulo-ocular responses to transient stimuli in the audio frequency range'] | ['Brief air conducted tones (125 to 6000 Hz; 132 dB SPL; 3–4 ms)']                                               | ['EOG recordings and averaged EOG']                                                                                      |
+| paper_6 | ['Responses to vibrational impulse stimuli applied to the skull']                                           | ['Vibrational impulse stimuli applied to the skull']                                                             | ['EOG recordings']                                                                                                       |
+| paper_7 | ['Anticipatory eye movement during walking turns']                                                          | ['Not specified in the abstract']                                                                                | ['EOG recordings at 1024 Hz']                                                                                            |
+| paper_8 | ['Eye Movement Signal Classification for Developing Human-Computer Interface Using Electrooculogram']       | ['Not specified in the abstract']                                                                                | ['Convolution theorem, Elman and distributed time delay neural network, single-trial analysis, bit transfer rate (BTR)'] |
+
+MATCHES:
+Types of vestibular function tests: 
+Stimuli used for vestibular function assessment: 
+Data analysis methods for vestibular function assessment: 

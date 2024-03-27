@@ -1,0 +1,25 @@
+ID: 7e1ee0ef-aa94-4c34-b22c-5bbae338db30
+
+GOLD TABLE:
+|           | Total Number of Samples   | Number of Used Samples   | Feature Dimension   |
+|----------:|:--------------------------|:-------------------------|:--------------------|
+| 220317169 | ['52416']                 | ['20000']                | ['11']              |
+| 154318866 | ['19735']                 | ['20000']                | ['33']              |
+
+GOLD SCHEMA:
+0: Total Number of Samples
+1: Number of Used Samples
+2: Feature Dimension
+
+PREDICTION PATH:../../metric_validation_0/7e1ee0ef-aa94-4c34-b22c-5bbae338db30/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Effect on social structure and organization                                                                                                    | Economic implications                                                                   | Relationship with technology and industry   |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------|:--------------------------------------------|
+| paper_1 | ['Maitland explains the peculiar nature of the arrangement, both centralized and de-centralized, and explains its impact on English society.'] | ['N/A']                                                                                 | ['N/A']                                     |
+| paper_2 | ['N/A']                                                                                                                                        | ['Some airlines are making changes to their seating arrangements to increase revenue.'] | ['N/A']                                     |
+
+MATCHES:
+Effect on social structure and organization: 
+Economic implications: 
+Relationship with technology and industry: 

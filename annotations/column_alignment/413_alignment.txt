@@ -1,0 +1,23 @@
+ID: ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f
+
+GOLD TABLE:
+|           | Category            | N      |
+|----------:|:--------------------|:-------|
+|  19355285 | ['Placebo-Control'] | ['4']  |
+| 222081054 | ['Placebo Study']   | ['12'] |
+
+GOLD SCHEMA:
+0: Category
+1: N
+
+PREDICTION PATH:../../metric_validation_0/ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Effect on stress and calmness                                                                                                                                                              | User preference and acceptance                                                                                                                                                                              |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['BrightBeat significantly influenced slower breathing, had a lasting effect, improved self-reported calmness and focus.']                                                                 | ['BrightBeat significantly influenced slower breathing, had a lasting effect, improved self-reported calmness and focus, and was highly preferred for future use.']                                         |
+| paper_2 | ['Autonomous vehicles are complex systems that may behave in unexpected ways. From the drivers’ perspective, this can cause stress and lower trust and acceptance of autonomous driving.'] | ['Prior work has shown that explanation of system behavior can mitigate these negative effects. We identified six categories to describe the main concerns and topics during unexpected driving behavior.'] |
+
+MATCHES:
+Effect on stress and calmness: 
+User preference and acceptance: 

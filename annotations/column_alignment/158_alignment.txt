@@ -1,0 +1,27 @@
+ID: ec6033dc-4e55-4127-8cc2-6a23b64c181c
+
+GOLD TABLE:
+|           | Epochs   | Batch   |
+|----------:|:---------|:--------|
+| 222066580 | ['1500'] | ['4']   |
+| 250627826 | ['500']  | ['4']   |
+| 243832686 | ['500']  | ['16']  |
+| 235265851 | ['1500'] | ['16']  |
+
+GOLD SCHEMA:
+0: Epochs
+1: Batch
+
+PREDICTION PATH:../../metric_validation_0/ec6033dc-4e55-4127-8cc2-6a23b64c181c/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Proposed Methods                                                                                                                                                                                   | Performance Comparison                                                                                                                                                       |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Asymmetric contextual modulation module for detecting infrared small targets']                                                                                                                   | ['Reports ablation studies and comparisons to state-of-the-art methods, where the proposed approach performs significantly better']                                          |
+| Paper 2 | ['Infrared shape network (ISNet) with Taylor finite difference (TFD)-inspired edge block and two-orientation attention aggregation (TOAA) block']                                                  | ['Experiments on public datasets and IRSTD-1k demonstrate the superiority of the proposed approach over representative state-of-the-art IRSTD methods']                      |
+| Paper 3 | ['Attention-Guided Pyramid Context Network (AGPCNet) algorithm with its components: Attention-Guided Context Block (AGCB), a Context Pyramid Module (CPM), and an Asymmetric Fusion Module (AFM)'] | ['AGPCNet has achieved new state-of-the-art performance on two available infrared small target datasets']                                                                    |
+| Paper 4 | ['Dense Nested Attention Network (DNA-Net) with dense nested interactive module (DNIM) and cascaded channel and spatial attention module (CSAM)']                                                  | ['Achieves better performance in terms of probability of detection (Pd), false-alarm rate (Fa), and intersection of union (IoU) compared to other state-of-the-art methods'] |
+
+MATCHES:
+Proposed Methods: 
+Performance Comparison: 

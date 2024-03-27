@@ -1,0 +1,36 @@
+ID: a07d0b86-db68-4fa1-bb26-d00069f5bd60
+
+GOLD TABLE:
+|           | Loss                      | Training set   |
+|----------:|:--------------------------|:---------------|
+|  52195299 | ['Softmax']               | ['VoxCeleb1']  |
+|  54200945 | ['-']                     | ['VoxCeleb1']  |
+|   4881455 | ['A-Softmax + GNLL']      | ['VoxCeleb1']  |
+|   4407761 | ['Softmax']               | ['VoxCeleb1']  |
+|  51713108 | ['AM-Softmax']            | ['VoxCeleb1']  |
+|  49211906 | ['Softmax + Contrastive'] | ['VoxCeleb2']  |
+|  67856245 | ['Softmax']               | ['VoxCeleb2']  |
+| 202751677 | ['AAM']                   | ['VoxCeleb1']  |
+
+GOLD SCHEMA:
+0: Loss
+1: Training set
+
+PREDICTION PATH:../../metric_validation_0/a07d0b86-db68-4fa1-bb26-d00069f5bd60/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types of neural networks used                                                | Innovations in neural network architecture                                                                                                                               |
+|:--------|:-----------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Convolutional Neural Network (CNN)']                                       | ['N/A']                                                                                                                                                                  |
+| paper_2 | ['Convolutional Neural Network (CNN)']                                       | ['N/A']                                                                                                                                                                  |
+| paper_3 | ['Convolutional Neural Network (CNN)', 'Encoder-Discriminator Architecture'] | ['Encoder-Discriminator Architecture for Mutual Information optimization']                                                                                               |
+| paper_4 | ['Convolutional Neural Network (CNN)']                                       | ['Unified end-to-end system with encoding layers: temporal average pooling, self-attentive pooling, and learnable dictionary encoding layer']                            |
+| paper_5 | ['Convolutional Neural Network (CNN)']                                       | ['Attentive statistics pooling']                                                                                                                                         |
+| paper_6 | ['Convolutional Neural Network (CNN)']                                       | ['Unified hypersphere embeddings, optimal dimensionality of embedding space, logistic margin loss function']                                                             |
+| paper_7 | ['Convolutional Neural Network (CNN)']                                       | ["Fully automated pipeline for dataset collection and curation, 'thin-ResNet' trunk architecture, dictionary-based NetVLAD or GhostVLAD layer for temporal aggregation"] |
+| paper_8 | ['Convolutional Neural Network (CNN)']                                       | ['Thin-ResNet trunk architecture, dictionary-based NetVLAD or GhostVLAD layer for temporal aggregation']                                                                 |
+| paper_9 | ['Convolutional Neural Network (CNN)']                                       | ['Neural network classifier to replace PLDA classifier in a modular neural network approach']                                                                            |
+
+MATCHES:
+Types of neural networks used: 
+Innovations in neural network architecture: 

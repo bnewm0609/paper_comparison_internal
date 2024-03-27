@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                                                       | Method of Authorship Identification                                                                                                                                                                  | Applicability of Method                                                                                                                                                                                                                                                                                            |
+|:------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 - Fine-grained binary code authorship identification                                          | ['The paper identifies the authors of binary code by determining the author of each basic block using a new finer-grained technique.']                                                               | ['The technique can discriminate the author of a basic block with 52% accuracy among 282 authors, providing a practical solution for identifying multiple authors in software.']                                                                                                                                   |
+| Paper 2 - When Coding Style Survives Compilation: De-anonymizing Programmers from Executable Binaries | ['The paper identifies the authors of binary code by using machine learning techniques and a novel set of features that include ones obtained by decompiling the executable binary to source code.'] | ["The approach is robust to basic obfuscations, a range of compiler optimization settings, and binaries that have been stripped of their symbol tables. The method is also evaluated on real-world code found 'in the wild' in single-author GitHub repositories and the recently leaked Nulled.IO hacker forum."] |
+
+MATCHES:
+Method of Authorship Identification: 
+Applicability of Method: 

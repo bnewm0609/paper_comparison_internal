@@ -1,0 +1,46 @@
+ID: daecb5e2-60e3-4ee1-90e4-5357cec93c6f
+
+GOLD TABLE:
+|           | [1pt]                  | Adopted UQ Approach(es)                |
+|           | Application            |                                        |
+|----------:|:-----------------------|:---------------------------------------|
+| 199649292 | ['Molecular Property'] | ['MVE, MC Dropout']                    |
+|  59599858 | ['Molecular Property'] | ['BNN']                                |
+| 214787185 | ['Molecular Property'] | ['MC Dropout, Ensemble']               |
+| 218718571 | ['Binding Affinity']   | ['GP']                                 |
+| 209444693 | ['Molecular Property'] | ['MVE, BNN, MC Dropout, Ensemble, GP'] |
+| 237372294 | ['Molecular Property'] | ['EDL']                                |
+| 258240450 | ['-']                  | ['MVE, MC Dropout, Ensemble, GP, EDL'] |
+| 245878846 | ['-']                  | ['GP']                                 |
+| 257767175 | ['-']                  | ['GP']                                 |
+| 259262450 | ['-']                  | ['GP']                                 |
+| 119230701 | ['DFT']                | ['MVE, Ensemble']                      |
+| 219965955 | ['DFT']                | ['GP']                                 |
+
+GOLD SCHEMA:
+0: [1pt]
+Application
+1: Adopted UQ Approach(es)
+
+PREDICTION PATH:../../metric_validation_0/daecb5e2-60e3-4ee1-90e4-5357cec93c6f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Use Cases                                                                                                   | Evaluation Criteria                                                                                   |
+|:---------|:------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['Estimation of new cancer cases and deaths in the United States']                                          | ['N/A']                                                                                               |
+| Paper 2  | ['Reliable prediction of molecular properties with uncertainty quantification']                             | ['Reliability of prediction with quantitative uncertainty analysis']                                  |
+| Paper 3  | ['Uncertainty-calibrated prediction of molecular properties and active learning']                           | ['Uncertainty estimate for judicious experimental design']                                            |
+| Paper 4  | ['Comparing scalable uncertainty estimation methods for deep learning-based molecular property prediction'] | ['Quantitative comparison of techniques for uncertainty estimation in GCNNs']                         |
+| Paper 5  | ['Systematically evaluating uncertainty quantification methods for molecular property prediction']          | ['Comparison of uncertainty quantification methods using multiple complementary performance metrics'] |
+| Paper 6  | ['Systematically evaluating uncertainty quantification methods for molecular property prediction']          | ['Comparison of uncertainty quantification methods using multiple complementary performance metrics'] |
+| Paper 7  | ['Comparing uncertainty quantifications for material property predictions']                                 | ['Accuracy, calibration, and sharpness of uncertainty estimates']                                     |
+| Paper 8  | ['Uncertainty quantification for guided molecular property prediction and discovery']                       | ['Calibration, sample efficiency, and experimental validation rates']                                 |
+| Paper 9  | ['Benchmarking uncertainty quantification for protein engineering']                                         | ['Accuracy, calibration, coverage, width, and rank correlation of uncertainty estimates']             |
+| Paper 10 | ['Gaussian processes for fitting datasets with small data and knowledge of underlying physics']             | ['Predictive performance, consideration of uncertainty, and inference for incomplete data']           |
+| Paper 11 | ['Graph Neural Networks with uncertainty estimation for molecular force fields']                            | ['Out-of-equilibrium detection and predictive performance']                                           |
+| Paper 12 | ['Estimating uncertainty for data-derived electron densities to accelerate density functional theory']      | ['Estimating uncertainty for accurate initialization of DFT calculations']                            |
+| Paper 13 | ['Learning the electronic density of states in condensed matter']                                           | ['Predictive performance, Fermi level, DOS at the Fermi level, and band energy']                      |
+
+MATCHES:
+Use Cases: 
+Evaluation Criteria: 

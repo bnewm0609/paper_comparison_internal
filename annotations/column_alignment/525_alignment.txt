@@ -1,0 +1,33 @@
+ID: 95c3954e-5daf-4039-8362-896ec07c6208
+
+GOLD TABLE:
+|          | Approach   | Driving environment                                     | Generalization   | Low Computational complexity   | Uncertainty: model errors/noisy measurements   | Experiments          |
+|---------:|:-----------|:--------------------------------------------------------|:-----------------|:-------------------------------|:-----------------------------------------------|:---------------------|
+| 13725991 | ['-']      | ['Autonomous driving in urban environment']             | ['+ +']          | ['+']                          | ['-']                                          | ['Real & Simulated'] |
+| 15780954 | ['-']      | ['Autonomous driving in real traffic situations']       | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+| 54457648 | ['-']      | ['Autonomous Driving in multiple urban configurations'] | ['+']            | ['- -']                        | ['+ +']                                        | ['Real & Simulated'] |
+
+GOLD SCHEMA:
+0: Approach
+1: Driving environment
+2: Generalization
+3: Low Computational complexity
+4: Uncertainty: model errors/noisy measurements
+5: Experiments
+
+PREDICTION PATH:../../metric_validation_0/95c3954e-5daf-4039-8362-896ec07c6208/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Autonomous Driving Approach                                             | Challenging Scenarios Addressed                                                       | Hardware and Software Implementation                                                                           | Training Data and System Performance Optimization                                                   | Performance and Safety Considerations                                              | Real-world Application                                                         |
+|:--------|:------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| paper_1 | ['Vision and radar-based perception, and digital road maps']            | ['Complex traffic situations on rural roads, small villages, and major cities']       | ['Equipped with close-to-production sensor hardware and accurate digital maps']                                | ['Reliance on vision and radar sensors and motion planning in complex urban scenarios']             | ['Details on perception and motion planning for autonomous vehicle']               | ['Historic autonomous journey on challenging route']                           |
+| paper_2 | ['End-to-end CNN approach for mapping raw pixels to steering commands'] | ['Driving in traffic with unclear visual guidance and on highways']                   | ['Trained using an NVIDIA DevBox and Torch 7, operates using an NVIDIA DRIVE PX self-driving car computer']    | ['Learning to drive with minimal training data and optimizing all processing steps simultaneously'] | ['Anticipated better performance and smaller systems due to self-optimization']    | ['Operates in real-world scenarios, including parking lots and unpaved roads'] |
+| paper_3 | ['Imitation learning with exposure to synthesized perturbations']       | ['Handling complex driving scenarios using imitation learning with synthesized data'] | ['Exposure to synthesized data for perturbations and handling complex scenarios in simulation and real-world'] | ['30 million examples and exposure to synthesized data for robust model performance']               | ['Introducing perturbations to the imitation loss during training for robustness'] | ['Model driving a car in the real world after simulating complex scenarios']   |
+
+MATCHES:
+Autonomous Driving Approach: 
+Challenging Scenarios Addressed: 
+Hardware and Software Implementation: 
+Training Data and System Performance Optimization: 
+Performance and Safety Considerations: 
+Real-world Application: 

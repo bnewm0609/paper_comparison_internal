@@ -1,0 +1,23 @@
+ID: ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f
+
+GOLD TABLE:
+|           | Category            | N      |
+|----------:|:--------------------|:-------|
+|  19355285 | ['Placebo-Control'] | ['4']  |
+| 222081054 | ['Placebo Study']   | ['12'] |
+
+GOLD SCHEMA:
+0: Category
+1: N
+
+PREDICTION PATH:../../metric_validation_0/ba7fe1e9-6671-4e37-a062-fcb9f6a02c3f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                                                                                       | Method to study user experience              | User responses studied                                                                                                   |
+|:--------------------------------------------------------------------------------------|:---------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
+| BrightBeat: Effortlessly Influencing Breathing for Cultivating Calmness and Focus     | ['randomized placebo-controlled trial']      | ['objective and subjective measures of impact (breathing rate, self-reported calmness and focus, user preference)']      |
+| I’d like an Explanation for That!Exploring Reactions to Unexpected Autonomous Driving | ['think-aloud study in a driving simulator'] | ["drivers' emotions, interpretations, evaluations, and requests for explanation related to unexpected driving behavior"] |
+
+MATCHES:
+Method to study user experience: 
+User responses studied: 

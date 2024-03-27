@@ -1,0 +1,31 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Equilibrium prices for shared storage                                                                                                                                                                                                                                                                                                                                 | Non-convex non-cooperative game                                                                                                 |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The sharing mechanism includes an hour-ahead optimal pricing model of ESM designed based on a Stackelberg game, where the MGO acts as the leader and all participating prosumers are considered as the followers.']                                                                                                                                                 | ['N/A']                                                                                                                         |
+| paper_2 | ['The sharing price at the Nash equilibrium equals to the average marginal disutility of all prosumers.']                                                                                                                                                                                                                                                             | ['The sharing price at the Nash equilibrium equals to the average marginal disutility of all prosumers.']                       |
+| paper_3 | ['N/A']                                                                                                                                                                                                                                                                                                                                                               | ['N/A']                                                                                                                         |
+| paper_4 | ['The unified market clearing prices of shared energy are achieved through the integrated energy sharing of hydrogen and electricity.']                                                                                                                                                                                                                               | ['N/A']                                                                                                                         |
+| paper_5 | ['An RIES operator is introduced to trade with the utility grid as an intermediate player between the electricity market and MECMs. For the TE mechanism, we employ alternating direction method of multipliers (ADMM) algorithm to achieve distributed optimization of energy sharing, which is based on the average of the shared energy residual over all MECMs.'] | ['N/A']                                                                                                                         |
+| paper_6 | ['We characterize equilibrium prices for shared storage in a spot market. We formulate storage investment decisions of the firms as a non-convex non-cooperative game. We show that under a mild alignment condition, a Nash equilibrium exists, it is unique, and it supports the social welfare.']                                                                  | ['We show that under a mild alignment condition, a Nash equilibrium exists, it is unique, and it supports the social welfare.'] |
+
+MATCHES:
+Equilibrium prices for shared storage: 
+Non-convex non-cooperative game: 

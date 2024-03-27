@@ -1,0 +1,29 @@
+ID: 82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8
+
+GOLD TABLE:
+|           | Anomaly     | Pose      |
+|----------:|:------------|:----------|
+|  72941049 | ['Anomaly'] | ['Pose']  |
+| 236950792 | ['Anomaly'] | ['Pixel'] |
+| 233423473 | ['Action']  | ['Pose']  |
+| 236428765 | ['Action']  | ['Pose']  |
+| 249065776 | ['Action']  | ['Pixel'] |
+
+GOLD SCHEMA:
+0: Anomaly
+1: Pose
+
+PREDICTION PATH:../../metric_validation_0/82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Feature extraction method                                                                               | Performance comparison                                                                                                                                        |
+|:--------|:--------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Dynamic skeleton features, Message-Passing Encoder-Decoder Recurrent Network']                        | ['Superior outlier detection performance compared to traditional appearance-based models']                                                                    |
+| paper_2 | ['Robust Temporal Feature Magnitude learning (RTFM), dilated convolutions, self-attention mechanisms']  | ['Outperforms several state-of-the-art methods on benchmark datasets, achieves significantly improved subtle anomaly discriminability and sample efficiency'] |
+| paper_3 | ['PoseConv3D, 3D heatmap volume, hierarchical features']                                                | ['Achieves the state-of-the-art on skeleton-based action recognition benchmarks and multi-modality action recognition benchmarks']                            |
+| paper_4 | ['Channel-wise Topology Refinement Graph Convolution (CTR-GC), temporal modeling modules']              | ['Not explicitly mentioned in the abstract']                                                                                                                  |
+| paper_5 | ['Model-based multimodal network (MMNet), spatiotemporal graph convolution network, attention weights'] | ['Outperforms state-of-the-art approaches on RGB-D video datasets and tested on an RGB video dataset with consistent results']                                |
+
+MATCHES:
+Feature extraction method: 
+Performance comparison: 

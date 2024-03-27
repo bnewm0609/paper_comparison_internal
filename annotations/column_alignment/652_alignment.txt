@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset Size                             | Task                                                 | Method                                                                            |
+|:--------|:-----------------------------------------|:-----------------------------------------------------|:----------------------------------------------------------------------------------|
+| Paper_1 | ['Medium', 'not specified']              | ['Fine-grained categorization']                      | ['3D object representations']                                                     |
+| Paper_2 | ['Large', '103 classes']                 | ['Classification']                                   | ['Multiple kernel framework with SVM classifier']                                 |
+| Paper_3 | ['Large', '200 classes']                 | ['Multi-class categorization and part localization'] | ['Convolutional Neural Networks (CNNs)']                                          |
+| Paper_4 | ['Extremely Large', '10 million images'] | ['Scene recognition']                                | ['Deep learning']                                                                 |
+| Paper_5 | ['Large', '130,000 paintings']           | ['Classification of fine-art paintings']             | ['Visual features extraction and metric learning']                                |
+| Paper_6 | ['Large', '20,000 sketches']             | ['Sketch recognition']                               | ['Bag-of-features sketch representation and multi-class support vector machines'] |
+
+MATCHES:
+Dataset Size: 
+Task: 
+Method: 

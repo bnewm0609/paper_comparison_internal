@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Data Source                                              | Text Preprocessing Techniques                                                                        | Text Retrieval Method                                 | Preprocessing Challenges                                | Preprocessing Impact on Model Performance                                        |
+|:--------|:---------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|:------------------------------------------------------|:--------------------------------------------------------|:---------------------------------------------------------------------------------|
+| paper_1 | ['Amharic Facebook posts and comments']                  | ['Application of apache spark for hate speech detection']                                            | ['N/A']                                               | ['High rate of social media data production']           | ['Word2Vec embedding performed best with 79.83% accuracy']                       |
+| paper_2 | ['Twitter hate speech data collected from 2018-2022']    | ['Text cleaning, tokenization, and normalization']                                                   | ['N/A']                                               | ['Crowdsourcing annotation challenges']                 | ['Variability of performance across different models']                           |
+| paper_3 | ['Afaan Oromo posts and comments from Facebook']         | ['Text preprocessing using different machine learning algorithms and feature extraction techniques'] | ['N/A']                                               | ['Unavailability of datasets for Afaan Oromo language'] | ['BiLSTM with pre-trained word2vec feature extraction achieved better accuracy'] |
+| paper_4 | ['Comments and posts from social media pages']           | ['Special character removal and stop-word elimination']                                              | ['Data collected from social media pages']            | ['N/A']                                                 | ['N/A']                                                                          |
+| paper_5 | ['Facebook posts and comments in Afaan Oromoo language'] | ['Data cleaning and preprocessing using N-gram and TF-IDF']                                          | ['Data collected from Facebook using scraping tools'] | ['N/A']                                                 | ['SVM with N-gram and TF-IDF achieved 96% accuracy in all metrics']              |
+
+MATCHES:
+Data Source: 
+Text Preprocessing Techniques: 
+Text Retrieval Method: 
+Preprocessing Challenges: 
+Preprocessing Impact on Model Performance: 

@@ -1,0 +1,50 @@
+ID: 70b7fda9-0485-4cf2-adf6-d6aa43a72a60
+
+GOLD TABLE:
+|           | Category                      | Challenge               | Short Description                                                                                                      |
+|----------:|:------------------------------|:------------------------|:-----------------------------------------------------------------------------------------------------------------------|
+|  28227133 | ['7[12]*Data and Evaluation'] | ['Big Data']            | ['Volume, velocity, variety, veracity, and value of big data can be problematic.']                                     |
+|   2242825 | ['-']                         | ['High-Dimensionality'] | ['Many numbers of features for each datapoint can cause sparsity of data which makes anomaly detection more arduous.'] |
+|   3314665 | ['-']                         | ['Heterogeneity']       | ['Diversity and variety of data types, formats, and structures in systems.']                                           |
+| 235421996 | ['-']                         | ['Obscured Anomalies']  | ['Outliers can be in disguise, especially the anomalies that are caused by a smart entity.']                           |
+|  56208557 | ['-']                         | ['Unclean Data']        | ['Many proposed models work based on the hypothesis that clean data is available which is not realistic.']             |
+| 214371919 | ['4[8]*Nature of Anomaly']    | ['Changing Nature']     | ['Novel and new types of anomalies can happen, and anomalies may adapt themselves with anomaly detection algorithms.'] |
+| 234278156 | ['-']                         | ['Disparate Sources']   | ['Anomalies can happen in many different layers and parts of systems.']                                                |
+| 215872173 | ['-']                         | ['Noise Resilience']    | ['In many cases, noises in the input data can mislead the models and be detected as false positives.']                 |
+|   1610415 | ['5[9]*Real-World']           | ['Inference Time']      | ['In real-world applications, it is vital to detect anomalies in a timely manner to take the appropriate action.']     |
+| 231423554 | ['-']                         | ['Privacy']             | ['In many applications, the data of the users should be protected.']                                                   |
+| 238586083 | ['-']                         | ['Ciphered Data']       | ['In many environments, the exchanged data is ciphered.']                                                              |
+| 232076515 | ['-']                         | ['Dynamic Systems']     | ['Real-world systems often change over the time and have dynamic nature.']                                             |
+| 235195790 | ['-']                         | ['Interpretability']    | ['In real-world setups, the cause of the anomaly is important.']                                                       |
+| 238237738 | ['-']                         | ['Domain Shift']        | ['The model trained on one domain, cannot generalize even to a slightly different domain.']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Challenge
+2: Short Description
+
+PREDICTION PATH:../../metric_validation_0/70b7fda9-0485-4cf2-adf6-d6aa43a72a60/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Techniques for Graph Anomaly Detection                                                                                                                                        | Deep Learning Models                                       | Evaluation Metrics                                                          |
+|:---------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------|:----------------------------------------------------------------------------|
+| paper_1  | ['Dynamic Programming', 'N/A', 'N/A']                                                                                                                                         | ['N/A']                                                    | ['N/A']                                                                     |
+| paper_2  | ['Data Science Education', 'N/A', 'N/A']                                                                                                                                      | ['N/A']                                                    | ['N/A']                                                                     |
+| paper_3  | ['Big Data Solutions, ADSs Survey, Taxonomy', 'N/A', 'Open Problems, Challenges']                                                                                             | ['N/A']                                                    | ['N/A']                                                                     |
+| paper_4  | ['Graph Anomaly Detection with Deep Learning', 'Review of Contemporary Deep Learning Techniques', 'Taxonomy, Survey Results, Future Research Directions, Evaluation Metrics'] | ['Survey of Deep Learning Techniques', 'N/A', 'N/A']       | ['Evaluation Metrics, Challenge Discussion', 'N/A', 'N/A']                  |
+| paper_5  | ['Graph Anomaly Detection with Deep Learning', 'Review of Contemporary Deep Learning Techniques', 'Taxonomy, Survey Results, Future Research Directions, Evaluation Metrics'] | ['Survey of Deep Learning Techniques', 'N/A', 'N/A']       | ['Evaluation Metrics, Challenge Discussion', 'N/A', 'N/A']                  |
+| paper_6  | ['Robust Graph Learning From Noisy Data', 'Adaptive Noise Removal, Performance Enhancement', 'Task performance improvement, Key factors']                                     | ['Graph Model as Part of Robust Model', 'N/A', 'N/A']      | ['N/A', 'N/A', 'N/A']                                                       |
+| paper_7  | ['Unsupervised Online Anomaly Detection', 'Parameter Adaptation for Abrupt Changes', 'Analysis, Detection and Classification of KPI Abrupt Changes']                          | ['Unsupervised Detection Algorithm', 'N/A', 'N/A']         | ['N/A', 'N/A', 'N/A']                                                       |
+| paper_8  | ['Heterogeneous Traffic Classifier', 'Machine Learning Algorithm validation', 'Mathematical Validation, Classifier Model']                                                    | ['Deep Learning-based Traffic Classifier', 'N/A', 'N/A']   | ['N/A', 'N/A', 'N/A']                                                       |
+| paper_9  | ['Noise Removal in IIoT Sensor Data', 'Preserving Anomalies in Noisy Data', 'Methods for Noise Removal, Experimental Validation']                                             | ['N/A', 'N/A', 'N/A']                                      | ['N/A', 'N/A', 'N/A']                                                       |
+| paper_10 | ['Anomaly Detection in Surveillance Videos', 'Deep Multiple Instance Ranking Framework', 'Anomaly Detection Performance Improvement, Recognition Tasks, Dataset Description'] | ['Deep Multiple Instance Ranking Framework', 'N/A', 'N/A'] | ['N/A', 'N/A', 'N/A']                                                       |
+| paper_11 | ['Privacy and Security in Deep Learning', 'Attack and Defense Methods, Privacy-preserving Techniques', 'Attacks, Challenges, Real-world Threats']                             | ['Security Threats in Deep Learning', 'N/A', 'N/A']        | ['Attack and Defense Methods, Privacy-preserving Techniques', 'N/A', 'N/A'] |
+| paper_12 | ['Anomaly Detection in Encrypted Traffic', 'Deep Learning-based Model', 'Performance Evaluation, Comparative Study']                                                          | ['Deep Learning Model for Traffic Analysis', 'N/A', 'N/A'] | ['Performance Evaluation', 'N/A', 'N/A']                                    |
+| paper_13 | ['Anomaly Detection via Self-Supervised Learning', 'Contrastive Self-Supervised Learning Framework', 'Framework Overview, Experimental Results']                              | ['Self-Supervised Learning Model', 'N/A', 'N/A']           | ['Framework Overview, Experimental Results', 'N/A', 'N/A']                  |
+| paper_14 | ['Anomaly Detection and Failure Root Cause Analysis', 'Failure Detection and Log Analysis', 'Technique Overview, Open Challenges']                                            | ['Anomaly Detection Model', 'N/A', 'N/A']                  | ['Technique Overview', 'N/A', 'N/A']                                        |
+| paper_15 | ['Cross-Domain Graph Anomaly Detection', 'Domain Adaptation and Anomaly Detection', 'COMMANDER Framework, Experimental Results']                                              | ['Domain Adaptation and Learning', 'N/A', 'N/A']           | ['Framework Overview, Experimental Results', 'N/A', 'N/A']                  |
+
+MATCHES:
+Techniques for Graph Anomaly Detection: 
+Deep Learning Models: 
+Evaluation Metrics: 

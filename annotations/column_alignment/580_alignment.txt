@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                                | Diversity of the dataset (geographic, environmental, and weather)   | Types of tasks supported by the dataset                                                             |
+|:--------|:---------------------------------------------------|:--------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| paper_1 | ['largest driving video dataset with 100K videos'] | ['geographic, environmental, and weather diversity']                | ['10 tasks to evaluate the progress of image recognition algorithms on autonomous driving']         |
+| paper_2 | ['N/A']                                            | ['N/A']                                                             | ['annotation of object instances as polygon prediction tasks']                                      |
+| paper_3 | ['N/A']                                            | ['N/A']                                                             | ['object annotation by either polygons or splines']                                                 |
+| paper_4 | ['N/A']                                            | ['N/A']                                                             | ['per-instance 3D point cloud segmentation, 3D bounding boxes, and class annotations']              |
+| paper_5 | ['N/A']                                            | ['N/A']                                                             | ['training a LiDAR 3D object detector with active learning']                                        |
+| paper_6 | ['N/A']                                            | ['N/A']                                                             | ['autolabeling 3D objects with differentiable rendering of SDF shape priors']                       |
+| paper_7 | ['N/A']                                            | ['N/A']                                                             | ['accelerating LiDAR point cloud annotation via sensor fusion, one-click annotation, and tracking'] |
+
+MATCHES:
+Size of the dataset: 
+Diversity of the dataset (geographic, environmental, and weather): 
+Types of tasks supported by the dataset: 

@@ -1,0 +1,37 @@
+ID: 63ce3eae-ab58-417d-a0a1-9cfe64333bb9
+
+GOLD TABLE:
+|           | Events                                            | Modality   | Dataset                           | Method                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|----------:|:--------------------------------------------------|:-----------|:----------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    368854 | ['Earthquake, droughts, floods and forest fires'] | ['S']      | ['Self-collected']                | ['The system checks the data for disaster distribution, Geo tagging and occurrence frequency. Location of the disaster is determined using Geo filter tag whereas distribution analysis is done using KNN.']                                                                                                                                                                                                                                                                            |
+|  11033867 | ['Earthquake, flood and wildfire']                | ['S']      | ['Self-collected']                | ['A five step framework has been proposed to compare the performance of matching based and learning based approach for disaster detection. The steps include spam removal, data mapping to affected and unaffected regions, filtering of tweets, sentiment analysis and visualization.']                                                                                                                                                                                                |
+|  14283896 | ['Hurricane']                                     | ['S']      | ['Self-collected']                | ['Relies on a Bayesian approach for the identification and classification of disaster related tweets. In contrast to {{cite:8f67318}}, makes use of an effective reduced set of features consisting of only nine features. The system with reduced features set has been proved suitable for the hand held devices with less power capacity. However, a significant improvement in the performance has been reported by jointly using the newly extracted features with bag of words.'] |
+|   6633523 | ['12 Natural disasters events']                   | ['S']      | ['Self-collected']                | ['Proposes a text mining tool namely Tweedr, mainly consists of classification, clustering and extraction. The classification component is composed of a combination of several techniques and aims to identify relevant posts. The clustering and extraction components aim to gather tweets on same events and highlight the sentences of the text providing demage information, respectively.']                                                                                      |
+| 253240909 | ['26 mass emergency events']                      | ['S']      | ['CrisisLexT26 {{cite:af04ed5}}'] | ['Proposes and ensemble based framework where several classifiers including SVM, LR, RF, Naive Bayes and KNN, each trained for a specific type of event are combined. Moreover, the performances of different textual features are evaluated for a better representation of twitter posts. In addition, several techniques, such as text normalization and stop word removal, have been used in the pre-processing step for cleaning the collected tweets.']                            |
+| 129196835 | ['Earthquakes']                                   | ['S']      | ['self-collected']                | ['Relies on well-known concept of seismology, namely short term average, long term average algorithm (STA/LTA) algorithm, for the detection of earthquake events in Twitter\'s text streams. The system is tested on a collection of tweets containing specific keywords, such "earthquake", "gempa", "temblor", "terremoto" and "sismo".']                                                                                                                                             |
+
+GOLD SCHEMA:
+0: Events
+1: Modality
+2: Dataset
+3: Method
+
+PREDICTION PATH:../../metric_validation_0/63ce3eae-ab58-417d-a0a1-9cfe64333bb9/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|                       | Paper 1   | Paper 2   | Paper 3   | Paper 4   | Paper 5   | Paper 6   |
+|:----------------------|:----------|:----------|:----------|:----------|:----------|:----------|
+| Disaster analysis     | Yes       | N/A       | N/A       | Yes       | N/A       | N/A       |
+| Sentiment analysis    | Yes       | N/A       | N/A       | N/A       | N/A       | N/A       |
+| Tweet identification  | N/A       | Yes       | N/A       | Yes       | N/A       | N/A       |
+| Feature selection     | N/A       | N/A       | Yes       | N/A       | Yes       | N/A       |
+| Real-time analysis    | Yes       | N/A       | N/A       | Yes       | N/A       | Yes       |
+| False alarm reduction | N/A       | N/A       | N/A       | N/A       | N/A       | Yes       |
+
+MATCHES:
+Paper 1: 
+Paper 2: 
+Paper 3: 
+Paper 4: 
+Paper 5: 
+Paper 6: 

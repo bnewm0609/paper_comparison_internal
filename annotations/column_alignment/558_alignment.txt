@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Supervised vs. Unsupervised Learning   | Performance Metrics (e.g., F1 score)                                                 | Task-Specific Evaluation Methods                                              |
+|:--------|:---------------------------------------|:-------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+| paper_1 | ['Unsupervised and supervised']        | ['Achieves better performance than previously introduced methods']                   | ['Evaluates the model using sentiment and subjectivity corpora']              |
+| paper_2 | ['Not mentioned']                      | ['F1 score mentioned (86% F1 on SQuAD), also mentions performance drop on SQuADRUn'] | ['Introduced a new dataset SQuADRUn for natural language understanding task'] |
+| paper_3 | ['N/A']                                | ['N/A']                                                                              | ['N/A']                                                                       |
+
+MATCHES:
+Supervised vs. Unsupervised Learning: 
+Performance Metrics (e.g., F1 score): 
+Task-Specific Evaluation Methods: 

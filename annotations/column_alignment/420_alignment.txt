@@ -1,0 +1,29 @@
+ID: 82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8
+
+GOLD TABLE:
+|           | Anomaly     | Pose      |
+|----------:|:------------|:----------|
+|  72941049 | ['Anomaly'] | ['Pose']  |
+| 236950792 | ['Anomaly'] | ['Pixel'] |
+| 233423473 | ['Action']  | ['Pose']  |
+| 236428765 | ['Action']  | ['Pose']  |
+| 249065776 | ['Action']  | ['Pixel'] |
+
+GOLD SCHEMA:
+0: Anomaly
+1: Pose
+
+PREDICTION PATH:../../metric_validation_0/82fb97cc-d8ba-4981-ad6b-33cedbbfa9b8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Framework architecture                                                                                                                                                                                                                                                                                                                                      | Performance evaluation                                                                                                                                                                                                                                                                     |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Our method models the normal patterns of human movements in surveillance video using dynamic skeleton features. We decompose the skeletal movements into two sub-components: global body movement and local body posture. We model the dynamics and interaction of the coupled features in our novel Message-Passing Encoder-Decoder Recurrent Network.'] | ['Compared to traditional appearance-based models, our method achieves superior outlier detection performance.']                                                                                                                                                                           |
+| paper_2 | ['We introduce a novel method, named Robust Temporal Feature Magnitude learning (RTFM), which trains a feature magnitude learning function. RTFM also adapts dilated convolutions and self-attention mechanisms to capture long- and short-range temporal dependencies to learn the feature magnitude more faithfully.']                                    | ['Extensive experiments show that the RTFM-enabled MIL model outperforms several state-of-the-art methods by a large margin on four benchmark data sets.']                                                                                                                                 |
+| paper_3 | ['In this work, we propose PoseConv3D, a new approach to skeleton-based action recognition. PoseConv3D relies on a 3D heatmap volume instead of a graph sequence as the base representation of human skeletons. Also, PoseConv3D can handle multiple-person scenarios without additional computation costs.']                                               | ['PoseConv3D achieves the state-of-the-art on five of six standard skeleton-based action recognition benchmarks. Once fused with other modalities, it achieves the state-of-the-art on all eight multi-modality action recognition benchmarks.']                                           |
+| paper_4 | ['We propose a novel Channel-wise Topology Refinement Graph Convolution (CTR-GC) to dynamically learn different topologies and effectively aggregate joint features in different channels for skeleton-based action recognition.']                                                                                                                          | ['CTR-GCN notably outperforms state-of-the-art methods on the NTU RGB+D, NTU RGB+D 120, and NW-UCLA datasets.']                                                                                                                                                                            |
+| paper_5 | ['We propose a model-based multimodal network (MMNet) that fuses skeleton and RGB modalities via a model-based approach. For the model-based fusion scheme, we use a spatiotemporal graph convolution network for the skeleton modality to learn attention weights that will be transferred to the network of the RGB modality.']                           | ['Our method is found to outperform state-of-the-art approaches on six evaluation protocols of the five datasets; thus, the proposed MMNet can effectively capture mutually complementary features in different RGB-D video modalities and provide more discriminative features for HAR.'] |
+
+MATCHES:
+Framework architecture: 
+Performance evaluation: 

@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Image synthesis strategy used in the network                                                                                                | Performance evaluation criteria and comparisons                                                                                             |
+|:---------|:--------------------------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Deformable Part Model used as pedestrian detector for image synthesis.']                                                                  | ['Competitive accuracy on VIPeR, CUHK03, and Market-1501 datasets, and scalability on large-scale 500k dataset.']                           |
+| paper_2  | ['Uses synchronized image, human motion capture, and time of flight data for realistic human sensing.']                                     | ['20% improvement in performance compared to the largest existing public dataset for 3D human sensing.']                                    |
+| paper_3  | ['Describes the use of the FashionNet deep model for learning clothing features.']                                                          | ['Effectiveness of FashionNet and the usefulness of DeepFashion demonstrated in extensive experiments.']                                    |
+| paper_4  | ['State-of-the-art deep learning method used for attribute prediction and clothing retrieval.']                                             | ['Baseline results for attribute prediction and clothing retrieval performance using state-of-the-art deep learning method.']               |
+| paper_5  | ['Discusses the Contextualized Convolutional Neural Network (Co-CNN) architecture for human parsing.']                                      | ['Significant superiority of Co-CNN over other state-of-the-arts for human parsing demonstrated in comprehensive evaluations.']             |
+| paper_6  | ['Coarse-to-fine strategy for image-based virtual try-on network.']                                                                         | ['Promise in the image-based virtual try-on task over state-of-the-art generative models demonstrated using the Zalando dataset.']          |
+| paper_7  | ['Multi-pose guided virtual try-on network using conditional human parsing network and Warping Generative Adversarial Network (Warp-GAN).'] | ['Significant outperformance of all state-of-the-art methods both qualitatively and quantitatively demonstrated in extensive experiments.'] |
+| paper_8  | ['Proposal of a FashionOn network presenting three stages for synthesizing user images fitting different clothes.']                         | ['State-of-the-art virtual try-on performance both qualitatively and quantitatively achieved via FashionOn network.']                       |
+| paper_9  | ['Introduction of a pose-guided virtual try-on scheme based on generative adversarial networks (GANs).']                                    | ['Superiority of the proposed model over the state-of-the-art methods demonstrated through extensive experiments.']                         |
+| paper_10 | ['Volumetric, x-y-t patch classifiers used for human action analysis.']                                                                     | ['Significant improvement over state-of-the-art low-level features for detailed action understanding.']                                     |
+| paper_11 | ['Motion and Content decomposed Generative Adversarial Network (MoCoGAN) framework proposed for video generation.']                         | ['Effectiveness of the proposed framework verified through extensive experimental results on several challenging datasets.']                |
+| paper_12 | ['DwNet leveraging dense intermediate pose-guided representation and refinement process.']                                                  | ['State-of-the-art quantitative and qualitative performance demonstrated on benchmark datasets.']                                           |
+| paper_13 | ['Use of Liquid Warping GAN with Liquid Warping Block (LWB) for human motion imitation and novel view synthesis.']                          | ['Effectiveness of the proposed method demonstrated in several aspects through extensive experiments.']                                     |
+| paper_14 | ['Introduction of Flow-Navigated Warping Generative Adversarial Network (FW-GAN) for video virtual try-on.']                                | ['Synthesis of high-quality video of virtual try-on and significant outperformance of other methods demonstrated through experiments.']     |
+
+MATCHES:
+Image synthesis strategy used in the network: 
+Performance evaluation criteria and comparisons: 

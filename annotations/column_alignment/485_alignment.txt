@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Algorithm Optimization Technique              | Speedup in Relation to Reference Algorithm                                   |
+|:--------|:----------------------------------------------|:-----------------------------------------------------------------------------|
+| Paper 1 | ['GPGPU techniques and UnionFind algorithm']  | ['5-10x speedup compared to serial algorithm, similar to Label Equivalence'] |
+| Paper 2 | ['Improved Union-Find technique using GPGPU'] | ['1.61x speedup compared to Union-find on large image']                      |
+
+MATCHES:
+Algorithm Optimization Technique: 
+Speedup in Relation to Reference Algorithm: 

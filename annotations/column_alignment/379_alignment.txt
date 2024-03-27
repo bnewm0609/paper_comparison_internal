@@ -1,0 +1,89 @@
+ID: 0723c308-b9f4-4f7c-9917-615727afc628
+
+GOLD TABLE:
+|          | ID     | Type          | Nodes       | Edges       | Number of layers   | CC         |
+|---------:|:-------|:--------------|:------------|:------------|:-------------------|:-----------|
+|  2838900 | ['32'] | ['Genetic']   | ['582']     | ['620']     | ['5']              | ['109']    |
+|   231286 | ['33'] | ['Genetic']   | ['17770']   | ['8473997'] | ['4']              | ['4']      |
+|  8255435 | ['7']  | ['Neuronal']  | ['791']     | ['5863']    | ['3']              | ['6']      |
+| 14784546 | ['23'] | ['Social']    | ['3457453'] | ['4061960'] | ['3']              | ['651141'] |
+| 79410684 | ['3']  | ['Social']    | ['674']     | ['1551']    | ['3']              | ['12']     |
+|  9281429 | ['4']  | ['Social']    | ['224']     | ['620']     | ['5']              | ['13']     |
+| 56166159 | ['25'] | ['Social']    | ['26']      | ['35']      | ['2']              | ['2']      |
+| 15565456 | ['20'] | ['Transport'] | ['399']     | ['441']     | ['3']              | ['3']      |
+
+GOLD SCHEMA:
+0: ID
+1: Type
+2: Nodes
+3: Edges
+4: Number of layers
+5: CC
+
+PREDICTION PATH:../../metric_validation_0/0723c308-b9f4-4f7c-9917-615727afc628/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Number of Interactions   | Year of Release   | Type of data   | Type of interaction                  | Number of organisms covered   | Type of Interactions                 |
+|:---------|:-------------------------|:------------------|:---------------|:-------------------------------------|:------------------------------|:-------------------------------------|
+| Paper 1  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 2  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 3  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 4  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 5  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 6  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 7  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 8  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 9  | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 10 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 11 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 12 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 13 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 14 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 15 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 16 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 17 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 18 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 19 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 20 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 21 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 22 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 23 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 24 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 25 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 26 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| Paper 27 | ['>116 000']             | ['2006']          | nan            | nan                                  | nan                           | nan                                  |
+| paper_1  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_2  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_3  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_4  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_5  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_6  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_7  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_8  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_9  | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_10 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_11 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_12 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_13 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_14 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_15 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_16 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_17 | nan                      | nan               | ['Genetic']    | ['Physical and genetic']             | ['4']                         | ['Physical and Genetic']             |
+| paper_18 | nan                      | nan               | ['Other']      | ['Other']                            | ['1']                         | ['Genetic']                          |
+| paper_19 | nan                      | nan               | ['Other']      | ['Other']                            | ['1']                         | ['Wiring']                           |
+| paper_20 | nan                      | nan               | ['Other']      | ['Mentioning, replying, retweeting'] | ['0']                         | ['Retweeting, Mentioning, Replying'] |
+| paper_21 | nan                      | nan               | ['Other']      | ['Mentioning, replying, retweeting'] | ['0']                         | ['Retweeting, Mentioning, Replying'] |
+| paper_22 | nan                      | nan               | ['Other']      | ['Mentioning, replying, retweeting'] | ['0']                         | ['Retweeting, Mentioning, Replying'] |
+| paper_23 | nan                      | nan               | ['Other']      | ['Mentioning, replying, retweeting'] | ['0']                         | ['Retweeting, Mentioning, Replying'] |
+| paper_24 | nan                      | nan               | ['Other']      | ['Other']                            | ['0']                         | ['Drug Adoption']                    |
+| paper_25 | nan                      | nan               | ['Other']      | ['Other']                            | ['0']                         | ['Online and Offline Relationships'] |
+| paper_26 | nan                      | nan               | ['Other']      | ['Other']                            | ['0']                         | ['Political Control']                |
+| paper_27 | nan                      | nan               | ['Other']      | ['Other']                            | ['0']                         | ['Transportation']                   |
+
+MATCHES:
+Number of Interactions: 
+Year of Release: 
+Type of data: 
+Type of interaction: 
+Number of organisms covered: 
+Type of Interactions: 

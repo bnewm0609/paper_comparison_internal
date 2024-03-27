@@ -1,0 +1,32 @@
+ID: d0e6ef26-a2e7-478d-adac-54a56f3d11ed
+
+GOLD TABLE:
+|          | # of Subjects   | Dataset (# of sample)      | Platform      | # of features   | Classification         |
+|---------:|:----------------|:---------------------------|:--------------|:----------------|:-----------------------|
+|  2169238 | ['28']          | ['Private(20160 overall)'] | ['Android']   | ['24']          | ['Knn,SVM,NB,LSAD']    |
+| 10811061 | ['18']          | ['Private(1980)']          | ['Android']   | ['32']          | ['J48 Decision Tree']  |
+|  5119407 | ['40']          | ['Private(-)']             | ['Android']   | ['122']         | ['J48,RF,BN']          |
+| 13904989 | ['205']         | ['Private(-)']             | ['HTML form'] | ['-']           | ['Mathematical Model'] |
+
+GOLD SCHEMA:
+0: # of Subjects
+1: Dataset (# of sample)
+2: Platform
+3: # of features
+4: Classification
+
+PREDICTION PATH:../../metric_validation_0/d0e6ef26-a2e7-478d-adac-54a56f3d11ed/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Comparison of typing features                            | Impact of specific contexts                              | Handling of unknown hand postures                                   | Usability and applicability considerations                                                       |
+|:--------|:---------------------------------------------------------|:---------------------------------------------------------|:--------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| paper_1 | ['spatial touch features', 'temporal features']          | ['different hand postures', 'evaluation schemes']        | ['probabilistic framework to handle unknown hand postures']         | ['usability and applicability of touch-specific features']                                       |
+| paper_2 | ['keystroke-based and handwriting-based authentication'] | ['dark environments', 'camera restrictions in business'] | ['N/A']                                                             | ['error rates under 2%']                                                                         |
+| paper_3 | ['virtual key typing']                                   | ['N/A']                                                  | ["transparently monitors the user's virtual key dynamics behavior"] | ['addressing the tradeoff between security and usability']                                       |
+| paper_4 | ['typing rhythms of free text']                          | ['N/A']                                                  | ['N/A']                                                             | ['complementary or alternative way to user authentication and as an aid to intrusion detection'] |
+
+MATCHES:
+Comparison of typing features: 
+Impact of specific contexts: 
+Handling of unknown hand postures: 
+Usability and applicability considerations: 

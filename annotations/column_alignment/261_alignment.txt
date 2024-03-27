@@ -1,0 +1,29 @@
+ID: 91cc26ad-2721-4515-bdfb-8f1062b4b59a
+
+GOLD TABLE:
+|           | Data Modality       | # Sample    | # Classes   | Session   |
+|----------:|:--------------------|:------------|:------------|:----------|
+|  59250729 | ['Colon Pathology'] | ['107,180'] | ['9']       | ['Base']  |
+| 263789934 | ['Dermatoscope']    | ['10,015']  | ['7']       | ['Base']  |
+|  58004589 | ['Abdominal CT']    | ['58,850']  | ['11']      | ['Base']  |
+
+GOLD SCHEMA:
+0: Data Modality
+1: # Sample
+2: # Classes
+3: Session
+
+PREDICTION PATH:../../metric_validation_0/91cc26ad-2721-4515-bdfb-8f1062b4b59a/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of data used                                | Task                                                                            | Methodology                                                                                                               | Significance of results                                                                                           |
+|:--------|:-------------------------------------------------|:--------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Computed tomography (CT) volumes']             | ['Liver tumor segmentation']                                                    | ['Organized a benchmark and evaluated 75 algorithms on liver and liver tumor segmentation']                               | ['Revealed the need for further research on liver tumor detection']                                               |
+| Paper 2 | ['Hematoxylin–eosin (HE)–stained tissue slides'] | ['Predicting survival from colorectal cancer histology slides']                 | ["Used a CNN by transfer learning for tissue decomposition and calculated a 'deep stroma score'"]                         | ['Validated the deep stroma score as an independent prognostic factor for colorectal cancer']                     |
+| Paper 3 | ['Dermatoscopic images']                         | ['Training a neural network for automated diagnosis of pigmented skin lesions'] | ['Released a benchmark dataset of dermatoscopic images of pigmented skin lesions for academic machine learning purposes'] | ['Released a large and diverse dataset that can be used for machine learning and comparisons with human experts'] |
+
+MATCHES:
+Type of data used: 
+Task: 
+Methodology: 
+Significance of results: 

@@ -1,0 +1,27 @@
+ID: 0f3a0b21-945b-4c45-af04-d969bcdcfee2
+
+GOLD TABLE:
+|          | year     | # classes   | # img train / val*   | quality   |
+|---------:|:---------|:------------|:---------------------|:----------|
+| 11266650 | ['2014'] | ['012']     | ['28,648 / 02,113']  | ['+']     |
+|  4794860 | ['2018'] | ['009']     | ['0 / 05,818']       | ['+++']   |
+
+GOLD SCHEMA:
+0: year
+1: # classes
+2: # img train / val*
+3: quality
+
+PREDICTION PATH:../../metric_validation_0/0f3a0b21-945b-4c45-af04-d969bcdcfee2/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset scale                                                              | 3D Annotation                                                     | Benchmark application                                                                       | Contributions                                                                                                |
+|:--------|:---------------------------------------------------------------------------|:------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Large-scale dataset with more than 3,000 object instances per category'] | ['PASCAL3D+ dataset with 3D annotations for 12 rigid categories'] | ['Variations of DPM used as baselines for object detection and viewpoint estimation']       | ['Contribution of a novel and challenging dataset for 3D object detection and pose estimation']              |
+| Paper 2 | ['Large-scale dataset with diverse image-shape pairs']                     | ['Pix3D with pixel-level 2D-3D alignment']                        | ['Calibrated evaluation criteria used to benchmark cutting-edge reconstruction algorithms'] | ['Contribution to 3D shape modeling through a large-scale dataset and a novel multi-task learning approach'] |
+
+MATCHES:
+Dataset scale: 
+3D Annotation: 
+Benchmark application: 
+Contributions: 

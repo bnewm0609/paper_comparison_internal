@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sources of experimental data used for comparison                       | Consistency arguments and constraints applied to resolve measurement differences                                               |
+|:--------|:-----------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Large liquid scintillator method']                                   | ['N/A']                                                                                                                        |
+| paper_2 | ['LANSCE/WNR experiments with GEANIE array of Ge detectors']           | ['Nuclear modeling (enhanced Hauser-Feshbach)']                                                                                |
+| paper_3 | ['GEANIE collaboration data, reaction modeling', 'Other nuclear data'] | ['Systematic use of other nuclear data to put constraints on the shape and magnitude of the {sup 239}Pu(n, 2n) cross section'] |
+| paper_4 | ['α- and γ-spectroscopy measurements']                                 | ['Statistical errors on the measurements, calibration reactions']                                                              |
+
+MATCHES:
+Sources of experimental data used for comparison: 
+Consistency arguments and constraints applied to resolve measurement differences: 

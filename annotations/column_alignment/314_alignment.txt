@@ -1,0 +1,31 @@
+ID: 2aad0947-1bd3-4b7a-8332-8c3efa3d6392
+
+GOLD TABLE:
+|           | No    | Title                                                                                                                                                                                                                                                                 |
+|----------:|:------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 193179455 | ['1'] | ['Kontemplasi Politik (Belajar Dari Kisah Perang Badar Menurut Sirah Ibnu Hisyam Dan Al-thabari) (Political Contemplation (Learning from the Story of the Battle of Badr According to the Sirah of Ibn Hisham and Al-Thabari))']                                      |
+| 181419409 | ['2'] | ["Isra Mi'raj Sebagai Perjalanan Religi: Studi Analisis Peristiwa Isra Mi'raj Nabi Muhammad Menurut Al Qur'an Dan Hadits (Isra Mi'raj as a Religious Journey: An Analytical Study of the Isra Mi'raj Event of Prophet Muhammad According to the Qur'an and Hadiths)"] |
+| 221700756 | ['4'] | ['Sejarah Sosial-Politik Arab: Dari Hegemoni Romawi-Persia Hingga Kebangkitan Arab Islam (Arab Social-Political History: From Roman-Persian Hegemony to the Rise of Arab Islam)']                                                                                     |
+| 237879696 | ['5'] | ["Pendidikan Karakter dalam Buku Sirah Nabawiyah Karya Syaikh Shafiyyurrahman al-Mubarakfuri (Character Education in the Book of the Prophet's Biography by Sheikh Shafiyyurrahman al-Mubarakfuri)"]                                                                  |
+| 191016969 | ['6'] | ["Sirah Nabawiyah dan Demitologisasi Kehidupan Nabi (Prophetic Biography and Demythologization of the Prophet's Life)"]                                                                                                                                               |
+| 171913397 | ['8'] | ['Tata kelola pemerintahan negara madinah pada masa nabi Muhammad saw (The governance system of the Madinah state during the time of Prophet Muhammad (peace be upon him).)']                                                                                         |
+
+GOLD SCHEMA:
+0: No
+1: Title
+
+PREDICTION PATH:../../metric_validation_0/2aad0947-1bd3-4b7a-8332-8c3efa3d6392/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach to storytelling                                                                                                                                                                     | Perspectives on Islamic history and teachings                                                                                                                                             |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | The story of the Battle of Badr is told in a factual and chronological manner, with a focus on the political context and military strategy.                                                  | The paper presents the Battle of Badr as a significant event in Islamic history, with a focus on its political and military aspects.                                                      |
+| paper_2 | The story of the Isra and Mi'raj is told through the analysis of Qur'anic verses and hadiths, with an emphasis on the spiritual significance of the event.                                   | The paper presents the Isra and Mi'raj as a spiritual event with a focus on its significance in Islamic teachings and practices.                                                          |
+| paper_3 | The socio-political history of Arabia is told through the use of biographical and bibliographic history method, focusing on the struggle for influence between the major powers of the time. | The paper presents the socio-political history of Arabia from a perspective that emphasizes the role of major powers in shaping the region.                                               |
+| paper_4 | The story of Islamic education is told through the analysis of the book Sirah Nabawiyah, focusing on the role of character education in the development of Islamic civilization.             | The paper presents Islamic education as a means of character development, with a focus on the role of the book Sirah Nabawiyah in this process.                                           |
+| paper_5 | The story of the Prophet Muhammad is told through the lens of demythologization, differentiating between revelation and culture in the development of his personality.                       | The paper presents the Prophet Muhammad as a human being with a distinct personality, with a focus on differentiating between revelation and culture in his life.                         |
+| paper_6 | The story of the Islamic state of Medina is told through the analysis of political and administrative systems, focusing on the role of moral and religious values in shaping the state.      | The paper presents the Islamic state of Medina as a model of spiritual, intellectual and cultural revolution with a focus on the role of moral and religious values in shaping the state. |
+
+MATCHES:
+Approach to storytelling: 
+Perspectives on Islamic history and teachings: 

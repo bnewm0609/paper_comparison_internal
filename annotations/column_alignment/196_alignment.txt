@@ -1,0 +1,23 @@
+ID: 8abdc9bf-f0cc-44e0-822b-4355cac61851
+
+GOLD TABLE:
+|         | Feature engineering   | Handling unknown programmers from the wild   |
+|--------:|:----------------------|:---------------------------------------------|
+|  591109 | ['Manual']            | ['✗']                                        |
+| 3715392 | ['Manual']            | ['✓ (by confidence score)']                  |
+
+GOLD SCHEMA:
+0: Feature engineering
+1: Handling unknown programmers from the wild
+
+PREDICTION PATH:../../metric_validation_0/8abdc9bf-f0cc-44e0-822b-4355cac61851/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Authorship Identification                                                                                                                 | Privacy Threats                                                                                                                                                                                                                                                       |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Determining the author of each basic block with 52% accuracy among 282 authors']                                                        | ['Provides a practical solution for identifying multiple authors in software']                                                                                                                                                                                        |
+| paper_2 | ['De-anonymization of a large set of programmers with attribution accuracy of up to 96% with 100 and 83% with 600 candidate programmers'] | ['Examine programmer de-anonymization from the standpoint of machine learning and successful de-anonymization of a large set of programmers. Show that programmers who would like to remain anonymous need to take extreme countermeasures to protect their privacy'] |
+
+MATCHES:
+Authorship Identification: 
+Privacy Threats: 

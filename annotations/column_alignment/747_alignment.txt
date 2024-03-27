@@ -1,0 +1,71 @@
+ID: 72c275e4-daa1-4167-9bc6-52a7c9e12678
+
+GOLD TABLE:
+|           | Year     | Format   | Application                               | Dataset                      |
+|----------:|:---------|:---------|:------------------------------------------|:-----------------------------|
+|  44090629 | ['2002'] | ['3D']   | ['Needle biopsy/brachytherapy']           | ['in-vitro/ex-vivo']         |
+|    366482 | ['2004'] | ['3D']   | ['Needle biopsy/brachytherapy']           | ['in-vitro/ex-vivo']         |
+|  16133671 | ['2006'] | ['3D']   | ['Tntracardiac operation']                | ['in-vitro/in-vivo']         |
+|  71618043 | ['2007'] | ['3D']   | ['RF-ablation for uterine operation']     | ['in-vitro']                 |
+|  13850725 | ['2008'] | ['3D']   | ['RF-ablation for uterine operation']     | ['in-vitro']                 |
+|  23333865 | ['2008'] | ['3D']   | ['Biopsy/neurological']                   | ['simulation']               |
+|   9717468 | ['2009'] | ['3D']   | ['Biopsy']                                | ['in-vitro']                 |
+| 120056076 | ['2009'] | ['3D']   | ['Biopsy']                                | ['in-vitro']                 |
+|   1050681 | ['2011'] | ['3D']   | ['Catheter intervention']                 | ['in-vitro']                 |
+|  35709222 | ['2013'] | ['3D']   | ['Needle biopsy']                         | ['simulation']               |
+|  23753903 | ['2013'] | ['3D']   | ['Catheter for cardiac/prostate/biopsy']  | ['in-vivo']                  |
+|    192941 | ['2013'] | ['3D+t'] | ['Prostate therapy']                      | ['in-vitro/ex-vivo/in-vivo'] |
+|  30221626 | ['2013'] | ['3D+t'] | ['Needle biopsy']                         | ['simulation']               |
+|   2686827 | ['2013'] | ['3D']   | ['prostate therapy']                      | ['in-vitro/ex-vivo/in-vivo'] |
+|  17828891 | ['2014'] | ['3D']   | ['Catheter biopsy']                       | ['simulation']               |
+|  21735174 | ['2014'] | ['2D']   | ['Needle biopsy/nerve block']             | ['in-vitro']                 |
+|  32002072 | ['2014'] | ['2D']   | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|   3832958 | ['2014'] | ['2D+t'] | ['Needle biopsy/anesthesia/delivery']     | ['in-vitro/ex-vivo']         |
+| 263874918 | ['2015'] | ['2D+t'] | ['Needle biopsy/anesthesia/delivery']     | ['in-vitro/in-vivo']         |
+|    764870 | ['2015'] | ['2D+t'] | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|  43465739 | ['2016'] | ['3D']   | ['Needle anesthesia/ablation']            | ['ex-vivo']                  |
+|  39051995 | ['2016'] | ['2D+t'] | ['Needle biopsy/nerve block/anesthesias'] | ['in-vitro/in-vivo']         |
+|  15992584 | ['2016'] | ['2D+t'] | ['Needle biopsy/drug delivery']           | ['in-vitro']                 |
+|  52984015 | ['2018'] | ['2D']   | ['Needle intervention']                   | ['ex-vivo']                  |
+| 204815855 | ['2019'] | ['2D+t'] | ['Anesthesia/biopsy/brachytherapy']       | ['in-vitro']                 |
+
+GOLD SCHEMA:
+0: Year
+1: Format
+2: Application
+3: Dataset
+
+PREDICTION PATH:../../metric_validation_0/72c275e4-daa1-4167-9bc6-52a7c9e12678/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of image processing techniques used                                                                                           | Pre-processing and post-processing steps                                                   |
+|:---------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
+| paper_1  | ['projection-based segmentation', 'adaptive 1D search', 'Gaussian transfer functions']                                             | ['Gaussian transfer functions']                                                            |
+| paper_2  | ['projection-based segmentation', 'adaptive 1D search', 'Gaussian transfer functions']                                             | ['Gaussian transfer functions']                                                            |
+| paper_3  | ['texture-based segmentation', 'EM algorithm', 'watershed transform']                                                              | ['Expert-segmented images', 'Statistical distributions of blood, tissue, and instruments'] |
+| paper_4  | ['3D Hough Transform', '3D Randomized Hough Transform']                                                                            | []                                                                                         |
+| paper_5  | ['3D Improved Hough Transform']                                                                                                    | []                                                                                         |
+| paper_6  | ['parallel integral projection transform', 'hierarchical mesh-grid algorithm']                                                     | ['hierarchical mesh-grid algorithm']                                                       |
+| paper_7  | ['projection-based segmentation']                                                                                                  | []                                                                                         |
+| paper_8  | ['3D Phase-grouping']                                                                                                              | []                                                                                         |
+| paper_9  | ['tubular structure enhancement']                                                                                                  | ['tubular structure enhancement', 'tissue instrument morphological operations']            |
+| paper_10 | ['ROI-based tracking']                                                                                                             | ['ROI-based tracking']                                                                     |
+| paper_11 | ['catheter-likelihood map']                                                                                                        | ['catheter-likelihood map']                                                                |
+| paper_12 | ['multiscale filtering technique', 'automatic 3-D TRUS localization']                                                              | ['multiscale filtering technique']                                                         |
+| paper_13 | ['line filter method', 'ROI-based RANSAC and Kalman method']                                                                       | ['line filter method']                                                                     |
+| paper_14 | ['3D Hough transform based needle segmentation method']                                                                            | []                                                                                         |
+| paper_15 | ['noise adaptive method', 'patch based noise estimation', 'maximum likelihood criteria', 'eigenanalysis of the Hessian matrix']    | ['noise adaptive method', 'patch based noise estimation']                                  |
+| paper_16 | ['image processing', 'hypoechoic markers']                                                                                         | ['intensity filter', 'morphological operations']                                           |
+| paper_17 | ['entropy based parameter tuning', 'Gabor filter based segmentation', 'probability map based needle tip estimation']               | ['entropy based parameter tuning']                                                         |
+| paper_18 | ['motion detection', 'polynomial fit']                                                                                             | ['differences between frames']                                                             |
+| paper_19 | ['spectral properties of the displacement field', 'optical flow', 'Lucas-Kanade approach', 'magnitude-squared spectral coherency'] | ['optical flow', 'Lucas-Kanade approach', 'magnitude-squared spectral coherency']          |
+| paper_20 | ['Gabor filter based image processing algorithm', 'Kalman filter']                                                                 | ['bin packing method']                                                                     |
+| paper_21 | ['automatic detection of steep needles', 'shadow traces', 'in-plane view']                                                         | []                                                                                         |
+| paper_22 | ['temporal motion analysis', 'phased-based analysis', 'Hough transform']                                                           | ['Steerable pyramids', 'phased-based analysis']                                            |
+| paper_23 | ['sum of squared differences', 'sum of conditional variances', 'second order Gauss-Newton optimization']                           | ['Sum of squared differences and sum of conditional variances']                            |
+| paper_24 | ['power Doppler and B-mode ultrasound image analyses', 'piezoelectric buzzer']                                                     | ['piezoelectric buzzer']                                                                   |
+| paper_25 | ['Canny edge detection', 'Kalman filter']                                                                                          | ['Canny edge detection']                                                                   |
+
+MATCHES:
+Type of image processing techniques used: 
+Pre-processing and post-processing steps: 

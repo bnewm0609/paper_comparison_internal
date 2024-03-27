@@ -1,0 +1,31 @@
+ID: 74a18a25-85b6-4762-a8aa-aecd2f2cf6ac
+
+GOLD TABLE:
+|           | Objectives                 | Scenarios             |
+|----------:|:---------------------------|:----------------------|
+|  20036963 | ['Accommodate renewables'] | ['Solar']             |
+|  25233575 | ['Accommodate renewables'] | ['Wind']              |
+| 226648085 | ['Accommodate renewables'] | ['Hydrogen']          |
+| 208829559 | ['Enhance efficiency']     | ['Microgrid']         |
+| 226375646 | ['Enhance efficiency']     | ['Integrated energy'] |
+|  57364106 | ['Reduce backups']         | ['Battery']           |
+
+GOLD SCHEMA:
+0: Objectives
+1: Scenarios
+
+PREDICTION PATH:../../metric_validation_0/74a18a25-85b6-4762-a8aa-aecd2f2cf6ac/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Total social welfare                                                                                                                           | Market clearing prices                                                                                                      |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The effectiveness of the model is verified in terms of the profit of the microgrid operator and the utilities of PV prosumers.']             | ['An hour-ahead optimal pricing model of energy sharing management is proposed.']                                           |
+| paper_2 | ['Competition can improve social welfare, and the Nash equilibrium approaches the social optimal as the number of prosumers grows.']           | ['The sharing price at the Nash equilibrium equals the average marginal disutility of all prosumers.']                      |
+| paper_3 | ['Can tackle cost-aware energy sharing among residents in a cooperative community, obtaining nearly 12% of cost reduction for the community.'] | ['Determines the charging and discharging behaviors of energy storage systems based on the dynamics of electricity price.'] |
+| paper_4 | ['The total social welfare considering energy dispatch in different systems is maximized.']                                                    | ['Unified market clearing prices of each kind of energy can be achieved.']                                                  |
+| paper_5 | ['Demonstrates the effectiveness of the multi-energy sharing scheme considering integrated demand response.']                                  | ['Electrical and thermal energy prices can be obtained through the transactive energy mechanism.']                          |
+| paper_6 | ['Under mild alignment condition, a Nash equilibrium exists, unique, and supports social welfare.']                                            | ['Characterizes equilibrium prices for shared storage in a spot market.']                                                   |
+
+MATCHES:
+Total social welfare: 
+Market clearing prices: 

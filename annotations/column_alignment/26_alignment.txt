@@ -1,0 +1,31 @@
+ID: 8360b24e-3194-416b-b6c0-885fca2c9d71
+
+GOLD TABLE:
+|           | Benchmark                                         | Gender   | Harms                          |
+|----------:|:--------------------------------------------------|:---------|:-------------------------------|
+| 167217680 | ['Synthetic equity evaluation corpus (EEC)']      | ['b']    | ['R: under-rep, stereotyping'] |
+| 216641970 | ['BERT-based perturbations on natural sentences'] | ['b']    | ['R: under-rep, stereotyping'] |
+| 173991101 | ['WinoMT']                                        | ['b']    | ['R: under-rep, stereotyping'] |
+|  76654723 | ['Europarl (generic)']                            | ['b']    | ['A: quality']                 |
+| 220047833 | ['Trustpilot (reviews with gender and age)']      | ['b']    | ['R: under-rep']               |
+
+GOLD SCHEMA:
+0: Benchmark
+1: Gender
+2: Harms
+
+PREDICTION PATH:../../metric_validation_0/8360b24e-3194-416b-b6c0-885fca2c9d71/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Methodologies used for evaluation                                                                 | Metrics used for quantifying gender bias   | Types of language and translation tasks considered                                                                           |
+|:--------|:--------------------------------------------------------------------------------------------------|:-------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Construction of word/phrase sets and evaluation using a test set (TGBI)']                       | ['Translation gender bias index (TGBI)']   | ['Translation of gender-neutral pronouns in Korean']                                                                         |
+| paper_2 | ['Mining examples from real world data and compilation of an evaluation benchmark']               | ['N/A']                                    | ['Translation of real world data in four languages from three language families']                                            |
+| paper_3 | ['Use of two recent coreference resolution datasets and automatic gender bias evaluation method'] | ['Morphological analysis']                 | ['Translation of English sentences with non-stereotypical gender roles into eight target languages with grammatical gender'] |
+| paper_4 | ['Compilation of large datasets with speaker information and morphological analysis']             | ['N/A']                                    | ['Translation between 20 language pairs with grammatical gender systems']                                                    |
+| paper_5 | ['Translation of demographically diverse samples from five languages']                            | ['N/A']                                    | ['Translation of demographically diverse samples from five languages']                                                       |
+
+MATCHES:
+Methodologies used for evaluation: 
+Metrics used for quantifying gender bias: 
+Types of language and translation tasks considered: 

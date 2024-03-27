@@ -1,0 +1,25 @@
+ID: 915f13ea-b8d0-473b-8fc0-af2af7e3deb1
+
+GOLD TABLE:
+|           | agent        | hyperparameters                                    |
+|----------:|:-------------|:---------------------------------------------------|
+|    160705 | ['dropout']  | ['learning rate, network, dropout rate']           |
+|   6294674 | ['ensemble'] | ['learning rate, network, ensemble size']          |
+| 236087380 | ['epinet']   | ['learning rate, network, prior, index dimension'] |
+
+GOLD SCHEMA:
+0: agent
+1: hyperparameters
+
+PREDICTION PATH:../../metric_validation_0/915f13ea-b8d0-473b-8fc0-af2af7e3deb1/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of Uncertainty Represented   | Method of Representing Uncertainty      |
+|:--------|:----------------------------------|:----------------------------------------|
+| Paper 1 | ['Model Uncertainty']             | ['Dropout as a Bayesian Approximation'] |
+| Paper 2 | ['Predictive Uncertainty']        | ['Deep Ensembles']                      |
+| Paper 3 | ['Epistemic Uncertainty']         | ['Epistemic Neural Networks (ENN)']     |
+
+MATCHES:
+Type of Uncertainty Represented: 
+Method of Representing Uncertainty: 

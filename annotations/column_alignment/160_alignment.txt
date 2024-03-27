@@ -1,0 +1,28 @@
+ID: ec6033dc-4e55-4127-8cc2-6a23b64c181c
+
+GOLD TABLE:
+|           | Epochs   | Batch   |
+|----------:|:---------|:--------|
+| 222066580 | ['1500'] | ['4']   |
+| 250627826 | ['500']  | ['4']   |
+| 243832686 | ['500']  | ['16']  |
+| 235265851 | ['1500'] | ['16']  |
+
+GOLD SCHEMA:
+0: Epochs
+1: Batch
+
+PREDICTION PATH:../../metric_validation_0/ec6033dc-4e55-4127-8cc2-6a23b64c181c/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Contribution of a new dataset (Paper 1)   | Devising novel blocks to enhance infrared small target detection performance (Paper 2 and 3)   | Designing a network specifically for infrared small target detection (Paper 4)   |
+|:--------|:------------------------------------------|:-----------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| paper_1 | ['Yes']                                   | ['N/A']                                                                                        | ['N/A']                                                                          |
+| paper_2 | ['N/A']                                   | ['TFD-inspired edge block, TOAA block']                                                        | ['N/A']                                                                          |
+| paper_3 | ['N/A']                                   | ['AGCB, AFM']                                                                                  | ['N/A']                                                                          |
+| paper_4 | ['N/A']                                   | ['N/A']                                                                                        | ['Dense Nested Attention Network (DNA-Net)']                                     |
+
+MATCHES:
+Contribution of a new dataset (Paper 1): 
+Devising novel blocks to enhance infrared small target detection performance (Paper 2 and 3): 
+Designing a network specifically for infrared small target detection (Paper 4): 

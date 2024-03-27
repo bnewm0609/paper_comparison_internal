@@ -1,0 +1,49 @@
+ID: bcef4241-1817-4f69-8892-26d8d8b9cf2b
+
+GOLD TABLE:
+|           | Year     | Topic                             |
+|----------:|:---------|:----------------------------------|
+|   2958701 | ['2017'] | ['Unmanned Aerial Vehicles']      |
+|  29525531 | ['2017'] | ['Adaptive Navigation']           |
+| 115606413 | ['2019'] | ['Deep Learning Approaches']      |
+| 208038615 | ['2019'] | ['Visual Navigation']             |
+| 211554002 | ['2020'] | ['Deep Learning Approaches']      |
+| 204744017 | ['2020'] | ['Autonomous Driving']            |
+| 220514595 | ['2020'] | ['Inertial Sensors']              |
+| 218828131 | ['2020'] | ['Autonomous Driving']            |
+| 219981387 | ['2020'] | ['Perception']                    |
+| 214803074 | ['2021'] | ['Convolutional Neural Networks'] |
+| 233741907 | ['2021'] | ['Assistive navigation']          |
+| 252517400 | ['2022'] | ['Spacecraft Navigation']         |
+| 251482050 | ['2022'] | ['Visual Navigation']             |
+| 251819874 | ['2022'] | ['Unmanned Aerial Vehicle']       |
+| 251488520 | ['2022'] | ['Autonomous Driving']            |
+
+GOLD SCHEMA:
+0: Year
+1: Topic
+
+PREDICTION PATH:../../metric_validation_0/bcef4241-1817-4f69-8892-26d8d8b9cf2b/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Range of application domains                        | Types of learning (supervised, semi-supervised, un-supervised)   |
+|:---------|:----------------------------------------------------|:-----------------------------------------------------------------|
+| Paper 1  | ['Unmanned Aerial Vehicles (UAVs)']                 | ['Supervised']                                                   |
+| Paper 2  | ['Autonomous planetary rovers']                     | ['Un-supervised']                                                |
+| Paper 3  | ['Various application domains']                     | ['Supervised', 'Semi-supervised', 'Un-supervised']               |
+| Paper 4  | ['Autonomous visual navigation in robots']          | ['Supervised']                                                   |
+| Paper 5  | ['Prediction models with big data']                 | ['Supervised']                                                   |
+| Paper 6  | ['Autonomous driving']                              | ['Supervised']                                                   |
+| Paper 7  | ['Intelligent transportation systems']              | ['Un-supervised']                                                |
+| Paper 8  | ['Self-driving cars']                               | ['Supervised']                                                   |
+| Paper 9  | ['Localization and mapping']                        | ['Un-supervised']                                                |
+| Paper 10 | ['Computer vision and natural language processing'] | ['Supervised']                                                   |
+| Paper 11 | ['Outdoor navigation for visually impaired people'] | ['Un-supervised']                                                |
+| Paper 12 | ['Spacecraft dynamics, navigation, and control']    | ['Supervised']                                                   |
+| Paper 13 | ['Unmanned underwater vehicles (UUVs)']             | ['Un-supervised']                                                |
+| Paper 14 | ['Unmanned Aerial Vehicle (UAV) navigation']        | ['Supervised', 'Reinforcement learning']                         |
+| Paper 15 | ['Unmanned vehicles (USVs, UAVs, MAVs)']            | ['Supervised']                                                   |
+
+MATCHES:
+Range of application domains: 
+Types of learning (supervised, semi-supervised, un-supervised): 

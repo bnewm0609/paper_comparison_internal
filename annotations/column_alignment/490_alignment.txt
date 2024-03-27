@@ -1,0 +1,37 @@
+ID: fef1be89-2ea0-47e8-8784-8c68d290224e
+
+GOLD TABLE:
+|           | Dataset       | Method          |
+|----------:|:--------------|:----------------|
+| 247793124 | ['LivoxSimu'] | ['ALSO (ours)'] |
+| 245952568 | ['-']         | ['ALSO (ours)'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/fef1be89-2ea0-47e8-8784-8c68d290224e/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Method              | Dataset             |
+|:---------|:--------------------|:--------------------|
+| Paper 1  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 2  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 3  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 4  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 5  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 6  | ['Self-supervised'] | ['Image and Lidar'] |
+| Paper 7  | ['Self-supervised'] | ['Lidar']           |
+| Paper 8  | ['Self-supervised'] | ['Lidar']           |
+| Paper 9  | ['Self-supervised'] | ['Lidar']           |
+| Paper 10 | ['Self-supervised'] | ['Lidar']           |
+| Paper 11 | ['Self-supervised'] | ['Lidar']           |
+| Paper 12 | ['Self-supervised'] | ['Lidar']           |
+| Paper 13 | ['Self-supervised'] | ['Lidar']           |
+| Paper 14 | ['Self-supervised'] | ['Lidar']           |
+| Paper 15 | ['Self-supervised'] | ['Lidar']           |
+| Paper 16 | ['Self-supervised'] | ['Lidar']           |
+
+MATCHES:
+Method: 
+Dataset: 

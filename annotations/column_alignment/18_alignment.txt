@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Molecular dynamics simulation types                         | Data analysis techniques used                                                         | Results and benefits of simulations                                                                                                                                       |
+|:--------|:------------------------------------------------------------|:--------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                     | ['N/A']                                                                               | ['Competitive performance in sentiment analysis and emotion recognition using Dynamic Fusion Graph (DFG)']                                                                |
+| paper_2 | ['Molecular Dynamics, Ab Initio Molecular Dynamics (AIMD)'] | ['Gradient-domain Machine Learning (GDML), Hilbert space of vector-valued functions'] | ['Accurate molecular force fields using GDML, substantial cost reduction in quantum mechanics simulations']                                                               |
+| paper_3 | ['Molecular Dynamics']                                      | ['Deep Learning, Continuous-filter convolutional layers']                             | ['Accurate potential-energy predictions across chemical space for molecules and materials, efficient molecular dynamics simulations']                                     |
+| paper_4 | ['N/A']                                                     | ['Machine Learning, Density Functional Theory']                                       | ['Efficient approximation of density functional theory calculations, identification of effective electrocatalysts']                                                       |
+| paper_5 | ['Molecular Dynamics']                                      | ['Three-dimensional convolutional networks, Graph networks, Equivariant networks']    | ['Performance improvement on molecular tasks using three-dimensional learning methods']                                                                                   |
+| paper_6 | ['Molecular Dynamics']                                      | ['Python, Cython, NumPy arrays']                                                      | ['Uniform object-oriented Python interface for molecular dynamics trajectories, fostering widespread adoption and further development of trajectory analysis algorithms'] |
+| paper_7 | ['N/A']                                                     | ['Convolutional Deep Belief Network']                                                 | ['Significant performance improvement in a variety of tasks, hierarchical compositional part representation, active object recognition through view planning']            |
+| paper_8 | ['N/A']                                                     | ['Point cloud classification neural networks']                                        | ['State-of-the-art performance on ScanObjectNN dataset, identification of challenges and open problems in real-world point cloud object classification']                  |
+
+MATCHES:
+Molecular dynamics simulation types: 
+Data analysis techniques used: 
+Results and benefits of simulations: 

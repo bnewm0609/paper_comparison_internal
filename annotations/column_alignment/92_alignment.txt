@@ -1,0 +1,29 @@
+ID: 46fd6d34-5004-405c-a1b5-d83d964d714f
+
+GOLD TABLE:
+|          | Architecture     | Depth   |
+|---------:|:-----------------|:--------|
+|  2895645 | ['CPCPFF']       | ['4']   |
+|   744633 | ['PCCPCCPCFFF']  | ['8']   |
+| 10647804 | ['CPCPIIPIPFFF'] | ['11']  |
+|  2482804 | ['CPNCPNCPCFF']  | ['6']   |
+| 18374345 | ['CPCPCPFF']     | ['5']   |
+
+GOLD SCHEMA:
+0: Architecture
+1: Depth
+
+PREDICTION PATH:../../metric_validation_0/46fd6d34-5004-405c-a1b5-d83d964d714f/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Approach for handling non-alignable faces                                                                                                                                                       | Performance in real-world conditions                                                                                                                              |
+|:--------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Replace softmax layer with a linear support vector machine. Train all layers of deep networks by backpropagating gradients through the top level SVM.']                                       | ['Demonstrates gains on datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop’s face expression recognition challenge.']                   |
+| paper_2 | ['Ensemble of three state-of-the-art face detectors. Pre-trained models fine-tuned on the training set. Two schemes for learning the ensemble weights of the network responses are presented.'] | ['Generates state-of-the-art result on the FER dataset. Achieves significant gains on the validation and test set of SFEW 2.0.']                                  |
+| paper_3 | ['Proposes a deep neural network architecture for addressing FER problem across multiple well-known standard face datasets.']                                                                   | ['Results are comparable to or better than the state-of-the-art methods in accuracy and training time.']                                                          |
+| paper_4 | ['Proposes a deep model that performs pairwise-face reasoning for relation prediction.']                                                                                                        | ['Effective for fine-grained social relation learning in images and videos.']                                                                                     |
+| paper_5 | ['Introduces DCNs that learn a mapping from non-aligned facial states to aligned ones, alignment-mapping networks (AMNs), to handle non-alignable faces.']                                      | ['Introduces DCNs that learn a mapping from non-aligned facial states to aligned ones, alignment-mapping networks (AMNs), to boost FER accuracy and efficiency.'] |
+
+MATCHES:
+Approach for handling non-alignable faces: 
+Performance in real-world conditions: 

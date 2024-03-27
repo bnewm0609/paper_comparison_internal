@@ -1,0 +1,37 @@
+ID: 0a24aaeb-1cd3-4b1d-b597-558a59ec3cea
+
+GOLD TABLE:
+|           | Application                  | Task                                  | Property        |
+|----------:|:-----------------------------|:--------------------------------------|:----------------|
+|  51868869 | ['Physical Simulation']      | ['Position Prediction']               | ['Equivariant'] |
+|  24630793 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+|   4897444 | ['Small Molecule']           | ['Energy & Force Prediction']         | ['Invariant']   |
+| 224705972 | ['Molecule (Catalyst)']      | ['Relaxed Energy, etc. Prediction']   | ['Invariant']   |
+| 227746763 | ['Molecule & RNA & Protein'] | ['Binding Affinity, etc. Prediction'] | ['Invariant']   |
+|  53688554 | ['Protein']                  | ['Position Prediction']               | ['Equivariant'] |
+| 206592833 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+| 199552106 | ['Point Cloud']              | ['Classification']                    | ['Invariant']   |
+
+GOLD SCHEMA:
+0: Application
+1: Task
+2: Property
+
+PREDICTION PATH:../../metric_validation_0/0a24aaeb-1cd3-4b1d-b597-558a59ec3cea/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Focus Area                                      | Methodology                                                             | Application                                                    |
+|:--------|:------------------------------------------------|:------------------------------------------------------------------------|:---------------------------------------------------------------|
+| Paper 1 | ['Multimodal language analysis']                | ['CMU-MOSEI dataset, Dynamic Fusion Graph']                             | ['Sentiment and emotion analysis']                             |
+| Paper 2 | ['Molecular force fields']                      | ['Gradient-domain machine learning (GDML)']                             | ['Molecular dynamics simulations']                             |
+| Paper 3 | ['Chemical physics and materials']              | ['SchNet deep learning architecture']                                   | ['Prediction of properties for molecules and materials']       |
+| Paper 4 | ['Renewable energy storage']                    | ['Machine learning, quantum chemical simulations']                      | ['Electrocatalyst design for renewable energy storage']        |
+| Paper 5 | ['Biomolecular domain and molecular learning']  | ['ATOM3D benchmark datasets and neural networks']                       | ['Tasks involving biomolecules and molecular learning']        |
+| Paper 6 | ['Molecular dynamics simulations']              | ['MDAnalysis Python package']                                           | ['Analysis of molecular dynamics simulations']                 |
+| Paper 7 | ['Computer vision and 3D shape representation'] | ['3D ShapeNets, Convolutional Deep Belief Network']                     | ['Object recognition and shape completion in computer vision'] |
+| Paper 8 | ['Real-world point cloud classification']       | ['ScanObjectNN dataset and point cloud classification neural networks'] | ['Real-world point cloud object classification']               |
+
+MATCHES:
+Focus Area: 
+Methodology: 
+Application: 

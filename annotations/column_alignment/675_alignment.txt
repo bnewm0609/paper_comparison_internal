@@ -1,0 +1,59 @@
+ID: 2721826a-0999-4bb7-863c-cee10afff4cb
+
+GOLD TABLE:
+|           | Input Features               | Parsing Methods                    | Training Algorithms   | Featured Techniques                       |
+|----------:|:-----------------------------|:-----------------------------------|:----------------------|:------------------------------------------|
+|  18309765 | ['CNN']                      | ['feature-based ranking']          | ['ranking-based']     | ['query graph construction']              |
+|    495573 | ['hand-crafted features']    | ['feature-based ranking']          | ['ranking-based']     | ['query templates']                       |
+|    748402 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['utterance-query templates alignment']   |
+|   2742513 | ['GRU']                      | ['Seq2seq generation']             | ['reward-based']      | ['maximum-likelihood training']           |
+|  53079802 | ['CNN']                      | ['feature-based ranking']          | ['ranking-based']     | ['state transition-based approach']       |
+|  53079601 | ['BiGRU + DPT']              | ['feature-based ranking']          | ['ranking-based']     | ['compositional semantic representation'] |
+|  53035265 | ['hand-crafted features']    | ['feature-based ranking']          | ['-']                 | ['rewrite temporal questions']            |
+|   4896021 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['continuous learning; user feedback']    |
+|  91184245 | ['BiLSTM/CNN']               | ['feature-based ranking']          | ['ranking-based']     | ['unrestricted-hop framework']            |
+| 139100939 | ['GRU']                      | ['Seq2seq generation']             | ['reward-based']      | ['auxiliary reward']                      |
+| 207757236 | ['LSTM + DPT']               | ['feature-based ranking']          | ['MML']               | ['pointer network for decomposition']     |
+| 210992204 | ['BiLSTM']                   | ['feature-based ranking']          | ['MML']               | ['iterative sequence matching']           |
+|  53220882 | ['BiLSTM/CNN/slot matching'] | ['feature-based ranking']          | ['ranking-based']     | ['slot matching']                         |
+| 214344519 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['skeleton parsing grammar']              |
+| 220480936 | ['BiLSTM']                   | ['Seq2seq generation']             | ['reward-based']      | ['abstract query graph']                  |
+| 220047976 | ['BERT']                     | ['feature-ranked ranking']         | ['reward-based']      | ['constraints of query graphs']           |
+| 226222006 | ['BiLSTM']                   | ['Seq2seq generation']             | ['reward-based']      | ['curriculum-guided reward bonus']        |
+| 224282894 | ['BiGRU']                    | ['Seq2seq generation']             | ['reward-based']      | ['hierarchical reinforcement learning']   |
+| 235303644 | ['AMR']                      | ['parsing and reasoning pipeline'] | ['-']                 | ['AMR; logic neural network']             |
+
+GOLD SCHEMA:
+0: Input Features
+1: Parsing Methods
+2: Training Algorithms
+3: Featured Techniques
+
+PREDICTION PATH:../../metric_validation_0/2721826a-0999-4bb7-863c-cee10afff4cb/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of Neural Network Architecture              | Training Method                            |
+|:---------|:-------------------------------------------------|:-------------------------------------------|
+| paper_1  | ['Convolutional Neural Network']                 | ['Supervised Learning']                    |
+| paper_2  | ['Neural Network (Learning-to-Rank)']            | ['Learning-to-Rank (Supervised Learning)'] |
+| paper_3  | ['Convolutional Neural Network (for NER)']       | ['Supervised Learning']                    |
+| paper_4  | ['Sequence-to-Sequence Neural Network']          | ['Reinforcement Learning']                 |
+| paper_5  | ['Sequence-to-Sequence Neural Network']          | ['Supervised Learning']                    |
+| paper_6  | ['Graph Neural Network']                         | ['Supervised Learning']                    |
+| paper_7  | ['Neural Network (Temporal Relation Handling)']  | ['Supervised Learning']                    |
+| paper_8  | ['Neural Network (Continuous Learning)']         | ['Continuous Learning']                    |
+| paper_9  | ['Transition-based Neural Network']              | ['Supervised Learning']                    |
+| paper_10 | ['Neural Program Induction']                     | ['Reinforcement Learning']                 |
+| paper_11 | ['Neural Network (Query Composition)']           | ['Supervised Learning']                    |
+| paper_12 | ['Iterative Neural Network']                     | ['Supervised Learning']                    |
+| paper_13 | ['Neural Network (Query Graph Ranking)']         | ['Supervised Learning']                    |
+| paper_14 | ['BERT-based Neural Network']                    | ['Supervised Learning']                    |
+| paper_15 | ['Encoder-Decoder Neural Network']               | ['Supervised Learning']                    |
+| paper_16 | ['Staged Query Graph Generation Neural Network'] | ['Supervised Learning']                    |
+| paper_17 | ['Neural-Symbolic Neural Network']               | ['Reinforcement Learning']                 |
+| paper_18 | ['Director-Actor-Critic Neural Network']         | ['Reinforcement Learning']                 |
+| paper_19 | ['Neural-Symbolic Neural Network']               | ['Pipeline-based (Modular Training)']      |
+
+MATCHES:
+Type of Neural Network Architecture: 
+Training Method: 

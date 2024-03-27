@@ -1,0 +1,29 @@
+ID: 922d9133-f613-42d2-b191-b75c784e550f
+
+GOLD TABLE:
+|           | Dataset             | Dim.          |
+|----------:|:--------------------|:--------------|
+|  10659969 | ['Moons']           | ['2']         |
+|  60282629 | ['MNIST']           | ['28x28']     |
+|    702279 | ['Fashion MNIST']   | ['28x28']     |
+|  18268744 | ['CIFAR10']         | ['32x32x3']   |
+| 198967908 | ['CelebA-HQ (128)'] | ['128x128x3'] |
+
+GOLD SCHEMA:
+0: Dataset
+1: Dim.
+
+PREDICTION PATH:../../metric_validation_0/922d9133-f613-42d2-b191-b75c784e550f/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Algorithms used                                                                                                         | Applications                                                                   |
+|:--------|:------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| paper_1 | ['Unsupervised training of deep generative models', 'Multi-layer generative model']                                     | ['Unsupervised training of deep generative models on the tiny images dataset'] |
+| paper_2 | ['Machine learning algorithms', 'State-of-the-art machine learning']                                                    | ['Medium-scale supervised and unsupervised machine learning problems']         |
+| paper_3 | ['N/A']                                                                                                                 | ['N/A']                                                                        |
+| paper_4 | ['Benchmarking machine learning algorithms']                                                                            | ['Benchmarking machine learning algorithms']                                   |
+| paper_5 | ['Generative Adversarial Networks (GANs)', 'Dense Mapping Network (DMN)', 'Editing Behavior Simulated Training (EBST)'] | ['Facial image manipulation and user interaction']                             |
+
+MATCHES:
+Algorithms used: 
+Applications: 

@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Dataset and Annotations                                                                                                      | Feature Extraction and Learning                                                                                                    | Classification and Recognition                                                                             |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Fine-grained 3D object representations with new proposed datasets and extensive experiments']                              | ['Profound 3D object representations for fine-grained categorization outperforming state-of-the-art 2D counterparts']              | ['Efficacy for estimating 3D geometry from images via ultra-wide baseline matching and 3D reconstruction'] |
+| paper_2 | ['Large dataset of 103 flower classes with multiple features and weight optimization']                                       | ['Learning optimum kernel combination of multiple features vastly improves performance']                                           | ['Improvement of performance through combining multiple features using a SVM classifier']                  |
+| paper_3 | ['CUB-200-2011: extended challenging dataset of 200 bird species with part localization annotations and benchmarks']         | ['Introduction of benchmarks and baseline experiments for multi-class categorization and part localization']                       | ['Annotation of images with bounding boxes, part locations, and attribute labels']                         |
+| paper_4 | ['Places Database: 10 million scene photographs, labeled with scene semantic categories, and state-of-the-art CNNs']         | ['Utilizing state-of-the-art Convolutional Neural Networks (CNNs) for scene classification']                                       | ['Visualization of object detectors as an intermediate representation of scene classification']            |
+| paper_5 | ['Large-scale collection of digitized fine-art paintings, optimal visual features, and semantic similarity metric learning'] | ['Exploration of visual features and metric learning approaches to optimize similarity measure between paintings']                 | ['Development of a machine for aesthetic-related semantic-level judgments and prediction tasks']           |
+| paper_6 | ['Crowd-sourced dataset of human sketches of everyday objects with perceptual study and computational recognition methods']  | ['Development of a bag-of-features sketch representation and use of multi-class support vector machines for classifying sketches'] | ['Development of an interactive sketch recognition system, capable of identifying unknown sketches']       |
+
+MATCHES:
+Dataset and Annotations: 
+Feature Extraction and Learning: 
+Classification and Recognition: 

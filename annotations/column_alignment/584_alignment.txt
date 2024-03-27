@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Task and Method                                                                        | Data Type and Source                                                                   | Annotation Efficiency                                                   |
+|:--------|:---------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
+| paper_1 | ['heterogeneous multitask learning for autonomous driving']                            | ['video dataset with 100K driving scenes (BDD100K)']                                   | ['human annotators can interfere for accurate segmentation']            |
+| paper_2 | ['polygon prediction for object instance annotation']                                  | ['Cityscapes image dataset']                                                           | ['4.7x speed-up in annotation time (Cityscapes)']                       |
+| paper_3 | ['simultaneous vertex prediction for object annotation']                               | ['Cityscapes image dataset']                                                           | ['significantly more efficient than Polygon-RNN++ in interactive mode'] |
+| paper_4 | ['pre-trained 3D object detection models for fast ground truth generation']            | ['KITTI 3D object detection dataset, data from the Autonomoose self-driving vehicle']  | ['30x lower human annotation time for 3D point cloud']                  |
+| paper_5 | ['active learning for efficient LiDAR 3D object detector training']                    | ['LiDAR 3D object detection data']                                                     | ['minimizes human annotation efforts while maximizing performance']     |
+| paper_6 | ['autolabeling 3D objects with differentiable rendering and SDF shape priors']         | ['pre-trained off-the-shelf 2D detectors, sparse LIDAR data, and the KITTI3D dataset'] | ['automatic annotation pipeline using learned shape priors']            |
+| paper_7 | ['LiDAR point cloud annotation via sensor fusion, one-click annotation, and tracking'] | ['LiDAR point cloud data']                                                             | ['6.2x faster annotation speed and improved label quality']             |
+
+MATCHES:
+Task and Method: 
+Data Type and Source: 
+Annotation Efficiency: 

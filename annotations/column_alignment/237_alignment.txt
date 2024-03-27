@@ -1,0 +1,34 @@
+ID: a79431cf-5fbc-45af-949c-0c3f5549e6ed
+
+GOLD TABLE:
+|           | Task                            | Samples     | Classes   |
+|----------:|:--------------------------------|:------------|:----------|
+|  15676318 | ['Speech, Music, and Noise']    | ['2,016']   | ['3']     |
+|  17567398 | ['Human Sounds']                | ['400']     | ['10']    |
+|   4719239 | ['Commands Recognition']        | ['100,503'] | ['12']    |
+|  14369452 | ['Emotion Detection']           | ['7,438']   | ['6']     |
+| 244899987 | ['Keyword Spotting']            | ['28,039']  | ['20']    |
+| 248571603 | ['Health Condition Monitoring'] | ['21,024']  | ['6']     |
+
+GOLD SCHEMA:
+0: Task
+1: Samples
+2: Classes
+
+PREDICTION PATH:../../metric_validation_0/a79431cf-5fbc-45af-949c-0c3f5549e6ed/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of Dataset                 | Modality                | Purpose of Dataset                                                                                |
+|:--------|:--------------------------------|:------------------------|:--------------------------------------------------------------------------------------------------|
+| Paper_1 | ['Medium', '300 hours']         | ['Audio', 'N/A']        | ['Voice activity detection (VAD) and music/speech discrimination', 'Training and testing']        |
+| Paper_2 | ['Medium', '2000 clips']        | ['Audio', 'N/A']        | ['Environmental sound classification', 'Training, testing, and evaluation of classifiers']        |
+| Paper_3 | ['Medium', '65,000 utterances'] | ['Audio', 'N/A']        | ['Limited-vocabulary speech recognition', 'Training and evaluation of keyword spotting systems']  |
+| Paper_4 | ['Large', '24,000 clips']       | ['Audio-Visual', 'N/A'] | ['Emotional multimodal actors dataset', 'Study of multi-modal emotion expression and perception'] |
+| Paper_5 | ['Very Large', '6,000 hours']   | ['Audio', 'N/A']        | ['Keyword spotting and spoken term search', 'Academic research and commercial applications']      |
+| Paper_6 | ['Very Large', '6,000 hours']   | ['Audio', 'N/A']        | ['Keyword spotting and spoken term search', 'Academic research and commercial applications']      |
+| Paper_7 | ['Medium', '21,000 clips']      | ['Audio', 'N/A']        | ['Human vocal sounds recognition', 'Building robust and accurate vocal sound recognition']        |
+
+MATCHES:
+Size of Dataset: 
+Modality: 
+Purpose of Dataset: 

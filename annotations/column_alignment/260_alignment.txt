@@ -1,0 +1,29 @@
+ID: 91cc26ad-2721-4515-bdfb-8f1062b4b59a
+
+GOLD TABLE:
+|           | Data Modality       | # Sample    | # Classes   | Session   |
+|----------:|:--------------------|:------------|:------------|:----------|
+|  59250729 | ['Colon Pathology'] | ['107,180'] | ['9']       | ['Base']  |
+| 263789934 | ['Dermatoscope']    | ['10,015']  | ['7']       | ['Base']  |
+|  58004589 | ['Abdominal CT']    | ['58,850']  | ['11']      | ['Base']  |
+
+GOLD SCHEMA:
+0: Data Modality
+1: # Sample
+2: # Classes
+3: Session
+
+PREDICTION PATH:../../metric_validation_0/91cc26ad-2721-4515-bdfb-8f1062b4b59a/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Size of the dataset                                                                                                   | Diversity of the images in the dataset                                                                                                                                                                  | Training methods applied on the dataset                                                                                                          | Availability of the dataset for research purposes   |
+|:--------|:----------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------|
+| paper_1 | ['131 CT volumes for training, 70 unseen test images']                                                                | ['Diverse dataset containing primary and secondary tumors with varied sizes and appearances']                                                                                                           | ['Unknown']                                                                                                                                      | ['Accessible via www.lits-challenge.com']           |
+| paper_2 | ['More than 100,000 HE image patches, 862 HE slides, 7,180 images from 25 CRC patients, 409 stage I–IV CRC patients'] | ['Images from 500 stage I–IV CRC patients in The Cancer Genome Atlas (TCGA) cohort, independent cohort of 409 stage I–IV CRC patients from the Darmkrebs: Chancen der Verhütung durch Screening study'] | ['CNN by transfer learning, automated tissue decomposition']                                                                                     | ['N/A']                                             |
+| paper_3 | ['10015 dermatoscopic images']                                                                                        | ['Images collected from different populations and stored by different modalities']                                                                                                                      | ['Application of different acquisition and cleaning methods, developed semi-automatic workflows utilizing specifically trained neural networks'] | ['Publicly available through the ISIC archive']     |
+
+MATCHES:
+Size of the dataset: 
+Diversity of the images in the dataset: 
+Training methods applied on the dataset: 
+Availability of the dataset for research purposes: 

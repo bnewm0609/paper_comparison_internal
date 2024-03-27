@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Language Focus   | Datasets Used                                         | Machine Learning Algorithms                              | Feature Extraction Techniques                     | Model Performance Metrics                                                                                                   |
+|:--------|:-----------------|:------------------------------------------------------|:---------------------------------------------------------|:--------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Amharic']      | ['Amharic Facebook posts and comments']               | ['Random Forest, Naïve Bayes']                           | ['Word2Vec, TF-IDF']                              | ['79.83% accuracy']                                                                                                         |
+| paper_2 | ['Amharic']      | ['5Js dataset, collected from 2018-2022']             | ['LR, SVM, NB, LSTM, BiLSTM, CNN, Am-FLAIR, Am-RoBERTa'] | ['BOW, TF-IDF, Word2Vec, Keras Embedding layers'] | ['F1 scores: LR (0.49), SVM (0.49), NB (0.46), LSTM (0.44), BiLSTM (0.44), CNN (0.44), Am-FLAIR (0.48), Am-RoBERTa (0.50)'] |
+| paper_3 | ['Afaan Oromo']  | ['Afaan Oromo hate speech datasets from Facebook']    | ['Classical, ensemble, and deep learning algorithms']    | ['BOW, TF-IDF, word2vec, Keras Embedding layers'] | ['Accuracy of 0.84 and 0.88 for eight classes and two classes, respectively']                                               |
+| paper_4 | ['Afan Oromo']   | ['Collected comments and posts from various sources'] | ['N/A']                                                  | ['N/A']                                           | ['N/A']                                                                                                                     |
+| paper_5 | ['Afaan Oromoo'] | ['Data collected from Facebook posts and comments']   | ['SVM']                                                  | ['TF-IDF, N-gram, W2vec']                         | ['96% accuracy in all metrics']                                                                                             |
+
+MATCHES:
+Language Focus: 
+Datasets Used: 
+Machine Learning Algorithms: 
+Feature Extraction Techniques: 
+Model Performance Metrics: 

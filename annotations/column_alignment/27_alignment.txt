@@ -1,0 +1,31 @@
+ID: 8360b24e-3194-416b-b6c0-885fca2c9d71
+
+GOLD TABLE:
+|           | Benchmark                                         | Gender   | Harms                          |
+|----------:|:--------------------------------------------------|:---------|:-------------------------------|
+| 167217680 | ['Synthetic equity evaluation corpus (EEC)']      | ['b']    | ['R: under-rep, stereotyping'] |
+| 216641970 | ['BERT-based perturbations on natural sentences'] | ['b']    | ['R: under-rep, stereotyping'] |
+| 173991101 | ['WinoMT']                                        | ['b']    | ['R: under-rep, stereotyping'] |
+|  76654723 | ['Europarl (generic)']                            | ['b']    | ['A: quality']                 |
+| 220047833 | ['Trustpilot (reviews with gender and age)']      | ['b']    | ['R: under-rep']               |
+
+GOLD SCHEMA:
+0: Benchmark
+1: Gender
+2: Harms
+
+PREDICTION PATH:../../metric_validation_0/8360b24e-3194-416b-b6c0-885fca2c9d71/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Specific examples of gender bias identified                                                                                                       | Causes of gender bias in machine translation                                                                                                                                                                                                                                                 | Proposed solutions or techniques to mitigate gender bias                                                                                                                                                                                   |
+|:--------|:--------------------------------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Usage of Korean, a language with gender-neutral pronouns, to identify gender bias in machine translation systems.']                             | ['Lack of thorough investigation on detection and evaluation of gender bias in machine translation systems despite the growing need for a system that reduces model bias in areas such as image captioning, content recommendation, and automated employment.']                              | ['A scheme for making up a test set that evaluates the gender bias in a machine translation system, with Korean, a language with gender-neutral pronouns, and the translation gender bias index (TGBI).']                                  |
+| paper_2 | ['Examples of gendered language in machine translation models mined from real-world data, spanning four languages from three language families.'] | ['Model representations being gendered and the unintended consequences these gendered representations can have in downstream application.']                                                                                                                                                  | ['A novel technique to mine examples from real-world data to explore challenges for deployed machine translation systems and a publicly released evaluation benchmark spanning examples for four languages from three language families.'] |
+| paper_3 | ['Usage of two recent coreference resolution datasets to devise an automatic gender bias evaluation method for eight target languages.']          | ['Four popular industrial MT systems and two recent state-of-the-art academic MT models being significantly prone to gender-biased translation errors for all tested target languages.']                                                                                                     | ['An automatic gender bias evaluation method for eight target languages using two recent coreference resolution datasets composed of English sentences which cast participants into non-stereotypical gender roles.']                      |
+| paper_4 | ['N/A']                                                                                                                                           | ['Different aspects of the world being attended to and encoded in different languages, such as the way gender is expressed in a language, requiring the retention/recovery of inherent gender information to correctly translate sentences into languages with grammatical gender systems.'] | ['The compilation of large datasets with speaker information for 20 language pairs and a simple set of experiments that incorporate gender information into NMT systems for multiple language pairs.']                                     |
+| paper_5 | ['Three commercial machine translation systems making demographically diverse samples from five languages sound older and more male.']            | ['Translation models reflecting demographic bias in the training data.']                                                                                                                                                                                                                     | ['N/A']                                                                                                                                                                                                                                    |
+
+MATCHES:
+Specific examples of gender bias identified: 
+Causes of gender bias in machine translation: 
+Proposed solutions or techniques to mitigate gender bias: 

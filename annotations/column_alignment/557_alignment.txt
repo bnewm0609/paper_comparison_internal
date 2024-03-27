@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Unsupervised vs Supervised Learning                                                           | Text Analytics Applications                                                                | Dataset and Evaluation                                                              |
+|:--------|:----------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------|
+| Paper_1 | ['Combines unsupervised and supervised techniques for sentiment analysis']                    | ['Leverages sentiment information as well as non-sentiment annotations']                   | ['Evaluates the model using small, widely used sentiment and subjectivity corpora'] |
+| Paper_2 | ['Addresses the challenge of unreliable guesses on unanswerable questions']                   | ['Deals with unanswerable questions in context documents']                                 | ['Introduces a new dataset, SQuADRUn, combining SQuAD with unanswerable questions'] |
+| Paper_3 | ['Focuses on evaluating the current state-of-the-art models for semantic textual similarity'] | ['Measures the meaning similarity of sentences and evaluates machine translation quality'] | ['Summarizes performance and reviews a selection of well performing methods']       |
+
+MATCHES:
+Unsupervised vs Supervised Learning: 
+Text Analytics Applications: 
+Dataset and Evaluation: 

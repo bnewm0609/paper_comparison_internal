@@ -1,0 +1,31 @@
+ID: 2aad0947-1bd3-4b7a-8332-8c3efa3d6392
+
+GOLD TABLE:
+|           | No    | Title                                                                                                                                                                                                                                                                 |
+|----------:|:------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 193179455 | ['1'] | ['Kontemplasi Politik (Belajar Dari Kisah Perang Badar Menurut Sirah Ibnu Hisyam Dan Al-thabari) (Political Contemplation (Learning from the Story of the Battle of Badr According to the Sirah of Ibn Hisham and Al-Thabari))']                                      |
+| 181419409 | ['2'] | ["Isra Mi'raj Sebagai Perjalanan Religi: Studi Analisis Peristiwa Isra Mi'raj Nabi Muhammad Menurut Al Qur'an Dan Hadits (Isra Mi'raj as a Religious Journey: An Analytical Study of the Isra Mi'raj Event of Prophet Muhammad According to the Qur'an and Hadiths)"] |
+| 221700756 | ['4'] | ['Sejarah Sosial-Politik Arab: Dari Hegemoni Romawi-Persia Hingga Kebangkitan Arab Islam (Arab Social-Political History: From Roman-Persian Hegemony to the Rise of Arab Islam)']                                                                                     |
+| 237879696 | ['5'] | ["Pendidikan Karakter dalam Buku Sirah Nabawiyah Karya Syaikh Shafiyyurrahman al-Mubarakfuri (Character Education in the Book of the Prophet's Biography by Sheikh Shafiyyurrahman al-Mubarakfuri)"]                                                                  |
+| 191016969 | ['6'] | ["Sirah Nabawiyah dan Demitologisasi Kehidupan Nabi (Prophetic Biography and Demythologization of the Prophet's Life)"]                                                                                                                                               |
+| 171913397 | ['8'] | ['Tata kelola pemerintahan negara madinah pada masa nabi Muhammad saw (The governance system of the Madinah state during the time of Prophet Muhammad (peace be upon him).)']                                                                                         |
+
+GOLD SCHEMA:
+0: No
+1: Title
+
+PREDICTION PATH:../../metric_validation_0/2aad0947-1bd3-4b7a-8332-8c3efa3d6392/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Historical Period Analyzed                              | Methodology Used                                                                        |
+|:--------|:--------------------------------------------------------|:----------------------------------------------------------------------------------------|
+| paper_1 | ['Perang Badar Kubra']                                  | ['Analysis of historical texts and Islamic literature']                                 |
+| paper_2 | ["Isra' Mi'raj"]                                        | ["Analysis of Qur'an and Hadith with tafsir and sirah nabawiyyah"]                      |
+| paper_3 | ['Roman-Persian hegemony to the rise of Islamic Arabs'] | ['Biographical and bibliographic history method']                                       |
+| paper_4 | ['Sejarah Islam']                                       | ['Content analysis through library research and descriptive approach']                  |
+| paper_5 | ['Life of the Prophet Muhammad']                        | ['Analysis to demythologize the life of the Prophet']                                   |
+| paper_6 | ['Madinah during the time of Nabi Muhammad SAW']        | ['Detailed and in-depth description of the political system and governance of Madinah'] |
+
+MATCHES:
+Historical Period Analyzed: 
+Methodology Used: 

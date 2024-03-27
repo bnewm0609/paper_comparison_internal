@@ -1,0 +1,35 @@
+ID: 3560e8ad-2a9d-4160-bdf8-007ab0e734e3
+
+GOLD TABLE:
+|          | Domain                   | Proposed Method                      | Transferable   | Generalizable   | Matching Performance   |
+|---------:|:-------------------------|:-------------------------------------|:---------------|:----------------|:-----------------------|
+| 19953360 | ['Face images']          | ['Multimodal Discriminant Analysis'] | ['Yes']        | ['Yes']         | ['Severely degraded']  |
+|  3333907 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 13818729 | ['Face images']          | ['Semi-Adversarial Networks']        | ['Yes']        | ['No']          | ['Mostly retained']    |
+| 43975656 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 51890585 | ['Face images']          | ['Ensemble of SAN models']           | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+| 59553616 | ['Face representations'] | ['SensitiveNet']                     | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+
+GOLD SCHEMA:
+0: Domain
+1: Proposed Method
+2: Transferable
+3: Generalizable
+4: Matching Performance
+
+PREDICTION PATH:../../metric_validation_0/3560e8ad-2a9d-4160-bdf8-007ab0e734e3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Ensuring realistic face image                                      | Ensuring confounded gender attributes                              | Ensuring unimpacted biometric recognition                 |
+|:--------|:-------------------------------------------------------------------|:-------------------------------------------------------------------|:----------------------------------------------------------|
+| paper_1 | ['Maintains visual quality and retains gender, race, and age']     | ['Retains gender as unaltered']                                    | ['Allows gender detection to proceed unimpeded']          |
+| paper_2 | ['Modifies images without significantly altering visual quality']  | ['Perturbs to confuse gender classifiers']                         | ['Retains biometric utility as assessed by face matcher'] |
+| paper_3 | ['Transforms into realistic images while ensuring gender privacy'] | ['Confounds gender attributes for gender classification']          | ['Does not impact biometric recognition performance']     |
+| paper_4 | ['Preserves image quality and visual content']                     | ['Embeds imperceptible noise for incorrect gender classification'] | ['Does not affect face recognition performance']          |
+| paper_5 | ['Perturbed images are realistic']                                 | ['Unrecognizable by arbitrary gender classifiers']                 | ['Does not affect face matching task']                    |
+| paper_6 | ['Maintains performance in face recognition tasks']                | ['Can confound gender information in learned feature space']       | ['Maintains performance in face recognition tasks']       |
+
+MATCHES:
+Ensuring realistic face image: 
+Ensuring confounded gender attributes: 
+Ensuring unimpacted biometric recognition: 

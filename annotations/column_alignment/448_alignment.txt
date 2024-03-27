@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Method of Hate Speech Detection                                                                       | Language         | Dataset                                                 | Evaluation Metrics                           | Performance                                               |
+|:--------|:------------------------------------------------------------------------------------------------------|:-----------------|:--------------------------------------------------------|:---------------------------------------------|:----------------------------------------------------------|
+| Paper_1 | ['Apache Spark-based model using Random Forest and Naïve Bayes']                                      | ['Amharic']      | ['Facebook posts and comments']                         | ['Accuracy']                                 | ['79.83%']                                                |
+| Paper_2 | ['Crowdsourced annotation using Yandex Toloka and various machine learning and deep learning models'] | ['Amharic']      | ['Twitter tweets']                                      | ['F1 score']                                 | ['0.50']                                                  |
+| Paper_3 | ['Machine learning models using different algorithms and feature extraction techniques']              | ['Afaan Oromo']  | ['Facebook posts and comments']                         | ['Accuracy']                                 | ['0.88 for two classes DMNB with 0.84 for eight classes'] |
+| Paper_4 | ['Machine learning approach']                                                                         | ['Afan Oromo']   | ['Facebook and Twitter pages of various organizations'] | ['Not specified']                            | ['Not specified']                                         |
+| Paper_5 | ['SVM with TF-IDF, N-gram, and W2vec feature extraction']                                             | ['Afaan Oromoo'] | ['Facebook posts and comments']                         | ['Accuracy, F-score, Recall, and Precision'] | ['96% in all metrics']                                    |
+
+MATCHES:
+Method of Hate Speech Detection: 
+Language: 
+Dataset: 
+Evaluation Metrics: 
+Performance: 

@@ -1,0 +1,29 @@
+ID: 91cc26ad-2721-4515-bdfb-8f1062b4b59a
+
+GOLD TABLE:
+|           | Data Modality       | # Sample    | # Classes   | Session   |
+|----------:|:--------------------|:------------|:------------|:----------|
+|  59250729 | ['Colon Pathology'] | ['107,180'] | ['9']       | ['Base']  |
+| 263789934 | ['Dermatoscope']    | ['10,015']  | ['7']       | ['Base']  |
+|  58004589 | ['Abdominal CT']    | ['58,850']  | ['11']      | ['Base']  |
+
+GOLD SCHEMA:
+0: Data Modality
+1: # Sample
+2: # Classes
+3: Session
+
+PREDICTION PATH:../../metric_validation_0/91cc26ad-2721-4515-bdfb-8f1062b4b59a/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of images used                              | Purpose of image analysis                                                      | Methods used                                                     | Evaluation metrics                            |
+|:--------|:-------------------------------------------------|:-------------------------------------------------------------------------------|:-----------------------------------------------------------------|:----------------------------------------------|
+| paper_1 | ['Computed Tomography (CT) volumes']             | ['Liver and liver tumor segmentation']                                         | ['Deep learning, LiTS benchmark']                                | ['Dice scores, liver and tumor segmentation'] |
+| paper_2 | ['Hematoxylin–eosin (HE)–stained tissue slides'] | ['Automated tissue decomposition, prognostication of colorectal cancer (CRC)'] | ['Deep convolutional neural networks (CNNs), transfer learning'] | ['Nine-class accuracy, hazard ratio (HR)']    |
+| paper_3 | ['Dermatoscopic images']                         | ['Automated diagnosis of pigmented skin lesions']                              | ['Trained neural networks, semi-automatic workflows']            | ['N/A']                                       |
+
+MATCHES:
+Type of images used: 
+Purpose of image analysis: 
+Methods used: 
+Evaluation metrics: 

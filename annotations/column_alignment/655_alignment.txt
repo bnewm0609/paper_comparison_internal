@@ -1,0 +1,33 @@
+ID: 1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3
+
+GOLD TABLE:
+|           | #Train        | #Eval      | #Classes   |
+|----------:|:--------------|:-----------|:-----------|
+|   2608922 | ['1,803,460'] | ['36,500'] | ['365']    |
+|  16119123 | ['5,994']     | ['5,794']  | ['200']    |
+|  14342571 | ['8,144']     | ['8,041']  | ['196']    |
+|  15193013 | ['2,040']     | ['6,149']  | ['102']    |
+|  14168099 | ['42,129']    | ['10,628'] | ['195']    |
+| 207194178 | ['16,000']    | ['4,000']  | ['250']    |
+
+GOLD SCHEMA:
+0: #Train
+1: #Eval
+2: #Classes
+
+PREDICTION PATH:../../metric_validation_0/1243ddf4-3425-4e45-9f1f-3e7c2b70d9a3/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | percentage increase in categorization performance   | methods for addressing class imbalance            | handling of overlapping categories                                                    |
+|:--------|:----------------------------------------------------|:--------------------------------------------------|:--------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                             | ['N/A']                                           | ['N/A']                                                                               |
+| paper_2 | ['17.7%']                                           | ['Multiple kernel framework with SVM classifier'] | ['N/A']                                                                               |
+| paper_3 | ['N/A']                                             | ['N/A']                                           | ['Part localization annotations']                                                     |
+| paper_4 | ['N/A']                                             | ['N/A']                                           | ['Object detectors emerge as an intermediate representation of scene classification'] |
+| paper_5 | ['N/A']                                             | ['N/A']                                           | ['N/A']                                                                               |
+| paper_6 | ['N/A']                                             | ['N/A']                                           | ['N/A']                                                                               |
+
+MATCHES:
+percentage increase in categorization performance: 
+methods for addressing class imbalance: 
+handling of overlapping categories: 

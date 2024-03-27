@@ -1,0 +1,33 @@
+ID: e017f23d-a90f-4443-a5ec-946869cb0a49
+
+GOLD TABLE:
+|           | Year     | Image Type             | Intra/Inter Mode Collapse   | Application Type    | Proposed Solution                            |
+|----------:|:---------|:-----------------------|:----------------------------|:--------------------|:---------------------------------------------|
+| 252846395 | ['2023'] | ['X-ray Images']       | ['Intra']                   | ['Image Synthesis'] | ['Self-attention and multi-scale gradients'] |
+| 204904838 | ['2021'] | ['Dermoscopic Images'] | ['Intra']                   | ['Image Synthesis'] | ['Self Attention']                           |
+| 244714924 | ['2021'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['SSIM loss']                                |
+| 232061669 | ['2020'] | ['MR Images']          | ['Intra']                   | ['Image Synthesis'] | ['VAEGAN']                                   |
+
+GOLD SCHEMA:
+0: Year
+1: Image Type
+2: Intra/Inter Mode Collapse
+3: Application Type
+4: Proposed Solution
+
+PREDICTION PATH:../../metric_validation_0/e017f23d-a90f-4443-a5ec-946869cb0a49/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of medical imaging data used (e.g., X-ray, skin lesion, MR, 3D brain MRI)   | GAN architecture used (e.g., MSG-SAGAN, PGAN, PGGAN-SSIM, Deep Convolutional Refined Auto-Encoding Alpha GAN)   | Use of attention mechanism in the GAN architecture                                                                      | Evaluation metrics used to assess the diversity and quality of generated images (e.g., MS-SSIM, FID, ISIC 2018 skin lesion challenge dataset accuracy)   | Performance comparison with other GAN-based methods or non-augmented data                  |
+|:--------|:---------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------|
+| paper_1 | ['X-ray']                                                                        | ['MSG-SAGAN']                                                                                                   | ['Utilizes attention mechanism to model the relationship between long-range dependencies of biomedical image features'] | ['MS-SSIM, FID']                                                                                                                                         | ['Outperforms MSG-GAN in synthesizing diversified images based on MS-SSIM and FID scores'] |
+| paper_2 | ['Skin lesion']                                                                  | ['PGAN']                                                                                                        | ['Utilizes self-attention mechanism to model long-range dependencies in feature maps']                                  | ['N/A']                                                                                                                                                  | ['Achieves 2.8% better classification result accuracy than the non-augmented data']        |
+| paper_3 | ['Medical MR (specifically brain tumor)']                                        | ['PGGAN-SSIM']                                                                                                  | ['N/A']                                                                                                                 | ['FID, MS-SSIM']                                                                                                                                         | ['Exceeds other GAN-based methods in terms of FID and MS-SSIM']                            |
+| paper_4 | ['3D brain MRI']                                                                 | ['Deep Convolutional Refined Auto-Encoding Alpha GAN']                                                          | ['N/A']                                                                                                                 | ['Multi-Scale Structural Similarity Metric']                                                                                                             | ['Qualitative and quantitative comparison performed']                                      |
+
+MATCHES:
+Type of medical imaging data used (e.g., X-ray, skin lesion, MR, 3D brain MRI): 
+GAN architecture used (e.g., MSG-SAGAN, PGAN, PGGAN-SSIM, Deep Convolutional Refined Auto-Encoding Alpha GAN): 
+Use of attention mechanism in the GAN architecture: 
+Evaluation metrics used to assess the diversity and quality of generated images (e.g., MS-SSIM, FID, ISIC 2018 skin lesion challenge dataset accuracy): 
+Performance comparison with other GAN-based methods or non-augmented data: 

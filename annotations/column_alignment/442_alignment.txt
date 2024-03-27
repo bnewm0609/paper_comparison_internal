@@ -1,0 +1,35 @@
+ID: 09b5e5d9-db03-49e5-836d-2591cec8e1e3
+
+GOLD TABLE:
+|           | Languages       | Size       | Algorithm      | Dataset   | Model   |
+|----------:|:----------------|:-----------|:---------------|:----------|:--------|
+|  51748293 | ['Amharic']     | ['6,120']  | ['Word2Vec']   | ['No']    | ['No']  |
+| 254277233 | ['Amharic']     | ['5,267']  | ['RoBERTa']    | ['Yes']   | ['Yes'] |
+| 250150939 | ['Afaan Oromo'] | ['12,812'] | ['BiLSTM']     | ['No']    | ['No']  |
+| 241322266 | ['Afaan Oromo'] | ['13,600'] | ['L-SVM']      | ['No']    | ['No']  |
+| 246037862 | ['Afaan Oromo'] | ['2,780']  | ['SVM+TF-IDF'] | ['No']    | ['No']  |
+
+GOLD SCHEMA:
+0: Languages
+1: Size
+2: Algorithm
+3: Dataset
+4: Model
+
+PREDICTION PATH:../../metric_validation_0/09b5e5d9-db03-49e5-836d-2591cec8e1e3/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Focus Language   | Data Collection Method                  | Feature Extraction Method                               | Performance Metric                                                        | Challenges Addressed                                                                      |
+|:--------|:-----------------|:----------------------------------------|:--------------------------------------------------------|:--------------------------------------------------------------------------|:------------------------------------------------------------------------------------------|
+| Paper 1 | Amharic          | Amharic Facebook posts and comments     | Word2Vec and TF-IDF                                     | 79.83% accuracy with word2vec embedding                                   | Detection of hate speech in Amharic language on social networks                           |
+| Paper 2 | Amharic          | Twitter tweets                          | Am-FLAIR and Am-RoBERTa                                 | F1 scores ranging from 0.44 to 0.50                                       | Tackling challenges of crowdsourcing annotation for Amharic hate speech data collection   |
+| Paper 3 | Afaan Oromo      | Facebook posts and comments             | Various ML algorithms and feature extraction techniques | Accuracy of 0.84 and 0.88 for eight classes and two classes, respectively | Lack of datasets for under-resourced languages like Afaan Oromo                           |
+| Paper 4 | Afaan Oromo      | Facebook and Twitter posts and comments | Not specified                                           | Not specified                                                             | Detection of hate speech in Afan Oromo's texts on social networks                         |
+| Paper 5 | Afaan Oromoo     | Facebook posts and comments             | TF-IDF, N-gram, W2vec                                   | 96% accuracy with SVM and n-gram combination with TF-IDF                  | Lack of a general framework to identify hate and neutral speech for Afaan Oromoo language |
+
+MATCHES:
+Focus Language: 
+Data Collection Method: 
+Feature Extraction Method: 
+Performance Metric: 
+Challenges Addressed: 

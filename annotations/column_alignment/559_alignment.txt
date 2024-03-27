@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Adversarial Unanswerable Questions                                                                                                                               | Multilingual and Cross-lingual Pairs                                                                                                                                                          | Machine Translation Quality Estimation (MTQE) Data                                                                                                                                                                |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['N/A']                                                                                                                                                          | ['N/A']                                                                                                                                                                                       | ['N/A']                                                                                                                                                                                                           |
+| paper_2 | ['The paper introduces SQuADRUn, a new dataset that combines the existing SQuAD with over 50,000 unanswerable questions written adversarially by crowdworkers.'] | ['N/A']                                                                                                                                                                                       | ['N/A']                                                                                                                                                                                                           |
+| paper_3 | ['N/A']                                                                                                                                                          | ['The paper discusses multilingual and cross-lingual pairs in the context of the Semantic Textual Similarity (STS) shared task, with a specific track exploring MT quality estimation data.'] | ['The paper focuses on MTQE data as one of the tracks in the Semantic Textual Similarity (STS) shared task, introducing new evaluation sets carefully selected from the corpus of English STS shared task data.'] |
+
+MATCHES:
+Adversarial Unanswerable Questions: 
+Multilingual and Cross-lingual Pairs: 
+Machine Translation Quality Estimation (MTQE) Data: 

@@ -1,0 +1,27 @@
+ID: 16848f06-083f-4b7b-8c6a-dc69b580fe8e
+
+GOLD TABLE:
+|          | Modality              | Planning Type   | Methods          | Dynamicity   |
+|---------:|:----------------------|:----------------|:-----------------|:-------------|
+| 14666480 | ['Rail, road']        | ['Offline']     | ['Model-driven'] | ['Specific'] |
+| 53072162 | ['Rail, road, water'] | ['Offline']     | ['Model-driven'] | ['Specific'] |
+
+GOLD SCHEMA:
+0: Modality
+1: Planning Type
+2: Methods
+3: Dynamicity
+
+PREDICTION PATH:../../metric_validation_0/16848f06-083f-4b7b-8c6a-dc69b580fe8e/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Robustness                                                                                                  | Multiobjective Nature                                                                       | Methods                                                                                                                 | Performance Improvement                                                                                               |
+|:--------|:------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Robustness of optimal solutions under uncertainty in demand']                                             | ['Addresses multi-objective network design problem for passenger transportation']           | ['Epsilon Non-dominated Sorting Genetic Algorithm (e-NSGAII) used for optimization']                                    | ['Loss in performance limited with a different transportation demand']                                                |
+| paper_2 | ['Heuristic solution based on Approximate Dynamic Programming to tackle uncertainty in freight scheduling'] | ['Considers performance over time and over the entire synchromodal transportation network'] | ['Modeling as a Markov Decision Process and proposal of a heuristic solution based on Approximate Dynamic Programming'] | ['Enhancement of traditional ADP algorithm by including Bayesian exploration and achieving over 20% gains in profit'] |
+
+MATCHES:
+Robustness: 
+Multiobjective Nature: 
+Methods: 
+Performance Improvement: 

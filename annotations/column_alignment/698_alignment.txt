@@ -1,0 +1,27 @@
+ID: 93aa450c-e41d-42d4-b8fd-932626488c7c
+
+GOLD TABLE:
+|           | First Author       | Year     |
+|----------:|:-------------------|:---------|
+|  94021755 | ['J. Frehaut']     | ['1986'] |
+| 117359303 | ['L.A. Bernstein'] | ['2002'] |
+| 116965136 | ['McNabb']         | ['2001'] |
+| 101785869 | ['R.W. Lougheed']  | ['2002'] |
+
+GOLD SCHEMA:
+0: First Author
+1: Year
+
+PREDICTION PATH:../../metric_validation_0/93aa450c-e41d-42d4-b8fd-932626488c7c/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Measurement Method                                                                         | Neutron Energy Range          |
+|:--------|:-------------------------------------------------------------------------------------------|:------------------------------|
+| paper_1 | ['Large liquid scintillator method']                                                       | ['7.5 - 15 MeV']              |
+| paper_2 | ['Absolute partial gamma-ray cross section measurements using Ge detectors']               | ['Not specified extensively'] |
+| paper_3 | ['Cross section measurements by the GEANIE collaboration combined with reaction modeling'] | ['Threshold to 20 MeV']       |
+| paper_4 | ['Alpha and gamma spectroscopy measurements']                                              | ['13.7 to 15.1 MeV']          |
+
+MATCHES:
+Measurement Method: 
+Neutron Energy Range: 

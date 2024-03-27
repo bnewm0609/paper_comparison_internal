@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Use cases for SDR                                           | SDR implementations and flexibility demonstrated                     |
+|:---------|:------------------------------------------------------------|:---------------------------------------------------------------------|
+| paper_1  | ['RF-based detection of drone presence']                    | ['Software Defined Radio implementation for drone detection']        |
+| paper_2  | ['Security assessment of aviation datalink communications'] | ['Software Defined Radio implementation for security assessment']    |
+| paper_3  | ['Secure TPMS protocol for vehicular security']             | ['Software Defined Radio implementation for secure TPMS protocol']   |
+| paper_4  | ['Spoofing mitigation for FM-based indoor localization']    | ['Software Defined Radio implementation for spoofing mitigation']    |
+| paper_5  | ['Spoofing mitigation for GNSS systems']                    | ['Software Defined Radio implementation for spoofing mitigation']    |
+| paper_6  | ['Bluetooth 2.1+ Secure Simple Pairing attack']             | ['Software Defined Radio implementation for Bluetooth attack']       |
+| paper_7  | ['GSM security vulnerabilities demonstration']              | ['Software Defined Radio implementation for GSM attack']             |
+| paper_8  | ['LTE location leakage and service denial attacks']         | ['Software Defined Radio implementation for LTE attacks']            |
+| paper_9  | ['Aeronautical surveillance system for drone delivery']     | ['Heterogeneous Software Defined Radio framework']                   |
+| paper_10 | ['Passive eavesdropping of DECT voice communications']      | ['Software Defined Radio implementation for passive eavesdropping']  |
+| paper_11 | ['NFC key agreement for secure communication']              | ['Software Defined Radio for full-duplex near-field communications'] |
+| paper_12 | ['Reconfigurable IoT gateway']                              | ['Reconfigurable Software Defined Radio platform']                   |
+| paper_13 | ['Eavesdropping attacks on computer displays']              | ['Software Defined Radio for eavesdropping attacks']                 |
+| paper_14 | ['PHY based jamming attacks against OFDM systems']          | ['Software Defined Radio for PHY based jamming attacks']             |
+| paper_15 | ['PHY based Jamming attacks against OFDM systems']          | ['Software Defined Radio for PHY based jamming attacks']             |
+| paper_16 | ['Cyber attacking tactical radio networks']                 | ['Software Defined Radio for tactical radio networks']               |
+| paper_17 | ['Physical-layer identification for UHF RFID tags']         | ['Software Defined Radio for UHF RFID tags identification']          |
+| paper_18 | ['LTE PHY layer vulnerability analysis']                    | ['Software Defined Radio for LTE PHY layer vulnerability analysis']  |
+
+MATCHES:
+Use cases for SDR: 
+SDR implementations and flexibility demonstrated: 

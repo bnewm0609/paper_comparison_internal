@@ -1,0 +1,33 @@
+ID: 3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6
+
+GOLD TABLE:
+|           | Category             | Method                            |
+|----------:|:---------------------|:----------------------------------|
+| 204104363 | ['By Main Variance'] | ['PLS']                           |
+| 100331255 | ['-']                | ['iPLS & mIPW-PLS']               |
+| 126254919 | ['-']                | ['Spectra segment']               |
+| 181779897 | ['-']                | ["By main elements' intensities"] |
+| 227253762 | ['Deep']             | ['CNN']                           |
+| 195218599 | ['By Evaluation']    | ['BestKSelct']                    |
+|  46882558 | ['Others']           | ['GA']                            |
+
+GOLD SCHEMA:
+0: Category
+1: Method
+
+PREDICTION PATH:../../metric_validation_0/3ff67fd9-5093-4c2a-8da7-64d1dae2b8b6/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Quantitative Analysis Accuracy                                                                                              | Variable Selection Efficiency                                                                                               |
+|:--------|:----------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['Fast and simultaneous determination of soil properties using LIBS']                                                       | ['Fast and simultaneous determination of soil properties using LIBS']                                                       |
+| paper_2 | ['A fast variable selection method for quantitative analysis of soils using LIBS']                                          | ['A fast variable selection method for quantitative analysis of soils using LIBS']                                          |
+| paper_3 | ['Monitoring the Heavy Element of Cr in Agricultural Soils Using LIBS']                                                     | ['Monitoring the Heavy Element of Cr in Agricultural Soils Using LIBS']                                                     |
+| paper_4 | ['Multi-element quantitative analysis of soils by LIBS coupled with univariate and multivariate regression methods']        | ['Multi-element quantitative analysis of soils by LIBS coupled with univariate and multivariate regression methods']        |
+| paper_5 | ['Deep Spectral CNN for Laser-Induced Breakdown Spectroscopy']                                                              | ['Deep Spectral CNN for Laser-Induced Breakdown Spectroscopy']                                                              |
+| paper_6 | ['Machine Learning Allows Calibration Models to Predict Trace Element Concentration in Soil with Generalized LIBS Spectra'] | ['Machine Learning Allows Calibration Models to Predict Trace Element Concentration in Soil with Generalized LIBS Spectra'] |
+| paper_7 | ['Quantitative analysis of steel samples using LIBS with an artificial neural network incorporating a genetic algorithm']   | ['Quantitative analysis of steel samples using LIBS with an artificial neural network incorporating a genetic algorithm']   |
+
+MATCHES:
+Quantitative Analysis Accuracy: 
+Variable Selection Efficiency: 

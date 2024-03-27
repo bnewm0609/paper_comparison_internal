@@ -1,0 +1,35 @@
+ID: bb09b7e1-2ab7-4193-922a-1b1b93486e83
+
+GOLD TABLE:
+|           | Data                | Task                      | Characteristics                                  |
+|----------:|:--------------------|:--------------------------|:-------------------------------------------------|
+|   2913088 | ['Image']           | ['Semantic segmentation'] | ['Recurrent CNN, polygonal mask']                |
+|  81977075 | ['Image']           | ['Semantic segmentation'] | ['GCN, predict vertices simultaneously']         |
+| 215415900 | ['Image and video'] | ['Multi-task']            | ['2D pretrained detectors, the largest dataset'] |
+|  49864011 | ['Point Cloud']     | ['3D detection']          | ['3D pretrained detectors']                      |
+|  59413927 | ['Point Cloud']     | ['3D detection']          | ['Active learning']                              |
+| 208291415 | ['Point Cloud']     | ['3D detection']          | ['Signed distance fields (SDF)']                 |
+| 125950048 | ['Point Cloud']     | ['BEV detection']         | ['Mark-RCNN, Clustering, Kalman filter']         |
+
+GOLD SCHEMA:
+0: Data
+1: Task
+2: Characteristics
+
+PREDICTION PATH:../../metric_validation_0/bb09b7e1-2ab7-4193-922a-1b1b93486e83/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | LiDAR-based detection and object recognition                                                                                                                                                                                                     | Challenges in LiDAR data annotation                                                                                                                                          | Innovative annotation tools and methods (sensor fusion, tracking, one-click annotation)                                                                                                        |
+|:--------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['BDD100K dataset enables evaluation of image recognition algorithms on autonomous driving tasks and proposes a benchmark for heterogeneous multitask learning.']                                                                                | ['N/A']                                                                                                                                                                      | ['N/A']                                                                                                                                                                                        |
+| paper_2 | ['Annotating Object Instances with a Polygon-RNN focuses on semi-automatic annotation of object instances using a new approach for polygon prediction.']                                                                                         | ['N/A']                                                                                                                                                                      | ['N/A']                                                                                                                                                                                        |
+| paper_3 | ['Fast Interactive Object Annotation with Curve-GCN introduces a new framework for interactive object annotation that supports object annotation by polygons or splines, improving labeling efficiency.']                                        | ['N/A']                                                                                                                                                                      | ['N/A']                                                                                                                                                                                        |
+| paper_4 | ['Leveraging Pre-Trained 3D Object Detection Models for Fast Ground Truth Generation discusses a method for generating annotations for 3D object detection with reduced human annotation time.']                                                 | ['Reducing effort required to generate annotations is highlighted as a key challenge for annotating 3D object detectors.']                                                   | ['N/A']                                                                                                                                                                                        |
+| paper_5 | ['Deep Active Learning for Efficient Training of a LiDAR 3D Object Detector presents active learning as a method to minimize human annotation efforts while training a LiDAR 3D object detector.']                                               | ['N/A']                                                                                                                                                                      | ['N/A']                                                                                                                                                                                        |
+| paper_6 | ['Autolabeling 3D Objects with Differentiable Rendering of SDF Shape Priors details an automatic annotation pipeline to recover 9D cuboids and 3D shapes from pre-trained off-the-shelf 2D detectors and sparse LiDAR data.']                    | ['N/A']                                                                                                                                                                      | ['Autolabeling 3D Objects with Differentiable Rendering of SDF Shape Priors presents an automatic annotation pipeline using differentiable shape rendering and curriculum learning strategy.'] |
+| paper_7 | ['LATTE: Accelerating LiDAR Point Cloud Annotation via Sensor Fusion, One-Click Annotation, and Tracking proposes innovative features to accelerate LiDAR point cloud annotation, including sensor fusion, one-click annotation, and tracking.'] | ['LATTE highlights challenges such as sparse and low-resolution LiDAR point clouds, complex annotation on 3D data, and the need for repeated annotations in sequence data.'] | ['LATTE proposes innovative features such as sensor fusion, one-click annotation, and tracking for accelerating LiDAR point cloud annotation.']                                                |
+
+MATCHES:
+LiDAR-based detection and object recognition: 
+Challenges in LiDAR data annotation: 
+Innovative annotation tools and methods (sensor fusion, tracking, one-click annotation): 

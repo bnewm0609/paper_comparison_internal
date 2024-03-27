@@ -1,0 +1,60 @@
+ID: 0723c308-b9f4-4f7c-9917-615727afc628
+
+GOLD TABLE:
+|          | ID     | Type          | Nodes       | Edges       | Number of layers   | CC         |
+|---------:|:-------|:--------------|:------------|:------------|:-------------------|:-----------|
+|  2838900 | ['32'] | ['Genetic']   | ['582']     | ['620']     | ['5']              | ['109']    |
+|   231286 | ['33'] | ['Genetic']   | ['17770']   | ['8473997'] | ['4']              | ['4']      |
+|  8255435 | ['7']  | ['Neuronal']  | ['791']     | ['5863']    | ['3']              | ['6']      |
+| 14784546 | ['23'] | ['Social']    | ['3457453'] | ['4061960'] | ['3']              | ['651141'] |
+| 79410684 | ['3']  | ['Social']    | ['674']     | ['1551']    | ['3']              | ['12']     |
+|  9281429 | ['4']  | ['Social']    | ['224']     | ['620']     | ['5']              | ['13']     |
+| 56166159 | ['25'] | ['Social']    | ['26']      | ['35']      | ['2']              | ['2']      |
+| 15565456 | ['20'] | ['Transport'] | ['399']     | ['441']     | ['3']              | ['3']      |
+
+GOLD SCHEMA:
+0: ID
+1: Type
+2: Nodes
+3: Edges
+4: Number of layers
+5: CC
+
+PREDICTION PATH:../../metric_validation_0/0723c308-b9f4-4f7c-9917-615727afc628/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | number of interactions   | number of species   | curation sources                                                       | update frequency   |
+|:---------|:-------------------------|:--------------------|:-----------------------------------------------------------------------|:-------------------|
+| paper_1  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_2  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_3  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_4  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_5  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_6  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_7  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_8  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_9  | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_10 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_11 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_12 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_13 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_14 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_15 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_16 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_17 | ['>116 000']             | ['4']               | Exhaustive curation of the Saccharomyces cerevisiae primary literature | N/A                |
+| paper_18 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_19 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_20 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_21 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_22 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_23 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_24 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_25 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_26 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+| paper_27 | ['>116 000']             | ['4']               | N/A                                                                    | N/A                |
+
+MATCHES:
+number of interactions: 
+number of species: 
+curation sources: 
+update frequency: 

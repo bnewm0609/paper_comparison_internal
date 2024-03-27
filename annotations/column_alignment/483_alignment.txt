@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Speedup comparison with existing techniques                                                                | Execution time predictability                           |
+|:--------|:-----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------|
+| paper_1 | ['A 5-10x speedup in relation to the efficient serial algorithm. Performed similar to Label Equivalence.'] | ['More predictable execution time, image-independent.'] |
+| paper_2 | ['A 1.61x speedup compared with Union-find when runs on the large image.']                                 | ['N/A']                                                 |
+
+MATCHES:
+Speedup comparison with existing techniques: 
+Execution time predictability: 

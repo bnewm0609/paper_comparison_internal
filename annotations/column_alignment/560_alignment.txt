@@ -1,0 +1,27 @@
+ID: d2e997a1-d40f-4863-91c3-1b4ec7f53707
+
+GOLD TABLE:
+|          | Client #   | Learning goal                           | No. records   |
+|---------:|:-----------|:----------------------------------------|:--------------|
+|  4421747 | ['1']      | ['Sentence pair similarity prediction'] | ['7140']      |
+|  1428702 | ['2']      | ['Sentiment classification']            | ['50000']     |
+| 47018994 | ['3']      | ['Reading compression']                 | ['151054']    |
+
+GOLD SCHEMA:
+0: Client #
+1: Learning goal
+2: No. records
+
+PREDICTION PATH:../../metric_validation_0/d2e997a1-d40f-4863-91c3-1b4ec7f53707/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Application Areas (e.g., MT, summarization, QA)   | Performance Comparison (e.g., Summarizing Methods)                                  | Limitations and Errors Analysis                                                                  |
+|:--------|:--------------------------------------------------|:------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| paper_1 | ['QA']                                            | ['Out-performs several previously introduced methods for sentiment classification'] | ['N/A']                                                                                          |
+| paper_2 | ['N/A']                                           | ['N/A']                                                                             | ['A strong neural system that gets 86% F1 on SQuAD achieves only 66% F1 on SQuADRUn']            |
+| paper_3 | ['MT']                                            | ['Summarizes performance and reviews a selection of well performing methods']       | ['Analysis highlights common errors, providing insight into the limitations of existing models'] |
+
+MATCHES:
+Application Areas (e.g., MT, summarization, QA): 
+Performance Comparison (e.g., Summarizing Methods): 
+Limitations and Errors Analysis: 

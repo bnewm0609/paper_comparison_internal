@@ -1,0 +1,61 @@
+ID: 2721826a-0999-4bb7-863c-cee10afff4cb
+
+GOLD TABLE:
+|           | Input Features               | Parsing Methods                    | Training Algorithms   | Featured Techniques                       |
+|----------:|:-----------------------------|:-----------------------------------|:----------------------|:------------------------------------------|
+|  18309765 | ['CNN']                      | ['feature-based ranking']          | ['ranking-based']     | ['query graph construction']              |
+|    495573 | ['hand-crafted features']    | ['feature-based ranking']          | ['ranking-based']     | ['query templates']                       |
+|    748402 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['utterance-query templates alignment']   |
+|   2742513 | ['GRU']                      | ['Seq2seq generation']             | ['reward-based']      | ['maximum-likelihood training']           |
+|  53079802 | ['CNN']                      | ['feature-based ranking']          | ['ranking-based']     | ['state transition-based approach']       |
+|  53079601 | ['BiGRU + DPT']              | ['feature-based ranking']          | ['ranking-based']     | ['compositional semantic representation'] |
+|  53035265 | ['hand-crafted features']    | ['feature-based ranking']          | ['-']                 | ['rewrite temporal questions']            |
+|   4896021 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['continuous learning; user feedback']    |
+|  91184245 | ['BiLSTM/CNN']               | ['feature-based ranking']          | ['ranking-based']     | ['unrestricted-hop framework']            |
+| 139100939 | ['GRU']                      | ['Seq2seq generation']             | ['reward-based']      | ['auxiliary reward']                      |
+| 207757236 | ['LSTM + DPT']               | ['feature-based ranking']          | ['MML']               | ['pointer network for decomposition']     |
+| 210992204 | ['BiLSTM']                   | ['feature-based ranking']          | ['MML']               | ['iterative sequence matching']           |
+|  53220882 | ['BiLSTM/CNN/slot matching'] | ['feature-based ranking']          | ['ranking-based']     | ['slot matching']                         |
+| 214344519 | ['DPT']                      | ['feature-based ranking']          | ['ranking-based']     | ['skeleton parsing grammar']              |
+| 220480936 | ['BiLSTM']                   | ['Seq2seq generation']             | ['reward-based']      | ['abstract query graph']                  |
+| 220047976 | ['BERT']                     | ['feature-ranked ranking']         | ['reward-based']      | ['constraints of query graphs']           |
+| 226222006 | ['BiLSTM']                   | ['Seq2seq generation']             | ['reward-based']      | ['curriculum-guided reward bonus']        |
+| 224282894 | ['BiGRU']                    | ['Seq2seq generation']             | ['reward-based']      | ['hierarchical reinforcement learning']   |
+| 235303644 | ['AMR']                      | ['parsing and reasoning pipeline'] | ['-']                 | ['AMR; logic neural network']             |
+
+GOLD SCHEMA:
+0: Input Features
+1: Parsing Methods
+2: Training Algorithms
+3: Featured Techniques
+
+PREDICTION PATH:../../metric_validation_0/2721826a-0999-4bb7-863c-cee10afff4cb/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Experimental investigation with six different ranking models                                              | Self-attention based slot matching model                                              | Transfer learning from larger datasets                                  | Performance comparison with other models                                                                |
+|:---------|:----------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------|:------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------|
+| paper_1  | ['Refer to section 3.1 for experimental investigation involving six different ranking models.']           | ['N/A']                                                                               | ['N/A']                                                                 | ['N/A']                                                                                                 |
+| paper_2  | ['N/A']                                                                                                   | ['N/A']                                                                               | ['N/A']                                                                 | ['Considerable improvement over previous best results for each benchmark']                              |
+| paper_3  | ['Information not found']                                                                                 | ['N/A']                                                                               | ['N/A']                                                                 | ['N/A']                                                                                                 |
+| paper_4  | ['See section 4 for details on experiments with six different ranking models.']                           | ['Section 4.4 discusses the self-attention based slot matching model.']               | ['N/A']                                                                 | ['New state-of-the-art performance on WebQuestionsSP dataset']                                          |
+| paper_5  | ['Refer to section 5.2 for the experimental investigation with six different ranking models.']            | ['Information not found']                                                             | ['N/A']                                                                 | ['Superiority of the approach compared with state-of-the-arts confirmed through extensive experiments'] |
+| paper_6  | ['Section 4.3 describes the experimental investigation involving six different ranking models.']          | ['N/A']                                                                               | ['N/A']                                                                 | ['Consistently outperforms existing methods on complex questions']                                      |
+| paper_7  | ['N/A']                                                                                                   | ['N/A']                                                                               | ['N/A']                                                                 | ['N/A']                                                                                                 |
+| paper_8  | ['Refer to section 6 for details on the experimental investigation with six different ranking models.']   | ['Refer to section 3 for details on the self-attention based slot matching model.']   | ['N/A']                                                                 | ['N/A']                                                                                                 |
+| paper_9  | ['Section 5 provides information on the experimental investigation with six different ranking models.']   | ['N/A']                                                                               | ['N/A']                                                                 | ['Achieves competitive performance without exhaustive searches']                                        |
+| paper_10 | ['N/A']                                                                                                   | ['Section 5.2 provides information on the self-attention based slot matching model.'] | ['N/A']                                                                 | ['Outperforms other systems at least 3× higher F1 for moderately complex queries']                      |
+| paper_11 | ['Section 3.5 discusses experiments with six different ranking models.']                                  | ['N/A']                                                                               | ['N/A']                                                                 | ['Significantly outperforms existing KB-QA systems on complex questions']                               |
+| paper_12 | ['Information not found']                                                                                 | ['N/A']                                                                               | ['N/A']                                                                 | ['Significantly outperforms existing methods on three benchmark datasets']                              |
+| paper_13 | ['Refer to section 4 for information on the six different ranking models used in the experiments.']       | ['N/A']                                                                               | ['Substantial improvement with transfer learning from larger datasets'] | ['Our proposed model generally outperforms the other models on two QA datasets']                        |
+| paper_14 | ['N/A']                                                                                                   | ['Information not found']                                                             | ['N/A']                                                                 | ['Promising performance on several datasets']                                                           |
+| paper_15 | ['N/A']                                                                                                   | ['N/A']                                                                               | ['N/A']                                                                 | ['Outperforms existing methods on complex questions']                                                   |
+| paper_16 | ['Section 4.2 presents the details of the experimental investigation with six different ranking models.'] | ['N/A']                                                                               | ['N/A']                                                                 | ['Achieves the state of the art on three benchmark KBQA datasets']                                      |
+| paper_17 | ['N/A']                                                                                                   | ['N/A']                                                                               | ['N/A']                                                                 | ['Outperforms the state-of-the-art models on two datasets']                                             |
+| paper_18 | ['Information not found']                                                                                 | ['Refer to section 3.2 for details on the self-attention based slot matching model.'] | ['N/A']                                                                 | ['Effectiveness of the proposed framework demonstrated through extensive experiments']                  |
+| paper_19 | ['Section 5.3 describes the experimental investigation with six different ranking models.']               | ['N/A']                                                                               | ['N/A']                                                                 | ['State-of-the-art performance on two prominent KBQA datasets']                                         |
+
+MATCHES:
+Experimental investigation with six different ranking models: 
+Self-attention based slot matching model: 
+Transfer learning from larger datasets: 
+Performance comparison with other models: 

@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Size of Dataset   | Use of 3D Information   |
+|:---------|:------------------|:------------------------|
+| Paper 1  | [32000]           | ['No']                  |
+| Paper 2  | [3600000]         | ['Yes']                 |
+| Paper 3  | [800000]          | ['No']                  |
+| Paper 4  | [26400]           | ['No']                  |
+| Paper 5  | [10000]           | ['No']                  |
+| Paper 6  | [49875]           | ['No']                  |
+| Paper 7  | [8792]            | ['No']                  |
+| Paper 8  | [22454]           | ['No']                  |
+| Paper 9  | [28714]           | ['No']                  |
+| Paper 10 | [1000]            | ['No']                  |
+| Paper 11 | [980000]          | ['No']                  |
+| Paper 12 | [1459]            | ['No']                  |
+| Paper 13 | [26364]           | ['Yes']                 |
+| Paper 14 | [24000]           | ['No']                  |
+
+MATCHES:
+Size of Dataset: 
+Use of 3D Information: 

@@ -1,0 +1,43 @@
+ID: 0191f26f-b545-43be-aa9f-69adef97e28c
+
+GOLD TABLE:
+|           | Blockchain             | Type                | Consensus              | Technologies                                    |
+|----------:|:-----------------------|:--------------------|:-----------------------|:------------------------------------------------|
+| 216485725 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart contracts, Swarm, DOS, Bloom filter']   |
+|  85502289 | ['Ethereum']           | ['Permission']      | ['Proof of work']      | ['Smart Contract']                              |
+| 214761403 | ['Ethereum']           | ['Consortium']      | ['Proof of work']      | ['Smart contract, Swarm, Oracle']               |
+|  27257114 | ['Ethereum']           | ['Consortium']      | ['Proof of Work']      | ['Smart Contract, IPFS, SDN']                   |
+| 221118885 | ['Hyperledger Fabric'] | ['Private']         | ['Kafka']              | ['Chain code, SDN,\nThreat Platform']           |
+| 207973175 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Deep learning(LSTM), SDN']    |
+| 211559340 | ['Generic']            | ['Private']         | ['-']                  | ['SDN']                                         |
+|  84186926 | ['Hyperledger']        | ['-']               | ['Kafka']              | ['SDN, IoT']                                    |
+| 218504016 | ['Ethereum']           | ['Public, Private'] | ['Proof-of-Authority'] | ['Smart Contract']                              |
+| 211689822 | ['Ethereum']           | ['Public']          | ['Proof of work']      | ['Smart Contract, Software Defined Networking'] |
+
+GOLD SCHEMA:
+0: Blockchain
+1: Type
+2: Consensus
+3: Technologies
+
+PREDICTION PATH:../../metric_validation_0/0191f26f-b545-43be-aa9f-69adef97e28c/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Type of DDoS Defense                                                                   | Use of Blockchain                                                                                    | Integration with Other Technologies                                   | Evaluation Method                                               |
+|:---------|:---------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------|:----------------------------------------------------------------|
+| Paper 1  | ['Decentralized DDoS data exchange platform']                                          | ['Incentivization through DDoS_coin token, dual-level Bloom filter for privacy preservation']        | ['Blockchain-based smart contracts for automation']                   | ['Simulation and analysis of the proposed system']              |
+| Paper 2  | ['Online trading system for DDoS mitigation services']                                 | ['Trust infrastructure for online trading of DDoS mitigation services, credit system evaluation']    | ['Integration with existing DDoS mitigation services']                | ['Not provided in the abstract']                                |
+| Paper 3  | ['Collaborative DDoS defense platform']                                                | ['Shared malicious IP lists for DDoS defense, elliptic curve cryptography for data confidentiality'] | ['Elliptic curve cryptography for data confidentiality']              | ['Not provided in the abstract']                                |
+| Paper 4  | ['Blockchain signaling system for DDoS defense']                                       | ['Signaling DDoS attack information, financial incentives for cooperation']                          | ['Hardware integration for signaling']                                | ['Prototype implementation and testing']                        |
+| Paper 5  | ['Collaborative cyber attack defense in SDN networks']                                 | ['Tamper-proof record-keeping for cyber threat intelligence sharing']                                | ['Software-Defined Networking for proactive defense']                 | ['Case study on collaborative DDoS attack mitigation']          |
+| Paper 6  | ['Botnet prevention system for IoT']                                                   | ['Botnet prevention using blockchain in Software Defined Internet of Things']                        | ['Software Defined Networking for botnet prevention']                 | ['Simulation and analysis of the proposed system']              |
+| Paper 7  | ['Collaborative DDoS mitigation solution']                                             | ['Blockchain platform for sharing hardware resources and defense capabilities']                      | ['Deep learning DDoS detection system']                               | ['Not provided in the abstract']                                |
+| Paper 8  | ['Orchestrating DDoS mitigation via blockchain-based network provider collaborations'] | ['Distributed Ledger Technologies for signaling, coordination, and orchestration']                   | ['eXpress Data Path (XDP) framework for mitigation']                  | ['Prototype implementation and testing']                        |
+| Paper 9  | ['Blockchain-as-a-Service for Software Defined Networking']                            | ['Blockchain-as-a-Service for SDN']                                                                  | ['Blockchain-as-a-Service for SDN']                                   | ['Discussion of attack scenarios using the proposed framework'] |
+| Paper 10 | ['Collaborative DDoS mitigation scheme in IoT environment']                            | ['Decentralized transfer of attack information using smart contracts']                               | ['Software Defined Networking for decision making and collaboration'] | ['Implementation and deployment on Ethereum test network']      |
+
+MATCHES:
+Type of DDoS Defense: 
+Use of Blockchain: 
+Integration with Other Technologies: 
+Evaluation Method: 

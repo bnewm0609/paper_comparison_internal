@@ -1,0 +1,39 @@
+ID: 3f19b779-230c-438b-8d31-82cbbb31bcb8
+
+GOLD TABLE:
+|           | (Task)          | Group class   | Train set size   | Test set size (per group)   | No. of trials   | No. of epochs   | Input Shape/Config.   |
+|----------:|:----------------|:--------------|:-----------------|:----------------------------|:----------------|:----------------|:----------------------|
+| 199577425 | ['(Gender)']    | ['Race']      | ['10900']        | ['760']                     | ['5']           | ['35']          | ['3x100x100']         |
+|   1987503 | ['(Species)']   | ['Skin tone'] | ['1500']         | ['250']                     | ['5']           | ['60']          | ['3x256x256']         |
+|    810708 | ['(Age)']       | ['Gender']    | ['7700']         | ['970']                     | ['5']           | ['65']          | ['3x100x100']         |
+|  40094999 | ['(Diagnosis)'] | ['Gender']    | ['1500']         | ['250']                     | ['7']           | ['40']          | ['3x256x256']         |
+| 221142094 | ['(Gender)']    | ['Species']   | ['750']          | ['90']                      | ['5']           | ['20']          | ['3x100x100']         |
+
+GOLD SCHEMA:
+0: (Task)
+1: Group class
+2: Train set size
+3: Test set size (per group)
+4: No. of trials
+5: No. of epochs
+6: Input Shape/Config.
+
+PREDICTION PATH:../../metric_validation_0/3f19b779-230c-438b-8d31-82cbbb31bcb8/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Race balance in image datasets          | Generalization performance of trained models                 | Consistent accuracy across race and gender            | Comparison of computer vision APIs                                | Mitigation of bias in face image datasets                                              | Availability of code, data, and models             | Evaluation on novel image datasets                                                     |
+|:--------|:----------------------------------------|:-------------------------------------------------------------|:------------------------------------------------------|:------------------------------------------------------------------|:---------------------------------------------------------------------------------------|:---------------------------------------------------|:---------------------------------------------------------------------------------------|
+| paper_1 | ['Balanced on race with 7 race groups'] | ['More accurate on novel datasets']                          | ['Consistent accuracy across race and gender groups'] | ['Reports balanced accuracy across gender, race, and age groups'] | ['Constructed a balanced face image dataset and evaluated generalization performance'] | ['Available at https://github.com/joojs/fairface'] | ['Evaluations performed on existing face attribute datasets and novel image datasets'] |
+| paper_2 | ['N/A']                                 | ['N/A']                                                      | ['N/A']                                               | ['N/A']                                                           | ['N/A']                                                                                | ['N/A']                                            | ['N/A']                                                                                |
+| paper_3 | ['N/A']                                 | ['N/A']                                                      | ['N/A']                                               | ['N/A']                                                           | ['N/A']                                                                                | ['N/A']                                            | ['N/A']                                                                                |
+| paper_4 | ['N/A']                                 | ['Exceeds average radiologist performance on the F1 metric'] | ['N/A']                                               | ['N/A']                                                           | ['N/A']                                                                                | ['N/A']                                            | ['N/A']                                                                                |
+| paper_5 | ['N/A']                                 | ['N/A']                                                      | ['N/A']                                               | ['N/A']                                                           | ['N/A']                                                                                | ['N/A']                                            | ['N/A']                                                                                |
+
+MATCHES:
+Race balance in image datasets: 
+Generalization performance of trained models: 
+Consistent accuracy across race and gender: 
+Comparison of computer vision APIs: 
+Mitigation of bias in face image datasets: 
+Availability of code, data, and models: 
+Evaluation on novel image datasets: 

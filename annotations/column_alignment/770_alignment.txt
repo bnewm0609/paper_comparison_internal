@@ -1,0 +1,31 @@
+ID: 664a40e4-14b3-4c65-a220-29e05575be52
+
+GOLD TABLE:
+|          | Location            | # Users   | # Act.   | Activities                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+|---------:|:--------------------|:----------|:---------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  5687667 | ['Wrist']           | ['9']     | ['6']    | ['Biking, sitting, going up and down the stairs, standing, and walking']                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 33661857 | ['Wrist']           | ['10']    | ['31']   | ['Seated cable rows, one-arm dumbbell row, wide-grip pulldown behind the neck, bent over barbell row, reverse grip bent-over row, wide-grip front pulldown, bench press, incline dumbbell flyes, incline dumbbell press and flyes, pushups, leverage chest press , close-grip barbell bench press, bar skullcrusher, triceps pushdown, bench dip, overhead triceps extension, tricep dumbbell kickback, spider curl, dumbbell alternate bicep curl, incline hammer curl, concentration curl, cable curl, hammer curl, upright barbell row, side lateral raise, front dumbbell raise, seated dumbbell shoulder press, car drivers, lying rear delt raise, null'] |
+|  3610884 | ['Waist/ Trousers'] | ['24']    | ['6']    | ['Walking, jogging, going up and down the stairs, sitting and standing']                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| 10337279 | ['Leg/ Ankle']      | ['9']     | ['12']   | ['Lying, sitting, standing, walking, running, cycling, nordic walking, ascending and descending stairs, vaccuum cleaning, ironing, rope jumping']                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+
+GOLD SCHEMA:
+0: Location
+1: # Users
+2: # Act.
+3: Activities
+
+PREDICTION PATH:../../metric_validation_0/664a40e4-14b3-4c65-a220-29e05575be52/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Type of data             | Analysis                              | Purpose                                                                      | Application                                                                       |
+|:--------|:-------------------------|:--------------------------------------|:-----------------------------------------------------------------------------|:----------------------------------------------------------------------------------|
+| paper_1 | ['Mobile sensing data']  | ['Experiments, statistical analysis'] | ['Investigating mobile sensing heterogeneities for HAR']                     | ['HAR system for large-scale deployment']                                         |
+| paper_2 | ['Myo armband data']     | ['Data set analysis']                 | ['Introducing a gym data set for activity recognition']                      | ['Activity recognition classifier development, unseen activities, signal fusion'] |
+| paper_3 | ['Motion sensor data']   | ['Feature learning, classification']  | ['Protecting sensory data against sensitive inferences']                     | ['Activity recognition with privacy-preserving sensor data transmission']         |
+| paper_4 | ['IMU, HR-monitor data'] | ['Classification']                    | ['Benchmarking and establishing a dataset for physical activity monitoring'] | ['Physical activity monitoring']                                                  |
+
+MATCHES:
+Type of data: NA
+Analysis: NA
+Purpose: NA
+Application: NA 

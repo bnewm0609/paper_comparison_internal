@@ -1,0 +1,54 @@
+ID: 14fa2ac8-fcab-4259-a6c2-b0cd97a05b62
+
+GOLD TABLE:
+|           | Vulnerability, attack or analysis              | Hardware                     |
+|----------:|:-----------------------------------------------|:-----------------------------|
+|    650040 | ['Spoofing']                                   | ['USRP']                     |
+|  49184356 | ['Spoofing']                                   | ['USRP B200']                |
+|   1574777 | ['Spoofing']                                   | ['USRP N210/']               |
+|  15448316 | ['Spoofing']                                   | ['USRP B100/WBX']            |
+|  57825734 | ['GPS Spoofing']                               | ['USRP N210']                |
+|  13194189 | ['Man in the middle']                          | ['USRP 2']                   |
+|  43086215 | ['Man in the middle']                          | ['USRP B200']                |
+|  11851582 | ['Location leaks; denial of service']          | ['USRP B210']                |
+|   3886931 | ['Eavesdropping']                              | ['RTL 2832U']                |
+| 206468873 | ['Eavesdropping']                              | ['USRP N210 RTL2832U']       |
+|  14684911 | ['Eavesdropping']                              | ['USRP N210']                |
+|  52001984 | ['Protocols implementation']                   | ['USRP E310']                |
+|  24248371 | ['TEMPEST']                                    | ['PXI-e 5665 USRP N210/WBX'] |
+|  31250922 | ['Jamming']                                    | ['NI USRP 2921']             |
+|  18777144 | ['Penetration Testing']                        | ['HackRF One']               |
+|   8544080 | ['Replay']                                     | ['USRP N210/SBX']            |
+|  11693192 | ['vulnerabilities analysis on physical layer'] | ['USRP N210']                |
+
+GOLD SCHEMA:
+0: Vulnerability, attack or analysis
+1: Hardware
+
+PREDICTION PATH:../../metric_validation_0/14fa2ac8-fcab-4259-a6c2-b0cd97a05b62/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Wireless communication protocols studied   | Results of practical demonstrations                                                                            |
+|:---------|:-------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['RF', 'Wi-Fi', 'mobile phones']           | ['Implementation of RF-based drone detection system']                                                          |
+| paper_2  | ['ACARS', 'FANS-1/A']                      | ['Proof-of-concept implementation of impersonation and message spoofing attacks on ACARS and FANS1/A']         |
+| paper_3  | ['TPMS', 'CAN']                            | ['Implementation and simulation of TPMS with LFSR-based message encryption']                                   |
+| paper_4  | ['FM with RSS']                            | ['Implementation of FM-based indoor localization with spoofing defense method']                                |
+| paper_5  | ['GNSS (GPS)', 'SDR implementations']      | ['Review of SDRs for instrumentation capabilities in both conventional and spoofing mitigation modes']         |
+| paper_6  | ['Bluetooth 2.1+ Secure Simple Pairing']   | ['Implementation of attack on Bluetooth 2.1+ Secure Simple Pairing in Passkey Entry mode']                     |
+| paper_7  | ['GSM']                                    | ['Demonstration of vulnerabilities in GSM security architecture through active attack at the Um interface']    |
+| paper_8  | ['LTE']                                    | ['Demonstration of attacks exploiting LTE vulnerabilities, leads to leaking location or denying services']     |
+| paper_9  | ['LTE']                                    | ['Demonstration of aeronautical surveillance system for drone delivery']                                       |
+| paper_10 | ['DECT']                                   | ['Implementation of a passive eavesdropping attack against DECT digital voice communication']                  |
+| paper_11 | ['NFC']                                    | ['Implementation of a key agreement scheme for NFC devices using off-the-shelf full-duplex capability']        |
+| paper_12 | ['802.11 b/g/n', 'ZigBee', 'BLE', 'LoRa']  | ['Implementation of a reconfigurable IoT gateway based on an embedded SDR platform']                           |
+| paper_13 | [None]                                     | ['Demonstration of long distance eavesdropping attacks on computer displays']                                  |
+| paper_14 | ['OFDM systems']                           | ['Measured impact of a novel jamming attack targeting the CP and pilot symbols in OFDM systems']               |
+| paper_15 | ['OFDM systems']                           | [None]                                                                                                         |
+| paper_16 | ['tactical radio networks']                | ['Demonstration of a test setup for cyber vulnerabilities testing on tactical radio networks']                 |
+| paper_17 | ['UHF RFID']                               | ['Implementation of GenePrint, a generic and accurate physical-layer identification system for UHF RFID tags'] |
+| paper_18 | ['LTE']                                    | ['Analysis of 4G LTE downlink PHY layer vulnerabilities using open-source SDR tools']                          |
+
+MATCHES:
+Wireless communication protocols studied: 
+Results of practical demonstrations: 

@@ -1,0 +1,23 @@
+ID: 7ff7f177-9cbe-46b7-8e2f-65665df74248
+
+GOLD TABLE:
+|          | Scan Mode    | Computational cost   |
+|---------:|:-------------|:---------------------|
+|  1698085 | ['One-Pass'] | ['Low']              |
+| 17099967 | ['One-Pass'] | ['Low']              |
+
+GOLD SCHEMA:
+0: Scan Mode
+1: Computational cost
+
+PREDICTION PATH:../../metric_validation_0/7ff7f177-9cbe-46b7-8e2f-65665df74248/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Speedup compared to baseline techniques   | Image independence of execution time                                                |
+|:--------|:------------------------------------------|:------------------------------------------------------------------------------------|
+| paper_1 | ['5-10x']                                 | ['more predictable in the sense that its execution time is more image-independent'] |
+| paper_2 | ['1.61x']                                 | ['N/A']                                                                             |
+
+MATCHES:
+Speedup compared to baseline techniques: 
+Image independence of execution time: 

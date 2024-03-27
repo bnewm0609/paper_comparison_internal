@@ -1,0 +1,31 @@
+ID: 0c08592c-2499-453e-b250-12ee469069a8
+
+GOLD TABLE:
+|           | System Name             | Team affiliations                                 |
+|----------:|:------------------------|:--------------------------------------------------|
+| 225040083 | ['VerT5erini']          | ['University of Waterloo']                        |
+| 229923480 | ['ParagraphJoint']      | ['UT Dallas / Chan Zuckerburg Initiative / UCLA'] |
+| 226239683 | ['Law & Econ']          | ['ETH Zurich']                                    |
+| 233387973 | ['QMUL-SDS']            | ['Queen Mary University of London']               |
+| 216867133 | ['first_1']             | ['Ping An of China']                              |
+| 233231692 | ['bioBert for sciFact'] | ['-']                                             |
+
+GOLD SCHEMA:
+0: System Name
+1: Team affiliations
+
+PREDICTION PATH:../../metric_validation_0/0c08592c-2499-453e-b250-12ee469069a8/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Task                                                                                             | Approach                                                                                                                                   |
+|:--------|:-------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| Paper 1 | ['Scientific claim verification for supporting or refuting a given scientific claim']            | ['Combined training on a large dataset of claims about Wikipedia articles, together with a new dataset for scientific claim verification'] |
+| Paper 2 | ['Adaptation of pretrained sequence-to-sequence model for biomedical domain claim verification'] | ['Use of T5 for abstract retrieval, sentence selection and label prediction']                                                              |
+| Paper 3 | ['Paragraph-level, multi-task learning model for fact-verification']                             | ['Novel, paragraph-level, multi-task learning model using a BERT model']                                                                   |
+| Paper 4 | ['Explanations and summaries for automated fact checking']                                       | ['Not described in the abstract']                                                                                                          |
+| Paper 5 | ['Step-by-step binary classification for scientific claim verification']                         | ['Binary classifications step-by-step using a BioBERT-large classifier']                                                                   |
+| Paper 6 | ['Hairstyle recommendation based on celebrity facial attributes']                                | ['Creation of a new large-scale dataset for hairstyle recommendation with empirical comparison and analysis']                              |
+
+MATCHES:
+Task: 
+Approach: 

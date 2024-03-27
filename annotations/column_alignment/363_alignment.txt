@@ -1,0 +1,35 @@
+ID: d0b0ef97-c857-4122-905f-e0eda5f7bd39
+
+GOLD TABLE:
+|           | ID     | Misinformation Target                                                            |
+|----------:|:-------|:---------------------------------------------------------------------------------|
+| 229064299 | ['6']  | ['The COVID-19 vaccine contains tissue from aborted fetuses.']                   |
+| 210886197 | ['16'] | ['The COVID-19 vaccine should not be taken by people who are allergic to eggs.'] |
+| 220251733 | ['13'] | ['The COVID-19 vaccine can increase risk for other illnesses.']                  |
+
+GOLD SCHEMA:
+0: ID
+1: Misinformation Target
+
+PREDICTION PATH:../../metric_validation_0/d0b0ef97-c857-4122-905f-e0eda5f7bd39/mixtral/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Topic of the paper                     | Region of the research   |
+|:---------|:---------------------------------------|:-------------------------|
+| paper_1  | ['COVID-19 misinformation']            | ['UK']                   |
+| paper_2  | ['COVID-19 misinformation']            | ['UK']                   |
+| paper_3  | ['COVID-19 misinformation']            | ['UK']                   |
+| paper_4  | ['COVID-19 misinformation']            | ['UK']                   |
+| paper_5  | ['COVID-19 misinformation']            | ['UK']                   |
+| paper_6  | ['Asymptomatic infection of COVID-19'] | ['China']                |
+| paper_7  | ['Asymptomatic infection of COVID-19'] | ['China']                |
+| paper_8  | ['Asymptomatic infection of COVID-19'] | ['China']                |
+| paper_9  | ['Asymptomatic infection of COVID-19'] | ['China']                |
+| paper_10 | ['Asymptomatic infection of COVID-19'] | ['China']                |
+| paper_11 | ['Hydroxychloroquine for COVID-19']    | ['India']                |
+| paper_12 | ['Hydroxychloroquine for COVID-19']    | ['India']                |
+| paper_13 | ['Hydroxychloroquine for COVID-19']    | ['India']                |
+
+MATCHES:
+Topic of the paper: 
+Region of the research: 

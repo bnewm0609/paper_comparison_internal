@@ -1,0 +1,29 @@
+ID: b5b73d12-e797-447a-ac52-ac6e8c7c7a77
+
+GOLD TABLE:
+|           | Method         | dataset   | comments                  |
+|----------:|:---------------|:----------|:--------------------------|
+|   3138661 | ['MLP']        | ['3559']  | ['edge + 3-layer MLP']    |
+|  19358648 | ['fasterRCNN'] | ['-']     | ['Very complex and slow'] |
+| 212649623 | ['M2Det']      | ['5000']  | ['Very complex and slow'] |
+|  54033357 | ['VGG16 etc.'] | ['3500']  | ['Very complex and slow'] |
+
+GOLD SCHEMA:
+0: Method
+1: dataset
+2: comments
+
+PREDICTION PATH:../../metric_validation_0/b5b73d12-e797-447a-ac52-ac6e8c7c7a77/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Types of deep learning models used              | Use of transfer learning in gun detection   | Evaluation of the deep learning model                         |
+|:--------|:------------------------------------------------|:--------------------------------------------|:--------------------------------------------------------------|
+| paper_1 | ['N/A']                                         | ['N/A']                                     | ['Specificity and sensitivity']                               |
+| paper_2 | ['Faster R-CNN']                                | ['Yes']                                     | ['Performance over Internet Movie Firearms Database (IMFDB)'] |
+| paper_3 | ['Multi-level feature pyramid network (M2Det)'] | ['N/A']                                     | ['Average precision of gun detection at different scales']    |
+| paper_4 | ['Overfeat network']                            | ['N/A']                                     | ['Training and test accuracy']                                |
+
+MATCHES:
+Types of deep learning models used: 
+Use of transfer learning in gun detection: 
+Evaluation of the deep learning model: 

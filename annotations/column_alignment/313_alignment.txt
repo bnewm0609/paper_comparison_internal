@@ -1,0 +1,31 @@
+ID: 2aad0947-1bd3-4b7a-8332-8c3efa3d6392
+
+GOLD TABLE:
+|           | No    | Title                                                                                                                                                                                                                                                                 |
+|----------:|:------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 193179455 | ['1'] | ['Kontemplasi Politik (Belajar Dari Kisah Perang Badar Menurut Sirah Ibnu Hisyam Dan Al-thabari) (Political Contemplation (Learning from the Story of the Battle of Badr According to the Sirah of Ibn Hisham and Al-Thabari))']                                      |
+| 181419409 | ['2'] | ["Isra Mi'raj Sebagai Perjalanan Religi: Studi Analisis Peristiwa Isra Mi'raj Nabi Muhammad Menurut Al Qur'an Dan Hadits (Isra Mi'raj as a Religious Journey: An Analytical Study of the Isra Mi'raj Event of Prophet Muhammad According to the Qur'an and Hadiths)"] |
+| 221700756 | ['4'] | ['Sejarah Sosial-Politik Arab: Dari Hegemoni Romawi-Persia Hingga Kebangkitan Arab Islam (Arab Social-Political History: From Roman-Persian Hegemony to the Rise of Arab Islam)']                                                                                     |
+| 237879696 | ['5'] | ["Pendidikan Karakter dalam Buku Sirah Nabawiyah Karya Syaikh Shafiyyurrahman al-Mubarakfuri (Character Education in the Book of the Prophet's Biography by Sheikh Shafiyyurrahman al-Mubarakfuri)"]                                                                  |
+| 191016969 | ['6'] | ["Sirah Nabawiyah dan Demitologisasi Kehidupan Nabi (Prophetic Biography and Demythologization of the Prophet's Life)"]                                                                                                                                               |
+| 171913397 | ['8'] | ['Tata kelola pemerintahan negara madinah pada masa nabi Muhammad saw (The governance system of the Madinah state during the time of Prophet Muhammad (peace be upon him).)']                                                                                         |
+
+GOLD SCHEMA:
+0: No
+1: Title
+
+PREDICTION PATH:../../metric_validation_0/2aad0947-1bd3-4b7a-8332-8c3efa3d6392/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Influence on Arab society and culture                                                                                                                                                                            | Impact on the world and history                                                                                                                                                                                    |
+|:--------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1 | ['The Battle of Badr had a significant influence on Arab society and culture as it marked a turning point in the struggle between Muslims and non-Muslims in the region.']                                       | ['The Battle of Badr is an important event in the history of the world, as it played a crucial role in the rise of Islam as a major religion.']                                                                    |
+| paper_2 | ["The Isra Mi'raj has had a profound influence on Arab society and culture, as it is considered a major religious event in the history of Islam."]                                                               | ["The Isra Mi'raj is an important event in the history of the world, as it played a crucial role in the development of Islamic beliefs and practices."]                                                            |
+| paper_3 | ['The socio-political history of Arabia has had a profound influence on Arab society and culture, as it shaped the political and social structures of the region.']                                              | ['The socio-political history of Arabia has had a major impact on the world and history, as it laid the foundation for the rise of Islamic civilization.']                                                         |
+| paper_4 | ['The Sirah Nabawiyah has had a significant influence on Arab society and culture, as it provides a model for character education in the Islamic tradition.']                                                    | ['The Sirah Nabawiyah has had a major impact on the world and history, as it is an important source of knowledge about the life and teachings of the Prophet Muhammad.']                                           |
+| paper_5 | ['The understanding of the sirah nabawiyah is essential to demythologize the life of the Prophet and distinguish between his cultural and religious influences.']                                                | ['The demythologization of the life of the Prophet Muhammad has major implications for the study of Islamic history and culture, as it helps to provide a more nuanced understanding of his impact on the world.'] |
+| paper_6 | ['The governance of Medina during the time of the Prophet Muhammad had a significant influence on Arab society and culture, as it provided a model for Islamic governance that continues to be relevant today.'] | ['The governance of Medina during the time of the Prophet Muhammad has had a major impact on the world and history, as it laid the foundation for the development of Islamic law and jurisprudence.']              |
+
+MATCHES:
+Influence on Arab society and culture: 
+Impact on the world and history: 

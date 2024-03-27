@@ -1,0 +1,37 @@
+ID: 3560e8ad-2a9d-4160-bdf8-007ab0e734e3
+
+GOLD TABLE:
+|          | Domain                   | Proposed Method                      | Transferable   | Generalizable   | Matching Performance   |
+|---------:|:-------------------------|:-------------------------------------|:---------------|:----------------|:-----------------------|
+| 19953360 | ['Face images']          | ['Multimodal Discriminant Analysis'] | ['Yes']        | ['Yes']         | ['Severely degraded']  |
+|  3333907 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 13818729 | ['Face images']          | ['Semi-Adversarial Networks']        | ['Yes']        | ['No']          | ['Mostly retained']    |
+| 43975656 | ['Face images']          | ['Adversarial perturbations']        | ['No']         | ['No']          | ['Mostly retained']    |
+| 51890585 | ['Face images']          | ['Ensemble of SAN models']           | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+| 59553616 | ['Face representations'] | ['SensitiveNet']                     | ['Yes']        | ['Yes']         | ['Mostly retained']    |
+
+GOLD SCHEMA:
+0: Domain
+1: Proposed Method
+2: Transferable
+3: Generalizable
+4: Matching Performance
+
+PREDICTION PATH:../../metric_validation_0/3560e8ad-2a9d-4160-bdf8-007ab0e734e3/gpt3.5/baseline_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Concept of Privacy                                                      | Privacy Protection Techniques                                           | Facial Attribute Alteration                                                         | Experimental Validation                                                           | Regulation and Ethical Considerations                                            |
+|:--------|:------------------------------------------------------------------------|:------------------------------------------------------------------------|:------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------|:---------------------------------------------------------------------------------|
+| Paper_1 | ['Controllable face privacy and identity concealment']                  | ['Subspace decomposition for privacy preservation']                     | ['Independent control of facial identity while retaining other attributes']         | ['Experiments with facial analysis software']                                     | ['Prevention of privacy abuse']                                                  |
+| Paper_2 | ['Soft biometric privacy and gender perturbation']                      | ['Perturbation of face images for gender privacy']                      | ['Perturbing gender attributes while retaining biometric utility']                  | ['Evaluation of the proposed technique']                                          | ['Privacy concerns and implications']                                            |
+| Paper_3 | ['Imparting privacy to face images using semi-adversarial networks']    | ['Use of adversarial training for privacy preservation']                | ['Transforming face images for face recognition but not for gender classification'] | ['Extensive experiments confirming efficacy']                                     | ['Impacts of regulatory considerations on privacy preservation']                 |
+| Paper_4 | ['Anonymizing facial attributes to preserve privacy']                   | ['Adversarial perturbations for privacy preservation']                  | ['Anonymizing facial attributes without affecting visual quality']                  | ['Experiments on popular databases']                                              | ['Adherence to data protection regulations']                                     |
+| Paper_5 | ['Semi adversarial networks for gender privacy']                        | ['Ensemble SAN model for gender privacy']                               | ['Perturbing face images for confounding gender classifiers']                       | ['Experiments using different unseen gender classifiers']                         | ['Generalization for diverse gender classifiers']                                |
+| Paper_6 | ['SensitiveNets for sensitive information removal in face recognition'] | ['Learning agnostic representations for sensitive information removal'] | ['Learning method for removing sensitive information from feature space']           | ['Evaluation on face recognition technologies using state-of-the-art algorithms'] | ['Sensitive information removal in compliance with data protection regulations'] |
+
+MATCHES:
+Concept of Privacy: 
+Privacy Protection Techniques: 
+Facial Attribute Alteration: 
+Experimental Validation: 
+Regulation and Ethical Considerations: 

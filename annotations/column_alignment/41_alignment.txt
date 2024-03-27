@@ -1,0 +1,43 @@
+ID: 1a4d511f-99f9-4d0c-8dba-483f65e4ee9b
+
+GOLD TABLE:
+|           | Sensor            | Object        | Sensor Position   | Algorithms                                                       | Advantages                                                                               | limitation                                                                                                                          |
+|----------:|:------------------|:--------------|:------------------|:-----------------------------------------------------------------|:-----------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| 237001279 | ['6-axis IMU']    | ['Arm']       | ['wrist']         | ['RNN']                                                          | ['accurate arm tracking with single wrist-worn IMU']                                     | ['body must be in static state so that IMU data are merely caused by arm motion']                                                   |
+|    616233 | ['9-axis IMU']    | ['Arm']       | ['wrist']         | ['Modified hidden Markov model (HMM)']                           | ['accurate real-time arm tracking with single wrist-worn IMU']                           | ['compasses incorporated in wearable devices are prone to errors, especially in indoor environments; tracking on the move falters'] |
+|  16142980 | ['IMUs']          | ['full body'] | ['all joints']    | ['sensor fusion (sensor kinematics, biomechanical model, etc.)'] | ['full body motion animation']                                                           | ['sensors are installed in each joints; expensive']                                                                                 |
+| 206612638 | ['IMUs']          | ['arm']       | ['arm']           | ['unscented Kalman filter']                                      | ['continuously shoulder /elbow angle estimation compensating the drift error over time'] | ['only joint angle of shoulder and elbow were explored']                                                                            |
+| 222417658 | ['60GHz Radar']   | ['hand']      | ['environment']   | ['CA-CFAR (Cell Averaging-Constant False Alarm Rate)']           | ['precise, robust and calibration-free system']                                          | ['high cost, deployment complexity']                                                                                                |
+| 237618928 | ['capacitive']    | ['hand']      | ['wrist']         | ['CNN']                                                          | ['compact, running on the edge']                                                         | ['lack of generalization and robustness']                                                                                           |
+| 212114266 | ['capacitive']    | ['fingers']   | ['middle finger'] | ['LSTM']                                                         | ['compact, low cost']                                                                    | ['low-resistive to environmental variation']                                                                                        |
+| 214768654 | ['strain sensor'] | ['fingers']   | ['fingers']       | ['proportional summation (PS)']                                  | ['high accuracy for finger tracking']                                                    | ['complexity in wearability, lack of generalization']                                                                               |
+
+GOLD SCHEMA:
+0: Sensor
+1: Object
+2: Sensor Position
+3: Algorithms
+4: Advantages
+5: limitation
+
+PREDICTION PATH:../../metric_validation_0/1a4d511f-99f9-4d0c-8dba-483f65e4ee9b/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|         | Sensing modality used                           | Accuracy of gesture recognition                                    | On-board inferencing capabilities                              | Comparison with other gesture recognition methods                         | Usability and convenience                                                 | Application domains                                    |
+|:--------|:------------------------------------------------|:-------------------------------------------------------------------|:---------------------------------------------------------------|:--------------------------------------------------------------------------|:--------------------------------------------------------------------------|:-------------------------------------------------------|
+| paper_1 | ['6-axis IMU sensor']                           | ['N/A']                                                            | ['N/A']                                                        | ['Significantly improves usability and potential for pervasiveness']      | ['Improves usability and potential for pervasiveness']                    | ['Virtual physical therapy, fitness training']         |
+| paper_2 | ['Motion and magnetic sensors on smartwatches'] | ['9.2 cm of median error for free-form postures']                  | ['Modified hidden Markov model (HMM)']                         | ['Step forward in posture tracking']                                      | ['N/A']                                                                   | ['Generic underlay to various practical applications'] |
+| paper_3 | ['Miniature inertial sensors']                  | ['N/A']                                                            | ['N/A']                                                        | ['N/A']                                                                   | ['No restrictions for lighting, no occlusion problems']                   | ['Full-body human motion capture']                     |
+| paper_4 | ['Wearable inertial measurement units']         | ['RMS angle error of less than 8 degrees']                         | ['Unscented Kalman filter']                                    | ['Agreement with optical reference system for shoulder and elbow angles'] | ['Agreement with optical reference system for shoulder and elbow angles'] | ['Continuous monitoring of human movement']            |
+| paper_5 | ['60GHz Wi-Fi radio as radar']                  | ['Average tracking error of 2.5% of the distance from the device'] | ['N/A']                                                        | ['N/A']                                                                   | ['N/A']                                                                   | ['Handwriting tracking']                               |
+| paper_6 | ['Capacitive sensing']                          | ['Accuracy of 96.4%']                                              | ['Convolutional hidden layer for on-board inferencing']        | ['Compact, power-efficient on-board inferencing solution']                | ['Compact, power-efficient on-board inferencing solution']                | ['On-board hand gesture recognition']                  |
+| paper_7 | ['Capacitive sensors']                          | ['Mean absolute error of 13.02 degrees over all finger angles']    | ['Long short-term memory (LSTM) for on-board finger tracking'] | ['Mean absolute error of 13.02 degrees over all finger angles']           | ['N/A']                                                                   | ['Finger tracking']                                    |
+| paper_8 | ['FBG strain sensor']                           | ['Mean absolute error (MAE) of 1.63 ± 1.97°']                      | ['Algorithms for real-time calculation with high accuracy']    | ['More accurate hand modules than other glove modules']                   | ['Algorithms for tracking movable FBG strain sensors']                    | ['Measuring finger joint angles']                      |
+
+MATCHES:
+Sensing modality used: 
+Accuracy of gesture recognition: 
+On-board inferencing capabilities: 
+Comparison with other gesture recognition methods: 
+Usability and convenience: 
+Application domains: 

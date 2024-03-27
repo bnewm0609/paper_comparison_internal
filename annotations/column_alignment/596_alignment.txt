@@ -1,0 +1,43 @@
+ID: 64eb36c7-58cb-4e4f-ab6d-c325b5d556c6
+
+GOLD TABLE:
+|          | Model                                  | Main results in asymptotic SNR regime                     |
+|---------:|:---------------------------------------|:----------------------------------------------------------|
+| 13097571 | ['A general class of channels']        | ['Analyze the wideband slope']                            |
+|  8632659 | ['A general class of channels']        | ['Obtain the second order']                               |
+|  6862477 | ['high SNR']                           | ['Provide lower and upper bounds of the']                 |
+|  5724981 | ['high SNR']                           | ['the\nMMSE and the mutual information']                  |
+|  1748759 | ['block Rayleigh fading, high SNR']    | ['increasing function of the minimum Euclidean distance'] |
+| 26883678 | ['high SNR']                           | ['of the mutual information']                             |
+| 16092719 | ['Nakagami fading, low SNR, high SNR'] | ['ergodic mutual information and the average MMSE']       |
+| 14718027 | ['Kronecker fading with LOS']          | ['ergodic mutual information and the average MMSE']       |
+
+GOLD SCHEMA:
+0: Model
+1: Main results in asymptotic SNR regime
+
+PREDICTION PATH:../../metric_validation_0/64eb36c7-58cb-4e4f-ab6d-c325b5d556c6/gpt3.5/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Optimal linear precoding                                                                                                     | Fixed-point equation for power allocation                                                                                                             |
+|:---------|:-----------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------|
+| paper_1  | ['New criterion for optimality of signaling in the wideband regime proposed']                                                | ['N/A']                                                                                                                                               |
+| paper_2  | ['New criterion for optimality of signaling in the wideband regime proposed']                                                | ['N/A']                                                                                                                                               |
+| paper_3  | ['Second-order asymptotics of mutual information used in the analysis of the bandwidth-power tradeoff']                      | ['Dependence of second term in the asymptotic expansion on various components discussed']                                                             |
+| paper_4  | ['Second-order asymptotics of mutual information used in the analysis of the bandwidth-power tradeoff']                      | ['Dependence of second term in the asymptotic expansion on various components discussed']                                                             |
+| paper_5  | ['Power allocation policy maximizing mutual information over parallel channels with arbitrary input distributions proposed'] | ['Relationship between mutual information of Gaussian channels and nonlinear minimum mean-square error (MMSE) highlighted']                           |
+| paper_6  | ['Power allocation policy maximizing mutual information over parallel channels with arbitrary input distributions proposed'] | ['Relationship between mutual information of Gaussian channels and nonlinear minimum mean-square error (MMSE) highlighted']                           |
+| paper_7  | ['Investigation of linear precoding and power allocation policies for MIMO Gaussian channels with arbitrary inputs']         | ['Nondiagonal precoding matrix in general found to increase information transmission rate']                                                           |
+| paper_8  | ['Investigation of linear precoding and power allocation policies for MIMO Gaussian channels with arbitrary inputs']         | ['Nondiagonal precoding matrix in general found to increase information transmission rate']                                                           |
+| paper_9  | ['Linear precoding for achieving full diversity on a block fading channel without error-correcting code discussed']          | ['Simple upper bounds on the outage probability established']                                                                                         |
+| paper_10 | ['Linear precoding for achieving full diversity on a block fading channel without error-correcting code discussed']          | ['Simple upper bounds on the outage probability established']                                                                                         |
+| paper_11 | ['Asymptotic expressions of mutual information for discrete constellations at high SNR presented']                           | ['N/A']                                                                                                                                               |
+| paper_12 | ['Asymptotic expressions of mutual information for discrete constellations at high SNR presented']                           | ['N/A']                                                                                                                                               |
+| paper_13 | ['Expansions asymptotic in the signal-to-noise ratio constructed for the average minimum mean-squared error']                | ['Expansions asymptotic in the signal-to-noise ratio constructed for the average minimum mean-squared error']                                         |
+| paper_14 | ['Expansions asymptotic in the signal-to-noise ratio constructed for the average minimum mean-squared error']                | ['Expansions asymptotic in the signal-to-noise ratio constructed for the average minimum mean-squared error']                                         |
+| paper_15 | ['High-SNR capacity of multiple-antenna fading coherent channels driven by constrained discrete inputs investigated']        | ['High-SNR expansions to the average mutual information derived for multiple-antenna fading coherent channels driven by constrained discrete inputs'] |
+| paper_16 | ['High-SNR capacity of multiple-antenna fading coherent channels driven by constrained discrete inputs investigated']        | ['High-SNR expansions to the average mutual information derived for multiple-antenna fading coherent channels driven by constrained discrete inputs'] |
+
+MATCHES:
+Optimal linear precoding: 
+Fixed-point equation for power allocation: 

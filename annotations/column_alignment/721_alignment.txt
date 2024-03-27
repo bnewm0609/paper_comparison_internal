@@ -1,0 +1,47 @@
+ID: 18bad27c-8ae1-4b5c-a737-1698e801eec0
+
+GOLD TABLE:
+|           | Data scale                                                                | Applicable fields                |
+|----------:|:--------------------------------------------------------------------------|:---------------------------------|
+|  14991802 | ['32,668 images of 1,501 persons']                                        | ['PGPIG']                        |
+| 206593370 | ['52,712 in-shop cloth images and over 200,000 cross-pose / scale pairs'] | ['PGPIG and VTON']               |
+|  15639032 | ['161,638 clothing images of 37,499 items']                               | ['PGPIG and VTON']               |
+|   4244548 | ['3,578,080 images of 11 persons']                                        | ['PGPIG']                        |
+|  11618478 | ['17,706 images']                                                         | ['VTON']                         |
+|   4532827 | ['16,253 person-cloth pairs']                                             | ['VTON']                         |
+|  67856257 | ['35,687 person images and 13,524 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204837069 | ['21,790 person images and 10,895 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+| 204798390 | ['57,428 person images and 28,714 in-shop cloth images']                  | ['PGPIG, VTON and PGVTON']       |
+|  17297142 | ['2,326 videos']                                                          | ['PGPIG and PGPVG']              |
+|   4475365 | ['4,500 videos']                                                          | ['PGPIG and PGPVG']              |
+| 204800327 | ['600 videos']                                                            | ['PGPIG and PGPVG']              |
+| 202888704 | ['206 videos of 30 persons']                                              | ['PGPIG, VTON and PGPVG']        |
+| 208002772 | ['791 videos, 791 person images and 791 cloth images']                    | ['PGPIG, VTON, PGPVG and VVTON'] |
+
+GOLD SCHEMA:
+0: Data scale
+1: Applicable fields
+
+PREDICTION PATH:../../metric_validation_0/18bad27c-8ae1-4b5c-a737-1698e801eec0/mixtral/ours_outputs/try_0.json
+
+PREDICTED TABLE:
+|          | Types of generative models used                                                                                              | Quality and coherence of generated images/videos                                                                          |
+|:---------|:-----------------------------------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------|
+| Paper 1  | ['N/A']                                                                                                                      | ['N/A']                                                                                                                   |
+| Paper 2  | ['N/A']                                                                                                                      | ['N/A']                                                                                                                   |
+| Paper 3  | ['Deep Convolutional Generative Adversarial Network (DCGAN)']                                                                | ['Image quality and coherence are visually impressive']                                                                   |
+| Paper 4  | ['N/A']                                                                                                                      | ['N/A']                                                                                                                   |
+| Paper 5  | ['N/A']                                                                                                                      | ['N/A']                                                                                                                   |
+| Paper 6  | ['Coarse-to-Fine Generative Network']                                                                                        | ['Good clothes fidelity, high-quality images']                                                                            |
+| Paper 7  | ['Conditional Human Parsing Network, Deep Warping Generative Adversarial Network (Warp-GAN), and Refinement Render Network'] | ['High-quality images and videos, state-of-the-art performance on virtual try-on task']                                   |
+| Paper 8  | ['FashionOn Network']                                                                                                        | ['High-quality images, preserves clothing details and resolves body occlusion']                                           |
+| Paper 9  | ['Generative Adversarial Networks (GANs) with a bi-stage strategy']                                                          | ['Superior performance on FashionTryOn dataset']                                                                          |
+| Paper 10 | ['N/A']                                                                                                                      | ['N/A']                                                                                                                   |
+| Paper 11 | ['Motion and Content decomposed Generative Adversarial Network (MoCoGAN)']                                                   | ['Allows generation of videos with same content but different motion, and videos with different content and same motion'] |
+| Paper 12 | ['Dense warp-based network (DwNet)']                                                                                         | ['State-of-the-art performance on TaiChi and Fashion Modeling datasets']                                                  |
+| Paper 13 | ['Liquid Warping GAN with Liquid Warping Block (LWB)']                                                                       | ['Preserves face identity, shape consistency, and clothes details, robust in occlusion cases']                            |
+| Paper 14 | ['Flow-navigated Warping Generative Adversarial Network (FW-GAN)']                                                           | ['Synthesizes high-quality video of virtual try-on, significantly outperforms other methods']                             |
+
+MATCHES:
+Types of generative models used: 
+Quality and coherence of generated images/videos: 
