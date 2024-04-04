@@ -44,6 +44,8 @@ def process_paper(
     endtoend: Any,
     retry_num: int
 ):
+    """Process a single paper using the endtoend pipeline and save the results.
+    """
     tab_id = paper['y'].tabid
     print(f"[START] tab_id: {tab_id}")
     try:

@@ -1,9 +1,9 @@
 _id: "name-${.name}"
 name: "ours_outputs"
 prompt_path: "data/prompt_ver3.json"
-model_type: "gpt4"
-max_length: 100
-num_commonality: 3
+model_type: "mixtral"
+max_length: 60
+num_commonality: 5
 attribute_gen_method: "single_call"
 paper_loop: "multiple"
 scheme_source: "abstract"

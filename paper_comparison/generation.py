@@ -10,16 +10,10 @@ def load_json_file(file_path):
         json_data = json.load(file)
     return json_data
 
-def format_table(table_question):
-    table = {}
-    for key, value in table_question.items():
-        table[value["question"]] = {}
-        for k, v in value.items():
-            if k != "question":
-                table[value["question"]][k] = [v]
-    return table
-
 def validate_table(table, paper_list, column_num):
+    """Validate whether the predicted table is in the correct format and return the error type if not.
+
+    """
     if isinstance(table, str): 
         if table.strip()[-1] != "}":
             # print(table)
@@ -35,7 +29,26 @@ def validate_table(table, paper_list, column_num):
         # print(table)
         return False, "paper_num_error"
 
+def validate_scheme(scheme):
+    """Validate whether the predicted scheme is in the correct format and return the error type if not.
+
+    """
+    if isinstance(scheme, dict):
+        return True, ""
+    elif isinstance(scheme, str): 
+        # if there is [JSON] once in the table
+        if scheme.strip()[-1] != "}": # length issue - generate once more
+            return False, "scheme_length_error"
+        else:
+            print(scheme)
+            return False, "scheme_json_error"
+    else:
+        print(scheme)
+        return False, "scheme_unknown_error"
+
 def str_to_json(text, parse_str):
+    """Make generated string to json format using parse_str marker.
+    """
     try:
         if parse_str == "```json":
             if parse_str in text:
@@ -56,71 +69,12 @@ def str_to_json(text, parse_str):
                 return json.loads(json_str)
             except:
                 continue
-                # try:
-                #     print("try fixing json_str")
-                #     print(json_str)
-                #     print()
-                #     json_str = fix_json_str(json_str)
-                #     return json.loads(json_str)
-                # except:
-                #     continue
         print('\t\tFailed to parse with the given parse_str')
         return text
 
-def fix_json_str(json_str):
-    template = load_json_file("./data/prompt_ver3.json")["json_formatting"]
-    tmp_prompt = template['prompt'].format(input_info=json_str)
-    api_key = os.environ['OPENAI_KEY']
-    url = 'https://api.openai.com/v1/chat/completions'
-    headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer {}'.format(api_key)
-    }
-    try:
-        data = {
-            'messages': [
-                {'role': 'assistant', 'content': template["system_instruction"]},
-                {'role': 'user', 'content': tmp_prompt}
-            ],
-            # 'model': 'gpt-4-1106-preview',
-            'model': 'gpt-3.5-turbo-1106',
-            'max_tokens': 4000,
-            'temperature': 0.3
-        }
-        response = requests.post(url, headers=headers, json=data)
-        # print(response)
-        response.raise_for_status()  # Raises a HTTPError if the response contains an HTTP error status code
-        output = response.json()
-        if 'choices' in output:
-            for choice in output['choices']:
-                message = choice['message']
-                if message['role'] == 'assistant':
-                    explanation = message['content']
-        return explanation.split(template["parse_str"])[1].strip()
-    except requests.HTTPError as http_err:
-        print(f"HTTP error occurred: {http_err}")
-    except Exception as err:
-        print(f"Other error occurred: {err}")   
-
-def format_to_json(text):
-    if text.find('[') != -1 and (text.find('{') == -1 or text.find('{') > text.find('[')):
-        # list
-        start = text.find('[')
-        end = text.rfind(']')
-    else:
-        # dict
-        start = text.find('{')
-        end = text.rfind('}')
-    json_text = text[start:end+1]
-    try:
-        return json.loads(json_text)
-    except Exception as e:
-        print("ERROR:", e)
-        print("TEXT:", text)
-        print("JSON TEXT:", json_text)
-        raise e
-
 def make_paper_list_input(paper_text:str, index:int, paper:Dict, source:str, paper_loop:str) -> str:
+    """Make paper list to input format so that it can be used in the prompt.
+    """
     abstract = paper["abstract"].strip() if "abstract" in paper and paper["abstract"] else None
     introduction = paper["introduction"].strip() if "introduction" in paper and paper["introduction"] else None
     title = paper["title"]
@@ -149,6 +103,8 @@ def make_paper_list_input(paper_text:str, index:int, paper:Dict, source:str, pap
     return paper_text
 
 def divide_column_num(column_num, paper_num, max_length):
+    """Divide the column number based on the paper number and the maximum length of the prompt.
+    """
     division = (column_num * paper_num) // max_length + 1
     base = column_num // division
     remainder = column_num % division
@@ -156,6 +112,8 @@ def divide_column_num(column_num, paper_num, max_length):
     return column_list
 
 def baseline_create_json_format_template(template, column_num, paper_list, paper_text, gold_caption=None):
+    """Create JSON format template that needs to be filled in for the baseline prompt.
+    """
     json_format = {}
     paper_num = len(paper_list)
     for i in range(column_num):
@@ -182,6 +140,8 @@ def baseline_create_json_format_template(template, column_num, paper_list, paper
     return tmp_prompt
 
 def ours_create_json_format_template(partial_template, template, paper_text, paper_num, similarity, attributes):
+    """Create JSON format template that needs to be filled in for our prompting method.
+    """
     col_names = '\n'.join([f'Column name {index+1}: {att}' for index, att in enumerate(attributes)])
     input_info = partial_template.format(paper=paper_text, similarity=similarity, columns=col_names)  
     # Create JSON format template to add to the prompt
@@ -195,7 +155,8 @@ def ours_create_json_format_template(partial_template, template, paper_text, pap
     return combined_prompt
 
 def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
-    # {"id": int(index), "tabid": str(tab_id), "text": table, "error_type": error_type, "error_num": error_num}
+    """Merge multiple tables that have the correct format and same number of rows into one table. 
+    """
     is_error = any(["text" in table for table in tables])
     if not is_error:
         merged_table = {
@@ -234,6 +195,8 @@ def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
     return merged_table
 
 def mark_length_error(error_data):
+    """Mark the error type as length error if the length of the table is over the maximum length.
+    """
     if error_data["length_error"] == 5:
         error_data["over_max_length_error"] = True
         error_data["have_length_error"] = True
@@ -250,6 +213,8 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
 
 @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(5))
 def generate_handler(tmp_prompt, model_type, generation_type, data_type, template=None):
+    """Generate outputs using the given model_type and prompt.
+    """
     explanation = ""
     if model_type == "gpt4" or model_type == "gpt3.5":
         # api_key = random.choice(json.load(os.environ['OPENAI_KEYS']))
@@ -352,3 +317,56 @@ def generate_handler(tmp_prompt, model_type, generation_type, data_type, templat
     except Exception as err:
         print(f"Other error occurred: {err}")  
         raise err
+    
+# def fix_json_str(json_str):
+#     template = load_json_file("./data/prompt_ver3.json")["json_formatting"]
+#     tmp_prompt = template['prompt'].format(input_info=json_str)
+#     api_key = os.environ['OPENAI_KEY']
+#     url = 'https://api.openai.com/v1/chat/completions'
+#     headers = {
+#         'Content-Type': 'application/json',
+#         'Authorization': 'Bearer {}'.format(api_key)
+#     }
+#     try:
+#         data = {
+#             'messages': [
+#                 {'role': 'assistant', 'content': template["system_instruction"]},
+#                 {'role': 'user', 'content': tmp_prompt}
+#             ],
+#             # 'model': 'gpt-4-1106-preview',
+#             'model': 'gpt-3.5-turbo-1106',
+#             'max_tokens': 4000,
+#             'temperature': 0.3
+#         }
+#         response = requests.post(url, headers=headers, json=data)
+#         # print(response)
+#         response.raise_for_status()  # Raises a HTTPError if the response contains an HTTP error status code
+#         output = response.json()
+#         if 'choices' in output:
+#             for choice in output['choices']:
+#                 message = choice['message']
+#                 if message['role'] == 'assistant':
+#                     explanation = message['content']
+#         return explanation.split(template["parse_str"])[1].strip()
+#     except requests.HTTPError as http_err:
+#         print(f"HTTP error occurred: {http_err}")
+#     except Exception as err:
+#         print(f"Other error occurred: {err}")   
+
+# def format_to_json(text):
+#     if text.find('[') != -1 and (text.find('{') == -1 or text.find('{') > text.find('[')):
+#         # list
+#         start = text.find('[')
+#         end = text.rfind(']')
+#     else:
+#         # dict
+#         start = text.find('{')
+#         end = text.rfind('}')
+#     json_text = text[start:end+1]
+#     try:
+#         return json.loads(json_text)
+#     except Exception as e:
+#         print("ERROR:", e)
+#         print("TEXT:", text)
+#         print("JSON TEXT:", json_text)
+#         raise e

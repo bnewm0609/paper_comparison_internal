@@ -2,7 +2,7 @@ defaults:
  - _self_
  - data: abstracts
  - eval: eval
- - endtoend: ours_outputs
+ - endtoend: "ours_outputs"
 #  - attribute_gen_method: "single_call"
 #  - paper_loop: "multiple"
 retry_type: "shuffle"
