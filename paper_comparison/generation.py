@@ -2,6 +2,7 @@ import json
 import requests
 import openai
 from typing import Any, Optional, Sequence, Dict, List
+from tenacity import retry, stop_after_attempt, wait_random_exponential
 import os
 
 def load_json_file(file_path):
@@ -180,6 +181,19 @@ def baseline_create_json_format_template(template, column_num, paper_list, paper
         )
     return tmp_prompt
 
+def ours_create_json_format_template(partial_template, template, paper_text, paper_num, similarity, attributes):
+    col_names = '\n'.join([f'Column name {index+1}: {att}' for index, att in enumerate(attributes)])
+    input_info = partial_template.format(paper=paper_text, similarity=similarity, columns=col_names)  
+    # Create JSON format template to add to the prompt
+    json_format = {}
+    for att in attributes:
+        json_format[att] = {}
+        for i in range(paper_num):
+            json_format[att][f'paper_{i+1}'] = [f"<value for this column grounded on Paper {i+1}>"]
+    json_format = json.dumps(json_format, indent=2)
+    combined_prompt = template.format(input_info=input_info, json_format=json_format)
+    return combined_prompt
+
 def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
     # {"id": int(index), "tabid": str(tab_id), "text": table, "error_type": error_type, "error_num": error_num}
     is_error = any(["text" in table for table in tables])
@@ -218,10 +232,27 @@ def merge_tables(tables: List[Dict[str, Any]]) -> Dict[str, Any]:
                 merged_table["error_counts"][key] = value
 
     return merged_table
-            
+
+def mark_length_error(error_data):
+    if error_data["length_error"] == 5:
+        error_data["over_max_length_error"] = True
+        error_data["have_length_error"] = True
+    elif error_data["length_error"] > 0 and error_data["length_error"] < 5:
+        error_data["over_max_length_error"] = False
+        error_data["have_length_error"] = True
+    else:
+        error_data["over_max_length_error"] = False
+        error_data["have_length_error"] = False
+    return error_data
+
 def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
+    return generate_handler(tmp_prompt, model_type, generation_type, data_type, template)
+
+@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(5))
+def generate_handler(tmp_prompt, model_type, generation_type, data_type, template=None):
     explanation = ""
     if model_type == "gpt4" or model_type == "gpt3.5":
+        # api_key = random.choice(json.load(os.environ['OPENAI_KEYS']))
         api_key = os.environ['OPENAI_KEY']
         url = 'https://api.openai.com/v1/chat/completions'
         headers = {
@@ -245,7 +276,7 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
             'Content-Type': 'application/json',
             'Authorization': 'Bearer {}'.format(api_key)
         }
-    
+        
     try:
         if template["system_instruction"] == None:
             prompt  = [
@@ -264,7 +295,7 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
             max_tokens = 1000
         else:
             temperature = 1
-            max_tokens = 4000
+            max_tokens = 3000
         
         if model_type == "gpt4" or model_type == "gpt3.5":
             data = {
@@ -300,7 +331,7 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
                 'stop': ["[/INST]", "</s>"]
             }
             response = requests.post(url, headers=headers, json=data)
-            print(response)
+            # print(response)
             response.raise_for_status()
             output = response.json()
             if 'choices' in output:
@@ -316,5 +347,8 @@ def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
             
     except requests.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")
+        print(json.dumps(data, indent=2))
+        raise http_err
     except Exception as err:
         print(f"Other error occurred: {err}")  
+        raise err

@@ -8,7 +8,7 @@ import random
 from omegaconf import DictConfig
 
 from paper_comparison.types.table import Table
-from paper_comparison.generation import load_json_file, generate, divide_column_num, make_paper_list_input, format_to_json, merge_tables, validate_table, baseline_create_json_format_template
+from paper_comparison.generation import load_json_file, generate, divide_column_num, make_paper_list_input, format_to_json, merge_tables, validate_table, baseline_create_json_format_template, mark_length_error, ours_create_json_format_template
 
 class BaseEndToEnd:
     def __init__(self, args: DictConfig):        
@@ -26,8 +26,9 @@ class BaselineEndToEnd:
         for i in range(args.endtoend.num_commonality):
             if "single_call" in args.endtoend.baseline_type:
                 print(column_num * len(sample["x"]))
-                if column_num * len(sample["x"]) < args.endtoend.max_length:
+                if column_num * len(sample["x"]) < args.endtoend.max_length:    # when the number of columns and papers is enough to be generated in one table
                     baseline_table = self.baseline_tab_gen(sample["x"], args.endtoend.model_type, index, tab_id, column_num, gold_caption, source="abstract")
+                    baseline_table["error_counts"] = mark_length_error(baseline_table["error_counts"])
                 else:
                     print("The number of columns and papers is large")
                     column_list = divide_column_num(column_num, len(sample["x"]), args.endtoend.max_length)
@@ -37,7 +38,9 @@ class BaselineEndToEnd:
                         print("\npartial_table", partial_table)
                         baseline_table_set.append(partial_table)
                     baseline_table = merge_tables(baseline_table_set)
-                table_list.append(baseline_table)
+                    baseline_table["error_counts"] = mark_length_error(baseline_table["error_counts"])
+                # table_list.append(baseline_table)
+                
             if "pap_to_tab" in args.endtoend.baseline_type:
                 tab = self.format_to_json(self.zero_shot_paper_to_table(sample["x"], intro=False))
                 baseline_table = Table(tabid=str(index), schema=set(tab.keys()), values=tab, type="pap_to_tab")
@@ -48,6 +51,7 @@ class BaselineEndToEnd:
                 tab = self.one_paper_to_scheme_to_table(sample["x"], answer=True, intro=False)
                 baseline_table = Table(tabid=str(index), schema=set(tab.keys()), values=tab, type="multi_scheme")
             table_list.append(baseline_table)
+            
         return table_list
     
     def baseline_tab_gen(
@@ -79,34 +83,8 @@ class BaselineEndToEnd:
         else:
             tmp_prompt = baseline_create_json_format_template(self.template["baseline_paper_to_table"]["prompt_simple"],
                                                  column_num, paper_list, paper_text)
-        # json_format = {}
-        # for i in range(column_num):
-        #     json_format[f"<dimension {i+1} that can compare papers>"] = {}
-        #     for p_idx in range(len(paper_list)):
-        #         json_format[f"<dimension {i+1} that can compare papers>"][f"paper_{p_idx+1}"] = [f"<relevant value to the dimension {i+1} grounded on Paper {p_idx+1}>"]
-        # json_format = json.dumps(json_format, indent=2)
-
-        # if type(gold_caption) == str:
-        #     tmp_prompt = self.template["baseline_paper_to_table"]["prompt_medium"].format(
-        #         col_num=column_num, 
-        #         paper_num=paper_num,
-        #         input_info=paper_text, 
-        #         caption=gold_caption,
-        #         json_format=json_format
-        #     )
-        # else:
-        #     tmp_prompt = self.template["baseline_paper_to_table"]["prompt_simple"].format(
-        #         col_num=column_num,
-        #         paper_num=paper_num,
-        #         input_info=paper_text,
-        #         json_format=json_format
-        #     )
-        # print(tmp_prompt)
-            
-        max_try = 5
         merged_table_list = []
-        for i in range(max_try):
-            print(i, merged_table_list)
+        while (error_counts["length_error"] < 5):
             tmp_prompt = baseline_create_json_format_template(self.template["baseline_paper_to_table"]["prompt_simple"],
                                                  column_num, paper_list, paper_text)
             table = generate(tmp_prompt, model, "generation", "json", self.template["baseline_paper_to_table"])  
@@ -133,7 +111,6 @@ class BaselineEndToEnd:
                 merged_table_list.append(table)
                 column_num = column_num - len(table.keys())
                 error_counts[error_type] += 1
-            
             else:
                 error_counts[error_type] += 1
                 print(f"\t\t{tab_id} - Table Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
@@ -266,7 +243,9 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         if column_num * len(sample["x"]) < args.endtoend.max_length:
             tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, gold_caption)
         else:
-            tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, args.endtoend.max_length, gold_caption)  
+            tables = self.table_prediction(args, tab_id, index, sample["x"], column_num, args.endtoend.max_length, gold_caption) 
+        for table in tables:
+            table["error_counts"] = mark_length_error(table["error_counts"]) 
         return tables
     
     def find_similarity(self, paper_list: List[Dict[str, Any]], model:str, source: str = "abstract", max: bool = True) -> str:
@@ -360,22 +339,31 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         else:
             for index, paper in enumerate(paper_list):
                 paper_text = make_paper_list_input(paper_text, index, paper, source, paper_loop)
-            input_info = temp_template.format(paper=paper_text, similarity=similarity, columns=col_names)
+            # input_info = temp_template.format(paper=paper_text, similarity=similarity, columns=col_names)
             
-            # Create JSON format template to add to the prompt
-            json_format = {}
-            for att in attributes:
-                json_format[att] = {}
-                for i in range(len(paper_list)):
-                    json_format[att][f'paper_{i+1}'] = [f"<value for this column grounded on Paper {i+1}>"]
-            json_format = json.dumps(json_format, indent=2)
+            # # Create JSON format template to add to the prompt
+            # json_format = {}
+            # for att in attributes:
+            #     json_format[att] = {}
+            #     for i in range(len(paper_list)):
+            #         json_format[att][f'paper_{i+1}'] = [f"<value for this column grounded on Paper {i+1}>"]
+            # json_format = json.dumps(json_format, indent=2)
 
-            combined_prompt = self.template[prompt_type][f'prompt_{paper_loop}_{source}'].format(input_info=input_info, json_format=json_format)
-            max_try = 5
-            for i in range(max_try):
-                table = generate(combined_prompt, model, "generation", "json", self.template[prompt_type])
-                is_valid, error_type = validate_table(table, paper_list, attribute_num)
-                if is_valid:
+            # combined_prompt = self.template[prompt_type][f'prompt_{paper_loop}_{source}'].format(input_info=input_info, json_format=json_format)
+            # max_try = 5
+            # for i in range(max_try):
+        merged_table_list = []
+        while(error_counts["length_error"] < 5):
+            # combined_prompt = self.template[prompt_type][f'prompt_{paper_loop}_{source}'].format(input_info=input_info, json_format=json_format)
+            combined_prompt = ours_create_json_format_template(temp_template, self.template[prompt_type][f'prompt_{paper_loop}_{source}'], 
+                                                                paper_text, len(paper_list), similarity, attributes)
+            table = generate(combined_prompt, model, "generation", "json", self.template[prompt_type])
+            is_valid, error_type = validate_table(table, paper_list, attribute_num)
+            if is_valid:
+                merged_table_list.append(table)
+                if len(merged_table_list) > 1:
+                    our_table = merge_tables(merged_table_list)
+                else:
                     our_table = {
                         "id": int(id), 
                         "tabid": str(tab_id), 
@@ -388,16 +376,23 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                         "error_counts": error_counts
                     }
                     break
-                else:
-                    error_counts[error_type] += 1
-                    print(f"\t\t{tab_id} - Table Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
-                    our_table = {
-                        "id": int(id), 
-                        "tabid": str(tab_id),
-                        "text": table, 
-                        "error_counts": error_counts
-                    }
-            return our_table
+            elif error_type == "column_num_error":  # generate another table with the remaining number of columns (new_column_num = column_num - len(table.keys()))
+                merged_table_list.append(table)
+                attributes = [item for item in attributes if item not in list(table.keys())]
+                attribute_num = len(attributes)
+                error_counts[error_type] += 1
+            else:
+                
+                error_counts[error_type] += 1
+                print(f"\t\t{tab_id} - Table Error: {error_type}. Total error count: {sum(list(error_counts.values()))}")
+                print(table)
+                our_table = {
+                    "id": int(id), 
+                    "tabid": str(tab_id),
+                    "text": table, 
+                    "error_counts": error_counts
+                }
+        return our_table
         
     def filter_out(self, commonality_attribute_sets: Dict, method: str, num_commonalities: Optional[int] = 1) -> List[Any]:
         commonalities = list(commonality_attribute_sets.keys())
@@ -419,6 +414,7 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
         id, paper_data: List[Dict[str, Any]], col_num: int, 
         max_length: int = None, gold_caption: Optional[str] = None
     ) -> List[Dict[str, Any]]:
+        
         table_set = []
         scheme_set = {} 
         save_type = "{}_{}_{}_{}".format(args.endtoend.model_type, args.endtoend.num_commonality, args.endtoend.attribute_gen_method, args.endtoend.paper_loop)
@@ -427,7 +423,7 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                 commonality_attribute_sets, scheme_error_counts = self.generate_commonality_attribute(paper_data, args.endtoend.model_type, col_num, source=args.endtoend.scheme_source)
                 scheme_valid = False if "text" in list(commonality_attribute_sets.keys()) else True
                 commonalities = list(commonality_attribute_sets.keys())
-                commonalities = self.filter_out(commonality_attribute_sets, "random", num_commonalities=1)
+                commonalities = self.filter_out(commonality_attribute_sets, "random", num_commonalities=args.endtoend.num_commonality)
             else:
                 commonalities = format_to_json(self.find_similarity(paper_data, args.endtoend.model_type, source=args.endtoend.scheme_source, max=True))
         else:
@@ -455,9 +451,10 @@ class ComputedOutputsEndToEnd(BaseEndToEnd):
                             id, tab_id, save_type, scheme_error_counts,
                             args.endtoend.value_source, args.endtoend.paper_loop
                         )
-                        merged_table_set.append(tab)
                         if "text" in tab:
                             break
+                        merged_table_set.append(tab)
+                        
                     table = merge_tables(merged_table_set)
                 else:
                     table = self.value_generation(
