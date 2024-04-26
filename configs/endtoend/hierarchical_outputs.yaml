@@ -1,5 +1,5 @@
 _id: "name-${.name}"
-name: "ours_outputs"
+name: "hierarchical_outputs"
 prompt_path: "data/prompt_ver3.json"
 model_type: "gpt3.5"
 max_length: 60

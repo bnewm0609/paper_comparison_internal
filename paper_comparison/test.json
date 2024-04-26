@@ -1,0 +1,408 @@
+{
+    "attribute_gold_num": {
+        "adca10bd-278b-4749-8a92-d19b39e2dfb1": {
+            "Large-scale dataset creation": {
+                "Dataset Size": [
+                    "Size in GB/TB"
+                ],
+                "Data Variety": [
+                    "Text Diversity",
+                    "Image Variety"
+                ],
+                "Multilinguality": [
+                    "Number of Languages"
+                ],
+                "Image-Text Combination": [
+                    "Image-Text Pairing"
+                ]
+            },
+            "Language modeling for natural language processing (NLP)": {
+                "Model Architecture": [
+                    "Transformer-based models",
+                    "LSTM-based models",
+                    "Statistical language models"
+                ],
+                "Dataset Characteristics": [
+                    "Size of the dataset",
+                    "Multilinguality",
+                    "Diversity of the dataset"
+                ],
+                "Evaluation Metrics": [
+                    "Perplexity",
+                    "BLEU score",
+                    "Accuracy"
+                ],
+                "Training Regimen": [
+                    "Fine-tuning strategies",
+                    "Pretraining approaches"
+                ]
+            },
+            "Multilingual dataset creation": {
+                "Dataset Size": [
+                    "Total size in GB/TB",
+                    "Number of documents/samples"
+                ],
+                "Multilingual Coverage": [
+                    "Number of languages covered",
+                    "Language representation diversity"
+                ],
+                "Domain Coverage": [
+                    "Number of domains/topics represented",
+                    "Domain distribution"
+                ],
+                "Data Collection Method": [
+                    "Crowdsourcing",
+                    "Web scraping",
+                    "Manual curation"
+                ]
+            },
+            "Language-vision model training": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Multimodal"
+                ],
+                "Training Dataset": [
+                    "Text-only",
+                    "Multilingual",
+                    "Image-Text"
+                ],
+                "Evaluation Metrics": [
+                    "BLEU score",
+                    "Perplexity"
+                ],
+                "Results comparison": [
+                    "Performance on benchmark tasks"
+                ]
+            }
+        },
+        "17ad9334-f56b-459d-94ce-87792cbcd548": {
+            "Transfer Learning for NLP": {
+                "Model Architecture": [
+                    "Transformer-based Models",
+                    "Gradient Boosting Models",
+                    "Factorization-Machine based Neural Network"
+                ],
+                "Performance Metrics": [
+                    "Language Understanding",
+                    "Text Generation",
+                    "Tabular Domain Performance"
+                ]
+            },
+            "Gradient Boosting Decision Tree (GBDT)": {
+                "Implementation": [
+                    "Scalability",
+                    "Efficiency",
+                    "Handling categorical features"
+                ],
+                "Performance Metrics": [
+                    "Accuracy",
+                    "Training time"
+                ]
+            },
+            "Pretrained Language Models": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Boosting-based",
+                    "Factorization-machines-based",
+                    "Tabular learning-based"
+                ],
+                "Application Domain": [
+                    "General text understanding",
+                    "Financial communications",
+                    "Multitask learning",
+                    "Instructionfine-tuning"
+                ]
+            },
+            "Instruction-Finetuned Language Models": {
+                "Architecture": [
+                    "Transformer-based",
+                    "Factorization-machine based",
+                    "Gradient boosting decision tree"
+                ],
+                "Application": [
+                    "Language understanding",
+                    "Financial communications",
+                    "Tabular domain"
+                ]
+            },
+            "Foundation Language Models": {
+                "Model Architecture": [
+                    "Pre-trained Transformer",
+                    "Gradient Boosting Decision Tree",
+                    "Factorization-Machine based Neural Network",
+                    "Self- and Semi-supervised Learning",
+                    "Instruction-Finetuned Language Models"
+                ],
+                "Domain Specific Focus": [
+                    "Text-to-Text Transformation",
+                    "Tabular Data",
+                    "Financial Communications",
+                    "Unsupervised Multitask Learning"
+                ]
+            }
+        },
+        "97b75d36-0cf4-4f40-bb52-23338b11aa9c": {
+            "Pre-training and Transfer Learning": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Bidirectional",
+                    "Self-supervised"
+                ],
+                "Training Data": [
+                    "Unsupervised",
+                    "Cross-lingual"
+                ],
+                "Evaluation Metrics": [
+                    "Accuracy",
+                    "Perplexity"
+                ]
+            },
+            "Language Representation Models": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Bidirectional vs. Autoregressive",
+                    "Model Size"
+                ],
+                "Pre-training Approach": [
+                    "Unified Text-to-Text Learning",
+                    "Unsupervised Cross-lingual Learning",
+                    "Conditional Language Model"
+                ],
+                "Scale of Language Understanding": [
+                    "Generalized vs. Specific Pretraining",
+                    "Context Length Consideration"
+                ]
+            },
+            "Model Performance and State-of-the-art Results": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "BERT-based",
+                    "Others"
+                ],
+                "Performance Metrics": [
+                    "Accuracy",
+                    "F1 Score",
+                    "Training Time"
+                ],
+                "State-of-the-art Results": [
+                    "Benchmark Performance",
+                    "Comparative Analysis",
+                    "Industry Adoption"
+                ]
+            }
+        },
+        "ebc07e27-16fa-417c-b619-51bb72c8ae99": {
+            "Pre-training Language Models": {
+                "Architecture/Model": [
+                    "Transformer-based",
+                    "LSTM-based",
+                    "CNN-based"
+                ],
+                "Pre-training Objective": [
+                    "Language Understanding",
+                    "Multitask Learning",
+                    "Few-Shot Learning"
+                ]
+            },
+            "Model Scale and Performance": {
+                "Model Architecture": [
+                    "Pre-trained Transformer-based models",
+                    "Contextualized word representations"
+                ],
+                "Performance Metrics": [
+                    "Language understanding",
+                    "Self-supervised learning"
+                ]
+            },
+            "Multilingual Representation Learning": {
+                "Pre-training Method": [
+                    "Unified Text-to-Text Transformer",
+                    "BERT",
+                    "RoBERTa"
+                ],
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Contextualized Word Representations",
+                    "Switch Transformers"
+                ],
+                "Learning Approach": [
+                    "Unsupervised",
+                    "Self-supervised",
+                    "Few-shot learning"
+                ]
+            },
+            "Task-Agnostic Learning": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "LSTM-based",
+                    "GPT-based"
+                ],
+                "Performance Metrics": [
+                    "Accuracy",
+                    "Training Time",
+                    "Model Size"
+                ]
+            },
+            "Few-shot Learning": {
+                "Model Architecture": [
+                    "Pre-training architectures",
+                    "Few-shot learning models"
+                ],
+                "Language Representation": [
+                    "Cross-lingual representation learning",
+                    "Multitask learning"
+                ]
+            },
+            "Contextualized Word Representations": {
+                "Model Architecture": [
+                    "Transformer-Based",
+                    "Bidirectional",
+                    "Sequence-to-Sequence"
+                ],
+                "Training Approach": [
+                    "Pre-training",
+                    "Unsupervised Learning",
+                    "Self-supervised Learning"
+                ]
+            },
+            "Hyperparameter Impact on Model Performance": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "Contextualized Word Representations",
+                    "Sequence-to-Sequence Pre-training",
+                    "Text Encoders"
+                ],
+                "Hyperparameters": [
+                    "Learning Rate",
+                    "Batch Size",
+                    "Number of Layers"
+                ]
+            },
+            "Autoregressive Pretraining Method": {
+                "Pretraining Method": [
+                    "Autoregressive",
+                    "Self-supervised",
+                    "Generative"
+                ],
+                "Model Architecture": [
+                    "Transformer",
+                    "Bidirectional",
+                    "Sequence-to-Sequence"
+                ]
+            },
+            "Techniques to Reduce Model Size and Training Time": {
+                "Compression Techniques": [
+                    "Pruning",
+                    "Quantization",
+                    "Distillation"
+                ],
+                "Training Optimization Techniques": [
+                    "Gradient Compression",
+                    "Knowledge Distillation",
+                    "Transfer Learning"
+                ]
+            },
+            "Sequence-to-Sequence Pre-training": {
+                "Model Architecture/Approach": [
+                    "Transformer-based",
+                    "Bidirectional",
+                    "Cross-lingual",
+                    "Large Scale Pretraining",
+                    "Lite Pretraining",
+                    "Denoising",
+                    "Generative vs Discriminative"
+                ],
+                "Performance Metrics": [
+                    "BLEU Score",
+                    "Perplexity",
+                    "Accuracy"
+                ]
+            },
+            "Efficient Pre-training Tasks": {
+                "Pre-training Approach": [
+                    "Masked Language Modeling",
+                    "Sequence-to-Sequence Pre-training"
+                ],
+                "Task Type": [
+                    "Language Understanding",
+                    "Multitask Learning",
+                    "Cross-lingual Representation Learning"
+                ]
+            },
+            "Sparse Model Training and Computation": {
+                "Model Architecture": [
+                    "Transformer-based Models",
+                    "Contextualized Word Representations",
+                    "Switch Transformers"
+                ],
+                "Training Method": [
+                    "Transfer Learning",
+                    "Unsupervised Learning",
+                    "Self-supervised Learning"
+                ]
+            },
+            "Model Performance Analysis": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "BERT-based",
+                    "GPT-based"
+                ],
+                "Performance Metrics": [
+                    "Perplexity",
+                    "Accuracy",
+                    "Training Time"
+                ]
+            }
+        },
+        "a508c929-b5ce-43ff-80ca-698dec98c6c3": {
+            "Language Modeling": {
+                "Model Architecture": [
+                    "Transformer-based",
+                    "LSTM-based"
+                ],
+                "Dataset Size": [
+                    "Large-scale",
+                    "Open-domain",
+                    "Bilingual"
+                ],
+                "Pre-training Approach": [
+                    "General Language Model",
+                    "Efficient Language Model"
+                ]
+            },
+            "Large-scale model training": {
+                "Architecture/Framework": [
+                    "Transformer-based",
+                    "Recurrent Neural Network (RNN)",
+                    "Feedforward Neural Network"
+                ],
+                "Dataset Size": [
+                    "<100GB",
+                    "100-500GB",
+                    ">500GB"
+                ],
+                "Training Efficiency": [
+                    "Training time (days)",
+                    "Computational cost",
+                    "Convergence speed"
+                ]
+            },
+            "Model performance": {
+                "Training Data": [
+                    "Dataset Size",
+                    "Type of Data",
+                    "Preprocessing"
+                ],
+                "Evaluation Metrics": [
+                    "Accuracy",
+                    "Precision",
+                    "Recall"
+                ],
+                "Model Complexity": [
+                    "Number of Parameters",
+                    "Architecture Type"
+                ]
+            }
+        }
+    }
+}
