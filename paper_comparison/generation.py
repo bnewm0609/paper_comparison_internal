@@ -29,21 +29,50 @@ def validate_table(table, paper_list, column_num):
         # print(table)
         return False, "paper_num_error"
 
-def validate_scheme(scheme):
-    """Validate whether the predicted scheme is in the correct format and return the error type if not.
+def check_dict_values_are_lists(input_dict):
+    """
+    Check if all values in the dictionary are of list type.
+
+    Args:
+    input_dict (dict): The dictionary to check.
+
+    Returns:
+    bool: True if all values are lists, False otherwise.
+    """
+    return all(isinstance(value, list) for value in input_dict.values())
+
+def validate_list_scheme(scheme):
+    """Validate whether the predicted scheme is in the correct list format and return the error type if not.
 
     """
-    if isinstance(scheme, dict):
+    if isinstance(scheme, list):    
         return True, ""
     elif isinstance(scheme, str): 
         # if there is [JSON] once in the table
         if scheme.strip()[-1] != "}": # length issue - generate once more
             return False, "scheme_length_error"
         else:
-            print(scheme)
+            # print(scheme)
             return False, "scheme_json_error"
     else:
-        print(scheme)
+        # print(scheme)
+        return False, "scheme_unknown_error"
+    
+def validate_scheme(scheme):
+    """Validate whether the predicted scheme is in the correct format and return the error type if not.
+
+    """
+    if isinstance(scheme, dict) and check_dict_values_are_lists(scheme):    
+        return True, ""
+    elif isinstance(scheme, str): 
+        # if there is [JSON] once in the table
+        if scheme.strip()[-1] != "}": # length issue - generate once more
+            return False, "scheme_length_error"
+        else:
+            # print(scheme)
+            return False, "scheme_json_error"
+    else:
+        # print(scheme)
         return False, "scheme_unknown_error"
 
 def str_to_json(text, parse_str):
@@ -54,6 +83,14 @@ def str_to_json(text, parse_str):
             if parse_str in text:
                 json_str = text.split(parse_str)[1].strip()
                 json_str = json_str.split("```")[0].strip()
+            else:
+                json_str = text.split("```")[1].strip()
+        elif parse_str == "```list":
+            if parse_str in text:
+                json_str = text.split(parse_str)[1].strip()
+                json_str = json_str.split("```")[0].strip()
+            # elif "```" not in text:
+            #     json_str = json_str
             else:
                 json_str = text.split("```")[1].strip()
         else:
@@ -69,6 +106,42 @@ def str_to_json(text, parse_str):
                 return json.loads(json_str)
             except:
                 continue
+        print(text)
+        print('\t\tFailed to parse with the given parse_str')
+        return text
+    
+def str_to_list(text, parse_str):
+    """Make generated string to json format using parse_str marker.
+    """
+    try:
+        if parse_str == "```list":
+            if parse_str in text:
+                list_str = text.split(parse_str)[1].strip()
+                list_str = list_str.split("```")[0].strip()
+            else:
+                list_str = text.split("```")[1].strip()
+        elif parse_str == "```list":
+            if parse_str in text:
+                list_str = text.split(parse_str)[1].strip()
+                list_str = list_str.split("```")[0].strip()
+            # elif "```" not in text:
+            #     json_str = json_str
+            else:
+                list_str = text.split("```")[1].strip()
+        else:
+            list_str = text.split(parse_str)[1].strip()
+        return json.loads(list_str)
+    except:
+        # potential parse_str: ["[\JSON]"]
+        potential_parse_str = ["[/JSON]", "{/JSON}", "[/json]"]
+        for p_str in potential_parse_str:
+            try:
+                json_str = text.split(parse_str)[1].split(p_str)[0].strip()
+                # json_str = text.split(p_str)[1].strip()
+                return json.loads(json_str)
+            except:
+                continue
+        print(text)
         print('\t\tFailed to parse with the given parse_str')
         return text
 
@@ -98,6 +171,8 @@ def make_paper_list_input(paper_text:str, index:int, paper:Dict, source:str, pap
                 paper_text += f'Paper {index+1} introduction: {introduction}\n\n'
         elif source == "full":
             paper_text += f'Paper {index+1} abstract: {abstract}\n\n'
+        elif source == "title":
+            paper_text += f'Paper {index+1} title: {title}\n'
         else:
             paper_text += f'Paper {index+1} title: {title}\nPaper {index+1} abstract: {abstract}\n\n'
     return paper_text
@@ -208,6 +283,16 @@ def mark_length_error(error_data):
         error_data["have_length_error"] = False
     return error_data
 
+def expand_hierarchy(result):
+    """Expand the dictionary to list
+    """
+    expanded = []
+    for key, value in result.items():
+        expanded.append(key)
+        expanded.extend(value)
+    return expanded
+   
+
 def generate(tmp_prompt, model_type, generation_type, data_type, template=None):
     return generate_handler(tmp_prompt, model_type, generation_type, data_type, template)
 
@@ -305,10 +390,13 @@ def generate_handler(tmp_prompt, model_type, generation_type, data_type, templat
                     if message['role'] == 'assistant':
                         explanation = message['content'] 
             print("generation is completed")  
+        print(explanation.strip())
         if data_type == "list":
-            return explanation.strip()
+            return str_to_list(explanation.strip(), template["parse_str"])  
+            # return json.loads(repr(explanation.strip()))
+            # return json.loads(explanation.strip())
         else:
-            return str_to_json(explanation, template["parse_str"])  
+            return str_to_list(explanation, template["parse_str"])  
             
     except requests.HTTPError as http_err:
         print(f"HTTP error occurred: {http_err}")

@@ -14,3 +14,6 @@ class Table:
     type: Optional[str] = None
     dataframe: Optional[pd.DataFrame] = None
     caption: Optional[str] = None
+    icscaption: Optional[dict] = None
+    icspaper: Optional[dict] = None
+    intextref: Optional[dict] = None

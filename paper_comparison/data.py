@@ -357,11 +357,14 @@ class DebugAbstractsDataset(Dataset):
 
         # self.tokenizer = tokenizer
         # self.data = self.read_data(args.data.get(split).path)
-        self.data = self.read_data(args.data.papers_path, args.data.tables_path)
+        self.data = self.read_data(args.data.papers_path, args.data.tables_path, args.data.dataset_path)
 
-    def read_data(self, papers_path: str, tables_path: Optional[str]) -> Sequence[Any]:
+    def read_data(self, papers_path: str, tables_path: Optional[str], dataset_path: Optional[str]) -> Sequence[Any]:
         # load papers
         papers = load_jsonl(papers_path)
+        
+        # load datasets
+        datasets = load_jsonl(dataset_path)
 
         # load tables (if they exist)
         tabid_to_table = {}
@@ -369,8 +372,22 @@ class DebugAbstractsDataset(Dataset):
             tables_json = load_jsonl(tables_path)
             for table_json in tables_json:
                 schema = set(table_json["table"].keys())
-                table = Table(tabid=table_json["tabid"], schema=schema, values=table_json["table"])
+                # find the data that has the same tabid but key is "_table_hash"
+                for dataset in datasets:
+                    if dataset["_table_hash"] == table_json["tabid"]:
+                        caption = dataset["caption"]
+                        ics_papers = dataset["ics_papers"]
+                        ics_captions = dataset["ics_caption"]
+                        in_text_refs = dataset["in_text_ref"]
+                        break
+                table = Table(tabid=table_json["tabid"], schema=schema, values=table_json["table"], caption=caption if caption else None,
+                              icscaption=ics_captions if ics_captions else None, icspaper=ics_papers if ics_papers else None, intextref=in_text_refs if in_text_refs else None)
                 tabid_to_table[table_json["tabid"]] = table
+                ####### NEWLY ADDED #######
+                # add "ics_papers", "ics_caption", "in_text_ref" to the tabid_to_table
+                # tabid_to_table["ics_caption"] = ics_captions
+                # tabid_to_table["ics_papers"] = ics_papers
+                # tabid_to_table["in_text_ref"] = in_text_refs
 
         # match table ids to papers:
         tabid_to_paper = defaultdict(list)
