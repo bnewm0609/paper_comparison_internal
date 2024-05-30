@@ -1,12 +1,12 @@
 defaults:
  - _self_
- - data: abstracts
+ - data: full_texts
  - eval: eval
- - endtoend: "hierarchical_outputs"
+ - endtoend: "ours_outputs"
 #  - attribute_gen_method: "single_call"
 #  - paper_loop: "multiple"
 retry_type: "shuffle"
-difficulty: "hard"
+difficulty: "ics_caption"
 handle_error: False
 debug: False
 wandb: False
