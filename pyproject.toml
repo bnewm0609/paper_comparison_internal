@@ -28,7 +28,8 @@ dependencies = [
     "requests-cache==1.1.1",
     "beautifulsoup4==4.12.2",
     "sentence-transformers>=2.7.0",
-    "tenacity>=8.3.0"
+    "tenacity>=8.3.0",
+    "papermage>=0.20.0",
 ]
 classifiers = [
     "Development Status :: 4 - Beta",

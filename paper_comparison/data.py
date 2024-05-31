@@ -9,6 +9,7 @@ from torch.utils.data import DataLoader
 from transformers import PreTrainedTokenizer, BatchEncoding
 
 from paper_comparison.types import Table
+from papermage.magelib import Document
 
 
 def load_jsonl(path):
@@ -362,7 +363,7 @@ class DebugAbstractsDataset(Dataset):
     def read_data(self, papers_path: str, tables_path: Optional[str], dataset_path: Optional[str]) -> Sequence[Any]:
         # load papers
         papers = load_jsonl(papers_path)
-        
+
         # load datasets
         datasets = load_jsonl(dataset_path)
 
@@ -421,11 +422,16 @@ class FullTextsDataset(Dataset):
     def read_data(self, papers_path: str, tables_path: Optional[str]) -> Sequence[Any]:
         # load papers
         papers = load_jsonl(papers_path)
-
+        # full_texts = load_jsonl(self.args.data.full_texts_path)
+        with open(self.args.data.full_texts_path) as f:
+            ft_raws = list(f)
+        full_texts_index = {}
+        for idx, _ft in enumerate(ft_raws):
+            ft = json.loads(_ft)
+            full_texts_index[ft['metadata']['corpusId']] = idx
         for paper in papers:
             if (corpus_id := paper.get("corpus_id")) is not None:
-                with open(Path(self.args.data.full_texts_path) / f"{corpus_id}.json") as f:
-                    paper["s2orc"] = json.load(f)
+                paper["full_text"] = Document.from_json(json.loads(ft_raws[full_texts_index[corpus_id]])).symbols
 
         # load tables (if they exist)
         tabid_to_table = {}
@@ -434,7 +440,6 @@ class FullTextsDataset(Dataset):
             for table_json in tables_json:
                 table_df = pd.DataFrame(table_json["table"])
                 schema = set(table_df.columns)
-
                 table = Table(
                     tabid=table_json["tabid"], schema=schema, values=table_df.to_dict(), dataframe=table_df
                 )
