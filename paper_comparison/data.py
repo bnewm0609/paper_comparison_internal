@@ -422,15 +422,26 @@ class FullTextsDataset(Dataset):
     def read_data(self, papers_path: str, tables_path: Optional[str]) -> Sequence[Any]:
         # load papers
         papers = load_jsonl(papers_path)
-        # full_texts = load_jsonl(self.args.data.full_texts_path)
         with open(self.args.data.full_texts_path) as f:
             ft_raws = list(f)
+
+        # load/create full text index
         full_texts_index = {}
-        for idx, _ft in enumerate(ft_raws):
-            ft = json.loads(_ft)
-            full_texts_index[ft['metadata']['corpusId']] = idx
+        full_texts_index_path = Path(self.args.results_path) / "full_texts_index.json"
+        if full_texts_index_path.exists():
+            with open(full_texts_index_path) as f:
+                full_texts_index = json.load(f)
+        else:
+            for idx, _ft in enumerate(ft_raws):
+                ft = json.loads(_ft)
+                full_texts_index[ft['metadata']['corpusId']] = idx
+
+            with open(full_texts_index_path, "w") as f:
+                json.dump(full_texts_index, f)
+
         for paper in papers:
-            if (corpus_id := paper.get("corpus_id")) is not None:
+            corpus_id = paper.get("corpus_id")
+            if corpus_id is not None and corpus_id in full_texts_index:
                 paper["full_text"] = Document.from_json(json.loads(ft_raws[full_texts_index[corpus_id]])).symbols
 
         # load tables (if they exist)

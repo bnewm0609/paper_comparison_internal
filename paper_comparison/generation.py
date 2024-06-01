@@ -159,31 +159,21 @@ def make_paper_list_input(paper_text: str, index: int, paper: Dict, source: str,
     """Make paper list to input format so that it can be used in the prompt."""
     abstract = paper["abstract"].strip() if "abstract" in paper and paper["abstract"] else None
     introduction = paper["introduction"].strip() if "introduction" in paper and paper["introduction"] else None
+    full_text = paper["full_text"].strip() if "full_text" in paper and paper["full_text"] else None
     title = paper["title"]
-    if paper_loop == "single":
-        paper_text += f"Paper title: {title}\n"
-        if source == "intro":
-            if introduction == "None":
-                paper_text += f"Paper abstract: {abstract}\n\n"
-            else:
-                paper_text += f"Paper introduction: {introduction}\n\n"
-        elif source == "full":
-            paper_text += f"Paper abstract: {abstract}\n\n"
-        else:
-            paper_text += f"Paper abstract: {abstract}\n\n"
-    else:
-        if source == "intro":
-            paper_text += f"Paper {index+1} title: {title}\n"
-            if paper["introduction"] == "None":
-                paper_text += f"Paper {index+1} abstract: {abstract}\n\n"
-            else:
-                paper_text += f"Paper {index+1} introduction: {introduction}\n\n"
-        elif source == "full":
-            paper_text += f'Paper {index+1} abstract: {abstract}\n\n'
-        elif source == "title":
-            paper_text += f'Paper {index+1} title: {title}\n'
-        else:
-            paper_text += f"Paper {index+1} title: {title}\nPaper {index+1} abstract: {abstract}\n\n"
+
+    index_str = f"{str(index + 1)} " if paper_loop == "multiple" else ""
+    intro_text = f"Paper {index_str}text: {introduction}\n"
+    full_text = f"Paper {index_str}text: {full_text}\n"
+
+    paper_text = (
+        f"Paper {index_str}title: {title}\n"
+        f"Paper {index_str}abstract: {abstract}\n"
+        f"{intro_text if (source == 'intro' and introduction is not None) else ''}"
+        f"{full_text if (source == 'full' and full_text is not None) else ''}"
+        "\n"
+    )
+
     return paper_text
 
 
