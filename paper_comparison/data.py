@@ -21,6 +21,24 @@ def load_debug_json(path):
     with open(path) as f:
         pass
 
+def get_intro(doc):
+    intro = ""
+    # Find intro section based on the headings
+    if hasattr(doc, "headings") and hasattr(doc, "sections"):
+        for heading in doc.headings:
+            if "intro" in heading.text.lower().replace(" ", ""):
+                intro_section = "\n".join([s.text for s in heading.intersect_by_span('sections')])
+                intro += "\n" + intro_section
+        # If there is no introduction heading, use the first few sections with no
+        #   assigned headings
+        if intro == "":
+            for section in doc.sections[:2]:
+                intro += "\n" + section.text
+    else:
+        # If there is no section indexed, use the first five paragraphs
+        intro = "\n".join([p.text for p in doc.paragraphs[:5]])
+    return intro
+
 
 class Dataset:
     """Super class that contains logic for datasets.
@@ -438,11 +456,12 @@ class FullTextsDataset(Dataset):
 
             with open(full_texts_index_path, "w") as f:
                 json.dump(full_texts_index, f)
-
         for paper in papers:
-            corpus_id = paper.get("corpus_id")
+            corpus_id = str(paper.get("corpus_id"))
             if corpus_id is not None and corpus_id in full_texts_index:
-                paper["full_text"] = Document.from_json(json.loads(ft_raws[full_texts_index[corpus_id]])).symbols
+                doc = Document.from_json(json.loads(ft_raws[full_texts_index[corpus_id]]))
+                paper["full_text"] = doc.symbols
+                paper["intro"] = get_intro(doc)
 
         # load tables (if they exist)
         tabid_to_table = {}
