@@ -243,10 +243,12 @@ model = sys.argv[2]
 # For each table to generate, read in column outputs from Yoonjoo's 
 # generations for the chosen setting
 missing_tables = []
-for i, tabid in enumerate(list(tables_to_generate.keys())[:10]):
+for i, tabid in enumerate(list(tables_to_generate.keys())):
     print(f"Running value generation for table {i} ({tabid})")
     if not os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json")):
         missing_tables.append(tabid + "_" + model)
+        continue
+    if os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json")):
         continue
     schema_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json"))
     full_data = json.loads(schema_file.read())
