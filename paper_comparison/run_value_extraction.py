@@ -233,33 +233,47 @@ print(f"Read in metadata for {len(paper_set)} papers...")
 tables_to_generate = {}
 for line in table_file:
     data = json.loads(line)
-    tables_to_generate[data["tabid"]] = [x["corpus_id"] for x in data["row_bib_map"]]
+    tables_to_generate[data["tabid"]] = data #[x["corpus_id"] for x in data["row_bib_map"]]
 print(f"Running value generation for {len(tables_to_generate)} tables...") 
 
-# Choose a schema generation setting to run value generation for 
-schema_folder = sys.argv[1]
-model = sys.argv[2]
-
-# For each table to generate, read in column outputs from Yoonjoo's 
-# generations for the chosen setting
-missing_tables = []
+# Generating values for gold schemas
+out_folder = "../gold_schema_values"
 for i, tabid in enumerate(list(tables_to_generate.keys())):
     print(f"Running value generation for table {i} ({tabid})")
-    if not os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json")):
-        missing_tables.append(tabid + "_" + model)
+    if os.path.exists(os.path.join(out_folder, f"{tabid}_with_values.json")):
         continue
-    if os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json")):
-        continue
-    schema_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json"))
-    full_data = json.loads(schema_file.read())
-    schema = full_data[0]["schema"]
-    
-    corpus_ids = tables_to_generate[tabid]
-    final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids)
-    full_data[0]["table"] = final_values
-    out_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json"), "w")
-    json.dump(full_data, out_file)
-    out_file.close()
-    
 
-# TODO: Add any error handling/retry policy as needed??
+    schema = list(tables_to_generate[tabid]["table"].keys())
+    corpus_ids = [x["corpus_id"] for x in tables_to_generate[tabid]["row_bib_map"]]
+    final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids)
+    dump_data = tables_to_generate[tabid]
+    dump_data["table"] = final_values
+    out_file = open(os.path.join(out_folder, f"{tabid}_with_values.json"), "w")
+    json.dump(dump_data, out_file)
+    out_file.close()
+
+# TODO: Generating values for model outputs
+# # Choose a schema generation setting to run value generation for 
+# schema_folder = sys.argv[1]
+# model = sys.argv[2]
+
+# # For each table to generate, read in column outputs from Yoonjoo's 
+# # generations for the chosen setting
+# missing_tables = []
+# for i, tabid in enumerate(list(tables_to_generate.keys())):
+#     print(f"Running value generation for table {i} ({tabid})")
+#     if not os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json")):
+#         missing_tables.append(tabid + "_" + model)
+#         continue
+#     if os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json")):
+#         continue
+#     schema_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json"))
+#     full_data = json.loads(schema_file.read())
+#     schema = full_data[0]["schema"]
+    
+#     corpus_ids = tables_to_generate[tabid]
+#     final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids)
+#     full_data[0]["table"] = final_values
+#     out_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json"), "w")
+#     json.dump(full_data, out_file)
+#     out_file.close()
