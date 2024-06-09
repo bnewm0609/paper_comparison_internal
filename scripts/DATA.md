@@ -202,3 +202,22 @@ for table_id in table_id_to_info.keys():
 ```
 
 
+Other gut checks about `prompt_method` and `try_num`:
+
+```python
+# q: any more tries than just one try?
+# a: nope, all single try
+assert not [instance_dict for instance_dict in instance_dicts if "try_0" not in instance_dict["try_num"]]
+
+
+# q: how many base models involved?
+# a: 2
+assert len(set([instance_dict["base_model"] for instance_dict in instance_dicts])) == 2
+
+
+# q: how many prompt methods involved?
+# a: only one, called `ours_outputs`.
+assert len(set([instance_dict["prompt_method"] for instance_dict in instance_dicts])) == 1
+
+print(f"Number of instances: {len(instance_dicts)}")
+```
