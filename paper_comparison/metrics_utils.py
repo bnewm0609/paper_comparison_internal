@@ -1,4 +1,5 @@
 """Utility functions for computing metrics"""
+
 from typing import Any
 from paper_comparison.types import Table
 import difflib
@@ -25,12 +26,11 @@ ps = PorterStemmer()
 TOGETHER_API_KEY = os.environ.get("TOGETHER_API_KEY")
 
 
-
-
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-pd.set_option('display.max_colwidth', None)
-pd.set_option('display.max_columns', None)
+pd.set_option("display.max_colwidth", None)
+pd.set_option("display.max_columns", None)
+
 
 class BaseFeaturizer:
     """Given a list of columns, create featurized strings for every column, for better matching/alignment.
@@ -51,10 +51,10 @@ class BaseFeaturizer:
 
         self.name = name
         self.metadata = {}
-    
+
     def featurize(self, column_names: list[str], table: Table) -> list[str]:
         """Given a list of columns, return a list of featurized strings (one per column).
-        Base featurizer simply returns the column names as-is. 
+        Base featurizer simply returns the column names as-is.
         Other featurizers should re-implement this method.
 
          Args:
@@ -66,7 +66,7 @@ class BaseFeaturizer:
 
 class ValueFeaturizer(BaseFeaturizer):
     """Value featurizer featurizes columns by adding values in addition to column name.
-        No additional metadata.
+    No additional metadata.
     """
 
     name: str
@@ -74,11 +74,9 @@ class ValueFeaturizer(BaseFeaturizer):
 
     def __init__(self, name):
         super().__init__(name)
-    
-    def featurize(self, column_names: list[str], table: Table) -> list[str]:
-        """ Return featurized strings containing column values
 
-        """
+    def featurize(self, column_names: list[str], table: Table) -> list[str]:
+        """Return featurized strings containing column values"""
         featurized_columns = []
         for column in column_names:
             value_list = []
@@ -87,15 +85,15 @@ class ValueFeaturizer(BaseFeaturizer):
                     value_list += [str(x) for x in value]
                 else:
                     value_list.append(str(value))
-            column_values = ', '.join(value_list)
+            column_values = ", ".join(value_list)
             featurized_columns.append(f"Column named {column} has values: {column_values}")
         return featurized_columns
 
 
 class DecontextFeaturizer(BaseFeaturizer):
     """Decontextualization featurizer featurizes columns by using column names and values
-       to generate a more detailed description of the type of information being captured.
-       Metadata includes the tokenizer and model to be used to produce these descriptions.
+    to generate a more detailed description of the type of information being captured.
+    Metadata includes the tokenizer and model to be used to produce these descriptions.
     """
 
     name: str
@@ -105,16 +103,16 @@ class DecontextFeaturizer(BaseFeaturizer):
         super().__init__(name)
         self.metadata["model_name"] = model
         self.load_model_and_tokenizer(model)
-    
+
     def load_model_and_tokenizer(self, model_name: str):
         """Given a model name, start a together client to query that model.
 
-         Args:
-            model_name (str): Name of model to query
+        Args:
+           model_name (str): Name of model to query
         """
         self.metadata["model"] = OpenAI(
             api_key=TOGETHER_API_KEY,
-            base_url='https://api.together.xyz/v1',
+            base_url="https://api.together.xyz/v1",
         )
         # mistral_tokenizer = AutoTokenizer.from_pretrained(model_name)
         # mistral_tokenizer.pad_token = mistral_tokenizer.eos_token
@@ -125,9 +123,9 @@ class DecontextFeaturizer(BaseFeaturizer):
         # mistral_model.config.pad_token_id = mistral_model.config.eos_token_id
         # self.metadata["model"] = mistral_model
         # self.metadata["tokenizer"] = mistral_tokenizer
-    
+
     def query_model(self, prompt):
-        """ Run model inference on provided prompt.
+        """Run model inference on provided prompt.
 
         Args:
             prompt (str): Prompt to query model with.
@@ -140,7 +138,7 @@ class DecontextFeaturizer(BaseFeaturizer):
                 model=self.metadata["model_name"],
                 max_tokens=256,
                 temperature=0.7,
-                top_p = 0.7,
+                top_p=0.7,
             )
             response = chat_completion.choices[0].message.content
             # generated_ids = self.metadata['model'].generate(inputs, max_new_tokens=100, do_sample=True, num_return_sequences=1)
@@ -160,9 +158,9 @@ class DecontextFeaturizer(BaseFeaturizer):
         #     torch.cuda.empty_cache()
 
         return response
-    
+
     def create_column_decontext_prompts(self, column_names: list[str], table: pd.DataFrame) -> list[str]:
-        """ Construct a list of prompts to decontextualize all column names present in the table.
+        """Construct a list of prompts to decontextualize all column names present in the table.
 
         Args:
             column_names (list[str]): List of column names to construct decontextualization prompts for.
@@ -178,15 +176,13 @@ class DecontextFeaturizer(BaseFeaturizer):
             """
             decontext_prompts.append(instruction)
         return decontext_prompts
-    
+
     # TODO: Can we skip filtering out of numeric/binary values now that we aren't decontextualizing values?
     # TODO: Based on prior discussions, I'm not using paper title/abstract/section text/caption during decontextualization,
     # since we may not accurately get this information for predicted tables. We can revisit this after seeing what scores look like?
-    
-    def featurize(self, column_names: list[str], table: Table) -> list[str]:
-        """ Return featurized strings containing column values
 
-        """
+    def featurize(self, column_names: list[str], table: Table) -> list[str]:
+        """Return featurized strings containing column values"""
         # If decontextualization has already been computed and stored,
         # return the cached descriptions instead of regenerating
         if table.decontext_schema is not None:
@@ -227,7 +223,7 @@ class BaseAlignmentScorer:
         self.name = name
         self.metadata = {}
 
-    # This function must be implemented for each alignment method sub-class 
+    # This function must be implemented for each alignment method sub-class
     def calculate_pair_similarity(self, prediction: str, target: str):
         """Calculate the score for the the given (prediction, target) string pair.
 
@@ -239,13 +235,15 @@ class BaseAlignmentScorer:
         raise NotImplementedError()
 
     # Function to compute alignment scores for all column pairs, given a pair of tables
-    def score_schema_alignments(self, pred_table: Table, gold_table: Table, featurizer=BaseFeaturizer("name")) -> dict[tuple, float]:
+    def score_schema_alignments(
+        self, pred_table: Table, gold_table: Table, featurizer=BaseFeaturizer("name")
+    ) -> dict[tuple, float]:
         """Given a pair of tables, calculate similarity scores for all possible schema alignments (i.e., all pairs of columns)
 
-         Args:
-            pred_table (Table): The table generated by the model.
-            gold_table (Table): The gold table.
-            featurizer (Featurizer): Featurization strategy to be applied to columns (default simply uses column names)
+        Args:
+           pred_table (Table): The table generated by the model.
+           gold_table (Table): The gold table.
+           featurizer (Featurizer): Featurization strategy to be applied to columns (default simply uses column names)
         """
         alignment_matrix = {}
         pred_col_list = list(pred_table.schema)
@@ -254,8 +252,8 @@ class BaseAlignmentScorer:
         # Apply specified featurization strategy before computing alignment
         featurized_pred_col_list = featurizer.featurize(pred_col_list, pred_table)
         featurized_gold_col_list = featurizer.featurize(gold_col_list, gold_table)
-        
-        # For certain alignment methods that use neural models (like sentence transformer), 
+
+        # For certain alignment methods that use neural models (like sentence transformer),
         # to improve efficiency, calculate_pair_similarity operates in batch mode (on lists of strings).
         # So alignment matrix construction differs slightly for both categories.
         if self.name not in ["sentence_transformer"]:
@@ -275,33 +273,27 @@ class BaseAlignmentScorer:
 
 
 class ExactMatchScorer(BaseAlignmentScorer):
-    """Exact match scorer has no additional metadata.
-
-    """
+    """Exact match scorer has no additional metadata."""
 
     def __init__(self):
         super().__init__("exact_match")
-    
-    def calculate_pair_similarity(self, prediction: str, target: str) -> float:
-        """Similarity calculation based on exact string match.
 
-        """
+    def calculate_pair_similarity(self, prediction: str, target: str) -> float:
+        """Similarity calculation based on exact string match."""
         if prediction.lower() == target.lower():
             return 1.0
         return 0.0
-    
+
 
 class EditDistanceScorer(BaseAlignmentScorer):
-    """Edit distance scorer has no additional metadata.
-
-    """
+    """Edit distance scorer has no additional metadata."""
 
     def __init__(self):
         super().__init__("edit_distance")
-    
+
     def calculate_pair_similarity(self, prediction: str, target: str) -> float:
         """Similarity calculation based on edit distance.
-            We compute the edit distance between two strings using difflib.
+        We compute the edit distance between two strings using difflib.
         """
         matcher = difflib.SequenceMatcher(None, prediction.lower(), target.lower())
         return float(matcher.ratio())
@@ -315,22 +307,21 @@ class JaccardAlignmentScorer(BaseAlignmentScorer):
     """
 
     def __init__(self, remove_stopwords=True):
-        """We can choose whether to use or ignore stopwords while computing Jaccard similarity.
-        """
+        """We can choose whether to use or ignore stopwords while computing Jaccard similarity."""
         super().__init__("jaccard")
         self.metadata["remove_stopwords"] = remove_stopwords
 
     def get_keywords(self, sentence: str) -> set[str]:
         """Extract non-stopword keywords from a sentence.
 
-            Extract keywords from a sentence by lowercasing, tokenizing and stemming words. Punctuation and
-            stopwords ar filtered out. Only unique words are returned.
+        Extract keywords from a sentence by lowercasing, tokenizing and stemming words. Punctuation and
+        stopwords ar filtered out. Only unique words are returned.
 
-            Args:
-                sentence (str): The text to extract keywords from.
+        Args:
+            sentence (str): The text to extract keywords from.
 
-            Returns:
-                set[str] containing the keywords in the sentence.
+        Returns:
+            set[str] containing the keywords in the sentence.
         """
         return set(
             [
@@ -339,18 +330,16 @@ class JaccardAlignmentScorer(BaseAlignmentScorer):
                 if word not in stopwords and word not in punctuation
             ]
         )
-    
+
     def jaccard(self, a: set[Any], b: set[Any]) -> float:
         """Calculate and return the Jaccard similarity between set `a` and `b`."""
 
         return len(a & b) / len(a | b)
 
     def calculate_pair_similarity(self, prediction: str, target: str) -> float:
-        """Similarity calculation based on jaccard overlap between tokens.
-
-        """
+        """Similarity calculation based on jaccard overlap between tokens."""
         prediction_words, target_words = [], []
-        if self.metadata['remove_stopwords']:
+        if self.metadata["remove_stopwords"]:
             prediction_words = self.get_keywords(prediction)
             target_words = self.get_keywords(target)
         else:
@@ -370,17 +359,14 @@ class SentenceTransformerAlignmentScorer(BaseAlignmentScorer):
     """
 
     def __init__(self, model="all-MiniLM-L6-v2"):
-        """We can choose which sentence transformer model to use while initializing.
-        """
+        """We can choose which sentence transformer model to use while initializing."""
         super().__init__("sentence_transformer")
         self.metadata["model"] = model
         self.model = SentenceTransformer(model)
 
     # For better efficiency, the pair similarity calculation function takes batches of strings
     def calculate_pair_similarity(self, predictions: list[str], targets: list[str]) -> float:
-        """Similarity calculation based on jaccard overlap between tokens.
-
-        """
+        """Similarity calculation based on jaccard overlap between tokens."""
         pred_embeds = self.model.encode(predictions)
         gold_embeds = self.model.encode(targets)
         sim_mat_cosine = util.cos_sim(pred_embeds, gold_embeds).numpy()
@@ -389,6 +375,7 @@ class SentenceTransformerAlignmentScorer(BaseAlignmentScorer):
 
 # The functions below have been useful in past projects and might also be useful in this one,
 # so I've included them below.
+
 
 def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
     """Get the precision, recall, and F1 given true positives, false positives, and false negatives.
@@ -408,6 +395,89 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
         p = tp / (tp + fp)
         r = tp / (tp + fn)
         return p, r, 2 * p * r / (p + r)
+
+
+class Llama3AlignmentScorer(BaseAlignmentScorer):
+
+    def __init__(self, name):
+        super().__init__(name)
+
+        from together import Together
+        from llama_aligner import PROMPT
+
+        self.prompt = PROMPT
+        self.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
+        self.api_error = Together.error.APIError
+
+    def query_llama(self, prompt):
+        response = self.client.chat.completions.create(
+            model="meta-llama/Llama-3-70b-chat-hf",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a helpful assistant that answers in JSON.",
+                },
+                {"role": "user", "content": prompt}],
+            max_tokens=50
+        )
+        return response
+    
+    
+    def score_schema_alignments(
+        self, pred_table: Table, gold_table: Table, featurizer=BaseFeaturizer("name")
+    ) -> dict[tuple, float]:
+        """Given a pair of tables, calculate similarity scores for all possible schema alignments (i.e., all pairs of columns)
+
+        Args:
+           pred_table (Table): The table generated by the model.
+           gold_table (Table): The gold table.
+           featurizer (Featurizer): Featurization strategy to be applied to columns (default simply uses column names)
+        """
+        alignment_matrix = {}
+        pred_col_list = list(pred_table.values.keys())
+        gold_col_list = list(gold_table.values.keys())
+
+        # Apply specified featurization strategy before computing alignment
+        featurized_pred_col_list = featurizer.featurize(pred_col_list, pred_table)
+        featurized_gold_col_list = featurizer.featurize(gold_col_list, gold_table)
+
+        # replace the column headers with the featurized ones
+        new_pred_table = {
+            new_key: value for new_key, value in zip(featurized_pred_col_list, pred_table.values.values())
+        }
+        new_gold_table = {
+            new_key: value for new_key, value in zip(featurized_gold_col_list, gold_table.values.values())
+        }
+
+        prompt = self.PROMPT + f"""
+Table 1:
+{pd.DataFrame(new_gold_table).to_markdown()}
+
+Table 2:
+{pd.DataFrame(new_pred_table).to_markdown()}
+"""
+
+        # parse out the json
+        try:
+            response = self.query_llama(prompt)
+        except self.api_error:
+            response = self.query_llama(prompt)
+
+        alignment_str = response.choices[0].message.content
+        alignment_str = alignment_str.split("Table 1:\n|")[0]
+        #print(re.search("(\[.+\])", content, re.DOTALL)[0])
+        try:
+            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
+        except json.JSONDecodeError:
+            # try again
+            response = self.query_llama(prompt)
+            alignment_str = response.choices[0].message.content
+            alignment_str = alignment_str.split("Table 1:\n|")[0]
+            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
+        
+        alignment_matrix = {tuple(pair): 1.0 for pair in alignment_json}
+
+        return alignment_matrix
 
 
 # ---------- TO BE POTENTIALLY DELETED AFTER FINALIZING CODE REFACTOR -----------
@@ -446,7 +516,7 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 #         between each target and prediction column name
 #     """
 #     if "sentence_transformer" in method_name:
-        
+
 #         model = SentenceTransformer(config.get("model", "all-MiniLM-L6-v2"))
 
 #         if method_name == "sentence_transformer-columns":
@@ -455,7 +525,7 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 #             return _get_alignment_values_st(model, target, prediction, sim_threshold)
 #     elif method_name == "jaccard":
 #         return _get_alignment_columns_jaccard(target, prediction, sim_threshold)
-    
+
 # def _get_alignment_columns_st(model, gold_table, pred_table, threshold):
 #     """
 #     Align tables based on the columns by constructing a score matrix
@@ -479,7 +549,7 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 #     )
 
 #     return _get_alignment(gold_table, pred_table, score_matrix, threshold)
-    
+
 # def _get_alignment_values_st(model, gold_table, pred_table, threshold):
 #     """
 #     Align tables based on the values in the tables
@@ -505,7 +575,7 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 
 #     # calculate the alignment
 #     return _get_alignment(gold_table, pred_table, column_scores, threshold)
-    
+
 # def get_similar_sentence(query: str, pool: list[str], method="sentence_transformer") -> tuple[str, float]:
 #     """
 #     Returns the most similar string in the pool to the query along with the similarity scores.

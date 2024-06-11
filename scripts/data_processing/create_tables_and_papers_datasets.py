@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 import json
 
 import pandas as pd
+from tqdm import tqdm
 
 
 def main():
@@ -11,22 +12,23 @@ def main():
     argp.add_argument("in_tables_path", type=str)
     argp.add_argument("out_tables_path", type=str)
     argp.add_argument("out_papers_path", type=str)
-    argp.add_argument("--bib_entries_path", type=str, default="../arxiv_dump/out_bib_entries.jsonl")
+    # argp.add_argument("--bib_entries_path", type=str, default="../arxiv_dump/out_bib_entries.jsonl")
     args = argp.parse_args()
 
     with open(args.in_tables_path) as f:
         in_tables = [json.loads(line.strip()) for line in f]
 
-    with open(args.bib_entries_path) as f:
-        bib_entries_list = [json.loads(line.strip()) for line in f]
-        bib_entries = {entry["corpus_id"]: entry for entry in bib_entries_list}
-        bib_entries_by_bib_hash = {entry["bib_hash_or_arxiv_id"]: entry for entry in bib_entries_list}
+    # with open(args.bib_entries_path) as f:
+    #     bib_entries_list = [json.loads(line.strip()) for line in f]
+    #     bib_entries = {entry["corpus_id"]: entry for entry in bib_entries_list}
+    #     bib_entries_by_bib_hash = {entry["bib_hash_or_arxiv_id"]: entry for entry in bib_entries_list}
 
     # tables.jsonl
     bib_table_map = defaultdict(list)
+    bib_entries = {}
 
     with open(args.out_tables_path, "w") as f:
-        for table in in_tables:
+        for table in tqdm(in_tables):
             table_json = {}
             table_json["tabid"] = table["_table_hash"]
             if not table["table_json"]["table_dict"]:
@@ -49,6 +51,11 @@ def main():
             table_json["row_bib_map"] = table["row_bib_map"]
             for row_entry in table["row_bib_map"]:
                 bib_table_map[row_entry["corpus_id"]].append(table["_table_hash"])
+                if row_entry["corpus_id"] != -1:
+                    bib_entries[row_entry["corpus_id"]] = {
+                        "title": row_entry["title"],
+                        "abstract": row_entry["abstract"],
+                    }
             f.write(json.dumps(table_json) + "\n")
 
     # papers.jsonl
@@ -57,7 +64,7 @@ def main():
     # breakpoint()
     with open(args.out_papers_path, "w") as f:
         num_skipped = 0
-        for corpus_id in bib_table_map:
+        for corpus_id in tqdm(bib_table_map):
             paper = {}
             if corpus_id not in bib_entries:
                 continue
@@ -65,14 +72,17 @@ def main():
                 paper["tabids"] = bib_table_map[corpus_id]
                 # paper["bib_hash_or_arxiv_id"] = bib_entries[corpus_id]["bib_hash_or_arxiv_id"]
                 paper["corpus_id"] = corpus_id  # bib_entries[corpus_id]["corpus_id"]
-                if "metadata" in bib_entries[corpus_id]:
-                    paper["title"] = bib_entries[corpus_id]["metadata"].get("title", bib_entries.get("title"))
-                    paper["abstract"] = bib_entries[corpus_id]["metadata"].get("abstract")
-                    paper["paper_id"] = bib_entries[corpus_id]["metadata"].get("paperId")
-                else:
-                    paper["title"] = None
-                    paper["paper_id"] = -1
-                    paper["abstract"] = None
+                paper["title"] = bib_entries[corpus_id]["title"]
+                paper["abstract"] = bib_entries[corpus_id]["abstract"]
+
+                # if "metadata" in bib_entries[corpus_id]:
+                #     paper["title"] = bib_entries[corpus_id]["metadata"].get("title", bib_entries.get("title"))
+                #     paper["abstract"] = bib_entries[corpus_id]["metadata"].get("abstract")
+                #     paper["paper_id"] = bib_entries[corpus_id]["metadata"].get("paperId")
+                # else:
+                #     paper["title"] = None
+                #     paper["paper_id"] = -1
+                #     paper["abstract"] = None
             except KeyError:
                 print(bib_entries[corpus_id].keys())
             except AttributeError:
@@ -83,6 +93,7 @@ def main():
             #     num_hits += 1
             #     print(":checkmark:")
             f.write(json.dumps(paper) + "\n")
+        print(f"Num skipped papers: {num_skipped}")
 
 
 if __name__ == "__main__":

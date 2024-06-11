@@ -88,7 +88,7 @@ def is_binary(value):
 
 def is_na(value):
     value = re.sub("[∼~\s]", "", value.lower())
-    return value in {"-", "–", "-"}
+    return value in {"-", "–", "-", "n/a"}
 
 
 def get_aspect_type(column):
@@ -100,6 +100,10 @@ def get_aspect_type(column):
 
     if all([is_binary(val) or is_na(val) for val in column]):
         return "bool"
+
+    if len(set(column)) == 1:
+        # meant for grouping
+        return "cat-uniq"
 
     if len(set(column)) != len(column):
         # meant for grouping
@@ -168,6 +172,14 @@ def main():
     total_labels = sum([count for _, count in label_dist])
     for label, count in label_dist:
         print(label, count, f"{count/total_labels:.1%}", sep=separator)
+
+    print("\nNumber of n/a's:")
+    num_nas_total = 0
+    num_values_total = 0
+    for table in dataset:
+        num_values_total += sum([len(val) for val in table["table_json"]["table_dict"].values()])
+        num_nas_total += sum([len([v for v in val if is_na(v)]) for val in table["table_json"]["table_dict"].values()])
+    print(f"{num_nas_total} / {num_values_total} ({num_nas_total/num_values_total:.3%})")
 
 
 if __name__ == "__main__":
