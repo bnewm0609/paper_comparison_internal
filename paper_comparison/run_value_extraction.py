@@ -92,7 +92,7 @@ def get_value_from_abstract(question: str, corpus_id: str):
     return value
 
 
-def run_paper_qa(question: str, corpus_id: str):
+def run_paper_qa(column: str, corpus_id: str):
     @staticmethod
     def _fp(f, d=3):
         return round(f, d)
@@ -101,64 +101,77 @@ def run_paper_qa(question: str, corpus_id: str):
     def _box2string(box):
         return f"{_fp(box['top'])},{_fp(box['left'])},{_fp(box['height'])},{_fp(box['width'])},{box['page']}"
     
-    payload = {
-            "prompt": question,
-            "corpusId": corpus_id,
-            "ui": "Nora",
-            "tid": "Nora",
-            "userId": "Nora",
-    }
-
-    try:
-        response = requests.post(
-            f"{PAPER_QA_API_URL}/{corpus_id}",
-            json=payload,
-            timeout=1000,
-        ) 
-        # If paperQA returns a response, save the answer and excerpts
-        if response.status_code == 200:
-            response = response.json()
-            response_simplified = {
-                "question": response.get("question"),
-                "answer": response.get("response"),
-                "corpusId": response.get("corpusId"),
-                "evidenceExcerpts": [
-                    {
-                        "section_heading": v.get("heading"),
-                        "text": v.get("text"),
-                        "page": v.get("page"),
-                        "boundingBoxes": ";".join(
-                            map(_box2string, v.get("bboxs"))
-                        ),
-                    }
-                    for v in response.get("supports", [])
-                ],
-                "source": "full-text",
-            }
-        # If paperQA says the question is unanswerable, set the cell value to N/A and excerpts to empty list
-        elif response.status_code == 204:
-            response_simplified = {
-                "question": question,
-                "answer": "N/A", 
-                "corpusId": corpus_id, 
-                "evidenceExcerpts": [],
-                "source": "full-text",
-            }
-        # If paperQA is unable to return any output, we either don't have full-text for the paper or SPP didn't work.
-        # In such cases, we try to generate a value from the abstract and record this in the response
-        else:
-            response = get_value_from_abstract(question=question, corpus_id=corpus_id)
-            response_simplified = {
-                "question": question,
-                "answer": response,
+    question_list = [
+        f"From the provided paper full-text, can you extract {column}?",
+        f"Extract information about {column} aspect from this paper.",
+        f"What information can you find about {column}?",
+        f"We want to create a table comparing papers. Extract the information from this paper that goes in the column called {column}",
+        f"In a literature review table comparing multiple papers, what information from this paper would go under column {column}?"
+    ]
+    response_simplified = {}
+    # TODO: Flip this back to 0 when running from scratch
+    qcounter = 1
+    while not response_simplified \
+        or ("answer" in response_simplified and response_simplified["answer"] == "N/A" and qcounter < len(question_list)):
+        question = question_list[qcounter]
+        payload = {
+                "prompt": question,
                 "corpusId": corpus_id,
-                "source": "abstract",
-            }
-    except Exception as e:
-        response_simplified = {"error": f"Exception while querying PaperQA endpoint: {str(e)}"}
+                "ui": "Nora",
+                "tid": "Nora",
+                "userId": "Nora",
+        }
+        qcounter += 1
+        try:
+            response = requests.post(
+                f"{PAPER_QA_API_URL}/{corpus_id}",
+                json=payload,
+                timeout=1000,
+            ) 
+            # If paperQA returns a response, save the answer and excerpts
+            if response.status_code == 200:
+                response = response.json()
+                response_simplified = {
+                    "question": response.get("question"),
+                    "answer": response.get("response"),
+                    "corpusId": response.get("corpusId"),
+                    "evidenceExcerpts": [
+                        {
+                            "section_heading": v.get("heading"),
+                            "text": v.get("text"),
+                            "page": v.get("page"),
+                            "boundingBoxes": ";".join(
+                                map(_box2string, v.get("bboxs"))
+                            ),
+                        }
+                        for v in response.get("supports", [])
+                    ],
+                    "source": "full-text",
+                }
+            # If paperQA says the question is unanswerable, set the cell value to N/A and excerpts to empty list
+            elif response.status_code == 204:
+                response_simplified = {
+                    "question": question,
+                    "answer": "N/A", 
+                    "corpusId": corpus_id, 
+                    "evidenceExcerpts": [],
+                    "source": "full-text",
+                }
+            # If paperQA is unable to return any output, we either don't have full-text for the paper or SPP didn't work.
+            # In such cases, we try to generate a value from the abstract and record this in the response
+            else:
+                response = get_value_from_abstract(question=question, corpus_id=corpus_id)
+                response_simplified = {
+                    "question": question,
+                    "answer": response,
+                    "corpusId": corpus_id,
+                    "source": "abstract",
+                }
+        except Exception as e:
+            response_simplified = {"error": f"Exception while querying PaperQA endpoint: {str(e)}"}
     return response_simplified
 
-def generate_value_suggestions(columns_to_populate, corpus_ids) -> Dict:
+def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table) -> Dict:
     cell_values = {}
 
     # For every column to be populated, run value extraction on all corpusIDs provided.
@@ -168,21 +181,23 @@ def generate_value_suggestions(columns_to_populate, corpus_ids) -> Dict:
         # description = column["description"]
 
         # Construct a query for paperQA-based value extraction using column description.
-        paperqa_query = f"From the provided paper full-text, can you extract {column}?"
         # TODOv2: Add this back if/when we have experiments to run column descriptions
         # if description != '':
         #     paperqa_query += f"{name} can be described as {description}"
 
         # Run paperQA on full-texts for value extraction first.
         # If full-text is not available, back off to run value extraction from abstracts.
-        # TODO: Parallelize paperQA calls
+        
+        # Only send in papers for which non-NA values don't exist
+        cur_corpus_ids = [x for x in corpus_ids if cur_table[column][x] == 'N/A']
         raw_values = {}
         MAX_THREADS = 5
         with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-            responses = list(executor.map(run_paper_qa, itertools.repeat(paperqa_query), corpus_ids))
-            raw_values = {y: x["answer"] if "answer" in x else x["error"] for x,y in zip(responses, corpus_ids)}
-        # for corpus_id in corpus_ids:
-        #     response = run_paper_qa(paperqa_query, corpus_id)
+            responses = list(executor.map(run_paper_qa, itertools.repeat(column), cur_corpus_ids))
+            raw_values = {y: x["answer"] if "answer" in x else x["error"] for x,y in zip(responses, cur_corpus_ids)}
+
+        # for corpus_id in cur_corpus_ids:
+        #     response = run_paper_qa(column, corpus_id)
         #     if "answer" in response:
         #         raw_values[corpus_id] = response["answer"]
         #     else:
@@ -199,6 +214,9 @@ def generate_value_suggestions(columns_to_populate, corpus_ids) -> Dict:
         #             existing_values.append(v)
 
         # Run an additional prompting step to make all newly extracted values look consistent
+        for cid in cur_table[column]:
+            if cid not in raw_values:
+                raw_values[cid] = cur_table[column][cid]
         prompt_input = "\nRelevant Information: " + json.dumps([raw_values[x] for x in corpus_ids])
 
         # TODOv2: Add this back if we have any experiments where columns already have values
@@ -208,11 +226,10 @@ def generate_value_suggestions(columns_to_populate, corpus_ids) -> Dict:
         # else:
         #     prompt_input = VALUE_CONSISTENCY_PROMPT_FS + "Current Values: " + str(existing_values) + prompt_input + "\n\nOutput:"
         prompt_input = VALUE_CONSISTENCY_PROMPT_ZS + prompt_input + "\n\nOutput:"
-        final_values = openai_call("gpt-4-turbo", prompt_input, "json", max_tokens=3000)
+        final_values = openai_call("gpt-4-turbo", prompt_input, "json", max_tokens=3000, temperature=0)
         final_values = json.loads(final_values)["values"]
 
-        # TODO: Change reshaping to dump output in our format
-        # Reshape final values according to the format expected by NORA handler
+        # Reshape final values according to our output format
         cell_values[column] = {}
         for k,v in zip(corpus_ids, final_values):
             cell_values[column][k] = v
@@ -231,33 +248,52 @@ for line in paper_file:
 print(f"Read in metadata for {len(paper_set)} papers...")
 
 tables_to_generate = {}
+count = 0
 for line in table_file:
     data = json.loads(line)
-    tables_to_generate[data["tabid"]] = [x["corpus_id"] for x in data["row_bib_map"]]
+    tables_to_generate[data["tabid"]] = [x for x in data["table"][list(data["table"].keys())[0]]] #data
+    # list(set([x["corpus_id"] for x in data["row_bib_map"]])) 
 print(f"Running value generation for {len(tables_to_generate)} tables...") 
 
-# Choose a schema generation setting to run value generation for 
+# Generating values for gold schemas
+# out_folder = "../gold_schema_values"
+# for i, tabid in enumerate(list(tables_to_generate.keys())):
+#     print(f"Running value generation for table {i} ({tabid})")
+#     if os.path.exists(os.path.join(out_folder, f"{tabid}_with_values.json")):
+#         continue
+
+#     schema = list(tables_to_generate[tabid]["table"].keys())
+#     corpus_ids = [x["corpus_id"] for x in tables_to_generate[tabid]["row_bib_map"]]
+#     final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids)
+#     dump_data = tables_to_generate[tabid]
+#     dump_data["table"] = final_values
+#     out_file = open(os.path.join(out_folder, f"{tabid}_with_values.json"), "w")
+#     json.dump(dump_data, out_file)
+#     out_file.close()
+
+# Generating values for model outputs
+# # Choose a schema generation setting to run value generation for 
 schema_folder = sys.argv[1]
 model = sys.argv[2]
 
 # For each table to generate, read in column outputs from Yoonjoo's 
 # generations for the chosen setting
 missing_tables = []
-for i, tabid in enumerate(list(tables_to_generate.keys())[:10]):
+for i, tabid in enumerate(list(tables_to_generate.keys())):
     print(f"Running value generation for table {i} ({tabid})")
-    if not os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json")):
-        missing_tables.append(tabid + "_" + model)
+    if not os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json")):
+        # missing_tables.append(tabid + "_" + model)
         continue
-    schema_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0.json"))
+    # if os.path.exists(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json")):
+    #     continue
+    schema_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json"))
     full_data = json.loads(schema_file.read())
     schema = full_data[0]["schema"]
+    schema_missing_vals = [str(x) for x in schema if "N/A" in list(full_data[0]["table"][str(x)].values())]
     
     corpus_ids = tables_to_generate[tabid]
-    final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids)
+    final_values = generate_value_suggestions(columns_to_populate=schema_missing_vals, corpus_ids=corpus_ids, cur_table=full_data[0]["table"])
     full_data[0]["table"] = final_values
-    out_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_values.json"), "w")
+    out_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_better_values.json"), "w")
     json.dump(full_data, out_file)
     out_file.close()
-    
-
-# TODO: Add any error handling/retry policy as needed??
