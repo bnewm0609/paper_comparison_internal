@@ -44,7 +44,14 @@ python scripts/data_processing/extract_tables.py arxiv_dump/out_xml/2310.00000-0
 You can add the `--check_yield` option to print out the number of tables after the filtering step without actually trying to convert it to pandas format or saving the data.
 
 For providing labels:
-`python scripts/data_processing/extract_tables.py ../out_xml_fulltext/ --out_labeled_path ../out_xml_fulltext_labeled/ --label_only --num_processes 8`
+`# python scripts/data_processing/extract_tables.py ../out_xml_fulltext/ --out_labeled_path ../out_xml_fulltext_labeled/ --label_only --num_processes 8`
+`python scripts/data_processing/extract_tables.py ../out_xml_fulltext/ --out_labeled_path ../out_xml_fulltext_labeled/ --out_filtered_path ../out_xml_fulltext_filtered/valid_tables_with_floats_and_figures/ --label --filter --num_processes 4`
+
+For actually doing the filtering:
+`python scripts/data_processing/extract_tables.py ../arxiv_dump/out_xml_fulltext_labeled/2212.jsonl.gz --out_filtered_path ../arxiv_dump/out_xml_fulltext_filtered/valid_tables_with_floats_and_figures/2212.jsonl --filter`
+
+For doing post-filtering:
+`python scripts/data_processing/extract_tables.py ../arxiv_dump/out_xml_fulltext_filtered/valid_tables_with_floats_and_figures_json.jsonl --create_quality_datasets --out_high_quality_path data/arxiv_tables_with_floats_and_figures/high_quality_tables.jsonl --out_high_quality_schemes_path data/arxiv_tables_with_floats_and_figures/high_quality_schemes.jsonl --out_mid_quality_path data/arxiv_tables_with_floats_and_figures/medium_quality_tables.jsonl`
 
 6. Then, to match the citations to the s2 database, which requires being on VPN because it calls s2 internal apis:
 ```
@@ -78,3 +85,10 @@ python unarXive/src/prepare.py in_tar/ out_xml_fulltext/ arxiv-metadata-oai-snap
 2. Compress the individual xml files
 
 3. Upload to s3
+
+
+# Manually editing tables:
+
+```
+python scripts/data_processing/data_editor.py data/v3/highest_quality_tables_1k/dataset.jsonl <tab_id> --out_file data/xml_to_json_gold_data/dataset.jsonl
+```
