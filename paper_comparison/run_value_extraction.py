@@ -293,6 +293,9 @@ for i, tabid in enumerate(list(tables_to_generate.keys())):
     
     corpus_ids = tables_to_generate[tabid]
     final_values = generate_value_suggestions(columns_to_populate=schema_missing_vals, corpus_ids=corpus_ids, cur_table=full_data[0]["table"])
+    for column in schema:
+        if column not in schema_missing_vals:
+            final_values[column] = full_data[0]["table"][column]
     full_data[0]["table"] = final_values
     out_file = open(os.path.join(schema_folder, tabid, model, "ours_outputs", "try_0_with_better_values.json"), "w")
     json.dump(full_data, out_file)
