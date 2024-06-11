@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from tqdm import tqdm
 
+from summarize_dataset import get_aspect_type
+
 
 def soupify(table_json):
     soup = BeautifulSoup(table_json, "lxml-xml")
@@ -224,7 +226,7 @@ DEFAULT_TABLE_FILTERS = [
     has_table_cells,
 ]
 
-COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green)"
+COLORS = r"((alice)?blue|black|(mid)?gr[ae]y|red|(dark)?green|tablewhite|tableblue)"
 COLORS_RE = rf"{COLORS}(\!\d\d?|(?=[✗✓]))"
 
 
@@ -433,9 +435,14 @@ def postprocess_table_df(table_df):
         # binary no
         if cell == "X":
             cell = "\u2717"
+
+        if cell == "tablered":
+            cell = "no"
         # cell = re.sub(f"{COLORS}\u2717", "\u2717", cell)
         # binary yes - standardize
         cell = re.sub("\u2714", "\u2713", cell)
+        if cell == "tablegreen":
+            cell = "yes"
 
         # remove color annotations from end
         cell = re.sub(f"{COLORS_RE}", "", cell)
@@ -444,6 +451,9 @@ def postprocess_table_df(table_df):
 
         # remove latex positioning markers that can come in:
         cell = re.sub(r"\[[cl]\]", "", cell)
+
+        # remove font size info
+        cell = re.sub(r"^\d\d+em", "", cell)
 
         # empty cells should be "-" instead
         cell = re.sub(r"(N/A|none)", "-", cell)
@@ -796,6 +806,17 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
     high_quality_tables = []
     if filters is None:
         filters = DEFAULT_POST_JSON_FILTERS
+
+    valid_corpus_ids = []
+    if "rows_no_missing_full_texts" in filters:
+        for filename in [
+            "data/v2/metric_validation_0/full_texts_corpus_ids.jsonl",
+            "data/v2/metric_validation_1/full_texts_corpus_ids.jsonl",
+            "data/v2/highest_quality_tables_1k/full_texts_corpus_ids.jsonl",
+        ]:
+            with open(filename) as f:
+                valid_corpus_ids.extend([json.loads(line)["corpusId"] for line in f])
+
     for table_i, table in enumerate(valid_tables_with_jsons):
 
         table_str = "\n".join(
@@ -824,10 +845,6 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
         if "max_one_no_cite" in filters and table_str.count("no_cite") > 1:
             continue
 
-        # ignore tables that are too small
-        if "more_than_two_rows" in filters and len(table["table_json"]["table_dict"]["References"]) < 2:
-            continue
-
         # ignore tables that have merged headers
         if "no_merged_headers" in filters and any(
             ["-" in header for header in table["table_json"]["table_dict"].keys()]
@@ -839,6 +856,52 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
         if all([cell.strip() == "-" for cell in table_dict["References"]]):
             continue
 
+        # if the table cites papers we don't have title & abstract for, then skip
+        try:
+            if "no_missing_titles" in filters and any([row["title"] is None for row in table["row_bib_map"]]):
+                continue
+        except KeyError:
+            print("key error:", table["_table_hash"])
+            continue
+
+        if "no_missing_abstracts" in filters and any([row["abstract"] is None for row in table["row_bib_map"]]):
+            continue
+
+        # edit the rows and bibmap to remove rows missing titles and/or abstracts
+        remove_rows = []
+        remove_unique_hashes = set()
+        new_row_bib_map = []
+        for row in table["row_bib_map"]:
+            should_remove_row = False
+            if "rows_no_missing_titles" in filters and row["title"] is None:
+                should_remove_row = True
+                remove_unique_hashes.add(row["bib_hash_or_arxiv_id"])
+            if "rows_no_missing_abstracts" in filters and row["abstract"] is None:
+                should_remove_row = True
+                remove_unique_hashes.add(row["bib_hash_or_arxiv_id"])
+            if "rows_no_missing_full_texts" in filters and row["corpus_id"] not in valid_corpus_ids:
+                should_remove_row = True
+                remove_unique_hashes.add(row["bib_hash_or_arxiv_id"])
+
+            if should_remove_row:
+                remove_rows.append(row["row"])
+            else:
+                new_row = {k: v for k, v in row.items()}
+                new_row["row"] = len(new_row_bib_map)
+                new_row_bib_map.append(new_row)
+
+        # ignore tables that are too small
+        if (
+            "more_than_two_rows" in filters
+            and len(table["table_json"]["table_dict"]["References"]) - len(remove_rows) < 2
+        ):
+            continue
+
+        if (
+            "more_than_two_uniq_rows" in filters
+            and len(set(table["table_json"]["table_dict"]["References"])) - len(remove_unique_hashes) < 2
+        ):
+            continue
         # do some post processing by removing columns that only contain additional citations
         remove_cols = []
 
@@ -869,6 +932,36 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
                 "author/reference",
             }:
                 remove_cols.append(col)
+            if (
+                "col_no_generic" in filters
+                and col
+                in {
+                    "Venue",
+                    "Month",
+                    "Year",
+                    "No.",
+                    "[HTML]D0CECE\nYear",
+                    "Title",
+                    "URL",
+                    "[HTML]BBDAFFYear",
+                    "Link",
+                    "Version",
+                    "Organiser",
+                    "Citations",
+                    "Pub.",
+                    "Title of Survey Article",
+                    "License",
+                    "Publication",
+                }
+                or col.lower
+                in {
+                    "reference",
+                    "author",
+                    "reference-(5)",
+                    "author/reference",
+                }
+            ):
+                remove_cols.append(col)
 
             if "cols_no_old_citation_col" in filters:
                 remove_cols.append(table["table_json"]["old_citation_column"])
@@ -879,25 +972,37 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
             if "cols_no_figure" in filters and any([r"{{figure" in cell for cell in table_dict[col] + [col]]):
                 remove_cols.append(col)
 
+            if "cols_no_ent_or_gen" in filters or "cols_no_numeric" in filters:
+                aspect_type = get_aspect_type(table_dict[col])
+                if "cols_no_numeric" in filters and aspect_type == "num":
+                    remove_cols.append(col)
+                if "cols_no_ent_or_gen" in filters and aspect_type in {"gen", "ent"}:
+                    remove_cols.append(col)
+
+            if "cols_no_numeric" in filters:
+                pass
+
         new_table_dict = {}
         for col in table_dict.keys():
             if col in remove_cols and col != "References":
                 continue
-            new_table_dict[col] = table_dict[col]
+            # new_table_dict[col] = table_dict[col]
+            new_table_dict[col] = [val for row_i, val in enumerate(table_dict[col]) if row_i not in remove_rows]
         # for col in uniql(remove_cols):
         #     if col == "References":
         #         continue
         #     del table_dict[col]
 
         # filter out tables that don't have enough columns (references, something, something) - need at least three
-        if len(new_table_dict) < 3:
+        min_rows = 2 if "cols_no_ent_or_gen" in filters or "cols_no_numeric" in filters else 3
+        if len(new_table_dict) < min_rows:
             continue
 
         # don't add tables that have already been added
         if "no_dup" in filters:
             table_str_no_refs = "\n".join(
                 [
-                    "\t".join([colname] + new_table_dict[colname])
+                    re.sub(r"{{cite:.{7}}}", "[cite]", "\t".join([colname] + new_table_dict[colname]))
                     for colname in new_table_dict
                     if colname != "References"
                 ]
@@ -909,6 +1014,7 @@ def get_high_quality_tables(valid_tables_with_jsons, filters=None):
 
         table_cp = copy.deepcopy(table)
         table_cp["table_json"]["table_dict"] = new_table_dict
+        table_cp["row_bib_map"] = new_row_bib_map
         high_quality_tables.append(table_cp)
         # high_quality_tables.append({
         #     k: v for k, v in table.items()
@@ -994,71 +1100,143 @@ def run(
 
     # if not label_only and not filter_only:
     if should_create_quality_datasets:
-        dataset_hq = get_high_quality_tables(
-            filtered_tables_dataset,
-            [
+        if out_high_quality_path is not None:
+            filters_hq = [
                 "no_formula",
                 "has_caption",
                 "no_no_cite",
                 "no_dup",
-                "more_than_two_rows",
+                "more_than_two_uniq_rows",
                 "has_in_text_ref",
                 "cols_no_names",
                 "cols_no_old_citation_col",
                 "no_merged_headers",
-                # asdf
                 "cols_no_float",
                 "cols_no_figure",
-            ],
-        )
-        print("Size of High Quality dataset:", len(dataset_hq))
-        with open(out_high_quality_path, "w") as f:
-            for sample in dataset_hq:
-                f.write(json.dumps(sample) + "\n")
+                "rows_no_missing_titles",
+                "rows_no_missing_abstracts",
+                "rows_no_missing_full_texts",
+            ]
 
-        dataset_high_quality_schemes = get_high_quality_tables(
-            filtered_tables_dataset,
-            [
+            # ["no_formula", "has_caption", "no_no_cite", "no_dup", "more_than_two_uniq_rows", "has_in_text_ref", "cols_no_names", "cols_no_old_citation_col", "no_merged_headers", "cols_no_float", "cols_no_figure", "rows_no_missing_titles", "rows_no_missing_abstracts"]
+            # ["no_formula", "has_caption", "no_no_cite", "no_dup", "more_than_two_uniq_rows", "has_in_text_ref", "cols_no_names", "cols_no_old_citation_col", "no_merged_headers", "cols_no_float", "cols_no_figure", "rows_no_missing_titles", "rows_no_missing_abstracts"]
+            # filters_hq = [
+            #     "no_formula",
+            #     "has_caption",
+            #     "no_no_cite",
+            #     "no_dup",
+            #     "more_than_two_uniq_rows",
+            #     "has_in_text_ref",
+            #     "cols_no_names",
+            #     "cols_no_old_citation_col",
+            #     "no_merged_headers",
+            #     "cols_no_float",
+            #     "cols_no_figure",
+            #     "no_missing_titles",
+            #     "no_missing_abstracts",
+            # ]
+            # filters_hq = [
+            #     "no_formula",
+            #     "has_caption",
+            #     "no_no_cite",
+            #     "no_dup",
+            #     "more_than_two_uniq_rows",
+            #     "has_in_text_ref",
+            #     "cols_no_names",
+            #     "cols_no_old_citation_col",
+            #     "no_merged_headers",
+            #     "cols_no_float",
+            #     "cols_no_figure",
+            #     "no_missing_titles",
+            #     "no_missing_abstracts",
+            #     "cols_no_ent_or_gen",
+            #     # "cols_no_numeric",
+            # ]
+            # filters_hq = [
+            #     "no_formula",
+            #     "has_caption",
+            #     "no_no_cite",
+            #     "no_dup",
+            #     # "more_than_two_rows",
+            #     "more_than_two_uniq_rows",
+            #     "has_in_text_ref",
+            #     "cols_no_names",
+            #     "cols_no_old_citation_col",
+            #     "no_merged_headers",
+            #     # asdf
+            #     "cols_no_float",
+            #     "cols_no_figure",
+            #     "rows_no_missing_titles",
+            #     "rows_no_missing_abstracts",
+            #     # "no_missing_titles",
+            #     # "no_missing_abstracts",
+            # ]
+            dataset_hq = get_high_quality_tables(filtered_tables_dataset, filters_hq)
+            print("Size of High Quality dataset:", len(dataset_hq))
+            with open(out_high_quality_path, "w") as f:
+                for sample in dataset_hq:
+                    f.write(json.dumps(sample) + "\n")
+
+            with open(os.path.splitext(out_high_quality_path)[0] + "_filters.json", "w") as f:
+                json.dump(filters_hq, f)
+
+        if out_high_quality_schemes_path is not None:
+            filters_high_quality_schemes = [
                 "no_dup",
                 # "max_one_no_cite",
-                "more_than_two_rows",
+                # "more_than_two_rows",
+                "more_than_two_uniq_rows",
+                "has_caption",
+                "cols_no_names",
+                # "cols_no_formula",
+                "cols_no_formula_colname",
+                # "cols_no_old_citation_col",
+                "no_merged_headers",
+                # asdf
+                # "cols_no_float",
+                # "cols_no_figure",
+                # "rows_no_missing_titles",
+                # "rows_no_missing_abstracts",
+            ]
+            dataset_high_quality_schemes = get_high_quality_tables(
+                filtered_tables_dataset,
+                filters_high_quality_schemes,
+            )
+            print("Size of dataset_high_quality_schemes:", len(dataset_high_quality_schemes))
+            with open(out_high_quality_schemes_path, "w") as f:
+                for sample in dataset_high_quality_schemes:
+                    f.write(json.dumps(sample) + "\n")
+
+            with open(os.path.splitext(out_high_quality_schemes_path)[0] + "_filters.json", "w") as f:
+                json.dump(filters_high_quality_schemes, f)
+
+        if out_mid_quality_path is not None:
+            filters_mid_quality = [
+                "no_dup",
+                "max_one_no_cite",
+                # "more_than_two_rows",
+                "more_than_two_uniq_rows",
                 "has_caption",
                 "cols_no_names",
                 "cols_no_formula",
-                # "cols_no_formula_colname",
-                "cols_no_old_citation_col",
-                "no_merged_headers",
                 # asdf
                 "cols_no_float",
                 "cols_no_figure",
-            ],
-        )
-        print("Size of dataset_high_quality_schemes:", len(dataset_high_quality_schemes))
-        with open(out_high_quality_schemes_path, "w") as f:
-            for sample in dataset_high_quality_schemes:
-                f.write(json.dumps(sample) + "\n")
-
-        dataset_mid_quality_tables = get_high_quality_tables(
-            filtered_tables_dataset,
-            [
-                "no_dup",
-                "max_one_no_cite",
-                "more_than_two_rows",
-                "has_caption",
-                "cols_no_names",
-                "cols_no_formula",
-                "cols_no_float",
-                "cols_no_figure",
+                "rows_no_missing_titles",
+                "rows_no_missing_abstracts",
                 # "cols_no_old_citation_col",
-            ],
-        )
-        print("Size of dataset_mid_quality_tables:", len(dataset_mid_quality_tables))
-        # print("Saved to data/arxiv_tables_medium_quality/dataset_v2.jsonl")
-        print(f"Saved to {out_mid_quality_path}")
-        # with open("data/arxiv_tables_medium_quality/dataset_v2.jsonl", "w") as f:
-        with open(out_mid_quality_path, "w") as f:
-            for sample in dataset_mid_quality_tables:
-                f.write(json.dumps(sample) + "\n")
+            ]
+            dataset_mid_quality_tables = get_high_quality_tables(filtered_tables_dataset, filters_mid_quality)
+            print("Size of dataset_mid_quality_tables:", len(dataset_mid_quality_tables))
+            # print("Saved to data/arxiv_tables_medium_quality/dataset_v2.jsonl")
+            print(f"Saved to {out_mid_quality_path}")
+            # with open("data/arxiv_tables_medium_quality/dataset_v2.jsonl", "w") as f:
+            with open(out_mid_quality_path, "w") as f:
+                for sample in dataset_mid_quality_tables:
+                    f.write(json.dumps(sample) + "\n")
+
+            with open(os.path.splitext(out_mid_quality_path)[0] + "_filters.json", "w") as f:
+                json.dump(filters_mid_quality, f)
 
 
 BLACK_LIST = [

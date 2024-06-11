@@ -17,14 +17,14 @@ VALUE_CONSISTENCY_PROMPT_ZS = """
 Imagine the following scenario: A user is making a table for a scholarly paper that contains information about multiple papers and compares these papers. 
 To compare and contrast the papers, the user has selected an aspect which will be added as a column to the table. 
 Your task is the following: Given the column name and information from each paper relevant to that column, generate final values to be added to the table.
-Return the output as a JSON object in the following format:\n{{\"values\": [\"value for paper 1\", \"value fpr paper 2\", ...]}}\n
-**Ensure that you follow these rules: (1) Only return a single JSON object. (2) JSON object should be complete and valid. (3) JSON object should contain the same paper IDs provided in the input (4) Each paper should have a value in the JSON object or \"N/A\" if there is no relevant value. (5) All values should follow consistent formatting and style.\n\n**
+Return the output as a JSON object in the following format:\n{{\"values\": [\"value for paper 1\", \"value for paper 2\", ...]}}\n
+**Ensure that you follow these rules: (1) None of the values provided in the prompt should be overwritten by "N/A" (2) Only return a single JSON object. (3) JSON object should be complete and valid. (4) JSON object should contain the same paper IDs provided in the input (5) Each paper should have a value in the JSON object (leave "N/A" values unchanged) (6) All values should follow consistent formatting and style.\n\n**
 """
 
 VALUE_CONSISTENCY_PROMPT_FS = """
 Imagine the following scenario: A user is making a table for a scholarly paper that contains information about multiple papers and compares these papers. 
 To compare and contrast the papers, the user has selected an aspect which will be added as a column to the table. 
 Your task is the following: Given the column name and information from each paper relevant to that column, generate final values to be added to the table.
-Return the output as a JSON object in the following format:\n{{\"values\": [\"value for paper 1\", \"value fpr paper 2\", ...]}}\n
+Return the output as a JSON object in the following format:\n{{\"values\": [\"value for paper 1\", \"value for paper 2\", ...]}}\n
 **Ensure that you follow these rules: (1) Only return a single JSON object. (2) JSON object should be complete and valid. (3) JSON object should contain the same paper IDs provided in the input (4) Each paper should have a value in the JSON object or \"N/A\" if there is no relevant value. (5) All values should follow formatting and style consistent with the values already present in the column.\n\n** 
 """
