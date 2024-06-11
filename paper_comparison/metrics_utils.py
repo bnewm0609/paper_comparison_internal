@@ -16,7 +16,9 @@ import torch
 
 import os
 import time
+import json
 from openai import OpenAI
+import re
 
 stopwords = stopwords.words("english")
 punctuation = "()[]{},.?!/''\"``"
@@ -399,15 +401,16 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 
 class Llama3AlignmentScorer(BaseAlignmentScorer):
 
-    def __init__(self, name):
+    def __init__(self, name="llama", debug=False):
         super().__init__(name)
 
-        from together import Together
+        from together import Together, error
         from llama_aligner import PROMPT
 
-        self.prompt = PROMPT
+        self.prompt_prefix = PROMPT
         self.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
-        self.api_error = Together.error.APIError
+        self.api_error = error.APIError
+        self.debug = debug
 
     def query_llama(self, prompt):
         response = self.client.chat.completions.create(
@@ -449,7 +452,7 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
             new_key: value for new_key, value in zip(featurized_gold_col_list, gold_table.values.values())
         }
 
-        prompt = self.PROMPT + f"""
+        prompt = self.prompt_prefix + f"""
 Table 1:
 {pd.DataFrame(new_gold_table).to_markdown()}
 
@@ -465,17 +468,25 @@ Table 2:
 
         alignment_str = response.choices[0].message.content
         alignment_str = alignment_str.split("Table 1:\n|")[0]
-        #print(re.search("(\[.+\])", content, re.DOTALL)[0])
         try:
-            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
+            alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
         except json.JSONDecodeError:
             # try again
             response = self.query_llama(prompt)
             alignment_str = response.choices[0].message.content
             alignment_str = alignment_str.split("Table 1:\n|")[0]
-            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
+            alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
         
-        alignment_matrix = {tuple(pair): 1.0 for pair in alignment_json}
+        
+        for gold_col_name in featurized_gold_col_list:
+            for pred_col_name in featurized_pred_col_list:
+                pair = (gold_col_name, pred_col_name)
+                alignment_matrix[pair] = 1.0 if pair in alignment_json else 0.0
+
+        alignment_matrix |= {tuple(pair): 1.0 for pair in alignment_json if pair}
+        if self.debug:
+            print(alignment_json)
+            print(alignment_matrix)
 
         return alignment_matrix
 
