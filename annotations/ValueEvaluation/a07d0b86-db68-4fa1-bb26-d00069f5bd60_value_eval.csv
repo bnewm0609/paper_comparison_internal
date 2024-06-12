@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,52195299,Softmax,Angular Softmax suggested for improvement
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,54200945,-,Binary Cross-Entropy (BCE)
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,4881455,A-Softmax + GNLL,"Center Loss, Angular Softmax"
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,4407761,Softmax,Cross Entropy
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,51713108,AM-Softmax,"Softmax, Angular Softmax, Additive Margin Softmax, Logistic"
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,49211906,Softmax + Contrastive,Contrastive Loss
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Loss,67856245,Softmax,Additive Margin Softmax (AM-Softmax)
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,52195299,VoxCeleb1,TIMIT
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,54200945,VoxCeleb1,"TIMIT, Librispeech, VoxCeleb1"
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,4881455,VoxCeleb1,N/A
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,4407761,VoxCeleb1,"SRE04-10, Switchboard, Fisher English, VoxCeleb"
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,51713108,VoxCeleb1,VoxCeleb
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,49211906,VoxCeleb2,VoxCeleb2
+a07d0b86-db68-4fa1-bb26-d00069f5bd60,Training set,67856245,VoxCeleb2,VoxCeleb2

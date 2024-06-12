@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Propagation mode,220302881,Air-,"Discusses the role of respiratory droplets in Covid-19 transmission, focusing on evaporation dynamics influenced by temperature and humidity."
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Propagation mode,220525385,based,Two-phase flow model
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Propagation mode,204255408,-,Aerosol transmission
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Medium,220302881,Transient Air,N/A
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Medium,220525385,Air Cloud,N/A
+ba1d5f4b-7561-49af-853b-68340c11a3d7,Medium,204255408,Concentration/Rate,N/A

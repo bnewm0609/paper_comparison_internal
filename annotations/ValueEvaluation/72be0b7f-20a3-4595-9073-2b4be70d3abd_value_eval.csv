@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+72be0b7f-20a3-4595-9073-2b4be70d3abd,S/R,8786175,Real,Uses two CNNs for real-time 3D hand pose estimation from egocentric RGB-D cameras.
+72be0b7f-20a3-4595-9073-2b4be70d3abd,S/R,4721179,Real,Introduces and evaluates a dataset for egocentric hand actions and pose recognition.
+72be0b7f-20a3-4595-9073-2b4be70d3abd,S/R,219179773,Synth,Proposes a novel algorithm for 3D global hand pose estimation using monocular RGB images.
+72be0b7f-20a3-4595-9073-2b4be70d3abd,HOI,8786175,obj,"Supports real-time egocentric hand pose estimation in real scenes with cluttered backgrounds, occlusions, and complex hand-object interactions using a single commodity RGB-D camera."
+72be0b7f-20a3-4595-9073-2b4be70d3abd,HOI,4721179,obj,"Introduces a new dataset of first-person hand action sequences with 3D hand poses and object poses, containing 1,175 action videos in 45 action categories, performed by 6 actors, with 6D object pose and mesh models for 4 objects in 10 action categories."
+72be0b7f-20a3-4595-9073-2b4be70d3abd,HOI,219179773,None,Two-hand Global 3D Pose Estimation using Monocular RGB
+72be0b7f-20a3-4595-9073-2b4be70d3abd,Frames,8786175,1485,"EgoDexter dataset with 3190 frames, annotated for 2D and 3D fingertip positions in natural scenes."
+72be0b7f-20a3-4595-9073-2b4be70d3abd,Frames,4721179,100k,"RGB-D video sequences dataset with over 100K frames, annotated for hand pose and action category across 45 actions and 25 objects."
+72be0b7f-20a3-4595-9073-2b4be70d3abd,Frames,219179773,50k/5k,N/A

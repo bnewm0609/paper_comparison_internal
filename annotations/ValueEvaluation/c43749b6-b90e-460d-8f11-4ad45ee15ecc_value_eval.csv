@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Size,256415991,15M,Comparison of Flan-T5 and T5 model sizes in single-task finetuning
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Size,254877310,82K,"52K instructions, 82K instances"
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Size,237421373,5M,"Dataset with 61 tasks, 193K instances, 4.9 positive and 2.2 negative examples per task"
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Tasks,256415991,1836,Flan 2022 Collection
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Tasks,254877310,52K,Generated Tasks Examples
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Tasks,237421373,1616,NATURALINSTRUCTIONS Dataset (61 tasks)
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Domain,256415991,General,Instruction Tuning for Large Language Models
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Domain,254877310,General,Natural Language Processing (NLP)
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Domain,237421373,General,Natural Language Processing (NLP)
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Data Source,256415991,Human-Annotation,Flan 2022 Collection
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Data Source,254877310,GPT-3,SELF-INSTRUCT synthetic dataset
+c43749b6-b90e-460d-8f11-4ad45ee15ecc,Data Source,237421373,Human-Annotation,NATURALINSTRUCTIONS dataset

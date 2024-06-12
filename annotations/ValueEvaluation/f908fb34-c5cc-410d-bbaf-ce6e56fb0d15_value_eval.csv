@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Class Label,8317437,✗,Yes
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Class Label,231951742,✗,Conceptual 12M (CC12M)
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Class Label,241033103,✗,LAION-400M
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Class Label,252917726,✗,N/A
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Captions,8317437,✗,Proposes a pipeline for acquiring labeled image datasets with human-in-the-loop
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Captions,231951742,1:1,Focuses on extraction and cleaning of image alt-texts
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Captions,241033103,1:1,Mentions availability of captions
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Captions,252917726,1:1,Utilizes captions in both dataset creation and model training
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Description,8317437,Images with bedroom scene.,Partially automated labeling scheme using deep learning with humans.
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Description,231951742,More diverse image collections based on CC3M.,"Description of CC12M dataset, including differences in diversity and data collection from CC3M."
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Description,241033103,Large scale dataset with web-crawled images.,"The paper describes the creation and release of the LAION-400M dataset, which consists of 400 million image-text pairs, CLIP embeddings, and kNN indices. The dataset enables efficient similarity search and provides opportunities for research on multi-modal language-vision models."
+f908fb34-c5cc-410d-bbaf-ce6e56fb0d15,Description,252917726,Enlarged Laion dataset with multiple languages.,"Discussion of LAION-5B dataset, composition, training, and relevant considerations."

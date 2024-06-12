@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+ff7f6ae9-660f-4fa8-8fdb-d8a0f6c340ac,Challenge,237342348,Load testing,Proposed solution for automated testing and generation of test cases for REST APIs
+ff7f6ae9-660f-4fa8-8fdb-d8a0f6c340ac,Challenge,248693670,Underspecified schemas,Challenges of fuzzing RESTful APIs
+ff7f6ae9-660f-4fa8-8fdb-d8a0f6c340ac,#,237342348,1,N/A
+ff7f6ae9-660f-4fa8-8fdb-d8a0f6c340ac,#,248693670,1,"Comparison of seven state-of-the-art fuzzers for RESTful APIs, focusing on issues like underspecified schemas, external service interactions, and OpenAPI/Swagger schema errors."

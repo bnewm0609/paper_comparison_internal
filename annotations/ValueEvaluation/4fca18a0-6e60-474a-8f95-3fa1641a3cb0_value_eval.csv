@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,227143124,"11,173","1,782 samples across 6 languages"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,219558530,"2,029","2,029 news articles"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,219176659,"5,216","1,896 news articles"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,237502835,"2,593 articles & 24,184 tweets","24,184 samples"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,237353356,"60,000","61,218 news articles"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,247058367,"10,920",21 million tweets
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,227143124,2,6 languages
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,219558530,2,Not specified
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,219176659,2,N/A
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,237502835,2,Two levels for news dataset; three levels for tweet dataset
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,237353356,24,24 classes
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,247058367,3,N/A
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,227143124,"image,text,social context",Includes multimodal information
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,219558530,"text,image","Includes textual, visual, temporal, and network multimodal information"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,219176659,"image,text","Includes news articles, claims, and user engagement multimodal information"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,237502835,"image,text,social context","Includes images, text, and temporal multimodal information"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,237353356,"image,text",Includes image and text multimodal features for news classification
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,247058367,"image,text","Includes textual, image, and social behavior multimodal information"
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,227143124,Twitter,MM-COVID
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,219558530,Twitter,ACM Conference
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,219176659,Twitter,The Pennsylvania State University
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,237502835,Twitter,Department of Electrical and Computer Engineering at Stevens Institute of Technology
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,237353356,New York Times,New York Times
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,247058367,Twitter,Google Fact Check Tools API
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,227143124,"3,981 fake samples and 7,192 real samples",Detailed dataset description provided
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,219558530,Imbalanced with ratio of 2:1 real vs.fake,Detailed dataset description provided
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,219176659,"Consists of 296,752 user engagements (926 social platforms)","CoAID: Includes news articles, user engagement, and social posts; focuses on misinformation vs. facts."
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,237502835,"Tweets as labeled as reliable,inconclusive and unreliable",MMCoVaR: Includes news articles and tweets; annotated for credibility and stance; includes statistics and topic analyses.
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,237353356,All samples are real from 24 different categories,Detailed dataset description provided
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,247058367,"Consists of 10,920 articles and 6,573 images.",Detailed dataset description provided

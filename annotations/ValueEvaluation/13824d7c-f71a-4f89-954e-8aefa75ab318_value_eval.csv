@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,229340513,ML,Construction Heuristics for Vehicle Routing Problems
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,208201905,ML,Optimization
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,226222332,ML,Neural Combinatorial Optimization and Reinforcement Learning
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,238407851,ML,Dual-Aspect Collaborative Transformer (DACT)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,250493174,ML,Combinatorial Optimization
+13824d7c-f71a-4f89-954e-8aefa75ab318,Area,229331629,OR,Vehicle Routing Problem (VRP)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,229340513,RL,Reinforcement learning
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,208201905,RL,Reinforcement learning
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,226222332,RL,Deep reinforcement learning
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,238407851,RL,Proximal Policy Optimization
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,250493174,RL,Reinforcement learning with a policy-based approach
+13824d7c-f71a-4f89-954e-8aefa75ab318,Training Type,229331629,-,N/A
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,229340513,C,Deep reinforcement learning
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,208201905,LS,Large neighborhood search (LNS) framework
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,226222332,C,Policy Optimization with Multiple Optima (POMO)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,238407851,LS,Dual-Aspect Collaborative Transformer (DACT)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,250493174,C,Simulation-guided Beam Cearch (SGBS)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Type,229331629,LS,Hybrid genetic search (HGS)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,229340513,+SA,Various method variants discussed
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,208201905,-,"Discusses LNS, NLNS, AM, RL-BS, UHGS, and SplitILS"
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,226222332,+SA,"Mentions Concorde, REINFORCE, and POMO"
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,238407851,-,Various method variants discussed
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,250493174,+ EAS,"Mentions greedy, sampling, beam search, active search, MCTS, SGBS, and EAS"
+13824d7c-f71a-4f89-954e-8aefa75ab318,Method Variants,229331629,-,Discusses HGS-2012 and HGS-CVRP
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,229340513,"AAAI, 2021",Unknown
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,208201905,"ECAI, 2020",Neural Large Neighborhood Search (NLNS)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,226222332,NeurIPS 2020,NeurIPS 2020
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,238407851,NeurIPS2021,Dual-Aspect Collaborative Transformer (DACT)
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,250493174,"NeurIPS, 2022",NeurIPS 2022
+13824d7c-f71a-4f89-954e-8aefa75ab318,Venue,229331629,"Computers & Operations Research, 2022",Vidal et al. (2021)

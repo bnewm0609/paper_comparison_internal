@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+f8d2b01b-5266-489e-9a15-d56ecfb4f013,Strategy,1476450,Ex-ante,Predicts news article popularity on Twitter using multi-dimensional feature space with 84% accuracy.
+f8d2b01b-5266-489e-9a15-d56ecfb4f013,Strategy,6155104,Peeking,"Analyzes YouTube viewership through Twitter shares, focusing on social sharing purposes, user interest similarity, political alignment, and reaction times for different video categories."
+f8d2b01b-5266-489e-9a15-d56ecfb4f013,Formulation,1476450,Both,Formulation of multi-dimensional feature space for predicting article popularity
+f8d2b01b-5266-489e-9a15-d56ecfb4f013,Formulation,6155104,Both,Formulation of combined user-centric and video-centric data features for YouTube analysis

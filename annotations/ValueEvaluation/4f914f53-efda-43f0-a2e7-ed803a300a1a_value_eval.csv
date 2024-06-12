@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+4f914f53-efda-43f0-a2e7-ed803a300a1a,ML Algorithm,141433678,-,Uses multi-task learning
+4f914f53-efda-43f0-a2e7-ed803a300a1a,ML Algorithm,3568073,MTL-ANN,Does not use multi-task learning
+4f914f53-efda-43f0-a2e7-ed803a300a1a,Signal Type,141433678,-,"NRZ-OOK, PAM4, PAM8"
+4f914f53-efda-43f0-a2e7-ed803a300a1a,Signal Type,3568073,"28 Gbd NRZ-OOK, PAM4, PAM8",Signal magnitude stabilization in GANs

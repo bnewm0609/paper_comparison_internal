@@ -1,0 +1,37 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,36809545,Matrix Completion,Matrix completion
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,150380651,Collaborative Filtering,General
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,211043589,Collaborative Filtering,General
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,220347145,Collaborative Filtering,General
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,53219431,Session-based,Session-based
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,207758412,Session-based,Session-based
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,220363810,Session-based,Streaming session-based
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,220730170,Session-based,General
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Recommendation Task,250451158,Sequence-based,Sequential
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,36809545,User-Item Graph,Yes - Bipartite user-item graph for collaborative filtering
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,150380651,User-Item Graph,Yes - Bipartite graph in embedding process
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,211043589,User-Item Graph,Yes
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,220347145,User-Item Graph,Yes - Disentangled graph collaborative filtering model
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,53219431,Session Graph,Yes - Models session sequences as graph-structured data using GNNs
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,207758412,Session Graph,Yes - Session graph with sequence and latent order considerations
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,220363810,Session Graph,Yes
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,220730170,Transition+Global,Yes - Session and global graph models
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Structure,250451158,Learnable HyperGraph,Yes
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,36809545,GCN,graph convolutional matrix completion (GC-MC)
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,150380651,GCN+Affinity,embedding propagation layer in NGCF
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,211043589,LGC,LightGCN
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,220347145,Dynamic Routing,Disentangled Graph Collaborative Filtering (DGCF)
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,53219431,GGNN,Graph-structured data
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,207758412,GAT,WGAT model
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,220363810,GCN,Global Attributed Graph (GAG) neural network
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,220730170,GAT,Global Context Enhanced Graph Neural Networks (GCE-GNN)
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Graph Encoder,250451158,Transformer,MultiBehavior Hypergraph-enhanced Transformer (MBHT)
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,36809545,Last-Layer,Representation via message passing on bipartite interaction graph
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,150380651,Concatenation,Representation using embedding vectors
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,211043589,Mean-Pooling,Representation in collaborative filtering
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,220347145,Mean-Pooling,Learning representations in collaborative filtering
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,53219431,Self-Attention,Representation of sessions using graph neural networks and attention networks
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,207758412,Last-Layer,Representation of items and sessions in session-based recommendation
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,220363810,Self-Attention,Representation of sessions and items using graph convolution and Wasserstein reservoir
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,220730170,Sum-Pooling,Representation of items in session-based recommendation
+e6c0333a-a2d4-4958-b9b7-71a8e7204477,Representation,250451158,Cross-View Attention,Behavior-aware sequential pattern representation using multi-scale Transformer

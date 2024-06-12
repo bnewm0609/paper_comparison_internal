@@ -1,0 +1,25 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,221640658,Monolingual (Indonesian),Indo4B
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,211818153,Monolingual (Chinese),CLUECorpus2020
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,233289621,Multilingual,Indo4B-Plus
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,225040574,Multilingual,C4 dataset
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,207870323,Multilingual,Common Crawl
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,233240686,Multilingual,Indigenous languages & Spanish (1.17 GB)
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,210919995,Parallel,Parallel corpus of languages of India paired with English extracted from the Indian prime minister's website.
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,21709048,Parallel,Compilation of parallel corpora previously available in the public domain as well as new parallel corpora collected by the authors.
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,196471198,Parallel,Wikipedia
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,208006253,Parallel,Common Crawl corpus
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,218973987,Parallel,Wikipedia
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Pretraining Corpus Type,233210367,Parallel,Monolingual and parallel corpora
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,221640658,IndonesianBERT {{cite:171c52e}},"IndoBERT, IndoBERT-lite, Multilingual BERT, XLM, XLM-R"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,211818153,RoBERTa-tiny-clue {{cite:6a18fcf}},large and tiny versions of pre-trained models on the CLUECorpus2020
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,233289621,IndoBART {{cite:d3f39d6}},"IndoBART, IndoGPT"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,225040574,mT5 {{cite:4156fab}},"mT5, mBERT, mBART, XLM-R, T5"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,207870323,mT6 {{cite:ef49e2b}},"fastText, BERT"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,233240686,IndT5 {{cite:f8246e4}},IndT5
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,210919995,MuRIL {{cite:6e4abd3}},NMT systems for all language pairs in both directions
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,21709048,"mT6 {{cite:ef49e2b}}, XLM {{cite:39539ef}}, infoXLM {{cite:044a7b2}}, Unicoder {{cite:fbf3b7e}}, ALM {{cite:86b0046}}, XLM-E {{cite:fa83910}}","PBSMT, NMT"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,196471198,"mT6 {{cite:ef49e2b}}, XLM-E {{cite:fa83910}}",multilingual sentence embeddings to extract parallel sentences from Wikipedia
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,208006253,XLM-E {{cite:fa83910}},"sequence-to-sequence models for machine translation, cross-lingual tasks"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,218973987,MuRIL {{cite:6e4abd3}},"n-gram, LSTM, Transformer"
+baebe5a5-b840-4af7-bf04-3ae4174b5153,Models,233210367,-,"Transformer, mT5, IndicTrans"

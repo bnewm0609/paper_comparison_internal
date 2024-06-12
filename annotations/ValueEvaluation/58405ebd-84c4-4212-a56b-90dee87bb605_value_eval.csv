@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+58405ebd-84c4-4212-a56b-90dee87bb605,No. of images selected,58981871,991,"224,316"
+58405ebd-84c4-4212-a56b-90dee87bb605,No. of images selected,214668039,41,123
+58405ebd-84c4-4212-a56b-90dee87bb605,Remarks,58981871,Pneumonia images from downsampled version of CheXpert,"Description of the CheXpert dataset, featuring uncertainty labels and radiologist-labeled reference standard evaluation sets."
+58405ebd-84c4-4212-a56b-90dee87bb605,Remarks,214668039,"Contains fungal pneumonia, bacterial pneumonia and non-COVID viral pneumonia (12,17,12 during our experiments)","Description of the COVID-19 open image data collection, potential use of the dataset to improve identification of COVID-19, development of tools to predict pneumonia type and outcome, and understanding the dynamics of the disease to prepare treatments."

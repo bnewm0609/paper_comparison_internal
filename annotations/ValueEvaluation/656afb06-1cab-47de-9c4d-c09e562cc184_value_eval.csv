@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+656afb06-1cab-47de-9c4d-c09e562cc184,Application,54482423,Image Generation,"Proposal of a new generator architecture for generative adversarial networks that improves distribution quality metrics, interpolation properties, and disentangles latent factors of variation."
+656afb06-1cab-47de-9c4d-c09e562cc184,Application,234357997,Video Generation,Yes
+656afb06-1cab-47de-9c4d-c09e562cc184,Network Architectures,54482423,"Diffusion Model, GAN{{cite:b233772}}, VQ-VAE{{cite:2ff9a5e}}, Transformer{{cite:ff63f93}}",Yes
+656afb06-1cab-47de-9c4d-c09e562cc184,Network Architectures,234357997,"Diffusion Model{{cite:495d214}}, GAN",Yes
+656afb06-1cab-47de-9c4d-c09e562cc184,Datasets,54482423,"ImageNet{{cite:1654fc7}}, CelebA{{cite:01a6b40}}, COCO{{cite:a14173d}}",Flickr-Faces-HQ (FFHQ)
+656afb06-1cab-47de-9c4d-c09e562cc184,Datasets,234357997,Kinetics{{cite:936e258}},"ImageNet, LSUN, CIFAR-10, CelebA-64"
+656afb06-1cab-47de-9c4d-c09e562cc184,Evaluation Metrics,54482423,"FID{{cite:eb629de}}, IS{{cite:7528d2b}}, LPIPS{{cite:62527b4}}","perceptual path length, linear separability"
+656afb06-1cab-47de-9c4d-c09e562cc184,Evaluation Metrics,234357997,"PSNR, SSIM","Inception Score (IS), Fréchet Inception Distance (FID), sFID, Improved Precision, Recall"

@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+ba6b5a4d-afb9-45e0-a40a-371146520311,Train size,4309276,"3,760","5,640 texture images"
+ba6b5a4d-afb9-45e0-a40a-371146520311,Train size,7197134,"9,537",N/A
+ba6b5a4d-afb9-45e0-a40a-371146520311,Test size,4309276,"1,880","5,640 images"
+ba6b5a4d-afb9-45e0-a40a-371146520311,Test size,7197134,"3,783","Over 13,000 clips and 27 hours of video data"
+ba6b5a4d-afb9-45e0-a40a-371146520311,Metric,4309276,acc,"Performance metrics: mean Average Precision (mAP), mean accuracy"
+ba6b5a4d-afb9-45e0-a40a-371146520311,Metric,7197134,acc,Overall performance: 44.5% using standard bag of words approach
+ba6b5a4d-afb9-45e0-a40a-371146520311,Description,4309276,47 categories of describable textures,Discusses describable attributes for textures and patterns
+ba6b5a4d-afb9-45e0-a40a-371146520311,Description,7197134,101 categories of human action video frames,"Describes UCF101 dataset detailing classes, clips, and challenges"

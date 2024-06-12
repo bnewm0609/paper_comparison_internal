@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+c24f6984-9874-4059-94a6-df7dcd8ac700,Feature,14169713,s_record_version,Features for detecting and understanding malware communication
+c24f6984-9874-4059-94a6-df7dcd8ac700,Feature,237452715,s_cipher,Yes
+c24f6984-9874-4059-94a6-df7dcd8ac700,Type,14169713,Cat,"Discusses TLS usage by malware and its challenges in network threat detection, contrasting with enterprise network usage."
+c24f6984-9874-4059-94a6-df7dcd8ac700,Type,237452715,Cat,Comparison of papers

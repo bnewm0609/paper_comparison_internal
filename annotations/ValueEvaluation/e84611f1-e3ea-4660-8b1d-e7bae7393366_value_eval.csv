@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Corpus Size,232092726,"5,233,186",37.6 million image-text sets
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Corpus Size,231951742,"10,009,901",12.4 million image-text pairs
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Corpus Size,8081284,"123,287",1.1 million image-question pairs
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Type of Text,232092726,Wikipedia Passage,Research paper
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Type of Text,231951742,Alt-Text Caption,Research paper
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Type of Text,8081284,Question Answer,Research will
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Avg. Text Length,232092726,258,Avg. Text Length not specified
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Avg. Text Length,231951742,37,Longer in CC12M than in CC3M
+e84611f1-e3ea-4660-8b1d-e7bae7393366,Avg. Text Length,8081284,111,Approximately 800 words

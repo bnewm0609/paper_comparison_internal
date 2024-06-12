@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17632358,Circadian parameter estimation,Application of the Extended Cosinor model in cycle phenomena
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,15843191,Object segmentation of hardware items,Application of benchmark datasets in image processing
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17924888,Photovoltaic systems,Application in photovoltaic power forecasting
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17632358,Time series,Data Available
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,15843191,Images,Data Available
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17924888,Time series,Data Available
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17632358,Medical technology,Chronotherapy in Cancer Treatment
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,15843191,Engineering,Computer Vision
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17924888,Engineering,Photovoltaic Power Forecasting

@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+101696a6-1345-4e35-bc30-655aa3f0dfcb,Technique,13280858,Machine learning,Yes
+101696a6-1345-4e35-bc30-655aa3f0dfcb,Technique,159041560,Machine learning,Yes
+101696a6-1345-4e35-bc30-655aa3f0dfcb,Feature,13280858,On image pattern,"Focuses on perceptual, stealthy, and active ad blocking techniques."
+101696a6-1345-4e35-bc30-655aa3f0dfcb,Feature,159041560,On rendering engine,"Introduces PERCIVAL: a browser-embedded, lightweight, deep learning-powered ad blocker."

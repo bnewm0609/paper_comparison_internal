@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+fe286e93-7afe-4729-ad30-c09cb2049ef9,Data,214623273,"5,941 Posterior-anterior chest radiography images across 4 classes (normal: 1,583, bacterial pneumonia: 2,786, non-COVID-19 viral pneumonia: 1,504, and COVID-19: 68)",Yes
+fe286e93-7afe-4729-ad30-c09cb2049ef9,Data,212657483,CT images obtained from 157 international patients (China and U.S.),Yes
+fe286e93-7afe-4729-ad30-c09cb2049ef9,Data,214713518,"1,341 normal, 1,345 viral pneumonia, and 190 COVID‐19 chest X‐ray images",Yes
+fe286e93-7afe-4729-ad30-c09cb2049ef9,Data,214743348,170 X-ray images and 361 CT images of COVID-19 from 5 different sources,Yes
+fe286e93-7afe-4729-ad30-c09cb2049ef9,AI Methods,214623273,Drop-weights based Bayesian CNNs,"Dropweights based BCNN, Monte-Carlo Dropout, BALD"
+fe286e93-7afe-4729-ad30-c09cb2049ef9,AI Methods,212657483,ResNet-50,Robust 2D and 3D deep learning models
+fe286e93-7afe-4729-ad30-c09cb2049ef9,AI Methods,214713518,"AlexNet {{cite:2ee66c0}}, ResNet-18 {{cite:9936009}}, DenseNet-201 {{cite:b9c20b8}}, SqueezeNet {{cite:a8bfbb5}}","Pre-trained deep CNNs: AlexNet, ResNet18, DenseNet201, SqueezeNet"
+fe286e93-7afe-4729-ad30-c09cb2049ef9,AI Methods,214743348,A new CNN and pre-trained AlexNet {{cite:2ee66c0}} with transfer learning,General AI methods for COVID-19 diagnosis

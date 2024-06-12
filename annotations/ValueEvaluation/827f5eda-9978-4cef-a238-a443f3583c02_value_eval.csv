@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+827f5eda-9978-4cef-a238-a443f3583c02,Field of contribution,233458095,Safety,Blockchain-based security for unmanned traffic
+827f5eda-9978-4cef-a238-a443f3583c02,Field of contribution,221516585,Cybersecurity,Blockchain for 5G-enabled drone communications privacy
+827f5eda-9978-4cef-a238-a443f3583c02,Field of contribution,220794062,Cybersecurity,Drone-enabled secure vehicular networks
+827f5eda-9978-4cef-a238-a443f3583c02,Field of contribution,220870617,Reliability,Blockchain in 5G UAVs for dynamic network access
+827f5eda-9978-4cef-a238-a443f3583c02,Blockchain Application,233458095,Route deconfliction,Blockchain for UAV path security and data storage
+827f5eda-9978-4cef-a238-a443f3583c02,Blockchain Application,221516585,Confidentiality: ID management system,Blockchain for privacy in 5G-enabled drone communications
+827f5eda-9978-4cef-a238-a443f3583c02,Blockchain Application,220794062,Authentication,Blockchain for registration and authentication in drone-enabled vehicular systems
+827f5eda-9978-4cef-a238-a443f3583c02,Blockchain Application,220870617,Network connectivity,Blockchain for decentralized services and routing in 5G-UAV networks

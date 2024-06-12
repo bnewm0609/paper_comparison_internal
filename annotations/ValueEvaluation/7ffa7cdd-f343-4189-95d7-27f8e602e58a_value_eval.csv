@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Publish Time,212726430,Nov. 2019,2019.11
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Publish Time,210116488,Jan. 2020,N/A
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Manipulation Techniques,212726430,Improved Deepfake,Basic DeepFake maker algorithm
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Manipulation Techniques,210116488,DF-VAE with Seven Perturbations,"DeepFake Variational AutoEncoder (DF-VAE) used for face swapping in DeeperForensics-1.0 dataset, with disentanglement of structure and appearance, face reenactment, and application of diverse distortions."
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,# Real / Fake,212726430,"590 / 5,639","Celeb-DF: 590 real videos, 5,639 DeepFake videos"
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,# Real / Fake,210116488,"50,000 / 10,000",DeeperForensics-1.0: Includes high-quality source and manipulated videos with diverse perturbations

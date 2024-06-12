@@ -1,0 +1,76 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+581986c0-6672-4b08-bb61-9069787969db,Year,3641788,2018,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,33237045,2018,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,51968704,2018,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,49867328,2018,2018
+581986c0-6672-4b08-bb61-9069787969db,Year,220363628,2020,2020
+581986c0-6672-4b08-bb61-9069787969db,Year,210164365,2020,2019
+581986c0-6672-4b08-bb61-9069787969db,Year,170079303,2020,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,119111419,2020,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,221802354,2020,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,231847018,2021,2021
+581986c0-6672-4b08-bb61-9069787969db,Year,237461161,2021,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,232379855,2021,N/A
+581986c0-6672-4b08-bb61-9069787969db,Year,244488406,2022,2021
+581986c0-6672-4b08-bb61-9069787969db,Year,244909286,2022,2021
+581986c0-6672-4b08-bb61-9069787969db,Year,237434314,2022,2020
+581986c0-6672-4b08-bb61-9069787969db,Carrier,3641788,"Pedestrian, Trolley",IONet
+581986c0-6672-4b08-bb61-9069787969db,Carrier,33237045,Pedestrian,Smartphone
+581986c0-6672-4b08-bb61-9069787969db,Carrier,51968704,Pedestrian,N /A
+581986c0-6672-4b08-bb61-9069787969db,Carrier,49867328,Pedestrian,Long short-term memory (LSTM) neural network
+581986c0-6672-4b08-bb61-9069787969db,Carrier,220363628,Pedestrian,IEEE ROBOTICS AND AUTOMATION LETTERS
+581986c0-6672-4b08-bb61-9069787969db,Carrier,210164365,Pedestrian,Modern micro-electro-mechanical (MEMS) inertial measurements units (IMUs)
+581986c0-6672-4b08-bb61-9069787969db,Carrier,170079303,Pedestrian,Data-driven inertial navigation research
+581986c0-6672-4b08-bb61-9069787969db,Carrier,119111419,Vehicle,Inertial Measurement Unit (IMU)
+581986c0-6672-4b08-bb61-9069787969db,Carrier,221802354,Pedestrian,N/A
+581986c0-6672-4b08-bb61-9069787969db,Carrier,231847018,Pedestrian,Smartphone
+581986c0-6672-4b08-bb61-9069787969db,Carrier,237461161,Legged Robot,ANYmal quadrupedal robot
+581986c0-6672-4b08-bb61-9069787969db,Carrier,232379855,"Vehicle, UAV",N/A
+581986c0-6672-4b08-bb61-9069787969db,Carrier,244488406,Pedestrian,Joao Carreira
+581986c0-6672-4b08-bb61-9069787969db,Carrier,244909286,Pedestrian,Smartphone
+581986c0-6672-4b08-bb61-9069787969db,Carrier,237434314,Vehicle,OdoNet: Untethered Speed Aiding for Vehicle Navigation Without Hardware Wheeled Odometer
+581986c0-6672-4b08-bb61-9069787969db,model,3641788,LSTM,IONet
+581986c0-6672-4b08-bb61-9069787969db,model,33237045,"SVM, SVR",Robust IMU Double Integration (RIDI)
+581986c0-6672-4b08-bb61-9069787969db,model,51968704,ConvNet,The paper proposes a scheme for constraining the inertial odometry problem by complementing non-linear state estimation with a CNN-based deep-learning model for inferring the momentary speed based on a window of IMU samples.
+581986c0-6672-4b08-bb61-9069787969db,model,49867328,LSTM,LSTM neural network
+581986c0-6672-4b08-bb61-9069787969db,model,220363628,ConvNet,tightly-coupled inertial odometry algorithm
+581986c0-6672-4b08-bb61-9069787969db,model,210164365,Dilated ConvNet,IONet and L-IONet
+581986c0-6672-4b08-bb61-9069787969db,model,170079303,"LSTM, TCN",RoNIN model
+581986c0-6672-4b08-bb61-9069787969db,model,119111419,ConvNet,state-space model
+581986c0-6672-4b08-bb61-9069787969db,model,221802354,ConvNet,Extended Kalman Filter with learning-based method
+581986c0-6672-4b08-bb61-9069787969db,model,231847018,LSTM,recurrent neural network and Extended Kalman Filter
+581986c0-6672-4b08-bb61-9069787969db,model,237461161,ConvNet,The paper introduces a novel proprioceptive state estimator for legged robots based on a learned displacement measurement from IMU data. The learned displacement measurement is fused with traditional leg odometry to greatly reduce the drift of proprioceptive state estimation.
+581986c0-6672-4b08-bb61-9069787969db,model,232379855,RNN,data-driven algorithm
+581986c0-6672-4b08-bb61-9069787969db,model,244488406,DNN,Rotation-equivariance-supervised Inertial Odometry (RIO)
+581986c0-6672-4b08-bb61-9069787969db,model,244909286,Transformer,Contextual Transformer-based network for Inertial Navigation (CTIN)
+581986c0-6672-4b08-bb61-9069787969db,model,237434314,ConvNet,OdoNet
+581986c0-6672-4b08-bb61-9069787969db,learning,3641788,SL,Deep recurrent neural networks
+581986c0-6672-4b08-bb61-9069787969db,learning,33237045,SL,Machine learning techniques for velocity vector regression and acceleration correction
+581986c0-6672-4b08-bb61-9069787969db,learning,51968704,SL,Machine learning for speed regression
+581986c0-6672-4b08-bb61-9069787969db,learning,49867328,SL,LSTM for zero-velocity detection
+581986c0-6672-4b08-bb61-9069787969db,learning,220363628,SL,Network training for 3D displacement and uncertainty regression
+581986c0-6672-4b08-bb61-9069787969db,learning,210164365,SL,Learning based methods utilized
+581986c0-6672-4b08-bb61-9069787969db,learning,170079303,SL,Data-driven inertial navigation learning
+581986c0-6672-4b08-bb61-9069787969db,learning,119111419,SL,Learning-based method for measurement noise update
+581986c0-6672-4b08-bb61-9069787969db,learning,221802354,SL,Mentions learning
+581986c0-6672-4b08-bb61-9069787969db,learning,231847018,SL,Use of learning techniques unspecified
+581986c0-6672-4b08-bb61-9069787969db,learning,237461161,SL,Deep neural network for terrain adaptive locomotion prediction
+581986c0-6672-4b08-bb61-9069787969db,learning,232379855,SL,Deep neural networks for IMU modeling and inertial navigation
+581986c0-6672-4b08-bb61-9069787969db,learning,244488406,UL,Learning-based approaches for inertial odometry
+581986c0-6672-4b08-bb61-9069787969db,learning,244909286,SL,Learning techniques in CTIN model for trajectory and velocity prediction
+581986c0-6672-4b08-bb61-9069787969db,learning,237434314,SL,OdoNet: 1D CNN-based pseudo-odometer for speed estimation
+581986c0-6672-4b08-bb61-9069787969db,target,3641788,location displacement,"Proposes IONet, a novel approach using deep recurrent neural networks for estimating trajectories from inertial data."
+581986c0-6672-4b08-bb61-9069787969db,target,33237045,velocity for inertial data calibration,Proposes novel data-driven approach for inertial navigation.
+581986c0-6672-4b08-bb61-9069787969db,target,51968704,velocity to constrain system drifts,Proposes a CNN-based model for speed inference combined with inertial navigation for 3D navigation.
+581986c0-6672-4b08-bb61-9069787969db,target,49867328,zero-velocity detection for ZUPT,"Improves zero-velocity-aided INS accuracy using an LSTM-based detector, reducing 3D positioning error by over 34%."
+581986c0-6672-4b08-bb61-9069787969db,target,220363628,3D displacement and uncertainty for EKF,Proposes tightly-coupled Extended Kalman Filter for IMU-only state estimation.
+581986c0-6672-4b08-bb61-9069787969db,target,210164365,lightweight inertial model,"Introduces L-IONet, a lightweight framework for learning pedestrian trajectories from raw IMU data."
+581986c0-6672-4b08-bb61-9069787969db,target,170079303,velocity for inertial data calibration,Presents a new benchmark with over 40 hours of IMU data for inertial navigation research.
+581986c0-6672-4b08-bb61-9069787969db,target,119111419,co-variance noise for KF,Proposes a novel approach for inertial dead-reckoning in wheeled vehicles using deep neural networks.
+581986c0-6672-4b08-bb61-9069787969db,target,221802354,measurement noise for Kalman Filter,Proposes a method for position and orientation estimation using IMU signals from a phone.
+581986c0-6672-4b08-bb61-9069787969db,target,231847018,device orientation and location,Presents a two-stage data-driven pipeline for inertial pedestrian localization using a smartphone.
+581986c0-6672-4b08-bb61-9069787969db,target,237461161,integrate location displacement with leg odometry,Introduces a novel proprioceptive state estimator for legged robots based on learned displacement from IMU data.
+581986c0-6672-4b08-bb61-9069787969db,target,232379855,independent motion terms,Proposes a novel method for inertial aided navigation using deep neural networks.
+581986c0-6672-4b08-bb61-9069787969db,target,244488406,rotation-equivariance as supervision signal,Introduces rotation-equivariance as a self-supervisor to enhance inertial odometry model generalizability.
+581986c0-6672-4b08-bb61-9069787969db,target,244909286,velocity and trajectory prediction,Proposes a robust Contextual Transformer-based network (CTIN) for accurate inertial navigation.
+581986c0-6672-4b08-bb61-9069787969db,target,237434314,speed learning for ZUPT,"Proposes OdoNet, a CNN-based pseudo-odometer model for vehicle navigation in GNSS-denied environments."

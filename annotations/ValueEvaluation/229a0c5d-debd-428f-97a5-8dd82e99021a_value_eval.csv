@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+229a0c5d-debd-428f-97a5-8dd82e99021a,Groups,203641884,-,CLEVRER
+229a0c5d-debd-428f-97a5-8dd82e99021a,Groups,219530940,-,N/A
+229a0c5d-debd-428f-97a5-8dd82e99021a,Application areas,203641884,Video analysis,"video understanding, visual question answering, physical and causal reasoning"
+229a0c5d-debd-428f-97a5-8dd82e99021a,Application areas,219530940,Robotics and dynamic control systems,N/A

@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+cdb4e211-05e6-42f6-8753-128931bcaf51,Network model,7518568,A multi-user MISO system with a dedicated power station,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Network model,15819250,A time division duplex large-scale MIMO system with a co-located energy transmitter and information receiver as well as an information transmitter,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Network model,15716858,Multiple transmitter-receiver pairs with SISO interference channels and a network coordinator,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Design goal,7518568,Maximization of the system sum-throughput,Maximize system sum-throughput in MISO WPCN under harvest-then-transmit protocol
+cdb4e211-05e6-42f6-8753-128931bcaf51,Design goal,15819250,Maximization of system energy efficiency,Maximize energy efficiency of information transmission with QoS requirement
+cdb4e211-05e6-42f6-8753-128931bcaf51,Design goal,15716858,Optimization of rate-energy tradeoff,Characterize R-E trade-offs by transmitter-side collaboration in multiuser SWIPT system
+cdb4e211-05e6-42f6-8753-128931bcaf51,Constraints,7518568,"Transmission time constraint and transmit power constraint at the each user and the power station, respectively",Constraints mentioned
+cdb4e211-05e6-42f6-8753-128931bcaf51,Constraints,15819250,"Constraints of transmit power, sub-slot duration for RF energy transfer, and information rate","Constraints mentioned including transmit power, time, and QoS"
+cdb4e211-05e6-42f6-8753-128931bcaf51,Constraints,15716858,Energy harvesting constraints at receivers,Constraints mentioned
+cdb4e211-05e6-42f6-8753-128931bcaf51,Problem formulation,7518568,Non-convex programming,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Problem formulation,15819250,Fractional programming problem,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Problem formulation,15716858,Non-convex programming,Extractable
+cdb4e211-05e6-42f6-8753-128931bcaf51,Solutions,7518568,Semidefinite relaxation,Discusses joint time allocation and beamforming design
+cdb4e211-05e6-42f6-8753-128931bcaf51,Solutions,15819250,"Lagrange multiplier method, an iterative algorithm based on Dinkelbach method {{cite:dd98c32}}",Discusses energy-efficient resource allocation in wireless systems
+cdb4e211-05e6-42f6-8753-128931bcaf51,Solutions,15716858,Lagrange duality method,"Proposes pairwise and joint cooperation schemes for SWIPT, comparing them with partial and no cooperation schemes"
+cdb4e211-05e6-42f6-8753-128931bcaf51,CSI requirement,7518568,Perfect CSI at energy transmitter,Perfect CSI knowledge
+cdb4e211-05e6-42f6-8753-128931bcaf51,CSI requirement,15819250,Perfect CSI at energy transmitter,Full CSI by estimation
+cdb4e211-05e6-42f6-8753-128931bcaf51,CSI requirement,15716858,Perfect CSI at receivers,N/A

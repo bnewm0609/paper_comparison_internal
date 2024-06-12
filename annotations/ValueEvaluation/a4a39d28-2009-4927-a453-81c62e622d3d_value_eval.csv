@@ -1,0 +1,11 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+a4a39d28-2009-4927-a453-81c62e622d3d,Methods,218763375,Hierarchical Attention,Yes
+a4a39d28-2009-4927-a453-81c62e622d3d,Methods,208248153,Panoptic Segmentation,Yes
+a4a39d28-2009-4927-a453-81c62e622d3d,Methods,54445471,"Joint Future Frame/Label Propagation, Data Augmentation",Yes
+a4a39d28-2009-4927-a453-81c62e622d3d,Methods,211858558,"Depth Information, Depth-Aware Loss",Yes
+a4a39d28-2009-4927-a453-81c62e622d3d,Methods,202577400,"Global Aggregation, Local Distribution",Yes
+a4a39d28-2009-4927-a453-81c62e622d3d,Year,218763375,2020,2020
+a4a39d28-2009-4927-a453-81c62e622d3d,Year,208248153,2020,N/A
+a4a39d28-2009-4927-a453-81c62e622d3d,Year,54445471,2019,2018
+a4a39d28-2009-4927-a453-81c62e622d3d,Year,211858558,2019,N/A
+a4a39d28-2009-4927-a453-81c62e622d3d,Year,202577400,2019,2019

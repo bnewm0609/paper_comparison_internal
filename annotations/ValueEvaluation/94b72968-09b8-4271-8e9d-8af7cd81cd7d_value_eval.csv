@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Train,4309276,"4,512","Introduces the Describable Textures Dataset (DTD) with 5,640 images annotated with 47 attributes."
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Train,3568073,"28,000","Discusses progressive growing in GANs training, stabilizing the process and reducing time."
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Test,4309276,"1,128","Introduces Describable Textures Dataset (DTD) with 5,640 images and 47 attributes; uses Improved Fisher Vectors (IFV) for texture representation."
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Test,3568073,"2,000","Discusses progressive growing in GANs; starts with low-resolution images, increases resolution by adding layers, improves convergence, reduces training time, enables high-resolution image generation."
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Total,4309276,"5,560","Introduces Describable Textures Dataset (DTD) with 5,640 images and 47 attributes"
+94b72968-09b8-4271-8e9d-8af7cd81cd7d,#Total,3568073,"30,000",Discusses progressive growing of GANs and creation of a higher-quality CELEBA dataset

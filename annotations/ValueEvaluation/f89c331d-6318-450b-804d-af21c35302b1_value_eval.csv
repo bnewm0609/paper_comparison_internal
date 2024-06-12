@@ -1,0 +1,57 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,173187920,Benchmark,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,247619271,Benchmark,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,248512817,Benchmark,Framework/Methodology Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,3303012,Benchmark,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,3419504,Method,Conference Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,204734348,Method,Conference Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,174800294,Method,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,56895575,Method,Conference Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,232105100,Method,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,247793368,Method,Fairness in Contrastive Learning
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,220683906,Method,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,239998364,Method,Methods for Worst-Group-Accuracy Optimization
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,219980622,Method,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Paper Type,235732231,Method,Research Paper
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,173187920,-,Observation of increased fairness with disentangled representations
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,247619271,Best validation worst-group AUC,Evaluation of per-group performance and model selection based on statistical accuracy
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,248512817,Best validation loss / DTO,N/A
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,3303012,-,Emphasis on preprocessing and algorithm comparison
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,3419504,Report fairness/accuracy trade-off,Exploration of adversarially fair representation methods
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,204734348,Report fairness/accuracy trade-off,Proposal of a novel algorithm for fair representation learning
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,174800294,Report fairness/accuracy trade-off,Proposal of an algorithm for learning compact and flexibly fair representations
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,56895575,-,Proposed regularization algorithm for training with biased data
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,232105100,Optimized on validation set,Regularization strategy EnD to prevent learning biases in deep models
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,247793368,-,Introduction of Fair Supervised Contrastive Loss and group-wise normalization
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,220683906,Best validation worst-group risk,APStar algorithm for iterative refinement of minimax risk
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,239998364,Best validation worst-group accuracy,Attribute information critical in model selection
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,219980622,Best validation overall AUC,Adversarially Reweighted Learning approach for fairness without demographics
+f89c331d-6318-450b-804d-af21c35302b1,Selection Strategy,235732231,-,Feature-level data augmentation to synthesize diverse bias-conflicting samples
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,173187920,Images,"dSprites, Cars3D, SmallNORB, Shapes3D, Noisy-dSprites, Color-dSprites, Scream-dSprites"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,247619271,Images,"MIMIC-CXR, CheXpert"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,248512817,NLP,"Natural Language, Images, Audio"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,3303012,Tabular,"Ricci, Adult Income, German Credit, ProPublica Recidivism, ProPublica Violent Recidivism"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,3419504,Tabular,"UCI Adult, Heritage Health"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,204734348,Tabular,"Adult, COMPAS"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,174800294,Tabular/Images,"Tabular, Image"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,56895575,Images,Image
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,232105100,Images,"Biased MNIST, CelebA, IMDB Face, CORDA"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,247793368,Images,"CelebA, UTK Face, Dogs and Cats"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,220683906,Images/Tabular,"Clinical Notes, Dermoscopic Images, Income Prediction, Credit Risk Assessment"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,239998364,Images,"CelebA, Waterbirds, MultiNLI, CivilComments"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,219980622,Tabular,"UCI Adult, Law School, COMPAS"
+f89c331d-6318-450b-804d-af21c35302b1,Dataset Type,235732231,Images,"Colored MNIST, Corrupted CIFAR-10, Biased FFHQ"
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,173187920,Deep,Disentangled Representations
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,247619271,Deep,DenseNet-121
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,248512817,Deep,"Pre-processing, At-training-time, Post-processing"
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,3303012,Shallow,"Preprocessing Techniques, Algorithm Modifications, Postprocessing Techniques"
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,3419504,Shallow,Adversarially Fair Representations
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,204734348,Shallow,Fair Representations
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,174800294,Shallow/Deep,FFVAE
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,56895575,Deep,Deep Neural Network
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,232105100,Deep,EnD Regularization
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,247793368,Deep,Supervised Contrastive Learning
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,220683906,Shallow/Deep,Minimax Pareto Fair Classifier
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,239998364,Deep,Worst-group-accuracy Optimization
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,219980622,Shallow,Adversarially Reweighted Learning (ARL)
+f89c331d-6318-450b-804d-af21c35302b1,Model Type,235732231,Deep,Feature-level Data Augmentation

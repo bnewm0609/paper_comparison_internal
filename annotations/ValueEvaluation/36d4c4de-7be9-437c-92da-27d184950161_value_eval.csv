@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+36d4c4de-7be9-437c-92da-27d184950161,Network,18811015,US power network,Discusses power grid as a network
+36d4c4de-7be9-437c-92da-27d184950161,Network,119419887,Complete US power network,Analyzes North American power grids' reliability using Barabási-Albert model
+36d4c4de-7be9-437c-92da-27d184950161,Size,18811015,"14,099","14,099 nodes, 19,657 edges"
+36d4c4de-7be9-437c-92da-27d184950161,Size,119419887,"314,123",N/A

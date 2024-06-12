@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,No.Sensors,19766325,19,"Uses wearable sensors (3-axial acceleration sensors, IMUs) for human activity recognition; discusses challenges like data alignment, losses, and noise."
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,No.Sensors,232101515,1,"Explores smartphone sensors for HAR in smart homes; proposes a 4-layer CNN-LSTM network, outperforming baseline LSTMs."
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,Sensor placements,19766325,"Hands, Left Foot, Back, upright knee, right foot, low right knee, Hip,",Provides information on sensor placements
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,Sensor placements,232101515,Smartphone: kept in the pocket,Discusses use of tri-axial accelerometer and gyroscope in smartphones for HAR; data from wearable devices; uses 4-layer CNN-LSTM network
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,Activities,19766325,"Standing, Sitting, Walking, Lie","Classification of human locomotion activities (walk, stand, lie, sit)"
+56f0da46-acff-40b8-81ce-c5e6dfd205b7,Activities,232101515,"Sitting, Walking downstairs, Laying, Walking upstairs, Standing",Human Activity Recognition (HAR) using smartphone sensors

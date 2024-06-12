@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+a03ba50e-a8f7-4690-a4a8-14ef25de0313,Node,197640176,"7,000",dynamic embedding trajectories of users and items in temporal interaction networks
+a03ba50e-a8f7-4690-a4a8-14ef25de0313,Node,52183483,"10,000",LSTMs for Time-Encoding Sequences
+a03ba50e-a8f7-4690-a4a8-14ef25de0313,Link,197640176,"412,000",https://doi.org/10.1145/3292500.3330895
+a03ba50e-a8f7-4690-a4a8-14ef25de0313,Link,52183483,"461,000",Discusses link prediction in temporal knowledge graphs; proposes method to incorporate temporal information into scoring functions.

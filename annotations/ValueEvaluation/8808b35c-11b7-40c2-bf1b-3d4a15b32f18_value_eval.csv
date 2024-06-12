@@ -1,0 +1,21 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Year,202539732,2019,2019
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Year,70349949,2019,N/A
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Year,221319713,2020,2020
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Year,233324441,2021,2020
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,System,202539732,DGL,DGL
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,System,70349949,PyG,PyTorch Geometric
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,System,221319713,FeatGraph,FeatGraph
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,System,233324441,GraphTheta,GraphTheta
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Expressiveness,202539732,message passing abstraction,Graph neural networks expressiveness and flexible learning system
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Expressiveness,70349949,message passing abstraction,Expressiveness of methods in PyTorch Geometric
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Expressiveness,221319713,message passing abstraction,Expressiveness discussed
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Expressiveness,233324441,vertex- and edge-centric abstraction,Expressiveness of GraphTheta system
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Optimizations,202539732,operates on DGLGraph,"Optimizations in user-defined functions, active sets, batching, and tensorization"
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Optimizations,70349949,optimized sparse softmax kernels,"Optimizations in sparse GPU acceleration, CUDA kernels, and mini-batch handling"
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Optimizations,221319713,custom parallelization strategy,"Optimizations in graph traversal, sparse templates, user-defined functions with feature dimension schedule, and efficient kernel generation for CPU and GPU"
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Optimizations,233324441,independent steps are implemented as neural networks,"Optimizations in hybrid-parallel execution, graph partitioning, and cluster-batched gradient descent"
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Algorithms,202539732,"GCN, SGC, GraphSAGE, GAT, GIN","Discusses deep graph learning, message passing, user-defined functions, propagation order, graph sampling."
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Algorithms,70349949,"GCN, SGC, GraphSAGE, GAT, GIN, ARMA, APPNP","Introduces PyTorch Geometric, focuses on deep learning for irregular structures like graphs, leverages sparse GPU, dedicated CUDA kernels, efficient mini-batch handling."
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Algorithms,221319713,"GCN, GraphSAGE, GAT","Focuses on optimization of GNN algorithms, specifically graph traversal and feature dimension computation."
+8808b35c-11b7-40c2-bf1b-3d4a15b32f18,Algorithms,233324441,"GCN, FastGCN, VR-GCN","Discusses MPGNN framework, compute pattern of NN-TGAR, GraphTheta system, introduces cluster-batched gradient descent."

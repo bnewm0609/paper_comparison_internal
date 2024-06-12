@@ -1,0 +1,17 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+a19faddf-8874-4875-b437-550518d6f89a,Year,14141955,2016,2015
+a19faddf-8874-4875-b437-550518d6f89a,Year,11491009,2016,N/A
+a19faddf-8874-4875-b437-550518d6f89a,Year,3206495,2017,2017
+a19faddf-8874-4875-b437-550518d6f89a,Year,55706116,2018,2018
+a19faddf-8874-4875-b437-550518d6f89a,Feature Data,14141955,15 features from OBD-II,Feature data extracted
+a19faddf-8874-4875-b437-550518d6f89a,Feature Data,11491009,GPS data,Feature data extracted from GPS sensor data for driving behavior analysis
+a19faddf-8874-4875-b437-550518d6f89a,Feature Data,3206495,GPS data,Feature data extracted
+a19faddf-8874-4875-b437-550518d6f89a,Feature Data,55706116,137 statistical features extracted from GPS data,Feature data extracted
+a19faddf-8874-4875-b437-550518d6f89a,Algorithm,14141955,"Decision Tree, Random Forest, KNN and MLP","Decision Tree, Random Forest, KNN, MLP"
+a19faddf-8874-4875-b437-550518d6f89a,Algorithm,11491009,DL,"CNN, RNN"
+a19faddf-8874-4875-b437-550518d6f89a,Algorithm,3206495,Autoencoder regularized DNN,"ARNet (Autoencoder Regularized Network), RNN, trip2vec"
+a19faddf-8874-4875-b437-550518d6f89a,Algorithm,55706116,Random Forest,Random Forest
+a19faddf-8874-4875-b437-550518d6f89a,Accuracy,14141955,99% (group of 10),Over 99% accuracy for all road types
+a19faddf-8874-4875-b437-550518d6f89a,Accuracy,11491009,"77% (50 drivers), 60% (1000 drivers)",Mentions accuracy as a performance metric
+a19faddf-8874-4875-b437-550518d6f89a,Accuracy,3206495,78% (group of 50),Provides accuracy results for multiple problems
+a19faddf-8874-4875-b437-550518d6f89a,Accuracy,55706116,82% (group of 3/4),82.3% accuracy for driver identification

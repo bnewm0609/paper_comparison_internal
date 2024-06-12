@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,198147552,2020,2015
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,237438731,2022,N/A
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,221090166,2020,2019
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,219558322,2020,N/A
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,232076330,2021,2021
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,233209676,2021,2021
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,198147552,Resource management in IoT networks.,ML/DL techniques address resource management in IoT networks.
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,237438731,Deals with a large volume of data.,Development of a distributed QMIX algorithm for cooperative RL parameter updates in edge devices.
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,221090166,Focuses on energy harvesting in the network,Yes
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,219558322,Heterogeneous distributed resources gains benefit from the distributed learning frameworks.,Yes
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,232076330,Personalized FL.,Yes
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,233209676,Impact of 6G-based massive IoT for multiple access.,NOMA improves performance in massive IoT systems.
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,198147552,"ML and DL at the edge devices.
+
+Reduces extra bandwidth.",Yes
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,237438731,"Distributed RL provides a viable and effective solution.
+
+Optimizes training time and maximizes the throughput.","Proposes a novel distributed RL approach for IoT systems, reducing AoI and energy consumption significantly."
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,221090166,"Virtualizes cells and controls their power consumption.
+
+Distributed Deep RL is incorporated for harvesting energy.","Introduces a DDRL solution for optimizing energy and traffic in virtualized small cells, enhancing network performance and cost efficiency."
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,219558322,"Provides an optimal topology that fits the capabilities of the system.
+
+Significant rewards from the strongly contributing IoT devices.","Presents a heterogeneous distributed learning approach, improving reward/accuracy across devices with varying capabilities."
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,232076330,"Guidelines towards the development of personalized FL.
+
+Realistic PFL approaches are highlighted.","Discusses challenges and opportunities in Personalized Federated Learning (PFL), emphasizing the need for new designs and trustworthy approaches."
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,233209676,"Key performance indicators and their dimensions are summarized.
+
+Joint optimization of channel coding and linear spreading.",Yes

@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+522edd8c-1b76-4146-8b88-1e62d4476207,#P,236034031,50,User intention model based on deep sequential topic analysis
+522edd8c-1b76-4146-8b88-1e62d4476207,#P,153313763,40,Hybrid recommender system combining co-citation and content-based approaches
+522edd8c-1b76-4146-8b88-1e62d4476207,#P,235479485,20,Evaluation of in-text citation frequencies-based approach compared with other techniques
+522edd8c-1b76-4146-8b88-1e62d4476207,#P,232240319,5,Construction of a master-slave knowledge graph for paper recommendation
+522edd8c-1b76-4146-8b88-1e62d4476207,Composition,236034031,NA,"Hybrid Topic Model (HTM) combining LDA and Word2Vec, and LSTM for modeling user intention"
+522edd8c-1b76-4146-8b88-1e62d4476207,Composition,153313763,[tl]full-time computer science researchers at Microsoft Research,Hybrid (co-citation and content-based) recommender system
+522edd8c-1b76-4146-8b88-1e62d4476207,Composition,235479485,post-graduate students,Comparison of in-text citation frequencies with other techniques showing higher precision
+522edd8c-1b76-4146-8b88-1e62d4476207,Composition,232240319,"1 doctoral supervisor, 2 master supervisors, 2 graduate students",Knowledge graph-based recommendation method supporting cross-domain and challenge-oriented recommendations

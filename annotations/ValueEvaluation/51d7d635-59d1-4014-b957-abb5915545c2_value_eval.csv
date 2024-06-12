@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+51d7d635-59d1-4014-b957-abb5915545c2,Feature set,17989125,"energy, entropy, contrast, homogeneity","energy, entropy, contrast, homogeneity"
+51d7d635-59d1-4014-b957-abb5915545c2,Feature set,12760353,MFCC,Mel Frequency Cepstral Coefficients (MFCCs)
+51d7d635-59d1-4014-b957-abb5915545c2,Employed classifier,17989125,GMM,Gaussian mixture model (GMM)
+51d7d635-59d1-4014-b957-abb5915545c2,Employed classifier,12760353,GMM,Gaussian mixture model (GMM)
+51d7d635-59d1-4014-b957-abb5915545c2,Notes,17989125,Used combination of voice and EGG signals,Proposed voice pathology assessment system using co-occurrence matrices and a Gaussian mixture model (GMM).
+51d7d635-59d1-4014-b957-abb5915545c2,Notes,12760353,"Used combination of vowels /a/, /i/, /u/",Comparison of different windowing techniques and multitaper MFCC systems for voice quality classification.

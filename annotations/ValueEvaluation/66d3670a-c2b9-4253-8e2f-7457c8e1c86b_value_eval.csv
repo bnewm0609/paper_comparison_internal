@@ -1,0 +1,22 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,1306313,2016,2016
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,14141955,2016,2015
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,55706116,2018,2018
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,218487531,2020,N/A
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,225271340,2020,2020
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,216521206,2020,2020
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Year,19121365,2018,N/A
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,1306313,-,SVM and FFNN
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,14141955,-,Machine Learning
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,55706116,-,Random Forest
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,218487531,-,Distributed Machine Learning
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,225271340,-,Random Forest
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,216521206,-,N/A
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Learning Technique,19121365,-,Deep Reinforcement Learning
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,1306313,Grey Hole and Black Hole Detection,Yes
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,14141955,Driver Fingerprinting,"Yes, discusses anti-theft technologies and driver verification based on driving patterns"
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,55706116,Driver Fingerprinting,N/A
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,218487531,Privacy Protection,"Yes, discusses collaborative intrusion detection systems for VANETs"
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,225271340,MDS,Yes
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,216521206,Trust Computation,"Yes, discusses the importance of trust models in securing vehicular ad-hoc networks (VANETs) and proposes a trust model based on plausibility, experience, and type of vehicle. It also mentions the impact of obstacles and malicious nodes on data trustworthiness and the need for detecting obstacles in the network."
+66d3670a-c2b9-4253-8e2f-7457c8e1c86b,Security Application,19121365,Cyber-Physical Attack Detection,"Yes, discusses security for autonomous vehicles and cyber-physical attack robustness"

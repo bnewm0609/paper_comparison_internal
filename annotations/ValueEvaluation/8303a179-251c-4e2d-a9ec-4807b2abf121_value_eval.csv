@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+8303a179-251c-4e2d-a9ec-4807b2abf121,Year,4972291,2017,2017
+8303a179-251c-4e2d-a9ec-4807b2abf121,Year,218869770,2020,2020
+8303a179-251c-4e2d-a9ec-4807b2abf121,Number of Parameters,4972291,330K,Number of trainable variables in the ST-GCNN model
+8303a179-251c-4e2d-a9ec-4807b2abf121,Number of Parameters,218869770,433K,N^2 parameters in the adjacency matrix

@@ -1,0 +1,16 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Domain,13818729,Face images,Computer Science
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Domain,51890585,Face images,Biometrics
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Domain,59553616,Face representations,Face Recognition
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Proposed Method,13818729,Semi-Adversarial Networks,Described
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Proposed Method,51890585,Ensemble of SAN models,Described: Ensemble of Semi Adversarial Networks (SAN)
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Proposed Method,59553616,SensitiveNet,Described: Learning agnostic feature representations
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Transferable,13818729,Yes,Generalizable solution across datasets
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Transferable,51890585,Yes,Mentions 'transferable'
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Transferable,59553616,Yes,Reduces sensitive information while maintaining performance
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Generalizable,13818729,No,Yes
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Generalizable,51890585,Yes,Yes
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Generalizable,59553616,Yes,Yes
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Matching Performance,13818729,Mostly retained,Discusses matching performance
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Matching Performance,51890585,Mostly retained,Shows matching performance close to original samples
+3560e8ad-2a9d-4160-bdf8-007ab0e734e3,Matching Performance,59553616,Mostly retained,Provides information about matching performance

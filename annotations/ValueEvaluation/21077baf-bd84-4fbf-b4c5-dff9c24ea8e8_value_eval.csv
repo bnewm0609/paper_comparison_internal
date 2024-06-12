@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+21077baf-bd84-4fbf-b4c5-dff9c24ea8e8,train set,206594738,07+12,VOC 2007 and VOC 2012
+21077baf-bd84-4fbf-b4c5-dff9c24ea8e8,train set,7428689,07+12,Yes
+21077baf-bd84-4fbf-b4c5-dff9c24ea8e8,FPS,206594738,45,45 fps
+21077baf-bd84-4fbf-b4c5-dff9c24ea8e8,FPS,7428689,8,5.88 fps
