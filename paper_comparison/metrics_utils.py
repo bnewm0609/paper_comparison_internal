@@ -1,24 +1,23 @@
 """Utility functions for computing metrics"""
 
-from typing import Any
-from paper_comparison.types import Table
 import difflib
+import json
+import os
+import re
+import time
+from typing import Any
 
+import numpy as np
+import pandas as pd
+import torch
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-
-import pandas as pd
-import numpy as np
-from sentence_transformers import SentenceTransformer, util
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
-
-import os
-import time
-import json
 from openai import OpenAI
-import re
+from sentence_transformers import SentenceTransformer, util
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+from paper_comparison.types import Table
 
 stopwords = stopwords.words("english")
 punctuation = "()[]{},.?!/''\"``"
@@ -406,7 +405,8 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
 
         import together
         from together import Together, error
-        from llama_aligner import PROMPT
+
+        from .llama_aligner import PROMPT
 
         self.prompt_prefix = PROMPT
         self.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
@@ -426,8 +426,7 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
             max_tokens=max_tokens
         )
         return response
-    
-    
+
     def score_schema_alignments(
         self, pred_table: Table, gold_table: Table, featurizer=BaseFeaturizer("name")
     ) -> dict[tuple, float]:
@@ -454,13 +453,16 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
             new_key: value for new_key, value in zip(featurized_gold_col_list, gold_table.values.values())
         }
 
-        prompt = self.prompt_prefix + f"""
+        prompt = (
+            self.prompt_prefix
+            + f"""
 Table 1:
 {pd.DataFrame(new_gold_table).to_markdown()}
 
 Table 2:
 {pd.DataFrame(new_pred_table).to_markdown()}
 """
+        )
 
         # parse out the json
         try:
@@ -483,8 +485,7 @@ Table 2:
             alignment_str = response.choices[0].message.content
             alignment_str = alignment_str.split("Table 1:\n|")[0]
             alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
-        
-        
+
         for gold_col_name in featurized_gold_col_list:
             for pred_col_name in featurized_pred_col_list:
                 pair = (gold_col_name, pred_col_name)
