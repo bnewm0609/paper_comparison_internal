@@ -404,6 +404,7 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
     def __init__(self, name="llama", debug=False):
         super().__init__(name)
 
+        import together
         from together import Together, error
         from llama_aligner import PROMPT
 
@@ -411,8 +412,9 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
         self.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
         self.api_error = error.APIError
         self.debug = debug
+        self._together = together
 
-    def query_llama(self, prompt):
+    def query_llama(self, prompt, max_tokens=200):
         response = self.client.chat.completions.create(
             model="meta-llama/Llama-3-70b-chat-hf",
             messages=[
@@ -421,7 +423,7 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
                     "content": "You are a helpful assistant that answers in JSON.",
                 },
                 {"role": "user", "content": prompt}],
-            max_tokens=50
+            max_tokens=max_tokens
         )
         return response
     
@@ -472,7 +474,12 @@ Table 2:
             alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
         except json.JSONDecodeError:
             # try again
-            response = self.query_llama(prompt)
+            if response.choices[0].finish_reason == self._together.types.common.FinishReason.Length:
+                response = self.query_llama(prompt, max_tokens=1000)
+            else:
+                response = self.query_llama(prompt)
+            if self.debug:
+                print(response)
             alignment_str = response.choices[0].message.content
             alignment_str = alignment_str.split("Table 1:\n|")[0]
             alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
