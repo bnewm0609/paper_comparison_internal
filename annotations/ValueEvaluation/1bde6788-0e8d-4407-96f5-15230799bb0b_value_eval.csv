@@ -1,28 +1,28 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226289795,"UAV's altitudes, user scheduling","Altitude of the UAV, communication schedule, phase-shift of the RIS elements"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226237384,"CSI, ARIS's position","Precoding matrix, reflection coefficient"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233004362,CSI,N/A
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233231405,"TRIS's phase shift and location, TRIS's elements allocation","RIS elements allocation (U), RIS phase shifts configuration (	heta)"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,220546076,UAV's trajectory,"UAV's trajectory, phase shifts of the reflecting elements of the IRS"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,225062202,CSI,"Phase shifts, source precoders"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232013882,"communication link, transmission beam","Beamforming vector for the base station and the RIS, reflection beamforming vector for the RIS"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232428399,"UAV's trajectory, user scheduling","UAV trajectory (xU, yU), RIS phase shift (	heta_nm), IoTD wireless scheduling (an_i)"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,222141038,"UAV's trajectory, TRIS's phase shifts","Phase shift metric of the RIS, movement of the UAV, power allocation from the UAV to MUs"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226289795,"DRL, PPO, MDP",Reinforcement Learning: PPO
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226237384,"DRL, MDP",Machine Learning: General Techniques
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233004362,GAT,Graph Attention Networks
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233231405,Multi-task learning,Deep Neural Networks: Multi-Task Learning
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,220546076,DQN,"Reinforcement Learning: DQN, DDPG"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,225062202,GAT,Graph Attention Networks
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232013882,"recurrent neural network, GRU",Deep Learning: GRU
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232428399,"MDP, PPO","Reinforcement Learning: DRL, PPO"
-1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,222141038,"D-DQN, MDP",Reinforcement Learning: D-DQN
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226289795,G2G MU uplink system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226237384,G2G MU downlink system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233004362,A2G/GA2 satellite IoT SISO downlink/uplink communications,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233231405,G2A multiple UAV-gU pairs SISO system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,220546076,A2G MU downlink system assisted by multiple TRISs,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,225062202,G2G P2P full-duplex system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232013882,G2A P2P downlink system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232428399,G2A MU SISO uplink system,Extractable
-1bde6788-0e8d-4407-96f5-15230799bb0b,System model,222141038,A2G MU downlink system,Extractable
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226289795,"UAV's altitudes, user scheduling","Altitude of the UAV, communication schedule, phase-shift of the RIS elements",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226237384,"CSI, ARIS's position","Precoding matrix, reflection coefficient",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233004362,CSI,N/A,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233231405,"TRIS's phase shift and location, TRIS's elements allocation","RIS elements allocation (U), RIS phase shifts configuration (	heta)",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,220546076,UAV's trajectory,"UAV's trajectory, phase shifts of the reflecting elements of the IRS",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,225062202,CSI,"Phase shifts, source precoders",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232013882,"communication link, transmission beam","Beamforming vector for the base station and the RIS, reflection beamforming vector for the RIS",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232428399,"UAV's trajectory, user scheduling","UAV trajectory (xU, yU), RIS phase shift (	heta_nm), IoTD wireless scheduling (an_i)",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,222141038,"UAV's trajectory, TRIS's phase shifts","Phase shift metric of the RIS, movement of the UAV, power allocation from the UAV to MUs",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226289795,"DRL, PPO, MDP",Reinforcement Learning: PPO,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226237384,"DRL, MDP",Machine Learning: General Techniques,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233004362,GAT,Graph Attention Networks,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233231405,Multi-task learning,Deep Neural Networks: Multi-Task Learning,1
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,220546076,DQN,"Reinforcement Learning: DQN, DDPG",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,225062202,GAT,Graph Attention Networks,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232013882,"recurrent neural network, GRU",Deep Learning: GRU,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232428399,"MDP, PPO","Reinforcement Learning: DRL, PPO",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,222141038,"D-DQN, MDP",Reinforcement Learning: D-DQN,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226289795,G2G MU uplink system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226237384,G2G MU downlink system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233004362,A2G/GA2 satellite IoT SISO downlink/uplink communications,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233231405,G2A multiple UAV-gU pairs SISO system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,220546076,A2G MU downlink system assisted by multiple TRISs,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,225062202,G2G P2P full-duplex system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232013882,G2A P2P downlink system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232428399,G2A MU SISO uplink system,Extractable,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,222141038,A2G MU downlink system,Extractable,0

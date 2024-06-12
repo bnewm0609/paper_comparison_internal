@@ -1,15 +1,15 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,210180949,2,NMU performs better with larger hidden size compared to NALU
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,219179333,100,NPU model has two layers with variable hidden dimension h
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,210180949,"5,000,000",5 7 10^6 iterations
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,219179333,"50,000","20,000 steps"
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,210180949,100,N/A
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,219179333,10,N/A
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,210180949,1e-3,N/A
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,219179333,1e-2 for addition and 5e-3 for all other operations,0.001
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,210180949,a/b,No
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,219179333,1/a,Yes
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,210180949,Biasing weight discritisation,sparsity regularizer
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,219179333,L1 on all parameters,L1 regularisation
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,210180949,Python 3,N/A
-2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,219179333,Julia,N/A
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,210180949,2,NMU performs better with larger hidden size compared to NALU,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,219179333,100,NPU model has two layers with variable hidden dimension h,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,210180949,"5,000,000",5 7 10^6 iterations,1
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,219179333,"50,000","20,000 steps",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,210180949,100,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,219179333,10,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,210180949,1E-03,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,219179333,1e-2 for addition and 5e-3 for all other operations,0.001,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,210180949,a/b,No,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,219179333,1/a,Yes,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,210180949,Biasing weight discritisation,sparsity regularizer,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,219179333,L1 on all parameters,L1 regularisation,1
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,210180949,Python 3,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,219179333,Julia,N/A,0

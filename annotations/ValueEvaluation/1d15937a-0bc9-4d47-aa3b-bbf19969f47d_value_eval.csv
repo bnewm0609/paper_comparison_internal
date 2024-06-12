@@ -1,7 +1,7 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,91184545,0,~29.5K rain/clean image pairs
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,84187160,0,Training sets with clean and rainy image pairs
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,91184545,146 (no label),Large-scale dataset of ~29.5K pairs
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,84187160,30 (no label),Three synthetic testing sets
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,91184545,Real,Proposes a semi-automatic method for high-quality clean image generation from real rain images and introduces SPANet for rain streak removal.
-1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,84187160,Real,"Evaluates single image deraining algorithms using the MPID benchmark, covering various rain types and diverse evaluation criteria."
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,91184545,0,~29.5K rain/clean image pairs,0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,84187160,0,Training sets with clean and rainy image pairs,0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,91184545,146 (no label),Large-scale dataset of ~29.5K pairs,0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,84187160,30 (no label),Three synthetic testing sets,0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,91184545,Real,Proposes a semi-automatic method for high-quality clean image generation from real rain images and introduces SPANet for rain streak removal.,1
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,84187160,Real,"Evaluates single image deraining algorithms using the MPID benchmark, covering various rain types and diverse evaluation criteria.",0
