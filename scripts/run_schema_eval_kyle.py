@@ -172,18 +172,6 @@ def dummy_test_llama3_schema_alignment():
         values=target_table_values,
     )
 
-    # decontext featurization
-    # llama3's kind of verbose, but pretty good
-    # decontext_feat = DecontextFeaturizer("decontext", model="meta-llama/Llama-3-70b-chat-hf")
-    # mistral's decontext is a bit too wordy & extra stuff
-    # decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mistral-7B-Instruct-v0.2")
-    # excellent!
-    decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mixtral-8x7B-Instruct-v0.1")
-    column_names = list(pred_table_values.keys())
-    features = decontext_feat.featurize(column_names=column_names, table=pred_table)
-    column_name_to_feature = {column_name: feature for column_name, feature in zip(column_names, features)}
-    table_id_to_decontext = {pred_table.tabid: column_name_to_feature}
-
     # now im gonna try to use llama3, but allowing different variations of featurization
     # OK; i walked through the code, and the full table is displayed regardless of featurization
     alignments = llama3scorer.score_schema_alignments(
@@ -414,7 +402,7 @@ if __name__ == "__main__":
             f.write(f"{k}: {v} / {setting_metric_to_slots[k]} = {round(v / setting_metric_to_slots[k], 2)}\n")
 
     # sample metric calculation
-    with open(f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics.txt", "w") as f:
+    with open(f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics.txt", "a") as f:
         for setting in MAPPING.keys():
             instance_id_to_gold_tables = open_gold_tables(MAPPING[setting]["gold_file"])
             for base_model in ["gpt3.5", "mixtral"]:
@@ -423,18 +411,24 @@ if __name__ == "__main__":
                 else:
                     pred_tables = open_pred_tables(setting=setting, base_model=base_model)
                 for threshold in [0.1, 0.3, 0.5, 0.7, 0.9]:
-                    METRIC = SchemaRecallMetric(
-                        featurizer=name_feat, alignment_scorer=jscorer_nostop, sim_threshold=threshold
-                    )
-                    for pred_table in pred_tables:
-                        gold_table = instance_id_to_gold_tables[pred_table.tabid]
-                        METRIC.add(pred_table, gold_table)
-                    # now export it all
-                    scores_dict = METRIC.process_scores()
-                    f.write(f"{setting}__{base_model}__{threshold}\n")
-                    json.dump(scores_dict, f)
-                    f.write("\n\n")
-                    print(f"{setting}__{base_model}__{threshold}")
+                    for scorer in [emscorer, jscorer_nostop]:
+                        for featurizer in [
+                            # name_feat,
+                            value_feat
+                        ]:
+                            METRIC = SchemaRecallMetric(
+                                featurizer=featurizer, alignment_scorer=scorer, sim_threshold=threshold
+                            )
+                            for pred_table in tqdm(pred_tables):
+                                gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                                METRIC.add(pred_table, gold_table)
+                            # now export it all
+                            scores_dict = METRIC.process_scores()
+                            f.write(
+                                f"config={setting}__model={base_model}__threshold={threshold}__scorer={scorer.name}__featurizer={featurizer.name}\n"
+                            )
+                            json.dump(scores_dict, f)
+                            f.write("\n\n")
 
     # precomputing decontext information
     CACHE_DECONTEXT_DIR = "/Users/kylel/ai2/paper_comparison_internal/final_data/decontext/"
