@@ -221,3 +221,12 @@ assert len(set([instance_dict["prompt_method"] for instance_dict in instance_dic
 
 print(f"Number of instances: {len(instance_dicts)}")
 ```
+
+
+### baseline data
+
+The baseline prediction files are different:
+
+1. There is no separate `schema` and `values` files. It's just one set of files. 
+2. They should be `try_0.json` not `try_0_with_values.json`
+3. They have two prompt methods, `ours_outputs` and `baseline_outputs`, whereas other prediction files should only have `ours_outputs`. Let's use `baseline_outputs` as the baseline.
