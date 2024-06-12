@@ -39,6 +39,7 @@ from collections import Counter
 from glob import glob
 
 import pandas as pd
+from tqdm import tqdm
 
 from paper_comparison.metrics import SchemaRecallMetric
 from paper_comparison.metrics_utils import (
@@ -47,6 +48,7 @@ from paper_comparison.metrics_utils import (
     EditDistanceScorer,
     ExactMatchScorer,
     JaccardAlignmentScorer,
+    Llama3AlignmentScorer,
     SentenceTransformerAlignmentScorer,
     ValueFeaturizer,
 )
@@ -64,6 +66,7 @@ edscorer = EditDistanceScorer()
 jscorer = JaccardAlignmentScorer(remove_stopwords=False)
 jscorer_nostop = JaccardAlignmentScorer(remove_stopwords=True)
 stscorer = SentenceTransformerAlignmentScorer()
+llama3scorer = Llama3AlignmentScorer()
 
 
 # featurization functions
@@ -124,6 +127,69 @@ def dummy_test_alignment_scorer():
     assert jscorer.calculate_pair_similarity(prediction="a", target="a b") == 0.5
     scores = stscorer.calculate_pair_similarity(predictions=["a jumping cat"], targets=["a hopping kitten"])
     assert scores.tolist()[0][0] > 0.6
+
+
+def dummy_test_llama3_schema_alignment():
+    pred_table_values = {
+        "Studies decontextualization?": {"choi21": ["yes"], "newman23": ["yes"], "potluri23": ["no"]},
+        "What is their data source?": {
+            "choi21": ["Wikipedia"],
+            "newman23": ["Scientific Papers"],
+            "potluri23": ["ELI5"],
+        },
+        "What field are they in?": {"choi21": ["NLP"], "newman23": ["NLP"], "potluri23": ["NLP"]},
+        "What task do they study?": {
+            "choi21": ["decontextualization"],
+            "newman23": ["decontextualization"],
+            "potluri23": ["long-answer summarization"],
+        },
+    }
+
+    target_table_values = {
+        "Decontext": {"choi21": ["yes"], "newman23": ["yes"], "potluri23": ["no"]},
+        "Data": {
+            "choi21": ["Wikipedia"],
+            "newman23": ["Scientific Papers"],
+            "potluri23": ["ELI5"],
+        },
+        "Field": {"choi21": ["NLP"], "newman23": ["NLP"], "potluri23": ["NLP"]},
+        "Task": {
+            "choi21": ["decontextualization"],
+            "newman23": ["decontextualization"],
+            "potluri23": ["long-answer summarization"],
+        },
+    }
+
+    pred_table = Table(
+        tabid="0",
+        schema=set(pred_table_values.keys()),
+        values=pred_table_values,
+    )
+
+    target_table = Table(
+        tabid="0",
+        schema=set(target_table_values.keys()),
+        values=target_table_values,
+    )
+
+    # decontext featurization
+    # llama3's kind of verbose, but pretty good
+    # decontext_feat = DecontextFeaturizer("decontext", model="meta-llama/Llama-3-70b-chat-hf")
+    # mistral's decontext is a bit too wordy & extra stuff
+    # decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mistral-7B-Instruct-v0.2")
+    # excellent!
+    decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mixtral-8x7B-Instruct-v0.1")
+    column_names = list(pred_table_values.keys())
+    features = decontext_feat.featurize(column_names=column_names, table=pred_table)
+    column_name_to_feature = {column_name: feature for column_name, feature in zip(column_names, features)}
+    table_id_to_decontext = {pred_table.tabid: column_name_to_feature}
+
+    # now im gonna try to use llama3, but allowing different variations of featurization
+    # OK; i walked through the code, and the full table is displayed regardless of featurization
+    alignments = llama3scorer.score_schema_alignments(
+        pred_table=pred_table, gold_table=target_table, featurizer=name_feat
+    )
+    print(alignments)
 
 
 def dummy_test_featurizer():
@@ -312,6 +378,14 @@ if __name__ == "__main__":
                     )
                     f.write(f"{table_to_dataframe(pred_table).to_markdown(index=False)}\n")
                     f.write(
+                        f"------------------------------------------------------------------------------------------------\n\n"
+                    )
+
+                    alignments = llama3scorer.score_schema_alignments(pred_table=pred_table, gold_table=gold_table)
+                    for (gold_column, pred_column), score in alignments.items():
+                        if score == 1.0:
+                            f.write(f"{pred_column} <--> {gold_column}\n")
+                    f.write(
                         f"================================================================================================\n\n\n\n"
                     )
 
@@ -361,3 +435,25 @@ if __name__ == "__main__":
                     json.dump(scores_dict, f)
                     f.write("\n\n")
                     print(f"{setting}__{base_model}__{threshold}")
+
+    # precomputing decontext information
+    CACHE_DECONTEXT_DIR = "/Users/kylel/ai2/paper_comparison_internal/final_data/decontext/"
+    os.makedirs(CACHE_DECONTEXT_DIR, exist_ok=True)
+    decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mixtral-8x7B-Instruct-v0.1")
+    for setting in MAPPING.keys():
+        instance_id_to_gold_tables = open_gold_tables(MAPPING[setting]["gold_file"])
+        for base_model in ["gpt3.5", "mixtral"]:
+            if "baseline" in setting:
+                pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+            else:
+                pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+            for pred_table in tqdm(pred_tables):
+                column_names = list(pred_table.values.keys())
+                features = decontext_feat.featurize(column_names=column_names, table=pred_table)
+                column_name_to_feature = {
+                    column_name: feature for column_name, feature in zip(column_names, features)
+                }
+                table_id_to_decontext = {pred_table.tabid: column_name_to_feature}
+                outfile = os.path.join(CACHE_DECONTEXT_DIR, f"{setting}__{base_model}__{pred_table.tabid}.json")
+                with open(outfile, "w") as f:
+                    json.dump(table_id_to_decontext, f, indent=4)
