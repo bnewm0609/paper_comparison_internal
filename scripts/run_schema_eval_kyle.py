@@ -65,6 +65,7 @@ jscorer = JaccardAlignmentScorer(remove_stopwords=False)
 jscorer_nostop = JaccardAlignmentScorer(remove_stopwords=True)
 stscorer = SentenceTransformerAlignmentScorer()
 
+
 # featurization functions
 name_feat = BaseFeaturizer("name")
 value_feat = ValueFeaturizer("values")
@@ -98,7 +99,6 @@ MAPPING = {
 
 def validate_data_paths():
     for setting, paths in MAPPING.items():
-        assert os.path.exists(paths["schema_pred_dir"])
         assert os.path.exists(paths["value_pred_dir"])
         assert os.path.exists(paths["gold_file"])
 
@@ -192,7 +192,7 @@ def get_instance_dicts(pred_dir: str) -> list[dict]:
     return instance_dicts
 
 
-def open_pred_table(file):
+def _open_pred_table(file):
     """Opens up table object
 
     Test:
@@ -214,12 +214,14 @@ def open_pred_tables(setting: str, base_model: str) -> list:
 
     instance_dicts = get_instance_dicts(pred_dir)
     instance_dicts = [
-        d for d in instance_dicts if d["try_num"] == "try_0_with_values.json" and d["base_model"] == base_model
+        d
+        for d in instance_dicts
+        if d["try_num"] == "try_0_with_better_values.json" and d["base_model"] == base_model
     ]
 
     pred_tables = []
     for instance_dict in instance_dicts:
-        pred_table = open_pred_table(file=instance_dict["path"])
+        pred_table = _open_pred_table(file=instance_dict["path"])
         pred_tables.append(pred_table)
     return pred_tables
 
@@ -243,7 +245,7 @@ def open_baseline_tables(setting: str, base_model: str) -> list:
 
     pred_tables = []
     for instance_dict in instance_dicts:
-        pred_table = open_pred_table(file=instance_dict["path"])
+        pred_table = _open_pred_table(file=instance_dict["path"])
         pred_tables.append(pred_table)
     return pred_tables
 
@@ -278,43 +280,6 @@ def table_to_dataframe(table: Table) -> pd.DataFrame:
     return df
 
 
-def sample_and_visualize_gold_vs_pred(
-    setting: str, base_model: str, outfile: str, num_samples: int = 10, seed: int = 42
-):
-    """Samples and visualizes gold vs pred"""
-    gold_file = MAPPING[setting]["gold_file"]
-
-    # load gold data as a lookup dict
-    instance_id_to_gold_tables = open_gold_tables(gold_file)
-
-    # load predictions
-    if "baseline" in setting:
-        pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
-    else:
-        pred_tables = open_pred_tables(setting=setting, base_model=base_model)
-
-    # bulk visualize gold alongside predictions
-    random.seed(seed)
-    pred_tables = random.sample(pred_tables, num_samples)
-
-    # write
-    with open(outfile, "w") as f:
-        for pred_table in pred_tables:
-            gold_table = instance_id_to_gold_tables[pred_table.tabid]
-            f.write(
-                f"======================================={pred_table.tabid}============================================\n"
-            )
-            f.write(f"{table_to_dataframe(gold_table).to_markdown(index=False)}\n\n")
-            f.write(f"Table X: {gold_table.caption}\n\n")
-            f.write(
-                f"------------------------------------------------------------------------------------------------\n\n"
-            )
-            f.write(f"{table_to_dataframe(pred_table).to_markdown(index=False)}\n")
-            f.write(
-                f"================================================================================================\n\n\n\n"
-            )
-
-
 if __name__ == "__main__":
     # sample some files to visualize
     OUTDIR = "/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/"
@@ -322,9 +287,33 @@ if __name__ == "__main__":
     for setting in MAPPING.keys():
         for base_model in ["gpt3.5", "mixtral"]:
             outfile = os.path.join(OUTDIR, f"{setting}__{base_model}.txt")
-            sample_and_visualize_gold_vs_pred(
-                setting=setting, base_model=base_model, outfile=outfile, num_samples=10
-            )
+
+            gold_file = MAPPING[setting]["gold_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file)
+
+            if "baseline" in setting:
+                pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+            else:
+                pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+
+            random.seed(42)
+            pred_tables = random.sample(pred_tables, 10)
+
+            with open(outfile, "w") as f:
+                for pred_table in pred_tables:
+                    gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                    f.write(
+                        f"======================================={pred_table.tabid}============================================\n"
+                    )
+                    f.write(f"{table_to_dataframe(gold_table).to_markdown(index=False)}\n\n")
+                    f.write(f"Table X: {gold_table.caption}\n\n")
+                    f.write(
+                        f"------------------------------------------------------------------------------------------------\n\n"
+                    )
+                    f.write(f"{table_to_dataframe(pred_table).to_markdown(index=False)}\n")
+                    f.write(
+                        f"================================================================================================\n\n\n\n"
+                    )
 
     # count N/A in pred tables
     setting_metric_to_nas = Counter()
@@ -355,7 +344,10 @@ if __name__ == "__main__":
         for setting in MAPPING.keys():
             instance_id_to_gold_tables = open_gold_tables(MAPPING[setting]["gold_file"])
             for base_model in ["gpt3.5", "mixtral"]:
-                pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                if "baseline" in setting:
+                    pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                else:
+                    pred_tables = open_pred_tables(setting=setting, base_model=base_model)
                 for threshold in [0.1, 0.3, 0.5, 0.7, 0.9]:
                     METRIC = SchemaRecallMetric(
                         featurizer=name_feat, alignment_scorer=jscorer_nostop, sim_threshold=threshold
@@ -363,7 +355,8 @@ if __name__ == "__main__":
                     for pred_table in pred_tables:
                         gold_table = instance_id_to_gold_tables[pred_table.tabid]
                         METRIC.add(pred_table, gold_table)
-                        scores_dict = METRIC.process_scores()
+                    # now export it all
+                    scores_dict = METRIC.process_scores()
                     f.write(f"{setting}__{base_model}__{threshold}\n")
                     json.dump(scores_dict, f)
                     f.write("\n\n")
