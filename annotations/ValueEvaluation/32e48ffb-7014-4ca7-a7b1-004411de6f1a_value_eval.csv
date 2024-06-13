@@ -1,15 +1,15 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,253419714,InterPro,InterPro
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,226207258,Pfam,Pfam
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,7131460,PROSITE,PROSITE
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,8220845,TIGRFAMs,TIGRFAMs
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,225081764,SMART,SMART
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,10551590,PRINTS,PRINTS
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,15582991,HAMAP,HAMAP
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,253419714,431,"AlphaFold, RoseTTAFold"
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,226207258,139,Models for SARS-CoV-2 proteins
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,7131460,51,1039 profiles (PROSITE)
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,8220845,55,Mentions 'Models' multiple times
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,225081764,11,Mentions existence of models
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,10551590,1,Models as fingerprints for protein families
-32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,15582991,1,"1983 family classification profiles, 1998 annotation rules"
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,253419714,InterPro,InterPro,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,226207258,Pfam,Pfam,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,7131460,PROSITE,PROSITE,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,8220845,TIGRFAMs,TIGRFAMs,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,225081764,SMART,SMART,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,10551590,PRINTS,PRINTS,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,15582991,HAMAP,HAMAP,1
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,253419714,431,"AlphaFold, RoseTTAFold",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,226207258,139,Models for SARS-CoV-2 proteins,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,7131460,51,1039 profiles (PROSITE),0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,8220845,55,Mentions 'Models' multiple times,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,225081764,11,Mentions existence of models,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,10551590,1,Models as fingerprints for protein families,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,15582991,1,"1983 family classification profiles, 1998 annotation rules",0

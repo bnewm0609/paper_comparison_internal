@@ -1,21 +1,21 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,743641,global,Explores large model-architecture spaces with flexible configurations in neuro-evolution.
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,206770867,global,Uses genetic algorithms to automatically learn deep network structures.
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,7315023,global,"Designs CNN architectures using Cartesian genetic programming, detailed in Sections 3.1 and 4.3."
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,23873820,cell-based,Consists of operations and motifs combined to form neural network architectures.
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,26945723,global,Mentions search space.
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,743641,simple,Simple linear regression models as initial conditions
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,206770867,random,Randomized models initialization
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,7315023,random,Random initial individual for CNN
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,23873820,random,Trivial genotype with random mutations
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,26945723,simple,"Starts with small, possibly pretrained network"
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,743641,tournament,Uses parent selection
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,206770867,all,Discusses selection process
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,7315023,-,Uses a modified (1 + λ) evolutionary strategy with λ = 2
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,23873820,tournament,Does not mention parent selection
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,26945723,-,Mentions parent selection
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,743641,tournament,"Worst individual removed, best selected for reproduction"
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,206770867,fitness prop.,Mentions selection process in genetic algorithm
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,7315023,elitist,Uses ConvBlock and ResBlock in CGP-based CNN architecture construction
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,23873820,all,Evolutionary search treats Sect. 2 representations as genotypes
-3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,26945723,elitist,Iterative approach with network morphisms and cosine annealing optimization
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,743641,global,Explores large model-architecture spaces with flexible configurations in neuro-evolution.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,206770867,global,Uses genetic algorithms to automatically learn deep network structures.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,7315023,global,"Designs CNN architectures using Cartesian genetic programming, detailed in Sections 3.1 and 4.3.",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,23873820,cell-based,Consists of operations and motifs combined to form neural network architectures.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,26945723,global,Mentions search space.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,743641,simple,Simple linear regression models as initial conditions,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,206770867,random,Randomized models initialization,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,7315023,random,Random initial individual for CNN,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,23873820,random,Trivial genotype with random mutations,0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,26945723,simple,"Starts with small, possibly pretrained network",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,743641,tournament,Uses parent selection,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,206770867,all,Discusses selection process,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,7315023,-,Uses a modified (1 + λ) evolutionary strategy with λ = 2,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,23873820,tournament,Does not mention parent selection,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,26945723,-,Mentions parent selection,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,743641,tournament,"Worst individual removed, best selected for reproduction",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,206770867,fitness prop.,Mentions selection process in genetic algorithm,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,7315023,elitist,Uses ConvBlock and ResBlock in CGP-based CNN architecture construction,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,23873820,all,Evolutionary search treats Sect. 2 representations as genotypes,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,26945723,elitist,Iterative approach with network morphisms and cosine annealing optimization,0

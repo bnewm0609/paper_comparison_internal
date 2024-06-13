@@ -1,13 +1,13 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,47018956,500,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220363476,1000,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221879032,1500,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220647438,1000,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,237497467,400,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221534325,2000,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,47018956,128,Hidden dimension assumed to be consistent across layers
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220363476,256,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221879032,256,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220647438,256,N/A
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,237497467,-,Hidden dimension: 64
-4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221534325,128,Hidden dimension described for GNN layers
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,47018956,500,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220363476,1000,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221879032,1500,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220647438,1000,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,237497467,400,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221534325,2000,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,47018956,128,Hidden dimension assumed to be consistent across layers,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220363476,256,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221879032,256,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220647438,256,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,237497467,-,Hidden dimension: 64,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221534325,128,Hidden dimension described for GNN layers,0

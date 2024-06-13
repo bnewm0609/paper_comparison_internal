@@ -1,5 +1,5 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,11028164,non-Gaussian interferers,Yes
-33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,19505,"SCSIT, PCSIR",Yes
-33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,11028164,the optimal precoders which maximize the sum-rate,"Derivation of an explicit expression for the asymptotic achievable sum-rate of MIMO MAC considering interference, spatial correlation, and non-Gaussian signals; includes a precoder optimization algorithm."
-33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,19505,Propose an efficient iterative algorithm to maximize WSR,Development of an iterative algorithm for linear precoder design in MIMO MAC with statistical CSI.
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,11028164,non-Gaussian interferers,Yes,0
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,19505,"SCSIT, PCSIR",Yes,0
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,11028164,the optimal precoders which maximize the sum-rate,"Derivation of an explicit expression for the asymptotic achievable sum-rate of MIMO MAC considering interference, spatial correlation, and non-Gaussian signals; includes a precoder optimization algorithm.",1
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,19505,Propose an efficient iterative algorithm to maximize WSR,Development of an iterative algorithm for linear precoder design in MIMO MAC with statistical CSI.,0.5

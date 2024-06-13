@@ -1,43 +1,43 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,239998781,generate questions from double graphs,CRIC
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,219558583,reorganization on GQA,GQA-OOD
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,62902119,rephrasing on VQA v2,VQA-Rephrasings
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,233168594,reorganization on VQA v2,VQA-CounterExamples (VQA-CE)
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,252780087,reorganization on VQA v2,VQA-VS
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235266220,human-and-model-in-the-loop,AVQA
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235352921,human-and-model-in-the-loop,Adversarial VQA (AdVQA)
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,239998781,Visual Genome,N/A
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,219558583,Visual Genome,N/A
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,62902119,COCO,N/A
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,233168594,COCO,Introduces VQACE to assess reliance on shortcuts in VQA models.
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,252780087,COCO,N/A
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235266220,CC/Fakeddit/VCR,"Uses AVQA dataset from Conceptual Captions, Fakeddit, VCR"
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235352921,COCO,Discusses image source importance and biases in VQA datasets
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,239998781,commonsense,introduces CRIC dataset for compositional reasoning
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,219558583,language bias,focuses on evaluating prediction error distribution and accuracy on infrequent vs. frequent concepts in VQA models
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,62902119,language bias,improves robustness to linguistic variations
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,233168594,natural shortcuts,evaluates multimodal shortcuts
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,252780087,natural shortcuts,constructs VQA-VS for evaluating reasoning in shortcut learning
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235266220,adversarial robustness,"focuses on evaluating robustness of VQA models with AVQA dataset, discusses limitations of existing benchmarks, and explores model architectures and adversarial training"
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235352921,adversarial robustness,"analyzes performance of VQA models using AdVQA dataset, identifies underperformance in reading text, counting, handling rare concepts, and multimodal understanding"
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,239998781,✓,"Introduces CRIC dataset for compositional reasoning in VQA, with multi-hop reasoning and non-visual knowledge evaluation."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,219558583,✓,"Introduces GQA-OOD benchmark for evaluating VQA models in OOD settings, focusing on infrequent question-answer pairs."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,62902119,✗,Proposes a model-agnostic framework using cycle consistency to enhance VQA model robustness to linguistic question variations.
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,233168594,✗,"Introduces VQACE protocol to evaluate shortcut learning in VQA, highlighting poor performance of state-of-the-art models on shortcuts."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,252780087,✓,"Proposes VQA-VS dataset to explore various shortcuts in VQA, including nine OOD test sets for different shortcuts."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235266220,✗,Introduces Adversarial VQA benchmark to evaluate robustness of VQA models across diverse robustness types and domains.
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235352921,✗,"Discusses AdVQA dataset designed to stress test VQA models, identifying multiple shortcomings in handling complex VQA tasks."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,239998781,✗,N/A
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,219558583,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,62902119,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,233168594,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,252780087,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235266220,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235352921,✓,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,239998781,composite metrics,Yes
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,219558583,composite metrics,"Yes, metrics include: Acc-tail, Acc-head, Acc-all."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,62902119,consensus score,"Yes, metrics related to robustness on VQA-Rephrasings dataset."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,233168594,open-ended accuracy,"Yes, introduces VQA-CounterExamples (VQACE) evaluation protocol; evaluates models' accuracy on counterexamples and effectiveness of bias-reduction methods."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,252780087,open-ended accuracy,"Yes, metrics include: accuracy (tail, head), Jaccard Similarity, normalized entropy."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235266220,open-ended accuracy,"Yes, evaluates performance on AVQA dataset and other robust VQA benchmarks."
-8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235352921,open-ended accuracy,Yes
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,239998781,generate questions from double graphs,CRIC,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,219558583,reorganization on GQA,GQA-OOD,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,62902119,rephrasing on VQA v2,VQA-Rephrasings,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,233168594,reorganization on VQA v2,VQA-CounterExamples (VQA-CE),0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,252780087,reorganization on VQA v2,VQA-VS,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235266220,human-and-model-in-the-loop,AVQA,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235352921,human-and-model-in-the-loop,Adversarial VQA (AdVQA),0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,239998781,Visual Genome,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,219558583,Visual Genome,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,62902119,COCO,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,233168594,COCO,Introduces VQACE to assess reliance on shortcuts in VQA models.,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,252780087,COCO,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235266220,CC/Fakeddit/VCR,"Uses AVQA dataset from Conceptual Captions, Fakeddit, VCR",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235352921,COCO,Discusses image source importance and biases in VQA datasets,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,239998781,commonsense,introduces CRIC dataset for compositional reasoning,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,219558583,language bias,focuses on evaluating prediction error distribution and accuracy on infrequent vs. frequent concepts in VQA models,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,62902119,language bias,improves robustness to linguistic variations,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,233168594,natural shortcuts,evaluates multimodal shortcuts,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,252780087,natural shortcuts,constructs VQA-VS for evaluating reasoning in shortcut learning,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235266220,adversarial robustness,"focuses on evaluating robustness of VQA models with AVQA dataset, discusses limitations of existing benchmarks, and explores model architectures and adversarial training",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235352921,adversarial robustness,"analyzes performance of VQA models using AdVQA dataset, identifies underperformance in reading text, counting, handling rare concepts, and multimodal understanding",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,239998781,✓,"Introduces CRIC dataset for compositional reasoning in VQA, with multi-hop reasoning and non-visual knowledge evaluation.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,219558583,✓,"Introduces GQA-OOD benchmark for evaluating VQA models in OOD settings, focusing on infrequent question-answer pairs.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,62902119,✗,Proposes a model-agnostic framework using cycle consistency to enhance VQA model robustness to linguistic question variations.,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,233168594,✗,"Introduces VQACE protocol to evaluate shortcut learning in VQA, highlighting poor performance of state-of-the-art models on shortcuts.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,252780087,✓,"Proposes VQA-VS dataset to explore various shortcuts in VQA, including nine OOD test sets for different shortcuts.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235266220,✗,Introduces Adversarial VQA benchmark to evaluate robustness of VQA models across diverse robustness types and domains.,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235352921,✗,"Discusses AdVQA dataset designed to stress test VQA models, identifying multiple shortcomings in handling complex VQA tasks.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,239998781,✗,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,219558583,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,62902119,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,233168594,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,252780087,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235266220,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235352921,✓,Yes,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,239998781,composite metrics,Yes,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,219558583,composite metrics,"Yes, metrics include: Acc-tail, Acc-head, Acc-all.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,62902119,consensus score,"Yes, metrics related to robustness on VQA-Rephrasings dataset.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,233168594,open-ended accuracy,"Yes, introduces VQA-CounterExamples (VQACE) evaluation protocol; evaluates models' accuracy on counterexamples and effectiveness of bias-reduction methods.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,252780087,open-ended accuracy,"Yes, metrics include: accuracy (tail, head), Jaccard Similarity, normalized entropy.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235266220,open-ended accuracy,"Yes, evaluates performance on AVQA dataset and other robust VQA benchmarks.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235352921,open-ended accuracy,Yes,0

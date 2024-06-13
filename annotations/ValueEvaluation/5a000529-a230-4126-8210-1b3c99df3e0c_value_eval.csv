@@ -1,16 +1,16 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-5a000529-a230-4126-8210-1b3c99df3e0c,# Images,173991173,"14,031","14,031 images"
-5a000529-a230-4126-8210-1b3c99df3e0c,# Images,214612106,"4,998","4,998 images"
-5a000529-a230-4126-8210-1b3c99df3e0c,# Images,231951663,642,642 images
-5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,173991173,"14,055","14,000 question-answer pairs"
-5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,214612106,"32,799","32,799 question-answer pairs"
-5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,231951663,14K,"14,028 question-answer pairs"
-5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,173991173,Microsoft COCO,COCO dataset
-5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,214612106,Electronic pathology textbooksPEIR Digital Library,Pathology textbooks and PEIR Digital Library
-5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,231951663,"Medical Segmentation Decathlon{{cite:ac0f04b}},NIH Chest X-ray{{cite:004b57b}},CHAOS{{cite:048f533}}:- Chest X-rays/CTs- Abdomen CTs/MRIs- Head CTs/MRIs- Neck CTs- Pelvic cavity CTs","SLAKE dataset: Open source datasets [7], [8], [9]"
-5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,173991173,Manual,OK-VQA
-5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,214612106,Synthetical,Yes
-5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,231951663,Manual,Yes
-5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,173991173,- External knowledge,"Categories: Vehicles and Transportation, Brands, Companies and Products, Objects, Materials and Clothing, Sports and Recreation, Cooking and Food, Geography, History, Language and Culture, People and Everyday Life, Plants and Animals, Science and Technology, Weather and Climate"
-5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,214612106,- Color- Location- Appearance- Shape- etc.,"Categories: What, Where, When, Whose, How, How much/How many, Yes/No"
-5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,231951663,- Organ- Position- Knowledge Graph- Abnormality- Modality- Plane- Quality- Color- Size- Shape,Category information provided
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,173991173,"14,031","14,031 images",1
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,214612106,"4,998","4,998 images",1
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,231951663,642,642 images,1
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,173991173,"14,055","14,000 question-answer pairs",1
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,214612106,"32,799","32,799 question-answer pairs",1
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,231951663,14K,"14,028 question-answer pairs",1
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,173991173,Microsoft COCO,COCO dataset,1
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,214612106,Electronic pathology textbooksPEIR Digital Library,Pathology textbooks and PEIR Digital Library,1
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,231951663,"Medical Segmentation Decathlon{{cite:ac0f04b}},NIH Chest X-ray{{cite:004b57b}},CHAOS{{cite:048f533}}:- Chest X-rays/CTs- Abdomen CTs/MRIs- Head CTs/MRIs- Neck CTs- Pelvic cavity CTs","SLAKE dataset: Open source datasets [7], [8], [9]",0
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,173991173,Manual,OK-VQA,0
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,214612106,Synthetical,Yes,0
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,231951663,Manual,Yes,0
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,173991173,- External knowledge,"Categories: Vehicles and Transportation, Brands, Companies and Products, Objects, Materials and Clothing, Sports and Recreation, Cooking and Food, Geography, History, Language and Culture, People and Everyday Life, Plants and Animals, Science and Technology, Weather and Climate",0
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,214612106,- Color- Location- Appearance- Shape- etc.,"Categories: What, Where, When, Whose, How, How much/How many, Yes/No",0
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,231951663,- Organ- Position- Knowledge Graph- Abnormality- Modality- Plane- Quality- Color- Size- Shape,Category information provided,0

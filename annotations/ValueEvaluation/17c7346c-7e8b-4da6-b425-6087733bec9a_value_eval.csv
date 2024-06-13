@@ -1,5 +1,5 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,216061041,Epidemic transition and spread,"Proposes a new epidemic model to predict trends, plan strategies, and assess countermeasures based on diagnosis and symptom severity."
-17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,215416303,External factor's epidemic influence,"Examines effects of age-heterogeneous mitigations on epidemic trends, demonstrating reduced mortality and ICU usage compared to homogeneous strategies."
-17c7346c-7e8b-4da6-b425-6087733bec9a,Data,216061041,"Case numbers, external data, etc.",Data used: Diagnosed infected and recovered patients; Deaths data not used.
-17c7346c-7e8b-4da6-b425-6087733bec9a,Data,215416303,"Case numbers, demographics, health conditions, social activities, environmental factors, etc.",Data used: Age-heterogeneous contact patterns in the U.S.; Age-based mitigation strategies.
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,216061041,Epidemic transition and spread,"Proposes a new epidemic model to predict trends, plan strategies, and assess countermeasures based on diagnosis and symptom severity.",1
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,215416303,External factor's epidemic influence,"Examines effects of age-heterogeneous mitigations on epidemic trends, demonstrating reduced mortality and ICU usage compared to homogeneous strategies.",1
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,216061041,"Case numbers, external data, etc.",Data used: Diagnosed infected and recovered patients; Deaths data not used.,0
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,215416303,"Case numbers, demographics, health conditions, social activities, environmental factors, etc.",Data used: Age-heterogeneous contact patterns in the U.S.; Age-based mitigation strategies.,0

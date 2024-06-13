@@ -1,25 +1,25 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,222080212,2021,2020
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,229180865,2020,2020
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,59336326,2019,2018
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,53042199,2019,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,13241073,2018,2017
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,1044188,2018,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,222080212,VirusTotal,"Multiple datasets including EMBER and data from VirusTotal, Reversing Labs, FireEye"
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,229180865,VirusTotal,"VirusTotal, Reversing Labs, FireEye, EMBER dataset"
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,59336326,VirusTotal,"Dataset with 500,000 files (250,000 benign, 250,000 malware)"
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,53042199,"VirusTotal, Reversing Labs, FireEye","VirusTotal, Reversing Labs, FireEye, EMBER dataset"
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,13241073,VirusTotal,"Datasets include malware samples from Virus Share, ransomware, Virut, and BrowseFox samples from VirusTotal"
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,1044188,Malwr dataset,Data sourced from a malware analysis website using virtual machines for API sequence collection
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,222080212,Genetic Programming,Black-box attack with content injection preserving functionality
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,229180865,Generative RNN,Deep learning-based MalRNN generating evasive variants
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,59336326,GAN,"The paper evaluates several attack methods, including gradient-based attacks, random perturbation attacks, and adaptive white-box attacks."
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,53042199,Append Attack,Appending noise and modifying non-mapped executable regions
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,13241073,Deep RL,Reinforcement learning for manipulating static PE files
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,1044188,Generative RNN,Generative RNN approach for sequential adversarial examples
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,222080212,Unlimited,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,229180865,Unlimited,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,59336326,Multiple,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,53042199,Single,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,13241073,Multiple,N/A
-8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,1044188,Multiple,N/A
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,222080212,2021,2020,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,229180865,2020,2020,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,59336326,2019,2018,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,53042199,2019,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,13241073,2018,2017,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,1044188,2018,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,222080212,VirusTotal,"Multiple datasets including EMBER and data from VirusTotal, Reversing Labs, FireEye",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,229180865,VirusTotal,"VirusTotal, Reversing Labs, FireEye, EMBER dataset",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,59336326,VirusTotal,"Dataset with 500,000 files (250,000 benign, 250,000 malware)",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,53042199,"VirusTotal, Reversing Labs, FireEye","VirusTotal, Reversing Labs, FireEye, EMBER dataset",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,13241073,VirusTotal,"Datasets include malware samples from Virus Share, ransomware, Virut, and BrowseFox samples from VirusTotal",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,1044188,Malwr dataset,Data sourced from a malware analysis website using virtual machines for API sequence collection,0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,222080212,Genetic Programming,Black-box attack with content injection preserving functionality,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,229180865,Generative RNN,Deep learning-based MalRNN generating evasive variants,0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,59336326,GAN,"The paper evaluates several attack methods, including gradient-based attacks, random perturbation attacks, and adaptive white-box attacks.",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,53042199,Append Attack,Appending noise and modifying non-mapped executable regions,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,13241073,Deep RL,Reinforcement learning for manipulating static PE files,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,1044188,Generative RNN,Generative RNN approach for sequential adversarial examples,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,222080212,Unlimited,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,229180865,Unlimited,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,59336326,Multiple,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,53042199,Single,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,13241073,Multiple,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,1044188,Multiple,N/A,0

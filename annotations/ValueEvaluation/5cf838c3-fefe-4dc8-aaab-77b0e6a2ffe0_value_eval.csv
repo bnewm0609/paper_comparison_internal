@@ -1,19 +1,19 @@
-Table ID,Column,Corpus ID,Gold Value,Predicted Value
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,5741060,citation network,Application of Google PageRank to citation network analysis
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,1749110,citation network,Use of CiteRank for ranking publications in citation networks
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,506530,"citation network, paper-author network, paper-journal",Analysis of scholarly network impact
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,5741060,yes,Homogeneous Network
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,1749110,yes,CiteRank Algorithm
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,506530,yes,Homogeneous Network
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,5741060,no,Application of Google PageRank to assess publication importance in Physical Review journals' citation network.
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,1749110,no,"Use of CiteRank for ranking publications in citation networks, highlighting aging effects and parameter correlations."
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,506530,yes,"Discussion on heterogeneous network aspects in scholarly article impact evaluation, proposing COIRank combining PageRank and HITS."
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,5741060,PageRank,mentions PageRank
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,1749110,PageRank,mentions CiteRank and PageRank
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,506530,"PageRank, HITS",mentions PageRank and other algorithms
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,5741060,It begins to use a structured approach to quantify paper impact.,Uses Google PageRank to measure importance of scientific publications.
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,1749110,It promotes the impact of recent publications.,"Uses CiteRank for ranking publications, refining rankings by considering the importance of the citing article and the age of the citation."
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,506530,It can distinguish the importance of citation in heterogeneous scholarly network.,"Uses COIRank for assessing impact of scholarly articles, demonstrates significant outperformance over existing solutions using APS dataset."
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,5741060,It does not consider attenuation of paper impact over time.,N/A
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,1749110,It does not consider the impact of author and journal.,"Current methods of ranking publications are crude, treating all citations equally and ignoring the importance of citing papers."
-5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,506530,"COI relationship contains many factors, and it is not easy to mine.","Existing impact evaluation methods do not account for anomalous citations, which can manipulate article impacts."
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,5741060,citation network,Application of Google PageRank to citation network analysis,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,1749110,citation network,Use of CiteRank for ranking publications in citation networks,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,506530,"citation network, paper-author network, paper-journal",Analysis of scholarly network impact,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,5741060,yes,Homogeneous Network,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,1749110,yes,CiteRank Algorithm,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,506530,yes,Homogeneous Network,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,5741060,no,Application of Google PageRank to assess publication importance in Physical Review journals' citation network.,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,1749110,no,"Use of CiteRank for ranking publications in citation networks, highlighting aging effects and parameter correlations.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,506530,yes,"Discussion on heterogeneous network aspects in scholarly article impact evaluation, proposing COIRank combining PageRank and HITS.",1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,5741060,PageRank,mentions PageRank,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,1749110,PageRank,mentions CiteRank and PageRank,0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,506530,"PageRank, HITS",mentions PageRank and other algorithms,0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,5741060,It begins to use a structured approach to quantify paper impact.,Uses Google PageRank to measure importance of scientific publications.,0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,1749110,It promotes the impact of recent publications.,"Uses CiteRank for ranking publications, refining rankings by considering the importance of the citing article and the age of the citation.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,506530,It can distinguish the importance of citation in heterogeneous scholarly network.,"Uses COIRank for assessing impact of scholarly articles, demonstrates significant outperformance over existing solutions using APS dataset.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,5741060,It does not consider attenuation of paper impact over time.,N/A,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,1749110,It does not consider the impact of author and journal.,"Current methods of ranking publications are crude, treating all citations equally and ignoring the importance of citing papers.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,506530,"COI relationship contains many factors, and it is not easy to mine.","Existing impact evaluation methods do not account for anomalous citations, which can manipulate article impacts.",0
