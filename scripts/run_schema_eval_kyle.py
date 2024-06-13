@@ -79,23 +79,28 @@ decontext_feat = DecontextFeaturizer("decontext")
 MAPPING = {
     "metric_validation_0__title_abstract__baseline__gpt3.5_mixtral": {
         "value_pred_dir": "/Users/kylel/ai2/paper_comparison_internal/final_data/baseline/metric_validation_0/",
-        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
+        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl",
+        "metadata_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
     },
     "metric_validation_0__title_abstract__gen_caption__gpt_mixtral": {
         "value_pred_dir": "/Users/kylel/ai2/paper_comparison_internal/final_data/value_preds/metric_validation_0_setting2/",
-        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
+        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl",
+        "metadata_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
     },
     "metric_validation_0__title_abstract__gold_caption__gpt_mixtral": {
         "value_pred_dir": "/Users/kylel/ai2/paper_comparison_internal/final_data/value_preds/metric_validation_0_setting3/",
-        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
+        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl",
+        "metadata_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
     },
     "metric_validation_0__title_abstract__caption_inline_refs__gpt_mixtral": {
         "value_pred_dir": "/Users/kylel/ai2/paper_comparison_internal/final_data/value_preds/metric_validation_0_setting4/",
-        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
+        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl",
+        "metadata_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
     },
     "metric_validation_0__title_abstract__ics_example__gpt_mixtral": {
         "value_pred_dir": "/Users/kylel/ai2/paper_comparison_internal/final_data/value_preds/metric_validation_0_setting5/",
-        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
+        "gold_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl",
+        "metadata_file": "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl",
     },
 }
 
@@ -104,6 +109,7 @@ def validate_data_paths():
     for setting, paths in MAPPING.items():
         assert os.path.exists(paths["value_pred_dir"])
         assert os.path.exists(paths["gold_file"])
+        assert os.path.exists(paths["metadata_file"])
 
 
 def dummy_test_metric():
@@ -192,6 +198,9 @@ def dummy_test_featurizer():
     )
     # requires order, since the output of decontext assumes same order
     column_names = ["precision", "recall", "f1"]
+
+    # test value featurizer
+    results = value_feat.featurize(column_names=column_names, table=test_table)
 
     start = time.time()
     results = decontext_feat.featurize(column_names=column_names, table=test_table)
@@ -283,9 +292,10 @@ def open_pred_tables(setting: str, base_model: str) -> list:
 def open_baseline_tables(setting: str, base_model: str) -> list:
     pred_dir = MAPPING[setting]["value_pred_dir"]
     gold_file = MAPPING[setting]["gold_file"]
+    metadata_file = MAPPING[setting]["metadata_file"]
 
     # load gold data as a lookup dict
-    instance_id_to_gold_tables = open_gold_tables(gold_file)
+    instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
 
     instance_dicts = get_instance_dicts(pred_dir)
     instance_dicts = [
@@ -304,26 +314,44 @@ def open_baseline_tables(setting: str, base_model: str) -> list:
     return pred_tables
 
 
-def open_gold_tables(file) -> dict:
+def _open_instance_id_to_table_metadata(file) -> dict:
     """Opens up gold tables
 
     Test:
-        tables = open_gold_tables(file="/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl")
+        tables = open_instance_id_to_table_metadata(file="/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl")
     """
-    instance_id_to_table = {}
+    instance_id_to_table_metadata = {}
     with open(file, "r") as f:
         for line in f:
             table_dict = json.loads(line)
+            tabid = table_dict["_table_hash"]
+            caption = table_dict["caption"]
+            inline_ref = table_dict["in_text_ref"]
+            instance_id_to_table_metadata[tabid] = {"caption": caption, "inline_ref": inline_ref}
+    return instance_id_to_table_metadata
+
+
+def open_gold_tables(tables_path, metadata_path) -> dict:
+    """Opens up gold tables
+
+    Test:
+        tables = open_gold_tables(file="/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl")
+    """
+    instance_id_to_table_metadata = _open_instance_id_to_table_metadata(metadata_path)
+
+    instance_id_to_table = {}
+    with open(tables_path, "r") as f:
+        for line in f:
+            table_dict = json.loads(line)
+            tabid = table_dict["tabid"]
+            metadata_dict = instance_id_to_table_metadata[tabid]
             table = Table(
-                tabid=table_dict["_table_hash"],
-                schema=list(table_dict["table_json"]["table_dict"].keys()),
-                # schema=[k for k in table_dict["table_json"]["table_dict"].keys() if k != "References"],
-                values=table_dict["table_json"]["table_dict"],
-                # values={k: v for k, v in table_dict["table_json"]["table_dict"].items() if k != "References"},
-                caption=table_dict["caption"],
+                tabid=tabid,
+                schema=list(table_dict["table"].keys()),
+                values=table_dict["table"],
+                caption=metadata_dict["caption"],
             )
-            # table.row_ids = table_dict["table_json"]["table_dict"]["References"]
-            table.row_bib_map = table_dict["row_bib_map"]
+            table.inline_ref = metadata_dict["inline_ref"]
             instance_id_to_table[table.tabid] = table
     return instance_id_to_table
 
@@ -332,6 +360,16 @@ def table_to_dataframe(table: Table) -> pd.DataFrame:
     """Converts a Table object to a pandas DataFrame"""
     df = pd.DataFrame(data=table.values)
     return df
+
+
+def metric_scores_to_json(scores: dict, outfile: str):
+    tabid_to_recall_scores = {tabid: scoress[0] for tabid, scoress in scores["recall"].items()}
+    tabid_to_alignments = {
+        tabid: [{"gold": gold, "pred": pred} for (gold, pred), score in alignmentss[0].items()]
+        for tabid, alignmentss in scores["alignments"].items()
+    }
+    with open(outfile, "w") as f:
+        json.dump({"recall": tabid_to_recall_scores, "alignments": tabid_to_alignments}, f, indent=4)
 
 
 if __name__ == "__main__":
@@ -343,7 +381,8 @@ if __name__ == "__main__":
             outfile = os.path.join(OUTDIR, f"{setting}__{base_model}.txt")
 
             gold_file = MAPPING[setting]["gold_file"]
-            instance_id_to_gold_tables = open_gold_tables(gold_file)
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
 
             if "baseline" in setting:
                 pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
@@ -354,7 +393,7 @@ if __name__ == "__main__":
             pred_tables = random.sample(pred_tables, 10)
 
             with open(outfile, "w") as f:
-                for pred_table in pred_tables:
+                for pred_table in tqdm(pred_tables):
                     gold_table = instance_id_to_gold_tables[pred_table.tabid]
                     f.write(
                         f"======================================={pred_table.tabid}============================================\n"
@@ -401,10 +440,12 @@ if __name__ == "__main__":
         for k, v in setting_metric_to_nas.items():
             f.write(f"{k}: {v} / {setting_metric_to_slots[k]} = {round(v / setting_metric_to_slots[k], 2)}\n")
 
-    # sample metric calculation
+    # jaccard metric calculation
     with open(f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics.txt", "a") as f:
         for setting in MAPPING.keys():
-            instance_id_to_gold_tables = open_gold_tables(MAPPING[setting]["gold_file"])
+            gold_file = MAPPING[setting]["gold_file"]
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
             for base_model in ["gpt3.5", "mixtral"]:
                 if "baseline" in setting:
                     pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
@@ -430,12 +471,50 @@ if __name__ == "__main__":
                             json.dump(scores_dict, f)
                             f.write("\n\n")
 
-    # precomputing decontext information
+    # metric calculation, but with llama3 + outputting alignments too
+    with open(
+        f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics_llama3__gpt35.txt", "w"
+    ) as f:
+        for setting in MAPPING.keys():
+            gold_file = MAPPING[setting]["gold_file"]
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
+            for base_model in [
+                "gpt3.5"
+                #    , "mixtral"
+            ]:
+                if "baseline" in setting:
+                    pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                else:
+                    pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+            random.seed(42)
+            pred_tables = random.sample(pred_tables, 100)
+            METRIC = SchemaRecallMetric(featurizer=name_feat, alignment_scorer=llama3scorer)
+            for pred_table in tqdm(pred_tables):
+                gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                try:
+                    METRIC.add(pred_table, gold_table)
+                except Exception as e:
+                    continue
+            # now export it all
+            scores_dict = METRIC.process_scores()
+            f.write(f"config={setting}__model={base_model}\n")
+            json.dump(scores_dict, f)
+            f.write("\n\n")
+            # also export alignments
+            metric_scores_to_json(
+                METRIC.scores,
+                f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/alignments__llama3__{setting}__{base_model}.json",
+            )
+
+    # precomputing decontext information on predicted tables
     CACHE_DECONTEXT_DIR = "/Users/kylel/ai2/paper_comparison_internal/final_data/decontext/"
     os.makedirs(CACHE_DECONTEXT_DIR, exist_ok=True)
     decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mixtral-8x7B-Instruct-v0.1")
     for setting in MAPPING.keys():
-        instance_id_to_gold_tables = open_gold_tables(MAPPING[setting]["gold_file"])
+        gold_file = MAPPING[setting]["gold_file"]
+        metadata_file = MAPPING[setting]["metadata_file"]
+        instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
         for base_model in ["gpt3.5", "mixtral"]:
             if "baseline" in setting:
                 pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
@@ -451,3 +530,163 @@ if __name__ == "__main__":
                 outfile = os.path.join(CACHE_DECONTEXT_DIR, f"{setting}__{base_model}__{pred_table.tabid}.json")
                 with open(outfile, "w") as f:
                     json.dump(table_id_to_decontext, f, indent=4)
+
+    # precomputing decontext information on gold tables
+    GOLD_CACHE_DECONTEXT_DIR = "/Users/kylel/ai2/paper_comparison_internal/final_data/decontext_gold/"
+    os.makedirs(GOLD_CACHE_DECONTEXT_DIR, exist_ok=True)
+    decontext_feat = DecontextFeaturizer("decontext", model="mistralai/Mixtral-8x7B-Instruct-v0.1")
+    gold_file = (
+        "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/tables.jsonl"
+    )
+    metadata_file = "/Users/kylel/ai2/paper_comparison_internal/final_data/gold/metric_validation_0_full_texts/dataset_with_ics.jsonl"
+    instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
+    for instance_id, gold_table in tqdm(instance_id_to_gold_tables.items()):
+        column_names = list(gold_table.values.keys())
+        features = decontext_feat.featurize(column_names=column_names, table=gold_table)
+        column_name_to_feature = {column_name: feature for column_name, feature in zip(column_names, features)}
+        gold_table_id_to_decontext = {gold_table.tabid: column_name_to_feature}
+        outfile = os.path.join(GOLD_CACHE_DECONTEXT_DIR, f"{gold_table.tabid}.json")
+        with open(outfile, "w") as f:
+            json.dump(gold_table_id_to_decontext, f, indent=4)
+
+    # jaccard metric, but with decontext now
+    with open(
+        f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics_decontext.txt", "w"
+    ) as f:
+        for setting in MAPPING.keys():
+            gold_file = MAPPING[setting]["gold_file"]
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
+            for base_model in ["gpt3.5", "mixtral"]:
+                if "baseline" in setting:
+                    pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                else:
+                    pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+                for threshold in [0.1, 0.3, 0.5, 0.7, 0.9]:
+                    for scorer in [jscorer_nostop]:
+                        for featurizer in [decontext_feat]:
+                            METRIC = SchemaRecallMetric(
+                                featurizer=featurizer, alignment_scorer=scorer, sim_threshold=threshold
+                            )
+                            for pred_table in tqdm(pred_tables):
+                                gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                                # load decontext information for gold
+                                gold_decontext_file = os.path.join(
+                                    GOLD_CACHE_DECONTEXT_DIR, f"{pred_table.tabid}.json"
+                                )
+                                with open(gold_decontext_file, "r") as f_g:
+                                    gold_decontext = json.load(f_g)
+                                    gold_table.decontext_schema = gold_decontext[gold_table.tabid]
+                                # load decontext information for pred
+                                pred_decontext_file = os.path.join(
+                                    CACHE_DECONTEXT_DIR, f"{setting}__{base_model}__{pred_table.tabid}.json"
+                                )
+                                with open(pred_decontext_file, "r") as f_p:
+                                    pred_decontext = json.load(f_p)
+                                    pred_table.decontext_schema = pred_decontext[pred_table.tabid]
+                                METRIC.add(pred_table, gold_table)
+                            # now export it all
+                            scores_dict = METRIC.process_scores()
+                            f.write(
+                                f"config={setting}__model={base_model}__threshold={threshold}__scorer={scorer.name}__featurizer={featurizer.name}\n"
+                            )
+                            json.dump(scores_dict, f)
+                            f.write("\n\n")
+
+    # finally, llama3 + outputting alignments too + decontext cols
+    with open(
+        f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics_llama3_decontext__gpt35.txt",
+        "w",
+    ) as f:
+        for setting in MAPPING.keys():
+            gold_file = MAPPING[setting]["gold_file"]
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
+            for base_model in [
+                "gpt3.5"
+                # , "mixtral"
+            ]:
+                if "baseline" in setting:
+                    pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                else:
+                    pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+            random.seed(42)
+            pred_tables = random.sample(pred_tables, 100)
+            METRIC = SchemaRecallMetric(featurizer=decontext_feat, alignment_scorer=llama3scorer)
+            for pred_table in tqdm(pred_tables):
+                gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                # load decontext information for gold
+                gold_decontext_file = os.path.join(GOLD_CACHE_DECONTEXT_DIR, f"{pred_table.tabid}.json")
+                with open(gold_decontext_file, "r") as f_g:
+                    gold_decontext = json.load(f_g)
+                    gold_table.decontext_schema = gold_decontext[gold_table.tabid]
+                # load decontext information for pred
+                pred_decontext_file = os.path.join(
+                    CACHE_DECONTEXT_DIR, f"{setting}__{base_model}__{pred_table.tabid}.json"
+                )
+                with open(pred_decontext_file, "r") as f_p:
+                    pred_decontext = json.load(f_p)
+                    pred_table.decontext_schema = pred_decontext[pred_table.tabid]
+                try:
+                    METRIC.add(pred_table, gold_table)
+                except Exception as e:
+                    continue
+            # now export it all
+            scores_dict = METRIC.process_scores()
+            f.write(f"config={setting}__model={base_model}__decontext\n")
+            json.dump(scores_dict, f)
+            f.write("\n\n")
+            # also export alignments
+            metric_scores_to_json(
+                METRIC.scores,
+                f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/alignments__llama3__{setting}__{base_model}__decontext.json",
+            )
+
+    # SBERT matching, but with decontext + also output alignments
+    with open(
+        f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/metrics_decontext_sbert.txt", "w"
+    ) as f:
+        for setting in MAPPING.keys():
+            gold_file = MAPPING[setting]["gold_file"]
+            metadata_file = MAPPING[setting]["metadata_file"]
+            instance_id_to_gold_tables = open_gold_tables(gold_file, metadata_file)
+            for base_model in ["gpt3.5", "mixtral"]:
+                if "baseline" in setting:
+                    pred_tables = open_baseline_tables(setting=setting, base_model=base_model)
+                else:
+                    pred_tables = open_pred_tables(setting=setting, base_model=base_model)
+                for threshold in [0.1, 0.3, 0.5, 0.7, 0.9]:
+                    for scorer in [stscorer]:
+                        for featurizer in [decontext_feat]:
+                            METRIC = SchemaRecallMetric(
+                                featurizer=featurizer, alignment_scorer=scorer, sim_threshold=threshold
+                            )
+                            for pred_table in tqdm(pred_tables):
+                                gold_table = instance_id_to_gold_tables[pred_table.tabid]
+                                # load decontext information for gold
+                                gold_decontext_file = os.path.join(
+                                    GOLD_CACHE_DECONTEXT_DIR, f"{pred_table.tabid}.json"
+                                )
+                                with open(gold_decontext_file, "r") as f_g:
+                                    gold_decontext = json.load(f_g)
+                                    gold_table.decontext_schema = gold_decontext[gold_table.tabid]
+                                # load decontext information for pred
+                                pred_decontext_file = os.path.join(
+                                    CACHE_DECONTEXT_DIR, f"{setting}__{base_model}__{pred_table.tabid}.json"
+                                )
+                                with open(pred_decontext_file, "r") as f_p:
+                                    pred_decontext = json.load(f_p)
+                                    pred_table.decontext_schema = pred_decontext[pred_table.tabid]
+                                METRIC.add(pred_table, gold_table)
+                            # now export it all
+                            scores_dict = METRIC.process_scores()
+                            f.write(
+                                f"config={setting}__model={base_model}__threshold={threshold}__scorer={scorer.name}__featurizer={featurizer.name}\n"
+                            )
+                            json.dump(scores_dict, f)
+                            f.write("\n\n")
+                            # also export alignments
+                            metric_scores_to_json(
+                                METRIC.scores,
+                                f"/Users/kylel/ai2/paper_comparison_internal/final_data/manual_inspection/alignments__{setting}__{base_model}__{scorer.name}__{featurizer.name}.json",
+                            )
