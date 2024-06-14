@@ -102,8 +102,6 @@ tables = {}
 for line in table_file:
     cur_table = json.loads(line)
     tables[cur_table["tabid"]] = cur_table
-    if len(tables) == 2:
-        break
 
 # Get column names, captions and in-text references for each table to be evaluated for value generation
 table_data = {}
