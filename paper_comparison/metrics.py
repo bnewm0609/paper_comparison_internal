@@ -108,12 +108,14 @@ class SchemaRecallMetric(BaseMetric):
         featurizer,
         alignment_scorer,
         sim_threshold=0.4,
+        level="schema",
     ):
         super().__init__()
         self.requires_metadata = True
         self.featurizer = featurizer
         self.alignment_scorer = alignment_scorer
         self.sim_threshold = sim_threshold
+        self.level = level
         # Initialize some variables to maintain track of metrics computed so far
         self.scores["recall"] = {}
         self.scores["alignment_scores"] = {}
@@ -121,11 +123,18 @@ class SchemaRecallMetric(BaseMetric):
 
     def add(self, prediction: Table, target: Table, metadata: Optional[Any] = None):
         # compute alignment matrix between the prediction and target tables
-        alignment_matrix = self.alignment_scorer.score_schema_alignments(
-            prediction, 
-            target, 
-            featurizer=self.featurizer
-        )
+        alignment_matrix = {}
+        if self.level == "schema":
+            alignment_matrix = self.alignment_scorer.score_schema_alignments(
+                prediction, 
+                target, 
+                featurizer=self.featurizer
+            )
+        elif self.level == "value":
+            alignment_matrix = self.alignment_scorer.score_value_alignments(
+                prediction, 
+                target,
+            )
 
         # choose an aligment from the alignment matrix using similarity threshold
         alignment = {k:v for k,v in alignment_matrix.items() if v >= self.sim_threshold}
