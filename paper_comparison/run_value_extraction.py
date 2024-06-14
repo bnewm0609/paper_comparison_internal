@@ -22,6 +22,7 @@ S2_API_KEY = os.environ.get('S2_API_KEY')
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY')
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
+paperqa_queries = json.load(open(sys.argv[1]))
 
 def openai_call(model: str, prompt: str, response_format: str, temperature=1.0, max_tokens=256) -> str:
     messages = [
@@ -92,7 +93,7 @@ def get_value_from_abstract(question: str, corpus_id: str):
     return value
 
 
-def run_paper_qa(column: str, corpus_id: str):
+def run_paper_qa(column: str, tabid: str, corpus_id: str):
     @staticmethod
     def _fp(f, d=3):
         return round(f, d)
@@ -101,16 +102,17 @@ def run_paper_qa(column: str, corpus_id: str):
     def _box2string(box):
         return f"{_fp(box['top'])},{_fp(box['left'])},{_fp(box['height'])},{_fp(box['width'])},{box['page']}"
     
-    question_list = [
-        f"From the provided paper full-text, can you extract {column}?",
-        f"Extract information about {column} aspect from this paper.",
-        f"What information can you find about {column}?",
-        f"We want to create a table comparing papers. Extract the information from this paper that goes in the column called {column}",
-        f"In a literature review table comparing multiple papers, what information from this paper would go under column {column}?"
-    ]
+    # question_list = [
+    #     f"From the provided paper full-text, can you extract {column}?",
+    #     f"Extract information about {column} aspect from this paper.",
+    #     f"What information can you find about {column}?",
+    #     f"We want to create a table comparing papers. Extract the information from this paper that goes in the column called {column}",
+    #     f"In a literature review table comparing multiple papers, what information from this paper would go under column {column}?"
+    # ]
+    question_list = [paperqa_queries[tabid][column]]
     response_simplified = {}
     # TODO: Flip this back to 0 when running from scratch
-    qcounter = 1
+    qcounter = 0
     while not response_simplified \
         or ("answer" in response_simplified and response_simplified["answer"] == "N/A" and qcounter < len(question_list)):
         question = question_list[qcounter]
@@ -171,7 +173,7 @@ def run_paper_qa(column: str, corpus_id: str):
             response_simplified = {"error": f"Exception while querying PaperQA endpoint: {str(e)}"}
     return response_simplified
 
-def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table) -> Dict:
+def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table, tabid) -> Dict:
     cell_values = {}
 
     # For every column to be populated, run value extraction on all corpusIDs provided.
@@ -193,7 +195,7 @@ def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table) -> Di
         raw_values = {}
         MAX_THREADS = 5
         with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
-            responses = list(executor.map(run_paper_qa, itertools.repeat(column), cur_corpus_ids))
+            responses = list(executor.map(run_paper_qa, itertools.repeat(column), itertools.repeat(tabid), cur_corpus_ids))
             raw_values = {y: x["answer"] if "answer" in x else x["error"] for x,y in zip(responses, cur_corpus_ids)}
 
         # for corpus_id in cur_corpus_ids:
@@ -255,8 +257,10 @@ for line in table_file:
     # list(set([x["corpus_id"] for x in data["row_bib_map"]])) 
 print(f"Running value generation for {len(tables_to_generate)} tables...") 
 
+
+
 # Generating values for gold schemas
-out_folder = "../gold_schema_values"
+out_folder = sys.argv[2]
 for i, tabid in enumerate(list(tables_to_generate.keys())):
     print(f"Running value generation for table {i} ({tabid})")
     #if os.path.exists(os.path.join(out_folder, f"{tabid}_with_values.json")):
@@ -265,7 +269,7 @@ for i, tabid in enumerate(list(tables_to_generate.keys())):
     schema = list(existing_table["table"].keys())
     schema_missing_vals = [str(x) for x in schema if "N/A" in list(existing_table["table"][str(x)].values())]
     corpus_ids = tables_to_generate[tabid]
-    final_values = generate_value_suggestions(columns_to_populate=schema_missing_vals, corpus_ids=corpus_ids, cur_table=existing_table["table"])
+    final_values = generate_value_suggestions(columns_to_populate=schema_missing_vals, corpus_ids=corpus_ids, cur_table=existing_table["table"], tabid=tabid)
     for column in schema:
         column = str(column)
         if column not in schema_missing_vals:
