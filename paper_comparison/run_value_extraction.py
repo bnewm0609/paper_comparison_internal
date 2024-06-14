@@ -191,7 +191,8 @@ def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table, tabid
         # If full-text is not available, back off to run value extraction from abstracts.
         
         # Only send in papers for which non-NA values don't exist
-        cur_corpus_ids = [x for x in corpus_ids if x not in cur_table[column] or cur_table[column][x] == 'N/A']
+        cur_corpus_ids = corpus_ids
+        # [x for x in corpus_ids if x not in cur_table[column] or cur_table[column][x] == 'N/A']
         raw_values = {}
         MAX_THREADS = 5
         with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
@@ -216,9 +217,9 @@ def generate_value_suggestions(columns_to_populate, corpus_ids, cur_table, tabid
         #             existing_values.append(v)
 
         # Run an additional prompting step to make all newly extracted values look consistent
-        for cid in cur_table[column]:
-            if cid not in raw_values:
-                raw_values[cid] = cur_table[column][cid]
+        # for cid in cur_table[column]:
+        #     if cid not in raw_values:
+        #         raw_values[cid] = cur_table[column][cid]
         prompt_input = "\nRelevant Information: " + json.dumps([raw_values[x] for x in corpus_ids])
 
         # TODOv2: Add this back if we have any experiments where columns already have values
@@ -253,7 +254,8 @@ tables_to_generate = {}
 count = 0
 for line in table_file:
     data = json.loads(line)
-    tables_to_generate[data["tabid"]] = [x for x in data["table"][list(data["table"].keys())[0]]] #data
+    tables_to_generate[data["tabid"]] = data
+    # [x for x in data["table"][list(data["table"].keys())[0]]] 
     # list(set([x["corpus_id"] for x in data["row_bib_map"]])) 
 print(f"Running value generation for {len(tables_to_generate)} tables...") 
 
@@ -263,17 +265,17 @@ print(f"Running value generation for {len(tables_to_generate)} tables...")
 out_folder = sys.argv[2]
 for i, tabid in enumerate(list(tables_to_generate.keys())):
     print(f"Running value generation for table {i} ({tabid})")
-    #if os.path.exists(os.path.join(out_folder, f"{tabid}_with_values.json")):
-    #    continue
-    existing_table = json.load(open(os.path.join(out_folder, f"{tabid}_with_values.json")))
+    if os.path.exists(os.path.join(out_folder, f"{tabid}_with_better_values.json")):
+       continue
+    existing_table = tables_to_generate[tabid]
     schema = list(existing_table["table"].keys())
-    schema_missing_vals = [str(x) for x in schema if "N/A" in list(existing_table["table"][str(x)].values())]
-    corpus_ids = tables_to_generate[tabid]
-    final_values = generate_value_suggestions(columns_to_populate=schema_missing_vals, corpus_ids=corpus_ids, cur_table=existing_table["table"], tabid=tabid)
-    for column in schema:
-        column = str(column)
-        if column not in schema_missing_vals:
-            final_values[column] = existing_table["table"][column]
+    # schema_missing_vals = [str(x) for x in schema if "N/A" in list(existing_table["table"][str(x)].values())]
+    corpus_ids = [x for x in existing_table["table"][list(existing_table["table"].keys())[0]]]
+    final_values = generate_value_suggestions(columns_to_populate=schema, corpus_ids=corpus_ids, cur_table=existing_table["table"], tabid=tabid)
+    # for column in schema:
+    #     column = str(column)
+    #     if column not in schema:
+    #         final_values[column] = existing_table["table"][column]
     dump_data = existing_table
     dump_data["table"] = final_values
     out_file = open(os.path.join(out_folder, f"{tabid}_with_better_values.json"), "w")
