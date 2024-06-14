@@ -109,7 +109,13 @@ def run_paper_qa(column: str, tabid: str, corpus_id: str):
     #     f"We want to create a table comparing papers. Extract the information from this paper that goes in the column called {column}",
     #     f"In a literature review table comparing multiple papers, what information from this paper would go under column {column}?"
     # ]
-    question_list = [paperqa_queries[tabid][column]]
+    question_list = [
+        paperqa_queries[tabid][column],
+        paperqa_queries[tabid][column] + "Return a summary of this information",
+        paperqa_queries[tabid][column] + "Try to extract this information.",
+        paperqa_queries[tabid][column] + "Summarize information about this.",
+        paperqa_queries[tabid][column] + "What information can you find about this?",
+    ]
     response_simplified = {}
     # TODO: Flip this back to 0 when running from scratch
     qcounter = 0
