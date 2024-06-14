@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 1,9171279,53,"Wearable sensors, contact diaries, surveys, Facebook links"
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 1,1249024,9,Wearable proximity sensors
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 1,3863844,3,"Face-to-face contact data, identification of resident, wanderer, and linker behaviors"
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 1,14332273,10,"Dynamical and spatial contact structure analysis, focus on STI spread among Brazilian escorts and sex-buyers"
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 2,9171279,79,"Compares data collection methods: wearable sensors, contact diaries, friendship surveys, and Facebook links. Highlights advantages and limitations of each, suggesting a combined approach for a complete understanding."
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 2,1249024,5,"Describes and quantifies contacts in hospitals, providing key information for HAIs epidemiology and control measures design and validation."
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 2,3863844,5,"Discusses contact structure in an office building affecting epidemic spreading. Identifies three node behaviors: residents, wanderers, linkers. Emphasizes the role of linkers in spreading and effective vaccination strategies targeting them."
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 2,14332273,571,Highlights the importance of population-level sexual network data for understanding STI epidemics and challenges in data collection. Mentions the use of Internet data to gather information about sexual contact patterns and its impact on disease spreading.
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 3,9171279,4,"Contact network structure and mixing patterns align with reported contacts and friendships, but short contacts often unreported."
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 3,1249024,1,"Contact matrices show frequent interactions between nurses and between nurses and patients, detailing mixing patterns."
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 3,3863844,1,Yes
+e6a4d3c4-0b68-4b59-a46f-fa7896583339,Step 3,14332273,600,Yes

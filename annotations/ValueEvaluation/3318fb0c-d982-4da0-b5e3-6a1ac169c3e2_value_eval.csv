@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,Task,15206880,Semantic search,Evaluation of word embeddings on tasks including intrinsic evaluations and SAT-style analogies
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,Task,158046772,Augmented language models,Incorporating knowledge graphs into language models for enhanced understanding
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,Task,19139252,Knowledge graph embedding,Open-World Knowledge Graph Completion
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,Task,201698166,Link prediction,Multi-hop Reasoning Over Few-shot Relations
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,No. of Papers,15206880,91,"21 million edges, 8 million nodes"
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,No. of Papers,158046772,84,N/A
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,No. of Papers,19139252,61,1 paper
+3318fb0c-d982-4da0-b5e3-6a1ac169c3e2,No. of Papers,201698166,26,N/A

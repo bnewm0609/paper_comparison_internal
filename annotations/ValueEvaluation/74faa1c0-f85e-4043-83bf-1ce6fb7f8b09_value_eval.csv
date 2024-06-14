@@ -1,0 +1,26 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Type,54029262,"Spectrum poisoning, Exploratory",Spectrum Data Poisoning Attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Type,173990894,"Exploratory, Evasion, Causative, Black box","Jamming, Spectrum Poisoning, Priority Violation Attacks"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Type,146120730,"Black-box, Exploratory",Learn-Evaluate-Beat (LEB) Attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Type,207870238,"Exploratory, Evasion, Causative",Over-the-Air Spectrum Poisoning Attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Type,230799383,"Exploratory, Evasion",Evasion Attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Objective,54029262,Launch an over-the-air attack to infer the transmitter's behavior and falsify the spectrum sensing data by transmitting perturbations over the air.,Adversarial machine learning for spectrum data poisoning in wireless communications
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Objective,173990894,"Build a DNN classifier to infer the channel access algorithm of a transmitter and predict the transmission result, and develop a defense mechanism to confuse the adversary in its attack strategy.",Adversarial machine learning in IoT systems
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Objective,146120730,Propose Learning-Evaluation-Beating(LEB) attack against cooperative spectrum sensing (extension of spectrum sensing data falsification attack on cognitive radio).,Learn-Evaluate-Beat for misleading fusion center
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Objective,207870238,Launch over-the-air spectrum poisoning attacks by learning first the transmitter's behavior.,Adversarial deep learning for spectrum poisoning
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Objective,230799383,Present AML attack on spectrum sharing of 5G communications with incumbent users.,Adversarial machine learning attacks in 5G wireless communications
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Method,54029262,Inject perturbation to the channel,Over-the-air spectrum data poisoning attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Method,173990894,"Jamming, Spectrum poisoning, Priority violation","Exploratory attack, Evasion attack, Causative attack"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Method,146120730,LEB attack,Learn-Evaluate-Beat (LEB) framework
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Method,207870238,Attacker jams the transmitter's sensing period,Over-the-air spectrum poisoning attack
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Attack Method,230799383,Manipulate inputs to the classifier by transmitting during spectrum sensing,"Exploratory attack, Membership inference attack, Evasion attack, Poisoning (causative) attack, Spoofing attack, Trojan attack"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,DL Problem,54029262,Spectrum sensing,Adversarial machine learning attacks on spectrum sensing
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,DL Problem,173990894,Spectrum sensing,Deep learning problem
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,DL Problem,146120730,Cooperative spectrum sensing,N/A
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,DL Problem,207870238,"Spectrum sensing, DSA",Deep learning problem
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,DL Problem,230799383,Spectrum sharing,Deep learning problem in adversarial attacks on 5G systems
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Data used,54029262,Locally generated data,"Time-series of spectrum sensing results, channel idle/busy status"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Data used,173990894,Locally generated data,"Channel sensing results, transmission outcomes"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Data used,146120730,"Dataset collected from 5282 locations {{cite:3a0e7f3}}, Data from 5 locations using USRP N210",Real-world TV white space signal strengths
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Data used,207870238,Locally generated data,"Time-series of spectrum sensing results, channel idle/busy status"
+74faa1c0-f85e-4043-83bf-1ce6fb7f8b09,Data used,230799383,Locally generated data,"Sensed signal powers, 'ACK' or 'no ACK' labels"

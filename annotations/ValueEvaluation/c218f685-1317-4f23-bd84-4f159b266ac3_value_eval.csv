@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+c218f685-1317-4f23-bd84-4f159b266ac3,Aspects,221191373,Social impact,Discusses transportation behaviors during COVID-19
+c218f685-1317-4f23-bd84-4f159b266ac3,Aspects,221819294,Social impact,Does not discuss transportation behaviors
+c218f685-1317-4f23-bd84-4f159b266ac3,Objectives,221191373,on human behaviors,Understand the impact of COVID-19 on transportation-related behaviors using human mobility data; provide insights and policy-making suggestions.
+c218f685-1317-4f23-bd84-4f159b266ac3,Objectives,221819294,on socio-political systems,Understand the motivations and drivers of populist and nationalist movements in Europe; focus on the role of evolved human psychology in responding to persistent threats.
+c218f685-1317-4f23-bd84-4f159b266ac3,Data,221191373,"Public, online and household activities, gathering, mobility data, mobile phone data, social media data, etc.",Yes
+c218f685-1317-4f23-bd84-4f159b266ac3,Data,221819294,"Social and political data, case data, surveys, questionnaires, sociopolitical events, etc.",Yes

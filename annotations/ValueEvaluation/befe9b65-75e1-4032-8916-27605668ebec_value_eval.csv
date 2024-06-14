@@ -1,0 +1,29 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+befe9b65-75e1-4032-8916-27605668ebec,Domain,255998637,Multi-domain,Open-domain
+befe9b65-75e1-4032-8916-27605668ebec,Domain,257766697,General,Natural Language Processing
+befe9b65-75e1-4032-8916-27605668ebec,Domain,258179137,Education,Computational Linguistics
+befe9b65-75e1-4032-8916-27605668ebec,Domain,258960155,Education,Large Language Models (LLMs) applications
+befe9b65-75e1-4032-8916-27605668ebec,Domain,256416337,General,Text Detection
+befe9b65-75e1-4032-8916-27605668ebec,Domain,258059731,Scientific,Text Detection
+befe9b65-75e1-4032-8916-27605668ebec,Domain,259129474,General,Natural Language Processing
+befe9b65-75e1-4032-8916-27605668ebec,Public,255998637,-,Discusses negative impacts of LLMs and the need for content detectors.
+befe9b65-75e1-4032-8916-27605668ebec,Public,257766697,-,N/A
+befe9b65-75e1-4032-8916-27605668ebec,Public,258179137,-,Availability of machine-authored essays on GitHub.
+befe9b65-75e1-4032-8916-27605668ebec,Public,258960155,Human*,Discusses challenges of identifying AI-generated homework and strategies for academic integrity.
+befe9b65-75e1-4032-8916-27605668ebec,Public,256416337,Human*,Discusses the importance of detecting AI-generated text for trustworthiness in public domains.
+befe9b65-75e1-4032-8916-27605668ebec,Public,258059731,Human,Discusses plagiarism concerns and the need for academic integrity.
+befe9b65-75e1-4032-8916-27605668ebec,Public,259129474,-,"Discusses performance and limitations of ChatGPT detectors, emphasizing challenges in detecting adversarial text and vulnerabilities in out-of-domain contexts."
+befe9b65-75e1-4032-8916-27605668ebec,OOD,255998637,×,OOD generalization evaluation discussed
+befe9b65-75e1-4032-8916-27605668ebec,OOD,257766697,×,Performance in out-of-domain contexts discussed
+befe9b65-75e1-4032-8916-27605668ebec,OOD,258179137,×,OOD test set collection noted
+befe9b65-75e1-4032-8916-27605668ebec,OOD,258960155,×,The paper discusses the challenge of distinguishing between AI-generated and human-written text in the context of academic assignments.
+befe9b65-75e1-4032-8916-27605668ebec,OOD,256416337,-,"The paper discusses the ability of a machine learning model to accurately distinguish between original human and ChatGPT-generated text, especially when the text is short. The study focuses on short online reviews and compares human-generated and ChatGPT-generated text. The ML model achieves an accuracy of 79% in detecting ChatGPT-generated text."
+befe9b65-75e1-4032-8916-27605668ebec,OOD,258059731,×,Poor generalization in OOD contexts mentioned
+befe9b65-75e1-4032-8916-27605668ebec,OOD,259129474,-,Performance in out-of-domain contexts discussed
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,255998637,Q&A,HC3 dataset with nearly 40K questions and answers; RoBERTa-based detectors trained on fine-grained corpus data.
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,257766697,Q&A pairs,Discusses LLMs like ChatGPT-turbo and Claude; introduces MGTBench framework for benchmarking.
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,258179137,Essays,"ArguGPT corpus with 4,115 human and 4,038 machine-generated essays; split into train, dev, and test sets."
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,258960155,Q&A,Dataset includes academic assignments with metadata and responses from students and ChatGPT.
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,256416337,Reviews,Two experiments with ML-based approach; uses Transformer model and SHAP for model explanations.
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,258059731,Title-Abstract pairs,Workflow includes a maximum iteration size of 30 and 4 ML models.
+befe9b65-75e1-4032-8916-27605668ebec,Size and Setup,259129474,Q&A,"Trained detectors on dataset with texts in English and Chinese; models include RoBERTa, ELECTRA, CamemBERT, and XLM-R."

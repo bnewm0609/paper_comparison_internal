@@ -1,0 +1,17 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,11267601,text,"Inform, Questions, Directives, Commissive"
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,259129342,text,Causal Inference
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,560565,text,Arithmetic word problems
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,53296520,text,"Spatial concepts, Cause and effect, Has parts, Is member of, Purpose, Social, Activity, Definition"
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,201058721,video,context-aware emotion recognition
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Types,204954901,audio,Music scores
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,11267601,"ER,AR,ECG",Development of DailyDialog dataset
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,259129342,"CI,CoT",CORR2CAUSE task introduction
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,560565,"QA,AR,CoT",Arithmetic word problems solving task introduction
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,53296520,"QA,CR,CoT",Common sense QA dataset introduction
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,201058721,"ER,CI",CAER benchmark introduction
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Original tasks,204954901,"MG,PG",Tasks in music analysis introduction
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Highlights,11267601,"A daily conversation dataset annotated with 7 emotions, 4 actions and 10 themes","Development of DailyDialog dataset, evaluation of retrieval-based and generation-based approaches."
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Highlights,259129342,A text datasets for large language model with causal labels,"Introduction of expression trees and quantity schemas, constrained inference framework."
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Highlights,560565,an arithmetic datasets with multiple steps and operations,"Introduction of CAER benchmark, context-aware approach for emotion recognition."
+fbd9c39e-b75b-490b-a829-27b2a8a96e73,Highlights,53296520,A commonsense datasets answering with piror knowledge,Use of CRNN with CTC loss for music score extraction from polyphonic audio.

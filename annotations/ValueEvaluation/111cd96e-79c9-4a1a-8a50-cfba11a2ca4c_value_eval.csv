@@ -1,0 +1,95 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",2825705,2016,2016
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",3990641,2017,2015
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",166228416,2019,2018
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",52283515,2019,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",199552142,2019,2019
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",208910916,2020,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",203626675,2020,2019
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",203593838,2020,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",204575643,2020,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",226306649,2020,2020
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",204900842,2020,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",229297961,2021,2020
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",233004383,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",232147635,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",231741199,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",233024930,2021,2021
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",232307796,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",235368207,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,"[HTML]D0CECE
+Year",237571540,2021,N/A
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,2825705,Euclidian,"216k grasp candidates from partial-view point clouds, labeled for frictionless antipodal grasps"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,3990641,Euclidian,Grasp candidates satisfying non-collision and inclusion of point cloud within hand's closing region
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,166228416,Latent,Space of all possible successful grasps for an object
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,52283515,Priors,Set of 350k real point clouds and grasps over objects from the YCB object set
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,199552142,Priors,"Simulated dexterous grasps from generative models GM1 and GM2, with variations in object parameters"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,208910916,Latent,"Complex, multimodal, and discontinuous distribution of successful grasps in clutter"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,203626675,Hand Posture,3D reconstruction of object from single view point cloud using PointSDF
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,203593838,Multiple Views,"Full 6-DOF grasps from single RGBD view, estimating complete object shape"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,204575643,Euclidian,Randomly generated grasp candidates within two threshold values
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,226306649,Priors,250 K task-oriented grasps for 56 tasks and 191 objects in TaskGrasp dataset
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,204900842,Euclidian,Space of candidate grasps generated and evaluated by the Multi-FinGAN model
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,229297961,Euclidian,6-DoF grasp poses with collision-free probabilities estimated by CARP
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,233004383,Euclidian,Generative grasp sampler trained on purely synthetic data of cluttered scenes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,232147635,Euclidian,Point cloud data from multiple perspectives used to generate 6-DOF grasp poses
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,231741199,Not Specified,3D point cloud from a depth camera as input for grasp detection in clutter
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,233024930,Euclidian,Point cloud input generating orthographic views for pixel-wise grasp synthesis
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,232307796,Multiple Views,"Set of feasible grasp candidates from partial point cloud, evaluated for grasp success probabilities"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Sample Space,235368207,Priors,Simulation-trained framework using object-centric canonical representation for task-relevant grasps
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,2825705,Binary,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,3990641,Binary,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,166228416,Binary,"Yes, includes both simulation and real-world robot experiments"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,52283515,Metric,"Yes, includes both simulation and robotic hardware"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,199552142,Binary,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,208910916,Metric,"Yes, includes simulation and robot experiments with detailed analysis"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,203626675,Binary,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,203593838,Binary,"Yes, compares simulated and real camera viewpoints with significant improvements shown"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,204575643,Metric,"Yes, includes both simulation and real-world settings"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,226306649,Metric,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,204900842,Metric,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,229297961,Metric,"Yes, includes extensive comparisons and real robot testing showing favorable results"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,233004383,Metric,"Yes, evaluated in simulation and real-world settings with performance testing"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,232147635,Metric,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,231741199,Metric,"Yes, evaluated using data acquisition and simulated experiments"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,233024930,Binary,"Yes, evaluated in simulation and real robot for a clutter removal task showing improved success rate"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,232307796,Binary,"Yes, evaluated in various scenarios"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,235368207,Binary,"Yes, evaluated on a real robot with a specific gripper and shows improvement over baselines"
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Evaluation,237571540,Metric,Yes
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,2825705,-,Refinement techniques detailed
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,3990641,-,Multiple innovations in refinement
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,166228416,ForestGreen✓,Refinement process described
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,52283515,-,Refinement through force-closure and GWS analysis
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,199552142,ForestGreen✓,Grasp refinement discussed
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,208910916,ForestGreen✓,Grasp refinement via iterative improvement
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,203626675,ForestGreen✓,Geometric reasoning for grasp synthesis
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,203593838,-,End-to-end grasp planning with 6-DoF
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,204575643,-,Voxel-based 3D CNN for 6-DoF grasps
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,226306649,-,Refinement in task-oriented grasping
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,204900842,-,Refinement using object pose
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,229297961,-,Finger Refinement Layer
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,233004383,-,Collision-Aware Reachability Predictor for 6-DoF
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,232147635,-,Finger Refinement in network architecture
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,231741199,-,Challenges in grasp refinement
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,233024930,-,6-DoF grasp detection with implicit neural representations
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,232307796,-,Multi-view deep learning for object grasping
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,235368207,-,Data-driven grasp detection framework
+111cd96e-79c9-4a1a-8a50-cfba11a2ca4c,Refinement,237571540,-,"Learning category-level, task-relevant grasping"

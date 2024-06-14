@@ -1,22 +1,23 @@
 """Utility functions for computing metrics"""
 
-from typing import Any
-from paper_comparison.types import Table
 import difflib
+import json
+import os
+import re
+import time
+from typing import Any
 
+import numpy as np
+import pandas as pd
+import torch
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
-
-import pandas as pd
-import numpy as np
-from sentence_transformers import SentenceTransformer, util
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
-
-import os
-import time
 from openai import OpenAI
+from sentence_transformers import SentenceTransformer, util
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+from paper_comparison.types import Table
 
 stopwords = stopwords.words("english")
 punctuation = "()[]{},.?!/''\"``"
@@ -399,17 +400,21 @@ def get_p_r_f1(tp: int, fp: int, fn: int) -> tuple[float, float, float]:
 
 class Llama3AlignmentScorer(BaseAlignmentScorer):
 
-    def __init__(self, name):
+    def __init__(self, name="llama", debug=False):
         super().__init__(name)
 
-        from together import Together
-        from llama_aligner import PROMPT
+        import together
+        from together import Together, error
 
-        self.prompt = PROMPT
+        from .llama_aligner import PROMPT
+
+        self.prompt_prefix = PROMPT
         self.client = Together(api_key=os.environ.get("TOGETHER_API_KEY"))
-        self.api_error = Together.error.APIError
+        self.api_error = error.APIError
+        self.debug = debug
+        self._together = together
 
-    def query_llama(self, prompt):
+    def query_llama(self, prompt, max_tokens=200):
         response = self.client.chat.completions.create(
             model="meta-llama/Llama-3-70b-chat-hf",
             messages=[
@@ -418,11 +423,10 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
                     "content": "You are a helpful assistant that answers in JSON.",
                 },
                 {"role": "user", "content": prompt}],
-            max_tokens=50
+            max_tokens=max_tokens
         )
         return response
-    
-    
+
     def score_schema_alignments(
         self, pred_table: Table, gold_table: Table, featurizer=BaseFeaturizer("name")
     ) -> dict[tuple, float]:
@@ -449,13 +453,16 @@ class Llama3AlignmentScorer(BaseAlignmentScorer):
             new_key: value for new_key, value in zip(featurized_gold_col_list, gold_table.values.values())
         }
 
-        prompt = self.PROMPT + f"""
+        prompt = (
+            self.prompt_prefix
+            + f"""
 Table 1:
 {pd.DataFrame(new_gold_table).to_markdown()}
 
 Table 2:
 {pd.DataFrame(new_pred_table).to_markdown()}
 """
+        )
 
         # parse out the json
         try:
@@ -465,17 +472,29 @@ Table 2:
 
         alignment_str = response.choices[0].message.content
         alignment_str = alignment_str.split("Table 1:\n|")[0]
-        #print(re.search("(\[.+\])", content, re.DOTALL)[0])
         try:
-            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
+            alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
         except json.JSONDecodeError:
             # try again
-            response = self.query_llama(prompt)
+            if response.choices[0].finish_reason == self._together.types.common.FinishReason.Length:
+                response = self.query_llama(prompt, max_tokens=1000)
+            else:
+                response = self.query_llama(prompt)
+            if self.debug:
+                print(response)
             alignment_str = response.choices[0].message.content
             alignment_str = alignment_str.split("Table 1:\n|")[0]
-            alignment_json = json.loads(re.search("(\[.+\])", content, re.DOTALL)[0])
-        
-        alignment_matrix = {tuple(pair): 1.0 for pair in alignment_json}
+            alignment_json = json.loads(re.search("(\[.+\])", alignment_str, re.DOTALL)[0])
+
+        for gold_col_name in featurized_gold_col_list:
+            for pred_col_name in featurized_pred_col_list:
+                pair = (gold_col_name, pred_col_name)
+                alignment_matrix[pair] = 1.0 if pair in alignment_json else 0.0
+
+        alignment_matrix |= {tuple(pair): 1.0 for pair in alignment_json if pair}
+        if self.debug:
+            print(alignment_json)
+            print(alignment_matrix)
 
         return alignment_matrix
 

@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,2711679,EN,Language as a relation type in KB
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,11816014,EN,Language in natural language understanding
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,2417413,EN,English
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,26501419,EN,Language-related topics in TriviaQA dataset
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,52822214,EN,English
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Language,196170479,EN,Language models in abstractive QA
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,2711679,96K,"The MOVIEQA benchmark includes over 100,000 question-answer pairs and 13 question types, focusing on comparing knowledge representations and model performances."
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,11816014,97K,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,2417413,43K,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,26501419,74K,"The TriviaQA dataset includes over 650,000 question-answer pairs."
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,52822214,100K,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,#Questions,196170479,275K,"ELI5 contains long-form answers averaging 6.6 sentences or 130 words, focusing on open-ended queries."
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,2711679,Wikipedia,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,11816014,Wikipedia,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,2417413,Wikipedia,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,26501419,Wikipedia,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,52822214,Wikipedia,No
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,External Knowledge,196170479,Wikipedia,Yes
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,2711679,"EM, F1","Hits@1, MAP, MRR"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,11816014,"EM, F1","Exact Match, F1 Score"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,2417413,"EM, F1","Exact Match, F1 Score"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,26501419,"EM, F1, ROUGE-L","Exact Match, F1 Score"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,52822214,"EM, F1, ROUGE-L","EM, F1, Joint F1, Joint EM"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Metrics,196170479,"EM, F1, ROUGE-L","ROUGE, Perplexity, FILL-1, ROUGE-20%"
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,2711679,"{{cite:b2d6cfe}}{{cite:55532d1}}, etc.",Key-Value Memory Networks
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,11816014,"{{cite:b2d6cfe}}{{cite:55532d1}}{{cite:916e8b2}}{{cite:ecccbb4}}{{cite:d1e0cec}}{{cite:d32f8e8}}{{cite:be2aff8}}, etc.",Logistic Regression Model
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,2417413,"{{cite:55532d1}}{{cite:ecccbb4}}, etc.",QUASAR-S Dataset
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,26501419,KILT-TriviaQA Leader board,TriviaQA
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,52822214,KILT-HOTPOT Leader board,HOTPOTQA
+c8b48a14-6748-41eb-97fa-2dd1c5d05450,Used by,196170479,KILT-EMLI5 Leader board,Abstractive Models

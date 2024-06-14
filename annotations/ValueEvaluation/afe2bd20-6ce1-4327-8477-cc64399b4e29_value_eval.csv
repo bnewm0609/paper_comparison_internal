@@ -1,0 +1,21 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Mortality,5985448,-,Mortality prediction in clinical tasks
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Mortality,208309862,-,Mortality prediction in healthcare tasks
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Mortality,210932587,-,Mortality risk prediction in ESRD context
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Mortality,209444840,-,N/A
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Mortality,208075836,✗,In-hospital mortality classification using EBmRNN model
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Length of Stay,5985448,✗,Length of Stay prediction
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Length of Stay,208309862,-,N/A
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Length of Stay,210932587,-,N/A
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Length of Stay,209444840,-,N/A
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Length of Stay,208075836,-,N/A
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Phenotyping,5985448,✗,Discuss phenotyping for evaluating SAnD architecture
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Phenotyping,208309862,✗,Mentions patient phenotype identification for deep learning models using EMR data
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Phenotyping,210932587,-,"Discusses patient subtyping based on disease progression, a form of phenotyping"
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Phenotyping,209444840,✗,Discusses phenotyping with HTAD using hierarchical attention in EHR modeling
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Phenotyping,208075836,✗,Discusses phenotyping in memory architecture for longitudinal EHR analysis
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Decompensation,5985448,✗,Mentions Decompensation
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Decompensation,208309862,-,Discusses Decompensation Prediction on MIMIC-III
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Decompensation,210932587,✗,Mentions Decompensation in the Context of Physiologic Prediction on MIMIC-III
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Decompensation,209444840,-,Mentions Prediction of Decompensation as Task Addressed
+afe2bd20-6ce1-4327-8477-cc64399b4e29,Decompensation,208075836,✗,Mentions Decompensation as Specific Task for EBmRNN Model Evaluation

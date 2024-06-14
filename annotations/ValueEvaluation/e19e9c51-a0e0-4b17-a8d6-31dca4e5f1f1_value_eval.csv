@@ -1,0 +1,8 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,Dataset,71145872,CUB-200,"Stanford Dogs 120, Caltech-UCSD Birds 2011-200, Caltech 256"
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,Dataset,7515331,Oxford Flower,"Caltech 256, MIT Indoor-67, SUN-397, Oxford Pet 37, Oxford Flower 102, Caltech-UCSD Birds 2011-200"
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,Dataset,202542588,NABirds,"NABirds, CUB-Birds, Stanford Cars, Stanford Dogs, FGVC-Aircraft"
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,#Train / #Test,71145872,"5,994 / 5,794",1.40
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,#Train / #Test,7515331,"2,040 / 6,149",N/A
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,#Train / #Test,202542588,"23,929 / 24,633",0.97
+e19e9c51-a0e0-4b17-a8d6-31dca4e5f1f1,#Classes,71145872,200,"257 classes, 67 classes, 397 classes, 37 classes, 102 classes, 200 classes"

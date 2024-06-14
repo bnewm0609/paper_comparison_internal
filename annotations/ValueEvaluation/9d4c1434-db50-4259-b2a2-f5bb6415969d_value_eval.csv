@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,15863489,Papers,keyphrase generation,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,14117976,News,keyphrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,681677,News,keyphrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,71149752,News,keyphrase extraction and generation,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,208512795,News,keyphrase generation,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,182953047,QA,keyphrase generation,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,226237232,Tweets,keyphrase prediction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,5210508,Reports,keyphrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,15863489,EN,Keyphrase Extraction and Generation,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,14117976,PT,Portuguese,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,681677,EN,Persian,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,71149752,PER,Social Media Language,0

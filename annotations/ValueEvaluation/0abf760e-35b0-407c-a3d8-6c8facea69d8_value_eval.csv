@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,108290211,Well Living Lab,The Spatial and Temporal Variability of the Indoor Environmental Quality during Three Simulated Office Studies at a Living Lab,0.5
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,222184368,-,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,108290211,"Minnesota, USA",USA,0.5
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,222184368,-,"Japan, USA",0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,108290211,N,Not mentioned,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,222184368,-,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,108290211,Y,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,222184368,Y,"Surveys on stress, sleep quality, productivity, satisfaction, visual comfort, perceived naturalness of lighting",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,108290211,Y,Deployment of wireless real-time sensors for monitoring multiple environmental conditions.,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,222184368,Y,Deployment of 144 environmental sensors for various conditions.,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,108290211,18 weeks,ability to simulate a wide range of environmental conditions in an office setting over relatively long periods of time,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,222184368,4 weeks,4 months,0

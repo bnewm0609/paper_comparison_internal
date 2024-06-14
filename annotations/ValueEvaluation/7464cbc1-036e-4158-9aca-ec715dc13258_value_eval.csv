@@ -1,0 +1,43 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,13943041,DC-AI-C2,"Introduces WGAN, improving GAN training stability and addressing mode collapse."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,13756489,DC-AI-C3,"Introduces the Transformer architecture, utilizing attention mechanisms without recurrence or convolutions."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,8289133,DC-AI-C4,"Describes the NIC model, an end-to-end system for generating English descriptions of images."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,11590585,DC-AI-C6,Discusses DS2's performance in recognizing various speech types including accented and noisy speech.
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,206592766,DC-AI-C7,"Presents FaceNet, mapping face images to a compact space for state-of-the-art face recognition."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,10328909,DC-AI-C9,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,13907106,DC-AI-C10,Explores deep neural networks in collaborative filtering for recommender systems.
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,2659157,DC-AI-C11,Proposes action-conditioned video prediction with pixel motion modeling for unseen objects.
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,24041818,DC-AI-C12,Introduces neural network-based full-resolution lossy image compression methods.
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,1608002,DC-AI-C13,No
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,8928715,DC-AI-C14,"Proposes models for summarization addressing key-words, sentence hierarchy, and rare words."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,6099034,DC-AI-C15,"Introduces Spatial Transformer, a module enabling networks to learn spatial invariance."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,50778760,DC-AI-C16,"Proposes ranking distillation for compact, high-performance ranking models in recommender systems."
+7464cbc1-036e-4158-9aca-ec715dc13258,No.,3638969,DC-AI-C17,Discusses ENAS for efficient neural architecture search with fewer GPU hours.
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,13943041,Image generation,Comparison of Wasserstein distance with other distances and divergences in learning distributions
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,13756489,Text-to-Text translation,BLEU score of 28.4 on WMT 2014 English-to-German translation task by Transformer model
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,8289133,Image-to-Text,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,11590585,Speech recognition,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,206592766,Face embedding,"FaceNet accuracy: 99.63% on LFW, 95.12% on YouTube Faces DB"
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,10328909,Object detection,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,13907106,Recommendation,"NCF framework with GMF, MLP, and NeuMF instantiations"
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,2659157,Video prediction,Long-range video predictions by predicting pixel motion
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,24041818,Image compression,Comparison of architectures using MS-SSIM and PSNR-HVS metrics
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,1608002,3D object reconstruction,Model performance in reconstructing 3D objects from single-view images
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,8928715,Text summarization,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,6099034,Spatial transformer,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,50778760,Learning to rank,Ranking distillation technique for compact high-performance ranking models
+7464cbc1-036e-4158-9aca-ec715dc13258,Component Benchmark,3638969,Neural architecture search,"Test perplexity of 55.8 on Penn Treebank, test error of 2.89% on CIFAR-10 by ENAS"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,13943041,LSUN,LSUN-Bedrooms dataset
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,13756489,WMT English-German,"WMT 2014 English-German dataset, WMT 2014 English-French dataset"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,8289133,Microsoft COCO,"Pascal VOC, Flickr8k, Flickr30k, MSCOCO, SBU"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,11590585,Librispeech,"English: 11,940 hrs, Mandarin: 9,400 hrs, data synthesis"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,206592766,"LFW, VGGFace2","Hold-out Test Set, Personal Photos, LFW, YouTube Faces DB"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,10328909,VOC2007,PASCAL VOC 2007 and 2012 detection benchmarks
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,13907106,MovieLens,Two real-world datasets
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,2659157,Robot pushing data set,"50,000 robot interactions (1.4 million frames)"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,24041818,ImageNet,"32x32, High Entropy (HE)"
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,1608002,ShapeNet Data set,ShapeNetCore
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,8928715,Gigaword data set,Multi-sentence summaries dataset
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,6099034,MNIST,MNIST Distortion Model R RTS P E FCN 2
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,50778760,Gowalla,Yes
+7464cbc1-036e-4158-9aca-ec715dc13258,Data Set,3638969,PTB {{cite:174af43}},"Penn Treebank, CIFAR-10"

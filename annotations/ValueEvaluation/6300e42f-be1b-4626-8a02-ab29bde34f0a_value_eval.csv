@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,210164929,SISO,"Setup involves a single-antenna AP, multiple users, and an IRS with grouped sub-surfaces. Time durations for IRS configuration and transmission are specified."
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,218869779,SISO,"Setup includes optimization of IRS location, reflection coefficients, and power allocation across multiple access schemes (NOMA, FDMA, TDMA)."
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,209501151,MISO,"Setup details include IRS near the base station, random user placement, and specifics on antennas and IRS elements."
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,211989930,MIMO,"Setup described for RIS-aided SCB in MIMO-NOMA network, including TAs, RAs, user clusters, and RIS deployment."
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,198179402,MISO,Setup for IRS-assisted NOMA includes user channel vector alignment and discusses hardware impairments impact.
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Setup,231693142,Multi-cell SISO,"Yes, the paper provides information about the setup."
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,210164929,Capacity region,Capacity limits and optimal resource allocation in IRS-assisted multi-user wireless systems
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,218869779,Weighted sum rate,"Joint design of IRS deployment, reflection coefficients, and power allocation in IRS-assisted multi-user networks"
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,209501151,Transmit power,Optimization of beamforming vectors and IRS phase shift matrix in IRS-assisted MISO NOMA system
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,211989930,Outage probability analysis,Signal-cancellation-based design for RIS-aided MIMO-NOMA networks
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,198179402,Outage probability analysis,New type of NOMA transmission with IRS for enhanced user service in orthogonal spatial directions
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Main Objective,231693142,Sum rate,"Novel transmission framework for multi-UAV networks utilizing IRS with joint optimization of 3D placement, transmit power, and NOMA decoding orders"
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,210164929,Dynamic RIS configuration with NOMA is the capacity-achieving transmission strategy,Investigates capacity and rate regions for NOMA and OMA in IRS-assisted multi-user systems
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,218869779,"Asymmetric and symmetric deployment strategies are preferred by NOMA and OMA, respectively",Discusses joint optimization of deployment and reflection coefficients in IRS-assisted networks
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,209501151,Extended quasi-degradation condition,Proposes IRS-assisted downlink MISO transmission optimization for minimizing power in NOMA and ZFBF systems
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,211989930,Signal cancelation based RIS phase shift design,Discusses RIS for signal cancellation in MIMO-NOMA
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,198179402,Multiple RISs for cell-edge users to extend coverage,Proposes IRS for NOMA transmission
+6300e42f-be1b-4626-8a02-ab29bde34f0a,Characteristic/Technique,231693142,Simultaneous intra-cell signal enhancement and inter-cell interference mitigation for A2G communications,"Investigates IRS in multi-UAV NOMA networks, focusing on UAV placement, IRS reflection matrix, and NOMA decoding orders optimization"

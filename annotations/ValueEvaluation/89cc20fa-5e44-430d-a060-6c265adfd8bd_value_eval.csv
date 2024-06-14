@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+89cc20fa-5e44-430d-a060-6c265adfd8bd,Sensor,206439358,Stereo / Mono / RGB-D,Uses IMU
+89cc20fa-5e44-430d-a060-6c265adfd8bd,Sensor,83459364,Stereo / RGB-D,Uses IMU
+89cc20fa-5e44-430d-a060-6c265adfd8bd,Implementation Notes,206439358,2400 maximum ORB features,N/A
+89cc20fa-5e44-430d-a060-6c265adfd8bd,Implementation Notes,83459364,ORB features for Loop Closure - enabled Hypothesis Verification - use g2o {{cite:cd61093}},Extended RTAB-Map with memory management for large environments

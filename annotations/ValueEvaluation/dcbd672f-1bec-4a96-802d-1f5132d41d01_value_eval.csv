@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Separation,235829791,CSS,Uses models for continuous speech separation
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Separation,226246234,CSS,Focuses on explicit separation in recognition
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Separation,238419307,–,Proposes neural network-based Transcribe-to-Diarize method using SA-ASR for handling overlapping speech
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Separation,231603063,GSS,Utilizes speaker activity for extraction
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Diarization,235829791,DOA-based,Discusses diarization in the context of continuous speech separation; algorithms proposed based on speaker directions and DOA estimation.
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Diarization,226246234,X-vector + SC,Diarization discussed in several sections.
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Diarization,238419307,–,Introduces a new approach for speaker diarization using the E2E SA-ASR model.
+dcbd672f-1bec-4a96-802d-1f5132d41d01,Diarization,231603063,TS-VAD,Mentions diarization.
+dcbd672f-1bec-4a96-802d-1f5132d41d01,ASR,235829791,TDNN-F {{cite:943cf27}},Mentioned in context of diarization studies
+dcbd672f-1bec-4a96-802d-1f5132d41d01,ASR,226246234,E2E,Discussed in several sections
+dcbd672f-1bec-4a96-802d-1f5132d41d01,ASR,238419307,SA-ASR,Mentioned multiple times
+dcbd672f-1bec-4a96-802d-1f5132d41d01,ASR,231603063,E2E,"Improved performance, word error rate reduction up to 25%"

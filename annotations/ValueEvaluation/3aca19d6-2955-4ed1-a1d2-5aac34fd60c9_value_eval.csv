@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,14124313,Baseline,Investigation of convolutional network depth on accuracy in large-scale image recognition,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,2375110,Baseline,"Introduction of Xception architecture, a novel deep convolutional neural network inspired by Inception with depthwise separable convolutions",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,12670695,Baseline,"Use of MobileNet as a base network in object detection systems, comparison with VGG and Inception V2 in terms of accuracy, computational complexity, and model size",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,9433631,Combined,Introduction of the Dense Convolutional Network (DenseNet) architecture,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,14124313,LiDAR + RGB,Very deep convolutional networks,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,2375110,LiDAR + RGB,Xception architecture using depthwise separable convolutions,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,12670695,LiDAR + RGB,Depthwise separable convolutions,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,9433631,LiDAR + RGB,Dense Convolutional Network (DenseNet) architecture,0

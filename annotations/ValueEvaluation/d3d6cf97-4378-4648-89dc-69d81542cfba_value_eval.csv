@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+d3d6cf97-4378-4648-89dc-69d81542cfba,Inputs,236459799,-,"Discusses different inputs used in the SCIGEN model: abstracts, introductions, and sampled sentences."
+d3d6cf97-4378-4648-89dc-69d81542cfba,Inputs,53293308,single cited abstract,Yes
+d3d6cf97-4378-4648-89dc-69d81542cfba,Target,236459799,reference,Explaining relationships between documents
+d3d6cf97-4378-4648-89dc-69d81542cfba,Target,53293308,reference,Background subtraction using deep neural networks

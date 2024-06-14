@@ -1,0 +1,17 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Game Type,226226589,MOBA,N/A
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Game Type,251134844,"Racing, shooter, platformer",N/A
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Games,226226589,1,IEEE TRANSACTIONS ON GAMES
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Games,251134844,9,"The AGAIN dataset features nine games from three different genres: racing, shooter, and platformer. Each game was designed to be aesthetically pleasing, representative of popular sub-genres, and easy to understand with basic game literacy. The games include TinyCars, Solid, ApexSpeed, Heist!, TopDown, Shootout, Endless, Pirates!, and Run'N'Gun."
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Participants,226226589,8,10 participants
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Participants,251134844,124,124 participants
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Modalities,226226589,"EEG, BVP (HR), EDA, EMG, temp., hand and head gestures","EMG, GSR, IMU, environmental data, eye tracking, EEG, mouse and keyboard activity, facial skin temperature, heart rate, pulse-oximeter sensor"
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Modalities,251134844,"Game video, game telemetry","in-game video footage, behavioural telemetry data"
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Annotation,226226589,-,Annotations mentioned but details lacking
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Annotation,251134844,Continuous unbounded,Yes
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Labels,226226589,-,"The dataset includes labels for each match, indicating whether the match was played against bots or real players, whether team communication was allowed, and the match outcome."
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Labels,251134844,Arousal,Yes
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Annotators,226226589,-,Not applicable
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Annotators,251134844,self-report,124 participants via Amazon's Mechanical Turk
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Tasks,226226589,11,"Skill prediction, player re-identification, team dynamics analysis"
+81d9aeda-3332-4b2a-884b-33ba624bcb99,Tasks,251134844,9,"Affective computing, affect annotation, diverse contexts"

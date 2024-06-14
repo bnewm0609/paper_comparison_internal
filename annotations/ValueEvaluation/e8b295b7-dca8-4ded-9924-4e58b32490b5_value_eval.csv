@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Aspect,153312661,Wireless edge,N/A
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Aspect,201070569,Vehicular Edge Computing,Vehicular Edge Computing (VEC)
+e8b295b7-dca8-4ded-9924-4e58b32490b5,MEC only,153312661,No,discusses edge computing and applications
+e8b295b7-dca8-4ded-9924-4e58b32490b5,MEC only,201070569,No,discusses Mobile Edge Computing (MEC) and Vehicular Edge Computing (VEC)
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Main contribution,153312661,Discusses the feasibility and potential of providing edge computing services with latency and reliability guarantees.,Exploration of edge computing applications focusing on ultra-reliable and low-latency services.
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Main contribution,201070569,Surveys the state of the art of vehicular edge computing.,Comprehensive survey on Vehicular Edge Computing (VEC) covering research topics and future directions.
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Relevance to MEC performance,153312661,Overviews the challenges and the enablers for achieving low-latency and high-reliability networking; discusses network resources optimization techniques for a selection of use cases.,Relevance of MEC to performance optimization in various use cases
+e8b295b7-dca8-4ded-9924-4e58b32490b5,Relevance to MEC performance,201070569,"Presents a summary of techniques for caching, task offloading, and data management highlighting the considered performance parameter.",Integration of MEC with VEC to improve performance in vehicular networks

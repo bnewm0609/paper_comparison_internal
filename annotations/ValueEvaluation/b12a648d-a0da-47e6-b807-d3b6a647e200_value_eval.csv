@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+b12a648d-a0da-47e6-b807-d3b6a647e200,Task,4068646,MD,Yes
+b12a648d-a0da-47e6-b807-d3b6a647e200,Task,1442493,LDL,Yes
+b12a648d-a0da-47e6-b807-d3b6a647e200,Algorithm adaptation,4068646,"Bayesian networks {{cite:e69ded2}}, {{cite:7c4026b}}Maximum Entropy {{cite:4546ea1}}, {{cite:947ab67}}",Multi-dimensional categorization and annotation scheme
+b12a648d-a0da-47e6-b807-d3b6a647e200,Algorithm adaptation,1442493,k-NN {{cite:e2adf50}} Neural networks {{cite:e2adf50}},Yes

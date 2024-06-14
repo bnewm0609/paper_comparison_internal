@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,6875312,A3C,Asynchronous Methods for Deep Reinforcement Learning,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16326763,DDPG,Proximal Policy Optimization Algorithms,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16046818,TRPO,Soft Actor-Critic,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,6875312,Distributed Actor Critic,Asynchronous Gradient Descent for Deep Neural Network Controllers,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16326763,Derivative of continuous action function,Model-free Off-policy Actor-Critic Algorithm with Deep Function Approximators,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16046818,Dynamically sized step size,Trust Region Policy Optimization with KL Divergence Constraint,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28695052,"Improved TRPO, first order",Proximal Policy Optimization,0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28202810,Variance-based Actor Critic for robustness,Soft Actor-Critic based on Maximum Entropy Framework,0.5

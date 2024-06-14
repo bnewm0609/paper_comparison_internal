@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Type,14604520,Short-to-short,"Models: nnlm, nn, trad"
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Type,253234683,Short-to-long,N/A
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Tasks,14604520,Textual Entailment,Natural language inference (NLI)
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Tasks,253234683,Document Ranking,"Document retrieval, Passage retrieval"
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Tasks,8379583,Response Ranking,"Dialogue management, Response selection"
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Explanation,14604520,"Given two sentences, predict whether they have textual entailment relations.","Discusses SNLI corpus, its creation for entailment and contradiction understanding, corpus size, evaluated models, and model performance."
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Explanation,253234683,"Given a query and a candidate document set, rank documents according to query/ document relevance.","Covers TREC 2019 Deep Learning Track, with focus on ad hoc ranking, document and passage retrieval, performance comparison between deep learning and traditional IR methods."
+af6aec4c-bca3-4b49-b187-f5840d4ba99b,Explanation,8379583,"Given a dialog context and candidate responses, select a high quality response.","Introduces Ubuntu Dialogue Corpus, a dataset of multi-turn dialogues, details content size, and its utility for dialogue manager research based on neural models."

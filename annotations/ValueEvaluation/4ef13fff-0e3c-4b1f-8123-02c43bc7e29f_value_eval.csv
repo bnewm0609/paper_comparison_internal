@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Scenarios,253157542,Mobility-enhanced edge intelligence,discusses deployment and operation of base stations (BSs) and edge servers (ESs) in 6G networks,0
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Scenarios,214623220,UAVs as an intelligent service,"discusses employing UAVs for wireless communication, edge computing, and edge caching in UaaS architecture",0.5
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Performance Metrics/Problems,253157542,"Task completion ratio and model accuracy/Offloading redundancy, task assignment, beam selection",Discusses MEET framework issues,0
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Performance Metrics/Problems,214623220,Model accuracy and energy consumption/Number of local iterations,"Challenges faced include temporal-spatial dynamic service demand, large-scale complex connection decision and resource management, and ubiquitous intelligence demand inside the network.",0
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Benefits/Challenges,253157542,Sustainable AIGC service provisioning with mobility management,Discusses benefits and challenges of MEET framework,0.5
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Benefits/Challenges,214623220,Provision AIGC services via a network of UAVs,Discusses benefits and challenges of using UAVs in air-ground networks,0.5
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Mathematical Tools,253157542,FL,N/A,0
+4ef13fff-0e3c-4b1f-8123-02c43bc7e29f,Mathematical Tools,214623220,Greedy algorithm,N/A,0

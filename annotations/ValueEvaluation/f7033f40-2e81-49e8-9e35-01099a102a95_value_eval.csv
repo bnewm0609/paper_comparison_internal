@@ -1,0 +1,11 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+f7033f40-2e81-49e8-9e35-01099a102a95,Classes,64745485,64,Mentions classes
+f7033f40-2e81-49e8-9e35-01099a102a95,Classes,54446047,1000,Includes 100-1000 classes in MS-ASL dataset
+f7033f40-2e81-49e8-9e35-01099a102a95,Signer,64745485,10,10 non-expert subjects
+f7033f40-2e81-49e8-9e35-01099a102a95,Signer,54446047,11-45,over 200 signers
+f7033f40-2e81-49e8-9e35-01099a102a95,Videos,64745485,3200,Dataset consists of 3200 videos of 64 different LSA signs recorded by 10 subjects
+f7033f40-2e81-49e8-9e35-01099a102a95,Videos,54446047,25513,"Dataset comprises over 25,000 annotated videos"
+f7033f40-2e81-49e8-9e35-01099a102a95,Videos per Class,64745485,50,"LSA64 dataset: 3200 videos, 64 signs, 10 subjects"
+f7033f40-2e81-49e8-9e35-01099a102a95,Videos per Class,54446047,25,"MS-ASL dataset: subsets ASL100, ASL200, ASL500, ASL1000 with varying videos per class"
+f7033f40-2e81-49e8-9e35-01099a102a95,Controlled,64745485,✓,Controlled
+f7033f40-2e81-49e8-9e35-01099a102a95,Controlled,54446047,✗,Uncontrolled

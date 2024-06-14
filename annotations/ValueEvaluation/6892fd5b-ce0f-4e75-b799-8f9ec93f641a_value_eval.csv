@@ -1,0 +1,11 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Hyperparameters,50783851,no,"k = 5, γ = 3, j = 3 with n - j = 2, m = 3, d_min = 0.25 and d_max = 0.50"
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Hyperparameters,195574311,yes,N/A
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Planning Space,50783851,world,Addresses adversarial and cooperative situations; defines and evaluates four planning problems using search techniques across three IPC domains.
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Planning Space,195574311,joint,Uses a hierarchical behavioral dynamic model for planning in human-agent interactions.
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Score,50783851,-,N/A
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Score,195574311,-,N/A
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Goal Space,50783851,discrete,Discusses goal obfuscation and legibility; defines problems and presents algorithms.
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Goal Space,195574311,discrete,"Focuses on pick-and-place tasks; goal locations fixed and color-coded, influenced by hand-to-goal distance."
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Eval Cost,50783851,high,"Average evaluation cost: BlocksWorld - 32.41, Storage - 37.72, Gripper - 56.49"
+6892fd5b-ce0f-4e75-b799-8f9ec93f641a,Eval Cost,195574311,low,N/A

@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+eb3ec13c-77ee-4636-b78d-648a2e934864,Positionality of Value,219124041,"Searcher, if inferred using interaction data",FairCo algorithm proposed to enforce fairness in dynamic ranking systems
+eb3ec13c-77ee-4636-b78d-648a2e934864,Positionality of Value,300418,Searcher,Yes
+eb3ec13c-77ee-4636-b78d-648a2e934864,Potential Issues with Measurement,219124041,"Potentially noisy, may not generalize to new queries","Identifies biased feedback and uncontrolled exposure allocation as issues affecting measurement in dynamic LTR, leading to poor ranking quality and unfairness."
+eb3ec13c-77ee-4636-b78d-648a2e934864,Potential Issues with Measurement,300418,"Binary-valued, prone to biases, may depend on size of click logs",Yes

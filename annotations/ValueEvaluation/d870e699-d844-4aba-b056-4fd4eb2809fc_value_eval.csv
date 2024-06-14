@@ -1,0 +1,56 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,251903776,Multiple,Multiple source domains used for training models
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,248798691,Multiple,Mentions 'source' in context of domain shift and adaptation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,251223980,Multiple,Uses source domain for Feather-Light Fourier Domain Adaptation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,253107574,Single,"Evaluates MC-Net for MRI, not specific about source domain"
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,49431490,Multiple,Uses guidance contrast as source in multi-contrast MRI reconstruction
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,248238048,Single,Mentions 'Source' multiple times
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,257622729,Multiple,"Discusses source-free and test-time adaptation, requires source data for SFDA"
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,249889334,Multiple,Single source domain for training
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,231749828,Single,Uses medically-irrelevant style source for STRAP data augmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,250088924,Single,Single source domain for adversarial domain generalization
+d870e699-d844-4aba-b056-4fd4eb2809fc,Source,254043597,Single,Single-source domain generalization with augmentation strategy
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,251903776,Site,"Proposes CIRCLe, a skin color invariant deep representation learning method for skin lesion classification."
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,248798691,Site,Discusses concept and importance
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,251223980,Site,Mentions target concept
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,253107574,Sequence,"Proposes MC-Net, which outperforms other methods in PSNR and SSIM for T1 axial test set."
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,49431490,Sequence,Discusses target contrast reconstruction
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,248238048,Site,Discusses SDG and TASD for image segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,257622729,Site,"Proposes TeSLA, a test-time self-learning method for adapting to unlabeled streaming test data."
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,249889334,Site,Mentions new test-time data augmentation method
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,231749828,Site,"Proposes STRAP, a style transfer augmentation for learning domain-agnostic visual representations in computational pathology."
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,250088924,"Modality, Sequence",Discusses target domains and synthetic domains relationship
+d870e699-d844-4aba-b056-4fd4eb2809fc,Target,254043597,Modality,"Proposes SLAug, a novel augmentation strategy for SDG in medical image segmentation."
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,251903776,Classification,Skin lesion classification
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,248798691,Segmentation,Domain generalization (DG) in machine learning
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,251223980,Segmentation,Domain adaptation in medical imaging
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,253107574,Segmentation,Suppress motion artifacts in brain MRI
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,49431490,Reconstruction,Multi-contrast MRI reconstruction
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,248238048,Segmentation,Single domain generalization for medical image segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,257622729,Segmentation,Test-time adaptation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,249889334,Classification,Histopathology tasks: patch classification and tissue type classification
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,231749828,Classification,Genetic subtype classification and tumor identification
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,250088924,Segmantation,Single-source domain generalization for organ segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Task,254043597,Segmentation,Single-source domain generalization (SDG) in medical image segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,251903776,Skin,Skin Lesions
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,248798691,Brain,N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,251223980,Brain,MRI
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,253107574,Brain,Brain
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,49431490,Brain,Multi-contrast MRI reconstruction
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,248238048,"Prostate, Retinal",N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,257622729,"Spinal, Prostate",N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,249889334,Tissue,Histopathology
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,231749828,Tissue,Computational Pathology
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,250088924,"Prostate, Abdominal, Cardiac",N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Organ,254043597,"Cardiac, Abdominal",N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,251903776,Dermatology,Dermatological diagnosis tasks
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,248798691,MRI,Fourier transformation of features
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,251223980,MRI,MRI
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,253107574,MRI,MRI
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,49431490,MRI,Multi-contrast MRI (T1-weighted and T2-weighted)
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,248238048,"MRI, Fundus",Medical image segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,257622729,MRI,Measurement shifts of medical images
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,249889334,Histology,Histopathology
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,231749828,Histology,N/A
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,250088924,"MRI, CT",Single-source domain generalization for organ segmentation
+d870e699-d844-4aba-b056-4fd4eb2809fc,Modality,254043597,MRI,Location-scale augmentation and saliency-balancing fusion for medical image segmentation

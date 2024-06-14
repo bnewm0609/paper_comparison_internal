@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+267793dc-a174-4431-bb1d-984d53d1825c,Init.,233024831,ViT,Introduces Audio Spectrogram Transformer (AST) for audio classification.
+267793dc-a174-4431-bb1d-984d53d1825c,Init.,238583346,DeiT,"Proposes Patchout for optimizing transformers on audio spectrograms, achieving state-of-the-art performance on Audioset."
+267793dc-a174-4431-bb1d-984d53d1825c,Init.,248405774,FS,"Introduces MaskSpec, a self-supervised learning framework for unlabeled audio data."
+267793dc-a174-4431-bb1d-984d53d1825c,Init.,254853660,FS,Uses a random-projection tokenizer as the acoustic tokenizer for BEATS pre-training.
+267793dc-a174-4431-bb1d-984d53d1825c,GPUs,233024831,-,N/A
+267793dc-a174-4431-bb1d-984d53d1825c,GPUs,238583346,2 RTX 2080ti,Single consumer-grade GPU
+267793dc-a174-4431-bb1d-984d53d1825c,GPUs,248405774,64 Tesla V100,8 Nvidia Tesla V100 32GB GPUs
+267793dc-a174-4431-bb1d-984d53d1825c,GPUs,254853660,16,N/A
+267793dc-a174-4431-bb1d-984d53d1825c,Time,233024831,-,Variable-length inputs from 1 sec to 10 sec
+267793dc-a174-4431-bb1d-984d53d1825c,Time,238583346,24 h,Disentanglement of positional encoding into time and frequency
+267793dc-a174-4431-bb1d-984d53d1825c,Time,248405774,36 h,Analysis of time-frequency structures in spectrograms
+267793dc-a174-4431-bb1d-984d53d1825c,Time,254853660,-,Research timeframe: the past few years

@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions,7197134,101,101 action classes
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions,18061547,157,157 action classes
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions,4856475,100,100 categories of action labels
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Samples,7197134,13320,"over 13,000 clips"
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Samples,18061547,66500,"9,848 videos"
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Samples,4856475,102462,"102,462 videos"
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions used,7197134,2,101 action classes
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions used,18061547,5,157 action classes
+a9046832-441b-40aa-8bae-1364b54ea3ba,#Actions used,4856475,5,100 categories of action labels

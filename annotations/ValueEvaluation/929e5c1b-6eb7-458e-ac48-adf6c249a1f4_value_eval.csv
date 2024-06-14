@@ -1,0 +1,21 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Dataset,3919117,Twitter100K,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Dataset,15514398,Xmedia,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Year,3919117,2018,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Year,15514398,2018,2017
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Data size,3919117,"100,000","100,000 image-text pairs"
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Data size,15514398,"12,000","12,000 media instances"
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,URL,3919117,http://ngnlab.cn/wp-content/uploads/twitter100k.tar,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,URL,15514398,http://www.icst.pku.edu.cn/mipl/XMedia,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Image,3919117,✓,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Image,15514398,✓,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Text,3919117,✓,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Text,15514398,✓,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Tags,3919117,-,Uses Flickr30k dataset; images with five descriptive sentences by native English speakers.
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Tags,15514398,-,Uses NUS-WIDE dataset; web images with associated tags for cross-media retrieval.
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Video,3919117,-,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Video,15514398,✓,Uses video
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Audio,3919117,-,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,Audio,15514398,✓,Yes
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,3D Model,3919117,-,N/A
+929e5c1b-6eb7-458e-ac48-adf6c249a1f4,3D Model,15514398,✓,Uses 3D models

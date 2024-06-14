@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+569426bc-2f86-425b-a93b-b329139c116c,Approach,10271089,-,Utilize contrastive representation embedding expressive factor for recognition accuracy.
+569426bc-2f86-425b-a93b-b329139c116c,Approach,3234323,-,Using peak-piloted deep network with peak gradient suppression for effective training.
+569426bc-2f86-425b-a93b-b329139c116c,Dataset,10271089,MMI,"CK+, MMI, Oulu-CASIA"
+569426bc-2f86-425b-a93b-b329139c116c,Dataset,3234323,OULU-CACIA,"CK+, Oulu-CASIA"

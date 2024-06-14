@@ -1,0 +1,34 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+e741559d-c35c-471b-b496-d3caa0771669,Year,219966767,2020,N/A
+e741559d-c35c-471b-b496-d3caa0771669,Year,210164865,2020,2020
+e741559d-c35c-471b-b496-d3caa0771669,Year,218869770,2020,2020
+e741559d-c35c-471b-b496-d3caa0771669,Year,215814229,2020,2020
+e741559d-c35c-471b-b496-d3caa0771669,Year,173990443,2019,2019
+e741559d-c35c-471b-b496-d3caa0771669,Year,209376429,2019,2019
+e741559d-c35c-471b-b496-d3caa0771669,Year,57189442,2019,N/A
+e741559d-c35c-471b-b496-d3caa0771669,Year,201698385,2019,2019
+e741559d-c35c-471b-b496-d3caa0771669,Year,3973810,2018,2018
+e741559d-c35c-471b-b496-d3caa0771669,Year,49312909,2018,2018
+e741559d-c35c-471b-b496-d3caa0771669,Framework,219966767,TensorFlow,A3T-GCN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,210164865,TensorFlow,R-SSM
+e741559d-c35c-471b-b496-d3caa0771669,Framework,218869770,PyTorch,MTGNN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,215814229,TensorFlow,TL-DCRNN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,173990443,PyTorch,Graph WaveNet
+e741559d-c35c-471b-b496-d3caa0771669,Framework,209376429,PyTorch,Graph WaveNet
+e741559d-c35c-471b-b496-d3caa0771669,Framework,57189442,TensorFlow,T-GCN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,201698385,MXNet,RFN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,3973810,MXNet,GaAN
+e741559d-c35c-471b-b496-d3caa0771669,Framework,49312909,TensorFlow,Traffic prediction framework integrating geographical and social attributes
+e741559d-c35c-471b-b496-d3caa0771669,Problem,219966767,Road Traffic Speed,Real-time traffic forecasting with spatial and temporal dependencies
+e741559d-c35c-471b-b496-d3caa0771669,Problem,210164865,Road Traffic Speed,Forecasting behaviors of multi-object systems with complex interactions
+e741559d-c35c-471b-b496-d3caa0771669,Problem,218869770,Road Traffic Speed,Exploiting latent interdependencies in multivariate time series forecasting
+e741559d-c35c-471b-b496-d3caa0771669,Problem,215814229,Road Traffic Speed,Data-driven learning in highway networks with scarce historical data
+e741559d-c35c-471b-b496-d3caa0771669,Problem,173990443,Road Traffic Speed,Capturing spatial dependency and long-range temporal sequences in spatial-temporal graph modeling
+e741559d-c35c-471b-b496-d3caa0771669,Problem,209376429,Road Traffic Speed,Predicting future traffic speed using past sensor data
+e741559d-c35c-471b-b496-d3caa0771669,Problem,57189442,Road Traffic Speed,Accurate and real-time traffic forecasting with spatial and temporal complexities
+e741559d-c35c-471b-b496-d3caa0771669,Problem,201698385,Road Traffic Speed,Limitations of existing GCNs in machine learning on road networks
+e741559d-c35c-471b-b496-d3caa0771669,Problem,3973810,Road Traffic Speed,Expressing and exploiting structural information in graph-based machine learning tasks
+e741559d-c35c-471b-b496-d3caa0771669,Problem,49312909,Road Traffic Speed,Traffic prediction
+e741559d-c35c-471b-b496-d3caa0771669,Link,219966767,https://github.com/lehaifeng/T-GCN/tree/master/A3T,https://github.com/lehaifeng/T-GCN/A3T
+e741559d-c35c-471b-b496-d3caa0771669,Link,210164865,https://github.com/fanyang01/relational-ssm,https://github.com/sshleifer/Graph-WaveNet
+e741559d-c35c-471b-b496-d3caa0771669,Link,218869770,https://github.com/nnzhan/MTGNN,https://github.com/lehaifeng/T-GCN

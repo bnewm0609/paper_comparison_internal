@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Memory requirement (MB),15276198,243,N/A
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Memory requirement (MB),198953378,800,355M
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Memory requirement (MB),207853304,266,110M
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Memory requirement (MB),58981712,1116,N/A
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Memory requirement (MB),173990641,890 - 1962,Multiple GBs
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Batch size/GPU,15276198,256-1200,"Batch size: 32, GPU: Titan X"
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Batch size/GPU,198953378,8-32,"Batch size: 8K sequences, GPU: 1024 V100"
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Batch size/GPU,207853304,8-32,"Batch size: 8192 sequences, GPU: 256 V100"
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Batch size/GPU,58981712,4-32,"Batch size: 64 streams of 256 tokens, GPU: 64 Volta (language modeling), 8 GPUs (machine translation)"
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Batch size/GPU,173990641,16-1024,N/A
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Parallelization strategy,15276198,Data Parallel,"cudnn v5 and Titan X, minibatch size 32"
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Parallelization strategy,198953378,Data Parallel,Distributed data parallel training for large batches
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Parallelization strategy,207853304,Data Parallel,Pretrained on 256 Nvidia V100 GPUs for 100k steps over 17 hours
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Parallelization strategy,58981712,Data Parallel,Training with batches of sentences from the same language on multiple GPUs
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Parallelization strategy,173990641,Model Parallel,Model and Data Parallelism
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Type,15276198,Vision,Replication study
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Type,198953378,Language,Cross-lingual language model pretraining study
+98f6f443-03a5-48ac-a4c8-96b84ed83c7b,Type,207853304,Language,Recommendation model study

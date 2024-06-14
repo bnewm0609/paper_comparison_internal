@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Dataset,207591369,Power system (synthetic),"Synthetic data set: Modbus/TCP communication in a fictitious industrial scenario. Parts: DS1 (3-minute interval), DS2 (10-minute interval), DS3 (contains malicious and non-malicious data)."
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Dataset,52932436,SCADA Testbed,Developed a new dataset for machine learning training and testing.
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Dataset,53015016,SWaT,Secure Water Treatment (SWaT) testbed dataset.
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Machine Learning Models,207591369,"Naive Bayes, Random Forests, SVM","SVM, Random Forest, k-nearest neighbour, k-means clustering"
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Machine Learning Models,52932436,"Random Forest, J48, Logistic Regression, Naive Bayes","Random Forest, Decision Tree, Logistic Regression, Naive Bayes, KNN"
+1820e2a6-eff0-4238-9881-c0a1e1cf94d1,Machine Learning Models,53015016,1D Convolutional Networks,"CNN, RNN"

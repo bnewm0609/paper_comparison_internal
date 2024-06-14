@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Domain,210838826,Educational illustrations,Educational Image Classification
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Domain,3535069,Scientific graphs and charts,Visual Reasoning on Scientific Figures
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Domain,4445015,Bar charts,Data Visualization Question Answering and Bar Chart Understanding
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Domain,237578994,Scientific figures,Computer Science and Machine Learning
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Realistic/ Synthetic,210838826,Realistic,Synthetic
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Realistic/ Synthetic,3535069,Synthetic,Both realistic and synthetic
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Task,210838826,Image classification (8 classes),Classifying educational illustrations and images in slides
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Task,3535069,VQA,Visual reasoning corpus (FigureQA)
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Task,4445015,VQA,Data visualization question answering (DVQA) with bar charts
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Task,237578994,Image captioning,Generating captions for scientific figures
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Size of dataset,210838826,3K images,Small dataset size
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Size of dataset,3535069,100K images,Over 1 million question-answer pairs
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Size of dataset,4445015,300K images,Over 3 million image-question pairs
+b97ec2d4-73b6-4c17-96cb-5a80e833bce0,Size of dataset,237578994,416K figures,Over 2 million figures

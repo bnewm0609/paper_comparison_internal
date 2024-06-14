@@ -1,0 +1,6 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+f180dbd1-67d8-44ba-bc8e-e968f1f08013,Contribution,245837308,"The convergence of artificial intelligence, blockchain technology and metaverse.",Covers multiple advanced topics in the metaverse.
+f180dbd1-67d8-44ba-bc8e-e968f1f08013,Contribution,237260161,Virtual university.,Proposes a metaverse architecture and implements a blockchain-driven prototype.
+f180dbd1-67d8-44ba-bc8e-e968f1f08013,Keyword,245837308,Metaverse Concept,Yes
+f180dbd1-67d8-44ba-bc8e-e968f1f08013,Keyword,237260161,Metaverse Applications,Yes
+f180dbd1-67d8-44ba-bc8e-e968f1f08013,Year,245837308,2022,2021

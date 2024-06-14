@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,202565722,"22,825",Mentions dialogue
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,202565569,"13,215",Discusses dialogue system development
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,5932528,"3,031",Mentions dialogue
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,1828592,"1,369",Provides information on dialogues
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,437687,"1,200",Mentions dialogue
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Dialogue,10565222,676,Discusses dialogue system development
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,202565722,"463,284",Description of the dialogue paraphrasing framework and steps for paraphrased conversations.
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,202565569,"303,066",Average number of utterances per dialog: 23.
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,5932528,"15,928",Description of dialogue utterances and dialogue context.
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,1828592,"19,986",Text of each utterance by user or wizard in dialogues.
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,437687,"5,012",Mentions utterance
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Utterance,10565222,"2,744",Neural network-based model for task-oriented dialogue systems.
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,202565722,17,16
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,202565569,6,"6 domains: ordering pizza, auto repair appointments, ride service, movie tickets, coffee drinks, restaurant reservations"
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,5932528,3,3
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,1828592,3,goal-oriented dialogue systems
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,437687,1,restaurant
+aaf81db8-ddad-4fc7-b0a9-18ff2baa19be,# Domain,10565222,1,restaurant search

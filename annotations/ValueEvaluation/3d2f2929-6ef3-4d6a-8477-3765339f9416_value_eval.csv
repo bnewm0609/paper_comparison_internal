@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,17898898,sample size,Chemical Reaction Optimization (CRO) for Bus Sensor Deployment Problem (BSDP),0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,204800605,sample size,Algorithm design for optimal vehicle selection in drive-by sensing,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,49329244,sample size,Discusses quantification methods,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,211204790,sample size,"Hotspot-based algorithm, utility-aware genetic algorithm, utility-aware redundancy minimization algorithm",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,17898898,Bus,public transportation system,0.5
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,204800605,Taxi & bus,taxis and public transport buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,49329244,Bus,urban buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,211204790,Bus,public transportation buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,17898898,Air quality,Sensors on buses for air pollution monitoring,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,204800605,Air quality,Drive-by sensing using a fleet of vehicles,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,49329244,Air quality; traffic condition,Urban buses as mobile sensors,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,211204790,Heat island,Drive-by sensing through public transportation,0

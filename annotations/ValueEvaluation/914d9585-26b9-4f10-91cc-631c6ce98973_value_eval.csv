@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value
+914d9585-26b9-4f10-91cc-631c6ce98973,Prompt,368182,It was ____. a,The information that goes in the column called Prompt is the empirical study on character-level convolutional networks for text classification.
+914d9585-26b9-4f10-91cc-631c6ce98973,Prompt,3432876,"“a” ? ‖ ____, “b”",Mentions 'Prompt'
+914d9585-26b9-4f10-91cc-631c6ce98973,Train,368182,"650,000",Multiple large-scale datasets including training set
+914d9585-26b9-4f10-91cc-631c6ce98973,Train,3432876,"392,702",Training set of the MultiNLI corpus

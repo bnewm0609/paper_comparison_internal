@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,5890185,-,Visual Question Answering (VQA),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,4052735,-,VQA with Explanations (VQA-E),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,53955763,-,Visual Question Answering (VQA),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,261081574,-,Visual Question Answering (VQA),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,222379195,Description for Reasoning Process,Visual Question Answering (VQA),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,225068216,Description for Reasoning Process,Visual Question Answering and Reasoning (ViQAR),0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,252383606,Description for Reasoning Process,N/A,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,256504063,Description for Reasoning Process,N/A,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,258546810,Description for Reasoning Process,N/A,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,5890185,Generated Facts,"Introduction, Related Work, Methodology, Experiments and Analysis, Discussions and Conclusions",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,4052735,Generated Facts,"Introduction, Related Work, VQA-E Dataset, Multi-task VQA-E Model, Evaluation of Explanation Generation, Evaluation of Answer Prediction, Qualitative Analysis, Conclusions and Future Work",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,53955763,Generated Facts,"Introduction, Related Work, VQA Models, Experiments, Conclusion",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,261081574,Generated Facts,"Introduction, Method, Experiment, Limitation, Conclusion",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,222379195,Concise Rationale,"The paper discusses generating natural language rationales for several complex visual reasoning tasks, including visual commonsense reasoning, visual-textual entailment, and visual question answering.",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,225068216,Concise Rationale,"Introduction, Related Work, Proposed Methodology, Experiments and Results, Conclusion",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,252383606,Chain-of-Thought,"The paper discusses the SCIENCEQA dataset, which consists of multimodal science questions with lectures and explanations. The dataset covers diverse topics across three subjects: natural science, social science, and language science.",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,256504063,Chain-of-Thought,Exception while querying PaperQA endpoint: '256504063',0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,258546810,Chain-of-Thought,"Introduction, Related Work, Our T-SciQ Approach Overview, Generating Teaching Data, Mixing Teaching Data, Fine-Tuning, Model, Experiment, Main Results, Further Analysis, Conclusion",0
