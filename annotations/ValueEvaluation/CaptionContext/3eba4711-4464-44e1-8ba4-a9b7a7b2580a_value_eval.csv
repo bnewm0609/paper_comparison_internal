@@ -1,0 +1,21 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,743641,global,"Can explore and evaluate a wide range of neural network architectures with arbitrary depths, skip connections, and numerical parameters.",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,206770867,global,"Can explore and evaluate up to 8,192 network structures for MNIST and 524,288 for CIFAR10, determined by binary string lengths of 13 and 19 respectively.",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,7315023,global,Can explore and evaluate neural network architectures with a maximum of 50 active nodes.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,23873820,cell-based,Can explore and evaluate neural network architectures represented by a computation graph with nodes and edges corresponding to feature maps and primitive operations.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,26945723,global,"Can explore and evaluate a wide range of neural network architectures including different layer types, number of layers, and layer parameters.",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,743641,simple,"Poor initial conditions with simple individuals, no convolutions, learning rate 0.1",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,206770867,random,Randomized and all-zero initialization strategies,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,7315023,random,"Random initial individual, He's method for weights, Adam optimizer",1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,23873820,random,Diversification-based strategy with trivial genotype and random mutations,0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,26945723,simple,Network transformations/morphisms as initialization methods,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,743641,tournament,Tournament Selection,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,206770867,all,Russian Roulette Process,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,7315023,-,Modified (1 + λ) Evolutionary Strategy,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,23873820,tournament,Tournament Selection,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,26945723,-,Simple Hill Climbing Strategy,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,743641,tournament,N/A,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,206770867,fitness prop.,Uses a Russian roulette process and non-uniform sampling based on fitness values for survivor selection.,0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,7315023,elitist,"Implements a modified (1 + λ) strategy with forced and neutral mutations, and makes code available on GitHub.",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,23873820,all,Utilizes tournament selection with controlled selection pressure by adjusting tournament size.,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,26945723,elitist,"Employs techniques like network morphisms, reinforcement learning, and evolutionary strategies with operations such as layer insertion and parameter modification.",0

@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,210180949,2,H(h) - 1,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,219179333,100,"NPU: 6, RealNPU: likely 6, NMU: no hidden layers, NALU: no hidden layers",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,210180949,"5,000,000",N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,219179333,"50,000","20,000 training steps",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,210180949,100,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,219179333,10,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,210180949,1E-03,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,219179333,1e-2 for addition and 5e-3 for all other operations,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,210180949,a/b,"Differences in computation of variables 'a' and 'b', data slice handling, interpolation and extrapolation ranges.",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,219179333,1/a,"Differences in computation of variables 'a' and 'b', data slice handling, interpolation and extrapolation ranges.",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,210180949,Biasing weight discritisation,sparsity regularizer penalty,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,219179333,L1 on all parameters,L1 regularization penalty,1
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,210180949,Python 3,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,219179333,Julia,N/A,0

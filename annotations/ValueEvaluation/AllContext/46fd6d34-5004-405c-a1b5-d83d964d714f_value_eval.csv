@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+46fd6d34-5004-405c-a1b5-d83d964d714f,Architecture,10647804,CPCPIIPIPFFF,"2 convolutional layers, 1 max pooling, 4 Inception layers",0.5
+46fd6d34-5004-405c-a1b5-d83d964d714f,Architecture,2482804,CPNCPNCPCFF,"4 convolutional layers, 3 max-pooling layers, 2 local response normalization layers, 2 fully-connected layers, 11 layers depth, 4096 parameters",1
+46fd6d34-5004-405c-a1b5-d83d964d714f,Depth,10647804,11,Depth refers to the number of layers with trainable weights in a CNN architecture.,0
+46fd6d34-5004-405c-a1b5-d83d964d714f,Depth,2482804,6,Depth refers to the number of layers with trainable weights in a CNN architecture.,0

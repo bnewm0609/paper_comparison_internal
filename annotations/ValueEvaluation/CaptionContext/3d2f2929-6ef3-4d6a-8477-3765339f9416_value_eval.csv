@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,17898898,sample size,N/A,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,204800605,sample size,"Various methods used; includes vehicle coverage, percentage of coverage, and area covered.",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,49329244,sample size,Methods include coverage model based on street sections and data delivery delay mitigation strategies.,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,211204790,sample size,Uses spatio-temporal coverage and cumulative coverage value (CCV) to evaluate data quality.,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,17898898,Bus,Utilizes public transit buses for sensing and data collection,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,204800605,Taxi & bus,"Utilizes various vehicle fleets including taxis, public transport buses, and private cars",1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,49329244,Bus,Focuses on urban buses as mobile sensing nodes,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,211204790,Bus,Utilizes city buses for sensing and data collection,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,17898898,Air quality,"Data collection via smart sensor networks and wireless systems, using sensors on moving objects like vehicles or animals.",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,204800605,Air quality,"Data collection in urban settings using vehicles with fixed, random, or combined routes, focusing on traffic, air quality, and parking.",0.5
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,49329244,Air quality; traffic condition,"Multiple projects using vehicles for urban sensing: SensingBus, SmartSantander, Opensense, Mosaic, BusNet, and studies by Apte et al., Von Fischer et al., Fiore et al., Zhu et al., Du et al., Zhao et al., Ali and Dyo.",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,211204790,Heat island,"Drive-by sensing using public transportation vehicles, considering trajectories, sub-region importance, and spatio-temporal coverage to optimize sensor placement on buses.",0

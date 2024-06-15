@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,91184545,0,"28,500 training pairs",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,84187160,0,"3,961 training pairs",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,91184545,146 (no label),"1,000",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,84187160,30 (no label),"200, 149, 70",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,91184545,Real,"Urban scenes, suburb scenes, outdoor fields, rain scenes with varying rain streak lengths and illumination conditions",1
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,84187160,Real,"Rainy days, outdoor surveillance systems, intelligent vehicles, traffic surveillance scenarios",1

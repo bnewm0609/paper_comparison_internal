@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,216061041,Epidemic transition and spread,"Predict epidemic trends, plan control strategies, assess countermeasure impacts, understand disease dynamics.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,215416303,External factor's epidemic influence,"Examine effects of age-targeted mitigation on mortality and ICU use, demonstrate benefits of age-sensitive strategies over homogeneous ones.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,216061041,"Case numbers, external data, etc.","Data from Protezione Civile and Ministero della Salute, Italy: includes number of infected (various severities), recovered, and deaths.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,215416303,"Case numbers, demographics, health conditions, social activities, environmental factors, etc.",SIR-like model with U.S. age-contact patterns; uses extrapolated European contact matrices and U.S.-specific data.,0.5

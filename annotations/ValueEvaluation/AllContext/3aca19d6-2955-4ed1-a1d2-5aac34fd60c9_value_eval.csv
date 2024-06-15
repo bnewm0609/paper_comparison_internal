@@ -1,0 +1,9 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,14124313,Baseline,"Configurations: A, B, C, D, E; Deeper configurations (D, E) perform better.",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,2375110,Baseline,N/A,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,12670695,Baseline,"Configurations: Faster-RCNN (300 RPN boxes), SSD (300 resolution); Comparable performance with reduced complexity.",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Proposals,9433631,Combined,N/A,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,14124313,LiDAR + RGB,"Evaluates impact of adjustments on system performance, including sensor inputs, encoder architectures, and proposal methods.",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,2375110,LiDAR + RGB,N/A,0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,12670695,LiDAR + RGB,"Evaluates impact of adjustments on system performance, including sensor inputs, encoder architectures, and proposal methods.",0
+3aca19d6-2955-4ed1-a1d2-5aac34fd60c9,Refinement Modality,9433631,LiDAR + RGB,N/A,0

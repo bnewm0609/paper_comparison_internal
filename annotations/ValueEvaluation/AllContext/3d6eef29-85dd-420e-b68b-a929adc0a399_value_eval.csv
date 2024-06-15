@@ -1,0 +1,11 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,6875312,A3C,"Dueling Double DQN, Gorila",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16326763,DDPG,"DQN, NFQCA, DPG",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16046818,TRPO,"Deep Q-learning, UCC-I, CEM, CMA, Natural Gradient, Empirical FIM",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,28695052,PPO,"TRPO, CEM, A2C, ACER",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,28202810,SAC,"DDPG, PPO, SQL, TD3",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,6875312,Distributed Actor Critic,"Asynchronous actor-learners, value-based and policy-based methods, gradient ascent, baseline variance reduction, parallel exploration",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16326763,Derivative of continuous action function,"Actor-critic methods, deep neural network function approximators",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16046818,Dynamically sized step size,"Policy-based RL, TRPO, natural policy gradient, CEM, CMA, empirical FIM, Max KL",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28695052,"Improved TRPO, first order","Policy-based RL, deep Q-learning, vanilla policy gradient, TRPO, A2C, CEM",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28202810,Variance-based Actor Critic for robustness,"Actor-critic architectures, on-policy and off-policy learning, maximum entropy RL, Q-learning, policy gradient, value function approximation, stochastic policy optimization",0.5

@@ -1,0 +1,43 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,239998781,generate questions from double graphs,Exception while querying PaperQA endpoint: '239998781',0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,219558583,reorganization on GQA,"The GQA-OOD dataset was developed based on the existing GQA dataset. The dataset features distribution shifts for both validation and test sets. The benchmark also introduced a new set of evaluation metrics to evaluate the reasoning behavior of VQA models. The dataset was constructed using methodologies such as fine-grained reorganization of the GQA dataset, dividing questions into groups according to their contexts, and measuring group imbalance using Shannon entropy. The enhancement of the dataset involved selecting specific answer classes for each question group based on their frequencies.",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,62902119,rephrasing on VQA v2,"The methodologies used in the development and enhancement of the datasets include human annotation, data filtering, and the use of consensus scores to measure robustness.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,233168594,reorganization on VQA v2,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,252780087,reorganization on VQA v2,"The development and enhancement of the datasets involved the use of several methodologies and tools. These include mutual information to select shortcut-specific concepts, Shannon entropy to measure group imbalance, Jaccard Similarity Coefficient to analyze the relevance of shortcuts, and the use of OOD test sets for model selection.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235266220,human-and-model-in-the-loop,"The AVQA dataset was developed using a Human-And-Model-in-the-Loop Enabled Training (HAMLET) procedure. This procedure involves iterative data collection rounds where human annotators compete against VQA models to design adversarial examples. The models used in the data collection process were trained on Faster R-CNN region features. The dataset also includes images from different domains, including web images from Conceptual Captions, user-generated images from Fakeddit, and movie images from VCR. The data collection process was conducted on Amazon Mechanical Turk.",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235352921,human-and-model-in-the-loop,"The paper mentions the use of Dynabench, a platform for dynamic adversarial data collection and benchmarking, for collecting the AdVQA dataset. The paper also mentions the use of Amazon Mechanical Turk for question collection and validation.",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,239998781,Visual Genome,Visual Genome,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,219558583,Visual Genome,Real-world images,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,62902119,COCO,VQA v2.0,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,233168594,COCO,VQA v2,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,252780087,COCO,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235266220,CC/Fakeddit/VCR,"Multiple sources (Conceptual Captions, Fakeddit, VCR)",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235352921,COCO,COCO (Common Objects in Context),1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,239998781,commonsense,Compositional reasoning on vision and commonsense,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,219558583,language bias,Evaluating VQA systems on understanding non-visual background knowledge,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,62902119,language bias,Challenging commonsense reasoning questions,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,233168594,natural shortcuts,Evaluating the breadth of knowledge of VQA models,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,252780087,natural shortcuts,Evaluating models with various metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235266220,adversarial robustness,Focused on real-world images and human-posed questions,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235352921,adversarial robustness,Measuring the sensitivity of VQA models to language bias,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,239998781,✓,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,219558583,✓,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,62902119,✗,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,233168594,✗,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,252780087,✓,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235266220,✗,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235352921,✗,Identifier of the dataset or evaluation metric,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,239998781,✗,Out-of-distribution accuracy,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,219558583,✓,Accuracy on rare OOD samples,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,62902119,✓,Out-of-distribution performance,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,233168594,✓,Performance on OOD evaluation datasets,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,252780087,✓,Performance on OOD test sets,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235266220,✓,Evaluation metric for OOD split of VQA-CP,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235352921,✓,Out-of-distribution performance on datasets,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,239998781,composite metrics,Exception while querying PaperQA endpoint: '239998781',0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,219558583,composite metrics,"Evaluation Metrics: acc-tail, acc-head, acc-all",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,62902119,consensus score,"Evaluation Metrics: consensus score (CS), VQA accuracy",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,233168594,open-ended accuracy,"Evaluation Protocol: VQA-CE (VQA-CounterExamples); Other Methods: VQA-CP, VQA-Rephrasing, GQA-OOD",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,252780087,open-ended accuracy,"Evaluation Metrics: Difference between IID and OOD accuracy, empirical risk minimization, overall OOD risk",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235266220,open-ended accuracy,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235352921,open-ended accuracy,N/A,0

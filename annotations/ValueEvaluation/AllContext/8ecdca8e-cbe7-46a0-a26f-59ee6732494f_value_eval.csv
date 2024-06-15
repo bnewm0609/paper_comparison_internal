@@ -1,0 +1,25 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,222080212,2021,2020,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,229180865,2020,2018-2019,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,59336326,2019,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,53042199,2019,2018-2019,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,13241073,2018,"2001, unknown",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,1044188,2018,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,222080212,VirusTotal,EMBER dataset,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,229180865,VirusTotal,Recent real malware samples from the last three years,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,59336326,VirusTotal,Dataset from previous study [41],0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,53042199,"VirusTotal, Reversing Labs, FireEye","VirusTotal, Reversing Labs, FireEye",1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,13241073,VirusTotal,"Virus Share, VirusTotal, other sources",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,1044188,Malwr dataset,https://malwr.com/,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,222080212,Genetic Programming,"Functionality-preserving manipulations, content injection, targeted evasion, penalty for injected bytes",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,229180865,Generative RNN,"Generative RNN model, sequence-to-sequence, injects benign-looking byte sequences",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,59336326,GAN,"Adversarial example generation, API modifications, character manipulations, sequence GANs, RNN ensembles",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,53042199,Append Attack,"Appending adversarial noise, modifying non-memory-mapped regions",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,13241073,Deep RL,"Adding unused functions, manipulating section names, appending bytes to overlays",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,1044188,Generative RNN,"Generative RNN, irrelevant API insertion, Gumbel-Softmax for gradient delivery",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,222080212,Unlimited,Query budget T determines the maximum number of queries,0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,229180865,Unlimited,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,59336326,Multiple,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,53042199,Single,Each malware file is queried once,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,13241073,Multiple,Queried up to 10 times,1
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,1044188,Multiple,N/A,0

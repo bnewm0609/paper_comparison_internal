@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,5890185,-,"Multi-label classification, Image captioning",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,4052735,-,Multi-task learning architecture,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,53955763,-,Machine reading comprehension,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,261081574,-,Zero-shot visual question-answering,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,222379195,Description for Reasoning Process,Natural language rationales,1
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,225068216,Description for Reasoning Process,Generative models,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,252383606,Description for Reasoning Process,Underlying approach or technique,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,256504063,Description for Reasoning Process,Chain-of-thought reasoning,0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,258546810,Description for Reasoning Process,Chain-of-thought reasoning,0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,5890185,Generated Facts,"Attributes, captions, questions, answers",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,4052735,Generated Facts,"Captions, questions, answers, synthesized explanations",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,53955763,Generated Facts,"Image descriptions, region descriptions, external knowledge",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,261081574,Generated Facts,"Image captions, question-answer pairs, prompts with instructions, captions, QA exemplars",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,222379195,Concise Rationale,"Natural language rationales, questions, answers, textual premises",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,225068216,Concise Rationale,"Questions, answers, rationales, captions, image descriptions",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,252383606,Chain-of-Thought,"Lectures, explanations",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,256504063,Chain-of-Thought,Language (text) data,0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,258546810,Chain-of-Thought,"Questions, context, options, lectures, explanations, prompts",0.5

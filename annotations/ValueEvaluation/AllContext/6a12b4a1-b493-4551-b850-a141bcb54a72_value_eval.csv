@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17632358,Circadian parameter estimation,Cancer treatment and chemotherapy,0
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,15843191,Object segmentation of hardware items,"Science, industry, computer vision applications, and image processing routines",0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17924888,Photovoltaic systems,Photovoltaic (PV) power forecasting,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17632358,Time series,"Database A: 10 cancer patients, 4 days; Database B: 34 healthy individuals, 4 days",1
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,15843191,Images,N/A,0
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17924888,Time series,"Ausgrid dataset: 54 rooftop PV systems, July 1, 2010 - June 30, 2013",1
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17632358,Medical technology,Biosignal Processing,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,15843191,Engineering,Image Processing and Evaluation of Robustness in Image Processing Algorithms,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17924888,Engineering,Photovoltaic Power Forecasting,0.5

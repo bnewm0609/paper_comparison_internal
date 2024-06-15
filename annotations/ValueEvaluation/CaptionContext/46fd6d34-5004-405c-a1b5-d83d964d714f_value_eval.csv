@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+46fd6d34-5004-405c-a1b5-d83d964d714f,Architecture,10647804,CPCPIIPIPFFF,C-P-I-F,0.5
+46fd6d34-5004-405c-a1b5-d83d964d714f,Architecture,2482804,CPNCPNCPCFF,C-P-C-P-C-C-C-P-F-F-F,0.5
+46fd6d34-5004-405c-a1b5-d83d964d714f,Depth,10647804,11,12 layers total,0
+46fd6d34-5004-405c-a1b5-d83d964d714f,Depth,2482804,6,"4C, 3P, 2N, 2F layers",0

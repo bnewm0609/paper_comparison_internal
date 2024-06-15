@@ -1,0 +1,43 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,239998781,generate questions from double graphs,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,219558583,reorganization on GQA,Developed GQA-OOD benchmark using a fine-grained reorganization of the GQA dataset; specific evaluation metrics designed for this benchmark.,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,62902119,rephrasing on VQA v2,"Utilized human annotation, consensus score, and standard image captioning metrics.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,233168594,reorganization on VQA v2,"Employed VQA-CE protocol, GMiner for rule extraction, and various bias-reduction methods.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,252780087,reorganization on VQA v2,"Used mutual information, Shannon entropy, Jaccard Similarity, and head/tail splits in training data.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235266220,human-and-model-in-the-loop,Developed AVQA dataset using HAMLET; trained models on Faster R-CNN features; metrics included model error rate and performance on robust VQA benchmarks.,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Development,235352921,human-and-model-in-the-loop,Human-in-the-loop data collection; used Amazon Mechanical Turk for adversarial questions; metrics included model error rate.,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,239998781,Visual Genome,Visual Genome,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,219558583,Visual Genome,GQA,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,62902119,COCO,VQA v2.0,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,233168594,COCO,VQA v2,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,252780087,COCO,VQA v2,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235266220,CC/Fakeddit/VCR,"Multiple sources (Conceptual Captions, Fakeddit, VCR)",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Image Source,235352921,COCO,COCO,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,239998781,commonsense,Development of CRIC benchmark for compositional reasoning in VQA,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,219558583,language bias,Investigation of natural language question challenges in VQA,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,62902119,language bias,Proposal of CRIC dataset for compositional reasoning in VQA,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,233168594,natural shortcuts,Exploration of challenges in VQA models on CRIC dataset,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,252780087,natural shortcuts,Evaluation and improvement of VQA models,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235266220,adversarial robustness,Robustness to linguistic variations in VQA questions,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Focus,235352921,adversarial robustness,Training for consistency and robustness in VQA models,0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,239998781,✓,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,219558583,✓,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,62902119,✗,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,233168594,✗,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,252780087,✓,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235266220,✗,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,ID,235352921,✗,Unique identifier for datasets and evaluation metrics,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,239998781,✗,Exception while querying PaperQA endpoint: '239998781',0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,219558583,✓,"Introduces GQA-OOD benchmark with metrics Acc-tail, Acc-head, Acc-all; compares bias-reduction methods.",1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,62902119,✓,N/A,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,233168594,✓,Introduces VQA-CE protocol; evaluates bias-reduction methods on OOD data.,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,252780087,✓,Compares VQA-CP v2 and VQA-VS; introduces multiple OOD test sets and standardizes OOD evaluation.,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235266220,✓,Introduces Adversarial VQA (AVQA) benchmark; compares UNITER-B model performance on various VQA benchmarks.,0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,OOD,235352921,✓,Discusses limitations of current models on OOD data; introduces Adversarial VQA (AdVQA) dataset.,1
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,239998781,composite metrics,"Evaluation criteria: Answer accuracy, grounding accuracy, final score; Performance on ID and OOD data; Analysis of various data types and datasets.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,219558583,composite metrics,"Evaluation criteria: Accuracy on infrequent and frequent concepts, overall accuracy; Metrics: Acc-tail, Acc-head, Acc-all; Performance on ID and OOD data; Analysis of prediction error distribution and model comparison.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,62902119,consensus score,"Evaluation criteria: VQA accuracy, consensus score, failure prediction performance; Performance on ID and OOD data; Analysis on VQA v2.0 and VQA-Rephrasings datasets.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,233168594,open-ended accuracy,"Evaluation criteria: Detection of shortcuts, impact on VQA models; Performance measures: Accuracy on counterexamples, subsets of validation set; Analysis of shortcuts and correlation coefficients.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,252780087,open-ended accuracy,"Evaluation criteria: Accuracy on ID and OOD test sets; Performance measures: Difference between ID and OOD accuracy, accuracy on shortcut test sets; Analysis of language biases, reasoning abilities, impact of shortcuts.",0.5
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235266220,open-ended accuracy,"Evaluation criteria: Model error rate, performance on different datasets; Analysis of question types and visual concepts; Performance on AVQA and other robust VQA benchmarks.",0
+8f9cda0d-2fe4-4cfb-a1e3-93ade9a7ecde,Metrics,235352921,open-ended accuracy,"Evaluation criteria: Model error rate, inter-human agreement; Performance on different question categories; Analysis on AdVQA and VQA v2 datasets; Ability to reason about text, count, handle rare concepts, understand multimodal information.",0

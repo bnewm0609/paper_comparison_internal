@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,108290211,Well Living Lab,Well Living Lab,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,222184368,-,"JP-T, JP-D, US-T, US-D",0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,108290211,"Minnesota, USA","Rochester, Minnesota, USA",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,222184368,-,Japan and the United States,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,108290211,N,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,222184368,-,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,108290211,Y,8 participants in 6 conditions over 18 weeks; 10 participants in 3 conditions for 2 weeks twice; 10 participants required private area,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,222184368,Y,Surveys distributed monthly at end of each condition,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,108290211,Y,"Deployed sensors: air temperature, humidity, illuminance, CCT, CO2, sound levels; Data handling: field gateway to cloud",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,222184368,Y,"Deployed sensors: illuminance, CCT, thermal parameters, sound level, air quality, building operations; Total sensors: 144",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,108290211,18 weeks,18 weeks,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,222184368,4 weeks,16 weeks,0

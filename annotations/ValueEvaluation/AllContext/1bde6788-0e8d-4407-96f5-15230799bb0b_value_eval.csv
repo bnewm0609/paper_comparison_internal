@@ -1,0 +1,28 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226289795,"UAV's altitudes, user scheduling","Altitude of UAV, Transmission Scheduling, Phase-Shift Matrix of RIS Elements",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,226237384,"CSI, ARIS's position","Precoding Matrix at BS, Reflection Coefficient at IR, Location of UAV-IR",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233004362,CSI,"Number of Hidden Layers, Number of Neurons per Layer, Activation Function, Learning Rate, Optimizer, Loss Function, Training Duration",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,233231405,"TRIS's phase shift and location, TRIS's elements allocation","RIS Elements Allocation (U), RIS Phase Shifts Configuration (Ψ)",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,220546076,UAV's trajectory,"UAV's Trajectory, Phase Shifts of Reflecting Elements of IRS",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,225062202,CSI,"Number of RIS Elements (N), Number of Pilot Symbols (M), SNR Values, Value of K (Small Scale Fading Factor)",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232013882,"communication link, transmission beam","Beamforming Vector, Position Sequence, LIS Index Sequence, Communication-Link Sequence",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,232428399,"UAV's trajectory, user scheduling","UAV Trajectory (xU, yU), IoTD Wireless Scheduling (an i), RIS Phase-Shift Configuration (θnm)",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Optimization variables,222141038,"UAV's trajectory, TRIS's phase shifts","Movement of UAV, Phase Shifts of RIS, Power Allocation Policy, Dynamic Decoding Order",0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226289795,"DRL, PPO, MDP",Deep Reinforcement Learning (DRL) using Proximal Policy Optimization (PPO),0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,226237384,"DRL, MDP",Distributional Reinforcement Learning (DRL) using Q-quantile model,0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233004362,GAT,N/A,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,233231405,Multi-task learning,Multi-task learning with stochastic gradient descent,1
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,220546076,DQN,Deep Q-network (DQN) and Deep Deterministic Policy Gradient (DDPG),0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,225062202,GAT,N/A,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232013882,"recurrent neural network, GRU",Deep Learning using Gated Recurrent Unit (GRU),0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,232428399,"MDP, PPO",Deep Reinforcement Learning (DRL) using Proximal Policy Optimization (PPO),0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,Machine learning algorithms,222141038,"D-DQN, MDP",Decaying Deep Q-network (D-DQN),0.5
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226289795,G2G MU uplink system,"Deep Reinforcement Learning (DRL), Proximal Policy Optimization (PPO)",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,226237384,G2G MU downlink system,"Distributional Reinforcement Learning, Quantile Regression Optimization, Deep Reinforcement Learning (DRL)",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233004362,A2G/GA2 satellite IoT SISO downlink/uplink communications,N/A,0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,233231405,G2A multiple UAV-gU pairs SISO system,"Multi-task Learning, Deep Neural Networks, Regression Analysis, Optimization Algorithms",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,220546076,A2G MU downlink system assisted by multiple TRISs,"Deep Q-Network (DQN), Deep Deterministic Policy Gradient (DDPG), Reinforcement Learning (RL), Actor-Critic Approach",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,225062202,G2G P2P full-duplex system,"Graph Attention Network (GAT), Deep Learning",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232013882,G2A P2P downlink system,"Deep Learning, Gated Recurrent Unit (GRU), Adam Optimizer",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,232428399,G2A MU SISO uplink system,"Deep Reinforcement Learning (DRL), Block Coordinate Descent (BCD), Markov Decision Process (MDP)",0
+1bde6788-0e8d-4407-96f5-15230799bb0b,System model,222141038,A2G MU downlink system,"Markov Decision Process (MDP), Deep Q-Network (DQN), Convolutional Neural Networks (CNN), Decaying Learning Rate",0

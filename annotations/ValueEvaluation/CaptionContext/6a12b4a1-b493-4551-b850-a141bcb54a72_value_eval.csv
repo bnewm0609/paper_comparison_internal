@@ -1,0 +1,10 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17632358,Circadian parameter estimation,"Applied in cancer treatment, specifically in chemotherapy personalization based on circadian rhythms.",0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,15843191,Object segmentation of hardware items,"Applied in multiple domains: science (biological readouts, surveying, man-machine interaction), industry (nutrition, quality supervision, pick-and-place), and computer vision (real-time systems, lab equipment, offline database analysis).",0
+6a12b4a1-b493-4551-b850-a141bcb54a72,Application,17924888,Photovoltaic systems,Applied in photovoltaic (PV) power forecasting.,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17632358,Time series,"Database A: 10 cancer patients, 4 days, 1 min sampling rate; Database B: 34 healthy individuals, 4 days, 5 min sampling rate",0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,15843191,Images,N/A,0
+6a12b4a1-b493-4551-b850-a141bcb54a72,Data,17924888,Time series,"54 rooftop PV systems, July 1, 2010 - June 30, 2013, 15 min sampling rate",0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17632358,Medical technology,Focus on biosignal processing and development of Extended Cosinor model for circadian rhythms.,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,15843191,Engineering,Focus on robustness of image processing algorithms for object segmentation and classification.,0.5
+6a12b4a1-b493-4551-b850-a141bcb54a72,Domain,17924888,Engineering,Focus on photovoltaic (PV) power forecasting.,0.5

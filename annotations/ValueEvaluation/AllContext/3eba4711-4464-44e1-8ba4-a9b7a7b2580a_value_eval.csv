@@ -1,0 +1,22 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,743641,global,Range of possible architectures,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,206770867,global,Range of possible network structures,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,7315023,global,Range of possible architectures,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,23873820,cell-based,Type of neural network architectures,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Search Space,26945723,global,Range of possible network architectures,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,743641,simple,"Simple individuals, no convolutions, learning rate 0.1, basic linear regression models",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,206770867,random,"Randomized individuals, represented by fixed-length binary strings",1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,7315023,random,"Max validation accuracy last 10 epochs as fitness, 10-50 active nodes, repeated mutation until fit",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,23873820,random,"Trivial genotype with identity mappings, diversification via many random mutations",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Init,26945723,simple,Random networks,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,743641,tournament,Tournament selection,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,206770867,all,Russian roulette process,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,7315023,-,Forced mutation,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,23873820,tournament,Tournament selection,1
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Parent Sel.,26945723,-,N/A,0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,743641,tournament,"Tournament selection, fitness sharing",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,206770867,fitness prop.,"Russian roulette selection, non-uniform sampling",0.5
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,7315023,elitist,"Tree-structured Parzen estimator (TPE), meta-modeling, Q-learning with 
+03f5-greedy strategy, differentiable pattern-producing networks (DPPNs), reinforcement learning",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,23873820,all,"Tournament selection, random search",0
+3eba4711-4464-44e1-8ba4-a9b7a7b2580a,Survivor Sel.,26945723,elitist,"Tournament selection, elitism, fitness-based selection",0.5

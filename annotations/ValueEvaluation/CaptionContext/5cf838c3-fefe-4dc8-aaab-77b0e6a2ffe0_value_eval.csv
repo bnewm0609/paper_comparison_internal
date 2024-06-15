@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,5741060,citation network,Uses citation network of the Physical Review journals,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,1749110,citation network,Uses citation networks and datasets of scientific publications,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Scholarly Network,506530,"citation network, paper-author network, paper-journal",Uses APS and PRC datasets,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,5741060,yes,"No, the network-based method does not involve a homogeneous network.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,1749110,yes,"No, the network-based method does not involve a homogeneous network.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Homogeneous Network,506530,yes,"No, the network-based method does not involve a homogeneous network.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,5741060,no,No,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,1749110,no,No,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Heterogeneous Network,506530,yes,No,0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,5741060,PageRank,Uses Google PageRank,1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,1749110,PageRank,"Uses CiteRank, an adaptation of Google PageRank",1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Algorithms,506530,"PageRank, HITS","Uses COIRank, incorporating PageRank and HITS",1
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,5741060,It begins to use a structured approach to quantify paper impact.,"Google PageRank algorithm emphasizes the influence of citations from significant publications, enhancing rank based on citation importance without needing detailed citation context. Citation network analysis considers both in-degree and out-degree for a comprehensive influence assessment.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,1749110,It promotes the impact of recent publications.,"CiteRank algorithm refines rankings by considering the importance and age of citations, adapting PageRank for citation networks. PageRank algorithm is effective for web page ranking due to its handling of random browsing behavior.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Advantage,506530,It can distinguish the importance of citation in heterogeneous scholarly network.,"Methods include distinguishing citation relationships, quantifying citation strength, and capturing the dynamic nature of citation networks.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,5741060,It does not consider attenuation of paper impact over time.,"Limitations include: reduction to citation rank as d approaches 1, sensitivity to the value of d, and need for more contextual citation information.",0.5
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,1749110,It does not consider the impact of author and journal.,"Limitations include: treats all citations equally, ignores citation age, assumes linear relationship between traffic and recent citations, and assumes all downloads lead to citations.",0
+5cf838c3-fefe-4dc8-aaab-77b0e6a2ffe0,Disadvantage,506530,"COI relationship contains many factors, and it is not easy to mine.",N/A,0

@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,253419714,InterPro,"CATH-Gene3D, CDD, HAMAP, PANTHER, Pfam, PIRSF, PRINTS, PROSITE Patterns, PROSITE Profiles, SMART, SFLD, SUPERFAMILY, TIGRFAMs",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,226207258,Pfam,"UniProtKB, Pfam-B, PDB, Metagenomic Clusters",0.5
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,7131460,PROSITE,"UniProtKB, PDB",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,8220845,TIGRFAMs,"TIGRFAMs, Pfam",0.5
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,225081764,SMART,"Pfam, Uniprot, Ensembl, STRING",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,10551590,PRINTS,"UniProtKB/Swiss-Prot-TrEMBL, PRINTS, InterPro",0.5
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,15582991,HAMAP,"UniProtKB / Swiss-Prot, UniProtKB / TrEMBL",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,253419714,431,InterPro integrates multiple databases using various models including protein signatures.,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,226207258,139,Pfam employs profile hidden Markov models (HMMs).,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,7131460,51,Uses PROSITE signatures and ProRule for enhanced pattern and profile discrimination.,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,8220845,55,TIGRFAMs and Genome Properties use profile hidden Markov Models (HMMs).,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,225081764,11,Employs 68 different computational or mathematical models.,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,10551590,1,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,15582991,1,N/A,0

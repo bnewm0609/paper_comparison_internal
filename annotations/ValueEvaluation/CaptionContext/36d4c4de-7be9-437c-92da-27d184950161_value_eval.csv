@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+36d4c4de-7be9-437c-92da-27d184950161,Network,18811015,US power network,"14,099 nodes (substations); 19,657 edges (transmission lines); includes generators, transmission, and distribution substations across various voltage levels.",0
+36d4c4de-7be9-437c-92da-27d184950161,Network,119419887,Complete US power network,"Models include Barabási-Albert, exponential, small-world, and scale-free networks; focuses on reliability of North American eastern and western grids; all nodes included regardless of voltage.",0.5
+36d4c4de-7be9-437c-92da-27d184950161,Size,18811015,"14,099","14,099 substations",1
+36d4c4de-7be9-437c-92da-27d184950161,Size,119419887,"314,123","3,812 substations",0

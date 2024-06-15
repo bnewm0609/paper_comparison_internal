@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,91184545,0,"Approximately 29,500 rain/clean image pairs",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Training pairs#,84187160,0,"2,400 pairs of clean and rainy images; 861 pairs of clean and rain-drop corrupted images; 700 pairs of clean and rainy images",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,91184545,146 (no label),"1,000",0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Testing pairs#,84187160,30 (no label),419,0
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,91184545,Real,"Dataset includes 29,500 high-resolution rain/clean image pairs from urban, suburb, and outdoor scenes with varying rain streak lengths and illumination, using real and online-sourced videos.",1
+1d15937a-0bc9-4d47-aa3b-bbf19969f47d,Scenario,84187160,Real,"MPID benchmark features multiple training and testing sets with synthetic and real-world images, including specific sets for rain streaks, rain drops, and rain with mist, totaling 3,380 image pairs across different conditions and additional task-driven sets for driving and surveillance contexts.",0.5

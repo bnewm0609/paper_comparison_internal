@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,108290211,Well Living Lab,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Name,222184368,-,Unnamed living lab investigating human and indoor environment interactions,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,108290211,"Minnesota, USA",United States,0.5
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Country,222184368,-,Japan and United States,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,108290211,N,N/A,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Source Code Accessible,222184368,-,Yes,0
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,108290211,Y,48 surveys distributed across 6 conditions,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Surveys Distributed,222184368,Y,30 surveys distributed across 3 conditions,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,108290211,Y,"Monitored: air temperature, relative humidity, illuminance, correlated color temperature, carbon dioxide concentrations, sound levels",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Sensors Deployed,222184368,Y,"Monitored: lighting environment, thermal environment, acoustic environment, indoor air quality",1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,108290211,18 weeks,18 weeks,1
+0abf760e-35b0-407c-a3d8-6c8facea69d8,Longest Study Duration,222184368,4 weeks,4 months,0

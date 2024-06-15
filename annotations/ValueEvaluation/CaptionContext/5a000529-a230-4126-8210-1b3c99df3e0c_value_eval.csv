@@ -1,0 +1,16 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,173991173,"14,031","DAQUAR: 1,449, Visual Madlibs: 10,738, Visual 7W: 47,300, VQA (v2): 200,000, MovieQA: 408, CLEVR: 100,000, KB-VQA: 700, FVQA: 2,190, OK-VQA: 14,031",0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,214612106,"4,998","DAQUAR: 1,449, VQA: 204,000, VQA v2: 204,000",0
+5a000529-a230-4126-8210-1b3c99df3e0c,# Images,231951663,642,642,1
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,173991173,"14,055","DAQUAR: 12,468, Visual Madlibs: 360,001, Visual 7W: 327,939, VQA (v2): 1.1M, MovieQA: 14,944, CLEVR: 999,968, KB-VQA: 2,402, FVQA: 5,826, OK-VQA: 14,055",0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,214612106,"32,799","DAQUAR: 12,468, VQA: 614,000, VQA v2: 1,000,000",0
+5a000529-a230-4126-8210-1b3c99df3e0c,# QA pairs,231951663,14K,N/A,0
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,173991173,Microsoft COCO,Uses COCO dataset images and Wikipedia articles.,0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,214612106,Electronic pathology textbooksPEIR Digital Library,Uses general-domain images and captions; medical datasets use pathology images and captions from textbooks and libraries.,0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,Source of imagesand content,231951663,"Medical Segmentation Decathlon{{cite:ac0f04b}},NIH Chest X-ray{{cite:004b57b}},CHAOS{{cite:048f533}}:- Chest X-rays/CTs- Abdomen CTs/MRIs- Head CTs/MRIs- Neck CTs- Pelvic cavity CTs","Uses radiology images (CT scans, MRIs, X-Rays) and doctor-generated questions, categorized into vision-only and knowledge-based.",0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,173991173,Manual,"Questions and answers generated through a two-step MTurk process, manually filtered for quality and knowledge requirement.",1
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,214612106,Synthetical,"Questions and answers derived from pathology images and captions using NLP, manually checked for errors and inconsistencies.",1
+5a000529-a230-4126-8210-1b3c99df3e0c,QACreation,231951663,Manual,"Questions proposed by doctors using templates, balanced answers to mitigate bias, includes semantic labels.",1
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,173991173,- External knowledge,"Covers a wide range of knowledge categories including Vehicles and Transportation, Brands, Companies and Products, Objects, Materials and Clothing, Sports and Recreation, Cooking and Food, Geography, History, Language and Culture, People and Everyday Life, Plants and Animals, Science and Technology, Weather and Climate.",0.5
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,214612106,- Color- Location- Appearance- Shape- etc.,"Covers pathology-related questions, clinical questions, and general-domain questions including aspects such as color, location, appearance, shape, modality, plane, organ system, and abnormality.",1
+5a000529-a230-4126-8210-1b3c99df3e0c,Question Category,231951663,- Organ- Position- Knowledge Graph- Abnormality- Modality- Plane- Quality- Color- Size- Shape,"Addresses both vision-only and knowledge-based questions in radiology, covering categories such as diagnostic, anatomical, and general knowledge areas.",0.5

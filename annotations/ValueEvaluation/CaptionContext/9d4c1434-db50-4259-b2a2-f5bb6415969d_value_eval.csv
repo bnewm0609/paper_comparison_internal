@@ -1,0 +1,17 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,15863489,Papers,Automated keyphrase extraction using a generative model with an encoder-decoder framework,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,14117976,News,Various methods and algorithms for automatic keyphrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,681677,News,Enhanced automatic keyphrase extraction applied to Broadcast News,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,71149752,News,"Keyphrase extraction, representation, and visualization of the semantic content of Broadcast News",1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,208512795,News,Use of additional semantic features and pre-processing steps to improve automatic key phrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,182953047,QA,Evaluation of different features and pre-processing steps for key phrase extraction,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,226237232,Tweets,Lack of a human extracted keyphrase dataset in the field of Persian natural language processing,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,5210508,Reports,Keyphrase extraction from news articles and comparison of unsupervised and supervised approaches,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,15863489,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,14117976,PT,Portuguese,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,681677,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,71149752,PER,English,0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,208512795,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,182953047,EN,English and Chinese,0.5
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,226237232,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,5210508,EN,N/A,0

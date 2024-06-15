@@ -1,0 +1,17 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,15863489,Papers,Scientific articles,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,14117976,News,Broadcast News (BN) programs,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,681677,News,News articles,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,71149752,News,"Various sources (scientific papers, news articles, web pages)",0.5
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,208512795,News,"Reader-annotated news articles (KPCrowd), author-annotated scientific articles (KP20k)",0.5
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,182953047,QA,Social media platforms (English and Chinese),0
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,226237232,Tweets,Twitter,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Domain,5210508,Reports,Scientific articles,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,15863489,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,14117976,PT,Portuguese,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,681677,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,71149752,PER,Persian,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,208512795,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,182953047,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,226237232,EN,English,1
+9d4c1434-db50-4259-b2a2-f5bb6415969d,Language,5210508,EN,N/A,0

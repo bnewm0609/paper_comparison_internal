@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,17898898,sample size,N/A,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,204800605,sample size,"Methods include measuring spatial and temporal coverage, granularity, variability, and percentage coverage.",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,49329244,sample size,"Methods include measuring time coverage by number of visits, accuracy of measurements using signal processing, and sensing quality by device density.",0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Quantification methods,211204790,sample size,N/A,0
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,17898898,Bus,Buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,204800605,Taxi & bus,Public transportation buses,0.5
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,49329244,Bus,Urban buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Fleet type,211204790,Bus,Public transportation buses,1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,17898898,Air quality,"Monitoring air pollutants (CO, NO2, SO2, VOCs) using sensors on buses, data uploaded wirelessly.",1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,204800605,Air quality,"Monitoring traffic, potholes, air quality, pedestrian safety, and parking using drive-by sensing.",0.5
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,49329244,Air quality; traffic condition,"Monitoring air quality, noise, road conditions, traffic using sensors on buses, includes GPS data.",1
+3d2f2929-6ef3-4d6a-8477-3765339f9416,Sensing scenario,211204790,Heat island,Monitoring environmental parameters like temperature using sensors on public transport buses.,1

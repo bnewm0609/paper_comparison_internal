@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,47018956,500,30,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220363476,1000,100,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221879032,1500,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220647438,1000,100,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,237497467,400,200,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221534325,2000,10,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,47018956,128,"Hidden layer sizes vary: Citeseer and Cora (16 or 32 units), Reddit (128 units), PPI (GraphSAGE: 1024 units, GAT: 256 units with skip connections)",1
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220363476,256,2048 hidden units,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221879032,256,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220647438,256,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,237497467,-,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221534325,128,N/A,0

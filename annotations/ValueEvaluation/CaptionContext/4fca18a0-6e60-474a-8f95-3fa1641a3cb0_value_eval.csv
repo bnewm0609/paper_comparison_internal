@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,227143124,"11,173","1,006 entries (en), 174 entries (es), 300 entries (pt), 142 entries (hi), 90 entries (fr), 70 entries (it)",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,219558530,"2,029","2,029 news articles",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,219176659,"5,216","16,293 entries",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,237502835,"2,593 articles & 24,184 tweets","4,573 tweets (CMU-MisCov19), 10,700 social media posts (Constraint@AAAI2021), 6,761 tweets (COVIDLIES), 2,029 news articles and 140,820 tweets (ReCoVery), 2,593 news articles and 24,184 tweets (MMCoVaR)",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,237353356,"60,000","20,000 (20NEWS), 1,000,000 (AG NEWS), 52,900 (Guardian News), 160,515 (Yahoo News), 2,225 (BBC News), 110,000 (BreakingNews), 728,626 (TREC Washington Post), 1,233 (Fauxtography), 17,806 (Image-verification-corpus), 1,063,106 (Fakeddit), 61,218 (N24News)",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Total Samples,247058367,"10,920",21 million tweets (MuMiN dataset),0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,227143124,2,"Fake News, Real News",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,219558530,2,"Reliable, Unreliable",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,219176659,2,"Fake News, True News",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,237502835,2,2 Categories,1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,237353356,24,"Fakeddit: 6 Categories, Fauxtography: 2 Categories, Image-verification-corpus: 2 Categories",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,# classes,247058367,3,"Misinformation, Factual, Other",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,227143124,"image,text,social context","Text, social engagements (tweets, replies, retweets), user profiles, temporal information",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,219558530,"text,image","Textual, visual, temporal, network information",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,219176659,"image,text","News articles, claims, user engagement (social media platforms), social platform posts",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,237502835,"image,text,social context","Images, text, temporal information",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,237353356,"image,text","Text, images",1
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Modalities,247058367,"image,text","Textual communication (tweets, replies, articles), images, social behavior (network of interactions), fact-checking organizations",0.5
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,227143124,Twitter,N/A,0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,219558530,Twitter,"Proceedings of ACM Conference (Conference'17), July 2017",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,219176659,Twitter,N/A,0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,237502835,Twitter,"MMCOVAR: MULTIMODAL COVID-19 VACCINE FOCUSED DATA REPOSITORY FOR FAKE NEWS DETECTION AND A BASELINE ARCHITECTURE FOR CLASSIFICATION, 2021",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,237353356,New York Times,"20NEWS: Lang, 1995; AG NEWS: Zhang et al., 2015; Guardian News: Hayat, 2018; Yahoo News: Yang et al., 2019; BBC News: Kaggle, 2018; BreakingNews: Ramisa Ayats, 2017; TREC Washington Post: Alexander et al., 2018; Fauxtography: Zlatkova et al., 2019; Image-verification-corpus: Boididou et al., 2018; Fakeddit: Nakamura et al., 2019",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Source,247058367,Twitter,N/A,0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,227143124,"3,981 fake samples and 7,192 real samples","Liar, FakeNewsNet, FakeCovid, ReCOVery, CoAID, CMU-MisCOV19, covid19-datasets",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,219558530,Imbalanced with ratio of 2:1 real vs.fake,ReCOVery,0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,219176659,"Consists of 296,752 user engagements (926 social platforms)",CoAID,0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,237502835,"Tweets as labeled as reliable,inconclusive and unreliable","MMCoVaR, CMU-MisCov19, Constraint@AAAI2021, COVIDLIES, ReCoVery",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,237353356,All samples are real from 24 different categories,"20NEWS, AG NEWS, Guardian News, Yahoo News, BBC News, BreakingNews, TREC Washington Post, Fauxtography, Image-verification-corpus, Fakeddit, N24News",0
+4fca18a0-6e60-474a-8f95-3fa1641a3cb0,Details,247058367,"Consists of 10,920 articles and 6,573 images.",MuMiN,0

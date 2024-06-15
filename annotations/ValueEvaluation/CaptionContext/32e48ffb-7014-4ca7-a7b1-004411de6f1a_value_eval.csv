@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,253419714,InterPro,"CATH-Gene3D, Conserved Domains Database (CDD), HAMAP, PANTHER, Pfam, PIRSF, PRINTS, PROSITE Patterns, PROSITE Profiles, SMART, Structure–Function Linkage Database (SFLD), SUPERFAMILY, TIGRFAMs",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,226207258,Pfam,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,7131460,PROSITE,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,8220845,TIGRFAMs,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,225081764,SMART,"Uniprot, Ensembl, STRING proteomes",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,10551590,PRINTS,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Database,15582991,HAMAP,"UniProtKB / Swiss-Prot, HAMAP",0.5
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,253419714,431,"Uses predictive diagnostic models including hidden Markov models, patterns, profiles, or fingerprints for annotating protein families, domains, and functional sites.",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,226207258,139,Employs profile hidden Markov models (HMMs) for data analysis from specified databases.,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,7131460,51,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,8220845,55,Employs profile hidden Markov Models (HMMs) for data analysis from specified databases.,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,225081764,11,"Utilizes a relational database management system (RDBMS) with PostgreSQL to store and manage data on SMART domains, protein annotations, sequences, taxonomy, and pre-calculated analyses for Uniprot, Ensembl, and STRING proteomes; includes server code and hardware optimizations.",0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,10551590,1,N/A,0
+32e48ffb-7014-4ca7-a7b1-004411de6f1a,Models,15582991,1,N/A,0

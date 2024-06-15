@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,216061041,Epidemic transition and spread,"Predict epidemic trends, plan control strategies, assess countermeasure impacts, evaluate misperceptions of fatality and seriousness.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Objectives,215416303,External factor's epidemic influence,"Model age-targeted mitigation effects on mortality and ICU usage, demonstrate age-sensitive mitigation potential, examine impact of age-targeted mitigations.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,216061041,"Case numbers, external data, etc.","Datasets include confirmed cases, deaths, and recoveries, sourced from official bodies like WHO, covering specific regions or countries.",0.5
+17c7346c-7e8b-4da6-b425-6087733bec9a,Data,215416303,"Case numbers, demographics, health conditions, social activities, environmental factors, etc.",Utilizes contact matrices for the US and data from Imperial College London's Report 9 on mortality and ICU admission rates.,0.5

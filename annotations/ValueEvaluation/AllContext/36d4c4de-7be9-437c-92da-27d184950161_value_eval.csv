@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+36d4c4de-7be9-437c-92da-27d184950161,Network,18811015,US power network,"The electric power grid network described is a large, complex system with over 1 million kilometers of high voltage lines, 14,099 nodes, and 19,657 edges. It features three types of substations and follows an exponential degree distribution.",0.5
+36d4c4de-7be9-437c-92da-27d184950161,Network,119419887,Complete US power network,"The electric power grid networks have scale-free structures with a power-law connectivity probability distribution, including various types of lines and substations, analyzed using a directed graph representation.",0.5
+36d4c4de-7be9-437c-92da-27d184950161,Size,18811015,"14,099","14,099 nodes",1
+36d4c4de-7be9-437c-92da-27d184950161,Size,119419887,"314,123","19,040 nodes",0

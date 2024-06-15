@@ -1,0 +1,5 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,11028164,non-Gaussian interferers,Analyzes MIMO systems using the replica method from statistical physics with discrete input signals.,0
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Model,19505,"SCSIT, PCSIR",Designs and analyzes precoders for MIMO uplink using statistical CSI and finite alphabet inputs; proposes an iterative algorithm for optimal precoder determination.,0.5
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,11028164,the optimal precoders which maximize the sum-rate,Derives the ergodic sum-rate for large antenna numbers and addresses sum-rate maximization using statistical channel information and linear precoding.,0.5
+33b9a16e-cf44-43b1-bde0-b9e566f07f8c,Main Contribution,19505,Propose an efficient iterative algorithm to maximize WSR,"Investigates performance and sum-rate maximization in correlated MIMO-MAC with non-Gaussian interferers, deriving an expression for asymptotic sum-rate with spatial correlation.",0.5

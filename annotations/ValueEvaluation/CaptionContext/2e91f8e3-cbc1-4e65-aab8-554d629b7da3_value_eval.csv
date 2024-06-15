@@ -1,0 +1,23 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,250526479,Dark Zurich,"Cityscapes, ACDC, Dark Zurich, RobotCar Correspondence, CMU Correspondence",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,235829267,MHP v1,"Cityscapes, Mapillary Vistas, ADE20K, COCOStuff-10K, ADE20K-Full",0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,229924195,FoodSeg103,"ADE20K, Pascal Context, Cityscapes",0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,247292685,DRAM,"PASCAL VOC 2012, DRAM",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,247996577,iSAID,"Potsdam, iSAID",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,234358849,ISPRS Potsdam,"ISPRS Vaihingen, Potsdam",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,226965678,Kvasir-Instrument,"Kvasir-Instrument, HyperKvasir",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,252762315,PAXRay-4,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,246276404,ZeroWaste-f,"ZeroWaste-f, ZeroWaste-Aug",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,257532325,PST900,"MFNet, PST900",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Dataset,254246996,SUIM,"ADE20k, Pascal Context (P.Cont), Pascal VOC (P.VOC), Cityscapes (Citys.), Berkeley Deep Drive (BDD), CamVid, India Driving Dataset (IDD), KITTI, SUN-RGBD (SUN), ISPRS, SUIM",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,250526479,2023,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,235829267,2021,"2015, 2017, 2020, 2021",0.5
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,229924195,2021,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,247292685,2022,"2021, N/A",0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,247996577,2022,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,234358849,2022,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,226965678,2021,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,252762315,2022,2022,1
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,246276404,2022,"2020, 2021",0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,257532325,2022,N/A,0
+2e91f8e3-cbc1-4e65-aab8-554d629b7da3,Year,254246996,2022,2021,0

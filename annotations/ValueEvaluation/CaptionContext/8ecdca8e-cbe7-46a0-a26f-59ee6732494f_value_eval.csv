@@ -1,0 +1,25 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,222080212,2021,2020,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,229180865,2020,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,59336326,2019,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,53042199,2019,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,13241073,2018,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Year,1044188,2018,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,222080212,VirusTotal,"EMBER dataset, benign samples",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,229180865,VirusTotal,"Recent malware samples (last 3 years), benign executables from Microsoft Windows",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,59336326,VirusTotal,"500,000 files (250,000 benign, 250,000 malware)",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,53042199,"VirusTotal, Reversing Labs, FireEye","12.5M training samples, 3.8M testing samples (VirusTotal, Reversing Labs, FireEye, EMBER dataset)",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,13241073,VirusTotal,"VirusShare, ransomware (VirusTotal), Virut (VirusTotal), BrowseFox (VirusTotal)",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Data Source,1044188,Malwr dataset,Datasets from a malware analysis website (API sequences from uploaded programs),0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,222080212,Genetic Programming,"Injecting benign content, creating new sections",0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,229180865,Generative RNN,"Genetic algorithm, random perturbations, dynamic programming, RNN",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,59336326,GAN,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,53042199,Append Attack,"Appending adversarial noise, modifying non-mapped executable regions",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,13241073,Deep RL,Reinforcement learning with functionality-preserving operations,0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,Attack Method,1044188,Generative RNN,"Training substitute RNN, generative RNN with Gumbel-Softmax",0.5
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,222080212,Unlimited,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,229180865,Unlimited,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,59336326,Multiple,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,53042199,Single,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,13241073,Multiple,N/A,0
+8ecdca8e-cbe7-46a0-a26f-59ee6732494f,# of Queries per Malware File,1044188,Multiple,N/A,0

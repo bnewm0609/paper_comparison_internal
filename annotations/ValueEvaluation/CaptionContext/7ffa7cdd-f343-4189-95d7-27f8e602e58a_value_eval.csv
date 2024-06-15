@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Publish Time,212726430,Nov. 2019,2018.11,0.5
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Publish Time,210116488,Jan. 2020,Not specified,0
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Manipulation Techniques,212726430,Improved Deepfake,"Uses basic DeepFake maker algorithm involving face detection, alignment, and synthesis with auto-encoder. Exploits inconsistencies and detects artifacts using data-driven neural networks.",0.5
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,Manipulation Techniques,210116488,DF-VAE with Seven Perturbations,"Introduces DeepFake Variational AutoEncoder (DF-VAE) with a structure extraction, disentangled, and fusion module using MAdaIN for style matching and integration.",0.5
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,# Real / Fake,212726430,"590 / 5,639","Celeb-DF: 590 real, 5639 DeepFake",1
+7ffa7cdd-f343-4189-95d7-27f8e602e58a,# Real / Fake,210116488,"50,000 / 10,000","DeeperForensics-1.0: 50000 original, 10000 manipulated; FaceForensics++: 1000 real, 4000 manipulated",0.5

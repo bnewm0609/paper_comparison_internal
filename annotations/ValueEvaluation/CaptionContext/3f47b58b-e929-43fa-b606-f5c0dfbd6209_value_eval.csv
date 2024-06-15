@@ -1,0 +1,31 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,198147552,2020,2016,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,237438731,2022,2016,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,221090166,2020,2017,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,219558322,2020,2018,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,232076330,2021,2019,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Year,233209676,2021,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,198147552,Resource management in IoT networks.,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,237438731,Deals with a large volume of data.,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,221090166,Focuses on energy harvesting in the network,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,219558322,Heterogeneous distributed resources gains benefit from the distributed learning frameworks.,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,232076330,Personalized FL.,N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Key Inference,233209676,Impact of 6G-based massive IoT for multiple access.,1. Higher spectral efficiency with NOMA vs OMA. 2. Promising performance gains with short blocklength coding and multiuser diversity in NOMA. 3. Improved performance with symbol-level linear spreading and joint modulation in NOMA. 4. Multiuser channel coding approaches performance bounds in NOMA. 5. High performance potential of cell-free concept with NOMA. 6. Importance of practical aspects like channel estimation and receiver algorithms in NOMA.,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,198147552,"ML and DL at the edge devices.
+
+Reduces extra bandwidth.","Advancements include ML and DL-based resource management, optimization and heuristics-based techniques, game-theoretic approaches, and ML-based allocation in heterogeneous networks, D2D, MIMO, and NOMA networks.",0.5
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,237438731,"Distributed RL provides a viable and effective solution.
+
+Optimizes training time and maximizes the throughput.",N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,221090166,"Virtualizes cells and controls their power consumption.
+
+Distributed Deep RL is incorporated for harvesting energy.",N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,219558322,"Provides an optimal topology that fits the capabilities of the system.
+
+Significant rewards from the strongly contributing IoT devices.",N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,232076330,"Guidelines towards the development of personalized FL.
+
+Realistic PFL approaches are highlighted.",N/A,0
+3f47b58b-e929-43fa-b606-f5c0dfbd6209,Cutting Edge Developments,233209676,"Key performance indicators and their dimensions are summarized.
+
+Joint optimization of channel coding and linear spreading.","Discusses NOMA for 6G IoT, performance bounds, multiuser diversity, technology directions for NOMA, and challenges in channel estimation and receiver algorithms.",0

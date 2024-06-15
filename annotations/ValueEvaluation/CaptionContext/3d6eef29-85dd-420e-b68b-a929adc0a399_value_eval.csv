@@ -1,0 +1,11 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,6875312,A3C,A3C,1
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16326763,DDPG,"DQN, DPG, DDPG",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,16046818,TRPO,"TRPO, natural policy gradient, empirical FIM, max KL, CEM, CMA",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,28695052,PPO,"deep Q-learning, vanilla policy gradient, TRPO, PPO",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Name,28202810,SAC,"SAC, DDPG, PPO, SQL",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,6875312,Distributed Actor Critic,"Describes four policy-based algorithms: one-step Sarsa, one-step Q-learning, n-step Q-learning, and advantage actor-critic. Features include use of a target network and multiple parallel actor-learners.",0.5
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16326763,Derivative of continuous action function,"Describes two policy-based algorithms: Deep Q Network (DQN) and Deep Deterministic Policy Gradient (DDPG). Features include use of deep neural networks, target networks, and batch normalization.",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,16046818,Dynamically sized step size,"Describes multiple policy-based algorithms including TRPO, CEM, CMA, Natural Gradient, Empirical FIM, and Max KL. Features include gradient-free optimization, use of KL divergence, and Fisher information matrix estimation.",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28695052,"Improved TRPO, first order","Discusses several policy-based algorithms including deep Q-learning, vanilla policy gradient methods, TRPO, and PPO. Features include neural network function approximators, surrogate objectives, and clipped probability ratios.",0
+3d6eef29-85dd-420e-b68b-a929adc0a399,Approach,28202810,Variance-based Actor Critic for robustness,"Describes multiple policy-based algorithms including SAC, DDPG, PPO, SQL, and TD3. Features include actor-critic architecture, off-policy learning, entropy maximization, and the double Q-learning trick.",0.5

@@ -1,0 +1,13 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,47018956,500,"GCN: 200 epochs, GraphSAGE: 10 epochs, GAT: 30 epochs",0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220363476,1000,"GCN: 200 epochs, GAT: 200 epochs, APPNP: 200 epochs, JKNet: 200 epochs, JKNet(Drop): 200 epochs, Incep(Drop): 200 epochs, GCNII: 200 epochs, GCNII*: 200 epochs",0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221879032,1500,N/A,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,220647438,1000,100 epochs for each GNN model,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,237497467,400,Indicated in the 'Total Epoch' column,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Total epoch,221534325,2000,400 epochs for each GNN model,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,47018956,128,Dimensionality of the hidden features in each layer,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220363476,256,Number of units in the hidden layers,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221879032,256,Size of the feature vector representing each node,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,220647438,256,Number of dimensions in the feature space of intermediate representations,0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,237497467,-,"Size of the feature vector for each node, representing dimensions in each layer",0
+4acce5ed-493d-43b0-b729-89a55f16605e,Hidden dimension,221534325,128,"Size of feature vectors representing nodes, determining dimensions in intermediate representations",0

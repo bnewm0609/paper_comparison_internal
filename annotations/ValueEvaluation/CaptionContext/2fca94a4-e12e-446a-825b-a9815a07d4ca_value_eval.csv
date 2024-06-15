@@ -1,0 +1,15 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,210180949,2,"NAU: H(h) = 2, NMU: H(h) = 2, NALU: H(h) not explicitly mentioned",0.5
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Hidden size,219179333,100,"NPU: H(h) = 6, RealNPU: H(h) not explicitly mentioned, NMU: H(h) not explicitly mentioned, NALU: H(h) not explicitly mentioned, iNALU: H(h) not explicitly mentioned, Dense: H(h) not explicitly mentioned",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,210180949,"5,000,000",N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Iterations for one run,219179333,"50,000",One complete pass per execution,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,210180949,100,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Number of seeds,219179333,10,"Initial values: S0 = 100, I0 = 0.01, R0 = 0 (fSIR model); x_train, y_train ~ U(0.1, 2), x_test, y_test ~ R(-4.1:0.2:4) (arithmetic task)",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,210180949,1E-03,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Learning rates,219179333,1e-2 for addition and 5e-3 for all other operations,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,210180949,a/b,"Tasks categorized by addition, subtraction (using NAU), and multiplication (using NMU)",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Division,219179333,1/a,"Tasks categorized by addition, multiplication, division, and square root",0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,210180949,Biasing weight discritisation,sparsity regularizer penalty,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Regularisation penalty,219179333,L1 on all parameters,L1 regularization penalty,1
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,210180949,Python 3,N/A,0
+2fca94a4-e12e-446a-825b-a9815a07d4ca,Programming language,219179333,Julia,N/A,0

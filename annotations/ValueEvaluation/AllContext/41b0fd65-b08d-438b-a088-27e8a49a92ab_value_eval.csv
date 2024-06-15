@@ -1,0 +1,19 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,5890185,-,"Word-level explanations, Sentence-level explanations",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,4052735,-,"Visual justification through attention visualization, Textual explanations, Detailed specifications",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,53955763,-,"Semantic parsing, Information retrieval",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,261081574,-,"Agnostic, Template-based, Neural-based",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,222379195,Description for Reasoning Process,"Text-only, Vision-only, Visual-textual",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,225068216,Description for Reasoning Process,"Visual Question Answering (VQA), Image Captioning, Visual Commonsense Reasoning (VCR), Generative models",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,252383606,Description for Reasoning Process,"Learning from instruction, Learning from explanations, Few-shot learning",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,256504063,Description for Reasoning Process,"Chain-of-Thought (CoT) reasoning, Few-Shot-CoT, Manual-CoT, Auto-CoT, Zero-Shot-CoT, Program-of-Thoughts (PoT), Self-Consistency Decoding, Randomness in the Input Space",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Category,258546810,Description for Reasoning Process,"CoT prompting, Zero-shot prompting, Plan-based CoT, Data mixture strategy",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,5890185,Generated Facts,"Word-level explanations, Sentence-level explanations",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,4052735,Generated Facts,"Clues to justify the answer, Complementary delineation, Detailed specification",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,53955763,Generated Facts,"Image description, Supporting facts retrieval, Dense captions",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,261081574,Generated Facts,"Agnostic, Template-based, Neural-based",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,222379195,Concise Rationale,"Text-only, Vision-only, Visual-textual",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,225068216,Concise Rationale,"Answer generation, Rationale generation",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,252383606,Chain-of-Thought,"Lecture, Explanation",0.5
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,256504063,Chain-of-Thought,"Commonsense mistakes, Logical mistakes, Others",0
+41b0fd65-b08d-438b-a088-27e8a49a92ab,Type of Texts,258546810,Chain-of-Thought,N/A,0

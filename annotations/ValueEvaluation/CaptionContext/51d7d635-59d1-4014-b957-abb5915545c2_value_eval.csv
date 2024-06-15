@@ -1,0 +1,7 @@
+Table ID,Column,Corpus ID,Gold Value,Predicted Value,
+51d7d635-59d1-4014-b957-abb5915545c2,Feature set,17989125,"energy, entropy, contrast, homogeneity","Voice and EGG signals; Fourier transform, band-pass filters; co-occurrence matrices; features: energy, entropy, contrast, homogeneity; Gaussian mixture model classifier.",1
+51d7d635-59d1-4014-b957-abb5915545c2,Feature set,12760353,MFCC,"Voice quality, voice samples; MFCC features; windowing techniques; multitaper spectrum estimation; tapers: number, type, weights.",1
+51d7d635-59d1-4014-b957-abb5915545c2,Employed classifier,17989125,GMM,Uses Gaussian mixture model (GMM) for data categorization and pattern recognition,1
+51d7d635-59d1-4014-b957-abb5915545c2,Employed classifier,12760353,GMM,Utilized Gaussian mixture model (GMM) for data categorization and pattern recognition,1
+51d7d635-59d1-4014-b957-abb5915545c2,Notes,17989125,Used combination of voice and EGG signals,Proposes a platform for behavior monitoring of diabetes patients in smart homes.,0
+51d7d635-59d1-4014-b957-abb5915545c2,Notes,12760353,"Used combination of vowels /a/, /i/, /u/",Provides a summary of smart home development for the rehabilitation of neurologically disabled patients.,0
